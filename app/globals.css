@@ -1,0 +1,594 @@
+@import "tailwindcss";
+
+/* The codemods in scripts/ quote old class strings as replacement patterns.
+   Tailwind scans the whole project, so without this it generates CSS for
+   classes nothing uses — including the gradients those scripts remove. */
+@source not "../scripts";
+
+/* ─────────────────────────────────────────────────────────────
+   Murphi.ai — design tokens
+   Source of truth: "Murphi Brand Book 2026 V1.0" (in the repo root).
+
+   01 Color System   Two hues only: Bright Blue and Grey, eight steps each.
+   10 Backgrounds    White · light neutral grey · deep blue.
+   11 Gradients      Allowed for hero sections, product highlights, background
+                     visuals, UI illustrations and social — never in the logo.
+   12 Typography     Plus Jakarta Sans is the primary typeface throughout.
+
+   The book's own UI assignments (page 01) are the rules the components follow:
+     #007EFF  panels and buttons        #F5F5F5  text on panels and buttons
+     #006AD6  header bars               #1A1A1A  standard text
+     #878787  greyed-out text
+   ───────────────────────────────────────────────────────────── */
+
+@theme {
+  /* ── Bright Blue — brand book 01, eight steps, light → dark ── */
+  --color-blue-50: #cce5ff;
+  --color-blue-100: #a3d1ff;
+  --color-blue-200: #7abcff;
+  --color-blue-300: #52a7ff;
+  --color-blue-400: #2993ff;
+  --color-blue-500: #007eff;
+  --color-blue-600: #006ad6;
+  --color-blue-700: #0056ad;
+
+  /* ── Grey — brand book 01, eight steps, light → dark ── */
+  --color-grey-50: #f5f5f5;
+  --color-grey-100: #efefef;
+  --color-grey-200: #e3e3e3;
+  --color-grey-300: #b2b2b2;
+  --color-grey-400: #878787;
+  --color-grey-500: #606060;
+  --color-grey-600: #464646;
+  --color-grey-700: #1a1a1a;
+
+  /* ── Named roles, all pointing at the ramps above ──
+     Kept under their existing names so no component has to be rewritten to
+     read a colour; only the values moved onto the brand ramp. */
+  --color-brand: #007eff; /* panels and buttons        */
+  --color-brand-dark: #006ad6; /* header bars               */
+  --color-brand-deep: #0056ad; /* pressed / deepest step    */
+  --color-brand-light: #52a7ff;
+  --color-brand-mid: #2993ff;
+  --color-brand-pale: #a3d1ff;
+  --color-brand-ghost: #cce5ff;
+  --color-brand-border: #a3d1ff;
+  --color-brand-tint: #cce5ff;
+
+  --color-ink: #1a1a1a; /* standard text             */
+  --color-ink-muted: #878787; /* greyed-out text           */
+  --color-grey-dk: #464646;
+  --color-grey-bdr: #b2b2b2;
+  --color-grey-mid: #e3e3e3;
+  --color-grey-soft: #efefef;
+  --color-grey-bg: #f5f5f5;
+
+  /* Deep blue — the third preferred background (brand book 10). */
+  --color-deep: #0f1d54;
+
+  /* Chrome */
+  --color-nav-bg: #f5f5f5;
+  --color-nav-border: #e3e3e3;
+  --color-nav-text: #1a1a1a;
+  --color-nav-muted: #878787;
+  --color-footer-bg: #0f1d54;
+
+  /* Radii — never sharp corners. */
+  --radius-tile: 14px;
+  --radius-card: 12px;
+  --radius-panel: 20px;
+  --radius-hero: 28px;
+  --radius-cta: 40px;
+  --radius-canvas: 56px;
+
+  /* Shadows — tinted with the deep blue, wide, low opacity. */
+  --shadow-brand: 0 4px 24px rgba(0, 126, 255, 0.12);
+  --shadow-brand-md: 0 8px 40px rgba(0, 126, 255, 0.18);
+  --shadow-brand-lg: 0 20px 60px rgba(15, 29, 84, 0.12);
+  --shadow-nav: 0 2px 16px rgba(15, 29, 84, 0.08);
+  --shadow-panel: 0 36px 80px -44px rgba(0, 86, 173, 0.55);
+  --shadow-float: 0 18px 44px -26px rgba(0, 86, 173, 0.42);
+
+  --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, -apple-system,
+    "Segoe UI", sans-serif;
+
+  --default-font-family: var(--font-sans);
+}
+
+/* Inclusive max-width breakpoints — the design is authored desktop-down.
+   Tailwind's max-[NNNpx] excludes the breakpoint, so declare them. */
+@custom-variant max-1200 (@media (max-width: 1200px));
+@custom-variant max-1024 (@media (max-width: 1024px));
+@custom-variant max-900 (@media (max-width: 900px));
+@custom-variant max-768 (@media (max-width: 768px));
+@custom-variant max-600 (@media (max-width: 600px));
+
+/* The AI Module pages were authored against the old site's own breakpoints. */
+@custom-variant max-1080 (@media (max-width: 1080px));
+@custom-variant max-720 (@media (max-width: 720px));
+@custom-variant max-640 (@media (max-width: 640px));
+
+/* ── Base ─────────────────────────────────────────────────── */
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    /* White ground and body copy on the grey ramp (brand book 01 and 10);
+       #1A1A1A is the standard text colour, carried by the headings below. */
+    background: #ffffff;
+    color: var(--color-grey-dk);
+    font-size: 15px;
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: var(--color-ink);
+    text-wrap: balance;
+  }
+
+  /* Universal focus — present everywhere, not only on newer components. */
+  :focus-visible {
+    outline: 2px solid var(--color-brand);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+}
+
+/* ── Type scale ───────────────────────────────────────────────
+   Plus Jakarta Sans throughout (brand book 12) — one hierarchy, used by
+   every page, rather than each section restating its own sizes. Size, weight,
+   tracking and leading only; colour stays a separate utility so a heading on a
+   blue panel can take its own. */
+
+@utility type-display {
+  font-size: clamp(34px, 3.6vw, 48px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.14;
+}
+
+/* Page headings. */
+@utility type-h1 {
+  font-size: clamp(32px, 4vw, 46px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.12;
+}
+
+/* Section headings. */
+@utility type-h2 {
+  font-size: clamp(28px, 3.2vw, 42px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+/* Sub-section headings. The reference has no counterpart at this size — it is
+   used only by the pages built from website-research — so the size stays and
+   only the weight and tracking join the system. */
+@utility type-h3 {
+  font-size: clamp(26px, 2.7vw, 36px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+/* Group headings inside a section. */
+@utility type-h4 {
+  font-size: clamp(19px, 1.9vw, 25px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+}
+
+/* The standfirst under a heading. */
+@utility type-lead {
+  font-size: clamp(15.5px, 1.15vw, 17px);
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+@utility type-body {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.75;
+}
+
+@utility type-body-sm {
+  font-size: 13.5px;
+  font-weight: 400;
+  line-height: 1.65;
+}
+
+/* Eyebrows and chips. */
+@utility type-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+@utility type-micro {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  line-height: 1.4;
+}
+
+/* Navigation and buttons share one weight and tracking. */
+@utility type-nav {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+@utility type-btn {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+/* ── Buttons ──────────────────────────────────────────────────
+   Brand book 01: #007EFF is the colour for panels and buttons and #F5F5F5 is
+   the text on them; #006AD6 and #0056AD are the darker steps, used for hover
+   and press. Page 11 permits gradients in hero sections and product visuals,
+   but the brand owner has chosen flat surfaces throughout, so every surface on
+   the site — buttons included — is a solid colour.
+
+   Each utility is the whole control: shape, size, colour and interaction. A
+   call site adds only its own margin and responsive behaviour. */
+
+@utility btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: var(--radius-card);
+  padding: 15px 32px;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  background: var(--color-brand);
+  color: var(--color-grey-50);
+  box-shadow: 0 12px 28px -12px rgba(0, 106, 214, 0.7);
+  transition:
+    background-color 200ms ease,
+    box-shadow 200ms ease,
+    transform 200ms ease;
+
+  &:hover {
+    background: var(--color-brand-dark);
+    box-shadow: 0 18px 36px -14px rgba(0, 106, 214, 0.85);
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    background: var(--color-brand-deep);
+    transform: translateY(0);
+  }
+
+  &:disabled {
+    pointer-events: none;
+    opacity: 0.7;
+  }
+}
+
+/* The same button at navigation scale. */
+@utility btn-primary-sm {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 10px;
+  padding: 14px 20px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1;
+  background: var(--color-brand);
+  color: var(--color-grey-50);
+  box-shadow: 0 10px 24px -12px rgba(0, 106, 214, 0.9);
+  transition:
+    background-color 200ms ease,
+    box-shadow 200ms ease,
+    transform 200ms ease;
+
+  &:hover {
+    background: var(--color-brand-dark);
+    box-shadow: 0 14px 30px -12px rgba(0, 86, 173, 0.95);
+    transform: translateY(-1px);
+  }
+
+  &:active {
+    background: var(--color-brand-deep);
+    transform: translateY(0);
+  }
+}
+
+/* The quiet alternative: white on the grey hairline, blue on hover. */
+@utility btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: var(--radius-card);
+  padding: 14px 28px;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  background: #ffffff;
+  color: var(--color-grey-dk);
+  border: 1px solid var(--color-grey-mid);
+  transition:
+    background-color 200ms ease,
+    border-color 200ms ease,
+    color 200ms ease;
+
+  &:hover {
+    border-color: var(--color-brand-border);
+    background: var(--color-brand-tint);
+    color: var(--color-brand-dark);
+  }
+
+  &:active {
+    background: var(--color-brand-pale);
+  }
+}
+
+/* The inverse pair, for a button sitting on a blue panel. */
+@utility btn-on-blue {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: var(--radius-card);
+  padding: 15px 32px;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  background: #ffffff;
+  color: var(--color-brand-dark);
+  box-shadow: 0 4px 20px rgba(15, 29, 84, 0.14);
+  transition:
+    box-shadow 200ms ease,
+    transform 200ms ease;
+
+  &:hover {
+    box-shadow: 0 10px 28px rgba(15, 29, 84, 0.2);
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+/* ── Surfaces ─────────────────────────────────────────────────
+   The brand book's preferred backgrounds are white, light neutral grey and
+   deep blue (page 10) — flat, readable surfaces. The translucent blurred
+   panels the navigation used have been replaced by those. */
+
+/* ── Motion ───────────────────────────────────────────────── */
+
+@keyframes mp-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes mp-glow {
+  0%,
+  100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes mp-pulse-ring {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.6;
+  }
+  70% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+@keyframes mp-flow {
+  to {
+    stroke-dashoffset: -240;
+  }
+}
+
+/* A light pulse running the length of a spine of any height. */
+@keyframes mp-spine {
+  0% {
+    top: -14%;
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    top: 100%;
+    opacity: 0;
+  }
+}
+
+@keyframes mp-wave {
+  0%,
+  100% {
+    transform: scaleY(0.35);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes mp-sweep {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(220%);
+  }
+}
+
+@keyframes mp-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@utility mp-float {
+  animation: mp-float 9s ease-in-out infinite;
+}
+
+/* A control that drifts under the pointer is harder to hit. */
+@utility mp-float-host {
+  &:hover [class*="mp-float"],
+  &:focus-within [class*="mp-float"] {
+    animation-play-state: paused;
+  }
+}
+
+@utility mp-glow {
+  animation: mp-glow 14s ease-in-out infinite;
+}
+
+@keyframes mp-view {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@utility mp-view {
+  animation: mp-view 320ms ease-out both;
+}
+
+@utility mp-enter {
+  animation: mp-fade-up 0.7s cubic-bezier(0.22, 0.61, 0.36, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ── Ambient AI & Dictation page ───────────────────────────
+   Traced from the source page's own keyframes so the recreated
+   visuals move exactly as they do on the original. */
+
+@keyframes mp-caret {
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes mp-blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
+
+@keyframes mp-flow-pulse {
+  0% {
+    left: 0;
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    left: calc(100% - 6px);
+    opacity: 0;
+  }
+}
+
+@keyframes mp-flow-pulse-v {
+  0% {
+    top: 0;
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    top: calc(100% - 6px);
+    opacity: 0;
+  }
+}
+
+@keyframes mp-ticker {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes mp-marquee-slow {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
