@@ -4,17 +4,24 @@ import Reveal from "@/components/module-page/Reveal";
 /**
  * The Announcement band from the old home page, recreated as-is.
  *
- * Traced from Murphi.ai Website Pages/01. HomePAge — `.announcement-band`,
+ * Traced from 01. HomePAge/Murphi.ai Home LandingPage.html — `.announcement-band`,
  * `.announcement-pill`, `.tech-ticker-wrap` and `.tech-ticker-track`:
  *
- *   band    flat #CCE5FF, 56px top padding,
+ *   band    flat #EAF2FF, 56px top padding,
  *           1px #E3E3E3 top border, centred
  *   pill    #007EFF, white, 13px/700, uppercase, +0.03em, 100px radius
  *   copy    16px #1A1A1A, max-width 66ch
- *   ticker  #CCE5FF band, 22px vertical padding, edges masked at 8%/92%,
+ *   ticker  #EAF2FF band, 22px vertical padding, edges masked at 8%/92%,
  *           track animated translateX(0 → -50%) over 26s linear, paused on
  *           hover and under prefers-reduced-motion
  *   item    15px/600 #606060, 26px horizontal padding, middot in #E3E3E3
+ *
+ * #EAF2FF is the reference's own value: `.tech-ticker-wrap` states it flat,
+ * and the band above it is a gradient that resolves to it. It sits off the
+ * brand ramp, and is used here — rather than the ramp's #CCE5FF this band
+ * carried before — because the reference is the stated source of truth for
+ * this section's background. The gradient itself is not reproduced; the flat
+ * value it resolves to covers the whole band.
  */
 
 /* The twelve partners, in the source's order. The source repeats the list a
@@ -39,7 +46,7 @@ export default function Announcement() {
 
   return (
     <Reveal>
-      <section className="border-t border-grey-mid bg-brand-ghost pt-14 text-center">
+      <section className="border-t border-grey-mid bg-[#EAF2FF] pt-14 text-center">
         <div className="mx-auto w-full max-w-[1220px] px-8 max-720:px-5">
           <p className="mb-[22px] inline-flex items-center gap-2 rounded-full bg-brand px-[18px] py-[9px] text-[13px] font-bold uppercase tracking-[0.03em] text-grey-bg">
             <svg viewBox="0 0 24 24" fill="none" className="size-3.5" aria-hidden>
@@ -69,7 +76,7 @@ export default function Announcement() {
         </div>
 
         <div
-          className="group mt-9 overflow-hidden bg-brand-ghost py-[22px]"
+          className="group mt-9 overflow-hidden bg-[#EAF2FF] py-[22px]"
           style={{
             maskImage:
               "linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent)",

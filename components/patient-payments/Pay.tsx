@@ -23,6 +23,7 @@ export function Surface({
   status,
   tone = "plain",
   live,
+  compact,
   foot,
   children,
   className,
@@ -32,6 +33,9 @@ export function Surface({
   /** `brand` for Murphi's own surfaces, `plain` for everything else. */
   tone?: "brand" | "plain";
   live?: boolean;
+  /** Tighter head and body rules. Used by the hero, where the surfaces are
+      stacked and the column has to stay the height of the copy beside it. */
+  compact?: boolean;
   foot?: ReactNode;
   children: ReactNode;
   className?: string;
@@ -47,7 +51,8 @@ export function Surface({
     >
       <div
         className={cn(
-          "flex items-center justify-between gap-3 px-5 py-3 max-720:px-4",
+          "flex items-center justify-between gap-3 px-5 max-720:px-4",
+          compact ? "py-2.5" : "py-3",
           onBrand ? "bg-brand" : "border-b border-grey-mid bg-grey-soft",
         )}
       >
@@ -108,7 +113,9 @@ export function Surface({
         )}
       </div>
 
-      <div className="px-5 py-[18px] max-720:px-4">{children}</div>
+      <div className={cn("px-5 max-720:px-4", compact ? "py-3.5" : "py-[18px]")}>
+        {children}
+      </div>
 
       {foot ? (
         <div className="border-t border-grey-mid bg-grey-bg px-5 py-2.5 max-720:px-4">
@@ -120,9 +127,22 @@ export function Surface({
 }
 
 /** A labelled value, the way a ledger lists one. */
-export function Row({ label, value }: { label: string; value: ReactNode }) {
+export function Row({
+  label,
+  value,
+  compact,
+}: {
+  label: string;
+  value: ReactNode;
+  compact?: boolean;
+}) {
   return (
-    <div className="flex items-baseline justify-between gap-4 border-b border-grey-soft py-2.5 last:border-b-0">
+    <div
+      className={cn(
+        "flex items-baseline justify-between gap-4 border-b border-grey-soft last:border-b-0",
+        compact ? "py-[7px]" : "py-2.5",
+      )}
+    >
       <span className={cn(MONO, "shrink-0 text-[11px] text-ink-muted")}>{label}</span>
       <span className="min-w-0 truncate text-right text-[12.5px] font-semibold text-ink">
         {value}
@@ -132,10 +152,26 @@ export function Row({ label, value }: { label: string; value: ReactNode }) {
 }
 
 /** The amount, given the weight an amount has in a payment interface. */
-export function Amount({ value, caption }: { value: string; caption?: string }) {
+export function Amount({
+  value,
+  caption,
+  compact,
+}: {
+  value: string;
+  caption?: string;
+  compact?: boolean;
+}) {
   return (
-    <div className="flex flex-col items-center gap-1 py-1">
-      <span className="text-[30px] font-bold leading-none tracking-[-0.03em] text-ink">
+    <div className={cn("flex flex-col items-center gap-1", compact ? "py-0" : "py-1")}>
+      {/* Size first: tailwind-merge reads an arbitrary text-[..] as a
+          font-size, which would drop a later leading-* from the string. */}
+      <span
+        className={
+          compact
+            ? "text-[26px] font-bold leading-none tracking-[-0.03em] text-ink"
+            : "text-[30px] font-bold leading-none tracking-[-0.03em] text-ink"
+        }
+      >
         {value}
       </span>
       {caption ? (
@@ -183,22 +219,22 @@ export function PhoneFrame({
   return (
     <div className="mx-auto w-full max-w-[320px] rounded-[32px] border-[7px] border-ink bg-ink shadow-[0_24px_54px_-18px_rgba(15,29,84,.45)]">
       <div className="overflow-hidden rounded-[25px] bg-white">
-        <div className="flex justify-center pt-2" aria-hidden>
+        <div className="flex justify-center pt-1.5" aria-hidden>
           <span className="h-1 w-12 rounded-full bg-grey-mid" />
         </div>
 
         <div
           className={cn(
             MONO,
-            "mt-2 border-b border-grey-mid px-4 py-2 text-center text-[10.5px] uppercase tracking-[0.06em] text-ink-muted",
+            "mt-1.5 border-b border-grey-mid px-4 py-1.5 text-center text-[10.5px] uppercase tracking-[0.06em] text-ink-muted",
           )}
         >
           {label}
         </div>
 
-        <div className="flex flex-col gap-2 px-4 py-3.5">{children}</div>
+        <div className="flex flex-col gap-2 px-4 py-2.5">{children}</div>
 
-        <div className="flex justify-center pb-2" aria-hidden>
+        <div className="flex justify-center pb-1.5" aria-hidden>
           <span className="h-1 w-16 rounded-full bg-grey-mid" />
         </div>
       </div>
@@ -358,14 +394,23 @@ export function MurphiNode({ stages }: { stages: string[] }) {
 }
 
 /** The run between two surfaces, with the payment moving along it. */
-export function Run({ label, short }: { label?: string; short?: boolean }) {
-  const stem = short ? "h-5" : "h-7";
+export function Run({
+  label,
+  short,
+  tight,
+}: {
+  label?: string;
+  short?: boolean;
+  /** The shortest stem. Used by the hero, where two runs otherwise account for
+      more vertical space than either surface they join. */
+  tight?: boolean;
+}) {
+  const stem = tight ? "h-3" : short ? "h-5" : "h-7";
+  const gap = tight ? "gap-1.5" : "gap-2";
+  const pad = tight ? "py-1.5" : short ? "py-2" : "py-3";
 
   return (
-    <div
-      className={cn("flex flex-col items-center gap-2", short ? "py-2" : "py-3")}
-      aria-hidden
-    >
+    <div className={cn("flex flex-col items-center", gap, pad)} aria-hidden>
       <span className={cn("relative flex w-px shrink-0 bg-brand-pale", stem)}>
         <span
           className="absolute left-1/2 size-1.5 -translate-x-1/2 rounded-full bg-brand"

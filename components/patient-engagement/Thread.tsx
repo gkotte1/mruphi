@@ -212,8 +212,11 @@ export function PhoneFrame({
   label: string;
   children: ReactNode;
 }) {
+  /* The bezel is #007EFF rather than the ink it used to be; the background
+     matches the border so the two corner radii read as one solid frame. Size,
+     radii, shadow and everything inside are unchanged. */
   return (
-    <div className="mx-auto w-full max-w-[300px] rounded-[34px] border-[7px] border-ink bg-ink p-0 shadow-[0_24px_54px_-18px_rgba(15,29,84,.45)]">
+    <div className="mx-auto w-full max-w-[300px] rounded-[34px] border-[7px] border-brand bg-brand p-0 shadow-[0_24px_54px_-18px_rgba(15,29,84,.45)]">
       <div className="overflow-hidden rounded-[27px] bg-white">
         <div className="flex justify-center pt-2.5" aria-hidden>
           <span className="h-1 w-14 rounded-full bg-grey-mid" />

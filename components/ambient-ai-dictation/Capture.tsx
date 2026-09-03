@@ -30,11 +30,21 @@ const WAVE = [
  * Audio being captured: bars mirrored around a baseline, the way a recorder
  * draws them, on its own recessed surface.
  */
-export function CaptureWave({ className }: { className?: string }) {
+export function CaptureWave({
+  className,
+  quiet,
+}: {
+  className?: string;
+  /** Shorter, and still. Used where the visual should read as product state
+      rather than perform — the hero, where it was the loudest thing on the
+      page at 74px with twenty-four independently animating bars. */
+  quiet?: boolean;
+}) {
   return (
     <div
       className={cn(
-        "relative flex h-[74px] items-center gap-[3px] overflow-hidden rounded-tile border border-grey-mid bg-grey-bg px-3.5 max-600:h-[62px]",
+        "relative flex items-center gap-[3px] overflow-hidden rounded-tile border border-grey-mid bg-grey-bg px-3.5",
+        quiet ? "h-10 max-600:h-9" : "h-[74px] max-600:h-[62px]",
         className,
       )}
       aria-hidden
@@ -50,7 +60,11 @@ export function CaptureWave({ className }: { className?: string }) {
           )}
           style={{
             height: `${height * 1.7}%`,
-            animation: `mp-wave ${1 + (i % 5) * 0.18}s ease-in-out ${i * 0.05}s infinite`,
+            ...(quiet
+              ? {}
+              : {
+                  animation: `mp-wave ${1 + (i % 5) * 0.18}s ease-in-out ${i * 0.05}s infinite`,
+                }),
           }}
         />
       ))}
@@ -65,20 +79,30 @@ export function CaptureWave({ className }: { className?: string }) {
  * settles with a tick, so the panel reads as fields being filled rather than a
  * paragraph of grey text.
  */
-export function FieldRows({ lines }: { lines: readonly string[] }) {
+export function FieldRows({
+  lines,
+  quiet,
+}: {
+  lines: readonly string[];
+  /** Tighter, and already settled — no staggered arrival, no blinking caret. */
+  quiet?: boolean;
+}) {
   return (
     <div className="overflow-hidden rounded-tile border border-grey-mid">
       {lines.map((line, i) => (
         <div
           key={line}
           className={cn(
-            "flex items-start gap-2.5 px-3.5 py-2.5 opacity-0",
+            "flex items-start gap-2.5 px-3.5",
+            quiet ? "py-2" : "py-2.5 opacity-0",
             i === 0 ? "" : "border-t border-grey-mid",
             i % 2 ? "bg-grey-bg" : "bg-white",
           )}
-          style={{
-            animation: `mp-fade-up .45s ease forwards ${0.2 + i * 0.18}s`,
-          }}
+          style={
+            quiet
+              ? undefined
+              : { animation: `mp-fade-up .45s ease forwards ${0.2 + i * 0.18}s` }
+          }
         >
           <span className="mt-[1px] flex size-[15px] shrink-0 items-center justify-center rounded-full bg-brand text-white">
             <Icon name="check" width={9} height={9} />
@@ -86,7 +110,7 @@ export function FieldRows({ lines }: { lines: readonly string[] }) {
 
           <span className="min-w-0 text-[12.5px] leading-[1.45] text-grey-500">
             {line}
-            {i === lines.length - 1 ? (
+            {!quiet && i === lines.length - 1 ? (
               <span
                 className="ml-0.5 inline-block h-3 w-0.5 bg-brand align-middle"
                 style={{ animation: "mp-caret 1s step-end infinite" }}
@@ -110,10 +134,13 @@ export function DocTiles({
   items,
   columns = 3,
   className,
+  quiet,
 }: {
   items: readonly string[];
   columns?: 2 | 3;
   className?: string;
+  /** Tighter, and already settled — no staggered arrival. */
+  quiet?: boolean;
 }) {
   return (
     <div
@@ -126,10 +153,15 @@ export function DocTiles({
       {items.map((item, i) => (
         <div
           key={item}
-          className="flex items-center gap-2 rounded-[10px] border border-grey-mid bg-white px-2.5 py-2 opacity-0"
-          style={{
-            animation: `mp-fade-up .4s ease forwards ${0.9 + i * 0.07}s`,
-          }}
+          className={cn(
+            "flex items-center gap-2 rounded-[10px] border border-grey-mid bg-white px-2.5",
+            quiet ? "py-1.5" : "py-2 opacity-0",
+          )}
+          style={
+            quiet
+              ? undefined
+              : { animation: `mp-fade-up .4s ease forwards ${0.9 + i * 0.07}s` }
+          }
         >
           <span className="flex size-[22px] shrink-0 items-center justify-center rounded-[7px] border border-brand-pale bg-brand-tint text-brand-dark">
             <Icon name="doc" width={12} height={12} />

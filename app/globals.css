@@ -456,6 +456,18 @@
   }
 }
 
+/* .waveform span on the home page reference — its own scaleY range, which
+   is a touch shallower than mp-wave above. */
+@keyframes mp-wave-bounce {
+  0%,
+  100% {
+    transform: scaleY(0.45);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+}
+
 @keyframes mp-sweep {
   0% {
     transform: translateX(-100%);

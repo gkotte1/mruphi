@@ -107,12 +107,12 @@ export default function Hero() {
  */
 function MockCard() {
   return (
-    <div className="relative">
+    <div className="relative mx-auto max-w-[460px]">
       {/* Where the record came from. */}
       <span
         className={cn(
           MONO,
-          "mb-3 inline-flex items-center gap-2 rounded-full border border-grey-mid bg-white px-3 py-1.5 text-[10.5px] uppercase tracking-[0.06em] text-grey-500 shadow-[0_6px_16px_-10px_rgba(15,29,84,.5)]",
+          "mb-3 inline-flex items-center gap-2 rounded-full border border-grey-mid bg-white px-3 py-1.5 text-[10.5px] uppercase tracking-[0.06em] text-grey-500 shadow-[0_8px_20px_-12px_rgba(15,29,84,0.18)]",
         )}
       >
         <Icon name="server" width={11} height={11} className="shrink-0 text-brand" />
@@ -120,11 +120,11 @@ function MockCard() {
       </span>
 
       {/* ── Capture ── */}
-      <div className="relative z-20 overflow-hidden rounded-tile border border-grey-mid bg-white shadow-[0_28px_60px_-28px_rgba(15,29,84,.28)]">
+      <div className="relative z-20 overflow-hidden rounded-tile border border-grey-mid bg-white shadow-[0_18px_44px_-28px_rgba(15,29,84,0.18)]">
         <div
           className={cn(
             MONO,
-            "flex items-center justify-between gap-3 bg-brand px-5 py-[13px] text-[11px] uppercase tracking-[0.03em] text-white/85 max-600:px-4",
+            "flex items-center justify-between gap-3 bg-brand px-5 py-2.5 text-[11px] uppercase tracking-[0.03em] text-white/85 max-600:px-4",
           )}
         >
           <span className="flex min-w-0 items-center gap-2">
@@ -132,24 +132,20 @@ function MockCard() {
             <span className="truncate">Ambient AI + Voice Dictation</span>
           </span>
           <span className="flex shrink-0 items-center gap-2 text-white">
-            <span
-              className="size-1.5 rounded-full bg-current"
-              style={{ animation: "mp-blink 1.6s ease-in-out infinite" }}
-              aria-hidden
-            />
+            <span className="size-1.5 rounded-full bg-current" aria-hidden />
             Listening
           </span>
         </div>
 
-        <div className="px-5 py-4 max-600:px-4">
-          <CaptureWave />
+        <div className="px-5 py-3 max-600:px-4">
+          <CaptureWave quiet />
         </div>
       </div>
 
       <Thread />
 
       {/* ── Documentation, stepped in beneath the capture card ── */}
-      <div className="relative z-10 mx-auto w-[94%] overflow-hidden rounded-tile border border-grey-mid bg-white shadow-[0_20px_46px_-26px_rgba(15,29,84,.24)] max-600:w-full">
+      <div className="relative z-10 mx-auto w-[94%] overflow-hidden rounded-tile border border-grey-mid bg-white shadow-[0_18px_44px_-28px_rgba(15,29,84,0.18)] max-600:w-full">
         <div
           className={cn(
             MONO,
@@ -160,21 +156,21 @@ function MockCard() {
           <span className="min-w-0 truncate">Visit understood → fields populating</span>
         </div>
 
-        <div className="px-5 py-4 max-600:px-4">
-          <FieldRows lines={GENERATED} />
+        <div className="px-5 py-3 max-600:px-4">
+          <FieldRows lines={GENERATED} quiet />
         </div>
       </div>
 
       <Thread />
 
       {/* ── What the encounter produced ── */}
-      <div className="relative z-10 mx-auto w-[88%] rounded-tile border border-grey-mid bg-grey-bg p-4 shadow-[0_14px_36px_-24px_rgba(15,29,84,.24)] max-600:w-full">
-        <DocTiles items={NOTE_TYPES} />
+      <div className="relative z-10 mx-auto w-[88%] rounded-tile border border-grey-mid bg-grey-bg p-3.5 shadow-[0_18px_44px_-28px_rgba(15,29,84,0.18)] max-600:w-full">
+        <DocTiles items={NOTE_TYPES} quiet />
 
         <p
           className={cn(
             MONO,
-            "mt-3 text-center text-[10.5px] uppercase tracking-[0.06em] text-ink-muted",
+            "mt-2.5 text-center text-[10.5px] uppercase tracking-[0.06em] text-ink-muted",
           )}
         >
           6 note types, one encounter
@@ -187,7 +183,7 @@ function MockCard() {
       <div
         className={cn(
           MONO,
-          "mx-auto flex w-[76%] items-center justify-center gap-2 rounded-full bg-brand px-4 py-2.5 text-[10.5px] uppercase tracking-[0.06em] text-white shadow-[0_12px_28px_-14px_rgba(0,106,214,.75)] max-600:w-full",
+          "mx-auto flex w-[76%] items-center justify-center gap-2 rounded-full bg-brand px-4 py-2 text-[10.5px] uppercase tracking-[0.06em] text-white shadow-[0_8px_20px_-12px_rgba(15,29,84,0.18)] max-600:w-full",
         )}
       >
         <Icon name="check" width={12} height={12} className="shrink-0" />
@@ -197,14 +193,9 @@ function MockCard() {
   );
 }
 
-/** The run between two surfaces, with the chart travelling down it. */
+/** The run between two surfaces — a hairline, no travelling marker. */
 function Thread() {
   return (
-    <div className="relative mx-auto flex h-6 w-px justify-center bg-brand-pale" aria-hidden>
-      <span
-        className="absolute left-1/2 size-1.5 -translate-x-1/2 rounded-full bg-brand"
-        style={{ animation: "mp-flow-pulse-v 2.4s ease-in-out infinite" }}
-      />
-    </div>
+    <div className="mx-auto h-4 w-px bg-brand-pale" aria-hidden />
   );
 }

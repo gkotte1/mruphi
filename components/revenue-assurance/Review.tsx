@@ -23,6 +23,7 @@ export function Surface({
   status,
   tone = "plain",
   live,
+  quiet,
   foot,
   children,
   className,
@@ -32,6 +33,10 @@ export function Surface({
   /** `brand` for the review itself, `plain` for supporting surfaces. */
   tone?: "brand" | "plain";
   live?: boolean;
+  /** Tighter, and still: the status dot stops blinking and the live ring
+      stops pulsing. Used by the hero, where the surface should read as
+      product state rather than perform. */
+  quiet?: boolean;
   foot?: ReactNode;
   children: ReactNode;
   className?: string;
@@ -47,7 +52,8 @@ export function Surface({
     >
       <div
         className={cn(
-          "flex items-center justify-between gap-3 px-5 py-3 max-720:px-4",
+          "flex items-center justify-between gap-3 px-5 max-720:px-4",
+          quiet ? "py-2.5" : "py-3",
           onBrand ? "bg-brand" : "border-b border-grey-mid bg-grey-soft",
         )}
       >
@@ -76,7 +82,7 @@ export function Surface({
                 "size-1.5 rounded-full",
                 onBrand ? "bg-white" : "bg-brand",
               )}
-              style={{ animation: "mp-blink 1.6s ease-in-out infinite" }}
+              style={quiet ? undefined : { animation: "mp-blink 1.6s ease-in-out infinite" }}
               aria-hidden
             />
             {status}
@@ -90,7 +96,7 @@ export function Surface({
                     "absolute inline-flex size-full rounded-full",
                     onBrand ? "bg-white/60" : "bg-brand/60",
                   )}
-                  style={{ animation: "mp-glow 2.4s ease-in-out infinite" }}
+                  style={quiet ? undefined : { animation: "mp-glow 2.4s ease-in-out infinite" }}
                 />
                 <span
                   className={cn(
@@ -111,7 +117,9 @@ export function Surface({
         )}
       </div>
 
-      <div className="px-5 py-[18px] max-720:px-4">{children}</div>
+      <div className={cn("px-5 max-720:px-4", quiet ? "py-3.5" : "py-[18px]")}>
+        {children}
+      </div>
 
       {foot ? (
         <div className="border-t border-grey-mid bg-grey-bg px-5 py-2.5 max-720:px-4">
@@ -130,20 +138,16 @@ export function Finding({
   tone,
   title,
   meta,
-  index = 0,
 }: {
   tone: "flag" | "opportunity";
   title: string;
   meta: string;
-  index?: number;
 }) {
   const flag = tone === "flag";
 
   return (
     <li
-      className="flex items-start gap-3 border-b border-grey-mid py-3 last:border-b-0 max-600:gap-2.5"
-      style={{ animation: `mp-fade-up .45s ease backwards ${0.12 + index * 0.09}s` }}
-    >
+      className="flex items-start gap-3 border-b border-grey-mid py-2.5 last:border-b-0 max-600:gap-2.5">
       <span
         className={cn(
           "mt-px flex size-7 shrink-0 items-center justify-center rounded-[8px] border",
@@ -176,19 +180,35 @@ export function Finding({
 }
 
 /** The review running: a solid marker travelling a recessed track. */
-export function ScanBar({ rows = 3 }: { rows?: number }) {
+export function ScanBar({
+  rows = 3,
+  quiet,
+}: {
+  rows?: number;
+  /** Settled rather than sweeping: each row shows how far it got and stays
+      there, so the surface states progress instead of animating it. */
+  quiet?: boolean;
+}) {
+  /* Where each row rests when still — filled, most of the way, nearly done. */
+  const REST = ["82%", "64%", "45%"];
+
   return (
-    <div className="flex flex-col gap-2" aria-hidden>
+    <div className={cn("flex flex-col", quiet ? "gap-1.5" : "gap-2")} aria-hidden>
       {Array.from({ length: rows }, (_, i) => (
         <span
           key={i}
           className="relative h-1.5 w-full overflow-hidden rounded-full bg-grey-soft"
         >
           <span
-            className="absolute inset-y-0 w-1/3 rounded-full bg-brand/70"
-            style={{
-              animation: `mp-sweep 2.4s ease-in-out infinite ${i * 0.28}s`,
-            }}
+            className={cn(
+              "absolute inset-y-0 left-0 rounded-full bg-brand/70",
+              quiet ? "" : "w-1/3",
+            )}
+            style={
+              quiet
+                ? { width: REST[i % REST.length] }
+                : { animation: `mp-sweep 2.4s ease-in-out infinite ${i * 0.28}s` }
+            }
           />
         </span>
       ))}
@@ -320,19 +340,31 @@ export function MurphiNode({
 }
 
 /** The run between two surfaces, with the chart moving along it. */
-export function Run({ label, short }: { label?: string; short?: boolean }) {
-  const stem = short ? "h-5" : "h-7";
+export function Run({
+  label,
+  short,
+  quiet,
+}: {
+  label?: string;
+  short?: boolean;
+  /** The shortest stem, with no travelling marker. */
+  quiet?: boolean;
+}) {
+  const stem = quiet ? "h-3.5" : short ? "h-5" : "h-7";
+  const pad = quiet ? "py-1.5" : short ? "py-2" : "py-3";
 
   return (
     <div
-      className={cn("flex flex-col items-center gap-2", short ? "py-2" : "py-3")}
+      className={cn("flex flex-col items-center", quiet ? "gap-1.5" : "gap-2", pad)}
       aria-hidden
     >
       <span className={cn("relative flex w-px shrink-0 bg-brand-pale", stem)}>
-        <span
-          className="absolute left-1/2 size-1.5 -translate-x-1/2 rounded-full bg-brand"
-          style={{ animation: "mp-flow-pulse-v 2.6s ease-in-out infinite" }}
-        />
+        {quiet ? null : (
+          <span
+            className="absolute left-1/2 size-1.5 -translate-x-1/2 rounded-full bg-brand"
+            style={{ animation: "mp-flow-pulse-v 2.6s ease-in-out infinite" }}
+          />
+        )}
       </span>
 
       {label ? (
@@ -346,10 +378,12 @@ export function Run({ label, short }: { label?: string; short?: boolean }) {
             {label}
           </span>
           <span className={cn("relative flex w-px shrink-0 bg-brand-pale", stem)}>
-            <span
-              className="absolute left-1/2 size-1.5 -translate-x-1/2 rounded-full bg-brand"
-              style={{ animation: "mp-flow-pulse-v 2.6s ease-in-out infinite .6s" }}
-            />
+            {quiet ? null : (
+              <span
+                className="absolute left-1/2 size-1.5 -translate-x-1/2 rounded-full bg-brand"
+                style={{ animation: "mp-flow-pulse-v 2.6s ease-in-out infinite .6s" }}
+              />
+            )}
           </span>
         </>
       ) : null}

@@ -1,6 +1,5 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import TrustStrip from "@/components/TrustStrip";
 import Announcement from "@/components/Announcement";
 import AmbientDictation from "@/components/AmbientDictation";
 import RevenueAssurance from "@/components/RevenueAssurance";
@@ -20,7 +19,6 @@ export default function HomePage() {
       <Navbar />
       <main>
         <Hero />
-        <TrustStrip />
         <Announcement />
         <AmbientDictation />
         <RevenueAssurance />
