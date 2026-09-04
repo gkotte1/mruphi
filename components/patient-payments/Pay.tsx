@@ -8,8 +8,8 @@ import { cn } from "@/lib/cn";
  * The page's product vocabulary: one balance, followed until it is reconciled.
  *
  * Patient Payments was drawn with the same generic parts as every other module
- * page — one message card over one row of values, a strip of pills, five
- * circles — so a page about a payment never showed the payment being made.
+ * page - one message card over one row of values, a strip of pills, five
+ * circles - so a page about a payment never showed the payment being made.
  * These primitives give it the shapes its subject has: the sheet a balance is
  * paid on, and the ledger the result lands in.
  *
@@ -37,7 +37,7 @@ export function Surface({
   /** `brand` for Murphi's own surfaces, `plain` for everything else. */
   tone?: "brand" | "plain";
   live?: boolean;
-  /** Hold the status dot steady — for a state that has finished, not one
+  /** Hold the status dot steady - for a state that has finished, not one
       that is still running. */
   still?: boolean;
   /** Tighter head and body rules. Used by the hero, where the surfaces are
@@ -252,7 +252,7 @@ export function MethodTile({
   );
 }
 
-/** A short row of state pips — how far through the sequence the product is. */
+/** A short row of state pips - how far through the sequence the product is. */
 export function Pips({ total, done }: { total: number; done: number }) {
   return (
     <div className="flex items-center gap-1.5" aria-hidden>
@@ -269,7 +269,7 @@ export function Pips({ total, done }: { total: number; done: number }) {
   );
 }
 
-/** One end of the round trip — the customer's own system, on #007EFF. */
+/** One end of the round trip - the customer's own system, on #007EFF. */
 export function SystemNode({
   label,
   returned,

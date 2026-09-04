@@ -6,7 +6,7 @@ import { cn } from "@/lib/cn";
 /**
  * The page's product-surface vocabulary.
  *
- * The hero's card already reads as a real interface — a titled window with a
+ * The hero's card already reads as a real interface - a titled window with a
  * head, a body and a foot strip. Everything else on the page was a bordered
  * rectangle, so the sections looked like separate designs rather than views of
  * one product. These primitives lift that same window language out of the hero
@@ -27,7 +27,7 @@ export function Panel({
 }: {
   label: string;
   children: ReactNode;
-  /** Where this surface's input came from — rendered as the hero's strip. */
+  /** Where this surface's input came from - rendered as the hero's strip. */
   context?: string;
   foot?: ReactNode;
   /** A quietly pulsing dot, for a surface that is actively working. */

@@ -29,13 +29,13 @@ import {
 } from "@/components/ai-driven-rcm/Sections";
 
 export const metadata: Metadata = pageMetadata("/ai-driven-rcm/", {
-  title: "AI-Driven RCM for Home Health — Launching Soon",
+  title: "AI-Driven RCM for Home Health - Launching Soon",
   description:
     "AI-driven revenue cycle management for home health and hospice: claim readiness, denial prevention and ERA/EOB reconciliation tracked across the full claim lifecycle.",
 });
 
 /* The claim lifecycle, as one continuous nine-stage run, numbered 01–09.
-   Payment and reconciliation stay two independent stages — the money arriving
+   Payment and reconciliation stay two independent stages - the money arriving
    and the money being matched are separate events. */
 const STAGES = [
   { num: "01", label: "Eligibility" },
@@ -107,9 +107,9 @@ export default function AiDrivenRcmPage() {
           title="Meet the Problem Before the Payer Does."
           storyTag="Ninety Days Later"
           story={
-            'A denial letter arrives: "insufficient documentation." Ninety days too late to fix what actually happened — a coding step that never made it into the claim in the first place.'
+            'A denial letter arrives: "insufficient documentation." Ninety days too late to fix what actually happened - a coding step that never made it into the claim in the first place.'
           }
-          lede="Murphi tracks each claim across eligibility, authorization, documentation and coding — and intercepts the same kind of issue while it's still a fixable step, not a finished denial."
+          lede="Murphi tracks each claim across eligibility, authorization, documentation and coding - and intercepts the same kind of issue while it's still a fixable step, not a finished denial."
           trust={
             <>
               HIPAA <TrustDot /> SOC 2 <TrustDot /> Human review before submission
@@ -141,7 +141,7 @@ export default function AiDrivenRcmPage() {
             <SoonCallout>
               <strong className="text-brand-dark">Launching Soon.</strong> AI-Driven
               RCM is in active development. This page reflects the planned workflow
-              — capabilities may change before general availability.
+              - capabilities may change before general availability.
             </SoonCallout>
           </Reveal>
 
@@ -182,7 +182,7 @@ export default function AiDrivenRcmPage() {
             items={AUTOMATED}
             note={
               <FetchNote>
-                Murphi surfaces issues and assists resolution — claim submission
+                Murphi surfaces issues and assists resolution - claim submission
                 decisions remain with your team.
               </FetchNote>
             }

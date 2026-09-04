@@ -15,12 +15,12 @@ import { cn } from "@/lib/cn";
 /**
  * The hero visual: every source, one intake.
  *
- * It used to be five labelled boxes, two columns of chevrons and a grey card —
+ * It used to be five labelled boxes, two columns of chevrons and a grey card  - 
  * a diagram of the idea. It is now the intake itself: the five sources the page
  * names, feeding one bus into the Murphi mark, with the three states the page
  * already lists clearing in sequence and the referral ending ready to route.
  *
- * The mark is the project's own LogoMark component — no new or generated image.
+ * The mark is the project's own LogoMark component - no new or generated image.
  *
  * The sequence advances every two seconds and loops; under reduced motion it
  * holds the first state and nothing moves. Every string is the page's own.

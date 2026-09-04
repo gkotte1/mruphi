@@ -10,9 +10,9 @@ import SecuritySection from "@/components/integration/SecuritySection";
 import GetStartedCta from "@/components/GetStartedCta";
 
 export const metadata: Metadata = pageMetadata("/integrations/", {
-  title: "EHR Integrations — FHIR, HL7, API & Agentic AI",
+  title: "EHR Integrations - FHIR, HL7, API & Agentic AI",
   description:
-    "Five home health EHR AI integration methods — Agentic AI, RPA, FHIR R4, HL7 v2 and Direct API. No EHR replacement required. Live in days.",
+    "Five home health EHR AI integration methods - Agentic AI, RPA, FHIR R4, HL7 v2 and Direct API. No EHR replacement required. Live in days.",
 });
 
 export default function IntegrationPage() {

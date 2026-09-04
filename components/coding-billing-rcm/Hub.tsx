@@ -12,7 +12,7 @@ import { cn } from "@/lib/cn";
  * results fan back out on the right. Work travels the lines in both directions,
  * slowly, so the direction of flow reads at a glance.
  *
- * The mark is the project's own LogoMark component — no new or generated image.
+ * The mark is the project's own LogoMark component - no new or generated image.
  * Every string is the one the page already carried.
  */
 

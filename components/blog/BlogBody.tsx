@@ -3,7 +3,7 @@ import type { BlogBlock, Inline } from "@/lib/blog";
 import { cn } from "@/lib/cn";
 
 /**
- * The article body, at the same editorial scale the announcement pages use —
+ * The article body, at the same editorial scale the announcement pages use  - 
  * 16.5px prose on a 1.75 rhythm, 23px section headings, 18.5px sub-headings.
  *
  * It adds the two things a blog post needs that an announcement does not: a

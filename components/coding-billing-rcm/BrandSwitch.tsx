@@ -11,7 +11,7 @@ import { cn } from "@/lib/cn";
  * actions rather than a choice of view. They are now one segmented control: a
  * single recessed track holding two equal halves, with the selected half raised
  * on #007EFF and the other left quiet. Nothing here carries a call-to-action's
- * weight — no arrow, no lift, no shadow.
+ * weight - no arrow, no lift, no shadow.
  *
  * The head, the control and the panel share one centre line, so the section
  * reads down the middle. Both panels stay in the DOM and cross-fade, so the
@@ -45,7 +45,7 @@ export default function BrandSwitch({
         {lede}
       </p>
 
-      {/* One track, two equal halves — a control, not two buttons. */}
+      {/* One track, two equal halves - a control, not two buttons. */}
       <div
         role="tablist"
         className="mt-9 inline-grid grid-cols-2 gap-1 rounded-full border border-grey-mid bg-grey-soft p-1"
@@ -61,7 +61,7 @@ export default function BrandSwitch({
               aria-selected={selected}
               onClick={() => setActive(option.id)}
               /* The selected half is distinguished by its ground, not by a
-                 colour change on the label — this control keeps the black
+                 colour change on the label - this control keeps the black
                  treatment it has always had, and never turns blue. */
               className={cn(
                 "rounded-full px-7 py-2.5 text-[13.5px] font-semibold whitespace-nowrap transition-colors duration-[280ms] ease-out max-600:px-5",

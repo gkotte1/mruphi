@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
+import CookieConsent from "@/components/CookieConsent";
 import { JsonLd } from "@/components/JsonLd";
 import { organizationSchema } from "@/lib/schema";
 import { SITE_URL, absoluteUrl } from "@/lib/site";
@@ -26,33 +27,33 @@ const jakarta = Plus_Jakarta_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Murphi.ai — AI for Every Home Health & Hospice Workflow",
+    default: "Murphi.ai - AI for Every Home Health & Hospice Workflow",
     template: "%s | Murphi.ai",
   },
   description:
-    "Home health and hospice AI software that connects to the EHR you already use — ambient AI documentation, revenue assurance, patient engagement and patient payments.",
+    "Home health and hospice AI software that connects to the EHR you already use - ambient AI documentation, revenue assurance, patient engagement and patient payments.",
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",
     siteName: "Murphi.ai",
     url: absoluteUrl("/"),
-    title: "Murphi.ai — AI for Every Home Health & Hospice Workflow",
+    title: "Murphi.ai - AI for Every Home Health & Hospice Workflow",
     description:
-      "Home health and hospice AI software that connects to the EHR you already use — ambient AI documentation, revenue assurance, patient engagement and patient payments.",
+      "Home health and hospice AI software that connects to the EHR you already use - ambient AI documentation, revenue assurance, patient engagement and patient payments.",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Murphi.ai — AI-powered workforce intelligence",
+        alt: "Murphi.ai - AI-powered workforce intelligence",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Murphi.ai — AI for Every Home Health & Hospice Workflow",
+    title: "Murphi.ai - AI for Every Home Health & Hospice Workflow",
     description:
-      "Home health and hospice AI software that connects to the EHR you already use — ambient AI documentation, revenue assurance, patient engagement and patient payments.",
+      "Home health and hospice AI software that connects to the EHR you already use - ambient AI documentation, revenue assurance, patient engagement and patient payments.",
     images: ["/og-image.png"],
   },
   icons: {
@@ -81,6 +82,10 @@ export default function RootLayout({
             markup a reader can see. */}
         <JsonLd data={organizationSchema()} />
         {children}
+
+        {/* Asked once, site-wide. Renders nothing once a choice is stored, and
+            never blocks the page. */}
+        <CookieConsent />
       </body>
     </html>
   );

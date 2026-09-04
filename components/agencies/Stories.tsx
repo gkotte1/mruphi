@@ -13,7 +13,7 @@ import { cn } from "@/lib/cn";
  *
  * The track carries the cards twice. Advancing one position at a time, the
  * window at index N always has real content to its right, and index COUNT
- * renders exactly what index 0 does — so the loop resets there invisibly.
+ * renders exactly what index 0 does - so the loop resets there invisibly.
  */
 
 export type Story = {

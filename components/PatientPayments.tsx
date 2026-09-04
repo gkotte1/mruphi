@@ -14,7 +14,7 @@ import {
 } from "@/components/home/kit";
 
 /**
- * Module 4 — Patient Payments & Reconciliation, converted from `#payments` in
+ * Module 4 - Patient Payments & Reconciliation, converted from `#payments` in
  * "01. HomePAge/Murphi.ai Home LandingPage.html".
  *
  * A `.reverse` block: copy right, visual left. The visual is the balance card,
@@ -44,12 +44,12 @@ export default function PatientPayments() {
           <Eyebrow>Patient Payments &amp; Reconciliation</Eyebrow>
 
           <ModuleHeading id="payments-heading">
-            Make patient balances easier to collect — and reconcile.
+            Make patient balances easier to collect - and reconcile.
           </ModuleHeading>
 
           <Lede>
             Murphi identifies patient-responsibility balances and opens a simple
-            digital path to pay — then reconciles the result back to your EHR
+            digital path to pay - then reconciles the result back to your EHR
             automatically.
           </Lede>
 

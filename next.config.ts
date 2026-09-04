@@ -7,7 +7,7 @@ const nextConfig: NextConfig = {
 
   async redirects() {
     return [
-      /* The Integration page briefly lived at the singular slug — keep any link
+      /* The Integration page briefly lived at the singular slug - keep any link
          already pointing there working rather than serving a 404. */
       { source: "/integration", destination: "/integrations/", permanent: true },
 

@@ -11,7 +11,7 @@ import { cn } from "@/lib/cn";
  * border, the kicker "FAQs", the heading "Frequently Asked Questions", and the
  * accordion in a 820px column with the first question open. The accordion
  * itself is the site's existing one, which matches the source's `.accordion-*`
- * rules — 14px radius, 1px #E3E3E3 border, 12px gap, 18px/22px head padding,
+ * rules - 14px radius, 1px #E3E3E3 border, 12px gap, 18px/22px head padding,
  * 15px/700 #1A1A1A question, 13.5px/1.6 #606060 answer, chevron rotating 180° on
  * open, body sliding on max-height over 280ms, one open at a time.
  *

@@ -22,13 +22,13 @@ import { cn } from "@/lib/cn";
  * The three moments of a visit, as one interface.
  *
  * The section used to be three stacked rows, each with its copy on one side and
- * a panel on the other — which meant the reader met three separate layouts for
+ * a panel on the other - which meant the reader met three separate layouts for
  * what is one continuous workflow. It is now a single composition: the phases
  * on the left as an accordion, one open at a time, and the matching product
  * surface on the right.
  *
- * Motion uses what the site already has — the accordion's max-height slide and
- * the mp-view fade — rather than pulling in an animation library.
+ * Motion uses what the site already has - the accordion's max-height slide and
+ * the mp-view fade - rather than pulling in an animation library.
  *
  * Every string below is the one the page already carried.
  */
@@ -48,7 +48,7 @@ const PHASES: Phase[] = [
   {
     number: "01 · Before the Visit",
     heading: "Walk in already prepared.",
-    body: "Murphi pulls the referral and existing EHR record ahead of time, pre-filling what's already known — history, diagnoses, prior medications — and gives the clinician a short summary of the packet. No evening spent sifting through discharge paperwork before tomorrow's first visit.",
+    body: "Murphi pulls the referral and existing EHR record ahead of time, pre-filling what's already known - history, diagnoses, prior medications - and gives the clinician a short summary of the packet. No evening spent sifting through discharge paperwork before tomorrow's first visit.",
     panel: "Referral Summary",
     context: "Discharge packet condensed to one page",
     visual: (
@@ -71,7 +71,7 @@ const PHASES: Phase[] = [
   {
     number: "02 · During the Visit",
     heading: "Hit record. Murphi listens.",
-    body: "Murphi quietly listens to the conversation with the patient, filtering out anything that isn't clinically relevant. If something required gets missed — a wound assessment, a medication reconciliation — Murphi flags it in the moment, while the clinician is still in the room, not after they've left.",
+    body: "Murphi quietly listens to the conversation with the patient, filtering out anything that isn't clinically relevant. If something required gets missed - a wound assessment, a medication reconciliation - Murphi flags it in the moment, while the clinician is still in the room, not after they've left.",
     panel: "Live Encounter",
     live: true,
     visual: (
@@ -97,7 +97,7 @@ const PHASES: Phase[] = [
   {
     number: "03 · After the Visit",
     heading: "Finish it from the car, or the couch.",
-    body: "Anything sensitive or left out can be added afterward with a short dictation, at the clinician's convenience. Murphi combines the visit recording, the dictation and the referral information into the completed OASIS, HOPE or discipline note — ready for review the same day.",
+    body: "Anything sensitive or left out can be added afterward with a short dictation, at the clinician's convenience. Murphi combines the visit recording, the dictation and the referral information into the completed OASIS, HOPE or discipline note - ready for review the same day.",
     panel: "Dictation → Completed Note",
     context: "Recording + dictation + referral combined",
     visual: <DocTiles items={["OASIS", "HOPE", "Visit Note"]} />,

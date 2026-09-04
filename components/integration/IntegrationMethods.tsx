@@ -7,19 +7,19 @@ const METHODS: Method[] = [
     index: "01",
     title: "Agentic AI",
     icon: "brain",
-    body: "AI agents navigate EHR interfaces autonomously — reading data, entering notes, and triggering workflows without API access. Works with any EHR that has a web or desktop interface. No vendor cooperation required.",
+    body: "AI agents navigate EHR interfaces autonomously - reading data, entering notes, and triggering workflows without API access. Works with any EHR that has a web or desktop interface. No vendor cooperation required.",
   },
   {
     index: "02",
     title: "RPA",
     icon: "sync",
-    body: "Robotic Process Automation automates repetitive EHR tasks — data entry, form completion, document upload, and report generation. Ideal for EHRs without modern APIs.",
+    body: "Robotic Process Automation automates repetitive EHR tasks - data entry, form completion, document upload, and report generation. Ideal for EHRs without modern APIs.",
   },
   {
     index: "03",
     title: "FHIR R4",
     icon: "network",
-    body: "Standards-based FHIR R4 integration for EHRs with modern APIs. Bidirectional data exchange — read patient data, write clinical notes, and trigger workflows via FHIR resources.",
+    body: "Standards-based FHIR R4 integration for EHRs with modern APIs. Bidirectional data exchange - read patient data, write clinical notes, and trigger workflows via FHIR resources.",
   },
   {
     index: "04",
@@ -31,7 +31,7 @@ const METHODS: Method[] = [
     index: "05",
     title: "Direct REST API",
     icon: "code",
-    body: "Direct API integration for EHR platforms and health IT vendors. REST endpoints for all Murphi.ai modules — read, write, and trigger workflows programmatically.",
+    body: "Direct API integration for EHR platforms and health IT vendors. REST endpoints for all Murphi.ai modules - read, write, and trigger workflows programmatically.",
   },
   {
     index: "06",
@@ -60,12 +60,12 @@ export default function IntegrationMethods() {
 
           <p className="type-lead mt-5 text-grey-dk">
             No single integration method works for every EHR. Murphi.ai supports
-            five distinct integration pathways — so the right method is always
+            five distinct integration pathways - so the right method is always
             {"available regardless of your EHR's technical architecture."}
           </p>
         </div>
 
-        {/* One catalogue, hairline divided — the methods read as a set. */}
+        {/* One catalogue, hairline divided - the methods read as a set. */}
         <ul className="mt-14 grid grid-cols-3 gap-px overflow-hidden rounded-panel border border-grey-mid bg-grey-mid shadow-[0_22px_54px_-40px_rgba(15,29,84,0.5)] max-1024:grid-cols-2 max-768:grid-cols-1 max-600:mt-10">
           {METHODS.map((method) => (
             <li

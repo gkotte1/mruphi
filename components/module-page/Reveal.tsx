@@ -10,7 +10,7 @@ const HIDDEN = ["opacity-0", "translate-y-[18px]"];
  * transparent, then settle once they cross 12% into view, observed once and
  * then released.
  *
- * The class is dropped straight off the node rather than held in state — the
+ * The class is dropped straight off the node rather than held in state - the
  * reveal is purely visual, so there is nothing for React to re-render, and it
  * matches how the original page does it. Reduced motion is handled in CSS, so
  * the content is visible even before this runs.

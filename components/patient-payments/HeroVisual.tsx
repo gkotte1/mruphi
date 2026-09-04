@@ -6,12 +6,12 @@ import { cn } from "@/lib/cn";
  * The hero visual: the request, the hand-off, and the ledger.
  *
  *   1  the message that reaches the patient, and the reply that settles it
- *   2  the hand-off — payment confirmed, ledger updated
+ *   2  the hand-off - payment confirmed, ledger updated
  *   3  the ledger row the result lands in
  *
  * The arrangement is the one the page has always used. What changed is the
- * finish: both cards now share one shell — same radius, same hairline, same
- * single soft shadow, same head height and type — the reply bubble hugs its
+ * finish: both cards now share one shell - same radius, same hairline, same
+ * single soft shadow, same head height and type - the reply bubble hugs its
  * own text instead of spanning the card as a blue bar, the hand-off is a quiet
  * ruled label rather than an animated marker, and the ledger rows sit on a
  * consistent rhythm.
@@ -84,8 +84,8 @@ export default function PaymentJourney() {
 }
 
 /**
- * One card. The shell matches the surfaces further down the page — same
- * radius, hairline and shadow — so the hero belongs to the same product.
+ * One card. The shell matches the surfaces further down the page - same
+ * radius, hairline and shadow - so the hero belongs to the same product.
  * The head carries a label, and a state chip only where there is a state to
  * report; nothing is added to fill the space when there isn't.
  */

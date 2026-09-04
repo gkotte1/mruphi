@@ -12,8 +12,8 @@ import { cn } from "@/lib/cn";
 /**
  * The body of the Accreditation & Audit page.
  *
- * The page's subject is a register — requirements, the evidence that answers
- * them, and who signs off — and its structure is two sides of the same survey.
+ * The page's subject is a register - requirements, the evidence that answers
+ * them, and who signs off - and its structure is two sides of the same survey.
  * Its sections are built from those two ideas rather than the workflows and
  * comparisons the module pages use: paired lanes, numbered registers, and a
  * specification list.

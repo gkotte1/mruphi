@@ -3,7 +3,7 @@ import { Icon } from "@/components/icons";
 
 /**
  * The closing CTA panel, built to the spec in
- * murphi-project-assets/graphics/patterns.md §3 — 40px radius (24px ≤600),
+ * murphi-project-assets/graphics/patterns.md §3 - 40px radius (24px ≤600),
  * the documented three-stop blue, the wide blue-tinted shadow, and a 64px mesh
  * masked *inward* so the texture only shows at the edges and the centre stays
  * clean. The healthcare marks live in that same outer band.

@@ -5,18 +5,18 @@ import { cn } from "@/lib/cn";
 
 /**
  * The home hero, built to the reference in
- * "01. HomePAge/Murphi.ai Home LandingPage.html" — its `.hero` section and the
+ * "01. HomePAge/Murphi.ai Home LandingPage.html" - its `.hero` section and the
  * `.hero`, `.hero-grid`, `.hero-bullets`, `.hero-ctas`, `.trust-line`,
  * `.stats-row` and `.hero-modules-card` rules, measurement for measurement.
  *
  *   left    eyebrow · h1 · lede · six bulleted modules · CTA · trust line
- *   right   "The Murphi Platform" — the same six modules as a 3×2 card, each
+ *   right   "The Murphi Platform" - the same six modules as a 3×2 card, each
  *           one linking to its page
  *   under    the three figures, ruled, across the full width
  *
  * Two equal columns with a 64px gutter, centred on each other; one column below
  * 1080. The reference marks both halves `reveal in`, i.e. already settled, so
- * the hero carries no entrance animation — only the hover lift on the cards.
+ * the hero carries no entrance animation - only the hover lift on the cards.
  *
  * The figures are the one departure from the reference's own layout, which
  * closes the left column with them. That made the column roughly twice the
@@ -123,7 +123,7 @@ const MODULES: Module[] = [
 
 export default function Hero() {
   return (
-    /* .hero — padding:88px 0 0, on the tint; 44px 0 24px under 720. The extra
+    /* .hero - padding:88px 0 0, on the tint; 44px 0 24px under 720. The extra
        80px clears the fixed navbar, which the reference's sticky header did
        not need. */
     <section className="relative isolate overflow-hidden bg-grey-bg pt-[80px]">
@@ -136,7 +136,7 @@ export default function Hero() {
           "pt-[88px] pb-16 max-720:pt-11 max-720:pb-12",
         )}
       >
-        {/* .hero-grid — two equal columns, 64px gutter, centred on each
+        {/* .hero-grid - two equal columns, 64px gutter, centred on each
             other; one column with a 48px gutter below 1080. */}
         <div className="grid grid-cols-2 items-center gap-16 max-1080:grid-cols-1 max-1080:gap-12">
           <div>
@@ -149,14 +149,14 @@ export default function Hero() {
               Agencies
             </h1>
 
-            {/* .hero p.lede — 17.5px, and the inline 20px bottom margin the
+            {/* .hero p.lede - 17.5px, and the inline 20px bottom margin the
                 reference sets on this one paragraph. */}
             <p className="mb-5 max-w-[52ch] text-[17.5px] leading-[1.6] text-grey-500">
               Murphi integrates with the EHRs your agency uses and automates the
               work around patient care.
             </p>
 
-            {/* .hero-bullets — a 5px blue dot, then the module and its detail. */}
+            {/* .hero-bullets - a 5px blue dot, then the module and its detail. */}
             <ul className="mb-8 flex flex-col gap-2.5">
               {BULLETS.map((bullet) => (
                 <li
@@ -167,14 +167,14 @@ export default function Hero() {
                     <strong className="font-semibold text-ink">
                       {bullet.label}
                     </strong>
-                    {bullet.detail ? <> — {bullet.detail}</> : null}
+                    {bullet.detail ? <> - {bullet.detail}</> : null}
                     {bullet.soon ? <SoonBadge /> : null}
                   </span>
                 </li>
               ))}
             </ul>
 
-            {/* .hero-ctas — one primary action; full width below 720. */}
+            {/* .hero-ctas - one primary action; full width below 720. */}
             <div className="mb-[30px] flex flex-wrap items-center gap-3.5 max-720:flex-col max-720:items-stretch">
               <Link
                 href="/contact-us/"
@@ -237,7 +237,7 @@ export default function Hero() {
   );
 }
 
-/** .status-badge.soon, on the brand ramp — the reference's amber is not in it. */
+/** .status-badge.soon, on the brand ramp - the reference's amber is not in it. */
 function SoonBadge() {
   return (
     <span
@@ -252,7 +252,7 @@ function SoonBadge() {
   );
 }
 
-/** .hero-modules-card — the six modules as a 3×2 grid, each one a link. */
+/** .hero-modules-card - the six modules as a 3×2 grid, each one a link. */
 function HeroModulesCard() {
   return (
     <div className="rounded-panel border border-grey-mid bg-white p-8 shadow-[0_18px_44px_-16px_rgba(15,29,84,0.16)] max-1200:p-7 max-600:p-5">

@@ -60,7 +60,7 @@ export function BrandToggle({
   panels,
 }: {
   brands: { id: string; label: string }[];
-  /** One pre-rendered panel per brand — keyed by id. */
+  /** One pre-rendered panel per brand - keyed by id. */
   panels: { id: string; body: ReactNode }[];
 }) {
   const [brand, setBrand] = useState(brands[0]?.id);

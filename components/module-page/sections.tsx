@@ -19,7 +19,7 @@ import { cn } from "@/lib/cn";
 
 /**
  * The section types shared by the AI Module pages. Every one is traced from
- * the source pages' own CSS — the six HTML files ship a byte-identical
+ * the source pages' own CSS - the six HTML files ship a byte-identical
  * stylesheet, so a single set of components covers them all.
  */
 
@@ -268,7 +268,7 @@ export function FindingRow({
   );
 }
 
-/** A label/value row — the source's `.pay-row`. */
+/** A label/value row - the source's `.pay-row`. */
 export function PayRow({ label, value }: { label: string; value: string }) {
   return (
     <div className="flex items-center justify-between border-b border-grey-soft py-[11px] text-[12.5px] last:border-b-0">

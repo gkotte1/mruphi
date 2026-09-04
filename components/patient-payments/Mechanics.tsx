@@ -19,9 +19,9 @@ import { cn } from "@/lib/cn";
 /**
  * The five stages, demonstrating themselves.
  *
- * The composition follows the Revenue Assurance mechanics — a selectable rail
+ * The composition follows the Revenue Assurance mechanics - a selectable rail
  * beside a product surface, both driven by one index so they cannot fall out of
- * step — but every word here is this page's own: the same $84 balance the hero
+ * step - but every word here is this page's own: the same $84 balance the hero
  * opens with, carried from the EHR to the reconciled ledger.
  *
  * It advances every two seconds and loops. Pointing at the section holds it,

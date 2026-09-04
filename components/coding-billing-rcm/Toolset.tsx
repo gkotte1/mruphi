@@ -14,7 +14,7 @@ import { cn } from "@/lib/cn";
  * figure it is, set beside the sentence it came from, and the reports read as a
  * ruled index rather than a bag of tags.
  *
- * Selection is manual — this is a specification to read, not a demonstration to
+ * Selection is manual - this is a specification to read, not a demonstration to
  * watch, so nothing here rotates on its own. Every panel stays in the DOM.
  */
 
@@ -35,7 +35,7 @@ export default function Toolset({ tools }: { tools: Tool[] }) {
     <Reveal>
       <div>
         {/* One segmented control, centred, so the three offerings read as one
-            set. Colours are the ones this control already had — the selected
+            set. Colours are the ones this control already had - the selected
             tab on ink, the others grey; nothing here is a call to action. */}
         <div className="flex justify-center">
           <div

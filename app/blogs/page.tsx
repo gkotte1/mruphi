@@ -12,7 +12,7 @@ import { pageMetadata } from "@/lib/site";
 import { cn } from "@/lib/cn";
 
 /**
- * /blogs/ — the listing.
+ * /blogs/ - the listing.
  *
  * The listing lives at /blogs/ and each post at /blog/<slug>/, which is the
  * pairing the footer and the post front matter already use. /blog/ redirects
@@ -20,12 +20,12 @@ import { cn } from "@/lib/cn";
  *
  * The hero is the one the Announcements page already uses: a thin #007EFF
  * outline around a white panel, a chip, an h1 and a lead. The cards are the
- * announcement cards' structure with the two fields a blog post adds — the
+ * announcement cards' structure with the two fields a blog post adds - the
  * content pillar and an excerpt.
  */
 
 export const metadata: Metadata = pageMetadata("/blogs/", {
-  title: "Blog — Home Health & Hospice AI",
+  title: "Blog - Home Health & Hospice AI",
   description:
     "Practical guides for home health and hospice teams on ambient AI documentation, OASIS and PDGM review, patient engagement, payments and EHR integration.",
 });
@@ -54,7 +54,7 @@ export default function BlogPage() {
 
               <p className="type-lead mx-auto mt-6 max-w-[620px] text-grey-dk">
                 Practical guides on clinical documentation, revenue assurance,
-                patient engagement and EHR integration — written for the teams
+                patient engagement and EHR integration - written for the teams
                 who do the work.
               </p>
             </div>
@@ -97,14 +97,14 @@ function Card({ post }: { post: BlogPost }) {
         {/*
           The image box is the featured image's own 1200:630. It used to be
           16/10, and object-cover then scaled a 1.90:1 image to fill a 1.60:1
-          box — cropping roughly a sixth off each side, which on a designed
+          box - cropping roughly a sixth off each side, which on a designed
           graphic means cutting into the artwork. At the matching ratio there
           is nothing to crop and nothing to letterbox: the image fills the card
           width exactly.
 
           object-contain rather than cover so that a future post whose image is
           not 1200:630 is shown whole on the grey ground instead of being cut.
-          The hover zoom is gone for the same reason — a 3% scale pushed the
+          The hover zoom is gone for the same reason - a 3% scale pushed the
           edges of the artwork out of frame.
         */}
         <span className="relative block aspect-[1200/630] overflow-hidden border-b border-grey-mid bg-grey-bg">
@@ -114,7 +114,7 @@ function Card({ post }: { post: BlogPost }) {
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
             className="object-contain"
-            /* An SVG needs no raster pipeline — and this one declares only a
+            /* An SVG needs no raster pipeline - and this one declares only a
                viewBox, so leaving it unoptimised keeps its own geometry. */
             unoptimized
           />

@@ -20,7 +20,7 @@ import { cn } from "@/lib/cn";
  * the panel's height never jumps between states and every view's copy stays in
  * the HTML. Only the active view is exposed to assistive technology.
  *
- * The chart followed here is the one the page already opens with — Mr.
+ * The chart followed here is the one the page already opens with - Mr.
  * Delgado's episode, its four fetched documents and its three findings.
  */
 
@@ -236,7 +236,7 @@ const VIEWS: View[] = [
 
         <div className="mt-4 flex items-center justify-between gap-3">
           <Pips total={3} done={2} />
-          {/* A state in the mock, not a control — nothing to operate here. */}
+          {/* A state in the mock, not a control - nothing to operate here. */}
           <span
             className="rounded-full bg-brand px-3.5 py-1.5 text-[11.5px] font-semibold text-white"
             aria-hidden

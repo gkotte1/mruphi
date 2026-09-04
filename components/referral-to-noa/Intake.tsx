@@ -9,7 +9,7 @@ import { cn } from "@/lib/cn";
  * being routed.
  *
  * Intake was drawn as five labelled boxes, two columns of arrows and one grey
- * card — a diagram of the idea rather than a picture of the product. These
+ * card - a diagram of the idea rather than a picture of the product. These
  * primitives give the page the parts it actually describes: the sources it
  * accepts, the mark that reads them, the checks it runs, and the record it
  * writes back.
@@ -184,7 +184,7 @@ export function SourceCard({
 }
 
 /**
- * The mark that reads them all — the project's own logo component, never a
+ * The mark that reads them all - the project's own logo component, never a
  * redrawn or generated one.
  */
 export function MurphiNode({ status }: { status?: string }) {
@@ -262,7 +262,7 @@ export function CheckRow({
   );
 }
 
-/** A field that has been read off the referral — structure, never invented data. */
+/** A field that has been read off the referral - structure, never invented data. */
 export function FieldRow({ label, width }: { label: string; width: string }) {
   return (
     <div className="flex items-center gap-3 border-b border-grey-soft py-2.5 last:border-b-0">
@@ -290,7 +290,7 @@ export function DecisionChip({ name, chosen }: { name: string; chosen?: boolean 
   );
 }
 
-/** One end of the round trip — the customer's own system, on #007EFF. */
+/** One end of the round trip - the customer's own system, on #007EFF. */
 export function SystemNode({
   label,
   returned,

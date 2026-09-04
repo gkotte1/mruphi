@@ -19,7 +19,7 @@ import { cn } from "@/lib/cn";
  * Every string is the one the page already carried.
  */
 
-/* ── Friday's referral, two ways — aligned so they compare ───── */
+/* ── Friday's referral, two ways - aligned so they compare ───── */
 
 /* Static so Tailwind sees them: on mobile the grid stops being two columns,
    so the cells reorder into one complete track followed by the other. */
@@ -198,7 +198,7 @@ export function ChecksPanel({
     <>
       <Reveal>
         <div className="overflow-hidden rounded-panel border border-grey-mid bg-white shadow-[0_16px_40px_rgba(15,29,84,.06)]">
-          {/* One pass, all of them at once — the point of the section. */}
+          {/* One pass, all of them at once - the point of the section. */}
           <div
             className={cn(
               MONO,

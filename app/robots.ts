@@ -5,7 +5,7 @@ import { absoluteUrl } from "@/lib/site";
  * /robots.txt
  *
  * Every public page is crawlable. The only exclusion is /api/, which holds the
- * contact-form handler and serves no indexable content — nothing under /_next/
+ * contact-form handler and serves no indexable content - nothing under /_next/
  * is blocked, so crawlers keep fetching the CSS, JavaScript, fonts and images
  * they need to render the pages they index.
  */

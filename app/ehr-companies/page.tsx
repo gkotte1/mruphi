@@ -43,7 +43,7 @@ import {
 import { cn } from "@/lib/cn";
 
 export const metadata: Metadata = pageMetadata("/ehr-companies/", {
-  title: "Home Health & Hospice EHR Companies — Embed AI",
+  title: "Home Health & Hospice EHR Companies - Embed AI",
   description:
     "Embed AI into your home health, hospice or palliative care EHR: ambient documentation, intelligent assessments, clinical quality checks and compliance workflows.",
 });
@@ -231,7 +231,7 @@ export default function EhrCompaniesPage() {
               <p className="mt-[18px] max-w-[56ch] text-[18px] leading-[1.6] text-grey-500">
                 Murphi.ai enables Home Health, Hospice and Palliative Care
                 platforms to introduce ambient documentation, intelligent
-                assessments, clinical quality checks, and compliance workflows —
+                assessments, clinical quality checks, and compliance workflows  - 
                 without building or maintaining the complete enterprise AI
                 infrastructure internally.
               </p>
@@ -262,9 +262,9 @@ export default function EhrCompaniesPage() {
                 title="Clinician Interaction"
                 status="Live"
                 input="Voice, text, EHR data"
-                layerLabel="↓ Murphi.ai — Intelligence Layer ↓"
+                layerLabel="↓ Murphi.ai - Intelligence Layer ↓"
                 modules={MODULES}
-                output="Structured EHR documentation — validated, compliant, approved"
+                output="Structured EHR documentation - validated, compliant, approved"
                 foot={["Launch workflows in phases", "One scalable platform"]}
               />
             </Reveal>
@@ -403,7 +403,7 @@ export default function EhrCompaniesPage() {
 
             <Reveal>
               <Lede className="mb-[22px]">
-                Choose the approach that matches how your platform is built — or
+                Choose the approach that matches how your platform is built - or
                 combine all three.
               </Lede>
             </Reveal>
@@ -442,7 +442,7 @@ export default function EhrCompaniesPage() {
                       <strong className="text-ink">
                         White-Labeled Platform.
                       </strong>{" "}
-                      The full Murphi.ai experience, deployed under your brand —
+                      The full Murphi.ai experience, deployed under your brand  - 
                       Murphi.ai powers it invisibly.
                     </FetchNote>
                   ),
@@ -492,7 +492,7 @@ export default function EhrCompaniesPage() {
 
         <FinalCta
           heading="Experience AI Automation at Scale"
-          body="Tell us your care setting and we'll show you exactly what Murphi.ai delivers for your organization — a live demo tailored to your workflows and your team."
+          body="Tell us your care setting and we'll show you exactly what Murphi.ai delivers for your organization - a live demo tailored to your workflows and your team."
         />
       </main>
 

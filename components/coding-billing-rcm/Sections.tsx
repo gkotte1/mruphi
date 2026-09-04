@@ -311,7 +311,7 @@ export function StoryRule({ children }: { children: string }) {
 export function Note({ children }: { children: ReactNode }) {
   return (
     <div className="mt-7 flex items-start gap-3 rounded-tile border border-grey-mid bg-grey-soft px-5 py-4">
-      {/* The page's own note glyph — `info` is an outcome icon, not an IconName. */}
+      {/* The page's own note glyph - `info` is an outcome icon, not an IconName. */}
       <span
         className="mt-px flex size-6 shrink-0 items-center justify-center rounded-full border border-brand-pale bg-white text-brand"
         aria-hidden

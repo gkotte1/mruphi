@@ -5,7 +5,7 @@ import { join } from "node:path";
  * The blog: its posts, and a reader for the Markdown they are written in.
  *
  * Posts live in content/blog/<slug>.md, beside content/announcements/ and
- * content/legal/ — the two content sets the site already reads from disk at
+ * content/legal/ - the two content sets the site already reads from disk at
  * build time. Each file opens with a `Key: value` front matter block carrying
  * the SEO fields the author wrote, and those drive the page's metadata rather
  * than being printed in the article.
@@ -29,10 +29,10 @@ export type FrontMatter = {
   calendarReference?: string;
 };
 
-/** The pillar as the author writes it — "A — Ambient AI & Clinical
-    Documentation" — reduced to the label a card should show. */
+/** The pillar as the author writes it - "A - Ambient AI & Clinical
+    Documentation" - reduced to the label a card should show. */
 export function pillarLabel(pillar: string) {
-  return pillar.replace(/^[A-Z]\s*[—–-]\s*/, "").trim();
+  return pillar.replace(/^[A-Z]\s*[–-]\s*/, "").trim();
 }
 
 function parseFrontMatter(source: string) {
@@ -59,7 +59,7 @@ export type Inline = { text: string; bold?: boolean; href?: string };
  * Built fresh on each call rather than shared.
  *
  * A `g` regex carries `lastIndex` on the object itself, and parseInline
- * recurses into bold runs — a shared instance would have the inner call reset
+ * recurses into bold runs - a shared instance would have the inner call reset
  * the outer one's position and the loop would never terminate.
  */
 const inlinePattern = () => /\*\*([^*]+)\*\*|\[([^\]]+)\]\(([^)]+)\)/g;
@@ -67,8 +67,8 @@ const inlinePattern = () => /\*\*([^*]+)\*\*|\[([^\]]+)\]\(([^)]+)\)/g;
 /**
  * Bold and links, in one pass.
  *
- * A run may be bold, a link, or both — the post closes with
- * `**[Explore Ambient AI & Dictation →](/ambient-ai-dictation/)**` — so a bold
+ * A run may be bold, a link, or both - the post closes with
+ * `**[Explore Ambient AI & Dictation →](/ambient-ai-dictation/)**` - so a bold
  * match is re-read for a link inside it and the bold flag carried down.
  */
 export function parseInline(text: string, bold = false): Inline[] {
@@ -249,7 +249,7 @@ export type BlogPost = {
  * Publication dates and bylines.
  *
  * The front matter carries the SEO fields but no date or author, and neither
- * can be inferred from the article, so they are recorded here — the one place
+ * can be inferred from the article, so they are recorded here - the one place
  * a post's publishing metadata lives. Change the date here and the card, the
  * article page, the sitemap and the Article schema all follow.
  */
@@ -328,7 +328,7 @@ export const blogHref = (post: { slug: string }) => `/blog/${post.slug}/`;
 /**
  * The article, ready to render.
  *
- * The H1 is dropped — the page prints the title in its own header — and so is
+ * The H1 is dropped - the page prints the title in its own header - and so is
  * the closing "Suggested Internal Links" note, which is the author's planning
  * list rather than reader-facing copy: it names a glossary hub and posts that
  * do not exist yet. The links the article itself makes, in its CTA and its

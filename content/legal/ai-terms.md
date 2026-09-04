@@ -2,7 +2,7 @@
 
 AI Related Terms & Conditions
 
-###### Murphi.ai — Owned and Operated by Deskfactors Inc. — A Delaware C Corporation
+###### Murphi.ai - Owned and Operated by Deskfactors Inc. - A Delaware C Corporation
 
 Version 2.0  
 Effective Date: April 17, 2026  
@@ -18,7 +18,7 @@ Customer owns both input data and output data, including all AI Outputs. Murphi 
 
 ###### 3. Nature of AI Outputs
 
-AI Outputs may not always be accurate, complete, current, or reliable. All outputs — including coding suggestions, OASIS scoring suggestions, clinical documentation, compliance assessments, contract analysis, claim preparation data, appeal documentation, and all other outputs — are suggestions only. AI Outputs are not authoritative, binding, verified, or guaranteed. AI Outputs may contain inaccuracies, omissions, or errors.
+AI Outputs may not always be accurate, complete, current, or reliable. All outputs - including coding suggestions, OASIS scoring suggestions, clinical documentation, compliance assessments, contract analysis, claim preparation data, appeal documentation, and all other outputs - are suggestions only. AI Outputs are not authoritative, binding, verified, or guaranteed. AI Outputs may contain inaccuracies, omissions, or errors.
 
 ###### 4. Human-in-the-Loop Requirement
 

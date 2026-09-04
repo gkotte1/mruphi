@@ -19,7 +19,7 @@ import { cn } from "@/lib/cn";
  * Every string is the one the page already carried.
  */
 
-/* ── The same gap, two moments — aligned so they compare ─────── */
+/* ── The same gap, two moments - aligned so they compare ─────── */
 
 /* Static so Tailwind sees them: on mobile the grid stops being two columns,
    so the cells reorder into one complete track followed by the other. */

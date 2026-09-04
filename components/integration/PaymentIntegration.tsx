@@ -34,11 +34,11 @@ export default function PaymentIntegration() {
           </h2>
 
           <p className="mt-5 text-[16px] font-bold tracking-[-0.015em] text-brand-dark">
-            Everyware — Integrated Payment Gateway
+            Everyware - Integrated Payment Gateway
           </p>
 
           <p className="type-lead mt-3.5 text-grey-dk">
-            Murphi.ai AI Patient Financials uses the Everyware payment gateway —
+            Murphi.ai AI Patient Financials uses the Everyware payment gateway  - 
             enabling ACH, credit card, and debit card collection via SMS
             text-to-pay. Provider funds settled within 48 hours. Payments post
             back to the EHR automatically. PCI-compliant, HIPAA-compatible
@@ -115,7 +115,7 @@ export default function PaymentIntegration() {
   );
 }
 
-/** A short dashed hop between two steps — horizontal, vertical when stacked. */
+/** A short dashed hop between two steps - horizontal, vertical when stacked. */
 function Connector() {
   return (
     <>

@@ -11,7 +11,7 @@ import {
  * The hero visual: Murphi seated inside the platform, not beside it.
  *
  * The old card listed the same parts one under another, which read as a
- * brochure. This is the environment itself — the clinician's surface at the
+ * brochure. This is the environment itself - the clinician's surface at the
  * top, Murphi inset within it with tabs on both edges where it seats, the
  * capabilities it provides inside that inset, and the structured record coming
  * back out the bottom.

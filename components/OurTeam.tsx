@@ -6,8 +6,8 @@ import { cn } from "@/lib/cn";
  * The Our Team section.
  *
  * Portraits are the project's own, from murphi-project-assets/images/team/.
- * The kit records how the original About page shows them — 168px circles with
- * a 3px white border and a soft brand halo on hover — so that treatment is
+ * The kit records how the original About page shows them - 168px circles with
+ * a 3px white border and a soft brand halo on hover - so that treatment is
  * kept here.
  */
 
@@ -53,7 +53,7 @@ export default function OurTeam() {
           Our Team
         </h2>
 
-        {/* One leadership surface, hairline divided — three profiles, not
+        {/* One leadership surface, hairline divided - three profiles, not
             three floating cards. */}
         <ul className="mt-12 grid grid-cols-3 gap-px overflow-hidden rounded-[24px] border border-grey-mid bg-grey-mid shadow-[0_24px_60px_-46px_rgba(15,29,84,0.4)] max-900:grid-cols-1 max-600:mt-9">
           {TEAM.map((member) => (

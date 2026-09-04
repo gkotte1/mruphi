@@ -4,7 +4,7 @@ import { Icon, type IconName } from "@/components/icons";
 
 /**
  * The page opener: message left, a plain three-node diagram right.
- * The diagram carries only the three node names — no added claims.
+ * The diagram carries only the three node names - no added claims.
  */
 export default function IntegrationHero() {
   return (
@@ -23,7 +23,7 @@ export default function IntegrationHero() {
           </h1>
 
           <p className="type-lead mt-5 max-w-[540px] text-grey-dk">
-            Five integration methods — Agentic AI, RPA, FHIR R4, HL7 v2, and
+            Five integration methods - Agentic AI, RPA, FHIR R4, HL7 v2, and
             Direct API. No EHR replacement required. Live in days.
           </p>
 
@@ -122,7 +122,7 @@ function FlowDiagram() {
               {node.label}
             </p>
 
-            {/* Connected, and working — state drawn, never spelled out. */}
+            {/* Connected, and working - state drawn, never spelled out. */}
             <span className="relative flex size-1.5 shrink-0" aria-hidden>
               {node.core ? (
                 <span

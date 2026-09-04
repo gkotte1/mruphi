@@ -14,7 +14,7 @@ import { useAutoAdvance } from "@/lib/useAutoAdvance";
  * It used to be six identical boxes in a grid, which showed the count but not
  * the idea. The layer now sits across the top with a stem down to every
  * workflow, so the six read as attached to one thing rather than six separate
- * things — which is the page's whole argument.
+ * things - which is the page's whole argument.
  *
  * The highlight moves slowly across the workflows that are actually running;
  * the two that are not yet live keep their quiet dashed treatment and are never

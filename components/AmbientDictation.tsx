@@ -20,7 +20,7 @@ import {
 } from "@/components/home/kit";
 
 /**
- * Module 1 — Ambient AI & Dictation, converted from `#ambient-ai` in
+ * Module 1 - Ambient AI & Dictation, converted from `#ambient-ai` in
  * "01. HomePAge/Murphi.ai Home LandingPage.html".
  *
  * Copy left, the capture card right; the card is one `.mock-body.single` panel

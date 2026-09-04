@@ -15,8 +15,8 @@ import { cn } from "@/lib/cn";
 /**
  * The body of the Revenue Assurance page.
  *
- * Each section previously reached for the same shape — two bullet cards, a row
- * of circles, a strip of pills — so the page read as one repeated pattern
+ * Each section previously reached for the same shape - two bullet cards, a row
+ * of circles, a strip of pills - so the page read as one repeated pattern
  * rather than a product story. Each now takes the composition its own content
  * asks for, and they all live beside the page rather than in the shared module
  * kit, so the other module pages are untouched.

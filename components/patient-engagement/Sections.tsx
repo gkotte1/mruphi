@@ -19,8 +19,8 @@ import { cn } from "@/lib/cn";
 /**
  * The body of the Patient Engagement page.
  *
- * Every section on it was previously the same shape — a grid of rounded
- * rectangles, each carrying the same tick — so ten capabilities, five reasons
+ * Every section on it was previously the same shape - a grid of rounded
+ * rectangles, each carrying the same tick - so ten capabilities, five reasons
  * and a five-step journey all read as one undifferentiated wall. Each one now
  * takes the composition its own content asks for: a ruled index, a split
  * argument, an aligned before/after ledger, a delivery log, and a round trip
@@ -32,7 +32,7 @@ import { cn } from "@/lib/cn";
 
 /* ── What's Inside: a ruled index, not ten boxes ─────────────── */
 
-/** The icon each capability actually is — not decoration applied evenly. */
+/** The icon each capability actually is - not decoration applied evenly. */
 const INSIDE_ICONS: Record<string, IconName> = {
   "Two-Way SMS": "exchange",
   "Secure Staff App": "shield",
@@ -220,7 +220,7 @@ export function MessageFlow({
                 </span>
               </span>
 
-              {/* Which way it travelled — drawn, never spelled out. */}
+              {/* Which way it travelled - drawn, never spelled out. */}
               <span
                 className={cn(
                   "mt-1 flex size-7 shrink-0 items-center justify-center rounded-full border max-600:hidden",
@@ -397,7 +397,7 @@ function IntegrationPanel() {
   );
 }
 
-/** One end of the round trip — the customer's own system, on #007EFF. */
+/** One end of the round trip - the customer's own system, on #007EFF. */
 function SystemNode({ label, returned }: { label: string; returned?: boolean }) {
   return (
     <div className="mx-auto flex w-full max-w-[300px] flex-col items-center gap-2 rounded-tile bg-brand px-5 py-4 shadow-[0_12px_28px_-14px_rgba(0,106,214,.7)]">

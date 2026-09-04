@@ -4,21 +4,21 @@ import { Icon, type IconName } from "@/components/icons";
 import { cn } from "@/lib/cn";
 
 /**
- * /download-app/ — wording and destinations from
+ * /download-app/ - wording and destinations from
  * website-research/download-app/download-app.md. The research runs each option's
  * heading, body and CTA together on one line; they are split at the element
  * boundaries the section list records, and nothing is reworded.
  *
  * The three platform marks are the images the source page itself carries.
  *
- * The hero sits inside a thin #007EFF outline — the page's one deliberate use
+ * The hero sits inside a thin #007EFF outline - the page's one deliberate use
  * of the brand colour at that scale. Everything below it stays on white with
  * hairline rules, so the outline reads as emphasis rather than decoration.
  */
 
 const PLATFORMS = [
   {
-    title: "iOS — iPhone & iPad",
+    title: "iOS - iPhone & iPad",
     body: "Download from the Apple App Store. Compatible with iPhone and iPad running iOS 15 or later.",
     cta: "Download on App Store →",
     href: "https://apps.apple.com/in/app/murphiconnect-ai/id6776607061",
@@ -26,7 +26,7 @@ const PLATFORMS = [
     size: 192,
   },
   {
-    title: "Android — Phone & Tablet",
+    title: "Android - Phone & Tablet",
     body: "Download from Google Play. Compatible with Android devices running Android 10 or later.",
     cta: "Get it on Google Play →",
     href: "https://play.google.com/store/apps/details?id=com.Murphi.ai",
@@ -34,7 +34,7 @@ const PLATFORMS = [
     size: 1024,
   },
   {
-    title: "Web — Any Browser",
+    title: "Web - Any Browser",
     body: "Access Murphi.ai from any desktop or laptop browser. No installation required. Full feature access.",
     cta: "Sign In on Web →",
     href: "https://murphi.murphiconnect.ai/login",
@@ -47,9 +47,9 @@ const MODULES: { index: string; title: string; body: string; icon: IconName }[] 
   [
     {
       index: "01",
-      title: "Ambient AI — Voice Recording",
+      title: "Ambient AI - Voice Recording",
       icon: "mic",
-      body: "Record clinical visits directly from your phone. Murphi.ai generates OASIS, SOAP, PIE, BIRP, and DAP notes from your recording — synced to your EHR automatically.",
+      body: "Record clinical visits directly from your phone. Murphi.ai generates OASIS, SOAP, PIE, BIRP, and DAP notes from your recording - synced to your EHR automatically.",
     },
     {
       index: "02",
@@ -61,7 +61,7 @@ const MODULES: { index: string; title: string; body: string; icon: IconName }[] 
       index: "03",
       title: "Handwriting Capture",
       icon: "doc",
-      body: "Photograph handwritten notes or forms. Murphi.ai digitizes and incorporates them into the clinical record — no manual rekeying required.",
+      body: "Photograph handwritten notes or forms. Murphi.ai digitizes and incorporates them into the clinical record - no manual rekeying required.",
     },
     {
       index: "04",
@@ -77,7 +77,7 @@ const MODULES: { index: string; title: string; body: string; icon: IconName }[] 
     },
     {
       index: "06",
-      title: "HIPAA Secure — Always",
+      title: "HIPAA Secure - Always",
       icon: "shield",
       body: "All app data encrypted end-to-end. Biometric authentication supported. Session timeout controls. BAA in place. HIPAA compliant on iOS, Android, and web.",
     },
@@ -113,7 +113,7 @@ function Hero() {
 
           <p className="type-lead mx-auto mt-6 max-w-[56ch] text-grey-dk">
             Record visits, manage compliance reports, and track patient collections
-            — from your phone or any browser. One login, all your modules.
+            - from your phone or any browser. One login, all your modules.
           </p>
 
           <div className="mt-10 flex flex-wrap items-center justify-center gap-3.5 max-600:flex-col max-600:items-stretch">
@@ -152,7 +152,7 @@ function Platforms() {
           </h2>
           <p className="type-lead mt-5 text-grey-dk">
             Access Murphi.ai from your iPhone, Android device, or any web browser.
-            One login — all your modules, all your data, wherever you are.
+            One login - all your modules, all your data, wherever you are.
           </p>
         </div>
 
@@ -207,7 +207,7 @@ function Modules() {
           All Modules. One App.
         </h2>
 
-        {/* A ruled index — six capabilities read down, not six boxes. */}
+        {/* A ruled index - six capabilities read down, not six boxes. */}
         <ul className="mx-auto mt-12 grid max-w-[1080px] grid-cols-2 gap-x-14 border-t border-grey-mid max-1024:gap-x-10 max-768:grid-cols-1 max-600:mt-9">
           {MODULES.map((module) => (
             <li

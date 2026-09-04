@@ -201,7 +201,7 @@ export function Outcomes() {
             What agencies get back.
           </h2>
           <p className="text-[16px] text-white/[0.68]">
-            Qualitative outcomes, based on how the workflow changes — not
+            Qualitative outcomes, based on how the workflow changes - not
             projected statistics.
           </p>
         </div>
@@ -245,7 +245,7 @@ export function EhrIntegration() {
               </h2>
 
               <p className="mt-4 max-w-[52ch] text-[18px] leading-[1.6] text-grey-500">
-                Murphi fetches, structures and writes back — your team keeps
+                Murphi fetches, structures and writes back - your team keeps
                 working inside the EHR they already know.
               </p>
 
@@ -349,7 +349,7 @@ function IntegrationPanel() {
   );
 }
 
-/** One end of the round trip — the customer's own system. */
+/** One end of the round trip - the customer's own system. */
 function SystemNode({ label, returned }: { label: string; returned?: boolean }) {
   return (
     <div className="mx-auto flex w-full max-w-[300px] flex-col items-center gap-2 rounded-tile bg-brand px-5 py-4 shadow-[0_12px_28px_-14px_rgba(0,106,214,.7)]">
@@ -429,7 +429,7 @@ export function FinalCta() {
             {"Give Your Team's Evenings Back."}
           </h2>
           <p className="mb-[34px] text-[17px] leading-[1.6] text-white/[0.65]">
-            See how Murphi turns a visit — or a short dictation — into a
+            See how Murphi turns a visit - or a short dictation - into a
             finished, signed note.
           </p>
           <div className="flex justify-center">

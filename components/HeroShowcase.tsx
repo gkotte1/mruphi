@@ -13,7 +13,7 @@ import {
 } from "@/components/hero-showcase-views";
 
 /**
- * The bottom-centre product showcase — the card that sits in front of the hero
+ * The bottom-centre product showcase - the card that sits in front of the hero
  * stage and overlaps its lower edge.
  *
  * Two surfaces only: a solid blue frame carrying one white product window.
@@ -21,7 +21,7 @@ import {
  * queue. Everything shows state; nothing quantifies a claim.
  *
  * The window cycles through the four views in hero-showcase-views.ts every two
- * seconds — Workflows, Patients, Documentation, Revenue, and round again. The
+ * seconds - Workflows, Patients, Documentation, Revenue, and round again. The
  * markup is identical in every view, so only the values change and the card's
  * height never moves.
  */
@@ -101,7 +101,7 @@ function Chrome({ view }: { view: View }) {
   );
 }
 
-/** A quiet tinted rail — orientation, not navigation. */
+/** A quiet tinted rail - orientation, not navigation. */
 function Rail({ activeId }: { activeId: string }) {
   return (
     <div className="hidden w-[156px] shrink-0 border-r border-grey-mid bg-grey-bg p-3 @min-[600px]:block">
@@ -176,7 +176,7 @@ function Board({ view }: { view: View }) {
   );
 }
 
-/** The three stages, as state — never as figures. */
+/** The three stages, as state - never as figures. */
 function Tiles({ tiles }: { tiles: readonly Tile[] }) {
   return (
     <div className="mp-view mt-4 grid grid-cols-3 gap-3 max-600:gap-2">
@@ -215,7 +215,7 @@ function Tiles({ tiles }: { tiles: readonly Tile[] }) {
   );
 }
 
-/** Shape only — no axis, no numbers, no claim. */
+/** Shape only - no axis, no numbers, no claim. */
 function ActivityChart({ chart }: { chart: View["chart"] }) {
   return (
     <div className="mp-view rounded-tile border border-grey-mid bg-grey-bg p-3.5 max-600:p-3">
@@ -311,7 +311,7 @@ function Queue({ queue }: { queue: View["queue"] }) {
 
 /* ══════════════════════ primitives ════════════════════════ */
 
-/** An indeterminate bar — progress as motion, never as a figure. */
+/** An indeterminate bar - progress as motion, never as a figure. */
 function ProgressBar({ className }: { className?: string }) {
   return (
     <span

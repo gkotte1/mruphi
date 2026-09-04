@@ -8,20 +8,20 @@ import { cn } from "@/lib/cn";
 import { pageMetadata } from "@/lib/site";
 
 /**
- * /about-us/ — the company page.
+ * /about-us/ - the company page.
  *
  * Three sections, in order: About Murphi.ai, Why Murphi.ai, Headquartered in
  * North Carolina. Every string is the supplied copy, verbatim; the page adds
  * no claim, market or office of its own.
  *
- * The hero sits inside a thin #007EFF outline — the page's one use of the
+ * The hero sits inside a thin #007EFF outline - the page's one use of the
  * brand colour at that scale. The two prose sections are set editorially, the
  * heading holding the left column while the copy runs at a comfortable measure
  * on the right, so the company story reads as a story rather than as boxes.
  */
 
 export const metadata: Metadata = pageMetadata("/about-us/", {
-  title: "About Murphi.ai — Home Health & Hospice AI",
+  title: "About Murphi.ai - Home Health & Hospice AI",
   description:
     "Murphi.ai is a AI Native automation platform purpose built for U.S. healthcare, with AI modules purpose-built for Home Health and Hospice.",
 });
@@ -30,7 +30,7 @@ const SHELL = "mx-auto w-full max-w-[1280px] px-10 max-1200:px-8 max-600:px-4";
 const BAND = "py-24 max-1024:py-20 max-600:py-16";
 const H2 = "type-h2 text-ink";
 
-/** Heading left, copy right — the page's editorial rhythm. */
+/** Heading left, copy right - the page's editorial rhythm. */
 const EDITORIAL =
   "grid grid-cols-[minmax(0,0.4fr)_minmax(0,1fr)] items-start gap-16 max-1024:grid-cols-1 max-1024:gap-6";
 

@@ -12,7 +12,7 @@ export default function Navbar() {
   const [openMenu, setOpenMenu] = useState<string | null>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
 
-  /* Scroll state — purely visual: past a small threshold the white bar takes a
+  /* Scroll state - purely visual: past a small threshold the white bar takes a
      faint translucency, a light blur and a lift. Nothing else changes. */
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -42,7 +42,7 @@ export default function Navbar() {
     };
   }, [mobileOpen]);
 
-  /* The sheet is a mobile-only surface — close it if the viewport grows. */
+  /* The sheet is a mobile-only surface - close it if the viewport grows. */
   useEffect(() => {
     const mq = window.matchMedia("(min-width: 901px)");
     const onChange = () => {
@@ -57,7 +57,7 @@ export default function Navbar() {
       className={cn(
         "fixed inset-x-0 top-0 z-50 transition-[background-color,box-shadow,border-color,backdrop-filter] duration-300 ease-out",
         /* White at rest. Once the page moves underneath, the bar takes a
-           barely-there translucency and a light blur — enough to feel like it
+           barely-there translucency and a light blur - enough to feel like it
            sits above the content, not enough to read through. */
         scrolled
           ? "border-b border-nav-border bg-white/92 shadow-nav backdrop-blur-[6px]"
@@ -73,7 +73,7 @@ export default function Navbar() {
           <Link
             href="/"
             className="shrink-0 rounded-md transition-opacity duration-200 hover:opacity-80"
-            aria-label="Murphi.ai — home"
+            aria-label="Murphi.ai - home"
           >
             <Logo height={28} priority />
           </Link>

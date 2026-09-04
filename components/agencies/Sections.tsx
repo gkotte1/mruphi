@@ -208,7 +208,7 @@ export function EhrLayer({
                     ))}
                   </div>
 
-                  {/* What Murphi runs against it — the last step returns. */}
+                  {/* What Murphi runs against it - the last step returns. */}
                   <ol className="grid grid-cols-3 gap-2.5 max-600:grid-cols-2">
                     {steps.map((step, i) => {
                       const returns = i === steps.length - 1;

@@ -9,7 +9,7 @@ import {
 import { cn } from "@/lib/cn";
 
 /**
- * /announcements/ — the listing. Cards come from lib/announcements.ts, the same
+ * /announcements/ - the listing. Cards come from lib/announcements.ts, the same
  * source the article pages read, so a title, date, category, image or route can
  * never drift between the two.
  *
@@ -94,7 +94,7 @@ function Featured({ item }: { item: Announcement }) {
 
       <div className="flex flex-col justify-center p-12 max-1024:p-9 max-600:p-6">
         <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
-          {/* Which one this is — stated once, in the page's own label style. */}
+          {/* Which one this is - stated once, in the page's own label style. */}
           <span className="type-micro rounded-full border border-grey-mid bg-grey-bg px-2.5 py-[5px] leading-none text-grey-dk/60">
             Latest
           </span>

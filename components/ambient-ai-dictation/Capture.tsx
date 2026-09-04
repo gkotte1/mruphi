@@ -36,7 +36,7 @@ export function CaptureWave({
 }: {
   className?: string;
   /** Shorter, and still. Used where the visual should read as product state
-      rather than perform — the hero, where it was the loudest thing on the
+      rather than perform - the hero, where it was the loudest thing on the
       page at 74px with twenty-four independently animating bars. */
   quiet?: boolean;
 }) {
@@ -84,7 +84,7 @@ export function FieldRows({
   quiet,
 }: {
   lines: readonly string[];
-  /** Tighter, and already settled — no staggered arrival, no blinking caret. */
+  /** Tighter, and already settled - no staggered arrival, no blinking caret. */
   quiet?: boolean;
 }) {
   return (
@@ -128,7 +128,7 @@ export function FieldRows({
 
 /**
  * The note types one encounter produces, as document tiles rather than plain
- * boxes — a page glyph, the name, and a completion tick.
+ * boxes - a page glyph, the name, and a completion tick.
  */
 export function DocTiles({
   items,
@@ -139,7 +139,7 @@ export function DocTiles({
   items: readonly string[];
   columns?: 2 | 3;
   className?: string;
-  /** Tighter, and already settled — no staggered arrival. */
+  /** Tighter, and already settled - no staggered arrival. */
   quiet?: boolean;
 }) {
   return (
@@ -185,7 +185,7 @@ export function DocTiles({
 
 /* ── Context strip ────────────────────────────────────────── */
 
-/** A single line of context above the stages — where the record came from. */
+/** A single line of context above the stages - where the record came from. */
 export function ContextRow({ children }: { children: ReactNode }) {
   return (
     <div className="flex items-center gap-2.5 border-b border-grey-mid bg-grey-bg px-5 py-2.5 max-600:px-4">

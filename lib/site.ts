@@ -35,7 +35,7 @@ type ChangeFrequency =
   | "yearly"
   | "never";
 
-/** Which part of the site a route belongs to — the grouping llms.txt prints. */
+/** Which part of the site a route belongs to - the grouping llms.txt prints. */
 export type RouteGroup =
   | "core"
   | "modules"
@@ -68,9 +68,9 @@ export type SiteRoute = {
 export const SITE_ROUTES: readonly SiteRoute[] = [
   {
     path: "/",
-    title: "Murphi.ai — AI for Every Home Health & Hospice Workflow",
+    title: "Murphi.ai - AI for Every Home Health & Hospice Workflow",
     description:
-      "Home health and hospice AI software that connects to the EHR you already use — ambient AI documentation, revenue assurance, patient engagement and patient payments.",
+      "Home health and hospice AI software that connects to the EHR you already use - ambient AI documentation, revenue assurance, patient engagement and patient payments.",
     group: "core",
     priority: 1,
     changeFrequency: "monthly",
@@ -79,7 +79,7 @@ export const SITE_ROUTES: readonly SiteRoute[] = [
   /* ── AI Modules ── */
   {
     path: "/ambient-ai-dictation/",
-    title: "Ambient AI & Dictation — AI Scribe for Home Health",
+    title: "Ambient AI & Dictation - AI Scribe for Home Health",
     description:
       "Ambient AI clinical documentation and voice dictation for home health and hospice nurses. OASIS, HOPE, SN, PT, OT and ST notes drafted in minutes and synced to your EHR.",
     group: "modules",
@@ -88,7 +88,7 @@ export const SITE_ROUTES: readonly SiteRoute[] = [
   },
   {
     path: "/revenue-assurance/",
-    title: "Revenue Assurance — OASIS & PDGM Review Software",
+    title: "Revenue Assurance - OASIS & PDGM Review Software",
     description:
       "AI chart review for home health and hospice: OASIS, coding, POC, PDGM and ADR gaps surfaced the day the chart is written, fetched straight from your EHR.",
     group: "modules",
@@ -97,25 +97,25 @@ export const SITE_ROUTES: readonly SiteRoute[] = [
   },
   {
     path: "/patient-engagement/",
-    title: "Patient Engagement — HIPAA-Compliant SMS Platform",
+    title: "Patient Engagement - HIPAA-Compliant SMS Platform",
     description:
-      "HIPAA-compliant texting and patient engagement for home health and hospice. Secure staff messaging, visit confirmation automation and document signature — no app for patients.",
+      "HIPAA-compliant texting and patient engagement for home health and hospice. Secure staff messaging, visit confirmation automation and document signature - no app for patients.",
     group: "modules",
     priority: 0.9,
     changeFrequency: "monthly",
   },
   {
     path: "/patient-payments/",
-    title: "Patient Payments — Text to Pay & Reconciliation",
+    title: "Patient Payments - Text to Pay & Reconciliation",
     description:
-      "Text-to-pay patient balances for home health and hospice — ACH, debit or credit — with payment status and reconciliation written back to your EHR ledger automatically.",
+      "Text-to-pay patient balances for home health and hospice - ACH, debit or credit - with payment status and reconciliation written back to your EHR ledger automatically.",
     group: "modules",
     priority: 0.9,
     changeFrequency: "monthly",
   },
   {
     path: "/referral-to-noa/",
-    title: "Referral → NOA — Intake Automation, Launching Soon",
+    title: "Referral → NOA - Intake Automation, Launching Soon",
     description:
       "Home health referral management and intake automation: Murphi classifies, checks and routes referrals from fax, email, portal, API or EHR, so NOA timing is measured in minutes.",
     group: "modules",
@@ -124,7 +124,7 @@ export const SITE_ROUTES: readonly SiteRoute[] = [
   },
   {
     path: "/ai-driven-rcm/",
-    title: "AI-Driven RCM for Home Health — Launching Soon",
+    title: "AI-Driven RCM for Home Health - Launching Soon",
     description:
       "AI-driven revenue cycle management for home health and hospice: claim readiness, denial prevention and ERA/EOB reconciliation tracked across the full claim lifecycle.",
     group: "modules",
@@ -135,16 +135,16 @@ export const SITE_ROUTES: readonly SiteRoute[] = [
   /* ── Who We Serve ── */
   {
     path: "/agencies/",
-    title: "Home Health & Hospice Agencies — AI Platform",
+    title: "Home Health & Hospice Agencies - AI Platform",
     description:
-      "A home health and hospice AI platform that sits alongside the EHR your agency already runs on — one module, or six. No replacement, no rip-and-replace project.",
+      "A home health and hospice AI platform that sits alongside the EHR your agency already runs on - one module, or six. No replacement, no rip-and-replace project.",
     group: "audiences",
     priority: 0.8,
     changeFrequency: "monthly",
   },
   {
     path: "/coding-billing-rcm/",
-    title: "Coding, Billing & RCM Companies — Multi-Client AI",
+    title: "Coding, Billing & RCM Companies - Multi-Client AI",
     description:
       "Home health coding, billing and RCM consulting software: AI compliance and revenue review that works the same way across every client, under your own brand.",
     group: "audiences",
@@ -153,7 +153,7 @@ export const SITE_ROUTES: readonly SiteRoute[] = [
   },
   {
     path: "/ehr-companies/",
-    title: "Home Health & Hospice EHR Companies — Embed AI",
+    title: "Home Health & Hospice EHR Companies - Embed AI",
     description:
       "Embed AI into your home health, hospice or palliative care EHR: ambient documentation, intelligent assessments, clinical quality checks and compliance workflows.",
     group: "audiences",
@@ -162,9 +162,9 @@ export const SITE_ROUTES: readonly SiteRoute[] = [
   },
   {
     path: "/accreditation-bodies/",
-    title: "Accreditation Bodies — Survey Readiness Software",
+    title: "Accreditation Bodies - Survey Readiness Software",
     description:
-      "Hospice and home health compliance software for accreditation bodies and the agencies they survey — evidence validated into survey-ready reports, faster.",
+      "Hospice and home health compliance software for accreditation bodies and the agencies they survey - evidence validated into survey-ready reports, faster.",
     group: "audiences",
     priority: 0.8,
     changeFrequency: "monthly",
@@ -173,9 +173,9 @@ export const SITE_ROUTES: readonly SiteRoute[] = [
   /* ── Platform & Support ── */
   {
     path: "/integrations/",
-    title: "EHR Integrations — FHIR, HL7, API & Agentic AI",
+    title: "EHR Integrations - FHIR, HL7, API & Agentic AI",
     description:
-      "Five home health EHR AI integration methods — Agentic AI, RPA, FHIR R4, HL7 v2 and Direct API. No EHR replacement required. Live in days.",
+      "Five home health EHR AI integration methods - Agentic AI, RPA, FHIR R4, HL7 v2 and Direct API. No EHR replacement required. Live in days.",
     group: "platform",
     priority: 0.8,
     changeFrequency: "monthly",
@@ -191,7 +191,7 @@ export const SITE_ROUTES: readonly SiteRoute[] = [
   },
   {
     path: "/download-app/",
-    title: "Download the Murphi.ai App — iOS & Android",
+    title: "Download the Murphi.ai App - iOS & Android",
     description:
       "Download the Murphi.ai app on iOS or Android to access AI-powered clinical documentation, ambient AI, and medical billing tools on the go.",
     group: "platform",
@@ -202,7 +202,7 @@ export const SITE_ROUTES: readonly SiteRoute[] = [
   /* ── Company & Resources ── */
   {
     path: "/about-us/",
-    title: "About Murphi.ai — Home Health & Hospice AI",
+    title: "About Murphi.ai - Home Health & Hospice AI",
     description:
       "Murphi.ai is a AI Native automation platform purpose built for U.S. healthcare, with AI modules purpose-built for Home Health and Hospice.",
     group: "company",
@@ -229,7 +229,7 @@ export const SITE_ROUTES: readonly SiteRoute[] = [
   },
   {
     path: "/blogs/",
-    title: "Blog — Home Health & Hospice AI",
+    title: "Blog - Home Health & Hospice AI",
     description:
       "Practical guides for home health and hospice teams on ambient AI documentation, OASIS and PDGM review, patient engagement, payments and EHR integration.",
     group: "company",
@@ -286,14 +286,14 @@ const OG_IMAGE = {
   url: "/og-image.png",
   width: 1200,
   height: 630,
-  alt: "Murphi.ai — AI-powered workforce intelligence",
+  alt: "Murphi.ai - AI-powered workforce intelligence",
 };
 
 /**
  * A page's metadata, with its canonical and Open Graph URL filled in from its
  * own route.
  *
- * Next replaces — rather than merges — a parent's `openGraph` as soon as a page
+ * Next replaces - rather than merges - a parent's `openGraph` as soon as a page
  * declares one, so setting og:url page by page would otherwise drop the site
  * name, type and card image inherited from the root layout. This restates them
  * once, here, instead of in twenty page files.

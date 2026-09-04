@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 /* The three seals shipped in murphi-project-assets/images/certifications/ are
-   the real marks, rendered at 60px — above the 64px-wide source's legibility
+   the real marks, rendered at 60px - above the 64px-wide source's legibility
    floor for the ISO ring. Nothing here is a recreated or invented badge. */
 type Card = {
   title: string;

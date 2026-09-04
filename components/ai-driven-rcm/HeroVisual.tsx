@@ -12,9 +12,9 @@ import { cn } from "@/lib/cn";
  * The hero visual: one claim, caught mid-flight.
  *
  * It used to be a single card holding a row of four dots and one bullet line.
- * It is now the readiness view itself — the stages the claim has cleared, the
+ * It is now the readiness view itself - the stages the claim has cleared, the
  * one that was intercepted, and the two things that have to happen before it
- * ships — layered so the sequence reads at a glance.
+ * ships - layered so the sequence reads at a glance.
  *
  * Motion is a staggered entrance and a pulsing flag; nothing loops, so the
  * hero stays quiet next to the mechanics further down the page.

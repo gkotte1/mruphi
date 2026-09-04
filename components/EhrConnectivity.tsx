@@ -35,7 +35,7 @@ export default function EhrConnectivity() {
   return (
     <section id="ehr" aria-labelledby="ehr-heading" className={SECTION}>
       <Reveal>
-        {/* .ehr-section — 1156px wide, tinted, 56px/48px inside. */}
+        {/* .ehr-section - 1156px wide, tinted, 56px/48px inside. */}
         <div className="mx-auto max-w-[1156px] rounded-panel bg-grey-bg px-12 py-14 max-720:mx-5 max-720:px-6 max-720:py-10">
           {/* .ehr-inner */}
           <div className="grid grid-cols-[0.95fr_1.05fr] items-center gap-14 max-1080:grid-cols-1 max-1080:gap-10">
@@ -48,11 +48,11 @@ export default function EhrConnectivity() {
 
               <p className="mt-4 max-w-[52ch] text-[18px] leading-[1.6] text-grey-500">
                 Keep your EHR. Add Murphi AI. Integration happens through FHIR,
-                HL7, direct APIs and agentic AI — chosen to fit how your EHR
+                HL7, direct APIs and agentic AI - chosen to fit how your EHR
                 already works.
               </p>
 
-              {/* .ehr-logos — names set as pills, never borrowed marks. */}
+              {/* .ehr-logos - names set as pills, never borrowed marks. */}
               <div className="mt-7 flex flex-wrap gap-3">
                 {EHRS.map((name) => (
                   <span
@@ -65,7 +65,7 @@ export default function EhrConnectivity() {
               </div>
 
               <p className="mt-4 text-[12px] leading-[1.5] text-ink-muted">
-                Connectivity varies by EHR — live integration, supported
+                Connectivity varies by EHR - live integration, supported
                 connectivity, and custom integration in development. No official
                 partnership is implied unless stated. Logos not displayed without
                 authorization.
@@ -78,7 +78,7 @@ export default function EhrConnectivity() {
                 Your EHR &rarr; Murphi AI &rarr; Your EHR
               </p>
 
-              {/* .flow — two nodes either side of Murphi, joined both ways. */}
+              {/* .flow - two nodes either side of Murphi, joined both ways. */}
               <div className={cn("flex w-full items-center")}>
                 <FlowStep label="Your EHR" />
                 <FlowConnector />

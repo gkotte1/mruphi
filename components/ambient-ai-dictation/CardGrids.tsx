@@ -8,7 +8,7 @@ import { cn } from "@/lib/cn";
  * Three sections that were three grids of the same rectangle. Each now takes
  * the composition its content actually calls for:
  *
- *   Capabilities   a ruled two-column ledger — a spec sheet of details that
+ *   Capabilities   a ruled two-column ledger - a spec sheet of details that
  *                  affect reimbursement, scanned by title, not read as boxes
  *   Built For      one surface divided into three, because the section is
  *                  about one piece of infrastructure with three properties
@@ -28,7 +28,7 @@ const CAPABILITIES: Card[] = [
   {
     title: "EHR Syncing",
     icon: "sync",
-    body: "Referral attachments, schedules and record data sync in — the completed note writes back to the same chart.",
+    body: "Referral attachments, schedules and record data sync in - the completed note writes back to the same chart.",
   },
   {
     title: "Referral Summaries",
@@ -38,7 +38,7 @@ const CAPABILITIES: Card[] = [
   {
     title: "Medications",
     icon: "scan",
-    body: "Add or update medications by voice or by photographing the label — instead of typing each one into the EHR by hand.",
+    body: "Add or update medications by voice or by photographing the label - instead of typing each one into the EHR by hand.",
   },
   {
     title: "Wound Care",
@@ -56,7 +56,7 @@ const BUILT_FOR: Card[] = [
   {
     title: "Multi-Speaker Aware",
     icon: "mic",
-    body: "Follows a visit with more than one voice in the room — patient, caregiver, clinician — and attributes what was said to the right person.",
+    body: "Follows a visit with more than one voice in the room - patient, caregiver, clinician - and attributes what was said to the right person.",
   },
   {
     title: "Built for Home Health & Hospice",
@@ -81,7 +81,7 @@ const RELATED: (Card & { href: string })[] = [
     title: "Patient Engagement",
     href: "/patient-engagement/",
     icon: "community",
-    body: "Reminders, updates and signatures — in one connected thread with the patient and caregiver.",
+    body: "Reminders, updates and signatures - in one connected thread with the patient and caregiver.",
   },
 ];
 

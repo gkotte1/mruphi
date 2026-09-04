@@ -12,7 +12,7 @@ export type NavItem = {
 
 export type NavGroup = {
   label: string;
-  /** Menu width in px — the two menus carry different amounts of copy. */
+  /** Menu width in px - the two menus carry different amounts of copy. */
   width: number;
   columns: 1 | 2;
   items: NavItem[];

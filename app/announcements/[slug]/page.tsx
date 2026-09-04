@@ -22,7 +22,7 @@ import { absoluteUrl } from "@/lib/site";
  *
  * Identity and body come from the detail-page research in
  * website-research-1/, extracted into content/announcements/. The card fields
- * beside it — listing date, previous/next ordering — come from the listing
+ * beside it - listing date, previous/next ordering - come from the listing
  * research, so the card and the page it opens can never disagree.
  *
  * Only the fourteen researched slugs are built; `dynamicParams = false` keeps

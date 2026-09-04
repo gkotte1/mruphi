@@ -3,7 +3,7 @@ import { join } from "node:path";
 import { parseDocument, type Block } from "@/lib/document";
 
 /**
- * The single source of truth for announcements — the listing page and every
+ * The single source of truth for announcements - the listing page and every
  * article page read from here.
  *
  * Card fields come from website-research/company/announcements.md ("Announcement
@@ -51,7 +51,7 @@ export const ANNOUNCEMENTS: Announcement[] = [
   {
     slug: "revenue-assurance-compliance-reports-for-home-health-hospice",
     title:
-      "Murphi.ai launched Revenue Assurance & Compliance Reports for Home Health & Hospice. Generate Coding, QA, and compliance reports with Evidence Preview Optimizer—turn Spanish clinical inputs into English reports in minutes.",
+      "Murphi.ai launched Revenue Assurance & Compliance Reports for Home Health & Hospice. Generate Coding, QA, and compliance reports with Evidence Preview Optimizer - turn Spanish clinical inputs into English reports in minutes.",
     date: "June 9, 2026",
     datetime: "2026-06-09",
     ...CATEGORY_NEWS,
@@ -139,7 +139,7 @@ export const ANNOUNCEMENTS: Announcement[] = [
     datetime: "2026-02-13",
     ...CATEGORY_IN_THE_NEWS,
     image: "/images/announcements/Frame-1618872141-1-1536x1024.png",
-    alt: "Murphi.ai horizontal native AI platform — one EHR integration, multiple healthcare workflows",
+    alt: "Murphi.ai horizontal native AI platform - one EHR integration, multiple healthcare workflows",
   },
   {
     slug: "inside-murphi-ais-ai-blueprint-for-modernizing-rcm-patient-payments-and-contract-optimization",

@@ -30,7 +30,7 @@ import {
 } from "@/components/coding-billing-rcm/Sections";
 
 export const metadata: Metadata = pageMetadata("/coding-billing-rcm/", {
-  title: "Coding, Billing & RCM Companies — Multi-Client AI",
+  title: "Coding, Billing & RCM Companies - Multi-Client AI",
   description:
     "Home health coding, billing and RCM consulting software: AI compliance and revenue review that works the same way across every client, under your own brand.",
 });
@@ -56,7 +56,7 @@ const MODELS = [
   {
     eyebrow: "Self-Service Agency",
     title: "Your Clients Work in Their Own Workspace",
-    body: "Each of the forty clients gets its own workspace and runs its own reports. Priya provides oversight, training and guidance — and scales her practice without scaling her hours.",
+    body: "Each of the forty clients gets its own workspace and runs its own reports. Priya provides oversight, training and guidance - and scales her practice without scaling her hours.",
     bestFor:
       "consultants who want to serve more clients without proportionally increasing their time.",
   },
@@ -65,7 +65,7 @@ const MODELS = [
 const TOOLS: Tool[] = [
   {
     id: "hh",
-    label: "Revenue Assurance — Home Health",
+    label: "Revenue Assurance - Home Health",
     badge: { tone: "live", text: "Live" },
     count: "15",
     text: "AI compliance reports for Home Health clients.",
@@ -80,7 +80,7 @@ const TOOLS: Tool[] = [
   },
   {
     id: "hospice",
-    label: "Revenue Assurance — Hospice",
+    label: "Revenue Assurance - Hospice",
     badge: { tone: "live", text: "Live" },
     count: "13",
     text: "AI compliance reports for Hospice clients.",
@@ -96,7 +96,7 @@ const TOOLS: Tool[] = [
     id: "wl",
     label: "White-Label Option",
     badge: { tone: "soon", text: "White Label" },
-    text: "Offer Murphi.ai under your own brand. Your clients see your platform, your logo, your practice — powered by Murphi.ai AI in the background.",
+    text: "Offer Murphi.ai under your own brand. Your clients see your platform, your logo, your practice - powered by Murphi.ai AI in the background.",
   },
 ];
 
@@ -161,7 +161,7 @@ export default function CodingBillingRcmPage() {
           title="One Tuesday. Forty Clients."
           storyTag="Tuesday, 8:00 AM"
           story="Priya has forty agency clients on her roster and one Tuesday to get through OASIS review for all of them. Every client has its own EHR, its own quirks, its own deadline."
-          lede="Murphi gives coding and billing consultants AI-powered compliance and revenue tools that work the same way across every client — so Priya's Tuesday scales without adding a person to do it."
+          lede="Murphi gives coding and billing consultants AI-powered compliance and revenue tools that work the same way across every client - so Priya's Tuesday scales without adding a person to do it."
           trust={
             <>
               HIPAA <TrustDot /> SOC 2 <TrustDot /> Client-level data separation
@@ -217,7 +217,7 @@ export default function CodingBillingRcmPage() {
               steps: [
                 "Client forty-one runs on the same platform as client one",
                 "Every client gets the identical, standardized review process",
-                "Repetitive chart analysis is automated — turnaround holds steady",
+                "Repetitive chart analysis is automated - turnaround holds steady",
                 "Client data stays separated, even inside one platform",
               ],
             }}
@@ -231,7 +231,7 @@ export default function CodingBillingRcmPage() {
             <BrandSwitch
               kicker="Your Name on the Door"
               heading="White-label where it fits your business."
-              lede={"Toggle to see the same review presented under Murphi's brand — or under Priya's."}
+              lede={"Toggle to see the same review presented under Murphi's brand - or under Priya's."}
               options={[
                 { id: "murphi", label: "Murphi Brand" },
                 { id: "yours", label: "Your Brand" },

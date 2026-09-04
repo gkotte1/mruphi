@@ -4,7 +4,7 @@ import Reveal from "@/components/module-page/Reveal";
 /**
  * The Announcement band from the old home page, recreated as-is.
  *
- * Traced from 01. HomePAge/Murphi.ai Home LandingPage.html — `.announcement-band`,
+ * Traced from 01. HomePAge/Murphi.ai Home LandingPage.html - `.announcement-band`,
  * `.announcement-pill`, `.tech-ticker-wrap` and `.tech-ticker-track`:
  *
  *   band    flat #EAF2FF, 56px top padding,
@@ -18,8 +18,8 @@ import Reveal from "@/components/module-page/Reveal";
  *
  * #EAF2FF is the reference's own value: `.tech-ticker-wrap` states it flat,
  * and the band above it is a gradient that resolves to it. It sits off the
- * brand ramp, and is used here — rather than the ramp's #CCE5FF this band
- * carried before — because the reference is the stated source of truth for
+ * brand ramp, and is used here - rather than the ramp's #CCE5FF this band
+ * carried before - because the reference is the stated source of truth for
  * this section's background. The gradient itself is not reproduced; the flat
  * value it resolves to covers the whole band.
  */

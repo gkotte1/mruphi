@@ -18,14 +18,14 @@ export const metadata: Metadata = pageMetadata("/faqs/", {
 });
 
 /**
- * /faqs/ — the site's whole FAQ set on one page.
+ * /faqs/ - the site's whole FAQ set on one page.
  *
  * The questions and answers are the same records the individual pages render,
  * read straight from lib/faqs.ts; nothing here restates or edits them. The
  * presentation follows the source pages' FAQ band: kicker, "Frequently Asked
  * Questions", and the same accordion in a 820px column.
  *
- * Grouping is the one thing this page adds — the source pages carry a flat
+ * Grouping is the one thing this page adds - the source pages carry a flat
  * list because each is already scoped to its own topic. Each category here is
  * exactly one of those lists, under the name the site already gives it.
  */
@@ -62,7 +62,7 @@ export default function FaqsPage() {
 
         <FinalCta
           heading="Experience AI Automation at Scale"
-          body="Tell us your care setting and we'll show you exactly what Murphi.ai delivers for your organization — a live demo tailored to your workflows and your team."
+          body="Tell us your care setting and we'll show you exactly what Murphi.ai delivers for your organization - a live demo tailored to your workflows and your team."
         />
       </main>
 

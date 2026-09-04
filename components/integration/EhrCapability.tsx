@@ -8,7 +8,7 @@ type Category = {
   systems: string[];
 };
 
-/* Text tiles only — no logo asset exists for any of these platforms, and none
+/* Text tiles only - no logo asset exists for any of these platforms, and none
    is recreated here. */
 const CATEGORIES: Category[] = [
   {

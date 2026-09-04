@@ -1,4 +1,4 @@
-# Murphi.ai — Brand & UI Guidelines
+# Murphi.ai - Brand & UI Guidelines
 
 **The single source of truth for Murphi.ai website branding and UI design.**
 
@@ -9,11 +9,11 @@ original brand book.
 | | |
 |---|---|
 | **Brand source** | `Murphi Brand Book 2026 V1.0.pdf` (repo root) |
-| **Implementation** | `app/globals.css` — every token, type utility and button utility |
+| **Implementation** | `app/globals.css` - every token, type utility and button utility |
 | **Stack** | Next.js 16 (App Router) · React 19 · TypeScript · Tailwind CSS v4 |
-| **Company** | Murphi.ai — AI for Home Health & Hospice, operated by Deskfactors Inc. |
+| **Company** | Murphi.ai - AI for Home Health & Hospice, operated by Deskfactors Inc. |
 | **Brand book provenance** | "Murphi Brand Guidelines", year 2026, designed by Ephraim Design Studio. Brand contact: info@murphi.ai |
-| **Last aligned** | 2026-09-02 — full site audited and brought onto the 2026 identity |
+| **Last aligned** | 2026-09-02 - full site audited and brought onto the 2026 identity |
 
 ---
 
@@ -24,11 +24,11 @@ Every rule carries one of two labels. **Do not blur them.**
 | Label | Meaning |
 |---|---|
 | **`[OFFICIAL]`** | Stated explicitly in `Murphi Brand Book 2026 V1.0`. Non-negotiable. Quote the page number when challenged. |
-| **`[IMPLEMENTATION]`** | A decision made by this codebase to apply an official rule consistently, or to cover something the brand book does not address. Changeable with good reason — but change it in `app/globals.css`, once, for the whole site. |
+| **`[IMPLEMENTATION]`** | A decision made by this codebase to apply an official rule consistently, or to cover something the brand book does not address. Changeable with good reason - but change it in `app/globals.css`, once, for the whole site. |
 
 The brand book governs **colour, typography family, logo, backgrounds,
 gradients and photography**. It says nothing about spacing scales, radii,
-shadows, breakpoints, motion or component anatomy — everything in those
+shadows, breakpoints, motion or component anatomy - everything in those
 sections is `[IMPLEMENTATION]`.
 
 ---
@@ -69,7 +69,7 @@ sections is `[IMPLEMENTATION]`.
 
 ## 1. Brand Overview
 
-**`[OFFICIAL]`** — brand book 01, 02
+**`[OFFICIAL]`** - brand book 01, 02
 
 > "Murphi's color palette is designed to reflect **clarity, precision, and
 > trust** within the healthcare technology ecosystem. The palette combines
@@ -79,21 +79,21 @@ sections is `[IMPLEMENTATION]`.
 > "The Murphi logo represents the brand's focus on **intelligent healthcare
 > infrastructure and scalable technology**."
 
-**`[OFFICIAL]`** — the brand system applies "consistently across digital
+**`[OFFICIAL]`** - the brand system applies "consistently across digital
 interfaces, product experiences, marketing materials, and communications to
 maintain a unified visual identity." The website is not a special case: the
 same two hues and the same typeface as the product.
 
 ### Brand family
 
-**`[OFFICIAL]`** — brand book 08, 09. Three logo lockups exist and they are not
+**`[OFFICIAL]`** - brand book 08, 09. Three logo lockups exist and they are not
 interchangeable:
 
 | Lockup | Use only for |
 |---|---|
 | **Murphi** | The company and this marketing site |
-| **Murphi.in** | "the product ecosystem within the Murphi platform" — only when referencing that specific product |
-| **Murphi Connect.ai** | "a specialized platform within the Murphi ecosystem designed for interoperability and integration" — only in contexts directly related to Murphi Connect products or services |
+| **Murphi.in** | "the product ecosystem within the Murphi platform" - only when referencing that specific product |
+| **Murphi Connect.ai** | "a specialized platform within the Murphi ecosystem designed for interoperability and integration" - only in contexts directly related to Murphi Connect products or services |
 
 All three "follow the same spacing, scale, and color rules defined in the
 Murphi logo system" and share "the same typography and proportions as the
@@ -103,18 +103,18 @@ primary Murphi logo."
 
 ## 2. Brand Principles
 
-**`[OFFICIAL]`** — the adjectives the brand book itself uses: clarity,
+**`[OFFICIAL]`** - the adjectives the brand book itself uses: clarity,
 precision, trust, intelligence, stability, clinical, professional, clean,
 accessible, unified.
 
-**`[IMPLEMENTATION]`** — translated into working rules:
+**`[IMPLEMENTATION]`** - translated into working rules:
 
 1. **Two hues, no third.** Blue and grey. Every accent, state, chart and status
    indicator resolves onto those ramps. If a design needs a third colour to
    work, the design is wrong.
 2. **Restraint is the brand.** This is clinical software. Surfaces are flat,
    colour is used sparingly, and blue means *something is interactive or
-   important* — it is not decoration.
+   important* - it is not decoration.
 3. **Hierarchy through type and space, not through colour.** A section is
    separated by whitespace and a hairline, not by a coloured band.
 4. **Every element earns its place.** No decorative shapes, no floating cards
@@ -126,7 +126,7 @@ accessible, unified.
 
 ## 3. Color System
 
-### 3.1 The two ramps — `[OFFICIAL]`, brand book 01
+### 3.1 The two ramps - `[OFFICIAL]`, brand book 01
 
 The brand book defines exactly two eight-step ramps. **These are the only
 colours in the brand.**
@@ -137,7 +137,7 @@ colours in the brand.**
 |---|---|---|---|---|
 | 1 | `#CCE5FF` | `--color-blue-50` / `--color-brand-ghost` / `--color-brand-tint` | `bg-brand-ghost`, `bg-brand-tint` | Light blue chip and badge fills, highlighted card backgrounds |
 | 2 | `#A3D1FF` | `--color-blue-100` / `--color-brand-pale` / `--color-brand-border` | `border-brand-border`, `bg-brand-pale` | Blue hairlines, active/pressed light states |
-| 3 | `#7ABCFF` | `--color-blue-200` | `bg-blue-200` | Reserved — mid-ramp illustration step |
+| 3 | `#7ABCFF` | `--color-blue-200` | `bg-blue-200` | Reserved - mid-ramp illustration step |
 | 4 | `#52A7FF` | `--color-blue-300` / `--color-brand-light` | `text-brand-light` | Light accent inside product visuals |
 | 5 | `#2993FF` | `--color-blue-400` / `--color-brand-mid` | `bg-brand-mid` | Opening stop of blue panel gradients |
 | 6 | **`#007EFF`** | `--color-blue-500` / `--color-brand` | `bg-brand`, `text-brand` | **Primary.** Panels and buttons, primary interactive elements |
@@ -155,15 +155,15 @@ colours in the brand.**
 | 5 | **`#878787`** | `--color-grey-400` / `--color-ink-muted` | `text-ink-muted` | **Primary grey.** Greyed-out text, captions, placeholders |
 | 6 | `#606060` | `--color-grey-500` | `text-grey-500` | Secondary body copy |
 | 7 | `#464646` | `--color-grey-600` / `--color-grey-dk` | `text-grey-dk` | Default body copy (the `<body>` colour) |
-| 8 | `#1A1A1A` | `--color-grey-700` / `--color-ink` | `text-ink` | **Standard text colour** — all headings and primary copy |
+| 8 | `#1A1A1A` | `--color-grey-700` / `--color-ink` | `text-ink` | **Standard text colour** - all headings and primary copy |
 
-### 3.2 Primary brand colours — `[OFFICIAL]`, brand book 01
+### 3.2 Primary brand colours - `[OFFICIAL]`, brand book 01
 
 > "Grey (`#878787`) and Bright Blue (`#007EFF`)"
 
 These two are the brand. Everything else on the ramps is a supporting step.
 
-### 3.3 The book's UI assignments — `[OFFICIAL]`, brand book 01
+### 3.3 The book's UI assignments - `[OFFICIAL]`, brand book 01
 
 The brand book names five specific interface roles. **Follow these literally.**
 
@@ -177,21 +177,21 @@ The brand book names five specific interface roles. **Follow these literally.**
 
 Practical reading of each:
 
-- **`#007EFF` panels and buttons** — every primary button fill, and any panel
+- **`#007EFF` panels and buttons** - every primary button fill, and any panel
   that is meant to read as a blue surface. Flat, not gradient (see §7).
-- **`#F5F5F5` text on panels and buttons** — the label on a blue button is
+- **`#F5F5F5` text on panels and buttons** - the label on a blue button is
   `#F5F5F5`, not pure white. Same for headings and copy sitting on a blue
   panel. See §23.2 for the contrast note.
-- **`#006AD6` header bars** — `[IMPLEMENTATION]` this codebase reads "header
+- **`#006AD6` header bars** - `[IMPLEMENTATION]` this codebase reads "header
   bar" as the *product's* application header bar, not the marketing site's
   navigation. On the website `#006AD6` carries button hover, pressed accents,
   in-copy links, and the header strip of product mock UIs. The site navigation
   stays white/light grey; repainting it would be a redesign, not an alignment.
-- **`#1A1A1A` standard text** — every heading and every piece of primary copy.
-- **`#878787` greyed-out text** — captions, meta lines, placeholders, disabled
+- **`#1A1A1A` standard text** - every heading and every piece of primary copy.
+- **`#878787` greyed-out text** - captions, meta lines, placeholders, disabled
   labels. Never body copy.
 
-### 3.4 Additional colour rules — `[IMPLEMENTATION]`
+### 3.4 Additional colour rules - `[IMPLEMENTATION]`
 
 There is exactly one colour in the codebase that is not on the two ramps:
 
@@ -207,14 +207,14 @@ always overridden by `currentColor`.
 "success/warning/error" palette. The site previously carried those; they were
 removed. Semantic meaning is now carried on the blue–grey axis (see §9.7).
 
-### 3.5 Colour usage rules — `[IMPLEMENTATION]`
+### 3.5 Colour usage rules - `[IMPLEMENTATION]`
 
 - **Never hardcode a hex.** Use the token class (`text-ink`, `bg-brand`,
   `border-grey-mid`). Raw hex is only acceptable inside a `linear-gradient()`
   string where Tailwind cannot resolve a token, and even then the value must be
   a ramp step.
 - **Never invent an intermediate shade.** If `#F5F5F5` feels too heavy and
-  white too light, the answer is one of them — not `#FAFAFA`.
+  white too light, the answer is one of them - not `#FAFAFA`.
 - **Blue is a signal.** A page should have a handful of blue elements, not a
   blue wash. Count them: if more than roughly one element in six is blue, cut.
 - **Text colour ladder**, top to bottom: `#1A1A1A` headings → `#464646` body →
@@ -225,7 +225,7 @@ removed. Semantic meaning is now carried on the blue–grey axis (see §9.7).
 
 ## 4. Typography
 
-### 4.1 The typeface — `[OFFICIAL]`, brand book 12
+### 4.1 The typeface - `[OFFICIAL]`, brand book 12
 
 > "**Plus Jakarta Sans** is the primary typeface used across Murphi's digital
 > platforms and brand communications."
@@ -233,20 +233,20 @@ removed. Semantic meaning is now carried on the blue–grey axis (see §9.7).
 The brand book shows five weights and names **no second family**. There is no
 brand mono, no display face, no serif.
 
-**`[IMPLEMENTATION]`** — loaded once in `app/layout.tsx` via `next/font/google`
+**`[IMPLEMENTATION]`** - loaded once in `app/layout.tsx` via `next/font/google`
 at weights `300, 400, 500, 600, 700, 800`, exposed as `--font-jakarta` and
 wired to `--font-sans` / `--default-font-family` in `@theme`. Every element on
 the site inherits it. **Do not add another `next/font` import to any route.**
 
 > The site previously loaded IBM Plex Mono on twelve routes for eyebrows and
-> chips. It was removed — it is not in the brand book. Do not reintroduce it or
+> chips. It was removed - it is not in the brand book. Do not reintroduce it or
 > any other decorative face.
 
-### 4.2 The hierarchy — `[IMPLEMENTATION]`
+### 4.2 The hierarchy - `[IMPLEMENTATION]`
 
 The brand book does not specify sizes, weights, line heights or letter
-spacing. This scale is taken from the reference site's own stylesheet — which
-sets `h1,h2,h3,h4 { font-weight: 700; letter-spacing: -0.02em }` — and is
+spacing. This scale is taken from the reference site's own stylesheet - which
+sets `h1,h2,h3,h4 { font-weight: 700; letter-spacing: -0.02em }` - and is
 defined once in `app/globals.css` as Tailwind `@utility` classes.
 **Use the utility. Never restate the values inline.**
 
@@ -257,48 +257,48 @@ defined once in `app/globals.css` as Tailwind `@utility` classes.
 | `type-h2` | `clamp(28px, 3.2vw, 42px)` | 700 | −0.02em | 1.15 | Section headings |
 | `type-h3` | `clamp(26px, 2.7vw, 36px)` | 700 | −0.02em | 1.15 | Sub-section headings |
 | `type-h4` | `clamp(19px, 1.9vw, 25px)` | 700 | −0.02em | 1.25 | Group headings inside a section |
-| `type-lead` | `clamp(15.5px, 1.15vw, 17px)` | 400 | — | 1.70 | The standfirst under a heading |
-| `type-body` | `15px` | 400 | — | 1.75 | Default body copy (also the `<body>` default) |
-| `type-body-sm` | `13.5px` | 400 | — | 1.65 | Dense copy inside cards and panels |
+| `type-lead` | `clamp(15.5px, 1.15vw, 17px)` | 400 | - | 1.70 | The standfirst under a heading |
+| `type-body` | `15px` | 400 | - | 1.75 | Default body copy (also the `<body>` default) |
+| `type-body-sm` | `13.5px` | 400 | - | 1.65 | Dense copy inside cards and panels |
 | `type-label` | `11px` | 700 | +0.1em | 1.0 | Eyebrows and chips, uppercase |
 | `type-micro` | `10px` | 700 | +0.08em | 1.4 | Micro labels inside product visuals, uppercase |
 | `type-nav` | `14px` | 600 | −0.01em | 1.2 | Navigation links |
 | `type-btn` | `15px` | 700 | −0.01em | 1.2 | Button labels (already baked into the button utilities) |
 
-**The type utilities set size, weight, tracking and leading only — never
+**The type utilities set size, weight, tracking and leading only - never
 colour.** Pair them with a colour class: `class="type-h2 text-ink"`. This is
 deliberate, so a heading on a blue panel can take `text-grey-bg` without
 fighting the utility.
 
 Card titles and other component labels below 19px are component-level
-decisions, not part of the heading hierarchy — set them inline
+decisions, not part of the heading hierarchy - set them inline
 (`text-[15px] font-bold`) and keep them consistent within the component.
 
-### 4.3 Weight usage — `[IMPLEMENTATION]`
+### 4.3 Weight usage - `[IMPLEMENTATION]`
 
 | Weight | Use |
 |---|---|
-| 800 (extrabold) | Statistic figures only — the big numbers in a stats row |
+| 800 (extrabold) | Statistic figures only - the big numbers in a stats row |
 | 700 (bold) | **Every heading**, `type-display` through `type-h4`; buttons; card titles; emphasis inside copy |
 | 600 (semibold) | Navigation links, the label treatment on module pages |
 | 500 (medium) | Meta lines, secondary UI text |
 | 400 (regular) | All body copy and leads |
-| 300 (light) | Loaded but effectively unused — do not start using it for body copy |
+| 300 (light) | Loaded but effectively unused - do not start using it for body copy |
 
-### 4.4 Responsive typography — `[IMPLEMENTATION]`
+### 4.4 Responsive typography - `[IMPLEMENTATION]`
 
 Headings use `clamp()`, so they scale continuously between the minimum
 (mobile) and maximum (large desktop) with no breakpoint jump. **Do not add
-breakpoint overrides to a heading size** — if the clamp is wrong, fix the
+breakpoint overrides to a heading size** - if the clamp is wrong, fix the
 utility, not the call site.
 
 Body copy does **not** scale. `15px` at every width. A few components step to
 `14px` under `max-1200` where the column narrows; that is the exception, not
 the pattern.
 
-### 4.5 Paragraph rules — `[IMPLEMENTATION]`
+### 4.5 Paragraph rules - `[IMPLEMENTATION]`
 
-- Measure: cap body columns at roughly 62–70 characters — `max-w-[560px]` for a
+- Measure: cap body columns at roughly 62–70 characters - `max-w-[560px]` for a
   lead, `max-w-[62ch]` inside a text block.
 - `text-wrap: balance` is applied to `h1`–`h4` globally in the base layer. Do
   not re-apply it.
@@ -308,39 +308,39 @@ the pattern.
 
 ## 5. Logo Guidelines
 
-### 5.1 The approved lockups — `[OFFICIAL]`, brand book 02
+### 5.1 The approved lockups - `[OFFICIAL]`, brand book 02
 
 | Lockup | Definition | In this repo |
 |---|---|---|
 | **Combination logo** | "The Murphi wordmark used in most brand communications." | `<Logo />` from `components/Logo.tsx` |
 | **Icon logo** | "The icon version used in compact spaces such as app icons, dashboards, and social media avatars." | `<LogoMark />` from the same file |
 
-**`[OFFICIAL]`** — "The logo should always be used in its approved forms and
+**`[OFFICIAL]`** - "The logo should always be used in its approved forms and
 should never be altered, stretched, or recolored outside the defined brand
 palette."
 
-### 5.2 Colour variants — `[OFFICIAL]`, brand book 05, 06, 07, 10
+### 5.2 Colour variants - `[OFFICIAL]`, brand book 05, 06, 07, 10
 
 - Two files ship: `public/brand/logos/murphi-logo-blue.png` and
   `murphi-logo-white.png`.
 - **"Dark logos should be used on light backgrounds. White logos should be used
   on dark backgrounds."** (brand book 10)
 - A **mono-colour version** exists for accessibility and for reproduction
-  "where color is limited, such as in black and white publications" — it
+  "where color is limited, such as in black and white publications" - it
   "remains clear and accessible, including for audiences with color vision
   deficiencies." Both the icon logo and the combination logo have mono
   variants.
 
-### 5.3 Minimum size — `[OFFICIAL]`, brand book 04
+### 5.3 Minimum size - `[OFFICIAL]`, brand book 04
 
-> **Digital — minimum height: 24px**
-> Print — minimum height: 10mm
+> **Digital - minimum height: 24px**
+> Print - minimum height: 10mm
 
 **This is a hard floor.** `<Logo height={…} />` and `<LogoMark size={…} />` must
 never be called with a value below `24`. Current usages: navbar 28, footer 30,
 every icon mark 24.
 
-### 5.4 Mobile app icon — `[OFFICIAL]`, brand book 03
+### 5.4 Mobile app icon - `[OFFICIAL]`, brand book 03
 
 > "The Murphi mobile application icon uses the brand symbol in a simplified
 > format designed for clarity at small sizes. The icon must remain visually
@@ -351,11 +351,11 @@ every icon mark 24.
 > - Maintain equal padding around the symbol
 > - Do not modify the icon shape
 >
-> Recommended size ratios — **Icon padding: 20%. Symbol scale: 60%.**
+> Recommended size ratios - **Icon padding: 20%. Symbol scale: 60%.**
 
 Shipped at `public/brand/app-icons/` (32, 180, 192, 270 and `favicon.ico`).
 
-### 5.5 Misuse — `[OFFICIAL]`, brand book 04
+### 5.5 Misuse - `[OFFICIAL]`, brand book 04
 
 > "To maintain brand consistency, the Murphi logo must never be modified in
 > ways that distort its appearance."
@@ -373,13 +373,13 @@ Nine named prohibitions:
 **`[OFFICIAL]`** brand book 11 adds: **"Gradients should not be used inside the
 logo."**
 
-### 5.6 Clear space and placement — `[IMPLEMENTATION]`
+### 5.6 Clear space and placement - `[IMPLEMENTATION]`
 
 The brand book states the principle ("maintain equal padding around the
 symbol", "do not place the logo on visually complex backgrounds") but prints no
 clear-space diagram for the combination logo. This codebase uses:
 
-- **Clear space:** at least the height of the icon mark on all four sides —
+- **Clear space:** at least the height of the icon mark on all four sides  - 
   for a 28px logo that is 28px of clear space. Nothing else enters that box.
 - **Placement:** top-left of the navigation, left-aligned in the footer brand
   column. Never centred, never in a corner of a busy visual.
@@ -393,7 +393,7 @@ clear-space diagram for the combination logo. This codebase uses:
 
 ## 6. Backgrounds
 
-### 6.1 Approved backgrounds — `[OFFICIAL]`, brand book 10
+### 6.1 Approved backgrounds - `[OFFICIAL]`, brand book 10
 
 > "Murphi backgrounds should maintain clarity and contrast to ensure
 > readability and brand consistency.
@@ -403,7 +403,7 @@ clear-space diagram for the combination logo. This codebase uses:
 > Guidelines: Dark logos should be used on light backgrounds. White logos
 > should be used on dark backgrounds."
 
-### 6.2 The four surfaces — `[IMPLEMENTATION]`
+### 6.2 The four surfaces - `[IMPLEMENTATION]`
 
 | Surface | Value | Class | Use |
 |---|---|---|---|
@@ -413,7 +413,7 @@ clear-space diagram for the combination logo. This codebase uses:
 | Deep blue | `#0F1D54` | `bg-deep` | Dark surfaces where one is genuinely required |
 | Brand blue panel | `#007EFF` or the approved gradient | `bg-brand` | CTA panels and product highlights only |
 
-### 6.3 Rules — `[IMPLEMENTATION]`
+### 6.3 Rules - `[IMPLEMENTATION]`
 
 - **No invented tints.** A "very faint blue" background is not in the brand.
   Use `#F5F5F5`. The site previously carried more than twenty hand-mixed
@@ -434,7 +434,7 @@ clear-space diagram for the combination logo. This codebase uses:
 
 ## 7. Gradients
 
-### 7.1 The three approved gradients — `[OFFICIAL]`, brand book 11
+### 7.1 The three approved gradients - `[OFFICIAL]`, brand book 11
 
 | # | Stops | Token |
 |---|---|---|
@@ -442,7 +442,7 @@ clear-space diagram for the combination logo. This codebase uses:
 | 2 | `#FFFFFF → #007EFF` | `--gradient-brand-soft` |
 | 3 | `#F7F7F7 → #CCE5FF` | `--gradient-brand-wash` |
 
-### 7.2 Where gradients are allowed — `[OFFICIAL]`, brand book 11
+### 7.2 Where gradients are allowed - `[OFFICIAL]`, brand book 11
 
 The page is headed **"Gradient Color Usage (Only Social Media and Graphics)"**
 and reads:
@@ -455,11 +455,11 @@ and reads:
 >
 > **Gradients should not be used inside the logo.**"
 
-> ### ⚠️ This site renders flat — `[IMPLEMENTATION]`
+> ### ⚠️ This site renders flat - `[IMPLEMENTATION]`
 >
 > The brand book **permits** the three gradients above; it does not require
 > them. The brand owner has chosen **solid surfaces everywhere**, so the site
-> ships with **zero colour gradients** — no hero wash, no CTA panel gradient,
+> ships with **zero colour gradients** - no hero wash, no CTA panel gradient,
 > no gradient icon well, no glow layer. §7.1 stays on record because the
 > gradients are official brand assets, but nothing in this codebase uses them,
 > and the theme no longer declares them as tokens.
@@ -469,7 +469,7 @@ and reads:
 > those rows cutting off hard at their edges. Do not use `mask-image` to
 > reintroduce a colour effect.
 
-### 7.3 Where gradients are *not* allowed — `[IMPLEMENTATION]`
+### 7.3 Where gradients are *not* allowed - `[IMPLEMENTATION]`
 
 Buttons are not on the book's list, so **buttons are flat `#007EFF`.** The site
 previously filled every CTA with `linear-gradient(140deg, #006AD6, #007EFF)`;
@@ -483,10 +483,10 @@ Also not on the list, and therefore not permitted:
 - Icons
 - The logo, in any lockup, at any size
 
-### 7.4 Practical gradient rules — `[IMPLEMENTATION]`
+### 7.4 Practical gradient rules - `[IMPLEMENTATION]`
 
-- **Stay on the ramp.** A multi-stop blue panel runs through adjacent steps —
-  `#2993FF → #007EFF → #006AD6` — never through an invented mid-tone.
+- **Stay on the ramp.** A multi-stop blue panel runs through adjacent steps  - 
+  `#2993FF → #007EFF → #006AD6` - never through an invented mid-tone.
 - **One gradient per view.** A hero gradient *and* a CTA gradient *and* a card
   gradient on the same screen is noise.
 - **Low contrast between stops.** The gradient adds depth; it should not read
@@ -498,7 +498,7 @@ Also not on the list, and therefore not permitted:
 
 ## 8. Buttons
 
-### 8.1 The rule — `[OFFICIAL]`, brand book 01
+### 8.1 The rule - `[OFFICIAL]`, brand book 01
 
 ```
 #007EFF  =  Color for panels and for buttons
@@ -508,9 +508,9 @@ Also not on the list, and therefore not permitted:
 Plus brand book 11 by implication: buttons are not on the gradient list, so
 they are flat.
 
-### 8.2 The four utilities — `[IMPLEMENTATION]`
+### 8.2 The four utilities - `[IMPLEMENTATION]`
 
-All four are defined in `app/globals.css` and each is the **complete control** —
+All four are defined in `app/globals.css` and each is the **complete control**  - 
 shape, size, colour and every interaction state. A call site adds only its own
 margin and responsive behaviour.
 
@@ -521,7 +521,7 @@ margin and responsive behaviour.
 <Link href="/contact-us/" className="btn-on-blue">Request Demo</Link> {/* on a blue panel */}
 ```
 
-#### `btn-primary` — the default call to action
+#### `btn-primary` - the default call to action
 
 | | |
 |---|---|
@@ -535,12 +535,12 @@ margin and responsive behaviour.
 | Disabled | `opacity: .7`, `pointer-events: none` |
 | Transition | 200ms ease on background, shadow, transform |
 
-#### `btn-primary-sm` — the same button at navigation scale
+#### `btn-primary-sm` - the same button at navigation scale
 
 Identical colours and states. `14px 20px` padding, `14px` label, `10px` radius,
 `-1px` hover lift.
 
-#### `btn-secondary` — the quiet alternative
+#### `btn-secondary` - the quiet alternative
 
 | | |
 |---|---|
@@ -551,7 +551,7 @@ Identical colours and states. `14px 20px` padding, `14px` label, `10px` radius,
 | Hover | border `#A3D1FF`, background `#CCE5FF`, label `#006AD6` |
 | Active | background `#A3D1FF` |
 
-#### `btn-on-blue` — the inverse pair, for a button on a blue panel
+#### `btn-on-blue` - the inverse pair, for a button on a blue panel
 
 | | |
 |---|---|
@@ -561,12 +561,12 @@ Identical colours and states. `14px 20px` padding, `14px` label, `10px` radius,
 | Shadow | `0 4px 20px rgba(15,29,84,.14)` |
 | Hover | lift `-2px`, shadow deepens |
 
-### 8.3 Button rules — `[IMPLEMENTATION]`
+### 8.3 Button rules - `[IMPLEMENTATION]`
 
 - **One primary button per view.** If two CTAs sit together, the second is
   `btn-secondary`.
 - **Never write a one-off button.** If a page needs a size that does not exist,
-  add a utility to `globals.css` — do not spell out classes inline.
+  add a utility to `globals.css` - do not spell out classes inline.
 - Buttons go **full width under 600px** where they sit alone in a column:
   `className="btn-primary max-600:w-full"`.
 - Icons inside buttons are 17×17 and inherit `currentColor`. The utility
@@ -583,7 +583,7 @@ Every component below uses the same vocabulary: white or `#F5F5F5` surface,
 `#E3E3E3` hairline, `#1A1A1A` heading, `#464646`/`#606060` copy, `#878787`
 meta, blue only for the interactive or important thing.
 
-**All values in this section are `[IMPLEMENTATION]`** — the brand book does not
+**All values in this section are `[IMPLEMENTATION]`** - the brand book does not
 define component anatomy. The *colours* they use are `[OFFICIAL]`.
 
 ### 9.1 Cards
@@ -612,7 +612,7 @@ Panel radius: `--radius-hero` (28px) for large product surfaces,
 | Body | slides on `max-height` over 280ms; padding `0 22px 22px` |
 | Behaviour | one open at a time; `defaultOpen={-1}` opens none |
 
-Use `<FaqSection items={FAQS.<page>} />` for a page's FAQ band — it already
+Use `<FaqSection items={FAQS.<page>} />` for a page's FAQ band - it already
 carries the kicker, heading and 820px column.
 
 ### 9.4 Tabs
@@ -628,15 +628,15 @@ the active pill is filled `#1A1A1A` with white text, inactive pills are
 |---|---|
 | Eyebrow pill | `type-label` + `rounded-full border border-brand-ghost bg-brand-tint px-3.5 py-1.5 text-brand-dark` |
 | Compliance chip | `rounded-[8px] border border-brand-border/50 bg-white px-2 py-[5px]` + `9.5px / 700` uppercase |
-| Status — live | `border border-brand-pale bg-brand-ghost text-brand-deep` with a `bg-brand` dot |
-| Status — soon | `border border-grey-mid bg-grey-soft text-grey-500` with a `bg-grey-bdr` dot |
+| Status - live | `border border-brand-pale bg-brand-ghost text-brand-deep` with a `bg-brand` dot |
+| Status - soon | `border border-grey-mid bg-grey-soft text-grey-500` with a `bg-grey-bdr` dot |
 
 ### 9.6 Dropdowns (mega-menu)
 
 Solid `bg-white`, `1px solid #E3E3E3`, `rounded-[22px]`, `--shadow-panel`.
 Column headings `type-micro` in `#878787`; items `14px / 600 / #1A1A1A`
 stepping to `#006AD6` on hover with a `#F5F5F5` row fill. **Not translucent, not
-blurred** — see §24.
+blurred** - see §24.
 
 ### 9.7 Status indicators and semantic meaning
 
@@ -648,8 +648,8 @@ book defines no success/warning/error colours, so meaning is carried by
 |---|---|
 | Live / active / positive | Brand blue `#007EFF`, filled |
 | Not yet shipped / inactive | Grey `#EFEFEF` fill, `#606060` label, `#B2B2B2` dot |
-| Flagged / needs attention | `#0056AD` — the deepest step, filled |
-| Opportunity / informational | `#007EFF` — the bright step |
+| Flagged / needs attention | `#0056AD` - the deepest step, filled |
+| Opportunity / informational | `#007EFF` - the bright step |
 
 **Never carry meaning by colour alone.** Every status element must also have a
 text label, an icon, or a position that makes it readable in monochrome. This
@@ -657,7 +657,7 @@ matters more here than on a site with a semantic palette.
 
 ### 9.8 Tooltips
 
-`[IMPLEMENTATION]` — no tooltip component exists yet. When one is needed:
+`[IMPLEMENTATION]` - no tooltip component exists yet. When one is needed:
 `bg-ink` (`#1A1A1A`), `text-grey-bg`, `12.5px`, `rounded-card`, `8px 12px`
 padding, `--shadow-float`, 150ms fade. Must be reachable by keyboard and must
 not be the only place information lives.
@@ -667,7 +667,7 @@ not be the only place information lives.
 Header row `bg-grey-bg` with `type-micro` labels in `#878787`; body rows
 separated by `border-b border-grey-mid`; cells `13.5px / #464646`; first
 column `font-bold text-ink`. **Wrap every table in
-`<div className="overflow-x-auto">`** — see §22.
+`<div className="overflow-x-auto">`** - see §22.
 
 ### 9.10 Alerts and callouts
 
@@ -679,10 +679,10 @@ the copy and the icon.
 
 Two shipped components, both ending a page:
 
-- `<FinalCta />` — the full-bleed-inset blue panel: `--radius-cta` (40px, 24px
+- `<FinalCta />` - the full-bleed-inset blue panel: `--radius-cta` (40px, 24px
   under 600), the approved `#0056AD → #006AD6 → #007EFF` gradient,
   `type-display` heading in `#F5F5F5`, `btn-on-blue` button.
-- `<GetStartedCta />` — the same panel with `type-h1` and a fixed description.
+- `<GetStartedCta />` - the same panel with `type-h1` and a fixed description.
 
 **Reuse one of these.** Do not build a third CTA panel.
 
@@ -704,7 +704,7 @@ Rules:
 
 - **One border weight: 1px.** The only exception is the 3px emphasis rule.
 - **Never use a border colour outside the ramp.** If a hairline is too strong,
-  reduce its opacity (`/70`, `/80`) — do not mix a new grey.
+  reduce its opacity (`/70`, `/80`) - do not mix a new grey.
 - A card either has a border **or** a shadow carrying its separation. Both at
   full strength is heavy.
 - Dividers get generous space: at least `40px` above and below on desktop.
@@ -713,7 +713,7 @@ Rules:
 
 ## 11. Border Radius
 
-**`[IMPLEMENTATION]`** — the brand book sets no radius rule. This scale is the
+**`[IMPLEMENTATION]`** - the brand book sets no radius rule. This scale is the
 site's, defined in `@theme`. **Never write `rounded-[Npx]` when a token
 matches.**
 
@@ -725,9 +725,9 @@ matches.**
 | `--radius-hero` | `28px` | `rounded-hero` | Large product surfaces, hero cards |
 | `--radius-cta` | `40px` | `rounded-cta` | The closing CTA panel (24px under 600px) |
 | `--radius-canvas` | `56px` | `rounded-canvas` | The home hero stage |
-| — | `9999px` | `rounded-full` | Pills, dots, avatars, icon wells |
+| - | `9999px` | `rounded-full` | Pills, dots, avatars, icon wells |
 
-**`[OFFICIAL]` by inference** — brand book 04 forbids distorting the logo, and
+**`[OFFICIAL]` by inference** - brand book 04 forbids distorting the logo, and
 the visual language throughout the book is rounded. **Never use sharp
 (0px) corners on a surface.**
 
@@ -735,7 +735,7 @@ the visual language throughout the book is rounded. **Never use sharp
 
 ## 12. Shadows
 
-**`[IMPLEMENTATION]`** — the brand book mentions shadows only to *forbid* them
+**`[IMPLEMENTATION]`** - the brand book mentions shadows only to *forbid* them
 on the logo (brand book 04). Site shadows are permitted but restrained.
 
 | Token | Value | Use |
@@ -761,7 +761,7 @@ Rules:
 
 ## 13. Spacing & Layout
 
-**`[IMPLEMENTATION]`** — none of this is in the brand book.
+**`[IMPLEMENTATION]`** - none of this is in the brand book.
 
 ### 13.1 Containers
 
@@ -815,7 +815,7 @@ Common patterns:
 Two-column text/visual splits: `grid-cols-[minmax(0,52fr)_minmax(0,48fr)]` →
 `max-1024:grid-cols-1`.
 
-**Always use `minmax(0, …)` in a fractional grid track** — without it a wide
+**Always use `minmax(0, …)` in a fractional grid track** - without it a wide
 child (a table, a code block, a long word) blows the track out and creates
 horizontal overflow.
 
@@ -836,10 +836,10 @@ p-8  →  max-600:p-6
 
 ### Contents, in order
 
-1. Optional icon well — `size-11 rounded-tile border border-brand-border bg-brand-tint text-brand-dark`, icon 18–20px
-2. Title — `text-[17px] font-bold tracking-[-0.02em] text-ink`
-3. Body — `type-body-sm text-grey-500`, `mt-2.5`
-4. Optional meta line — `type-micro text-ink-muted`
+1. Optional icon well - `size-11 rounded-tile border border-brand-border bg-brand-tint text-brand-dark`, icon 18–20px
+2. Title - `text-[17px] font-bold tracking-[-0.02em] text-ink`
+3. Body - `type-body-sm text-grey-500`, `mt-2.5`
+4. Optional meta line - `type-micro text-ink-muted`
 
 ### Interaction
 
@@ -858,14 +858,14 @@ not move.
 - A card sits on white or `#F5F5F5`, never on another card.
 - Cards in a row are the same height (`flex flex-col` + `mt-auto` on the
   footer), never staggered.
-- No gradient card fills. No coloured card variants — a "featured" card is
+- No gradient card fills. No coloured card variants - a "featured" card is
   distinguished by a `#CCE5FF` fill and an `#A3D1FF` border, nothing more.
 
 ---
 
 ## 15. Forms & Inputs
 
-**`[IMPLEMENTATION]`** — colours are `[OFFICIAL]`.
+**`[IMPLEMENTATION]`** - colours are `[OFFICIAL]`.
 
 ### Field
 
@@ -876,7 +876,7 @@ not move.
 | Radius | `rounded-card` (12px) |
 | Padding | `12px 16px` (`px-4 py-3`) |
 | Text | `14px`, `#1A1A1A` |
-| Placeholder | `#878787` (`placeholder:text-ink-muted`) — the book's greyed-out text |
+| Placeholder | `#878787` (`placeholder:text-ink-muted`) - the book's greyed-out text |
 | Focus | border → `#A3D1FF`, background → `#FFFFFF`, plus the global focus ring |
 | Transition | `colors 200ms` |
 
@@ -892,7 +892,7 @@ utility's `:disabled` rule.
 
 ### Rules
 
-- Required fields carry the `required` attribute — do not signal requirement by
+- Required fields carry the `required` attribute - do not signal requirement by
   colour or an asterisk alone.
 - Error and success messaging is **text**, in `#1A1A1A` on `#EFEFEF`, with an
   icon. There is no red or green in the brand.
@@ -904,7 +904,7 @@ utility's `:disabled` rule.
 
 ## 16. Navigation
 
-**`[IMPLEMENTATION]`** — `components/Navbar.tsx`, driven by `lib/nav-data.ts`.
+**`[IMPLEMENTATION]`** - `components/Navbar.tsx`, driven by `lib/nav-data.ts`.
 
 | | |
 |---|---|
@@ -913,7 +913,7 @@ utility's `:disabled` rule.
 | Scrolled past 8px | `bg-white`, same border, `--shadow-nav` |
 | Container | `max-w-[1280px]`, `px-8` → `max-1024:px-6` → `max-600:px-4` |
 | Logo | `<Logo height={28} priority />`, top-left |
-| Links | `type-nav` — 14px / 600 / `#1A1A1A`, hover `#006AD6` |
+| Links | `type-nav` - 14px / 600 / `#1A1A1A`, hover `#006AD6` |
 | Primary CTA | `btn-primary-sm` |
 | Sign in | Plain link, `#1A1A1A` → `#006AD6` |
 | Mobile trigger | `size-11 rounded-card border border-nav-border bg-white text-brand-dark`, shown under 900px |
@@ -921,7 +921,7 @@ utility's `:disabled` rule.
 
 **Rules**
 
-- The navigation is **solid**. It is not translucent and it is not blurred —
+- The navigation is **solid**. It is not translucent and it is not blurred  - 
   the previous glass treatment was removed (see §24).
 - Navigation labels, order and destinations are content. Change them in
   `lib/nav-data.ts`, which is the single source for the desktop mega-menu, the
@@ -933,11 +933,11 @@ utility's `:disabled` rule.
 
 ## 17. Footer
 
-**`[IMPLEMENTATION]`** — `components/Footer.tsx`
+**`[IMPLEMENTATION]`** - `components/Footer.tsx`
 
 | | |
 |---|---|
-| Surface | `linear-gradient(180deg, #F5F5F5 0%, #EFEFEF 100%)` — **light, not dark** |
+| Surface | `linear-gradient(180deg, #F5F5F5 0%, #EFEFEF 100%)` - **light, not dark** |
 | Top border | `1px solid #E3E3E3` |
 | Container | `max-w-[1280px]`, `pt-20 pb-8` |
 | Grid | `1.5fr + 4 × 1fr` → `max-1024:grid-cols-3` → `max-600:grid-cols-1` |
@@ -955,7 +955,7 @@ Do not convert it to a dark footer.
 
 ## 18. Icons
 
-**`[IMPLEMENTATION]`** — `components/icons.tsx`. The brand book does not
+**`[IMPLEMENTATION]`** - `components/icons.tsx`. The brand book does not
 specify an icon style; this is the house spec, traced from
 `murphi-project-assets/icons/`.
 
@@ -992,7 +992,7 @@ facebook · chevron · close · menu`.
 
 ## 19. Photography & Imagery
 
-### 19.1 The direction — `[OFFICIAL]`, brand book 13
+### 19.1 The direction - `[OFFICIAL]`, brand book 13
 
 > **Visual characteristics:** Bright lighting · Clean environments · Clinical
 > settings · Neutral white tones
@@ -1003,17 +1003,17 @@ facebook · chevron · close · menu`.
 > **Avoid:** Warm or yellow lighting · Lifestyle photography unrelated to
 > healthcare · Overly staged stock imagery
 
-### 19.2 Usage by context — `[IMPLEMENTATION]`
+### 19.2 Usage by context - `[IMPLEMENTATION]`
 
 | Context | Treatment |
 |---|---|
-| **Hero** | This site's heroes use **built product visuals**, not photography (see §20). If a photograph is ever used, it sits behind a white or `#F5F5F5` scrim so text stays on a flat ground — never text directly on a photo. |
+| **Hero** | This site's heroes use **built product visuals**, not photography (see §20). If a photograph is ever used, it sits behind a white or `#F5F5F5` scrim so text stays on a flat ground - never text directly on a photo. |
 | **Team** | Real portraits only, from `public/images/team/`. Square, `rounded-panel`, neutral background, consistent crop and lighting across the row. Never an avatar illustration, never a placeholder face. |
 | **Healthcare / clinical sections** | Bright, cool-toned, real settings. Never a stock handshake, never a smiling-model-with-tablet. |
 | **Product sections** | Prefer a built visual over a screenshot. If a screenshot is used it must show real UI, `rounded-panel` with a `1px #E3E3E3` border. |
 | **Announcements** | The article's own image, `aspect-[16/9]`, `rounded-panel`, `#F5F5F5` placeholder ground. |
 
-### 19.3 Hard rules — `[IMPLEMENTATION]`
+### 19.3 Hard rules - `[IMPLEMENTATION]`
 
 - **Never fabricate an image of a person, a facility, or a screen.** Portraits
   come from the assets folder or they do not appear.
@@ -1027,23 +1027,23 @@ facebook · chevron · close · menu`.
 
 ## 20. Illustrations & Product Visuals
 
-**`[IMPLEMENTATION]`** — the brand book permits gradients for "UI
+**`[IMPLEMENTATION]`** - the brand book permits gradients for "UI
 illustrations" (brand book 11) but does not define an illustration style.
 
 The house style for every product visual on this site:
 
 - **Built in HTML/CSS/SVG, never a static image.** Every diagram, mock UI,
-  device frame and flow on the site is real markup — it stays sharp, themeable
+  device frame and flow on the site is real markup - it stays sharp, themeable
   and accessible.
 - Composed of the same primitives as the rest of the UI: white panels,
   `#E3E3E3` hairlines, `rounded-hero`/`rounded-tile` corners, the icon set.
-- Blue appears only on the element the visual is about — the Murphi node in a
+- Blue appears only on the element the visual is about - the Murphi node in a
   flow, the active row in a mock table.
 - Connectors are `1.4–2px` strokes in `#A3D1FF`, dashed where they represent
   movement.
 - A mock UI's header bar may take the approved blue gradient; its body does
   not.
-- Reusable pieces live in `components/module-page/` — `MockCard`, `StepFlow`,
+- Reusable pieces live in `components/module-page/` - `MockCard`, `StepFlow`,
   `FlowStep`, `FlowConnector`, `Waveform`, `Layers`, `DeviceStack`,
   `BeforeAfter`, `ClaimTrack`. **Check these before drawing anything new.**
 - Everything decorative carries `aria-hidden`.
@@ -1052,13 +1052,13 @@ The house style for every product visual on this site:
 
 ## 21. Animation & Motion
 
-**`[IMPLEMENTATION]`** — not addressed by the brand book.
+**`[IMPLEMENTATION]`** - not addressed by the brand book.
 
 ### 21.1 Durations
 
 | Duration | Use |
 |---|---|
-| `150ms` | Micro feedback — a chevron, a dot |
+| `150ms` | Micro feedback - a chevron, a dot |
 | `200ms` | **The default.** Every hover, colour and border transition |
 | `280ms` | Accordion body slide |
 | `300ms` | Navigation bar state change |
@@ -1071,9 +1071,9 @@ Easing: `ease` for colour, `cubic-bezier(.22,.61,.36,1)` for entrances.
 | Pattern | Rule |
 |---|---|
 | **Hover lift** | `-translate-y-0.5` (2px) plus a shadow step. Nothing larger. |
-| **Scroll reveal** | `<Reveal>` — 18px rise + fade, fires once at 12% visibility, then releases the observer. Never re-animates on scroll back. |
+| **Scroll reveal** | `<Reveal>` - 18px rise + fade, fires once at 12% visibility, then releases the observer. Never re-animates on scroll back. |
 | **Accordion** | `max-height` transition over 280ms, chevron rotates 180°. |
-| **Carousel** | `<Testimonials>` — one card every `4500ms`, `700ms` transition, seamless loop, pauses on hover and focus. Never a continuous marquee. |
+| **Carousel** | `<Testimonials>` - one card every `4500ms`, `700ms` transition, seamless loop, pauses on hover and focus. Never a continuous marquee. |
 | **Ambient motion** | The `mp-*` keyframes (`float`, `glow`, `pulse-ring`, `flow`, `spine`, `wave`, `blink`, `ticker`) exist for product visuals only. Slow (5–14s), low amplitude, never behind text. |
 
 ### 21.3 Rules
@@ -1084,7 +1084,7 @@ Easing: `ease` for colour, `cubic-bezier(.22,.61,.36,1)` for entrances.
 - **Reduced motion is global and non-negotiable.** `app/globals.css` already
   disables every animation and collapses every transition under
   `prefers-reduced-motion: reduce`. Any new animation is covered
-  automatically — do not add an animation that only works with motion enabled.
+  automatically - do not add an animation that only works with motion enabled.
 - No parallax, no scroll-jacking, no auto-playing video with sound, no
   continuous motion that is not conveying state.
 
@@ -1128,15 +1128,15 @@ visuals so a panel adapts to its own column, not the viewport. Add
 | Card padding | `p-8` | `p-8` | `p-6` |
 | CTA panel radius | 40px | 40px | 24px |
 
-### 22.3 Overflow — the rule that breaks pages
+### 22.3 Overflow - the rule that breaks pages
 
 `body` carries `overflow-x: hidden`, but that hides a bug rather than fixing
 it. **No page may scroll horizontally at any width from 320px up.**
 
-- Wide content — tables, diagrams, code blocks, ticker rows — scrolls inside
+- Wide content - tables, diagrams, code blocks, ticker rows - scrolls inside
   its own `overflow-x-auto` container.
 - Use `minmax(0, …)` in fractional grid tracks and `min-w-0` on flex children.
-- Background layers use `inset-0`, never a negative inset — a negative inset
+- Background layers use `inset-0`, never a negative inset - a negative inset
   lays out past the viewport and creates overflow on narrow screens.
 - Images: `max-width: 100%`, always.
 
@@ -1159,7 +1159,7 @@ border-radius: 4px;
 **Never remove it.** On a blue panel, override with
 `focus-visible:outline-white focus-visible:outline-offset-4`.
 
-### 23.2 Contrast — and the one conflict with the brand book
+### 23.2 Contrast - and the one conflict with the brand book
 
 Measured against WCAG 2.1:
 
@@ -1181,14 +1181,14 @@ Measured against WCAG 2.1:
 | **`#F5F5F5` on `#007EFF`** | **3.55:1** | **AA large only** |
 | `#878787` on `#F5F5F5` | 3.30:1 | AA large only |
 
-> ### ⚠️ Documented conflict — brand vs WCAG
+> ### ⚠️ Documented conflict - brand vs WCAG
 >
 > **`[OFFICIAL]`** brand book 01 specifies `#F5F5F5` as the text on `#007EFF`
 > buttons. That pair measures **3.55:1**, which passes AA for large text
 > (≥18.66px bold or ≥24px) but **fails AA for a normal 15px button label**,
 > which needs 4.5:1.
 >
-> This is not a regression introduced by the implementation — pure white on the
+> This is not a regression introduced by the implementation - pure white on the
 > same blue is 3.87:1 and also fails. The floor is the blue, not the label.
 >
 > **The site follows the brand book.** The official colour is implemented as
@@ -1235,7 +1235,7 @@ Working rules that follow from the table:
 
 | | |
 |---|---|
-| ✅ | Use only the two official ramps — Bright Blue and Grey |
+| ✅ | Use only the two official ramps - Bright Blue and Grey |
 | ✅ | Use Plus Jakarta Sans for everything |
 | ✅ | Use the `type-*` utilities for headings and the `btn-*` utilities for buttons |
 | ✅ | Use token classes (`text-ink`, `bg-brand`, `border-grey-mid`) |
@@ -1251,8 +1251,8 @@ Working rules that follow from the table:
 
 | | |
 |---|---|
-| ❌ | Invent a brand colour, or "a slightly lighter blue" — the ramps are complete |
-| ❌ | Reintroduce teal, amber, coral, red or green — there is no third hue |
+| ❌ | Invent a brand colour, or "a slightly lighter blue" - the ramps are complete |
+| ❌ | Reintroduce teal, amber, coral, red or green - there is no third hue |
 | ❌ | Add a second font family (IBM Plex Mono was removed deliberately) |
 | ❌ | Recolour, rotate, stretch, distort, or shadow the logo |
 | ❌ | Put a gradient inside the logo, or behind the app icon |
@@ -1270,12 +1270,12 @@ Working rules that follow from the table:
 
 ## 25. Page-Level Design Rules
 
-**`[IMPLEMENTATION]`** — the shape every Murphi.ai page shares.
+**`[IMPLEMENTATION]`** - the shape every Murphi.ai page shares.
 
 ### 25.1 Standard page skeleton
 
 ```tsx
-<Navbar />                     {/* fixed, 72px — every page starts pt-[72px] */}
+<Navbar />                     {/* fixed, 72px - every page starts pt-[72px] */}
 <PageHero … />                 {/* eyebrow → h1 → lead → CTA */}
   … content sections …         {/* alternating white / #F5F5F5 */}
 <FaqSection items={FAQS.x} />  {/* where the page has FAQs */}
@@ -1288,10 +1288,10 @@ Working rules that follow from the table:
 Every content section is one of four shapes. Pick one; do not improvise a
 fifth.
 
-1. **Text left / visual right** — the default for a capability section
-2. **Visual left / text right** — alternate with (1) down the page
-3. **Centred intro + grid** — eyebrow, heading, lead, then a 2/3/4-up grid
-4. **Full-width band** — a blue panel or a `#F5F5F5` strip carrying one idea
+1. **Text left / visual right** - the default for a capability section
+2. **Visual left / text right** - alternate with (1) down the page
+3. **Centred intro + grid** - eyebrow, heading, lead, then a 2/3/4-up grid
+4. **Full-width band** - a blue panel or a `#F5F5F5` strip carrying one idea
 
 Each opens with: `type-label` eyebrow → `type-h2` heading → `type-lead`
 standfirst. Not every section needs all three, but the order never changes.
@@ -1303,7 +1303,7 @@ standfirst. Not every section needs all three, but the order never changes.
 - **Alternate surfaces** so no two consecutive sections share a background.
 - **The page ends with a CTA panel and the footer.** Always.
 - Set `export const metadata` with a title and description on every route.
-- `trailingSlash: true` is on — every internal href ends with `/`.
+- `trailingSlash: true` is on - every internal href ends with `/`.
 
 ---
 
@@ -1327,7 +1327,7 @@ software with patient records.
    27001 and BAA marks appear once, small, in real assets, near the footer and
    in the trust strip.
 5. **Show the workflow, not the technology.** The product visuals depict a
-   chart being reviewed, a message reaching a patient, a claim reconciling —
+   chart being reviewed, a message reaching a patient, a claim reconciling  - 
    not abstract "AI" imagery.
 6. **Accessibility is part of credibility.** A healthcare buyer with a
    procurement checklist will test contrast and keyboard access.
@@ -1365,19 +1365,19 @@ shared type utility, and every button uses a shared button utility.
 
 ### 27.2 Rules
 
-1. **Reuse tokens.** Never `text-[#1A1A1A]` — use `text-ink`. Never
-   `rounded-[20px]` — use `rounded-panel`.
+1. **Reuse tokens.** Never `text-[#1A1A1A]` - use `text-ink`. Never
+   `rounded-[20px]` - use `rounded-panel`.
 2. **Reuse the type utilities.** Never restate `text-[clamp(...)] font-extrabold
    leading-[...] tracking-[...]` inline. If a size is missing, add a utility.
 3. **Reuse the button utilities.** Never spell out a button's classes.
 4. **Reuse components before writing one.** Check `components/` and
-   `components/module-page/` first — there are 70+ exported primitives
+   `components/module-page/` first - there are 70+ exported primitives
    (`MockCard`, `StepFlow`, `Accordion`, `RelatedGrid`, `OutcomesStrip`,
    `FaqSection`, `FinalCta`, `GetStartedCta`, `PageHero`, `Breadcrumb`,
    `TrustDot`, `StatusBadge`, `Reveal`, `Tabs` …).
 5. **No page-specific design system.** If a page needs a treatment three other
    pages could use, it belongs in `globals.css` or the shared kit.
-6. **No second visual language.** The site once carried two — the new Murphi
+6. **No second visual language.** The site once carried two - the new Murphi
    system and the old site's navy/teal/amber palette. They were merged. Do not
    start a third.
 7. **A palette change happens once**, in `@theme`, and propagates. If you find
@@ -1385,7 +1385,7 @@ shared type utility, and every button uses a shared button utility.
 8. **Content is not styling.** Copy, headings, FAQ text, legal text, team
    details, routes, hrefs and form behaviour are out of scope for a visual
    change. Do not touch them.
-9. **The codemods that produced this state are kept** in `scripts/` —
+9. **The codemods that produced this state are kept** in `scripts/`  - 
    `brand-colors.mjs`, `brand-typeface.mjs`, `brand-buttons.mjs`,
    `brand-button-utilities.mjs`, `brand-tokens.mjs`, `brand-headings.mjs`,
    `brand-radii.mjs`. Each documents its mapping and can be re-run to audit
@@ -1407,12 +1407,12 @@ Do not "fix" them without asking:
 
 Follow these ten steps in order.
 
-### Step 1 — Read this document
+### Step 1 - Read this document
 
 Particularly §3 (colour), §4 (typography), §8 (buttons), §13 (spacing),
 §22 (responsive), §27 (implementation rules).
 
-### Step 2 — Inspect what exists
+### Step 2 - Inspect what exists
 
 ```bash
 sed -n '1,120p' app/globals.css      # tokens
@@ -1423,37 +1423,37 @@ ls components components/module-page # the component inventory
 Find the page most like the one you are building and read it. Match its
 container, its section rhythm and its component choices.
 
-### Step 3 — Reuse before you write
+### Step 3 - Reuse before you write
 
 Type utility before an inline size. Button utility before a class string.
 Existing component before a new one. Token before a hex.
 
-### Step 4 — Use only approved brand colours
+### Step 4 - Use only approved brand colours
 
 The two ramps in §3, plus `#FFFFFF` and `#0F1D54`. Nothing else. If a design
 seems to need another colour, the design is wrong.
 
-### Step 5 — Use Plus Jakarta Sans
+### Step 5 - Use Plus Jakarta Sans
 
 It is already loaded globally. Do not add a `next/font` import to your route.
 
-### Step 6 — Build the page skeleton
+### Step 6 - Build the page skeleton
 
 Navbar → hero → alternating sections → optional FAQ → CTA panel → Footer
 (§25). One `<h1>`. Correct container for the page family.
 
-### Step 7 — Make it responsive
+### Step 7 - Make it responsive
 
 Use the declared breakpoint variants only. Stack two-column splits at
 `max-1024`. Full-width buttons at `max-600`. Wrap wide content in
 `overflow-x-auto`. Verify no horizontal scroll at 320px.
 
-### Step 8 — Make it accessible
+### Step 8 - Make it accessible
 
 Semantic headings, real labels, meaningful alt text, `aria-hidden` on
 decoration, keyboard reachable, focus ring intact, no meaning by colour alone.
 
-### Step 9 — Verify against the checklist
+### Step 9 - Verify against the checklist
 
 ```
 □ Every colour is on the two ramps (grep the file for stray hex)
@@ -1475,7 +1475,7 @@ decoration, keyboard reachable, focus ring intact, no meaning by colour alone.
 □ No content, route or link was changed
 ```
 
-### Step 10 — Run the checks
+### Step 10 - Run the checks
 
 ```bash
 npx tsc --noEmit
@@ -1516,7 +1516,7 @@ NO third hue. No teal, amber, coral, red or green.
 
 ── TYPE ─────────────────────────────────────────────────────────
 Font              Plus Jakarta Sans (only family, loaded globally)
-Weights           300 400 500 600 700 800   — headings 800, buttons 700
+Weights           300 400 500 600 700 800   - headings 800, buttons 700
 
 type-display  clamp(32,3.5vw,46) / 800   hero h1, closing CTA
 type-h1       clamp(30,3.6vw,46) / 800   page h1
@@ -1536,7 +1536,7 @@ btn-primary     #007EFF bg · #F5F5F5 label · 15/32 pad · r12
 btn-primary-sm  same colours, 14/20 pad, 14px label, r10
 btn-secondary   white bg · #E3E3E3 border · #464646 label
                 hover #CCE5FF bg / #A3D1FF border / #006AD6 label
-btn-on-blue     white bg · #006AD6 label — for use on a blue panel
+btn-on-blue     white bg · #006AD6 label - for use on a blue panel
 
 Buttons are FLAT. Never a gradient.
 
@@ -1582,11 +1582,11 @@ AVOID  random colours · excessive gradients · neon · glow ·
        noise · playful UI · flashy motion
 
 ── ACCESSIBILITY ────────────────────────────────────────────────
-Focus ring    2px #007EFF, 3px offset — global, never remove
+Focus ring    2px #007EFF, 3px offset - global, never remove
 Body copy     never lighter than #606060 on white
 #878787       de-emphasised text only, never body copy
 Links in copy #006AD6 (5.21:1), not #007EFF (3.87:1)
-⚠ #F5F5F5 on #007EFF = 3.55:1 — the book's button pair; passes AA
+⚠ #F5F5F5 on #007EFF = 3.55:1 - the book's button pair; passes AA
   large only. Documented conflict, see §23.2. Do not change silently.
 
 ── BEFORE YOU FINISH ────────────────────────────────────────────
@@ -1598,5 +1598,5 @@ npx tsc --noEmit  ·  npx eslint .  ·  npx next build
 *Source of truth: `Murphi Brand Book 2026 V1.0.pdf`, repo root.
 Implementation: `app/globals.css`.
 Everything marked `[OFFICIAL]` comes from the brand book; everything marked
-`[IMPLEMENTATION]` is this codebase's decision and can be changed — once, in
+`[IMPLEMENTATION]` is this codebase's decision and can be changed - once, in
 `globals.css`, for the whole site.*

@@ -7,7 +7,7 @@ import { cn } from "@/lib/cn";
 /**
  * The FAQ explorer: categories on the left, questions on the right.
  *
- * Every question, answer, category and order comes from lib/faqs.ts — the same
+ * Every question, answer, category and order comes from lib/faqs.ts - the same
  * records the individual pages render. Nothing here restates or edits them; the
  * page only changes how they are presented.
  *
@@ -239,7 +239,7 @@ function Row({
   );
 }
 
-/** A plus that becomes a minus — the bar rotates away. */
+/** A plus that becomes a minus - the bar rotates away. */
 function PlusMinus({ open }: { open: boolean }) {
   return (
     <span

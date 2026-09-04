@@ -8,7 +8,7 @@ import { cn } from "@/lib/cn";
  * The page's product vocabulary: one operations layer, many workflows hanging
  * off it.
  *
- * The agency argument is additive — keep the EHR, add a module, add another —
+ * The agency argument is additive - keep the EHR, add a module, add another  - 
  * so the page is built from a band with modules attached beneath it, rather
  * than the registers, rails and round trips the other pages use. A module is
  * either running or not yet, and the visual never pretends otherwise.
@@ -108,7 +108,7 @@ export function Stem({ lit }: { lit: boolean }) {
   );
 }
 
-/** One workflow — running, or not yet. */
+/** One workflow - running, or not yet. */
 export function ModuleTile({
   name,
   soon,

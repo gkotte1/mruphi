@@ -6,7 +6,7 @@ import { SITE_URL, SITE_ROUTES, absoluteUrl } from "@/lib/site";
 /**
  * schema.org descriptions of what the site already says.
  *
- * These render as JSON-LD in a <script> tag — nothing is drawn, nothing moves,
+ * These render as JSON-LD in a <script> tag - nothing is drawn, nothing moves,
  * and no visible copy changes. Every value is read from a register the pages
  * themselves render (lib/site.ts, lib/faqs.ts, lib/announcements.ts), so the
  * markup cannot describe a page, question or article the site does not serve.
@@ -89,7 +89,7 @@ export function moduleSchema(path: string) {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     "@id": `${absoluteUrl(path)}#software`,
-    name: `Murphi.ai — ${route.title.split(" — ")[0]}`,
+    name: `Murphi.ai - ${route.title.split(" - ")[0]}`,
     url: absoluteUrl(path),
     description: route.description,
     applicationCategory: "HealthApplication",
@@ -153,7 +153,7 @@ export function articleSchema(article: Article) {
 
 /**
  * BreadcrumbList, matching the visible Breadcrumb component on the module and
- * audience pages — the trail it draws is Home › <page>.
+ * audience pages - the trail it draws is Home › <page>.
  */
 export function breadcrumbSchema(path: string, name: string) {
   return {
@@ -202,7 +202,7 @@ export function blogArticleSchema(post: BlogPost) {
 /**
  * FAQPage for a post's own FAQ section.
  *
- * Only emitted when the article actually carries question-and-answer pairs —
+ * Only emitted when the article actually carries question-and-answer pairs  - 
  * an empty node would describe content the page does not have.
  */
 export function blogFaqSchema(

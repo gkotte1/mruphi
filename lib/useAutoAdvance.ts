@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useState } from "react";
 
-/** One state every two seconds — the interval the homepage showcase uses. */
+/** One state every two seconds - the interval the homepage showcase uses. */
 export const STEP_MS = 2000;
 
 /**

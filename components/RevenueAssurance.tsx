@@ -16,7 +16,7 @@ import {
 } from "@/components/home/kit";
 
 /**
- * Module 2 — Revenue Assurance, converted from `#revenue-assurance` in
+ * Module 2 - Revenue Assurance, converted from `#revenue-assurance` in
  * "01. HomePAge/Murphi.ai Home LandingPage.html".
  *
  * A `.reverse` block: the copy sits in the right column, the visual in the
@@ -64,8 +64,8 @@ export default function RevenueAssurance() {
           </ModuleHeading>
 
           <Lede>
-            Murphi can fetch the relevant record straight from your EHR — no
-            manual upload required — analyze it, and write findings back where
+            Murphi can fetch the relevant record straight from your EHR - no
+            manual upload required - analyze it, and write findings back where
             your team already works.
           </Lede>
 

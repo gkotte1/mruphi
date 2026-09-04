@@ -28,7 +28,7 @@ import {
 } from "@/components/revenue-assurance/Sections";
 
 export const metadata: Metadata = pageMetadata("/revenue-assurance/", {
-  title: "Revenue Assurance — OASIS & PDGM Review Software",
+  title: "Revenue Assurance - OASIS & PDGM Review Software",
   description:
     "AI chart review for home health and hospice: OASIS, coding, POC, PDGM and ADR gaps surfaced the day the chart is written, fetched straight from your EHR.",
 });
@@ -85,7 +85,7 @@ const CHECKS: Check[] = [
     id: "compliance",
     label: "Compliance",
     chips: ["Face-to-Face", "POC Checker", "Visit Note Scrubber"],
-    note: "Confirms the documentation a surveyor or auditor would ask for is actually present — the piece that was missing for Mr. Delgado.",
+    note: "Confirms the documentation a surveyor or auditor would ask for is actually present - the piece that was missing for Mr. Delgado.",
   },
   {
     id: "revenue",
@@ -133,8 +133,8 @@ export default function RevenueAssurancePage() {
           eyebrow="Revenue Assurance"
           title="Catch It on Day One, Not on Appeal."
           storyTag="Six Weeks Later"
-          story="An ADR letter arrives for Mr. Delgado's episode. The homebound documentation was thin. The Face-to-Face date is missing. Nobody remembers visit three — it happened six weeks ago."
-          lede="Murphi reviews every chart the day it's written — fetched straight from your EHR — and surfaces exactly this kind of gap while there's still time to fix it."
+          story="An ADR letter arrives for Mr. Delgado's episode. The homebound documentation was thin. The Face-to-Face date is missing. Nobody remembers visit three - it happened six weeks ago."
+          lede="Murphi reviews every chart the day it's written - fetched straight from your EHR - and surfaces exactly this kind of gap while there's still time to fix it."
           trust={
             <>
               HIPAA <TrustDot /> SOC 2 <TrustDot /> No unsupported ROI claims
@@ -198,7 +198,7 @@ export default function RevenueAssurancePage() {
 
         <EhrIntegration
           heading="Works with the EHR you already use."
-          lede="Referral, F2F, OASIS, POC and visit notes pulled directly — findings written back where your team already works."
+          lede="Referral, F2F, OASIS, POC and visit notes pulled directly - findings written back where your team already works."
           substeps={["Fetch", "Analyze", "Findings", "Human Review", "Write Back"]}
           disclaimer="Manual PDF upload is also supported where direct integration isn't available."
         />
@@ -206,7 +206,7 @@ export default function RevenueAssurancePage() {
         <FaqSection items={FAQS.revenueAssurance} />
 
         <FinalCta
-          heading={"Never Meet Mr. Delgado's Chart Again — On Appeal."}
+          heading={"Never Meet Mr. Delgado's Chart Again - On Appeal."}
           body="See how Murphi surfaces the gap while there's still time to close it."
         />
       </main>

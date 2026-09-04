@@ -27,8 +27,8 @@ const TESTIMONIALS: Testimonial[] = [
   {
     id: "placeholder-2",
     quote:
-      "Another Home Health or Hospice customer quote goes here — placeholder pending a validated testimonial.",
-    initials: "—",
+      "Another Home Health or Hospice customer quote goes here - placeholder pending a validated testimonial.",
+    initials: "-",
     name: "Customer name",
     role: "Role, Agency",
     placeholder: true,
@@ -36,8 +36,8 @@ const TESTIMONIALS: Testimonial[] = [
   {
     id: "placeholder-3",
     quote:
-      "A third Home Health or Hospice customer quote goes here — placeholder pending a validated testimonial.",
-    initials: "—",
+      "A third Home Health or Hospice customer quote goes here - placeholder pending a validated testimonial.",
+    initials: "-",
     name: "Customer name",
     role: "Role, Agency",
     placeholder: true,
@@ -50,7 +50,7 @@ const SLIDE_MS = 700;
 
 /* The track carries the three cards twice. Advancing one position at a time,
    the window at index N always has real content to its right, and index COUNT
-   renders exactly what index 0 does — so the loop resets there invisibly. */
+   renders exactly what index 0 does - so the loop resets there invisibly. */
 const SLIDES = [...TESTIMONIALS, ...TESTIMONIALS];
 
 export default function Testimonials() {
@@ -134,7 +134,7 @@ export default function Testimonials() {
         return;
       }
 
-      /* The clone at index COUNT renders what index 0 renders — swap without
+      /* The clone at index COUNT renders what index 0 renders - swap without
          animating and the loop is invisible. */
       setAnimate(false);
       setIndex(0);
@@ -243,7 +243,7 @@ export default function Testimonials() {
   );
 }
 
-/** A quiet ground — two large, low washes well behind the cards. */
+/** A quiet ground - two large, low washes well behind the cards. */
 function SectionGround() {
   return null;
 }

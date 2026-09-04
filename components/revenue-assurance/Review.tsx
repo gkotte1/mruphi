@@ -8,8 +8,8 @@ import { cn } from "@/lib/cn";
  * The page's product vocabulary: a chart under review.
  *
  * Revenue Assurance was drawn with the same generic parts as every other
- * module page — one bordered card in the hero, two bullet cards for the
- * comparison, five circles for the workflow — so the page never showed the
+ * module page - one bordered card in the hero, two bullet cards for the
+ * comparison, five circles for the workflow - so the page never showed the
  * thing it sells: a chart being read, findings surfacing, a reviewer clearing
  * them, the result going back. These primitives give it that language.
  *
@@ -189,7 +189,7 @@ export function ScanBar({
       there, so the surface states progress instead of animating it. */
   quiet?: boolean;
 }) {
-  /* Where each row rests when still — filled, most of the way, nearly done. */
+  /* Where each row rests when still - filled, most of the way, nearly done. */
   const REST = ["82%", "64%", "45%"];
 
   return (
@@ -216,7 +216,7 @@ export function ScanBar({
   );
 }
 
-/** A short row of state pips — how far through a stage the product is. */
+/** A short row of state pips - how far through a stage the product is. */
 export function Pips({ total, done }: { total: number; done: number }) {
   return (
     <div className="flex items-center gap-1.5" aria-hidden>
@@ -233,7 +233,7 @@ export function Pips({ total, done }: { total: number; done: number }) {
   );
 }
 
-/** One end of the round trip — the customer's own system, on #007EFF. */
+/** One end of the round trip - the customer's own system, on #007EFF. */
 export function SystemNode({
   label,
   returned,

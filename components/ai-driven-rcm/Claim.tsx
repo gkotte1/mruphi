@@ -8,7 +8,7 @@ import { cn } from "@/lib/cn";
  *
  * The page previously drew that lifecycle as one row of dots and a strip of
  * pills, so it showed the stages but never what happens at any of them. These
- * primitives give it the parts a revenue-cycle interface actually has —
+ * primitives give it the parts a revenue-cycle interface actually has  - 
  * stage state, the capability running at that stage, an intercepted issue, and
  * the review that clears it.
  *
@@ -290,7 +290,7 @@ export function StageDot({ state }: { state: StageState }) {
   );
 }
 
-/** A short row of state pips — how far through the lifecycle the claim is. */
+/** A short row of state pips - how far through the lifecycle the claim is. */
 export function Pips({ total, done }: { total: number; done: number }) {
   return (
     <div className="flex items-center gap-1" aria-hidden>

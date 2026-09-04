@@ -2,7 +2,7 @@ import type { SVGProps } from "react";
 
 /**
  * Line icons in the Murphi house style, traced from
- * murphi-project-assets/icons/ — 24 viewBox, 1.7 stroke, currentColor,
+ * murphi-project-assets/icons/ - 24 viewBox, 1.7 stroke, currentColor,
  * round caps and joins. Never filled, never duotone.
  */
 
@@ -17,7 +17,7 @@ const BASE: SVGProps<SVGSVGElement> = {
 };
 
 const PATHS = {
-  /** download/dl-0 — microphone, restyled to the segment house spec */
+  /** download/dl-0 - microphone, restyled to the segment house spec */
   mic: (
     <>
       <path d="M12 3.2a2.7 2.7 0 0 0-2.7 2.7v6.3a2.7 2.7 0 0 0 5.4 0V5.9A2.7 2.7 0 0 0 12 3.2Z" />
@@ -90,7 +90,7 @@ const PATHS = {
       <path d="M8.6 12.8h6.8M8.6 16.4h4.6" />
     </>
   ),
-  /** An arrow into a tray — the same shape Lucide's Download draws, in the
+  /** An arrow into a tray - the same shape Lucide's Download draws, in the
       house spec: 24 viewBox, 1.7 stroke, round caps. */
   download: (
     <>
@@ -136,14 +136,14 @@ const PATHS = {
       <path d="M17.7 2.6v3.6h-3.6M6.3 21.4v-3.6h3.6" />
     </>
   ),
-  /** segment/phone — handset, traced 1:1 from the kit file */
+  /** segment/phone - handset, traced 1:1 from the kit file */
   phone: (
     <>
       <rect x="6.6" y="2.6" width="10.8" height="18.8" rx="2.4" />
       <path d="M10.6 18.4h2.8" />
     </>
   ),
-  /* social/*.svg — traced 1:1 from the kit. The brand marks are filled, so
+  /* social/*.svg - traced 1:1 from the kit. The brand marks are filled, so
      each path overrides the shared outline preset. */
   instagram: (
     <>

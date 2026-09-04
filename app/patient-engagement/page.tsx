@@ -30,17 +30,17 @@ import {
 } from "@/components/patient-engagement/Sections";
 
 export const metadata: Metadata = pageMetadata("/patient-engagement/", {
-  title: "Patient Engagement — HIPAA-Compliant SMS Platform",
+  title: "Patient Engagement - HIPAA-Compliant SMS Platform",
   description:
-    "HIPAA-compliant texting and patient engagement for home health and hospice. Secure staff messaging, visit confirmation automation and document signature — no app for patients.",
+    "HIPAA-compliant texting and patient engagement for home health and hospice. Secure staff messaging, visit confirmation automation and document signature - no app for patients.",
 });
 
 const TICKER = [
-  "Staff Messaging — Murphi App",
-  "Patients & Families — Text, No App",
-  "Reminders — Automated",
-  "Communication History — Full Audit Trail",
-  "Document Signature — In Thread",
+  "Staff Messaging - Murphi App",
+  "Patients & Families - Text, No App",
+  "Reminders - Automated",
+  "Communication History - Full Audit Trail",
+  "Document Signature - In Thread",
 ];
 
 const INSIDE = [
@@ -78,7 +78,7 @@ const INSIDE = [
   },
   {
     title: "Communication History",
-    body: "Every message — sent, delivered, replied — kept in one auditable record.",
+    body: "Every message - sent, delivered, replied - kept in one auditable record.",
   },
   {
     title: "Admin Visibility",
@@ -87,11 +87,11 @@ const INSIDE = [
 ];
 
 const WHY = [
-  "Staff use the Murphi app; patients and caregivers keep texting the way they already do — nobody falls back to an unsecured personal phone",
+  "Staff use the Murphi app; patients and caregivers keep texting the way they already do - nobody falls back to an unsecured personal phone",
   "Broadcast and group messaging reach a whole caseload or a whole family thread in one send, not one call at a time",
   "Every message lives in one auditable thread instead of scattered notes and someone's memory",
   "Visit confirmations go out automatically, before the missed-visit call ever has to happen",
-  "Admin visibility turns communication from a guess into something you can see — what was read, and how fast staff responded",
+  "Admin visibility turns communication from a guess into something you can see - what was read, and how fast staff responded",
 ];
 
 const TRANSFORM = [
@@ -158,7 +158,7 @@ const RELATED = [
   {
     title: "Ambient AI & Dictation",
     href: "/ambient-ai-dictation/",
-    body: "Same visit, same thread — documentation completes itself in the background.",
+    body: "Same visit, same thread - documentation completes itself in the background.",
   },
   {
     title: "Patient Payments",
@@ -186,8 +186,8 @@ export default function PatientEngagementPage() {
           eyebrow="Patient Engagement"
           title="One Platform for Every Conversation."
           storyTag="Wednesday, 2:15 PM"
-          story="The front desk phone rings. It's Ana, calling to confirm her mother's PT visit — same as she did Monday, and Tuesday. Nobody wrote down that she already asked."
-          lede="Staff message from a secure Murphi app. Patients and caregivers keep texting the way they already do — no download, no portal password. Every exchange, translated, logged and visible in one place."
+          story="The front desk phone rings. It's Ana, calling to confirm her mother's PT visit - same as she did Monday, and Tuesday. Nobody wrote down that she already asked."
+          lede="Staff message from a secure Murphi app. Patients and caregivers keep texting the way they already do - no download, no portal password. Every exchange, translated, logged and visible in one place."
           trust={
             <>
               HIPAA Compliant <TrustDot /> SOC 2 <TrustDot /> No App Required for
@@ -201,7 +201,7 @@ export default function PatientEngagementPage() {
               app={{
                 head: "Murphi Staff App",
                 initials: "AA",
-                name: "Ana A. — Caregiver for Rosa",
+                name: "Ana A. - Caregiver for Rosa",
                 sub: "Care Coordinator thread",
                 message:
                   "\"Reminder: Rosa's PT visit is tomorrow at 10 AM. Reply YES to confirm.\"",

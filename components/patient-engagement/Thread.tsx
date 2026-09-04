@@ -5,14 +5,14 @@ import { cn } from "@/lib/cn";
 /**
  * The page's own vocabulary: a conversation, drawn as one.
  *
- * Every section here used to be a bordered rectangle — the hero, the
- * capability list, the mechanics — so a page about messaging looked like a
+ * Every section here used to be a bordered rectangle - the hero, the
+ * capability list, the mechanics - so a page about messaging looked like a
  * page about anything else. These primitives give it the shapes its subject
  * actually has: a titled staff window, a phone, message bubbles that sit on
  * the side they were sent from, and a wire between the two ends.
  *
  * Nothing here introduces copy. Labels passed in are strings the page already
- * carries, and every state indicator is a dot, a rule or a tick — never a new
+ * carries, and every state indicator is a dot, a rule or a tick - never a new
  * word.
  */
 
@@ -202,7 +202,7 @@ export function Wire({ label, delay = "0s" }: { label?: string; delay?: string }
 }
 
 /**
- * Ana's phone. A device, not another card — the shape carries the point that
+ * Ana's phone. A device, not another card - the shape carries the point that
  * the patient side needs nothing installed.
  */
 export function PhoneFrame({

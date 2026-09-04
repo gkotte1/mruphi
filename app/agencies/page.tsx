@@ -27,9 +27,9 @@ import {
 } from "@/components/agencies/Sections";
 
 export const metadata: Metadata = pageMetadata("/agencies/", {
-  title: "Home Health & Hospice Agencies — AI Platform",
+  title: "Home Health & Hospice Agencies - AI Platform",
   description:
-    "A home health and hospice AI platform that sits alongside the EHR your agency already runs on — one module, or six. No replacement, no rip-and-replace project.",
+    "A home health and hospice AI platform that sits alongside the EHR your agency already runs on - one module, or six. No replacement, no rip-and-replace project.",
 });
 
 const MODULES = [
@@ -45,19 +45,19 @@ const ROLES: Role[] = [
   {
     id: "owner",
     label: "Owner / Administrator",
-    what: "The census check, the payroll approval and the denial call don't go away — but the OASIS review she was supposed to get to by 9 already happened overnight.",
+    what: "The census check, the payroll approval and the denial call don't go away - but the OASIS review she was supposed to get to by 9 already happened overnight.",
     modules: ["Ambient AI", "Revenue Assurance", "Patient Payments"],
   },
   {
     id: "clinician",
     label: "Clinician",
-    what: "The evening that used to disappear into charting comes back — notes are drafted the same day, from the visit itself.",
+    what: "The evening that used to disappear into charting comes back - notes are drafted the same day, from the visit itself.",
     modules: ["Ambient AI & Dictation"],
   },
   {
     id: "qa",
     label: "Clinical / QA",
-    what: "Every chart gets the same review, the same day it's written — not a sample, and not six weeks later on appeal.",
+    what: "Every chart gets the same review, the same day it's written - not a sample, and not six weeks later on appeal.",
     modules: ["Revenue Assurance"],
   },
   {
@@ -70,7 +70,7 @@ const ROLES: Role[] = [
   {
     id: "intake",
     label: "Intake",
-    what: "A referral that used to wait for Monday starts moving the moment it arrives — nights and weekends included.",
+    what: "A referral that used to wait for Monday starts moving the moment it arrives - nights and weekends included.",
     modules: [],
     soonModule: "Referral → NOA",
   },
@@ -92,17 +92,17 @@ const RELATED = [
   {
     title: "Ambient AI & Dictation",
     href: "/ambient-ai-dictation/",
-    body: "Give the evening back — structured documentation from a visit or a 3-minute dictation.",
+    body: "Give the evening back - structured documentation from a visit or a 3-minute dictation.",
   },
   {
     title: "Revenue Assurance",
     href: "/revenue-assurance/",
-    body: "Catch it on day one — chart review before submission, fetched directly from your EHR.",
+    body: "Catch it on day one - chart review before submission, fetched directly from your EHR.",
   },
   {
     title: "Patient Payments",
     href: "/patient-payments/",
-    body: "Text. Tap. Paid. — collections with automatic reconciliation.",
+    body: "Text. Tap. Paid. - collections with automatic reconciliation.",
   },
 ];
 
@@ -118,16 +118,16 @@ const TESTIMONIALS: Story[] = [
   VICKI,
   {
     quote:
-      "Another Home Health or Hospice customer quote goes here — placeholder pending a validated testimonial.",
-    initials: "—",
+      "Another Home Health or Hospice customer quote goes here - placeholder pending a validated testimonial.",
+    initials: " - ",
     name: "Customer name",
     role: "Role, Agency",
     placeholder: true,
   },
   {
     quote:
-      "A third Home Health or Hospice customer quote goes here — placeholder pending a validated testimonial.",
-    initials: "—",
+      "A third Home Health or Hospice customer quote goes here - placeholder pending a validated testimonial.",
+    initials: " - ",
     name: "Customer name",
     role: "Role, Agency",
     placeholder: true,
@@ -135,8 +135,8 @@ const TESTIMONIALS: Story[] = [
   VICKI,
   {
     quote:
-      "Another Home Health or Hospice customer quote goes here — placeholder pending a validated testimonial.",
-    initials: "—",
+      "Another Home Health or Hospice customer quote goes here - placeholder pending a validated testimonial.",
+    initials: " - ",
     name: "Customer name",
     role: "Role, Agency",
     placeholder: true,
@@ -162,7 +162,7 @@ export default function AgenciesPage() {
           title="Run the Whole Agency Without Replacing What Already Works."
           storyTag="Monday, 7:00 AM"
           story="Before the first visit of the day, the owner has already checked the census, approved payroll, and fielded a call about a claim that came back denied. By 9, she's supposed to be reviewing OASIS accuracy too."
-          lede="Murphi doesn't ask her to replace the EHR she already runs the agency on. It sits alongside it — one module, or six — each one taking a piece of that morning off her plate."
+          lede="Murphi doesn't ask her to replace the EHR she already runs the agency on. It sits alongside it - one module, or six - each one taking a piece of that morning off her plate."
           trust={
             <>
               HIPAA <TrustDot /> SOC 2 <TrustDot /> ISO 27001 <TrustDot /> BAA

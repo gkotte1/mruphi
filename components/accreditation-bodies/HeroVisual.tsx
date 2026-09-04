@@ -12,13 +12,13 @@ import {
  * The hero visual: the record, read against the standard.
  *
  * It used to be a generic card with two bullet rows. It is now the readiness
- * view itself, in the shape accreditation work actually takes — evidence
+ * view itself, in the shape accreditation work actually takes - evidence
  * arriving from the record at the top, the mark reading it in the middle, and
  * the requirements it answers below, each carrying its number and whether it is
  * satisfied or still open. The packet is ready; the sign-off is not the
  * software's to give.
  *
- * The mark is the project's own LogoMark — no new or generated image. Every
+ * The mark is the project's own LogoMark - no new or generated image. Every
  * string is the one the page already carried.
  */
 export default function SurveyReadiness({

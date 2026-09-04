@@ -19,7 +19,7 @@ import { cn } from "@/lib/cn";
 export const CONTAINER =
   "mx-auto w-full max-w-[1220px] px-8 max-720:px-5";
 
-/** var(--space-section) — clamp(64px, 9vw, 128px), 56px under 720. */
+/** var(--space-section) - clamp(64px, 9vw, 128px), 56px under 720. */
 export const SECTION = "py-[clamp(64px,9vw,128px)] max-720:py-14";
 
 /** The label treatment: the site typeface at label weight.
@@ -85,7 +85,7 @@ export function MonoLabel({
   );
 }
 
-/** A blue tick followed by a label line — the source's `.fetch-line`. */
+/** A blue tick followed by a label line - the source's `.fetch-line`. */
 export function FetchLine({ children }: { children: ReactNode }) {
   return (
     <div className={cn(MONO, "mb-4 flex items-center gap-2 text-[12px] text-grey-500")}>
@@ -125,7 +125,7 @@ export function Layers({ className }: { className?: string }) {
 
 const BAR_HEIGHTS = [8, 18, 12, 24, 15, 20, 10, 16, 22, 13, 9, 19];
 
-/** The listening waveform — 3px bars on the source's 1.1s stagger. */
+/** The listening waveform - 3px bars on the source's 1.1s stagger. */
 export function Waveform({
   bars = BAR_HEIGHTS,
   className,

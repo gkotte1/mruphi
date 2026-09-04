@@ -5,7 +5,7 @@ import { cn } from "@/lib/cn";
 export type ArticleLink = { text: string; href: string };
 
 /**
- * The article body, at editorial scale — headings, paragraphs and lists in
+ * The article body, at editorial scale - headings, paragraphs and lists in
  * source order.
  *
  * The detail-page research records the body as plain prose and the in-body

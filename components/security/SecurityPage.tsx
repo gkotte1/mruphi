@@ -4,7 +4,7 @@ import { Icon, type IconName } from "@/components/icons";
 import { cn } from "@/lib/cn";
 
 /**
- * /security/ — every string below is the rendered wording recorded in
+ * /security/ - every string below is the rendered wording recorded in
  * website-research/access/security.md. The research flattens a heading and its
  * body into one line where the source markup ran them together; they are split
  * back apart here exactly where the section list says the elements divide.
@@ -59,7 +59,7 @@ const ZERO_TRUST = [
   {
     index: "01",
     title: "Verify Explicitly",
-    body: "Every request is authenticated, authorized, and encrypted, regardless of network location. No implicit trust — ever.",
+    body: "Every request is authenticated, authorized, and encrypted, regardless of network location. No implicit trust - ever.",
   },
   {
     index: "02",
@@ -69,7 +69,7 @@ const ZERO_TRUST = [
   {
     index: "03",
     title: "Continuous Validation",
-    body: "Trust is constantly re-evaluated based on real-time identity and device health signals. No standing access — every session verified.",
+    body: "Trust is constantly re-evaluated based on real-time identity and device health signals. No standing access - every session verified.",
   },
 ];
 
@@ -95,7 +95,7 @@ const SURVEILLANCE: { title: string; body: string; icon: IconName }[] = [
   {
     title: "AI Threat Detection",
     icon: "scan",
-    body: "Automated threat detection using advanced analytics — identifying anomalies and potential incidents before they escalate.",
+    body: "Automated threat detection using advanced analytics - identifying anomalies and potential incidents before they escalate.",
   },
   {
     title: "Security Operations",
@@ -111,9 +111,9 @@ const SURVEILLANCE: { title: string; body: string; icon: IconName }[] = [
 
 const CONTROLS: { title: string; body: string; icon: IconName }[] = [
   {
-    title: "Secure Cloud Hosting — AWS & GCP",
+    title: "Secure Cloud Hosting - AWS & GCP",
     icon: "server",
-    body: "Hosted on Amazon Web Services and Google Cloud Platform — the most secure and compliant cloud infrastructure available. Geo-redundancy with regional failover ensures continuous service availability. Advanced DDoS protection blocks large-scale attacks.",
+    body: "Hosted on Amazon Web Services and Google Cloud Platform - the most secure and compliant cloud infrastructure available. Geo-redundancy with regional failover ensures continuous service availability. Advanced DDoS protection blocks large-scale attacks.",
   },
   {
     title: "Identity & Access Management",
@@ -123,7 +123,7 @@ const CONTROLS: { title: string; body: string; icon: IconName }[] = [
   {
     title: "Vulnerability Management",
     icon: "scan",
-    body: "OWASP-aligned secure coding practices. Frequent automated assessments and annual third-party penetration testing. Responsible vulnerability disclosure program — ethical hackers help identify and report potential vulnerabilities.",
+    body: "OWASP-aligned secure coding practices. Frequent automated assessments and annual third-party penetration testing. Responsible vulnerability disclosure program - ethical hackers help identify and report potential vulnerabilities.",
   },
   {
     title: "Disaster Recovery",
@@ -138,7 +138,7 @@ const CONTROLS: { title: string; body: string; icon: IconName }[] = [
   {
     title: "Business Associate Agreement (BAA)",
     icon: "doc",
-    body: "A fully executed BAA is available for every Murphi.ai customer — required by HIPAA for any business handling PHI. Covers all Murphi.ai services, integrations, and data processing activities.",
+    body: "A fully executed BAA is available for every Murphi.ai customer - required by HIPAA for any business handling PHI. Covers all Murphi.ai services, integrations, and data processing activities.",
   },
 ];
 
@@ -146,12 +146,12 @@ const RESPONSIBLE_AI: { title: string; body: string; icon: IconName }[] = [
   {
     title: "Responsible AI Practices",
     icon: "brain",
-    body: "AI systems developed in accordance with ethical principles — emphasizing fairness, transparency, and accountability. Regular bias assessments and compliance reviews.",
+    body: "AI systems developed in accordance with ethical principles - emphasizing fairness, transparency, and accountability. Regular bias assessments and compliance reviews.",
   },
   {
     title: "No Training on Customer Data",
     icon: "shield",
-    body: "Customer data is never used to train foundational AI models. Your data remains completely isolated from model development — contractually guaranteed.",
+    body: "Customer data is never used to train foundational AI models. Your data remains completely isolated from model development - contractually guaranteed.",
   },
   {
     title: "Human Oversight & Risk Management",
@@ -323,7 +323,7 @@ function ZeroTrust() {
             We Never Assume Trust
           </h2>
           <p className="type-lead mt-5 text-grey-dk">
-            Every access request is verified, authorized, and encrypted —
+            Every access request is verified, authorized, and encrypted  - 
             regardless of network location or user identity.
           </p>
         </div>
@@ -465,7 +465,7 @@ function Layered() {
       id="layered"
       label="Defence-in-Depth"
       heading="Layered Protection at Every Level"
-      intro="Multiple layers of security controls — so a failure at one layer never results in a breach."
+      intro="Multiple layers of security controls - so a failure at one layer never results in a breach."
       cards={LAYERS}
       variant="layers"
     />

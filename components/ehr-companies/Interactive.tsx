@@ -8,8 +8,8 @@ import { cn } from "@/lib/cn";
 /**
  * The page's three controls.
  *
- * Each keeps the interaction the section already had — pick a care setting,
- * open a layer, choose an integration route — but presented in this page's own
+ * Each keeps the interaction the section already had - pick a care setting,
+ * open a layer, choose an integration route - but presented in this page's own
  * idiom: an underlined tab bar, a platform cross-section, and an option row
  * that visibly connects to the detail it explains.
  *

@@ -19,7 +19,7 @@ import { cn } from "@/lib/cn";
 const GENERATED = [
   "Patient ambulates independently with front-wheeled walker.",
   "Wound site clean and dry, no signs of infection.",
-  "Medication list reconciled — no changes since last visit.",
+  "Medication list reconciled - no changes since last visit.",
   "Homebound status confirmed and documented.",
 ];
 
@@ -60,7 +60,7 @@ export default function Hero() {
 
             <p className="mt-2 max-w-[56ch] text-[18px] leading-[1.6] text-grey-500">
               Murphi listens while she works, or takes a short dictation
-              afterward, and syncs the finished note to her EHR within minutes —
+              afterward, and syncs the finished note to her EHR within minutes  - 
               OASIS, HOPE, SN, PT, OT, ST, together, the same day.
             </p>
 
@@ -193,7 +193,7 @@ function MockCard() {
   );
 }
 
-/** The run between two surfaces — a hairline, no travelling marker. */
+/** The run between two surfaces - a hairline, no travelling marker. */
 function Thread() {
   return (
     <div className="mx-auto h-4 w-px bg-brand-pale" aria-hidden />

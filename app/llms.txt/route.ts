@@ -3,7 +3,7 @@ import { POSTS, blogHref } from "@/lib/blog";
 import { SITE_URL, absoluteUrl, routesIn, type SiteRoute } from "@/lib/site";
 
 /**
- * /llms.txt — a plain-text map of the site for AI systems, in the llms.txt
+ * /llms.txt - a plain-text map of the site for AI systems, in the llms.txt
  * convention: a title, a summary, then linked sections.
  *
  * Every statement here is taken from a page this site actually serves, and
@@ -32,14 +32,14 @@ function build() {
   return [
     "# Murphi.ai",
     "",
-    "> Murphi.ai is an AI-native automation platform purpose-built for U.S. healthcare, with AI modules purpose-built for Home Health and Hospice. Murphi integrates with the EHRs an agency already uses and automates the work around patient care — no EHR replacement required.",
+    "> Murphi.ai is an AI-native automation platform purpose-built for U.S. healthcare, with AI modules purpose-built for Home Health and Hospice. Murphi integrates with the EHRs an agency already uses and automates the work around patient care - no EHR replacement required.",
     "",
     `Canonical site: ${SITE_URL}/`,
     "Murphi.ai is owned and operated by Deskfactors Inc., a Delaware C corporation, of 4804 Page Creek Lane, Durham, North Carolina 27703.",
     "",
     "## Overview",
     "",
-    "Murphi runs alongside an agency's existing EHR rather than replacing it. Integration happens through five methods: Agentic AI, RPA, FHIR R4, HL7 v2, and Direct API. Work Murphi completes — documentation, review findings, payment status — is written back to the EHR of record.",
+    "Murphi runs alongside an agency's existing EHR rather than replacing it. Integration happens through five methods: Agentic AI, RPA, FHIR R4, HL7 v2, and Direct API. Work Murphi completes - documentation, review findings, payment status - is written back to the EHR of record.",
     "",
     `- [${core.title}](${absoluteUrl(core.path)}): ${core.description}`,
     "",

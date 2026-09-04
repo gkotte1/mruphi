@@ -4,21 +4,21 @@ export type FaqItem = { q: string; a: string };
  * Every FAQ on the site, lifted verbatim from the source pages in
  * "Murphi.ai Website with FAQs". Each page shows its list under the kicker
  * "FAQs" and the heading "Frequently Asked Questions", in a 820px column,
- * with the first question open — exactly as the source renders it.
+ * with the first question open - exactly as the source renders it.
  *
  * Questions, answers and their order are the source strings. Nothing here is
  * written, reworded or reordered.
  */
 export const FAQS = {
-  /* index.html — 6 questions */
+  /* index.html - 6 questions */
   home: [
     {
       q: "What is Murphi.ai?",
-      a: "Murphi.ai is an AI platform built for Home Health and Hospice agencies — covering documentation, revenue assurance, patient engagement, patient payments, and, launching soon, referral intake and RCM — connected to the EHR you already use.",
+      a: "Murphi.ai is an AI platform built for Home Health and Hospice agencies - covering documentation, revenue assurance, patient engagement, patient payments, and, launching soon, referral intake and RCM - connected to the EHR you already use.",
     },
     {
       q: "Do I need to replace my EHR to use Murphi?",
-      a: "No. Murphi connects to your existing EHR: it fetches data, automates the workflow, and writes results back — you don't have to rip and replace anything.",
+      a: "No. Murphi connects to your existing EHR: it fetches data, automates the workflow, and writes results back - you don't have to rip and replace anything.",
     },
     {
       q: "Which modules are available today?",
@@ -38,11 +38,11 @@ export const FAQS = {
     },
   ] satisfies FaqItem[],
 
-  /* ambient-ai.html — 6 questions */
+  /* ambient-ai.html - 6 questions */
   ambientAi: [
     {
       q: "Does Murphi listen automatically, or do I have to dictate?",
-      a: "Both. Murphi can listen ambiently during the visit, or a clinician can dictate afterward — whichever fits the encounter.",
+      a: "Both. Murphi can listen ambiently during the visit, or a clinician can dictate afterward - whichever fits the encounter.",
     },
     {
       q: "Which note types can Murphi complete?",
@@ -50,11 +50,11 @@ export const FAQS = {
     },
     {
       q: "Does a clinician have to review the note before it's saved?",
-      a: "Yes. Every note requires clinician review and sign-off before it's written back to the EHR — nothing auto-signs.",
+      a: "Yes. Every note requires clinician review and sign-off before it's written back to the EHR - nothing auto-signs.",
     },
     {
       q: "Can Murphi follow a visit with more than one person talking?",
-      a: "Yes. It's built to follow a conversation with multiple voices in the room — patient, caregiver and clinician — and keep track of what was said.",
+      a: "Yes. It's built to follow a conversation with multiple voices in the room - patient, caregiver and clinician - and keep track of what was said.",
     },
     {
       q: "Can I add medications or wound documentation by voice?",
@@ -66,7 +66,7 @@ export const FAQS = {
     },
   ] satisfies FaqItem[],
 
-  /* revenue-assurance.html — 5 questions */
+  /* revenue-assurance.html - 5 questions */
   revenueAssurance: [
     {
       q: "What does Revenue Assurance actually check?",
@@ -74,7 +74,7 @@ export const FAQS = {
     },
     {
       q: "When does the review happen?",
-      a: "The same day the chart is written — not weeks later, after the claim has already been submitted.",
+      a: "The same day the chart is written - not weeks later, after the claim has already been submitted.",
     },
     {
       q: "Does Murphi make coding decisions or submit claims on its own?",
@@ -82,7 +82,7 @@ export const FAQS = {
     },
     {
       q: "Does this work for both Home Health and Hospice charts?",
-      a: "Yes — the review checks are tailored to each program's documentation and compliance requirements.",
+      a: "Yes - the review checks are tailored to each program's documentation and compliance requirements.",
     },
     {
       q: "Can it help if my agency receives an ADR request?",
@@ -90,11 +90,11 @@ export const FAQS = {
     },
   ] satisfies FaqItem[],
 
-  /* patient-engagement.html — 5 questions */
+  /* patient-engagement.html - 5 questions */
   patientEngagement: [
     {
       q: "Do patients need to download an app to text with my agency?",
-      a: "No. Staff use the secure Murphi app; patients and caregivers reply from their phone's normal texting app — nothing to install.",
+      a: "No. Staff use the secure Murphi app; patients and caregivers reply from their phone's normal texting app - nothing to install.",
     },
     {
       q: "Is texting with patients actually HIPAA-compliant this way?",
@@ -102,7 +102,7 @@ export const FAQS = {
     },
     {
       q: "Can I message a whole caseload or a family group at once?",
-      a: "Yes — group and broadcast messaging are supported, so a reminder can go out to many recipients in one send.",
+      a: "Yes - group and broadcast messaging are supported, so a reminder can go out to many recipients in one send.",
     },
     {
       q: "Can documents be signed inside the same conversation?",
@@ -114,7 +114,7 @@ export const FAQS = {
     },
   ] satisfies FaqItem[],
 
-  /* patient-payments.html — 5 questions */
+  /* patient-payments.html - 5 questions */
   patientPayments: [
     {
       q: "How does a patient actually pay their balance?",
@@ -122,7 +122,7 @@ export const FAQS = {
     },
     {
       q: "Does Murphi hold the funds?",
-      a: "No. Murphi facilitates the payment experience and reconciliation — it does not hold provider funds.",
+      a: "No. Murphi facilitates the payment experience and reconciliation - it does not hold provider funds.",
     },
     {
       q: "Does the ledger update on its own once a patient pays?",
@@ -138,15 +138,15 @@ export const FAQS = {
     },
   ] satisfies FaqItem[],
 
-  /* referral-noa.html — 5 questions */
+  /* referral-noa.html - 5 questions */
   referralToNoa: [
     {
       q: "Is Referral → NOA available now?",
-      a: "Not yet — it's in active development. This page reflects the planned workflow, and capabilities may change before general availability.",
+      a: "Not yet - it's in active development. This page reflects the planned workflow, and capabilities may change before general availability.",
     },
     {
       q: "What referral sources will it accept?",
-      a: "Fax, email, portal, API and EHR referrals — all landing in one AI intake dashboard once launched.",
+      a: "Fax, email, portal, API and EHR referrals - all landing in one AI intake dashboard once launched.",
     },
     {
       q: "Will it replace my intake staff?",
@@ -154,7 +154,7 @@ export const FAQS = {
     },
     {
       q: "Why is it called NOA if my agency also does Hospice?",
-      a: "NOA (Notice of Admission) is Home Health terminology. Hospice referral and intake will use separate, appropriate terminology — the two are never combined.",
+      a: "NOA (Notice of Admission) is Home Health terminology. Hospice referral and intake will use separate, appropriate terminology - the two are never combined.",
     },
     {
       q: "How do I get early access?",
@@ -162,15 +162,15 @@ export const FAQS = {
     },
   ] satisfies FaqItem[],
 
-  /* ai-rcm.html — 5 questions */
+  /* ai-rcm.html - 5 questions */
   aiDrivenRcm: [
     {
       q: "Is AI-Driven RCM available now?",
-      a: "Not yet — it's in active development. This page reflects the planned workflow, and capabilities may change before general availability.",
+      a: "Not yet - it's in active development. This page reflects the planned workflow, and capabilities may change before general availability.",
     },
     {
       q: "What does it actually track?",
-      a: "Eligibility, authorization, documentation, coding, claim readiness, the claim itself, ERA/EOB, payment and reconciliation — end to end.",
+      a: "Eligibility, authorization, documentation, coding, claim readiness, the claim itself, ERA/EOB, payment and reconciliation - end to end.",
     },
     {
       q: "Does it submit claims automatically?",
@@ -186,19 +186,19 @@ export const FAQS = {
     },
   ] satisfies FaqItem[],
 
-  /* agencies.html — 5 questions */
+  /* agencies.html - 5 questions */
   agencies: [
     {
       q: "Do I need to replace my EHR to use Murphi?",
-      a: "No. Murphi connects to the EHR you already use — it fetches data, automates the workflow, and writes results back.",
+      a: "No. Murphi connects to the EHR you already use - it fetches data, automates the workflow, and writes results back.",
     },
     {
       q: "Can I start with just one module?",
-      a: "Yes. Most agencies start with one module — often Ambient AI or Revenue Assurance — and add more once it's working.",
+      a: "Yes. Most agencies start with one module - often Ambient AI or Revenue Assurance - and add more once it's working.",
     },
     {
       q: "Does Murphi work for both Home Health and Hospice?",
-      a: "Yes, with terminology and workflows specific to each program — OASIS and PDGM for Home Health, HOPE and IDG documentation for Hospice.",
+      a: "Yes, with terminology and workflows specific to each program - OASIS and PDGM for Home Health, HOPE and IDG documentation for Hospice.",
     },
     {
       q: "Who at my agency would actually use this?",
@@ -206,15 +206,15 @@ export const FAQS = {
     },
     {
       q: "Is Murphi secure enough for a Home Health or Hospice agency?",
-      a: "Yes — Murphi is built around HIPAA, SOC 2, ISO 27001 and BAA requirements, with human review before any AI output enters the EHR record.",
+      a: "Yes - Murphi is built around HIPAA, SOC 2, ISO 27001 and BAA requirements, with human review before any AI output enters the EHR record.",
     },
   ] satisfies FaqItem[],
 
-  /* consultants.html — 5 questions */
+  /* consultants.html - 5 questions */
   codingBillingRcm: [
     {
       q: "Can I use Murphi across multiple client agencies?",
-      a: "Yes — that's the core use case. One platform, many clients, with each client's data kept separated on the platform.",
+      a: "Yes - that's the core use case. One platform, many clients, with each client's data kept separated on the platform.",
     },
     {
       q: "What's the difference between Managed Services and Self-Service?",
@@ -222,7 +222,7 @@ export const FAQS = {
     },
     {
       q: "Can I white-label this for my own practice?",
-      a: "Yes — a white-label option is available, so your clients see your brand while Murphi's AI powers it in the background.",
+      a: "Yes - a white-label option is available, so your clients see your brand while Murphi's AI powers it in the background.",
     },
     {
       q: "What reports are actually included?",
@@ -234,23 +234,23 @@ export const FAQS = {
     },
   ] satisfies FaqItem[],
 
-  /* ehr-companies.html — 5 questions */
+  /* ehr-companies.html - 5 questions */
   ehrCompanies: [
     {
       q: "Do we need to build our own AI infrastructure?",
-      a: "No — that's the point of the platform. Murphi provides the orchestration, validation, security and observability layer so you don't have to build it in-house.",
+      a: "No - that's the point of the platform. Murphi provides the orchestration, validation, security and observability layer so you don't have to build it in-house.",
     },
     {
       q: "Can this be white-labeled under our own brand?",
-      a: "Yes. The platform can be deployed under your brand, inside your existing user experience — clinicians never see the Murphi name.",
+      a: "Yes. The platform can be deployed under your brand, inside your existing user experience - clinicians never see the Murphi name.",
     },
     {
-      q: "How do we integrate — API, embedded components, or white-label?",
+      q: "How do we integrate - API, embedded components, or white-label?",
       a: "All three are supported. You can choose the approach that fits how your platform is built, or combine them.",
     },
     {
       q: "Is there human review before anything writes back to the EHR?",
-      a: "Yes — human-in-the-loop review is required before any AI output enters the clinical record.",
+      a: "Yes - human-in-the-loop review is required before any AI output enters the clinical record.",
     },
     {
       q: "Do we have to launch everything at once?",
@@ -258,11 +258,11 @@ export const FAQS = {
     },
   ] satisfies FaqItem[],
 
-  /* accreditation.html — 5 questions */
+  /* accreditation.html - 5 questions */
   accreditationBodies: [
     {
       q: "Does this work for both agencies and accreditation bodies?",
-      a: "Yes — agencies use it to prepare for survey, and accreditation bodies use it to review evidence and assemble reports. It's the same platform, built for both sides.",
+      a: "Yes - agencies use it to prepare for survey, and accreditation bodies use it to review evidence and assemble reports. It's the same platform, built for both sides.",
     },
     {
       q: "Which standards is it aligned to?",
@@ -274,7 +274,7 @@ export const FAQS = {
     },
     {
       q: "Can agencies pull their EHR data automatically for survey prep?",
-      a: "Yes — records can be fetched directly from the EHR in minutes instead of pulled manually, evening before a survey.",
+      a: "Yes - records can be fetched directly from the EHR in minutes instead of pulled manually, evening before a survey.",
     },
     {
       q: "Is a white-label option available?",
@@ -287,7 +287,7 @@ export const FAQS = {
 /**
  * The same 57 entries, grouped for the combined /faqs/ page.
  *
- * The categories are the modules and audiences the site already names — each
+ * The categories are the modules and audiences the site already names - each
  * group is exactly the list that page carries, so nothing is re-sorted,
  * re-worded or repeated within a category. Two question texts appear under two
  * different categories ("Do I need to replace my EHR to use Murphi?" and "How

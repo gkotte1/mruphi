@@ -1,8 +1,8 @@
 Business Insider
 
-United States, January 20, 2026 — For many healthcare software companies, the question is no longer whether to adopt artificial intelligence, but how quickly they can do so without destabilizing their existing platforms. As competitive pressure mounts, long internal development cycles are becoming increasingly difficult to justify.
+United States, January 20, 2026 - For many healthcare software companies, the question is no longer whether to adopt artificial intelligence, but how quickly they can do so without destabilizing their existing platforms. As competitive pressure mounts, long internal development cycles are becoming increasingly difficult to justify.
 
-“Healthcare platforms are realizing they cannot afford to spend 18 to 24 months building AI infrastructure internally when providers expect modern automation much sooner,” said Guru Tadiparti, Founder and CEO of Murphi.ai. “By the time those internal efforts are complete, market expectations—and customer demands—have already shifted.”
+“Healthcare platforms are realizing they cannot afford to spend 18 to 24 months building AI infrastructure internally when providers expect modern automation much sooner,” said Guru Tadiparti, Founder and CEO of Murphi.ai. “By the time those internal efforts are complete, market expectations - and customer demands - have already shifted.”
 
 That reality is shaping how healthcare technology vendors think about AI. Murphi.ai, a Durham-based healthcare automation company, has recorded approximately five-times growth in annual recurring revenue between 2024 and 2025, reflecting a broader movement among electronic health record (EHR) vendors and revenue cycle platforms and other healthcare platforms, toward embedded AI rather than standalone tools.
 
@@ -42,6 +42,6 @@ Looking ahead, Tadiparti views Murphi.ai’s recent growth as an early signal ra
 
 Murphi.ai’s expansion beyond post-acute care and the rollout of MurphiConnect.ai as a partner-led orchestration layer point toward that ambition. Rather than positioning itself as another AI application, the company is aiming to become a foundational layer that healthcare platforms depend on quietly.
 
-In an industry often characterized by bold claims and short-lived pilots, Murphi.ai’s trajectory suggests a more measured path forward—one where embedded infrastructure, not standalone tools, defines the next phase of healthcare workflow automation.
+In an industry often characterized by bold claims and short-lived pilots, Murphi.ai’s trajectory suggests a more measured path forward - one where embedded infrastructure, not standalone tools, defines the next phase of healthcare workflow automation.
 
 This article was originally published by Business Insider, a multinational financial and business news website.

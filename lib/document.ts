@@ -5,7 +5,7 @@ import { join } from "node:path";
  * A deliberately small reader for the extracted page content in content/.
  *
  * Those files carry the exact rendered wording of the existing site, so the
- * parser only recognises what they actually contain — headings, paragraphs
+ * parser only recognises what they actually contain - headings, paragraphs
  * with hard line breaks, bullet and numbered lists, and rules. Inline syntax
  * is left alone on purpose: one paragraph genuinely reads
  * `[murphi.ai](“Platform”)` on the live site, and turning that into a link
@@ -135,7 +135,7 @@ export function parseDocument(source: string): Block[] {
 /**
  * Splits a parsed document into the parts the page shell needs: the title and
  * strapline go to the hero, the publisher and version lines to a meta strip,
- * and the rest stays in document order. Nothing is dropped — every block ends
+ * and the rest stays in document order. Nothing is dropped - every block ends
  * up somewhere on the page.
  */
 export function readLegalDocument(file: string): LegalDocument {
@@ -163,7 +163,7 @@ export function readLegalDocument(file: string): LegalDocument {
 
   /* The publisher line, then the version / effective / updated block. */
   const publisher = head(blocks);
-  if (publisher?.kind === "heading" && publisher.text.startsWith("Murphi.ai —")) {
+  if (publisher?.kind === "heading" && publisher.text.startsWith("Murphi.ai - ")) {
     meta.push(publisher.text);
     blocks.shift();
 

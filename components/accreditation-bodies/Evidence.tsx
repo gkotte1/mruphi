@@ -7,8 +7,8 @@ import { cn } from "@/lib/cn";
 /**
  * The page's product vocabulary: evidence, and the requirement it answers.
  *
- * Accreditation work is a register — every requirement either has its evidence
- * or it does not — so this page is built from that shape rather than the
+ * Accreditation work is a register - every requirement either has its evidence
+ * or it does not - so this page is built from that shape rather than the
  * stacks, rails and round trips the module pages use. A requirement carries its
  * number, the evidence mapped to it, and its state.
  *
@@ -116,7 +116,7 @@ export function EvidenceTile({ index = 0 }: { index?: number }) {
 }
 
 /**
- * The mark, sitting between the evidence and the requirements it answers —
+ * The mark, sitting between the evidence and the requirements it answers  - 
  * the project's own LogoMark, never a redrawn or generated one.
  */
 export function IntelligenceBar({ label }: { label: string }) {

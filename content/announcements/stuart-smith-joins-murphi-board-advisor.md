@@ -8,5 +8,5 @@ In his advisory role with Murphi.ai, Stuart will provide strategic guidance acro
 
 Stuart will play a particularly important role in shaping the launch and expansion of Contract Optimizer, our enterprise RCM automation modules, and our AI-driven tools for documentation, coding, compliance, and care workflows. His experience leading financial and operational programs in one of the nation’s most respected health systems gives Murphi.ai a powerful edge as we scale into more complex healthcare environments.
 
-With Stuart’s guidance, Murphi.ai will continue advancing its mission to make AI adoption seamless for clinicians, agencies, health systems, and technology partners — driving productivity, compliance, reimbursement accuracy, and financial performance across the healthcare landscape.  
+With Stuart’s guidance, Murphi.ai will continue advancing its mission to make AI adoption seamless for clinicians, agencies, health systems, and technology partners - driving productivity, compliance, reimbursement accuracy, and financial performance across the healthcare landscape.  
 Please join us in welcoming Stuart Smith to the Murphi.ai family.

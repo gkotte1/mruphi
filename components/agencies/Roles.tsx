@@ -10,7 +10,7 @@ import { cn } from "@/lib/cn";
  * What changes, by role.
  *
  * The selector keeps the pill treatment the section already used; what changes
- * is the panel — the sentence now carries the weight it deserves, and the
+ * is the panel - the sentence now carries the weight it deserves, and the
  * modules read as the same tiles the hero uses, so a role connects visibly to
  * the workflows that serve it.
  *

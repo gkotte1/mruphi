@@ -2,7 +2,7 @@ import Image from "next/image";
 import { cn } from "@/lib/cn";
 
 /**
- * The logo is shipped as a bitmap and never redrawn or recoloured — the mark is
+ * The logo is shipped as a bitmap and never redrawn or recoloured - the mark is
  * a hand-drawn swirl-and-arrow that does not survive reconstruction.
  * Blue file on light grounds, white file on dark.
  *
@@ -47,7 +47,7 @@ export function Logo({
 }
 
 /**
- * The mark alone — a square window onto the first 117px of the bitmap,
+ * The mark alone - a square window onto the first 117px of the bitmap,
  * scaled so the mark fills it exactly.
  */
 export function LogoMark({

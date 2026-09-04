@@ -8,8 +8,8 @@ import { cn } from "@/lib/cn";
  *
  * It used to be a single bordered card with three bullet rows, which showed
  * the findings but never the thing that produces them. It is now a layered
- * composition — the record arriving, the review running over it, the findings
- * it raised, the day it happened, and the result going back — so the sequence
+ * composition - the record arriving, the review running over it, the findings
+ * it raised, the day it happened, and the result going back - so the sequence
  * the page argues for is visible in a couple of seconds.
  *
  * Every string is the one the page already carried.

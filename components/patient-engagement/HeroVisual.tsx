@@ -12,8 +12,8 @@ import {
  *
  * It used to be two identical white cards stacked on top of each other, which
  * said nothing about the thing the page is selling. It is now the two ends of
- * the same conversation drawn as the two different things they are — the
- * agency's secure software, and a phone with nothing installed on it — with
+ * the same conversation drawn as the two different things they are - the
+ * agency's secure software, and a phone with nothing installed on it - with
  * the ordinary SMS wire running between them.
  *
  * Every string is the one the page already carried.

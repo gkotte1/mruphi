@@ -28,9 +28,9 @@ import {
 } from "@/components/accreditation-bodies/Sections";
 
 export const metadata: Metadata = pageMetadata("/accreditation-bodies/", {
-  title: "Accreditation Bodies — Survey Readiness Software",
+  title: "Accreditation Bodies - Survey Readiness Software",
   description:
-    "Hospice and home health compliance software for accreditation bodies and the agencies they survey — evidence validated into survey-ready reports, faster.",
+    "Hospice and home health compliance software for accreditation bodies and the agencies they survey - evidence validated into survey-ready reports, faster.",
 });
 
 const SIDES = [
@@ -65,7 +65,7 @@ const WAYS = [
   },
   {
     title: "Streamline Survey & Audit Reports",
-    body: "Generate structured survey and audit reports using AI, aligned to your accreditation standards — less time on manual assembly, more time on analysis and follow-up.",
+    body: "Generate structured survey and audit reports using AI, aligned to your accreditation standards - less time on manual assembly, more time on analysis and follow-up.",
   },
   {
     title: "Embed AI in Your Platform",
@@ -75,25 +75,25 @@ const WAYS = [
 
 const TOOLS = [
   {
-    title: "Revenue Assurance — 28 Reports",
+    title: "Revenue Assurance - 28 Reports",
     badge: { tone: "live" as const, text: "Live" },
-    body: "28 AI compliance reports aligned to CHAP, ACHC and Joint Commission standards — 15 for Home Health, 13 for Hospice. 90–95% AI accuracy, with a structured human review workflow before anything is finalized.",
+    body: "28 AI compliance reports aligned to CHAP, ACHC and Joint Commission standards - 15 for Home Health, 13 for Hospice. 90–95% AI accuracy, with a structured human review workflow before anything is finalized.",
   },
   {
     title: "Gap Analysis",
     badge: { tone: "live" as const, text: "Live" },
-    body: "AI comparison of current provider documentation against accreditation requirements — surfaces specific gaps, missing elements and corrective-action recommendations.",
+    body: "AI comparison of current provider documentation against accreditation requirements - surfaces specific gaps, missing elements and corrective-action recommendations.",
   },
   {
     title: "White-Label Platform",
     badge: { tone: "soon" as const, text: "White Label" },
-    body: "Offer AI-powered accreditation tools under your own brand. Your clients — providers or surveyors — see your platform. Murphi.ai powers it invisibly.",
+    body: "Offer AI-powered accreditation tools under your own brand. Your clients - providers or surveyors - see your platform. Murphi.ai powers it invisibly.",
   },
 ];
 
 const FLOWS = [
   {
-    lede: "Agency side — from EHR to survey-ready packet.",
+    lede: "Agency side - from EHR to survey-ready packet.",
     steps: [
       { num: "01", title: "Connect EHR", body: "Records fetched in minutes" },
       {
@@ -111,7 +111,7 @@ const FLOWS = [
     ],
   },
   {
-    lede: "Accreditation body side — from evidence to report.",
+    lede: "Accreditation body side - from evidence to report.",
     steps: [
       { num: "01", title: "Evidence Received", body: "Policies, charts & interviews" },
       { num: "02", title: "Mapped to Requirements", body: "Organized automatically" },
@@ -166,7 +166,7 @@ export default function AccreditationBodiesPage() {
           title="The Night Before the Surveyor Arrives."
           storyTag="Two Desks, Same Night"
           story="At the agency, the DON is pulling training records and F2F documentation into binders by hand. Across town, the surveyor is looking at a stack of paper she'll need to turn into a structured report by Monday."
-          lede="Murphi.ai works for both of them — helping the agency walk in prepared, and helping the accreditation body turn evidence into a finished report faster."
+          lede="Murphi.ai works for both of them - helping the agency walk in prepared, and helping the accreditation body turn evidence into a finished report faster."
           trust={
             <>
               CHAP <TrustDot /> ACHC <TrustDot /> Joint Commission-Aligned
@@ -197,7 +197,7 @@ export default function AccreditationBodiesPage() {
         />
 
         <ModuleSection id="both-sides" border={false}>
-          <StoryRule>The Same Night, Rewritten — For Both</StoryRule>
+          <StoryRule>The Same Night, Rewritten - For Both</StoryRule>
 
           <h2 className="mb-14 max-w-[640px] type-h2 text-ink max-720:mb-9">
             Built for both sides of the survey.
@@ -236,7 +236,7 @@ export default function AccreditationBodiesPage() {
 
         <FinalCta
           heading="Skip the Night of Binders. Skip the Stack of Paper."
-          body="A live demo showing the agency side, the accreditation-body side, or both — tailored to your workflows and your team."
+          body="A live demo showing the agency side, the accreditation-body side, or both - tailored to your workflows and your team."
         />
       </main>
 

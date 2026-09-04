@@ -5,7 +5,7 @@ import { Icon, type IconName } from "@/components/icons";
 
 type FooterLink = { label: string; href: string; soon?: boolean };
 
-/* Modules come from the nav data so the two never drift — the labels and the
+/* Modules come from the nav data so the two never drift - the labels and the
    "Soon" flags are already the source strings. */
 const MODULES: FooterLink[] = AI_MODULES.items.map((item) => ({
   label: item.label,
@@ -44,7 +44,7 @@ const COLUMNS: { heading: string; links: FooterLink[] }[] = [
   },
 ];
 
-/* Category marks, not certification seals — the real seals need 64px to stay
+/* Category marks, not certification seals - the real seals need 64px to stay
    legible, which is far larger than this row should be. */
 const COMPLIANCE: { label: string; icon: IconName }[] = [
   { label: "HIPAA", icon: "shield" },
@@ -53,7 +53,7 @@ const COMPLIANCE: { label: string; icon: IconName }[] = [
   { label: "BAA", icon: "doc" },
 ];
 
-/* No account URLs are recorded anywhere in the project — replace these four
+/* No account URLs are recorded anywhere in the project - replace these four
    values and nothing else needs to change. */
 /* The live accounts. These replace the placeholder hrefs the footer carried
    until the real profiles were confirmed. */
@@ -151,7 +151,7 @@ export default function Footer() {
             {SOCIAL.map((item) => (
               <li key={item.label}>
                 {/* These leave the site, so a plain anchor with target and the
-                    matching rel — not next/link, which routes internally. */}
+                    matching rel - not next/link, which routes internally. */}
                 <a
                   href={item.href}
                   target="_blank"

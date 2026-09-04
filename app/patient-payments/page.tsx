@@ -28,9 +28,9 @@ import {
 } from "@/components/patient-payments/Sections";
 
 export const metadata: Metadata = pageMetadata("/patient-payments/", {
-  title: "Patient Payments — Text to Pay & Reconciliation",
+  title: "Patient Payments - Text to Pay & Reconciliation",
   description:
-    "Text-to-pay patient balances for home health and hospice — ACH, debit or credit — with payment status and reconciliation written back to your EHR ledger automatically.",
+    "Text-to-pay patient balances for home health and hospice - ACH, debit or credit - with payment status and reconciliation written back to your EHR ledger automatically.",
 });
 
 const STEPS = [
@@ -100,7 +100,7 @@ export default function PatientPaymentsPage() {
           eyebrow="Patient Payments"
           title="Text. Tap. Paid."
           storyTag="The $84 Balance"
-          story="A statement for $84 sits printed, folded, and stamped — somewhere between the office and a mailbox. It will take two weeks to arrive, and a check to come back, if it comes back at all."
+          story="A statement for $84 sits printed, folded, and stamped - somewhere between the office and a mailbox. It will take two weeks to arrive, and a check to come back, if it comes back at all."
           lede="Murphi turns that same balance into a text with a secure link. Most patients pay before the mail truck would have even left the lot."
           trust={
             <>
@@ -145,7 +145,7 @@ export default function PatientPaymentsPage() {
         <ModuleSection kicker="What's Included" heading="What Murphi supports.">
           <Included
             items={INCLUDED}
-            note="Murphi facilitates the payment experience and reconciliation — it does not hold provider funds."
+            note="Murphi facilitates the payment experience and reconciliation - it does not hold provider funds."
           />
         </ModuleSection>
 

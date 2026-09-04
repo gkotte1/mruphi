@@ -6,8 +6,8 @@ import { cn } from "@/lib/cn";
 /**
  * The page's product vocabulary: a platform, seen in cross-section.
  *
- * Everything this page argues is about layers — what the clinician sees, what
- * orchestrates it, what moves the data, what governs it — so its parts are
+ * Everything this page argues is about layers - what the clinician sees, what
+ * orchestrates it, what moves the data, what governs it - so its parts are
  * surfaces that sit inside other surfaces rather than the stacks and rails the
  * module pages use. The hero's Murphi panel is literally inset within the EHR
  * environment, because that is the product's whole proposition.
@@ -73,7 +73,7 @@ export function Environment({
   );
 }
 
-/** What goes in, or what comes back out — a single labelled strip. */
+/** What goes in, or what comes back out - a single labelled strip. */
 export function FlowStrip({
   children,
   tone = "in",

@@ -29,7 +29,7 @@ import {
 } from "@/components/referral-to-noa/Sections";
 
 export const metadata: Metadata = pageMetadata("/referral-to-noa/", {
-  title: "Referral → NOA — Intake Automation, Launching Soon",
+  title: "Referral → NOA - Intake Automation, Launching Soon",
   description:
     "Home health referral management and intake automation: Murphi classifies, checks and routes referrals from fax, email, portal, API or EHR, so NOA timing is measured in minutes.",
 });
@@ -119,7 +119,7 @@ export default function ReferralToNoaPage() {
           title="Don't Let a Referral Wait for Monday."
           storyTag="Friday, 4:58 PM"
           story="A referral lands in the fax tray two minutes before the office closes. It sits there all weekend. By the time it's keyed in Monday morning, the patient has already waited three days for care that hasn't started."
-          lede="Murphi classifies, checks and routes referrals the moment they arrive — from fax, email, portal, API or EHR — so the wait is measured in minutes, not a weekend."
+          lede="Murphi classifies, checks and routes referrals the moment they arrive - from fax, email, portal, API or EHR - so the wait is measured in minutes, not a weekend."
           trust={
             <>
               HIPAA <TrustDot /> SOC 2 <TrustDot /> Home Health terminology (NOA)
@@ -142,7 +142,7 @@ export default function ReferralToNoaPage() {
             <SoonCallout>
               <strong className="text-brand-dark">Launching Soon.</strong> Referral
               → NOA is in active development. This page reflects the planned
-              workflow — capabilities may change before general availability.
+              workflow - capabilities may change before general availability.
             </SoonCallout>
           </Reveal>
 
@@ -177,8 +177,8 @@ export default function ReferralToNoaPage() {
         >
           <Mechanics
             groups={[
-              { lede: "Intake — from arrival to summary.", steps: INTAKE_STEPS },
-              { lede: "Decision — from check to admission.", steps: DECISION_STEPS },
+              { lede: "Intake - from arrival to summary.", steps: INTAKE_STEPS },
+              { lede: "Decision - from check to admission.", steps: DECISION_STEPS },
             ]}
           />
         </ModuleSection>

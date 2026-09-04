@@ -25,10 +25,10 @@ import {
   WhereItApplies,
 } from "@/components/ambient-ai-dictation/Sections";
 
-/* Every eyebrow, kicker, chip and panel label is set in Plus Jakarta Sans —
+/* Every eyebrow, kicker, chip and panel label is set in Plus Jakarta Sans  - 
    the brand book's primary typeface (page 12), and the site's only family. */
 export const metadata: Metadata = pageMetadata("/ambient-ai-dictation/", {
-  title: "Ambient AI & Dictation — AI Scribe for Home Health",
+  title: "Ambient AI & Dictation - AI Scribe for Home Health",
   description:
     "Ambient AI clinical documentation and voice dictation for home health and hospice nurses. OASIS, HOPE, SN, PT, OT and ST notes drafted in minutes and synced to your EHR.",
 });

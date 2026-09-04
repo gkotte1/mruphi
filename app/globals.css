@@ -2,17 +2,17 @@
 
 /* The codemods in scripts/ quote old class strings as replacement patterns.
    Tailwind scans the whole project, so without this it generates CSS for
-   classes nothing uses — including the gradients those scripts remove. */
+   classes nothing uses - including the gradients those scripts remove. */
 @source not "../scripts";
 
 /* ─────────────────────────────────────────────────────────────
-   Murphi.ai — design tokens
+   Murphi.ai - design tokens
    Source of truth: "Murphi Brand Book 2026 V1.0" (in the repo root).
 
    01 Color System   Two hues only: Bright Blue and Grey, eight steps each.
    10 Backgrounds    White · light neutral grey · deep blue.
    11 Gradients      Allowed for hero sections, product highlights, background
-                     visuals, UI illustrations and social — never in the logo.
+                     visuals, UI illustrations and social - never in the logo.
    12 Typography     Plus Jakarta Sans is the primary typeface throughout.
 
    The book's own UI assignments (page 01) are the rules the components follow:
@@ -22,7 +22,7 @@
    ───────────────────────────────────────────────────────────── */
 
 @theme {
-  /* ── Bright Blue — brand book 01, eight steps, light → dark ── */
+  /* ── Bright Blue - brand book 01, eight steps, light → dark ── */
   --color-blue-50: #cce5ff;
   --color-blue-100: #a3d1ff;
   --color-blue-200: #7abcff;
@@ -32,7 +32,7 @@
   --color-blue-600: #006ad6;
   --color-blue-700: #0056ad;
 
-  /* ── Grey — brand book 01, eight steps, light → dark ── */
+  /* ── Grey - brand book 01, eight steps, light → dark ── */
   --color-grey-50: #f5f5f5;
   --color-grey-100: #efefef;
   --color-grey-200: #e3e3e3;
@@ -63,7 +63,7 @@
   --color-grey-soft: #efefef;
   --color-grey-bg: #f5f5f5;
 
-  /* Deep blue — the third preferred background (brand book 10). */
+  /* Deep blue - the third preferred background (brand book 10). */
   --color-deep: #0f1d54;
 
   /* Chrome */
@@ -73,7 +73,7 @@
   --color-nav-muted: #878787;
   --color-footer-bg: #0f1d54;
 
-  /* Radii — never sharp corners. */
+  /* Radii - never sharp corners. */
   --radius-tile: 14px;
   --radius-card: 12px;
   --radius-panel: 20px;
@@ -81,7 +81,7 @@
   --radius-cta: 40px;
   --radius-canvas: 56px;
 
-  /* Shadows — tinted with the deep blue, wide, low opacity. */
+  /* Shadows - tinted with the deep blue, wide, low opacity. */
   --shadow-brand: 0 4px 24px rgba(0, 126, 255, 0.12);
   --shadow-brand-md: 0 8px 40px rgba(0, 126, 255, 0.18);
   --shadow-brand-lg: 0 20px 60px rgba(15, 29, 84, 0.12);
@@ -95,7 +95,7 @@
   --default-font-family: var(--font-sans);
 }
 
-/* Inclusive max-width breakpoints — the design is authored desktop-down.
+/* Inclusive max-width breakpoints - the design is authored desktop-down.
    Tailwind's max-[NNNpx] excludes the breakpoint, so declare them. */
 @custom-variant max-1200 (@media (max-width: 1200px));
 @custom-variant max-1024 (@media (max-width: 1024px));
@@ -136,7 +136,7 @@
     text-wrap: balance;
   }
 
-  /* Universal focus — present everywhere, not only on newer components. */
+  /* Universal focus - present everywhere, not only on newer components. */
   :focus-visible {
     outline: 2px solid var(--color-brand);
     outline-offset: 3px;
@@ -145,7 +145,7 @@
 }
 
 /* ── Type scale ───────────────────────────────────────────────
-   Plus Jakarta Sans throughout (brand book 12) — one hierarchy, used by
+   Plus Jakarta Sans throughout (brand book 12) - one hierarchy, used by
    every page, rather than each section restating its own sizes. Size, weight,
    tracking and leading only; colour stays a separate utility so a heading on a
    blue panel can take its own. */
@@ -173,8 +173,8 @@
   line-height: 1.15;
 }
 
-/* Sub-section headings. The reference has no counterpart at this size — it is
-   used only by the pages built from website-research — so the size stays and
+/* Sub-section headings. The reference has no counterpart at this size - it is
+   used only by the pages built from website-research - so the size stays and
    only the weight and tracking join the system. */
 @utility type-h3 {
   font-size: clamp(26px, 2.7vw, 36px);
@@ -247,7 +247,7 @@
    the text on them; #006AD6 and #0056AD are the darker steps, used for hover
    and press. Page 11 permits gradients in hero sections and product visuals,
    but the brand owner has chosen flat surfaces throughout, so every surface on
-   the site — buttons included — is a solid colour.
+   the site - buttons included - is a solid colour.
 
    Each utility is the whole control: shape, size, colour and interaction. A
    call site adds only its own margin and responsive behaviour. */
@@ -382,7 +382,7 @@
 
 /* ── Surfaces ─────────────────────────────────────────────────
    The brand book's preferred backgrounds are white, light neutral grey and
-   deep blue (page 10) — flat, readable surfaces. The translucent blurred
+   deep blue (page 10) - flat, readable surfaces. The translucent blurred
    panels the navigation used have been replaced by those. */
 
 /* ── Motion ───────────────────────────────────────────────── */
@@ -456,7 +456,7 @@
   }
 }
 
-/* .waveform span on the home page reference — its own scaleY range, which
+/* .waveform span on the home page reference - its own scaleY range, which
    is a touch shallower than mp-wave above. */
 @keyframes mp-wave-bounce {
   0%,

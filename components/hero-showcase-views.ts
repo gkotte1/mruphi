@@ -3,13 +3,13 @@ import type { IconName } from "@/components/icons";
 /**
  * The four views the hero dashboard cycles through.
  *
- * Every view has the same shape — three tiles, seven bars, three queue rows —
+ * Every view has the same shape - three tiles, seven bars, three queue rows  - 
  * so switching between them cannot change the card's height. The Workflows
  * entry is the existing dashboard, unchanged; the other three are the same
  * visual language applied to the other parts of the platform.
  *
  * The house rule for this card still holds: everything shows *state*, nothing
- * quantifies a claim. No figures, no percentages, no invented metrics — the
+ * quantifies a claim. No figures, no percentages, no invented metrics - the
  * chart has no axis and the progress bars are indeterminate.
  */
 

@@ -5,7 +5,7 @@ import { Icon } from "@/components/icons";
 import { cn } from "@/lib/cn";
 
 /**
- * /contact-us/ — copy, offices, form fields and every state message come from
+ * /contact-us/ - copy, offices, form fields and every state message come from
  * website-research/company/contact-us.md, including the endpoint the research
  * confirmed from the original application source: POST /api/contact/ as flat
  * JSON, with the access key held server-side only.
@@ -224,7 +224,7 @@ function ContactForm() {
           Thank you for your message!
         </p>
         <p className="mt-3 text-[14px] leading-relaxed text-grey-dk">
-          {"We've received your request and will respond to you shortly —"}{" "}
+          {"We've received your request and will respond to you shortly  - "}{" "}
           usually within 24 hours.
         </p>
       </div>

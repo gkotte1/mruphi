@@ -17,7 +17,7 @@ import { absoluteUrl } from "@/lib/site";
  *
  * Category, title, byline and date open the page; the featured image sits
  * directly beneath them, before the article. The body is the Markdown file,
- * rendered — headings, paragraphs, lists, the comparison table, the FAQ and
+ * rendered - headings, paragraphs, lists, the comparison table, the FAQ and
  * the closing CTA, in the order the author wrote them.
  *
  * `dynamicParams = false` keeps anything that is not a real post a 404.
