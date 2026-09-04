@@ -3,6 +3,11 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FaqSection from "@/components/module-page/FaqSection";
 import { FAQS } from "@/lib/faqs";
+import { JsonLd } from "@/components/JsonLd";
+import {
+  breadcrumbSchema,
+  faqSchema,
+} from "@/lib/schema";
 import { pageMetadata } from "@/lib/site";
 import {
   Breadcrumb,
@@ -22,9 +27,9 @@ import {
 } from "@/components/agencies/Sections";
 
 export const metadata: Metadata = pageMetadata("/agencies/", {
-  title: "Home Health & Hospice Agencies",
+  title: "Home Health & Hospice Agencies — AI Platform",
   description:
-    "Murphi doesn't ask you to replace the EHR you already run the agency on. It sits alongside it — one module, or six.",
+    "A home health and hospice AI platform that sits alongside the EHR your agency already runs on — one module, or six. No replacement, no rip-and-replace project.",
 });
 
 const MODULES = [
@@ -141,6 +146,9 @@ const TESTIMONIALS: Story[] = [
 export default function AgenciesPage() {
   return (
     <div>
+      <JsonLd data={faqSchema(FAQS.agencies, "/agencies/")} />
+      <JsonLd data={breadcrumbSchema("/agencies/", "Home Health & Hospice Agencies")} />
+
       <Navbar />
 
       {/* The navigation is position:fixed, so it occupies no space in flow.

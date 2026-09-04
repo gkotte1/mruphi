@@ -11,6 +11,10 @@ const nextConfig: NextConfig = {
          already pointing there working rather than serving a 404. */
       { source: "/integration", destination: "/integrations/", permanent: true },
 
+      /* The listing answers on /blogs/; the bare /blog/ points at it rather
+         than 404ing, since each post still lives under /blog/<slug>/. */
+      { source: "/blog", destination: "/blogs/", permanent: true },
+
       /* The articles moved under /announcements/. The old site served them at
          the root, and so did this build for a while, so those keep resolving. */
       ...announcements.map((article) => ({

@@ -6,13 +6,15 @@ import { Breadcrumb, FinalCta } from "@/components/module-page/sections";
 import { CONTAINER, Eyebrow, SECTION } from "@/components/module-page/ui";
 import FaqExplorer from "@/components/faqs/FaqExplorer";
 import { FAQ_CATEGORIES } from "@/lib/faqs";
+import { JsonLd } from "@/components/JsonLd";
+import { allFaqsSchema } from "@/lib/schema";
 import { pageMetadata } from "@/lib/site";
 import { cn } from "@/lib/cn";
 
 export const metadata: Metadata = pageMetadata("/faqs/", {
-  title: "Frequently Asked Questions",
+  title: "Home Health & Hospice AI FAQs",
   description:
-    "Every Murphi.ai FAQ in one place — general questions plus the questions asked on each module and audience page.",
+    "Answers to the questions home health and hospice teams ask about AI documentation, OASIS review, EHR integration, HIPAA compliance and Murphi.ai pricing.",
 });
 
 /**
@@ -30,6 +32,8 @@ export const metadata: Metadata = pageMetadata("/faqs/", {
 export default function FaqsPage() {
   return (
     <div>
+      <JsonLd data={allFaqsSchema("/faqs/")} />
+
       <Navbar />
 
       {/* The navigation is position:fixed, so it occupies no space in flow.

@@ -3,6 +3,11 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FaqSection from "@/components/module-page/FaqSection";
 import { FAQS } from "@/lib/faqs";
+import { JsonLd } from "@/components/JsonLd";
+import {
+  breadcrumbSchema,
+  faqSchema,
+} from "@/lib/schema";
 import { pageMetadata } from "@/lib/site";
 import Reveal from "@/components/module-page/Reveal";
 import {
@@ -25,9 +30,9 @@ import {
 } from "@/components/coding-billing-rcm/Sections";
 
 export const metadata: Metadata = pageMetadata("/coding-billing-rcm/", {
-  title: "Coding, Billing, RCM & Consulting Companies",
+  title: "Coding, Billing & RCM Companies — Multi-Client AI",
   description:
-    "Murphi gives coding and billing consultants AI-powered compliance and revenue tools that work the same way across every client.",
+    "Home health coding, billing and RCM consulting software: AI compliance and revenue review that works the same way across every client, under your own brand.",
 });
 
 const CLIENTS = [
@@ -140,6 +145,9 @@ const OUTCOMES = [
 export default function CodingBillingRcmPage() {
   return (
     <div>
+      <JsonLd data={faqSchema(FAQS.codingBillingRcm, "/coding-billing-rcm/")} />
+      <JsonLd data={breadcrumbSchema("/coding-billing-rcm/", "Coding, Billing, RCM & Consulting Companies")} />
+
       <Navbar />
 
       {/* The navigation is position:fixed, so it occupies no space in flow.

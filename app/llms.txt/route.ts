@@ -1,4 +1,5 @@
 import { ANNOUNCEMENTS, announcementHref } from "@/lib/announcements";
+import { POSTS, blogHref } from "@/lib/blog";
 import { SITE_URL, absoluteUrl, routesIn, type SiteRoute } from "@/lib/site";
 
 /**
@@ -60,6 +61,14 @@ function build() {
     section(
       "Company and Resources",
       routesIn("company").map(line),
+    ),
+    "",
+    section(
+      "Blog",
+      POSTS.map(
+        (post) =>
+          `- [${post.title}](${absoluteUrl(blogHref(post))}): ${post.seo.metaDescription}`,
+      ),
     ),
     "",
     section(

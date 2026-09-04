@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { ANNOUNCEMENTS, announcementHref } from "@/lib/announcements";
+import { POSTS, blogHref } from "@/lib/blog";
 import { SITE_ROUTES, absoluteUrl } from "@/lib/site";
 
 /**
@@ -32,5 +33,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.5,
   }));
 
-  return [...pages, ...articles];
+  /* Posts carry a publication date too. */
+  const posts = POSTS.map((post) => ({
+    url: absoluteUrl(blogHref(post)),
+    lastModified: post.datetime,
+    changeFrequency: "yearly" as const,
+    priority: 0.6,
+  }));
+
+  return [...pages, ...articles, ...posts];
 }

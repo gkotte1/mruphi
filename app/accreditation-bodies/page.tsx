@@ -3,6 +3,11 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FaqSection from "@/components/module-page/FaqSection";
 import { FAQS } from "@/lib/faqs";
+import { JsonLd } from "@/components/JsonLd";
+import {
+  breadcrumbSchema,
+  faqSchema,
+} from "@/lib/schema";
 import { pageMetadata } from "@/lib/site";
 import {
   Breadcrumb,
@@ -23,9 +28,9 @@ import {
 } from "@/components/accreditation-bodies/Sections";
 
 export const metadata: Metadata = pageMetadata("/accreditation-bodies/", {
-  title: "Accreditation Bodies",
+  title: "Accreditation Bodies — Survey Readiness Software",
   description:
-    "Murphi.ai helps the agency walk in prepared, and helps the accreditation body turn evidence into a finished report faster.",
+    "Hospice and home health compliance software for accreditation bodies and the agencies they survey — evidence validated into survey-ready reports, faster.",
 });
 
 const SIDES = [
@@ -145,6 +150,9 @@ const OUTCOMES = [
 export default function AccreditationBodiesPage() {
   return (
     <div>
+      <JsonLd data={faqSchema(FAQS.accreditationBodies, "/accreditation-bodies/")} />
+      <JsonLd data={breadcrumbSchema("/accreditation-bodies/", "Accreditation Bodies")} />
+
       <Navbar />
 
       {/* The navigation is position:fixed, so it occupies no space in flow.

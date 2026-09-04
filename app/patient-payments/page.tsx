@@ -3,6 +3,12 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FaqSection from "@/components/module-page/FaqSection";
 import { FAQS } from "@/lib/faqs";
+import { JsonLd } from "@/components/JsonLd";
+import {
+  breadcrumbSchema,
+  faqSchema,
+  moduleSchema,
+} from "@/lib/schema";
 import { pageMetadata } from "@/lib/site";
 import {
   Breadcrumb,
@@ -22,9 +28,9 @@ import {
 } from "@/components/patient-payments/Sections";
 
 export const metadata: Metadata = pageMetadata("/patient-payments/", {
-  title: "Patient Payments",
+  title: "Patient Payments — Text to Pay & Reconciliation",
   description:
-    "Murphi turns a patient balance into a text with a secure link — ACH, debit or credit — with payment status and reconciliation written back to your EHR ledger.",
+    "Text-to-pay patient balances for home health and hospice — ACH, debit or credit — with payment status and reconciliation written back to your EHR ledger automatically.",
 });
 
 const STEPS = [
@@ -78,6 +84,10 @@ const OUTCOMES = [
 export default function PatientPaymentsPage() {
   return (
     <div>
+      <JsonLd data={moduleSchema("/patient-payments/")} />
+      <JsonLd data={faqSchema(FAQS.patientPayments, "/patient-payments/")} />
+      <JsonLd data={breadcrumbSchema("/patient-payments/", "Patient Payments")} />
+
       <Navbar />
 
       {/* The navigation is position:fixed, so it occupies no space in flow.

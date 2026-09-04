@@ -46,7 +46,7 @@ export const ANNOUNCEMENTS: Announcement[] = [
     datetime: "2026-06-14",
     ...CATEGORY_NEWS,
     image: "/images/announcements/ChatGPT-Image-Jun-16-2026-10_41_35-AM.png",
-    alt: "",
+    alt: "Murphi.ai wins the Bronze Stevie Award for AI in Healthcare Achievement",
   },
   {
     slug: "revenue-assurance-compliance-reports-for-home-health-hospice",
@@ -57,7 +57,7 @@ export const ANNOUNCEMENTS: Announcement[] = [
     ...CATEGORY_NEWS,
     image:
       "/images/announcements/Revenue-Assurance-for-Home-Health-Hospice-2-1536x1024.png",
-    alt: "",
+    alt: "Murphi.ai Revenue Assurance and compliance reports for home health and hospice, turning Spanish clinical documentation into English reports",
   },
   {
     slug: "stuart-smith-joins-murphi-board-advisor",
@@ -119,7 +119,7 @@ export const ANNOUNCEMENTS: Announcement[] = [
     datetime: "2026-05-07",
     ...CATEGORY_NEWS,
     image: "/images/announcements/medic-team-discussing-germs-clinic-2-1536x1024.jpg",
-    alt: "",
+    alt: "Murphi.ai featured in Tech Times for its horizontal healthcare AI platform",
   },
   {
     slug: "murphi-ais-playbook-for-making-healthcare-platforms-ai-native-without-the-rebuild",
@@ -129,7 +129,7 @@ export const ANNOUNCEMENTS: Announcement[] = [
     datetime: "2026-02-19",
     ...CATEGORY_IN_THE_NEWS,
     image: "/images/announcements/Frame-1618872139-1536x1024.png",
-    alt: "",
+    alt: "Murphi.ai playbook for making healthcare platforms AI-native without a rebuild",
   },
   {
     slug: "murphi-ais-horizontal-native-ai-platform-one-integration-multiple-healthcare-workflows",
@@ -139,7 +139,7 @@ export const ANNOUNCEMENTS: Announcement[] = [
     datetime: "2026-02-13",
     ...CATEGORY_IN_THE_NEWS,
     image: "/images/announcements/Frame-1618872141-1-1536x1024.png",
-    alt: "",
+    alt: "Murphi.ai horizontal native AI platform — one EHR integration, multiple healthcare workflows",
   },
   {
     slug: "inside-murphi-ais-ai-blueprint-for-modernizing-rcm-patient-payments-and-contract-optimization",
@@ -149,7 +149,7 @@ export const ANNOUNCEMENTS: Announcement[] = [
     datetime: "2026-02-13",
     ...CATEGORY_IN_THE_NEWS,
     image: "/images/announcements/3-3-1536x1025.png",
-    alt: "",
+    alt: "Murphi.ai AI blueprint for modernizing RCM, patient payments and contract optimization",
   },
   {
     slug: "how-guru-tadiparti-steered-murphi-ai-by-embedding-ai-into-healthcare-platforms",
@@ -159,7 +159,7 @@ export const ANNOUNCEMENTS: Announcement[] = [
     datetime: "2026-01-31",
     ...CATEGORY_IN_THE_NEWS,
     image: "/images/announcements/Frame-1618872142-1536x931.png",
-    alt: "",
+    alt: "Guru Tadiparti on embedding AI into healthcare platforms at Murphi.ai",
   },
   {
     slug: "murphi-ai-posts-strong-arr-growth-by-embedding-ai-automation-across-ehr-rcm-and-healthcare-platforms",
@@ -169,7 +169,7 @@ export const ANNOUNCEMENTS: Announcement[] = [
     datetime: "2026-01-31",
     ...CATEGORY_IN_THE_NEWS,
     image: "/images/announcements/Frame-1618872137-1-1536x1081.png",
-    alt: "",
+    alt: "Murphi.ai ARR growth from embedding AI automation across EHR, RCM and healthcare platforms",
   },
   {
     slug: "why-mental-health-and-post-acute-platforms-are-turning-to-murphi-ais-ai-inside-white-label-model",
@@ -179,7 +179,7 @@ export const ANNOUNCEMENTS: Announcement[] = [
     datetime: "2026-01-31",
     ...CATEGORY_IN_THE_NEWS,
     image: "/images/announcements/Frame-1618872138-1536x1024.png",
-    alt: "",
+    alt: "Mental health and post-acute platforms adopting the Murphi.ai AI-Inside white-label model",
   },
 ];
 

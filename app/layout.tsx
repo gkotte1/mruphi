@@ -1,5 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
+import { JsonLd } from "@/components/JsonLd";
+import { organizationSchema } from "@/lib/schema";
 import { SITE_URL, absoluteUrl } from "@/lib/site";
 import "./globals.css";
 
@@ -28,7 +30,7 @@ export const metadata: Metadata = {
     template: "%s | Murphi.ai",
   },
   description:
-    "Murphi integrates with the EHRs your agency uses and automates the work around patient care.",
+    "Home health and hospice AI software that connects to the EHR you already use — ambient AI documentation, revenue assurance, patient engagement and patient payments.",
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",
@@ -36,7 +38,7 @@ export const metadata: Metadata = {
     url: absoluteUrl("/"),
     title: "Murphi.ai — AI for Every Home Health & Hospice Workflow",
     description:
-      "Murphi integrates with the EHRs your agency uses and automates the work around patient care.",
+      "Home health and hospice AI software that connects to the EHR you already use — ambient AI documentation, revenue assurance, patient engagement and patient payments.",
     images: [
       {
         url: "/og-image.png",
@@ -50,7 +52,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Murphi.ai — AI for Every Home Health & Hospice Workflow",
     description:
-      "Murphi integrates with the EHRs your agency uses and automates the work around patient care.",
+      "Home health and hospice AI software that connects to the EHR you already use — ambient AI documentation, revenue assurance, patient engagement and patient payments.",
     images: ["/og-image.png"],
   },
   icons: {
@@ -74,7 +76,12 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={jakarta.variable}>
-      <body className="font-sans antialiased">{children}</body>
+      <body className="font-sans antialiased">
+        {/* Organization and WebSite, once for the whole site. Renders no
+            markup a reader can see. */}
+        <JsonLd data={organizationSchema()} />
+        {children}
+      </body>
     </html>
   );
 }

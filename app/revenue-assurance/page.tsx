@@ -3,6 +3,12 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FaqSection from "@/components/module-page/FaqSection";
 import { FAQS } from "@/lib/faqs";
+import { JsonLd } from "@/components/JsonLd";
+import {
+  breadcrumbSchema,
+  faqSchema,
+  moduleSchema,
+} from "@/lib/schema";
 import { pageMetadata } from "@/lib/site";
 import {
   Breadcrumb,
@@ -22,9 +28,9 @@ import {
 } from "@/components/revenue-assurance/Sections";
 
 export const metadata: Metadata = pageMetadata("/revenue-assurance/", {
-  title: "Revenue Assurance",
+  title: "Revenue Assurance — OASIS & PDGM Review Software",
   description:
-    "Murphi reviews every chart the day it's written — fetched straight from your EHR — and surfaces coding, OASIS, POC, PDGM and ADR gaps while there's still time to fix them.",
+    "AI chart review for home health and hospice: OASIS, coding, POC, PDGM and ADR gaps surfaced the day the chart is written, fetched straight from your EHR.",
 });
 
 const FINDINGS = [
@@ -111,6 +117,10 @@ const OUTCOMES = [
 export default function RevenueAssurancePage() {
   return (
     <div>
+      <JsonLd data={moduleSchema("/revenue-assurance/")} />
+      <JsonLd data={faqSchema(FAQS.revenueAssurance, "/revenue-assurance/")} />
+      <JsonLd data={breadcrumbSchema("/revenue-assurance/", "Revenue Assurance")} />
+
       <Navbar />
 
       {/* The navigation is position:fixed, so it occupies no space in flow.

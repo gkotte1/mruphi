@@ -3,6 +3,12 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FaqSection from "@/components/module-page/FaqSection";
 import { FAQS } from "@/lib/faqs";
+import { JsonLd } from "@/components/JsonLd";
+import {
+  breadcrumbSchema,
+  faqSchema,
+  moduleSchema,
+} from "@/lib/schema";
 import { pageMetadata } from "@/lib/site";
 import Reveal from "@/components/module-page/Reveal";
 import { FetchNote, SoonCallout } from "@/components/module-page/extras";
@@ -23,9 +29,9 @@ import {
 } from "@/components/ai-driven-rcm/Sections";
 
 export const metadata: Metadata = pageMetadata("/ai-driven-rcm/", {
-  title: "AI-Driven RCM — Launching Soon",
+  title: "AI-Driven RCM for Home Health — Launching Soon",
   description:
-    "Murphi tracks each claim across eligibility, authorization, documentation and coding — and intercepts issues while they're still a fixable step, not a finished denial.",
+    "AI-driven revenue cycle management for home health and hospice: claim readiness, denial prevention and ERA/EOB reconciliation tracked across the full claim lifecycle.",
 });
 
 /* The claim lifecycle, as one continuous nine-stage run, numbered 01–09.
@@ -83,6 +89,10 @@ const OUTCOMES = [
 export default function AiDrivenRcmPage() {
   return (
     <div>
+      <JsonLd data={moduleSchema("/ai-driven-rcm/")} />
+      <JsonLd data={faqSchema(FAQS.aiDrivenRcm, "/ai-driven-rcm/")} />
+      <JsonLd data={breadcrumbSchema("/ai-driven-rcm/", "AI-Driven RCM")} />
+
       <Navbar />
 
       {/* The navigation is position:fixed, so it occupies no space in flow.

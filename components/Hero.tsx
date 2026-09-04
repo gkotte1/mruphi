@@ -145,7 +145,8 @@ export default function Hero() {
             </div>
 
             <h1 className="type-display mb-5 text-ink">
-              AI for Every Home Health &amp; Hospice Workflow
+              The Most Advanced AI Platform for Home Health &amp; Hospice
+              Agencies
             </h1>
 
             {/* .hero p.lede — 17.5px, and the inline 20px bottom margin the

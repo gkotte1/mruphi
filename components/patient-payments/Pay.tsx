@@ -10,8 +10,11 @@ import { cn } from "@/lib/cn";
  * Patient Payments was drawn with the same generic parts as every other module
  * page — one message card over one row of values, a strip of pills, five
  * circles — so a page about a payment never showed the payment being made.
- * These primitives give it the shapes its subject has: the patient's phone,
- * the sheet they pay on, and the ledger the result lands in.
+ * These primitives give it the shapes its subject has: the sheet a balance is
+ * paid on, and the ledger the result lands in.
+ *
+ * A PhoneFrame with a black bezel used to live here too, for the hero. The
+ * hero is one plain card now, and nothing else drew a phone, so it is gone.
  *
  * Nothing here introduces copy. Labels passed in are strings the page already
  * carries; every state is a dot, a rule or a tick.
@@ -24,6 +27,7 @@ export function Surface({
   tone = "plain",
   live,
   compact,
+  still,
   foot,
   children,
   className,
@@ -33,6 +37,9 @@ export function Surface({
   /** `brand` for Murphi's own surfaces, `plain` for everything else. */
   tone?: "brand" | "plain";
   live?: boolean;
+  /** Hold the status dot steady — for a state that has finished, not one
+      that is still running. */
+  still?: boolean;
   /** Tighter head and body rules. Used by the hero, where the surfaces are
       stacked and the column has to stay the height of the copy beside it. */
   compact?: boolean;
@@ -78,7 +85,8 @@ export function Surface({
           >
             <span
               className={cn("size-1.5 rounded-full", onBrand ? "bg-white" : "bg-brand")}
-              style={{ animation: "mp-blink 1.6s ease-in-out infinite" }}
+              /* A settled state should not pulse. */
+              style={still ? undefined : { animation: "mp-blink 1.6s ease-in-out infinite" }}
               aria-hidden
             />
             {status}
@@ -201,43 +209,6 @@ export function Bubble({
       )}
     >
       {children}
-    </div>
-  );
-}
-
-/**
- * The patient's phone. A device rather than another card — the point of the
- * page is that the balance is paid from the thing already in their hand.
- */
-export function PhoneFrame({
-  label,
-  children,
-}: {
-  label: string;
-  children: ReactNode;
-}) {
-  return (
-    <div className="mx-auto w-full max-w-[320px] rounded-[32px] border-[7px] border-ink bg-ink shadow-[0_24px_54px_-18px_rgba(15,29,84,.45)]">
-      <div className="overflow-hidden rounded-[25px] bg-white">
-        <div className="flex justify-center pt-1.5" aria-hidden>
-          <span className="h-1 w-12 rounded-full bg-grey-mid" />
-        </div>
-
-        <div
-          className={cn(
-            MONO,
-            "mt-1.5 border-b border-grey-mid px-4 py-1.5 text-center text-[10.5px] uppercase tracking-[0.06em] text-ink-muted",
-          )}
-        >
-          {label}
-        </div>
-
-        <div className="flex flex-col gap-2 px-4 py-2.5">{children}</div>
-
-        <div className="flex justify-center pb-1.5" aria-hidden>
-          <span className="h-1 w-16 rounded-full bg-grey-mid" />
-        </div>
-      </div>
     </div>
   );
 }

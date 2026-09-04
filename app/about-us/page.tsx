@@ -21,7 +21,7 @@ import { pageMetadata } from "@/lib/site";
  */
 
 export const metadata: Metadata = pageMetadata("/about-us/", {
-  title: "About Murphi.ai",
+  title: "About Murphi.ai — Home Health & Hospice AI",
   description:
     "Murphi.ai is a AI Native automation platform purpose built for U.S. healthcare, with AI modules purpose-built for Home Health and Hospice.",
 });

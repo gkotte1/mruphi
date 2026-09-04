@@ -3,6 +3,11 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FaqSection from "@/components/module-page/FaqSection";
 import { FAQS } from "@/lib/faqs";
+import { JsonLd } from "@/components/JsonLd";
+import {
+  breadcrumbSchema,
+  faqSchema,
+} from "@/lib/schema";
 import { pageMetadata } from "@/lib/site";
 import Reveal from "@/components/module-page/Reveal";
 import { StatusBadge } from "@/components/module-page/interactive";
@@ -38,9 +43,9 @@ import {
 import { cn } from "@/lib/cn";
 
 export const metadata: Metadata = pageMetadata("/ehr-companies/", {
-  title: "Home Health & Hospice EHR Companies",
+  title: "Home Health & Hospice EHR Companies — Embed AI",
   description:
-    "Murphi.ai enables Home Health, Hospice and Palliative Care platforms to introduce ambient documentation, intelligent assessments, clinical quality checks, and compliance workflows.",
+    "Embed AI into your home health, hospice or palliative care EHR: ambient documentation, intelligent assessments, clinical quality checks and compliance workflows.",
 });
 
 const PILLARS = [
@@ -196,6 +201,9 @@ const INTEGRATIONS = [
 export default function EhrCompaniesPage() {
   return (
     <div>
+      <JsonLd data={faqSchema(FAQS.ehrCompanies, "/ehr-companies/")} />
+      <JsonLd data={breadcrumbSchema("/ehr-companies/", "Home Health & Hospice EHR Companies")} />
+
       <Navbar />
 
       {/* The navigation is position:fixed, so it occupies no space in flow.

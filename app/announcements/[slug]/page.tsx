@@ -13,6 +13,8 @@ import {
   findArticle,
   readArticleBody,
 } from "@/lib/announcements";
+import { JsonLd } from "@/components/JsonLd";
+import { articleSchema } from "@/lib/schema";
 import { absoluteUrl } from "@/lib/site";
 
 /**
@@ -71,6 +73,8 @@ export default async function AnnouncementArticle({ params }: Props) {
 
   return (
     <>
+      <JsonLd data={articleSchema(article)} />
+
       <Navbar />
 
       <main>

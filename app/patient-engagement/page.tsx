@@ -3,6 +3,12 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FaqSection from "@/components/module-page/FaqSection";
 import { FAQS } from "@/lib/faqs";
+import { JsonLd } from "@/components/JsonLd";
+import {
+  breadcrumbSchema,
+  faqSchema,
+  moduleSchema,
+} from "@/lib/schema";
 import { pageMetadata } from "@/lib/site";
 import { TechTicker } from "@/components/module-page/extras";
 import {
@@ -24,9 +30,9 @@ import {
 } from "@/components/patient-engagement/Sections";
 
 export const metadata: Metadata = pageMetadata("/patient-engagement/", {
-  title: "Patient Engagement",
+  title: "Patient Engagement — HIPAA-Compliant SMS Platform",
   description:
-    "Murphi.ai's Patient Engagement layer: secure staff messaging, browser/SMS messaging for patients and families with no app required, broadcast messaging, visit confirmation automation, document signature, and full communication history — synced to your EHR.",
+    "HIPAA-compliant texting and patient engagement for home health and hospice. Secure staff messaging, visit confirmation automation and document signature — no app for patients.",
 });
 
 const TICKER = [
@@ -164,6 +170,10 @@ const RELATED = [
 export default function PatientEngagementPage() {
   return (
     <div>
+      <JsonLd data={moduleSchema("/patient-engagement/")} />
+      <JsonLd data={faqSchema(FAQS.patientEngagement, "/patient-engagement/")} />
+      <JsonLd data={breadcrumbSchema("/patient-engagement/", "Patient Engagement")} />
+
       <Navbar />
 
       {/* The navigation is position:fixed, so it occupies no space in flow.

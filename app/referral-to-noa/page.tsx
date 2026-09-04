@@ -3,6 +3,12 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FaqSection from "@/components/module-page/FaqSection";
 import { FAQS } from "@/lib/faqs";
+import { JsonLd } from "@/components/JsonLd";
+import {
+  breadcrumbSchema,
+  faqSchema,
+  moduleSchema,
+} from "@/lib/schema";
 import { pageMetadata } from "@/lib/site";
 import Reveal from "@/components/module-page/Reveal";
 import { FetchNote, SoonCallout } from "@/components/module-page/extras";
@@ -23,9 +29,9 @@ import {
 } from "@/components/referral-to-noa/Sections";
 
 export const metadata: Metadata = pageMetadata("/referral-to-noa/", {
-  title: "Referral → NOA — Launching Soon",
+  title: "Referral → NOA — Intake Automation, Launching Soon",
   description:
-    "Murphi classifies, checks and routes referrals the moment they arrive — from fax, email, portal, API or EHR — so the wait is measured in minutes, not a weekend.",
+    "Home health referral management and intake automation: Murphi classifies, checks and routes referrals from fax, email, portal, API or EHR, so NOA timing is measured in minutes.",
 });
 
 const INTAKE_STEPS = [
@@ -95,6 +101,10 @@ const OUTCOMES = [
 export default function ReferralToNoaPage() {
   return (
     <div>
+      <JsonLd data={moduleSchema("/referral-to-noa/")} />
+      <JsonLd data={faqSchema(FAQS.referralToNoa, "/referral-to-noa/")} />
+      <JsonLd data={breadcrumbSchema("/referral-to-noa/", "Referral → NOA")} />
+
       <Navbar />
 
       {/* The navigation is position:fixed, so it occupies no space in flow.

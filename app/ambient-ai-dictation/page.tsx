@@ -3,6 +3,12 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FaqSection from "@/components/module-page/FaqSection";
 import { FAQS } from "@/lib/faqs";
+import { JsonLd } from "@/components/JsonLd";
+import {
+  breadcrumbSchema,
+  faqSchema,
+  moduleSchema,
+} from "@/lib/schema";
 import { pageMetadata } from "@/lib/site";
 import Hero from "@/components/ambient-ai-dictation/Hero";
 import HowItWorks from "@/components/ambient-ai-dictation/HowItWorks";
@@ -22,14 +28,18 @@ import {
 /* Every eyebrow, kicker, chip and panel label is set in Plus Jakarta Sans —
    the brand book's primary typeface (page 12), and the site's only family. */
 export const metadata: Metadata = pageMetadata("/ambient-ai-dictation/", {
-  title: "Ambient AI & Dictation",
+  title: "Ambient AI & Dictation — AI Scribe for Home Health",
   description:
-    "Murphi's Ambient AI listens during assessments or converts clinician dictation into structured Home Health and Hospice documentation — with multi-language, medications, wound care and M1800/GG capture, synced to your EHR the same day.",
+    "Ambient AI clinical documentation and voice dictation for home health and hospice nurses. OASIS, HOPE, SN, PT, OT and ST notes drafted in minutes and synced to your EHR.",
 });
 
 export default function AmbientAiDictationPage() {
   return (
     <div>
+      <JsonLd data={moduleSchema("/ambient-ai-dictation/")} />
+      <JsonLd data={faqSchema(FAQS.ambientAi, "/ambient-ai-dictation/")} />
+      <JsonLd data={breadcrumbSchema("/ambient-ai-dictation/", "Ambient AI & Dictation")} />
+
       <Navbar />
 
       {/* The navigation is position:fixed, so it occupies no space in flow.
