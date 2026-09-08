@@ -144,9 +144,13 @@ export default function Hero() {
               <Eyebrow>Home Health &amp; Hospice</Eyebrow>
             </div>
 
-            <h1 className="type-display mb-5 text-ink">
-              The Most Advanced AI Platform for Home Health &amp; Hospice
-              Agencies
+            {/* Two lines exactly, at every width: the break is forced here and
+                type-hero-display keeps each line inside the measure so neither
+                one re-wraps. */}
+            <h1 className="type-hero-display mb-5 text-ink">
+              The Most Advanced AI Platform for
+              <br />
+              Home Health &amp; Hospice Agencies
             </h1>
 
             {/* .hero p.lede - 17.5px, and the inline 20px bottom margin the
