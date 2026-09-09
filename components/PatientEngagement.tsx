@@ -1,28 +1,19 @@
 import Reveal from "@/components/module-page/Reveal";
 import {
+  Accent,
   AppBody,
   ChipRow,
   DeviceCard,
   DeviceConnector,
-  DeviceStack,
   Eyebrow,
   FetchNote,
   GhostLink,
   Lede,
-  ModuleBlock,
   ModuleHeading,
-  OutcomeList,
+  OutcomeTiles,
+  SectionWrap,
   SmsBody,
 } from "@/components/home/kit";
-
-/**
- * Module 3 - Patient Engagement, converted from `#engage` in
- * "01. HomePAge/Murphi.ai Home LandingPage.html".
- *
- * Copy left, the device stack right: the agency's app over the ordinary phone,
- * joined by the SMS hop, with a `.fetch-note` beneath. Every string is the
- * reference's own.
- */
 
 const CHANNELS = [
   "Two-way SMS",
@@ -53,34 +44,27 @@ const THREAD = [
 
 export default function PatientEngagement() {
   return (
-    <ModuleBlock
-      id="engage"
-      copy={
+    <SectionWrap id="engage">
+      <div className="grid grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] items-start gap-16 max-1080:grid-cols-1 max-1080:gap-10">
         <Reveal>
           <Eyebrow>Patient Engagement</Eyebrow>
-
           <ModuleHeading id="engagement-heading">
-            Connect your office, clinicians, patients and caregivers.
+            Connect your office, clinicians,{" "}
+            <Accent>patients and caregivers</Accent>.
           </ModuleHeading>
-
           <Lede>
             HIPAA-compliant messaging and AI-driven patient engagement. Your
             staff use the Murphi app - patients and caregivers keep using
             ordinary text messages.
           </Lede>
-
           <ChipRow items={CHANNELS} />
-
-          <OutcomeList items={OUTCOMES} />
-
           <GhostLink href="/patient-engagement/">
             Explore Patient Engagement
           </GhostLink>
         </Reveal>
-      }
-      visual={
+
         <Reveal>
-          <DeviceStack>
+          <div className="grid grid-cols-2 items-start gap-5 max-720:grid-cols-1">
             <DeviceCard head="Murphi.ai · Office" app>
               <AppBody
                 initials="EJ"
@@ -89,20 +73,28 @@ export default function PatientEngagement() {
                 message="Reminder: SN visit tomorrow 9:00 AM. Reply C to confirm."
               />
             </DeviceCard>
-
+            <div className="max-720:hidden">
+              <DeviceCard head="Patient's Phone · Messages">
+                <SmsBody thread={THREAD} />
+              </DeviceCard>
+            </div>
+          </div>
+          <div className="hidden max-720:mt-4 max-720:block">
             <DeviceConnector label="Murphi → SMS → Murphi" />
-
             <DeviceCard head="Patient's Phone · Messages">
               <SmsBody thread={THREAD} />
             </DeviceCard>
-          </DeviceStack>
-
-          <FetchNote>
-            Conversation → patient chart → EHR. Where appropriate, the exchange
-            is stored directly in the patient record.
-          </FetchNote>
+          </div>
         </Reveal>
-      }
-    />
+      </div>
+
+      <div className="mt-12">
+        <OutcomeTiles items={OUTCOMES} />
+        <FetchNote>
+          Conversation → patient chart → EHR. Where appropriate, the exchange is
+          stored directly in the patient record.
+        </FetchNote>
+      </div>
+    </SectionWrap>
   );
 }

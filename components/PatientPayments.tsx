@@ -1,25 +1,14 @@
 import Reveal from "@/components/module-page/Reveal";
 import {
+  Accent,
   Eyebrow,
   GhostLink,
   Lede,
-  MockCard,
-  MockFoot,
-  MockHead,
-  MockPanel,
-  ModuleBlock,
   ModuleHeading,
-  OutcomeList,
-  PayRow,
+  OutcomeTiles,
+  SectionWrap,
 } from "@/components/home/kit";
-
-/**
- * Module 4 - Patient Payments & Reconciliation, converted from `#payments` in
- * "01. HomePAge/Murphi.ai Home LandingPage.html".
- *
- * A `.reverse` block: copy right, visual left. The visual is the balance card,
- * four `.pay-row`s inside one panel. Every string is the reference's own.
- */
+import { cn } from "@/lib/cn";
 
 const OUTCOMES = [
   "Faster collections",
@@ -27,59 +16,70 @@ const OUTCOMES = [
   "Automated reconciliation",
 ];
 
-const ROWS = [
-  { label: "Balance due", value: "$148.00" },
-  { label: "Sent via", value: "SMS Link" },
-  { label: "Method", value: "ACH" },
-  { label: "Status", value: "Paid", settled: true },
+const STEPS = [
+  { n: "01", label: "Balance due", value: "$148.00" },
+  { n: "02", label: "Sent via", value: "SMS Link" },
+  { n: "03", label: "Method", value: "ACH" },
+  { n: "04", label: "Status", value: "Paid", settled: true },
 ];
 
 export default function PatientPayments() {
   return (
-    <ModuleBlock
-      id="payments"
-      reverse
-      copy={
-        <Reveal>
+    <SectionWrap id="payments" tone="grey">
+      <Reveal>
+        <div className="mx-auto max-w-[680px] text-center">
           <Eyebrow>Patient Payments &amp; Reconciliation</Eyebrow>
-
           <ModuleHeading id="payments-heading">
-            Make patient balances easier to collect - and reconcile.
+            Make patient balances easier to{" "}
+            <Accent>collect - and reconcile</Accent>.
           </ModuleHeading>
-
-          <Lede>
+          <Lede className="mx-auto">
             Murphi identifies patient-responsibility balances and opens a simple
             digital path to pay - then reconciles the result back to your EHR
             automatically.
           </Lede>
+        </div>
+      </Reveal>
 
-          <OutcomeList items={OUTCOMES} />
+      <ol className="mt-14 grid grid-cols-4 gap-4 max-1024:grid-cols-2 max-600:grid-cols-1">
+        {STEPS.map((step, i) => (
+          <li
+            key={step.label}
+            className="relative rounded-hero border border-grey-mid bg-white px-6 py-8 text-center"
+          >
+            <span className="type-label text-brand-dark">{step.n}</span>
+            <p className="mt-4 text-[13px] font-medium text-ink-muted">
+              {step.label}
+            </p>
+            <p
+              className={cn(
+                "mt-2 text-[22px] font-extrabold tracking-[-0.03em]",
+                step.settled ? "text-brand" : "text-ink",
+              )}
+            >
+              {step.value}
+            </p>
+            {i < STEPS.length - 1 ? (
+              <span
+                className="absolute top-1/2 -right-3 hidden h-px w-3 bg-grey-mid max-1024:hidden"
+                aria-hidden
+              />
+            ) : null}
+          </li>
+        ))}
+      </ol>
 
-          <GhostLink href="/patient-payments/">
-            Explore Patient Payments
-          </GhostLink>
-        </Reveal>
-      }
-      visual={
-        <Reveal>
-          <MockCard>
-            <MockHead label="Balance · Patient #4471" status="Paid" live />
+      <p className="mt-6 text-center text-[13px] text-ink-muted">
+        Collected in 1 day · Reconciled → EHR
+      </p>
 
-            <MockPanel>
-              {ROWS.map((row) => (
-                <PayRow
-                  key={row.label}
-                  label={row.label}
-                  value={row.value}
-                  settled={row.settled}
-                />
-              ))}
-            </MockPanel>
+      <div className="mt-10">
+        <OutcomeTiles items={OUTCOMES} />
+      </div>
 
-            <MockFoot left="Collected in 1 day" right="Reconciled → EHR" />
-          </MockCard>
-        </Reveal>
-      }
-    />
+      <div className="mt-8 text-center">
+        <GhostLink href="/patient-payments/">Explore Patient Payments</GhostLink>
+      </div>
+    </SectionWrap>
   );
 }

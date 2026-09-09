@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Logo } from "@/components/Logo";
 import { AI_MODULES } from "@/lib/nav-data";
 import { Icon, type IconName } from "@/components/icons";
@@ -76,28 +77,57 @@ const SOCIAL: { label: string; href: string; icon: IconName }[] = [
   { label: "X", href: "https://x.com/MurphiAI", icon: "x" },
 ];
 
+const SEALS = [
+  {
+    src: "/images/certifications/hipaa-compliant-seal.png",
+    alt: "HIPAA compliant",
+  },
+  {
+    src: "/images/certifications/aicpa-soc-seal.png",
+    alt: "SOC 2",
+  },
+  {
+    src: "/images/certifications/iso-27001-seal.png",
+    alt: "ISO 27001",
+  },
+];
+
 export default function Footer() {
   return (
-    <footer className="relative border-t border-grey-mid bg-grey-bg">
+    <footer className="relative border-t border-grey-mid bg-white">
       <div className="mx-auto w-full max-w-[1280px] px-10 pt-20 pb-8 max-1200:px-8 max-1024:pt-16 max-600:px-4 max-600:pt-12">
-        <div className="grid grid-cols-[1.5fr_repeat(4,minmax(0,1fr))] gap-x-10 max-1200:gap-x-8 max-1024:grid-cols-3 max-1024:gap-y-11 max-600:grid-cols-1 max-600:gap-y-9">
+        <div className="grid grid-cols-[1.6fr_repeat(4,minmax(0,1fr))] gap-x-10 max-1200:gap-x-8 max-1024:grid-cols-3 max-1024:gap-y-11 max-600:grid-cols-1 max-600:gap-y-9">
           {/* ── Brand ── */}
           <div className="min-w-0">
             <Link href="/" className="inline-block" aria-label="Murphi.ai home">
-              <Logo height={30} />
+              <Logo height={36} />
             </Link>
 
-            <p className="mt-5 max-w-[280px] text-[13.5px] leading-relaxed text-grey-dk/80">
+            <p className="mt-5 max-w-[280px] text-[14px] leading-relaxed text-grey-500">
               AI for Home Health &amp; Hospice.
               <br />
               Operated by Deskfactors Inc.
             </p>
 
-            <ul className="mt-6 flex flex-wrap gap-2">
+            <ul className="mt-6 flex flex-wrap items-center gap-3">
+              {SEALS.map((seal) => (
+                <li key={seal.alt}>
+                  <Image
+                    src={seal.src}
+                    alt={seal.alt}
+                    width={56}
+                    height={56}
+                    className="h-14 w-auto"
+                  />
+                </li>
+              ))}
+            </ul>
+
+            <ul className="mt-4 flex flex-wrap gap-2">
               {COMPLIANCE.map((item) => (
                 <li
                   key={item.label}
-                  className="flex items-center gap-1.5 rounded-[8px] border border-brand-border/50 bg-white px-2 py-[5px] text-[9.5px] font-bold uppercase leading-none tracking-[0.06em] text-grey-dk/75"
+                  className="flex items-center gap-1.5 rounded-full border border-brand-border/50 bg-grey-bg px-2.5 py-[5px] text-[9.5px] font-bold uppercase leading-none tracking-[0.06em] text-grey-dk/75"
                 >
                   <Icon
                     name={item.icon}
@@ -144,7 +174,13 @@ export default function Footer() {
         {/* ── Bottom row ── */}
         <div className="flex items-center justify-between gap-6 pt-7 max-600:flex-col-reverse max-600:items-start max-600:gap-5">
           <p className="text-[12.5px] font-medium text-grey-dk/60">
-            © 2026 Deskfactors Inc. / Murphi.ai. All rights reserved.
+            © 2026 Deskfactors Inc. / Murphi.ai. All rights reserved.{" "}
+            <Link
+              href="/privacy-policy/"
+              className="ml-1 underline decoration-grey-mid underline-offset-2 transition-colors duration-200 hover:text-brand-dark"
+            >
+              Privacy Policy
+            </Link>
           </p>
 
           <ul className="flex shrink-0 items-center gap-2.5">

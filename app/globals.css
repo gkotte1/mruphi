@@ -73,13 +73,14 @@
   --color-nav-muted: #878787;
   --color-footer-bg: #0f1d54;
 
-  /* Radii - never sharp corners. */
+  /* Radii - never sharp corners. Landing sections read as large rounded cards. */
   --radius-tile: 14px;
   --radius-card: 12px;
   --radius-panel: 20px;
-  --radius-hero: 28px;
-  --radius-cta: 40px;
+  --radius-hero: 32px;
+  --radius-cta: 48px;
   --radius-canvas: 56px;
+  --radius-pill: 9999px;
 
   /* Shadows - tinted with the deep blue, wide, low opacity. */
   --shadow-brand: 0 4px 24px rgba(0, 126, 255, 0.12);
@@ -93,6 +94,9 @@
     "Segoe UI", sans-serif;
 
   --default-font-family: var(--font-sans);
+
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
 }
 
 /* Inclusive max-width breakpoints - the design is authored desktop-down.
@@ -157,36 +161,20 @@
   line-height: 1.14;
 }
 
-/* The home hero's h1, which is set to break on exactly two lines - "The Most
-   Advanced AI Platform for" over "Home Health & Hospice Agencies" - at every
-   width. The break itself is a <br> in the markup; this scale is what keeps
-   the longer of the two lines inside its measure, so that break stays the only
-   one.
-
-   Above 1080 the heading sits in the hero's left column - half the container
-   less the 64px gutter - so the size tracks the viewport rather than the
-   container: `2.95vw - 4.4px` is that column's width divided by the longer
-   line's own length in ems, and 34px is where it settles once the container
-   caps at 1280. Below 1080 the hero is one column and the line has the full
-   measure, so the size returns to the display scale; below 720 it tracks the
-   viewport again, less the 20px gutters.
-
-   text-wrap is reset because the base h1 rule balances, which would otherwise
-   be free to re-break the first line. */
+/* Home hero h1 - large, two-tone headlines sit on this scale. */
 @utility type-hero-display {
-  font-size: min(34px, calc(2.95vw - 4.4px));
+  font-size: clamp(36px, 5vw, 58px);
   font-weight: 700;
-  letter-spacing: -0.02em;
-  line-height: 1.14;
-  text-wrap: normal;
+  letter-spacing: -0.03em;
+  line-height: 1.08;
+}
 
-  @media (max-width: 1080px) {
-    font-size: clamp(34px, 3.6vw, 44px);
-  }
-
-  @media (max-width: 720px) {
-    font-size: clamp(18px, calc(6vw - 2.5px), 34px);
-  }
+/* Oversized stat figures with a small unit suffix set beside them. */
+@utility type-stat {
+  font-size: clamp(40px, 4.6vw, 64px);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 0.9;
 }
 
 /* Page headings. */
@@ -289,7 +277,7 @@
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  border-radius: var(--radius-card);
+  border-radius: var(--radius-pill);
   padding: 15px 32px;
   font-size: 15px;
   font-weight: 700;
@@ -326,8 +314,8 @@
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  border-radius: 10px;
-  padding: 14px 20px;
+  border-radius: var(--radius-pill);
+  padding: 14px 22px;
   font-size: 14px;
   font-weight: 700;
   letter-spacing: -0.01em;
@@ -358,7 +346,7 @@
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  border-radius: var(--radius-card);
+  border-radius: var(--radius-pill);
   padding: 14px 28px;
   font-size: 15px;
   font-weight: 700;
@@ -389,7 +377,7 @@
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  border-radius: var(--radius-card);
+  border-radius: var(--radius-pill);
   padding: 15px 32px;
   font-size: 15px;
   font-weight: 700;
@@ -625,6 +613,33 @@
   }
   100% {
     transform: translateX(-50%);
+  }
+}
+
+@keyframes mp-ticker-reverse {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes accordion-down {
+  from {
+    height: 0;
+  }
+  to {
+    height: var(--radix-accordion-content-height);
+  }
+}
+
+@keyframes accordion-up {
+  from {
+    height: var(--radix-accordion-content-height);
+  }
+  to {
+    height: 0;
   }
 }
 

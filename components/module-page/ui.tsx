@@ -32,10 +32,10 @@ export function Eyebrow({ children }: { children: ReactNode }) {
     <div
       className={cn(
         MONO,
-        "inline-flex flex-wrap items-center gap-2 text-[12.5px] uppercase tracking-[0.08em] text-brand",
+        "inline-flex flex-wrap items-center gap-2 type-label text-brand-dark",
       )}
     >
-      <span className="h-px w-4 shrink-0 bg-current" aria-hidden />
+      <span className="size-1.5 shrink-0 rounded-full bg-brand" aria-hidden />
       {children}
     </div>
   );
@@ -47,9 +47,10 @@ export function Kicker({ children }: { children: ReactNode }) {
     <div
       className={cn(
         MONO,
-        "mb-2.5 text-[12px] uppercase tracking-[0.06em] text-ink-muted",
+        "mb-2.5 inline-flex items-center gap-2 type-label text-brand-dark",
       )}
     >
+      <span className="size-1.5 shrink-0 rounded-full bg-brand" aria-hidden />
       {children}
     </div>
   );

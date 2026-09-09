@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { MONO } from "@/components/module-page/ui";
@@ -37,13 +38,8 @@ export const CONTAINER = "mx-auto w-full max-w-[1220px] px-8 max-720:px-5";
 export const SECTION = "py-[clamp(64px,9vw,128px)] max-720:py-14";
 
 /**
- * .module-block - a ruled band holding one story.
- *
- * `.module-inner` is two equal columns with a 72px gutter, centred. The
- * reference flips `.reverse` blocks with `direction:rtl`, which puts the copy
- * in the right column; at 1080 it restores `ltr` and pulls the visual above the
- * copy. Both states place the visual first, so one pair of `order` rules does
- * the same job without inheriting an RTL text direction.
+ * A module story as a full-width band: two equal columns, visual first when
+ * `reverse` so the copy still sits on the right without an RTL text direction.
  */
 export function ModuleBlock({
   id,
@@ -57,12 +53,14 @@ export function ModuleBlock({
   visual: ReactNode;
 }) {
   return (
-    <section id={id} className={cn(SECTION, "border-t border-grey-mid")}>
+    <section
+      id={id}
+      className={cn(SECTION, "scroll-mt-[140px] border-t border-grey-mid bg-white")}
+    >
       <div
         className={cn(
-          CONTAINER,
-          "grid grid-cols-2 items-center gap-[72px]",
-          "max-1080:grid-cols-1 max-1080:gap-10",
+          "mx-auto grid w-full max-w-[1280px] grid-cols-2 items-center gap-16 px-10",
+          "max-1200:px-8 max-1080:grid-cols-1 max-1080:gap-10 max-600:px-4",
         )}
       >
         <div className={reverse ? "order-2 min-w-0" : "min-w-0"}>{copy}</div>
@@ -72,21 +70,144 @@ export function ModuleBlock({
   );
 }
 
+/** Full-width section shell used when a module needs its own layout. */
+export function SectionWrap({
+  id,
+  tone = "white",
+  children,
+}: {
+  id: string;
+  tone?: "white" | "grey";
+  children: ReactNode;
+}) {
+  return (
+    <section
+      id={id}
+      className={cn(
+        SECTION,
+        "scroll-mt-[140px] border-t border-grey-mid",
+        tone === "grey" ? "bg-grey-bg" : "bg-white",
+      )}
+    >
+      <div className="mx-auto w-full max-w-[1280px] px-10 max-1200:px-8 max-600:px-4">
+        {children}
+      </div>
+    </section>
+  );
+}
+
+export function OutcomeTiles({ items }: { items: readonly string[] }) {
+  return (
+    <ul className="grid gap-4 sm:grid-cols-3">
+      {items.map((item) => (
+        <li
+          key={item}
+          className="flex items-start gap-2.5 rounded-panel border border-grey-mid bg-white px-5 py-4"
+        >
+          <Tick className="mt-0.5 size-[15px] shrink-0 text-brand" />
+          <span className="text-[14.5px] font-medium leading-snug text-grey-500">
+            {item}
+          </span>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
+/**
+ * A real screenshot of the product, framed as an app window so it reads as
+ * software rather than as a photograph. The frame is the site's own chrome -
+ * grey-mid hairline, hero radius, navy-tinted float shadow - and the title
+ * strip names the surface being shown.
+ */
+export function ProductShot({
+  src,
+  alt,
+  width,
+  height,
+  label,
+  caption,
+  priority,
+}: {
+  src: string;
+  alt: string;
+  width: number;
+  height: number;
+  label: string;
+  caption?: string;
+  priority?: boolean;
+}) {
+  return (
+    <figure className="m-0">
+      <div className="overflow-hidden rounded-hero border border-grey-mid bg-white shadow-[0_36px_80px_-44px_rgba(0,86,173,0.55)]">
+        <div className="flex items-center gap-3 border-b border-grey-mid bg-grey-bg px-5 py-3 max-600:px-4">
+          <span className="flex shrink-0 gap-1.5" aria-hidden>
+            <span className="size-2.5 rounded-full bg-grey-bdr" />
+            <span className="size-2.5 rounded-full bg-grey-bdr" />
+            <span className="size-2.5 rounded-full bg-grey-bdr" />
+          </span>
+          <span className="min-w-0 truncate text-[12.5px] font-semibold text-grey-500">
+            {label}
+          </span>
+        </div>
+
+        <Image
+          src={src}
+          alt={alt}
+          width={width}
+          height={height}
+          priority={priority}
+          sizes="(max-width: 1280px) 100vw, 1200px"
+          className="h-auto w-full"
+        />
+      </div>
+
+      {caption ? (
+        <figcaption className="mt-4 text-center text-[13px] text-ink-muted">
+          {caption}
+        </figcaption>
+      ) : null}
+    </figure>
+  );
+}
+
 /* ── Copy column ──────────────────────────────────────────── */
 
-/** .eyebrow - mono 12.5px, uppercase, brand, with a 16px rule before it. */
-export function Eyebrow({ children }: { children: ReactNode }) {
+/** Section eyebrow: coloured dot + uppercase label. */
+export function Eyebrow({
+  children,
+  onDark,
+}: {
+  children: ReactNode;
+  onDark?: boolean;
+}) {
   return (
     <div
       className={cn(
-        MONO,
-        "mb-4 inline-flex items-center gap-2 text-[12.5px] uppercase tracking-[0.08em] text-brand",
+        "mb-4 inline-flex items-center gap-2 type-label",
+        onDark ? "text-brand-pale" : "text-brand-dark",
       )}
     >
-      <span className="h-px w-4 shrink-0 bg-current" aria-hidden />
+      <span
+        className={cn(
+          "size-1.5 shrink-0 rounded-full",
+          onDark ? "bg-brand-light" : "bg-brand",
+        )}
+        aria-hidden
+      />
       {children}
     </div>
   );
+}
+
+/** Two-tone highlight inside a headline - brand blue on light, pale on dark. */
+export function Accent({
+  children,
+}: {
+  children: ReactNode;
+  onDark?: boolean;
+}) {
+  return <span className="text-brand">{children}</span>;
 }
 
 /** .module-copy h2 - the shared h2 scale, 16px above the lede. */
@@ -105,9 +226,20 @@ export function ModuleHeading({
 }
 
 /** p.lede - 18px/1.6, 52ch measure, 26px below inside a module. */
-export function Lede({ children }: { children: ReactNode }) {
+export function Lede({
+  children,
+  className,
+}: {
+  children: ReactNode;
+  className?: string;
+}) {
   return (
-    <p className="mb-[26px] max-w-[52ch] text-[18px] leading-[1.6] text-grey-500">
+    <p
+      className={cn(
+        "mb-[26px] max-w-[52ch] text-[18px] leading-[1.6] text-grey-500",
+        className,
+      )}
+    >
       {children}
     </p>
   );
@@ -222,7 +354,7 @@ export function MockCard({
   return (
     <div
       className={cn(
-        "overflow-hidden rounded-tile border border-grey-mid bg-white shadow-[0_24px_56px_rgba(15,29,84,0.09)]",
+        "overflow-hidden rounded-hero border border-grey-mid bg-white shadow-[0_24px_56px_rgba(15,29,84,0.09)]",
         className,
       )}
     >
