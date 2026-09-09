@@ -30,13 +30,16 @@ export type FrontMatter = {
 };
 
 /** The pillar as the author writes it - "A - Ambient AI & Clinical
-    Documentation" - reduced to the label a card should show. */
+    Documentation" - reduced to the label a card should show. Authors separate
+    the letter from its label with a hyphen, an en dash or an em dash, so all
+    three are stripped. */
 export function pillarLabel(pillar: string) {
-  return pillar.replace(/^[A-Z]\s*[–-]\s*/, "").trim();
+  return pillar.replace(/^[A-Z]\s*[—–-]\s*/, "").trim();
 }
 
 function parseFrontMatter(source: string) {
-  if (!source.startsWith("---")) return { data: {} as Record<string, string>, body: source };
+  if (!source.startsWith("---"))
+    return { data: {} as Record<string, string>, body: source };
 
   const end = source.indexOf("\n---", 3);
   if (end === -1) return { data: {} as Record<string, string>, body: source };
@@ -53,7 +56,12 @@ function parseFrontMatter(source: string) {
 
 /* ── Inline syntax ────────────────────────────────────────── */
 
-export type Inline = { text: string; bold?: boolean; href?: string };
+export type Inline = {
+  text: string;
+  bold?: boolean;
+  italic?: boolean;
+  href?: string;
+};
 
 /**
  * Built fresh on each call rather than shared.
@@ -62,30 +70,49 @@ export type Inline = { text: string; bold?: boolean; href?: string };
  * recurses into bold runs - a shared instance would have the inner call reset
  * the outer one's position and the loop would never terminate.
  */
-const inlinePattern = () => /\*\*([^*]+)\*\*|\[([^\]]+)\]\(([^)]+)\)/g;
+const inlinePattern = () =>
+  /\*\*([^*]+)\*\*|\*([^*]+)\*|\[([^\]]+)\]\(([^)]+)\)/g;
+
+/** The emphasis a run has inherited from the markers enclosing it. */
+type Marks = { bold?: boolean; italic?: boolean };
 
 /**
- * Bold and links, in one pass.
+ * Bold, italic and links, in one pass.
  *
- * A run may be bold, a link, or both - the post closes with
- * `**[Explore Ambient AI & Dictation →](/ambient-ai-dictation/)**` - so a bold
- * match is re-read for a link inside it and the bold flag carried down.
+ * A run may carry any combination of the three - a post closes with
+ * `**[Explore Revenue Assurance →](/revenue-assurance/)**`, and one cites its
+ * source as `*Source: [CMS, ...](https://www.cms.gov/...)*` - so an emphasis
+ * match is re-read for what is inside it and the marks carried down.
+ *
+ * Bold is the first alternative in the pattern, so `**x**` is read as bold
+ * rather than as an italic run wrapping `*x*`.
  */
-export function parseInline(text: string, bold = false): Inline[] {
+export function parseInline(text: string, marks: Marks = {}): Inline[] {
   const out: Inline[] = [];
   const pattern = inlinePattern();
   let last = 0;
 
-  for (let m = pattern.exec(text); m; m = pattern.exec(text)) {
-    if (m.index > last) out.push({ text: text.slice(last, m.index), bold: bold || undefined });
+  const plain = (slice: string) => ({
+    text: slice,
+    bold: marks.bold || undefined,
+    italic: marks.italic || undefined,
+  });
 
-    if (m[1] !== undefined) out.push(...parseInline(m[1], true));
-    else out.push({ text: m[2], href: m[3], bold: bold || undefined });
+  for (let m = pattern.exec(text); m; m = pattern.exec(text)) {
+    if (m.index > last) out.push(plain(text.slice(last, m.index)));
+
+    if (m[1] !== undefined) {
+      out.push(...parseInline(m[1], { ...marks, bold: true }));
+    } else if (m[2] !== undefined) {
+      out.push(...parseInline(m[2], { ...marks, italic: true }));
+    } else {
+      out.push({ ...plain(m[3]), href: m[4] });
+    }
 
     last = m.index + m[0].length;
   }
 
-  if (last < text.length) out.push({ text: text.slice(last), bold: bold || undefined });
+  if (last < text.length) out.push(plain(text.slice(last)));
 
   return out.filter((run) => run.text.length > 0);
 }
@@ -138,7 +165,10 @@ export function parsePost(source: string): BlogBlock[] {
 
   const flush = () => {
     if (paragraph.length) {
-      blocks.push({ kind: "paragraph", runs: parseInline(paragraph.join(" ")) });
+      blocks.push({
+        kind: "paragraph",
+        runs: parseInline(paragraph.join(" ")),
+      });
       paragraph = [];
     }
     if (list) {
@@ -253,10 +283,48 @@ export type BlogPost = {
  * a post's publishing metadata lives. Change the date here and the card, the
  * article page, the sitemap and the Article schema all follow.
  */
-const PUBLISHED: Record<string, { date: string; datetime: string; author: string }> = {
+const PUBLISHED: Record<
+  string,
+  { date: string; datetime: string; author: string }
+> = {
   "ai-scribe-home-health-guide": {
     date: "September 4, 2026",
     datetime: "2026-09-04",
+    author: "Murphi.ai",
+  },
+  "what-is-pdgm-home-health-reimbursement-2026": {
+    date: "September 9, 2026",
+    datetime: "2026-09-09",
+    author: "Murphi.ai",
+  },
+  "home-health-text-reminders": {
+    date: "September 10, 2026",
+    datetime: "2026-09-10",
+    author: "Murphi.ai",
+  },
+  "text-to-pay-home-health": {
+    date: "September 11, 2026",
+    datetime: "2026-09-11",
+    author: "Murphi.ai",
+  },
+  "what-is-notice-of-admission-noa": {
+    date: "September 12, 2026",
+    datetime: "2026-09-12",
+    author: "Murphi.ai",
+  },
+  "home-health-denial-trends-2026": {
+    date: "September 13, 2026",
+    datetime: "2026-09-13",
+    author: "Murphi.ai",
+  },
+  "home-health-staffing-shortage-ai": {
+    date: "September 14, 2026",
+    datetime: "2026-09-14",
+    author: "Murphi.ai",
+  },
+  "scale-coding-billing-consultancy": {
+    date: "September 15, 2026",
+    datetime: "2026-09-15",
     author: "Murphi.ai",
   },
 };
@@ -267,13 +335,43 @@ const IMAGES: Record<string, { src: string; alt: string }> = {
     src: "/blog/ai-scribe-home-health-guide.svg",
     alt: "How an AI scribe for home health captures a visit and drafts OASIS, HOPE and discipline notes for clinician review",
   },
+  "what-is-pdgm-home-health-reimbursement-2026": {
+    src: "/blog/pdgm-home-health-featured-image-v2.svg",
+    alt: "How a home health chart moves from the EHR through coding, OASIS and PDGM review to findings a reviewer resolves before write-back",
+  },
+  "home-health-text-reminders": {
+    src: "/blog/text-reminders-featured-image.png",
+    alt: "A visit reminder sent from the Murphi staff app, confirmed by a caregiver's text reply and logged to the communication history - without a phone call",
+  },
+  "text-to-pay-home-health": {
+    src: "/blog/text-to-pay-featured-image.png",
+    alt: "A patient balance sent as a secure payment link by text, paid from the patient's phone, and reconciled back to the EHR ledger - without a mailed statement",
+  },
+  "what-is-notice-of-admission-noa": {
+    src: "/blog/noa-featured-image.png",
+    alt: "A referral arriving by fax, email, portal or EHR, checked and classified at intake, and filed as an NOA inside the five-day window from start of care - on time, with no penalty",
+  },
+  "home-health-denial-trends-2026": {
+    src: "/blog/denial-trends-featured-image.png",
+    alt: "A claim checked for eligibility, authorization and documentation, with a documentation gap intercepted before submission and set against the denial reasons MAC-published data ranks highest",
+  },
+  "home-health-staffing-shortage-ai": {
+    src: "/blog/staffing-shortage-featured-image.png",
+    alt: "An existing care team carrying unassigned visits, and the time AI hands back to it - AI-assisted charting, same-day referral to start of care, and automated billing follow-up",
+  },
+  "scale-coding-billing-consultancy": {
+    src: "/blog/scale-consultancy-featured-image.svg",
+    alt: "Forty agency client workspaces running one standardized review process - home health and hospice reports, each client's data kept separate, and human sign-off required before anything is delivered",
+  },
 };
 
 const DIR = join(process.cwd(), "content", "blog");
 
 function readPost(file: string): BlogPost {
   const fileSlug = file.replace(/\.md$/, "");
-  const { data, body } = parseFrontMatter(readFileSync(join(DIR, file), "utf8"));
+  const { data, body } = parseFrontMatter(
+    readFileSync(join(DIR, file), "utf8"),
+  );
   const blocks = parsePost(body);
 
   const heading = blocks.find(
@@ -335,11 +433,15 @@ export const blogHref = (post: { slug: string }) => `/blog/${post.slug}/`;
  * prose, are untouched.
  */
 export function readPostBody(slug: string): BlogBlock[] {
-  const { body } = parseFrontMatter(readFileSync(join(DIR, `${slug}.md`), "utf8"));
+  const { body } = parseFrontMatter(
+    readFileSync(join(DIR, `${slug}.md`), "utf8"),
+  );
   const blocks = parsePost(body);
 
   const notes = blocks.findIndex(
-    (block) => block.kind === "heading" && /^Suggested Internal Links$/i.test(block.text),
+    (block) =>
+      block.kind === "heading" &&
+      /^Suggested Internal Links$/i.test(block.text),
   );
   const article = notes === -1 ? blocks : blocks.slice(0, notes);
 
@@ -347,7 +449,8 @@ export function readPostBody(slug: string): BlogBlock[] {
   const trimmed = article.filter(
     (block, i) => !(block.kind === "heading" && block.level === 1 && i === 0),
   );
-  while (trimmed.length && trimmed[trimmed.length - 1].kind === "rule") trimmed.pop();
+  while (trimmed.length && trimmed[trimmed.length - 1].kind === "rule")
+    trimmed.pop();
 
   return trimmed;
 }

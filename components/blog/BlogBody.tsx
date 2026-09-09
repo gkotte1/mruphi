@@ -1,9 +1,10 @@
+import type { ReactNode } from "react";
 import Link from "next/link";
 import type { BlogBlock, Inline } from "@/lib/blog";
 import { cn } from "@/lib/cn";
 
 /**
- * The article body, at the same editorial scale the announcement pages use  - 
+ * The article body, at the same editorial scale the announcement pages use  -
  * 16.5px prose on a 1.75 rhythm, 23px section headings, 18.5px sub-headings.
  *
  * It adds the two things a blog post needs that an announcement does not: a
@@ -20,16 +21,16 @@ export default function BlogBody({ blocks }: { blocks: BlogBlock[] }) {
   );
 }
 
-/** One run of prose: plain, bold, a link, or a bold link. */
+/** One run of prose: plain, bold, italic, a link, or any combination. */
 function Runs({ runs }: { runs: Inline[] }) {
   return (
     <>
       {runs.map((run, i) => {
-        const body = run.bold ? (
-          <strong className="font-bold text-ink">{run.text}</strong>
-        ) : (
-          run.text
-        );
+        let body: ReactNode = run.text;
+        if (run.bold) {
+          body = <strong className="font-bold text-ink">{body}</strong>;
+        }
+        if (run.italic) body = <em className="italic">{body}</em>;
 
         if (!run.href) return <span key={i}>{body}</span>;
 
