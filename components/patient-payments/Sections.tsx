@@ -198,7 +198,7 @@ export function Outcomes({
     <section className="bg-brand py-14">
       <div className={CONTAINER}>
         <div className="mx-auto mb-10 max-w-[640px] text-center text-grey-bg">
-          <h2 className="type-h2">{heading}</h2>
+          <h2 className="type-h2 text-white">{heading}</h2>
         </div>
 
         <div className="grid grid-cols-3 gap-px overflow-hidden rounded-tile bg-white/[0.16] max-720:grid-cols-2">
@@ -242,7 +242,7 @@ export function EhrIntegration({
   return (
     <section id="ehr" className={SECTION}>
       <Reveal>
-        <div className="mx-auto max-w-[1156px] rounded-panel bg-grey-bg px-12 py-14 max-720:mx-5 max-720:px-6 max-720:py-10">
+        <div className="mx-auto max-w-[1156px] rounded-panel bg-white px-12 py-14 max-720:mx-5 max-720:px-6 max-720:py-10">
           <div className="grid grid-cols-[0.88fr_1.12fr] items-center gap-14 max-1080:grid-cols-1 max-1080:gap-10">
             <div className="min-w-0">
               <Eyebrow>EHR Integration</Eyebrow>

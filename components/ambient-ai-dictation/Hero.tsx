@@ -105,22 +105,45 @@ export default function Hero() {
  * reads as layered product UI, and the offsets fall away under 600px so
  * nothing can overflow on a phone.
  */
+/**
+ * The stack's shared clock.
+ *
+ * One 12s cycle, four 3s phases: listening, visit understood and fields
+ * populating, note types generated, clinician review and sync. Each element
+ * below picks its phase with a negative delay into that same cycle, so the
+ * four can never drift apart however long the page is left open. The
+ * keyframes live in globals.css; reduced motion stops all of them.
+ */
+const CYCLE = "12s";
+const PHASE = { capture: 0, fields: -9, notes: -6, sync: -3 } as const;
+
+const step = (at: number) => ({
+  animation: `mp-scribe-step ${CYCLE} ease-in-out ${at}s infinite`,
+});
+
 function MockCard() {
   return (
+    /* Every section below is w-full inside this one 460px column, so their
+       left and right edges form a single straight line. They used to step in
+       at 94%, 88% and 76%, which read as four loosely placed cards rather than
+       one workflow. */
     <div className="relative mx-auto max-w-[460px]">
       {/* Where the record came from. */}
       <span
         className={cn(
           MONO,
-          "mb-3 inline-flex items-center gap-2 rounded-full border border-grey-mid bg-white px-3 py-1.5 text-[10.5px] uppercase tracking-[0.06em] text-grey-500 shadow-[0_8px_20px_-12px_rgba(15,29,84,0.18)]",
+          "mb-4 flex w-full items-center gap-2 rounded-full border border-grey-mid bg-white px-4 py-1.5 text-[10.5px] uppercase tracking-[0.06em] text-grey-500 shadow-[0_8px_20px_-12px_rgba(15,29,84,0.18)]",
         )}
       >
         <Icon name="server" width={11} height={11} className="shrink-0 text-brand" />
-        Patient record fetched from EHR
+        <span className="min-w-0 truncate">Patient record fetched from EHR</span>
       </span>
 
-      {/* ── Capture ── */}
-      <div className="relative z-20 overflow-hidden rounded-tile border border-grey-mid bg-white shadow-[0_18px_44px_-28px_rgba(15,29,84,0.18)]">
+      {/* ── 1 · Capture ── */}
+      <div
+        className="relative z-20 w-full overflow-hidden rounded-tile border border-grey-mid bg-white shadow-[0_18px_44px_-28px_rgba(15,29,84,0.18)]"
+        style={step(PHASE.capture)}
+      >
         <div
           className={cn(
             MONO,
@@ -132,20 +155,28 @@ function MockCard() {
             <span className="truncate">Ambient AI + Voice Dictation</span>
           </span>
           <span className="flex shrink-0 items-center gap-2 text-white">
-            <span className="size-1.5 rounded-full bg-current" aria-hidden />
+            <span
+              className="size-1.5 rounded-full bg-current"
+              style={{ animation: "mp-blink 2.4s ease-in-out infinite" }}
+              aria-hidden
+            />
             Listening
           </span>
         </div>
 
         <div className="px-5 py-3 max-600:px-4">
-          <CaptureWave quiet />
+          {/* Compact, but always moving: the microphone is open. */}
+          <CaptureWave quiet live />
         </div>
       </div>
 
-      <Thread />
+      <Thread at={PHASE.fields} />
 
-      {/* ── Documentation, stepped in beneath the capture card ── */}
-      <div className="relative z-10 mx-auto w-[94%] overflow-hidden rounded-tile border border-grey-mid bg-white shadow-[0_18px_44px_-28px_rgba(15,29,84,0.18)] max-600:w-full">
+      {/* ── 2 · Documentation ── */}
+      <div
+        className="relative z-10 w-full overflow-hidden rounded-tile border border-grey-mid bg-white shadow-[0_18px_44px_-28px_rgba(15,29,84,0.18)]"
+        style={step(PHASE.fields)}
+      >
         <div
           className={cn(
             MONO,
@@ -157,15 +188,18 @@ function MockCard() {
         </div>
 
         <div className="px-5 py-3 max-600:px-4">
-          <FieldRows lines={GENERATED} quiet />
+          <FieldRows lines={GENERATED} quiet cycle={PHASE.fields} />
         </div>
       </div>
 
-      <Thread />
+      <Thread at={PHASE.notes} />
 
-      {/* ── What the encounter produced ── */}
-      <div className="relative z-10 mx-auto w-[88%] rounded-tile border border-grey-mid bg-grey-bg p-3.5 shadow-[0_18px_44px_-28px_rgba(15,29,84,0.18)] max-600:w-full">
-        <DocTiles items={NOTE_TYPES} quiet />
+      {/* ── 3 · What the encounter produced ── */}
+      <div
+        className="relative z-10 w-full rounded-tile border border-grey-mid bg-grey-bg p-3.5 shadow-[0_18px_44px_-28px_rgba(15,29,84,0.18)]"
+        style={step(PHASE.notes)}
+      >
+        <DocTiles items={NOTE_TYPES} quiet cycle={PHASE.notes} />
 
         <p
           className={cn(
@@ -177,25 +211,44 @@ function MockCard() {
         </p>
       </div>
 
-      <Thread />
+      <Thread at={PHASE.sync} />
 
-      {/* ── Where they went ── */}
+      {/* ── 4 · Where they went ── */}
       <div
         className={cn(
           MONO,
-          "mx-auto flex w-[76%] items-center justify-center gap-2 rounded-full bg-brand px-4 py-2 text-[10.5px] uppercase tracking-[0.06em] text-white shadow-[0_8px_20px_-12px_rgba(15,29,84,0.18)] max-600:w-full",
+          "flex w-full items-center justify-center gap-2 rounded-full bg-brand px-4 py-2 text-[10.5px] uppercase tracking-[0.06em] text-white shadow-[0_8px_20px_-12px_rgba(15,29,84,0.18)]",
         )}
+        style={{
+          animation: `mp-scribe-seal ${CYCLE} ease-in-out ${PHASE.sync}s infinite`,
+        }}
       >
-        <Icon name="check" width={12} height={12} className="shrink-0" />
+        <Icon
+          name="check"
+          width={12}
+          height={12}
+          className="shrink-0"
+          style={{
+            animation: `mp-scribe-mark ${CYCLE} ease-in-out ${PHASE.sync}s infinite`,
+          }}
+        />
         <span className="min-w-0 truncate">Clinician review → synced to EHR</span>
       </div>
     </div>
   );
 }
 
-/** The run between two surfaces - a hairline, no travelling marker. */
-function Thread() {
+/** The run between two surfaces: a hairline, with the chart travelling down it
+    once per cycle at the moment the section below takes over. */
+function Thread({ at }: { at: number }) {
   return (
-    <div className="mx-auto h-4 w-px bg-brand-pale" aria-hidden />
+    <div className="relative mx-auto h-4 w-px bg-brand-pale" aria-hidden>
+      {/* The hand-off: one dot runs the connector as the section below it
+          takes its turn, so the workflow reads as moving downward. */}
+      <span
+        className="absolute left-1/2 size-1.5 -translate-x-1/2 rounded-full bg-brand"
+        style={{ animation: `mp-scribe-flow ${CYCLE} ease-in-out ${at}s infinite` }}
+      />
+    </div>
   );
 }

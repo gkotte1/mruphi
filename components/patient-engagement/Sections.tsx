@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import type { ReactNode } from "react";
 import { Icon, type IconName } from "@/components/icons";
 import Reveal from "@/components/module-page/Reveal";
@@ -262,7 +261,7 @@ export function Outcomes({
     <section className="bg-brand py-14">
       <div className={CONTAINER}>
         <div className="mx-auto mb-10 max-w-[640px] text-center text-grey-bg">
-          <h2 className="type-h2">{heading}</h2>
+          <h2 className="type-h2 text-white">{heading}</h2>
         </div>
 
         <div className="grid grid-cols-3 gap-px overflow-hidden rounded-tile bg-white/[0.16] max-720:grid-cols-2">
@@ -298,7 +297,7 @@ export function EhrIntegration() {
   return (
     <section id="ehr" className={SECTION}>
       <Reveal>
-        <div className="mx-auto max-w-[1156px] rounded-panel bg-grey-bg px-12 py-14 max-720:mx-5 max-720:px-6 max-720:py-10">
+        <div className="mx-auto max-w-[1156px] rounded-panel bg-white px-12 py-14 max-720:mx-5 max-720:px-6 max-720:py-10">
           <div className="grid grid-cols-[0.88fr_1.12fr] items-center gap-14 max-1080:grid-cols-1 max-1080:gap-10">
             <div className="min-w-0">
               <Eyebrow>EHR Integration</Eyebrow>
@@ -456,59 +455,5 @@ function Run({ label }: { label?: string }) {
         </>
       ) : null}
     </div>
-  );
-}
-
-/* ── More From Murphi: rows that lead somewhere ──────────────── */
-
-const RELATED_ICONS: Record<string, IconName> = {
-  "Ambient AI & Dictation": "mic",
-  "Patient Payments": "card",
-};
-
-export function MoreRows({
-  cards,
-}: {
-  cards: { title: string; href: string; body: string }[];
-}) {
-  return (
-    <Reveal>
-      <div className="overflow-hidden rounded-panel border border-grey-mid bg-white shadow-[0_16px_40px_rgba(15,29,84,.06)]">
-        {cards.map((card, i) => (
-          <Link
-            key={card.title}
-            href={card.href}
-            className={cn(
-              "group flex items-center gap-5 px-7 py-6 transition-colors duration-200 hover:bg-grey-bg max-600:gap-4 max-600:px-5 max-600:py-5",
-              i === 0 ? "" : "border-t border-grey-mid",
-            )}
-          >
-            <span className="flex size-11 shrink-0 items-center justify-center rounded-tile border border-brand-pale bg-brand-tint text-brand-dark transition-colors duration-200 group-hover:border-transparent group-hover:bg-brand group-hover:text-grey-bg">
-              <Icon
-                name={RELATED_ICONS[card.title] ?? "network"}
-                width={20}
-                height={20}
-              />
-            </span>
-
-            <div className="min-w-0 flex-1">
-              <h4 className="text-[16px] font-bold leading-snug tracking-[-0.015em] text-ink">
-                {card.title}
-              </h4>
-              <p className="mt-1.5 max-w-[62ch] text-[13px] leading-[1.55] text-grey-500">
-                {card.body}
-              </p>
-            </div>
-
-            <Icon
-              name="arrow"
-              width={18}
-              height={18}
-              className="shrink-0 text-grey-bdr transition-all duration-200 group-hover:translate-x-1 group-hover:text-brand"
-            />
-          </Link>
-        ))}
-      </div>
-    </Reveal>
   );
 }

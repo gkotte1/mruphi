@@ -196,7 +196,7 @@ export default function AccreditationBodiesPage() {
           }
         />
 
-        <ModuleSection id="both-sides" border={false}>
+        <ModuleSection id="both-sides">
           <StoryRule>The Same Night, Rewritten - For Both</StoryRule>
 
           <h2 className="mb-14 max-w-[640px] type-h2 text-ink max-720:mb-9">
@@ -232,7 +232,7 @@ export default function AccreditationBodiesPage() {
 
         <Outcomes heading="What both sides get back." outcomes={OUTCOMES} />
 
-        <FaqSection items={FAQS.accreditationBodies} />
+        <FaqSection items={FAQS.accreditationBodies} divider="none" />
 
         <FinalCta
           heading="Skip the Night of Binders. Skip the Stack of Paper."

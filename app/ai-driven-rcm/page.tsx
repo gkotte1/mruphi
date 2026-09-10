@@ -136,7 +136,7 @@ export default function AiDrivenRcmPage() {
           }
         />
 
-        <ModuleSection border={false}>
+        <ModuleSection>
           <Reveal>
             <SoonCallout>
               <strong className="text-brand-dark">Launching Soon.</strong> AI-Driven
@@ -191,7 +191,7 @@ export default function AiDrivenRcmPage() {
 
         <Outcomes heading="What agencies get back." outcomes={OUTCOMES} />
 
-        <FaqSection items={FAQS.aiDrivenRcm} />
+        <FaqSection items={FAQS.aiDrivenRcm} divider="none" />
 
         <FinalCta
           heading={"Read the Denial Letter Before It's Written."}

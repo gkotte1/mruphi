@@ -18,12 +18,10 @@ import {
 } from "@/components/module-page/sections";
 import WorkflowLayer from "@/components/agencies/HeroVisual";
 import Roles, { type Role } from "@/components/agencies/Roles";
-import Stories, { type Story } from "@/components/agencies/Stories";
 import {
   EhrLayer,
   ModuleLinks,
   StartSmall,
-  StoriesHead,
 } from "@/components/agencies/Sections";
 
 export const metadata: Metadata = pageMetadata("/agencies/", {
@@ -106,43 +104,6 @@ const RELATED = [
   },
 ];
 
-const VICKI = {
-  quote:
-    '"Murphi AI has truly transformed how we approach clinical workflow documentation in hospice and palliative care. Documentation that used to take up valuable clinical time is now streamlined, accurate, and intuitive."',
-  initials: "VG",
-  name: "Vicki Goodman",
-  role: "Chief Revenue Officer, Curantis Solutions",
-};
-
-const TESTIMONIALS: Story[] = [
-  VICKI,
-  {
-    quote:
-      "Another Home Health or Hospice customer quote goes here - placeholder pending a validated testimonial.",
-    initials: " - ",
-    name: "Customer name",
-    role: "Role, Agency",
-    placeholder: true,
-  },
-  {
-    quote:
-      "A third Home Health or Hospice customer quote goes here - placeholder pending a validated testimonial.",
-    initials: " - ",
-    name: "Customer name",
-    role: "Role, Agency",
-    placeholder: true,
-  },
-  VICKI,
-  {
-    quote:
-      "Another Home Health or Hospice customer quote goes here - placeholder pending a validated testimonial.",
-    initials: " - ",
-    name: "Customer name",
-    role: "Role, Agency",
-    placeholder: true,
-  },
-];
-
 export default function AgenciesPage() {
   return (
     <div>
@@ -177,7 +138,6 @@ export default function AgenciesPage() {
 
         <ModuleSection
           id="roles"
-          border={false}
           kicker="Everybody's Monday Looks Different"
           heading="Find what changes for your role."
         >
@@ -211,11 +171,6 @@ export default function AgenciesPage() {
             ]}
           />
         </div>
-
-        <ModuleSection border={false}>
-          <StoriesHead heading="What Home Health and Hospice agencies say." />
-          <Stories cards={TESTIMONIALS} />
-        </ModuleSection>
 
         <FaqSection items={FAQS.agencies} />
 

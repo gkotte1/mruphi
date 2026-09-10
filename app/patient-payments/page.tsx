@@ -110,7 +110,7 @@ export default function PatientPaymentsPage() {
           visual={<PaymentJourney />}
         />
 
-        <ModuleSection border={false}>
+        <ModuleSection>
           <StoryRule>The Same $84, Two Ways</StoryRule>
           <Timelines
             before={{

@@ -33,12 +33,16 @@ const WAVE = [
 export function CaptureWave({
   className,
   quiet,
+  live,
 }: {
   className?: string;
   /** Shorter, and still. Used where the visual should read as product state
       rather than perform - the hero, where it was the loudest thing on the
       page at 74px with twenty-four independently animating bars. */
   quiet?: boolean;
+  /** Keep the bars moving at the shorter height. The hero pairs this with
+      `quiet` so the waveform stays compact but reads as actively listening. */
+  live?: boolean;
 }) {
   return (
     <div
@@ -60,7 +64,7 @@ export function CaptureWave({
           )}
           style={{
             height: `${height * 1.7}%`,
-            ...(quiet
+            ...(quiet && !live
               ? {}
               : {
                   animation: `mp-wave ${1 + (i % 5) * 0.18}s ease-in-out ${i * 0.05}s infinite`,
@@ -82,10 +86,18 @@ export function CaptureWave({
 export function FieldRows({
   lines,
   quiet,
+  cycle,
 }: {
   lines: readonly string[];
   /** Tighter, and already settled - no staggered arrival, no blinking caret. */
   quiet?: boolean;
+  /**
+   * Offset into the hero's shared 12s cycle, in seconds, at which the first
+   * row's tick lights; each row follows 0.3s behind the one above it. Given a
+   * value, the ticks fill in one by one and stay lit for the rest of the cycle.
+   * Left undefined, they are simply always on.
+   */
+  cycle?: number;
 }) {
   return (
     <div className="overflow-hidden rounded-tile border border-grey-mid">
@@ -104,7 +116,16 @@ export function FieldRows({
               : { animation: `mp-fade-up .45s ease forwards ${0.2 + i * 0.18}s` }
           }
         >
-          <span className="mt-[1px] flex size-[15px] shrink-0 items-center justify-center rounded-full bg-brand text-white">
+          <span
+            className="mt-[1px] flex size-[15px] shrink-0 items-center justify-center rounded-full bg-brand text-white"
+            style={
+              cycle === undefined
+                ? undefined
+                : {
+                    animation: `mp-scribe-mark 12s ease-in-out ${cycle + i * 0.3}s infinite`,
+                  }
+            }
+          >
             <Icon name="check" width={9} height={9} />
           </span>
 
@@ -135,12 +156,19 @@ export function DocTiles({
   columns = 3,
   className,
   quiet,
+  cycle,
 }: {
   items: readonly string[];
   columns?: 2 | 3;
   className?: string;
   /** Tighter, and already settled - no staggered arrival. */
   quiet?: boolean;
+  /**
+   * Offset into the hero's shared 12s cycle, in seconds, at which the first
+   * tile ticks; each tile follows 0.25s behind. Given a value, the note types
+   * check off one by one and stay checked for the rest of the cycle.
+   */
+  cycle?: number;
 }) {
   return (
     <div
@@ -176,6 +204,13 @@ export function DocTiles({
             width={11}
             height={11}
             className="shrink-0 text-brand"
+            style={
+              cycle === undefined
+                ? undefined
+                : {
+                    animation: `mp-scribe-mark 12s ease-in-out ${cycle + i * 0.25}s infinite`,
+                  }
+            }
           />
         </div>
       ))}

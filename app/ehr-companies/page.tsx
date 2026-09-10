@@ -271,7 +271,7 @@ export default function EhrCompaniesPage() {
           </div>
         </section>
 
-        <ModuleSection border={false}>
+        <ModuleSection>
           <Pillars pillars={PILLARS} />
         </ModuleSection>
 

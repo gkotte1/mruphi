@@ -36,7 +36,7 @@ export default function HomePage() {
         <PatientPayments />
         <EhrConnectivity />
 
-        <FaqSection items={FAQS.home} divider="container" />
+        <FaqSection items={FAQS.home} />
 
         <FinalCta />
       </main>

@@ -1,18 +1,16 @@
-import Link from "next/link";
 import { Icon, type IconName } from "@/components/icons";
 import Reveal from "@/components/module-page/Reveal";
 import { CONTAINER, Kicker, SECTION, SectionHead } from "@/components/module-page/ui";
 import { cn } from "@/lib/cn";
 
 /**
- * Three sections that were three grids of the same rectangle. Each now takes
+ * Two sections that were two grids of the same rectangle. Each now takes
  * the composition its content actually calls for:
  *
  *   Capabilities   a ruled two-column ledger - a spec sheet of details that
  *                  affect reimbursement, scanned by title, not read as boxes
  *   Built For      one surface divided into three, because the section is
  *                  about one piece of infrastructure with three properties
- *   More From      navigational rows that lead somewhere, not cards that sit
  *
  * Every string is the one that was already here.
  */
@@ -67,21 +65,6 @@ const BUILT_FOR: Card[] = [
     title: "Near Real-Time EHR Sync",
     icon: "sync",
     body: "Notes move to your EHR without changing how your team already works inside it.",
-  },
-];
-
-const RELATED: (Card & { href: string })[] = [
-  {
-    title: "Revenue Assurance",
-    href: "/revenue-assurance/",
-    icon: "chartup",
-    body: "The same chart Murphi just helped write gets reviewed for coding and compliance before it's ever submitted.",
-  },
-  {
-    title: "Patient Engagement",
-    href: "/patient-engagement/",
-    icon: "community",
-    body: "Reminders, updates and signatures - in one connected thread with the patient and caregiver.",
   },
 ];
 
@@ -146,54 +129,6 @@ export function BuiltFor() {
                   {item.body}
                 </p>
               </div>
-            ))}
-          </div>
-        </Reveal>
-      </div>
-    </section>
-  );
-}
-
-/* ── More from Murphi: rows that lead somewhere ───────────── */
-
-export function MoreFromMurphi() {
-  return (
-    <section className={cn("border-t border-grey-mid", SECTION)}>
-      <div className={CONTAINER}>
-        <Kicker>More From Murphi</Kicker>
-        <SectionHead>The chart is only the first step.</SectionHead>
-
-        <Reveal>
-          <div className="overflow-hidden rounded-panel border border-grey-mid bg-white shadow-[0_16px_40px_rgba(15,29,84,.06)]">
-            {RELATED.map((item, i) => (
-              <Link
-                key={item.title}
-                href={item.href}
-                className={cn(
-                  "group flex items-center gap-5 px-7 py-6 transition-colors duration-200 hover:bg-grey-bg max-600:gap-4 max-600:px-5 max-600:py-5",
-                  i === 0 ? "" : "border-t border-grey-mid",
-                )}
-              >
-                <span className="flex size-11 shrink-0 items-center justify-center rounded-tile border border-brand-pale bg-brand-tint text-brand-dark transition-colors duration-200 group-hover:border-transparent group-hover:bg-brand group-hover:text-grey-bg">
-                  <Icon name={item.icon} width={20} height={20} />
-                </span>
-
-                <div className="min-w-0 flex-1">
-                  <h4 className="text-[16px] font-bold leading-snug tracking-[-0.015em] text-ink">
-                    {item.title}
-                  </h4>
-                  <p className="mt-1.5 max-w-[62ch] text-[13px] leading-[1.55] text-grey-500">
-                    {item.body}
-                  </p>
-                </div>
-
-                <Icon
-                  name="arrow"
-                  width={18}
-                  height={18}
-                  className="shrink-0 text-grey-bdr transition-all duration-200 group-hover:translate-x-1 group-hover:text-brand"
-                />
-              </Link>
             ))}
           </div>
         </Reveal>

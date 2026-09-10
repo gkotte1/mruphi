@@ -137,7 +137,7 @@ export default function ReferralToNoaPage() {
           }
         />
 
-        <ModuleSection border={false}>
+        <ModuleSection>
           <Reveal>
             <SoonCallout>
               <strong className="text-brand-dark">Launching Soon.</strong> Referral
@@ -202,7 +202,7 @@ export default function ReferralToNoaPage() {
 
         <Outcomes heading="What agencies get back." outcomes={OUTCOMES} />
 
-        <FaqSection items={FAQS.referralToNoa} />
+        <FaqSection items={FAQS.referralToNoa} divider="none" />
 
         <FinalCta
           heading="Stop Losing Fridays to a Fax Tray."

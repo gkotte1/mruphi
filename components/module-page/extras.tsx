@@ -99,7 +99,9 @@ export function TechTicker({ items }: { items: string[] }) {
   const doubled = [...items, ...items];
 
   return (
-    <section className="pt-0 pb-0">
+    /* The hairline sits at the hero boundary, as it does on every other page;
+       the ticker band itself keeps its own spacing below it. */
+    <section className="border-t border-grey-mid pt-0 pb-0">
       <div
         className="mt-9 overflow-hidden bg-brand-ghost py-[22px]"
         style={{
@@ -400,84 +402,6 @@ export function HeroModulesCard({
                 </em>
               ) : null}
             </span>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}
-
-/* ── Testimonial marquee (Agencies) ─────────────────────── */
-
-export type Testimonial = {
-  quote: string;
-  initials: string;
-  name: string;
-  role: string;
-  placeholder?: boolean;
-};
-
-export function TestimonialTrack({ cards }: { cards: Testimonial[] }) {
-  const doubled = [...cards, ...cards];
-
-  return (
-    <div
-      className="relative w-full overflow-hidden"
-      style={{
-        maskImage:
-          "linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent)",
-        WebkitMaskImage:
-          "linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent)",
-      }}
-    >
-      <div
-        className="flex w-max gap-5 motion-reduce:animate-none"
-        style={{ animation: "mp-marquee-slow 32s linear infinite" }}
-      >
-        {doubled.map((card, i) => (
-          <div
-            key={`${card.name}-${i}`}
-            className={cn(
-              "w-[360px] shrink-0 rounded-tile border px-6 py-[26px] shadow-[0_8px_24px_rgba(15,29,84,.05)]",
-              card.placeholder
-                ? "border-dashed border-grey-mid bg-grey-soft"
-                : "border-grey-mid bg-white",
-            )}
-          >
-            <blockquote
-              className={cn(
-                "mb-[18px] text-[14.5px] leading-[1.55]",
-                card.placeholder
-                  ? "font-normal text-ink-muted italic"
-                  : "font-medium text-ink",
-              )}
-            >
-              {card.quote}
-            </blockquote>
-
-            <div className="flex items-center gap-2.5">
-              <div
-                className={cn(
-                  "flex size-9 shrink-0 items-center justify-center rounded-full text-[12.5px] font-bold",
-                  card.placeholder
-                    ? "bg-grey-mid text-ink-muted"
-                    : "bg-brand text-white",
-                )}
-              >
-                {card.initials}
-              </div>
-              <div>
-                <div
-                  className={cn(
-                    "text-[13px] font-bold",
-                    card.placeholder ? "text-ink-muted" : "text-ink",
-                  )}
-                >
-                  {card.name}
-                </div>
-                <div className="text-[12px] text-grey-500">{card.role}</div>
-              </div>
-            </div>
           </div>
         ))}
       </div>

@@ -261,7 +261,7 @@ export function Outcomes({
     <section className="bg-brand py-14">
       <div className={CONTAINER}>
         <div className="mx-auto mb-10 max-w-[640px] text-center text-grey-bg">
-          <h2 className="type-h2">{heading}</h2>
+          <h2 className="type-h2 text-white">{heading}</h2>
         </div>
 
         <div className="grid grid-cols-3 gap-px overflow-hidden rounded-tile bg-white/[0.16] max-720:grid-cols-2">

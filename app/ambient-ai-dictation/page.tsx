@@ -15,13 +15,11 @@ import HowItWorks from "@/components/ambient-ai-dictation/HowItWorks";
 import {
   BuiltFor,
   Capabilities,
-  MoreFromMurphi,
 } from "@/components/ambient-ai-dictation/CardGrids";
 import {
   EhrIntegration,
   FinalCta,
   Outcomes,
-  QuoteSpotlight,
   WhereItApplies,
 } from "@/components/ambient-ai-dictation/Sections";
 
@@ -51,10 +49,8 @@ export default function AmbientAiDictationPage() {
         <Capabilities />
         <BuiltFor />
         <WhereItApplies />
-        <QuoteSpotlight />
         <Outcomes />
         <EhrIntegration />
-        <MoreFromMurphi />
         <FaqSection items={FAQS.ambientAi} />
 
         <FinalCta />

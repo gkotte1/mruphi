@@ -178,7 +178,6 @@ export default function CodingBillingRcmPage() {
         />
 
         <ModuleSection
-          border={false}
           kicker="Work the Way You Want"
           heading="Two ways to run Priya's Tuesday."
         >
@@ -266,7 +265,7 @@ export default function CodingBillingRcmPage() {
 
         <Outcomes heading="What consulting firms get back." outcomes={OUTCOMES} />
 
-        <FaqSection items={FAQS.codingBillingRcm} />
+        <FaqSection items={FAQS.codingBillingRcm} divider="none" />
 
         <FinalCta
           heading="Make Every Tuesday Feel Like Client One."

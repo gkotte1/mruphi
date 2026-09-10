@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, type ReactNode } from "react";
+import type { ReactNode } from "react";
 import { Icon } from "@/components/icons";
 import Reveal from "@/components/module-page/Reveal";
 import {
@@ -16,22 +16,33 @@ import {
   DocTiles,
   FieldRows,
 } from "@/components/ambient-ai-dictation/Capture";
+import { useAutoAdvance } from "@/lib/useAutoAdvance";
 import { cn } from "@/lib/cn";
 
 /**
  * The three moments of a visit, as one interface.
  *
- * The section used to be three stacked rows, each with its copy on one side and
- * a panel on the other - which meant the reader met three separate layouts for
- * what is one continuous workflow. It is now a single composition: the phases
- * on the left as an accordion, one open at a time, and the matching product
- * surface on the right.
+ * The phases used to be an accordion down the left, which meant the reader had
+ * to open each one and the panel beside it jumped height as they did. They are
+ * now three tabs across the top, and the tab drives both columns: the copy on
+ * the left and the product surface on the right change together, so the
+ * section reads as tab -> workflow -> product rather than three separate rows.
  *
- * Motion uses what the site already has - the accordion's max-height slide and
- * the mp-view fade - rather than pulling in an animation library.
+ * All three views stay mounted in one grid cell and cross-fade, so the section
+ * holds the height of the tallest and nothing shifts as the tabs rotate.
  *
  * Every string below is the one the page already carried.
  */
+
+/**
+ * How long each tab holds.
+ *
+ * One second, as specified. It is a quick read for the body copy, so the
+ * rotation pauses while the pointer is over the section or a tab has keyboard
+ * focus, and stops altogether under prefers-reduced-motion. Change this one
+ * constant to slow it down.
+ */
+const TAB_MS = 1000;
 
 type Phase = {
   number: string;
@@ -105,7 +116,7 @@ const PHASES: Phase[] = [
 ];
 
 export default function HowItWorks() {
-  const [open, setOpen] = useState(0);
+  const { index, select, hold, release } = useAutoAdvance(PHASES.length, TAB_MS);
 
   return (
     <section id="how" className={cn("border-t border-grey-mid", SECTION)}>
@@ -114,90 +125,107 @@ export default function HowItWorks() {
         <SectionHead>How Murphi Completes Documentation For You</SectionHead>
 
         <Reveal>
-          <div className="grid grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)] items-start gap-14 max-1080:grid-cols-1 max-1080:gap-10">
-            {/* ── The three phases ── */}
-            <div className="min-w-0">
+          {/* ── The three phases, as tabs ──
+              The pointer or a focused tab holds the rotation, so the copy can
+              actually be read; leaving releases it. */}
+          <div
+            onMouseEnter={hold}
+            onMouseLeave={release}
+            onFocus={hold}
+            onBlur={release}
+          >
+            <div
+              role="tablist"
+              aria-label="The three moments of a visit"
+              className="grid grid-cols-3 gap-2 max-600:gap-1.5"
+            >
               {PHASES.map((phase, i) => {
-                const isOpen = i === open;
+                const on = i === index;
 
                 return (
-                  <div
+                  <button
                     key={phase.number}
+                    type="button"
+                    role="tab"
+                    id={`how-tab-${i}`}
+                    aria-selected={on}
+                    aria-controls={`how-panel-${i}`}
+                    tabIndex={on ? 0 : -1}
+                    onClick={() => select(i)}
                     className={cn(
-                      "border-l-2 pl-6 transition-colors duration-200 max-600:pl-4",
-                      isOpen ? "border-l-brand" : "border-l-transparent",
-                      i === PHASES.length - 1 ? "" : "border-b border-b-grey-mid",
+                      MONO,
+                      "min-w-0 rounded-card border px-4 py-3 text-[12px] font-semibold tracking-[0.05em] transition-colors duration-300 max-600:px-2.5 max-600:py-2.5 max-600:text-[11px]",
+                      on
+                        ? "border-brand bg-brand text-white"
+                        : "border-grey-mid bg-white text-grey-500 hover:border-brand-border hover:text-brand-dark",
                     )}
                   >
-                    <button
-                      type="button"
-                      onClick={() => setOpen(i)}
-                      aria-expanded={isOpen}
-                      className="flex w-full items-start gap-5 py-6 text-left max-600:gap-3.5"
-                    >
-                      <span className="min-w-0 flex-1">
-                        <span
-                          className={cn(
-                            MONO,
-                            "block text-[12px] font-semibold tracking-[0.05em] transition-colors duration-200",
-                            isOpen ? "text-brand" : "text-ink-muted",
-                          )}
-                        >
-                          {phase.number}
-                        </span>
-
-                        <span
-                          className={cn(
-                            "mt-2.5 block type-h4 transition-colors duration-200",
-                            isOpen ? "text-ink" : "text-grey-500",
-                          )}
-                        >
-                          {phase.heading}
-                        </span>
-                      </span>
-
-                      <span
-                        className={cn(
-                          "mt-1 flex size-7 shrink-0 items-center justify-center rounded-full border transition-all duration-200",
-                          isOpen
-                            ? "rotate-180 border-brand bg-brand text-grey-bg"
-                            : "border-grey-mid bg-white text-grey-500",
-                        )}
-                        aria-hidden
-                      >
-                        <Icon name="chevron" width={13} height={13} />
-                      </span>
-                    </button>
-
-                    {/* max-height rather than display, so it slides. */}
-                    <div
-                      className="overflow-hidden transition-[max-height] duration-[280ms] ease-[ease]"
-                      style={{ maxHeight: isOpen ? 320 : 0 }}
-                    >
-                      <p className="max-w-[52ch] pb-7 text-[15px] leading-[1.65] text-grey-500">
-                        {phase.body}
-                      </p>
-                    </div>
-                  </div>
+                    {phase.number}
+                  </button>
                 );
               })}
             </div>
 
-            {/* ── The surface for whichever phase is open ── */}
-            <div className="min-w-0 rounded-[28px] border border-brand-pale bg-brand-tint/40 p-7 max-1080:p-6 max-600:rounded-panel max-600:p-4">
-              <div key={open} className="mp-view">
-                {PHASES.map((phase, i) => (
-                  <div key={phase.panel} hidden={i !== open}>
-                    <Panel
-                      label={phase.panel}
-                      context={phase.context}
-                      live={phase.live}
-                    >
-                      {phase.visual}
-                    </Panel>
-                  </div>
-                ))}
-              </div>
+            {/* The one line that connects the active tab to the content: a
+                third of the rail, sliding under whichever tab is live. */}
+            <div className="relative mt-3 h-px w-full bg-grey-mid" aria-hidden>
+              <span
+                className="absolute inset-y-0 left-0 block w-1/3 bg-brand transition-transform duration-[400ms] ease-out"
+                style={{ transform: `translateX(${index * 100}%)` }}
+              />
+            </div>
+          </div>
+
+          <div className="mt-10 grid grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)] items-start gap-14 max-1080:grid-cols-1 max-1080:gap-10 max-600:mt-8">
+            {/* ── The copy for the active phase ── */}
+            <div className="grid min-w-0">
+              {PHASES.map((phase, i) => (
+                <div
+                  key={phase.number}
+                  role="tabpanel"
+                  id={`how-panel-${i}`}
+                  aria-labelledby={`how-tab-${i}`}
+                  aria-hidden={i !== index}
+                  className={cn(
+                    /* One cell, so the column keeps the height of the longest
+                       body and nothing shifts as the tabs rotate. */
+                    "col-start-1 row-start-1 min-w-0 transition-[opacity,transform] duration-[380ms] ease-out",
+                    i === index
+                      ? "translate-y-0 opacity-100"
+                      : "pointer-events-none translate-y-1 opacity-0",
+                  )}
+                >
+                  <h3 className="type-h4 text-ink">{phase.heading}</h3>
+
+                  <p className="mt-4 max-w-[52ch] text-[15px] leading-[1.65] text-grey-500">
+                    {phase.body}
+                  </p>
+                </div>
+              ))}
+            </div>
+
+            {/* ── The surface for the active phase ── */}
+            <div className="grid min-w-0 rounded-[28px] border border-brand-pale bg-brand-tint/40 p-7 max-1080:p-6 max-600:rounded-panel max-600:p-4">
+              {PHASES.map((phase, i) => (
+                <div
+                  key={phase.panel}
+                  aria-hidden={i !== index}
+                  className={cn(
+                    "col-start-1 row-start-1 min-w-0 transition-[opacity,transform] duration-[380ms] ease-out",
+                    i === index
+                      ? "translate-y-0 opacity-100"
+                      : "pointer-events-none translate-y-1 opacity-0",
+                  )}
+                >
+                  <Panel
+                    label={phase.panel}
+                    context={phase.context}
+                    live={phase.live}
+                  >
+                    {phase.visual}
+                  </Panel>
+                </div>
+              ))}
             </div>
           </div>
         </Reveal>

@@ -2,7 +2,6 @@ import Link from "next/link";
 import { Icon, type IconName } from "@/components/icons";
 import Reveal from "@/components/module-page/Reveal";
 import {
-  CONTAINER,
   Eyebrow,
   MONO,
   SECTION,
@@ -162,9 +161,9 @@ export function EhrLayer({
   steps: string[];
 }) {
   return (
-    <section id="ehr" className={SECTION}>
+    <section id="ehr" className={cn("border-t border-grey-mid", SECTION)}>
       <Reveal>
-        <div className="mx-auto max-w-[1156px] rounded-panel bg-grey-bg px-12 py-14 max-720:mx-5 max-720:px-6 max-720:py-10">
+        <div className="mx-auto max-w-[1156px] rounded-panel bg-white px-12 py-14 max-720:mx-5 max-720:px-6 max-720:py-10">
           <div className="grid grid-cols-[0.9fr_1.1fr] items-center gap-14 max-1080:grid-cols-1 max-1080:gap-10">
             <div className="min-w-0">
               <Eyebrow>EHR Integration</Eyebrow>
@@ -257,12 +256,3 @@ export function EhrLayer({
   );
 }
 
-/* ── A centred head, for the stories section ─────────────────── */
-
-export function StoriesHead({ heading }: { heading: string }) {
-  return (
-    <div className={cn(CONTAINER, "mb-14 text-center max-720:mb-10")}>
-      <h2 className="mx-auto max-w-[640px] type-h2 text-ink">{heading}</h2>
-    </div>
-  );
-}

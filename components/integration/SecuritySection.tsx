@@ -43,7 +43,7 @@ export default function SecuritySection() {
   return (
     <section
       aria-labelledby="security-heading"
-      className="relative isolate py-28 max-1024:py-20 max-600:py-16"
+      className="relative isolate border-t border-grey-mid py-28 max-1024:py-20 max-600:py-16"
     >
       <div
         className="pointer-events-none absolute inset-0 -z-10"

@@ -24,7 +24,6 @@ import {
   EhrIntegration,
   InsideLedger,
   MessageFlow,
-  MoreRows,
   Outcomes,
   WhySplit,
 } from "@/components/patient-engagement/Sections";
@@ -154,19 +153,6 @@ const OUTCOMES = [
   },
 ];
 
-const RELATED = [
-  {
-    title: "Ambient AI & Dictation",
-    href: "/ambient-ai-dictation/",
-    body: "Same visit, same thread - documentation completes itself in the background.",
-  },
-  {
-    title: "Patient Payments",
-    href: "/patient-payments/",
-    body: "The same secure thread carries the payment link, too. Text. Tap. Paid.",
-  },
-];
-
 export default function PatientEngagementPage() {
   return (
     <div>
@@ -252,13 +238,6 @@ export default function PatientEngagementPage() {
         <Outcomes heading="What agencies get back." outcomes={OUTCOMES} />
 
         <EhrIntegration />
-
-        <ModuleSection
-          kicker="More From Murphi"
-          heading="Once you're talking, the rest connects too."
-        >
-          <MoreRows cards={RELATED} />
-        </ModuleSection>
 
         <FaqSection items={FAQS.patientEngagement} />
 

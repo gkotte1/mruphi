@@ -151,7 +151,7 @@ export default function RevenueAssurancePage() {
           }
         />
 
-        <ModuleSection border={false}>
+        <ModuleSection>
           <StoryRule>The Same Chart, Two Timelines</StoryRule>
           <Timelines
             before={{

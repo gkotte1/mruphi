@@ -1,19 +1,58 @@
-import { Icon } from "@/components/icons";
+import type { ReactNode } from "react";
+import { Icon, type IconName } from "@/components/icons";
 import { MONO, Tick } from "@/components/module-page/ui";
-import { Finding, Run, ScanBar, Surface } from "@/components/revenue-assurance/Review";
 import { cn } from "@/lib/cn";
 
 /**
  * The hero visual: one chart, followed from the EHR to the write-back.
  *
- * It used to be a single bordered card with three bullet rows, which showed
- * the findings but never the thing that produces them. It is now a layered
- * composition - the record arriving, the review running over it, the findings
- * it raised, the day it happened, and the result going back - so the sequence
- * the page argues for is visible in a couple of seconds.
+ * Four cards on one vertical spine, connected by thin brand connectors with a
+ * node at each join, so the page's argument reads as a product workflow rather
+ * than an illustration:
  *
- * Every string is the one the page already carried.
+ *   the record arriving from the EHR
+ *        -> the review itself, with the findings it raised inside it
+ *        -> the day it happened
+ *        -> the result going back
+ *
+ * The chart review is the primary card: a full product window with a brand
+ * head, the scan of the chart and the finding rows. The other three are single
+ * supporting rows on the same grid, so the hierarchy is obvious before a word
+ * is read.
+ *
+ * Every string is the one the page already carried. Nothing here introduces
+ * copy: each stage is an icon, a rule, a node or a tick, never a new word.
  */
+
+/**
+ * One turn of the workflow.
+ *
+ * Four stages of four seconds. Every animated part below runs on this clock
+ * and picks its moment with a delay, so the stages cannot drift apart; the
+ * keyframes live in globals.css and all of them are stopped by the global
+ * prefers-reduced-motion rule, which leaves the resting composition on screen.
+ */
+const CYCLE = "16s";
+
+/** When each card takes its turn, in seconds into the cycle. */
+const STAGE = { source: 0, review: 4, found: 8, written: 12 } as const;
+
+/** A hand-off runs at the tail of the stage it leaves. */
+const HANDOFF = { toReview: 3.2, toFound: 7.2, toWritten: 11.2 } as const;
+
+/** The findings land one after another, once the review card is live. */
+const FINDING_AT = [4.5, 4.95, 5.4];
+
+const card = (at: number) => ({
+  animation: `mp-ra-card ${CYCLE} ease-in-out ${at}s infinite`,
+});
+const node = (at: number) => ({
+  animation: `mp-ra-node ${CYCLE} ease-in-out ${at}s infinite`,
+});
+
+/** Where each scan row rests: filled, most of the way, nearly done. */
+const SCAN = ["82%", "64%", "45%"];
+
 export default function ChartReviewStack({
   title,
   status,
@@ -28,91 +67,237 @@ export default function ChartReviewStack({
   foot: [string, string];
 }) {
   return (
-    <div className="relative mx-auto max-w-[460px]">
-      {/* Where the record came from. */}
-      <div className="mb-1 flex justify-center">
-        <span
-          className={cn(
-            MONO,
-            "inline-flex max-w-full items-center gap-2 rounded-full border border-grey-mid bg-white px-3.5 py-1.5 text-[11px] text-ink-muted shadow-[0_8px_20px_-12px_rgba(15,29,84,0.18)]",
-          )}
-        >
-          <span
-            className="flex size-4 shrink-0 items-center justify-center rounded-[5px] bg-brand-tint text-brand"
-            aria-hidden
-          >
-            <Icon name="server" width={10} height={10} />
-          </span>
-          <span className="min-w-0 truncate">{fetched}</span>
-        </span>
-      </div>
+    <div className="mx-auto flex max-w-[460px] flex-col">
+      {/* ── Where the record came from ── */}
+      <SupportCard icon="server" at={STAGE.source}>
+        {fetched}
+      </SupportCard>
 
-      <Run quiet />
+      <Connector at={HANDOFF.toReview} />
 
-      {/* The review itself. */}
-      <Surface
-        label={
-          <>
-            <Icon name="scan" width={13} height={13} className="shrink-0" />
-            <span className="truncate">{title}</span>
-          </>
-        }
-        status={status}
-        tone="brand"
-        quiet
-        className="relative z-20"
+      {/* ── The review itself, and what it raised ── */}
+      <div
+        className="overflow-hidden rounded-panel border border-grey-mid bg-white shadow-[0_20px_50px_rgba(15,29,84,.08)]"
+        style={card(STAGE.review)}
       >
-        <ScanBar rows={3} quiet />
+        <div className="flex flex-wrap items-center justify-between gap-x-3 gap-y-2 bg-brand px-5 py-2.5 max-720:px-4">
+          <span
+            className={cn(
+              MONO,
+              "flex min-w-0 items-center gap-2 text-[11px] uppercase tracking-[0.06em] text-white/90",
+            )}
+          >
+            <Icon name="scan" width={13} height={13} className="shrink-0" />
+            {/* Truncated where it fits on one line, wrapped where it does not,
+                so the label is never cut off on a narrow screen. */}
+            <span className="truncate max-600:overflow-visible max-600:text-clip max-600:whitespace-normal">
+              {title}
+            </span>
+          </span>
 
-        <div className="my-3 flex items-center gap-3" aria-hidden>
-          <span className="h-px flex-1 bg-grey-mid" />
-          <span className="flex size-1.5 rounded-full bg-brand-pale" />
-          <span className="h-px flex-1 bg-grey-mid" />
+          <span
+            className={cn(
+              MONO,
+              "flex shrink-0 items-center gap-1.5 rounded-full bg-white/15 px-2.5 py-1 text-[10.5px] font-semibold uppercase tracking-[0.04em] text-white",
+            )}
+          >
+            <span className="size-1.5 rounded-full bg-white" aria-hidden />
+            {status}
+          </span>
         </div>
 
-        <ul>
-          {findings.map((finding) => (
-            <Finding
+        {/* The chart being read: how far the review got on each pass. */}
+        <div className="flex flex-col gap-1.5 px-5 py-4 max-720:px-4" aria-hidden>
+          {SCAN.map((width) => (
+            <span
+              key={width}
+              className="relative h-1.5 w-full overflow-hidden rounded-full bg-grey-soft"
+            >
+              <span
+                className="absolute inset-y-0 left-0 rounded-full bg-brand/70"
+                style={{ width }}
+              />
+            </span>
+          ))}
+        </div>
+
+        {/* The findings, full bleed so a row highlight runs edge to edge. */}
+        <ul className="border-t border-grey-mid">
+          {findings.map((finding, i) => (
+            <FindingRow
               key={finding.title}
               tone={finding.tone}
               title={finding.title}
               meta={finding.meta}
+              at={FINDING_AT[i % FINDING_AT.length]}
             />
           ))}
         </ul>
-      </Surface>
+      </div>
 
-      <Run quiet />
+      <Connector at={HANDOFF.toFound} />
 
-      {/* When it happened. */}
-      <div className="relative z-10 mx-auto w-[94%] rounded-tile border border-grey-mid bg-grey-bg px-4 py-2.5 max-600:w-full">
-        <span className="flex items-center justify-center gap-2">
+      {/* ── When it happened ── */}
+      <SupportCard icon="pulse" at={STAGE.found}>
+        {foot[0]}
+      </SupportCard>
+
+      <Connector at={HANDOFF.toWritten} />
+
+      {/* ── Where it goes back to ── */}
+      <SupportCard
+        at={STAGE.written}
+        badge={
           <span
-            className="flex size-5 shrink-0 items-center justify-center rounded-full border border-brand-pale bg-white text-brand"
+            className="flex size-8 shrink-0 items-center justify-center rounded-[9px] bg-brand text-white"
             aria-hidden
           >
-            <Icon name="pulse" width={11} height={11} />
+            <Tick className="size-3.5" />
           </span>
-          <span className={cn(MONO, "min-w-0 truncate text-[12px] text-grey-500")}>
-            {foot[0]}
-          </span>
-        </span>
-      </div>
-
-      <Run quiet />
-
-      {/* Where it goes back to. */}
-      <div className="mx-auto flex w-[76%] items-center justify-center gap-2 rounded-full bg-brand px-4 py-2 shadow-[0_8px_20px_-12px_rgba(15,29,84,0.18)] max-600:w-full">
-        <Tick className="size-3.5 shrink-0 text-white" />
-        <span
-          className={cn(
-            MONO,
-            "min-w-0 truncate text-[12px] font-semibold tracking-[0.02em] text-white",
-          )}
-        >
-          {foot[1]}
-        </span>
-      </div>
+        }
+      >
+        {foot[1]}
+      </SupportCard>
     </div>
+  );
+}
+
+/**
+ * One of the three supporting rows: a badge, the line the page already
+ * carried, and the hairline that warms when this stage is live.
+ */
+function SupportCard({
+  icon,
+  badge,
+  at,
+  children,
+}: {
+  icon?: IconName;
+  /** The closing card seals rather than lights, so it supplies its own. */
+  badge?: ReactNode;
+  at: number;
+  children: ReactNode;
+}) {
+  return (
+    <div
+      className="flex min-h-[56px] items-center gap-3 rounded-tile border border-grey-mid bg-white px-4 py-3 shadow-[0_10px_26px_-18px_rgba(15,29,84,.35)]"
+      style={card(at)}
+    >
+      {badge ?? (
+        <span
+          className="flex size-8 shrink-0 items-center justify-center rounded-[9px] border-2 border-brand-pale bg-white text-brand"
+          style={node(at)}
+          aria-hidden
+        >
+          {icon ? <Icon name={icon} width={14} height={14} /> : null}
+        </span>
+      )}
+
+      <span
+        className={cn(
+          MONO,
+          "min-w-0 flex-1 text-[12px] leading-[1.45] text-grey-500",
+        )}
+      >
+        {children}
+      </span>
+    </div>
+  );
+}
+
+/**
+ * The run between two cards: a node on the edge each card presents, and the
+ * pale connector between them that brand fills as the chart moves along it.
+ *
+ * Fixed height, so all three runs are identical and the cards sit on an even
+ * grid. It lives in the gutter between cards and never crosses one.
+ */
+function Connector({ at }: { at: number }) {
+  return (
+    <div className="flex h-10 flex-col items-center" aria-hidden>
+      <Dot at={at} />
+
+      <span className="relative my-1 w-px flex-1 bg-brand-pale">
+        <span
+          className="absolute inset-0 origin-top bg-brand opacity-0"
+          style={{ animation: `mp-ra-line ${CYCLE} ease-in-out ${at}s infinite` }}
+        />
+      </span>
+
+      <Dot at={at} />
+    </div>
+  );
+}
+
+/** A connection point, where a connector meets a card. */
+function Dot({ at }: { at: number }) {
+  return (
+    <span
+      className="size-2 shrink-0 rounded-full border-2 border-brand-pale bg-white"
+      style={node(at)}
+    />
+  );
+}
+
+/**
+ * One finding, as the product would list it: severity on the left, the finding
+ * and where it came from in the middle, its state on the right. Equal height
+ * whichever tone it carries, so the three read as one list.
+ */
+function FindingRow({
+  tone,
+  title,
+  meta,
+  at,
+}: {
+  tone: "flag" | "opportunity";
+  title: string;
+  meta: string;
+  at: number;
+}) {
+  const flag = tone === "flag";
+
+  return (
+    <li
+      className="relative flex min-h-[58px] items-center gap-3 border-b border-grey-mid bg-transparent py-2.5 pr-5 pl-5 last:border-b-0 max-720:pr-4 max-720:pl-4"
+      style={{ animation: `mp-ra-row ${CYCLE} ease-in-out ${at}s infinite` }}
+    >
+      {/* The leading marker, on the row's own edge. It takes no width, so the
+          three rows stay aligned whether or not it is lit. */}
+      <span
+        className="absolute inset-y-0 left-0 w-[2px] bg-transparent"
+        style={{ animation: `mp-ra-rail ${CYCLE} ease-in-out ${at}s infinite` }}
+        aria-hidden
+      />
+
+      <span
+        className={cn(
+          "flex size-7 shrink-0 items-center justify-center rounded-[8px] border",
+          flag
+            ? "border-brand-deep/20 bg-brand-deep/10 text-brand-deep"
+            : "border-brand-pale bg-brand-tint text-brand",
+        )}
+        aria-hidden
+      >
+        <Icon name={flag ? "shield" : "chartup"} width={13} height={13} />
+      </span>
+
+      <span className="min-w-0 flex-1">
+        <span className="block text-[13px] leading-[1.4] font-semibold text-ink">
+          {title}
+        </span>
+        <span className={cn(MONO, "mt-0.5 block text-[11px] text-ink-muted")}>
+          {meta}
+        </span>
+      </span>
+
+      <span
+        className={cn(
+          "size-1.5 shrink-0 rounded-full",
+          flag ? "bg-brand-deep" : "bg-brand",
+        )}
+        aria-hidden
+      />
+    </li>
   );
 }

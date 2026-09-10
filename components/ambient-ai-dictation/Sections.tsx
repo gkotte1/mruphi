@@ -81,41 +81,6 @@ function ChipColumn({ title, chips }: { title: string; chips: string[] }) {
   );
 }
 
-/* ── Quote spotlight ── */
-
-export function QuoteSpotlight() {
-  return (
-    <section className={cn("border-t border-grey-mid bg-grey-bg", SECTION)}>
-      <div className={CONTAINER}>
-        <Reveal>
-          <div className="mx-auto max-w-[720px] rounded-panel border-l-[3px] border-brand bg-white px-10 py-9 shadow-[0_16px_40px_rgba(15,29,84,.06)] max-720:px-6 max-720:py-7">
-            <blockquote className="mb-6 text-[22px] font-semibold leading-[1.5] tracking-[-0.01em] text-ink max-720:text-[19px]">
-              &quot;Murphi AI has truly transformed how we approach clinical
-              workflow documentation in hospice and palliative care.
-              Documentation that used to take up valuable clinical time is now
-              streamlined, accurate, and intuitive.&quot;
-            </blockquote>
-
-            <div className="flex items-center gap-3 border-t border-grey-mid pt-6">
-              <div className="flex size-9 shrink-0 items-center justify-center rounded-full bg-brand text-[13px] font-bold text-white">
-                VG
-              </div>
-              <div className="text-left">
-                <div className="text-[13px] font-bold text-ink">
-                  Vicki Goodman
-                </div>
-                <div className="text-[12px] text-grey-500">
-                  Chief Revenue Officer, Curantis Solutions
-                </div>
-              </div>
-            </div>
-          </div>
-        </Reveal>
-      </div>
-    </section>
-  );
-}
-
 /* ── Outcomes strip ── */
 
 type Outcome = { title: string; sub: string; icon: "clock" | "tick" | "layers" | "shield" | "info" | "bolt" };
@@ -197,7 +162,7 @@ export function Outcomes() {
     <section className="bg-brand py-14">
       <div className={CONTAINER}>
         <div className="mx-auto mb-10 max-w-[640px] text-center text-grey-bg">
-          <h2 className="mb-2.5 type-h2">
+          <h2 className="mb-2.5 type-h2 text-white">
             What agencies get back.
           </h2>
           <p className="text-[16px] text-white/[0.68]">
@@ -235,7 +200,7 @@ export function EhrIntegration() {
   return (
     <section id="ehr" className={SECTION}>
       <Reveal>
-        <div className="mx-auto max-w-[1156px] rounded-panel bg-grey-bg px-12 py-14 max-720:mx-5 max-720:px-6 max-720:py-10">
+        <div className="mx-auto max-w-[1156px] rounded-panel bg-white px-12 py-14 max-720:mx-5 max-720:px-6 max-720:py-10">
           <div className="grid grid-cols-[0.88fr_1.12fr] items-center gap-14 max-1080:grid-cols-1 max-1080:gap-10">
             <div className="min-w-0">
               <Eyebrow>EHR Integration</Eyebrow>

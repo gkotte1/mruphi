@@ -478,6 +478,85 @@
 
 /* .waveform span on the home page reference - its own scaleY range, which
    is a touch shallower than mp-wave above. */
+/* ── Ambient AI hero: one 12s workflow cycle ──────────────
+   Listening, visit understood, note types, clinician review and sync. Every
+   animated element in that hero's stack runs on this same 12s clock and picks
+   its moment with a negative animation-delay, so the four phases cannot drift
+   apart no matter how long the page is left open. The global reduced-motion
+   rule below stops all of it. */
+
+/* A section's turn: its hairline warms to the brand tint and settles back. */
+@keyframes mp-scribe-step {
+  0% {
+    border-color: var(--color-grey-mid);
+  }
+  3% {
+    border-color: var(--color-brand-border);
+  }
+  22% {
+    border-color: var(--color-brand-border);
+  }
+  26%,
+  100% {
+    border-color: var(--color-grey-mid);
+  }
+}
+
+/* The closing bar's turn, which is filled rather than outlined. */
+@keyframes mp-scribe-seal {
+  0% {
+    background-color: var(--color-brand-dark);
+  }
+  3% {
+    background-color: var(--color-brand);
+  }
+  22% {
+    background-color: var(--color-brand);
+  }
+  26%,
+  100% {
+    background-color: var(--color-brand-dark);
+  }
+}
+
+/* One field or note type landing: it lights at its moment and stays lit for
+   the rest of the cycle, so the group reads as filling in rather than
+   flickering. */
+@keyframes mp-scribe-mark {
+  0% {
+    opacity: 0.3;
+  }
+  3% {
+    opacity: 1;
+  }
+  92% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0.3;
+  }
+}
+
+/* The hand-off between two sections: a dot runs the connector once per cycle. */
+@keyframes mp-scribe-flow {
+  0% {
+    top: 0;
+    opacity: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  7% {
+    top: calc(100% - 6px);
+    opacity: 0;
+  }
+  100% {
+    top: calc(100% - 6px);
+    opacity: 0;
+  }
+}
+
 @keyframes mp-wave-bounce {
   0%,
   100% {
@@ -649,5 +728,189 @@
   }
   100% {
     transform: translateX(-50%);
+  }
+}
+
+/* ── Revenue Assurance hero ────────────────────────────────
+   The hero visual is one chart followed from the EHR to the write-back, drawn
+   as four connected cards. Every animated part of it runs on this same 16s
+   clock and picks its moment with a positive animation-delay, so the four
+   stages - source, review, findings, write-back - cannot drift apart however
+   long the page is left open. Each stage owns four seconds of the cycle.
+
+   Every rule below returns to the element's own resting style, which is also
+   what the global reduced-motion rule leaves on screen: pale connectors, grey
+   card hairlines, untinted finding rows. Nothing is hidden waiting to appear,
+   so the workflow reads correctly with no motion at all. */
+
+/* A card's turn: its hairline warms to the brand tint and settles back. */
+@keyframes mp-ra-card {
+  0% {
+    border-color: var(--color-grey-mid);
+  }
+  3% {
+    border-color: var(--color-brand-border);
+  }
+  22% {
+    border-color: var(--color-brand-border);
+  }
+  27%,
+  100% {
+    border-color: var(--color-grey-mid);
+  }
+}
+
+/* A connection point: the ring closes to full brand while its card is live. */
+@keyframes mp-ra-node {
+  0% {
+    border-color: var(--color-brand-pale);
+    background-color: #ffffff;
+  }
+  3% {
+    border-color: var(--color-brand);
+    background-color: var(--color-brand-tint);
+  }
+  22% {
+    border-color: var(--color-brand);
+    background-color: var(--color-brand-tint);
+  }
+  27%,
+  100% {
+    border-color: var(--color-brand-pale);
+    background-color: #ffffff;
+  }
+}
+
+/* The hand-off between two cards: brand fills the pale connector downward,
+   holds while the next card takes over, then fades rather than retracting. */
+@keyframes mp-ra-line {
+  0% {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+  2% {
+    transform: scaleY(0);
+    opacity: 1;
+  }
+  9% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+  22% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+  30%,
+  100% {
+    transform: scaleY(1);
+    opacity: 0;
+  }
+}
+
+/* One finding landing. The rows are staggered, so the list reads as findings
+   arriving one after another rather than three lighting at once. */
+@keyframes mp-ra-row {
+  0% {
+    background-color: transparent;
+  }
+  3% {
+    background-color: var(--color-brand-tint);
+  }
+  18% {
+    background-color: var(--color-brand-tint);
+  }
+  25%,
+  100% {
+    background-color: transparent;
+  }
+}
+
+/* The marker on that row's leading edge, on the same beat. */
+@keyframes mp-ra-rail {
+  0% {
+    background-color: transparent;
+  }
+  3% {
+    background-color: var(--color-brand);
+  }
+  18% {
+    background-color: var(--color-brand);
+  }
+  25%,
+  100% {
+    background-color: transparent;
+  }
+}
+
+/* ── Revenue Assurance: the same chart, two timelines ──────
+   Two four-step tracks that run side by side on one 6s clock: a step holds for
+   a second and a half, then the rail advances to the next node and that step
+   takes over. Both cards share these rules and differ only in colour, so the
+   neutral track and the brand track stay in step with each other and the
+   comparison always lines up.
+
+   A step's delay is its index times 1.5s. That works with one shared rule
+   because the lit window is only a quarter of the cycle and the rest of the
+   rule is the resting style, so no step's turn can wrap into the next loop.
+
+   Both rules return to their resting style, which is also what the global
+   reduced-motion rule leaves on screen: plain nodes on a plain hairline, every
+   step legible and in order. */
+
+/* A step's turn. Drives an overlay, so the copy underneath never changes. */
+@keyframes mp-tl-on {
+  0% {
+    opacity: 0;
+  }
+  2% {
+    opacity: 1;
+  }
+  23% {
+    opacity: 1;
+  }
+  25%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* The rail between the four nodes, advancing exactly one node per turn: a
+   third of the run reaches step 2, two thirds step 3, all of it step 4. It
+   holds full until the loop closes, then fades before resetting, so the track
+   accumulates rather than flickering. */
+@keyframes mp-tl-rail {
+  0% {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+  2% {
+    transform: scaleY(0);
+    opacity: 1;
+  }
+  17% {
+    transform: scaleY(0);
+  }
+  25% {
+    transform: scaleY(0.3333);
+  }
+  42% {
+    transform: scaleY(0.3333);
+  }
+  50% {
+    transform: scaleY(0.6667);
+  }
+  67% {
+    transform: scaleY(0.6667);
+  }
+  75% {
+    transform: scaleY(1);
+  }
+  94% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scaleY(1);
+    opacity: 0;
   }
 }

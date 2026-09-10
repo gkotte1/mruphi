@@ -171,7 +171,7 @@ const SUB_PROCESSORS = [
 ];
 
 const SHELL = "mx-auto w-full max-w-[1280px] px-10 max-1200:px-8 max-600:px-4";
-const BAND = "py-24 max-1024:py-20 max-600:py-16";
+const BAND = "border-t border-grey-mid py-24 max-1024:py-20 max-600:py-16";
 const H2 = "type-h2 text-ink";
 
 export default function SecurityPage() {

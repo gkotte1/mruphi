@@ -20,7 +20,7 @@ export default function PaymentIntegration() {
   return (
     <section
       aria-labelledby="payment-heading"
-      className="relative isolate bg-white py-28 max-1024:py-20 max-600:py-16"
+      className="relative isolate border-t border-grey-mid bg-white py-28 max-1024:py-20 max-600:py-16"
     >
       <div className="mx-auto w-full max-w-[1280px] px-10 max-1200:px-8 max-600:px-4">
         <div className="max-w-[760px]">
