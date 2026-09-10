@@ -189,7 +189,7 @@ export function SourceCard({
  */
 export function MurphiNode({ status }: { status?: string }) {
   return (
-    <div className="relative mx-auto flex w-full max-w-[260px] flex-col items-center gap-2.5 rounded-[22px] border border-brand-pale bg-white px-5 py-5 shadow-[0_18px_44px_-20px_rgba(15,29,84,.55)]">
+    <div className="relative mx-auto flex w-full flex-col items-center gap-2.5 rounded-[22px] border border-brand-pale bg-white px-5 py-5 shadow-[0_18px_44px_-20px_rgba(15,29,84,.55)]">
       {/* A quiet ring, so the node reads as working rather than static. */}
       <span
         className="absolute -inset-1 rounded-[26px] border border-brand-pale motion-reduce:hidden"
@@ -304,7 +304,7 @@ export function SystemNode({
     <div
       className={cn(
         "mx-auto flex w-full flex-col items-center gap-2 rounded-tile bg-brand shadow-[0_12px_28px_-14px_rgba(0,106,214,.7)]",
-        compact ? "max-w-[220px] px-4 py-3" : "max-w-[300px] px-5 py-4",
+        compact ? "px-4 py-3" : "px-5 py-4",
       )}
     >
       <span className="flex items-center gap-2.5">

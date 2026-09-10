@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
+import { LogoMark } from "@/components/Logo";
 import { MONO } from "@/components/module-page/ui";
 import { cn } from "@/lib/cn";
 
@@ -622,14 +623,15 @@ export function FlowStep({
         className={cn(
           "flex size-[58px] items-center justify-center rounded-full max-720:size-11",
           accent
-            ? "bg-deep"
-            : "border-[1.5px] border-grey-mid bg-white shadow-[0_3px_10px_rgba(15,29,84,0.06)]",
+            ? "bg-brand"
+            : "border-[1.5px] border-grey-mid bg-[#E5E7EB] shadow-[0_3px_10px_rgba(15,29,84,0.06)]",
         )}
+        aria-label={accent ? label : undefined}
       >
-        <svg viewBox="0 0 24 24" fill="none" className="size-6" aria-hidden>
-          {accent ? (
-            <circle cx="12" cy="12" r="8" stroke="#fff" strokeWidth="1.6" />
-          ) : (
+        {accent ? (
+          <LogoMark variant="white" size={28} />
+        ) : (
+          <svg viewBox="0 0 24 24" fill="none" className="size-6 text-grey-500" aria-hidden>
             <rect
               x="4"
               y="4"
@@ -638,13 +640,18 @@ export function FlowStep({
               rx="3"
               stroke="currentColor"
               strokeWidth="1.6"
-              className="text-grey-500"
             />
-          )}
-        </svg>
+          </svg>
+        )}
       </span>
 
-      <span className="text-[12.5px] leading-[1.25] font-semibold text-ink max-720:text-[11px]">
+      <span
+        className={cn(
+          "text-[12.5px] leading-[1.25] font-semibold text-ink max-720:text-[11px]",
+          accent && "invisible",
+        )}
+        aria-hidden={accent || undefined}
+      >
         {label}
       </span>
     </div>

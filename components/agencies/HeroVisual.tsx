@@ -35,19 +35,41 @@ export default function WorkflowLayer({
   const { index, hold, release } = useAutoAdvance(live.length, 2600);
   const activeIndex = live[index];
 
+  /* Four modules use a 2×2 tile grid; stems stay one-per-column so each
+     column draws a single thin line from Murphi.ai down to the stack. */
+  const columns = modules.length <= 4 ? 2 : 3;
+  const stemCount = modules.length <= 4 ? columns : modules.length;
+
   return (
     <div onMouseEnter={hold} onMouseLeave={release}>
       <Surface label={label} status="Live">
         <LayerBand label="Murphi.ai" />
 
-        {/* One stem per workflow, lighting for whichever is highlighted. */}
-        <div className="grid grid-cols-3 max-720:grid-cols-2 max-600:grid-cols-1">
-          {modules.map((module, i) => (
-            <Stem key={module.name} lit={i === activeIndex} />
-          ))}
+        <div
+          className={
+            columns === 2
+              ? "grid grid-cols-2 max-600:grid-cols-1"
+              : "grid grid-cols-3 max-720:grid-cols-2 max-600:grid-cols-1"
+          }
+        >
+          {Array.from({ length: stemCount }, (_, i) => {
+            const lit =
+              activeIndex >= 0 &&
+              (modules.length <= 4
+                ? activeIndex % columns === i
+                : i === activeIndex);
+
+            return <Stem key={i} lit={lit} />;
+          })}
         </div>
 
-        <div className="grid grid-cols-3 gap-2.5 max-720:grid-cols-2 max-600:grid-cols-1">
+        <div
+          className={
+            columns === 2
+              ? "grid grid-cols-2 gap-2.5 max-600:grid-cols-1"
+              : "grid grid-cols-3 gap-2.5 max-720:grid-cols-2 max-600:grid-cols-1"
+          }
+        >
           {modules.map((module, i) => (
             <ModuleTile
               key={module.name}

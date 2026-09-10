@@ -63,7 +63,7 @@ export function Environment({
         <div
           className={cn(
             MONO,
-            "flex flex-wrap items-center justify-between gap-2 border-t border-grey-mid bg-grey-bg px-5 py-3 text-[11px] text-ink-muted max-720:px-4",
+            "flex flex-wrap items-center justify-between gap-2 border-t border-grey-mid bg-grey-bg px-5 py-3 text-[11px] text-black max-720:px-4",
           )}
         >
           {foot}

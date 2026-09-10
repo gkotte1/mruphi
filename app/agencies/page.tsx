@@ -32,11 +32,9 @@ export const metadata: Metadata = pageMetadata("/agencies/", {
 
 const MODULES = [
   { name: "Clinical Documentation" },
-  { name: "Revenue Assurance" },
   { name: "Patient Engagement" },
+  { name: "Revenue Assurance" },
   { name: "Patient Payments" },
-  { name: "Referral / Intake", soon: true },
-  { name: "AI-Driven RCM", soon: true },
 ];
 
 const ROLES: Role[] = [
@@ -44,7 +42,12 @@ const ROLES: Role[] = [
     id: "owner",
     label: "Owner / Administrator",
     what: "The census check, the payroll approval and the denial call don't go away - but the OASIS review she was supposed to get to by 9 already happened overnight.",
-    modules: ["Ambient AI", "Revenue Assurance", "Patient Payments"],
+    modules: [
+      "Ambient AI",
+      "Revenue Assurance",
+      "Patient Payments",
+      "Patient Engagement",
+    ],
   },
   {
     id: "clinician",
@@ -82,7 +85,7 @@ const SETTINGS = [
   },
   {
     label: "Hospice",
-    items: ["HOPE", "IDG Documentation", "Chaplain / Social Worker Notes"],
+    items: ["HOPE", "Chaplain / Social Worker Notes", "IDG Documentation"],
   },
 ];
 
@@ -101,6 +104,11 @@ const RELATED = [
     title: "Patient Payments",
     href: "/patient-payments/",
     body: "Text. Tap. Paid. - collections with automatic reconciliation.",
+  },
+  {
+    title: "Patient Engagement",
+    href: "/patient-engagement/",
+    body: "Meet patients where they are - secure SMS outreach without an app install.",
   },
 ];
 

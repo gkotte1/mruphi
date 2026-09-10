@@ -6,6 +6,7 @@ import {
   Panel,
   RequirementRow,
   ZoneLabel,
+  type EvidenceDoc,
 } from "@/components/accreditation-bodies/Evidence";
 
 /**
@@ -21,6 +22,34 @@ import {
  * The mark is the project's own LogoMark - no new or generated image. Every
  * string is the one the page already carried.
  */
+
+const EVIDENCE: EvidenceDoc[] = [
+  {
+    title: "Policy & Procedure",
+    meta: "P&P packet · Rev 2024.3",
+    ref: "Std 2.1 · Mar 12",
+    state: "mapped",
+  },
+  {
+    title: "Training Record",
+    meta: "Staff competencies · Q3",
+    ref: "HR-TR-184 · Gap",
+    state: "review",
+  },
+  {
+    title: "Audit Documentation",
+    meta: "Chart sample · 12 files",
+    ref: "QA-AUD-09 · Ready",
+    state: "mapped",
+  },
+  {
+    title: "Quality Report",
+    meta: "QAPI summary · Approved",
+    ref: "QAPI-07 · Live",
+    state: "mapped",
+  },
+];
+
 export default function SurveyReadiness({
   title,
   status,
@@ -48,9 +77,9 @@ export default function SurveyReadiness({
     >
       {/* What came out of the record. */}
       <ZoneLabel>Evidence</ZoneLabel>
-      <div className="grid grid-cols-4 gap-2 max-600:grid-cols-2">
-        {[0, 1, 2, 3].map((i) => (
-          <EvidenceTile key={i} index={i} />
+      <div className="grid grid-cols-2 gap-2 max-600:grid-cols-1">
+        {EVIDENCE.map((doc, i) => (
+          <EvidenceTile key={doc.title} doc={doc} index={i} />
         ))}
       </div>
 

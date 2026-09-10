@@ -192,11 +192,13 @@ export default function SecurityPage() {
 /* ── Section 1 ── */
 function Hero() {
   return (
-    <section className="bg-white pt-[80px]">
-      {/* The page's one deliberate #007EFF outline: a thin border that frames
-          the claim without turning the hero into a blue panel. */}
-      <div className={cn(SHELL, "py-16 max-600:py-10")}>
-        <div className="mx-auto max-w-[1000px] rounded-[32px] border border-brand bg-white px-14 py-16 text-center shadow-[0_30px_80px_-50px_rgba(0,126,255,0.45)] max-1024:px-10 max-600:rounded-[24px] max-600:px-6 max-600:py-10">
+    <section className="bg-hero-bg pt-[80px]">
+      <div
+        className={cn(
+          SHELL,
+          "py-16 text-center max-600:py-10",
+        )}
+      >
         <p className="type-label inline-flex items-center gap-2 rounded-full border border-brand-ghost bg-brand-tint px-3.5 py-1.5 text-brand-dark">
           <Icon name="shield" width={13} height={13} />
           Security &amp; Compliance
@@ -255,7 +257,6 @@ function Hero() {
             </span>
           </li>
         </ul>
-        </div>
       </div>
     </section>
   );
@@ -306,15 +307,7 @@ function Pillars() {
 /* ── Section 3 ── */
 function ZeroTrust() {
   return (
-    <section aria-labelledby="zero-trust" className={cn("relative isolate", BAND)}>
-      <div
-        className="pointer-events-none absolute inset-0 -z-10"
-        style={{
-          background: "#FFFFFF",
-        }}
-        aria-hidden
-      />
-
+    <section aria-labelledby="zero-trust" className={cn("relative isolate bg-tint", BAND)}>
       <div className={SHELL}>
         <div className="mx-auto max-w-[680px] text-center">
           <p className="type-label text-brand-dark">Zero Trust Architecture</p>
@@ -371,18 +364,8 @@ function CardBand({
   return (
     <section
       aria-labelledby={id}
-      className={cn("relative isolate", BAND, tinted ? "" : "bg-white")}
+      className={cn("relative isolate", BAND, tinted ? "bg-tint" : "bg-white")}
     >
-      {tinted ? (
-        <div
-          className="pointer-events-none absolute inset-0 -z-10"
-          style={{
-            background: "#FFFFFF",
-          }}
-          aria-hidden
-        />
-      ) : null}
-
       <div className={SHELL}>
         <div className="mx-auto max-w-[700px] text-center">
           <p className="type-label text-brand-dark">{label}</p>
@@ -526,15 +509,7 @@ function Controls() {
 /* ── Section 7 ── */
 function ResponsibleAi() {
   return (
-    <section aria-labelledby="responsible-ai" className={cn("relative isolate", BAND)}>
-      <div
-        className="pointer-events-none absolute inset-0 -z-10"
-        style={{
-          background: "#FFFFFF",
-        }}
-        aria-hidden
-      />
-
+    <section aria-labelledby="responsible-ai" className={cn("relative isolate bg-tint", BAND)}>
       <div className={SHELL}>
         <p className="type-label text-brand-dark text-center">AI Governance</p>
 

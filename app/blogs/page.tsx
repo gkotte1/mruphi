@@ -40,28 +40,31 @@ export default function BlogPage() {
       <Navbar />
 
       <main className="pt-[80px]">
-        <section className="bg-white">
-          <div className={cn(SHELL, "pt-16 pb-14 max-600:pt-10 max-600:pb-10")}>
-            <div className="mx-auto max-w-[1000px] rounded-[32px] border border-brand bg-white px-14 py-16 text-center shadow-[0_30px_80px_-50px_rgba(0,126,255,0.45)] max-1024:px-10 max-600:rounded-[24px] max-600:px-6 max-600:py-10">
-              <p className="type-label inline-flex items-center gap-2 rounded-full border border-brand-ghost bg-brand-tint px-3.5 py-1.5 text-brand-dark">
-                <Icon name="doc" width={13} height={13} />
-                Blog
-              </p>
+        <section className="bg-hero-bg">
+          <div
+            className={cn(
+              SHELL,
+              "pt-16 pb-14 text-center max-600:pt-10 max-600:pb-10",
+            )}
+          >
+            <p className="type-label inline-flex items-center gap-2 rounded-full border border-brand-ghost bg-brand-tint px-3.5 py-1.5 text-brand-dark">
+              <Icon name="doc" width={13} height={13} />
+              Blog
+            </p>
 
-              <h1 className="mt-7 type-h1 text-ink">
-                Home Health &amp; Hospice AI, explained.
-              </h1>
+            <h1 className="mt-7 type-h1 text-ink">
+              Home Health &amp; Hospice AI, explained.
+            </h1>
 
-              <p className="type-lead mx-auto mt-6 max-w-[620px] text-grey-dk">
-                Practical guides on clinical documentation, revenue assurance,
-                patient engagement and EHR integration - written for the teams
-                who do the work.
-              </p>
-            </div>
+            <p className="type-lead mx-auto mt-6 max-w-[620px] text-grey-dk">
+              Practical guides on clinical documentation, revenue assurance,
+              patient engagement and EHR integration - written for the teams
+              who do the work.
+            </p>
           </div>
         </section>
 
-        <section className="bg-white pb-28 max-1024:pb-20 max-600:pb-16">
+        <section className="bg-white pt-16 pb-28 max-1024:pb-20 max-600:pt-12 max-600:pb-16">
           <div className={SHELL}>
             {POSTS.length > 0 ? (
               <ul className="grid grid-cols-3 gap-6 max-1024:grid-cols-2 max-768:grid-cols-1 max-600:gap-5">

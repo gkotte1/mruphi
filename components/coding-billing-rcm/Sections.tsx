@@ -95,7 +95,7 @@ function Band({
 
   return (
     <div className={cn(after ? "bg-brand-tint/30" : "bg-white", after ? "" : "border-b border-grey-mid")}>
-      <div className="flex items-center gap-3 px-8 pt-7 pb-5 max-600:px-6">
+      <div className="flex items-center justify-center gap-3 px-8 pt-7 pb-5 max-600:px-6">
         <span
           className={cn(
             "flex size-6 shrink-0 items-center justify-center rounded-full border",
@@ -170,9 +170,18 @@ export function ReviewSurface({
   findings: { tone: "flag" | "opportunity"; title: string; meta: string }[];
   client: string;
 }) {
+  /* Murphi Brand → #007EFF; Your Brand → medium gray. Only one panel is
+     visible at a time, so these never show as active together. */
+  const murphi = brand === "Murphi.ai";
+
   return (
     <div className="overflow-hidden rounded-panel border border-grey-mid bg-white shadow-[0_20px_50px_rgba(15,29,84,.08)]">
-      <div className="flex items-center justify-between gap-3 bg-brand px-5 py-3 max-720:px-4">
+      <div
+        className={cn(
+          "flex items-center justify-between gap-3 px-5 py-4 max-720:px-4",
+          murphi ? "bg-brand" : "bg-[#6B7280]",
+        )}
+      >
         <span
           className={cn(
             MONO,
@@ -258,7 +267,9 @@ export function Outcomes({
   return (
     <section className="bg-brand py-14">
       <div className={CONTAINER}>
-        <h2 className="mb-10 max-w-[640px] type-h2 text-grey-bg">{heading}</h2>
+        <h2 className="mx-auto mb-10 max-w-[640px] text-center type-h2 text-grey-bg">
+          {heading}
+        </h2>
 
         <div className="grid grid-cols-3 gap-px overflow-hidden rounded-tile bg-white/[0.16] max-720:grid-cols-2 max-600:grid-cols-1">
           {outcomes.map((outcome) => (

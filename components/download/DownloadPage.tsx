@@ -11,9 +11,8 @@ import { cn } from "@/lib/cn";
  *
  * The three platform marks are the images the source page itself carries.
  *
- * The hero sits inside a thin #007EFF outline - the page's one deliberate use
- * of the brand colour at that scale. Everything below it stays on white with
- * hairline rules, so the outline reads as emphasis rather than decoration.
+ * The former hero outline is intentionally omitted on this page only - the
+ * download/platforms block is the first content under the navbar.
  */
 
 const PLATFORMS = [
@@ -88,52 +87,10 @@ const H2 = "type-h2 text-ink";
 
 export default function DownloadPage() {
   return (
-    <main>
-      <Hero />
+    <main className="bg-white pt-[80px]">
       <Platforms />
       <Modules />
     </main>
-  );
-}
-
-function Hero() {
-  return (
-    <section className="bg-white pt-[80px]">
-      <div className={cn(SHELL, "py-16 max-600:py-10")}>
-        {/* The one deliberate #007EFF outline on the page. */}
-        <div className="mx-auto max-w-[980px] rounded-[32px] border border-brand bg-white px-14 py-16 text-center shadow-[0_30px_80px_-50px_rgba(0,126,255,0.45)] max-1024:px-10 max-600:rounded-[24px] max-600:px-6 max-600:py-10">
-          <p className="type-label inline-flex items-center gap-2 rounded-full border border-brand-ghost bg-brand-tint px-3.5 py-1.5 text-brand-dark">
-            <Icon name="phone" width={13} height={13} />
-            Download App
-          </p>
-
-          <h1 className="mx-auto mt-7 max-w-[16ch] type-h1 text-ink">
-            Murphi.ai on iOS, Android &amp; Web
-          </h1>
-
-          <p className="type-lead mx-auto mt-6 max-w-[56ch] text-grey-dk">
-            Record visits, manage compliance reports, and track patient collections
-            - from your phone or any browser. One login, all your modules.
-          </p>
-
-          <div className="mt-10 flex flex-wrap items-center justify-center gap-3.5 max-600:flex-col max-600:items-stretch">
-            <Link href="/contact-us/" className="group btn-primary">
-              Request Demo
-              <Icon
-                name="arrow"
-                width={17}
-                height={17}
-                className="transition-transform duration-200 group-hover:translate-x-[3px]"
-              />
-            </Link>
-
-            <Link href="/" className="btn-secondary">
-              Back to Home
-            </Link>
-          </div>
-        </div>
-      </div>
-    </section>
   );
 }
 
@@ -141,7 +98,7 @@ function Platforms() {
   return (
     <section
       aria-labelledby="devices"
-      className="bg-white py-24 max-1024:py-20 max-600:py-16"
+      className="bg-white pb-24 pt-16 max-1024:pb-20 max-1024:pt-12 max-600:pb-16 max-600:pt-10"
     >
       <div className={SHELL}>
         <div className="mx-auto max-w-[700px] text-center">

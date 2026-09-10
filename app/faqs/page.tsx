@@ -42,7 +42,7 @@ export default function FaqsPage() {
       <main className="bg-white pt-[80px]">
         <Breadcrumb current="FAQs" />
 
-        <section className="bg-grey-bg pt-7 pb-16 max-720:pt-6 max-720:pb-10">
+        <section className="bg-hero-bg pt-7 pb-16 max-720:pt-6 max-720:pb-10">
           <div className={CONTAINER}>
             <Reveal>
               <Eyebrow>FAQs</Eyebrow>

@@ -104,7 +104,7 @@ function Panel({
         <span
           className={cn(
             MONO,
-            "min-w-0 truncate text-[11px] tracking-[0.06em] text-ink-muted uppercase",
+            "min-w-0 truncate text-[11px] font-semibold tracking-[0.06em] text-ink uppercase",
           )}
         >
           {label}

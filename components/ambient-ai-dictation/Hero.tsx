@@ -30,7 +30,7 @@ export default function Hero() {
     <>
       <Breadcrumb current="Ambient AI & Dictation" />
 
-      <section className="bg-grey-bg pt-7 pb-16 max-720:pt-6 max-720:pb-10">
+      <section className="bg-hero-bg pt-7 pb-16 max-720:pt-6 max-720:pb-10">
         <div
           className={cn(
             CONTAINER,

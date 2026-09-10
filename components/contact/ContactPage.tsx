@@ -77,43 +77,28 @@ export default function ContactPage() {
 }
 
 function Hero() {
-  /* overflow-hidden is dropped so the outline's soft shadow is not clipped at
-     the section edge; the background layer is inset-0 and never overflows. */
   return (
-    <section className="relative isolate pt-[80px]">
-      <div
-        className="pointer-events-none absolute inset-0 -z-10"
-        style={{
-          background: "#FFFFFF",
-        }}
-        aria-hidden
-      />
-
-      {/* The section below carries no top padding, so the separation between
-          the hero and the form is set here, and eases down by breakpoint. */}
+    <section className="bg-hero-bg pt-[80px]">
       <div
         className={cn(
           SHELL,
-          "pt-16 pb-28 max-1024:pb-24 max-600:pt-10 max-600:pb-16",
+          "pt-16 pb-14 text-center max-600:pt-10 max-600:pb-10",
         )}
       >
-        {/* A thin #007EFF outline defines the hero without filling it. */}
-        <div className="mx-auto max-w-[1000px] rounded-[32px] border border-brand bg-white px-14 py-16 text-center shadow-[0_30px_80px_-50px_rgba(0,126,255,0.45)] max-1024:px-10 max-600:rounded-[24px] max-600:px-6 max-600:py-10">
-          <p className="type-label inline-flex items-center gap-2 rounded-full border border-brand-ghost bg-brand-tint px-3.5 py-1.5 text-brand-dark">
-            <Icon name="community" width={13} height={13} />
-            Get In Touch
-          </p>
+        <p className="type-label inline-flex items-center gap-2 rounded-full border border-brand-ghost bg-brand-tint px-3.5 py-1.5 text-brand-dark">
+          <Icon name="community" width={13} height={13} />
+          Get In Touch
+        </p>
 
-          <h1 className="mx-auto mt-7 max-w-[800px] type-h1 text-ink">
-            {"Let's build the future of "}
-            <span className="text-brand-dark">healthcare AI</span> together
-          </h1>
+        <h1 className="mx-auto mt-7 max-w-[800px] type-h1 text-ink">
+          {"Let's build the future of "}
+          <span className="text-brand-dark">healthcare AI</span> together
+        </h1>
 
-          <p className="type-lead mx-auto mt-6 max-w-[640px] text-grey-dk">
-            Have questions about EHR integrations, customized modules, or pricing?
-            Our team of enterprise AI specialists is here to help.
-          </p>
-        </div>
+        <p className="type-lead mx-auto mt-6 max-w-[640px] text-grey-dk">
+          Have questions about EHR integrations, customized modules, or pricing?
+          Our team of enterprise AI specialists is here to help.
+        </p>
       </div>
     </section>
   );
@@ -121,7 +106,7 @@ function Hero() {
 
 function Body() {
   return (
-    <section className="bg-white pb-28 max-1024:pb-20 max-600:pb-16">
+    <section className="bg-white pt-16 pb-28 max-1024:pb-20 max-600:pt-12 max-600:pb-16">
       <div
         className={cn(
           SHELL,

@@ -55,6 +55,9 @@
   --color-brand-border: #a3d1ff;
   --color-brand-tint: #cce5ff;
 
+  /* Soft internal-page hero ground - lighter than brand-tint (#CCE5FF). */
+  --color-hero-bg: #eaf4ff;
+
   --color-ink: #1a1a1a; /* standard text             */
   --color-ink-muted: #878787; /* greyed-out text           */
   --color-grey-dk: #464646;
@@ -62,6 +65,9 @@
   --color-grey-mid: #e3e3e3;
   --color-grey-soft: #efefef;
   --color-grey-bg: #f5f5f5;
+
+  /* Soft page tint from ambient-ai.html `--bg-tint` - content-band ground. */
+  --color-tint: #f6f9ff;
 
   /* Deep blue - the third preferred background (brand book 10). */
   --color-deep: #0f1d54;

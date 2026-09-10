@@ -64,7 +64,7 @@ export default function BrandSwitch({
                  colour change on the label - this control keeps the black
                  treatment it has always had, and never turns blue. */
               className={cn(
-                "rounded-full px-7 py-2.5 text-[13.5px] font-semibold whitespace-nowrap transition-colors duration-[280ms] ease-out max-600:px-5",
+                "rounded-full px-7 py-2.5 text-center text-[13.5px] font-semibold whitespace-nowrap transition-colors duration-[280ms] ease-out max-600:px-5",
                 selected
                   ? "bg-ink text-white"
                   : "text-grey-500 hover:text-ink",

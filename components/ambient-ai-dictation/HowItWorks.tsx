@@ -1,6 +1,6 @@
 "use client";
 
-import type { ReactNode } from "react";
+import { useCallback, useRef, type ReactNode } from "react";
 import { Icon } from "@/components/icons";
 import Reveal from "@/components/module-page/Reveal";
 import {
@@ -37,12 +37,15 @@ import { cn } from "@/lib/cn";
 /**
  * How long each tab holds.
  *
- * One second, as specified. It is a quick read for the body copy, so the
- * rotation pauses while the pointer is over the section or a tab has keyboard
- * focus, and stops altogether under prefers-reduced-motion. Change this one
- * constant to slow it down.
+ * Two seconds per phase - long enough to read the body copy. The rotation
+ * pauses while the pointer is over the left copy or the right surface, or a
+ * tab has keyboard focus, and stops altogether under prefers-reduced-motion.
+ * Change this one constant to retune the pace.
  */
-const TAB_MS = 1000;
+const TAB_MS = 2000;
+
+/** Freeze every CSS animation under a hovered column without touching layout. */
+const PAUSE_MOTION = "[&_*]:![animation-play-state:paused]";
 
 type Phase = {
   number: string;
@@ -116,7 +119,30 @@ const PHASES: Phase[] = [
 ];
 
 export default function HowItWorks() {
-  const { index, select, hold, release } = useAutoAdvance(PHASES.length, TAB_MS);
+  const { index, select, hold, release, paused } = useAutoAdvance(
+    PHASES.length,
+    TAB_MS,
+  );
+
+  /* The two columns share one hover zone for leave detection so moving between
+     left and right does not briefly release the hold and advance a step. */
+  const columnsRef = useRef<HTMLDivElement>(null);
+  const focusHeld = useRef(false);
+
+  const pause = useCallback(() => {
+    hold();
+  }, [hold]);
+
+  const resumeIfOutside = useCallback(
+    (related: EventTarget | null) => {
+      if (related instanceof Node && columnsRef.current?.contains(related)) {
+        return;
+      }
+      if (focusHeld.current) return;
+      release();
+    },
+    [release],
+  );
 
   return (
     <section id="how" className={cn("border-t border-grey-mid", SECTION)}>
@@ -126,13 +152,21 @@ export default function HowItWorks() {
 
         <Reveal>
           {/* ── The three phases, as tabs ──
-              The pointer or a focused tab holds the rotation, so the copy can
-              actually be read; leaving releases it. */}
+              Keyboard focus on a tab holds the rotation so the copy can be
+              read; the pointer holds it over the left copy or right surface. */}
           <div
-            onMouseEnter={hold}
-            onMouseLeave={release}
-            onFocus={hold}
-            onBlur={release}
+            onFocus={() => {
+              focusHeld.current = true;
+              hold();
+            }}
+            onBlur={(e) => {
+              if (e.currentTarget.contains(e.relatedTarget as Node | null)) {
+                return;
+              }
+              focusHeld.current = false;
+              if (columnsRef.current?.matches(":hover")) return;
+              release();
+            }}
           >
             <div
               role="tablist"
@@ -176,9 +210,19 @@ export default function HowItWorks() {
             </div>
           </div>
 
-          <div className="mt-10 grid grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)] items-start gap-14 max-1080:grid-cols-1 max-1080:gap-10 max-600:mt-8">
+          <div
+            ref={columnsRef}
+            className={cn(
+              "mt-10 grid grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)] items-start gap-14 max-1080:grid-cols-1 max-1080:gap-10 max-600:mt-8",
+              paused && PAUSE_MOTION,
+            )}
+          >
             {/* ── The copy for the active phase ── */}
-            <div className="grid min-w-0">
+            <div
+              className="grid min-w-0"
+              onPointerEnter={pause}
+              onPointerLeave={(e) => resumeIfOutside(e.relatedTarget)}
+            >
               {PHASES.map((phase, i) => (
                 <div
                   key={phase.number}
@@ -205,7 +249,11 @@ export default function HowItWorks() {
             </div>
 
             {/* ── The surface for the active phase ── */}
-            <div className="grid min-w-0 rounded-[28px] border border-brand-pale bg-brand-tint/40 p-7 max-1080:p-6 max-600:rounded-panel max-600:p-4">
+            <div
+              className="grid min-w-0 rounded-[28px] border border-brand-pale bg-brand-tint/40 p-7 max-1080:p-6 max-600:rounded-panel max-600:p-4"
+              onPointerEnter={pause}
+              onPointerLeave={(e) => resumeIfOutside(e.relatedTarget)}
+            >
               {PHASES.map((phase, i) => (
                 <div
                   key={phase.panel}

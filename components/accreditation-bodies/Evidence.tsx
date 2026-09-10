@@ -101,16 +101,86 @@ export function ZoneLabel({ children }: { children: string }) {
   );
 }
 
-/** One piece of evidence arriving from the record. */
-export function EvidenceTile({ index = 0 }: { index?: number }) {
+/** One accreditation evidence record in the readiness packet. */
+export type EvidenceDoc = {
+  title: string;
+  meta: string;
+  ref: string;
+  state: "mapped" | "review";
+};
+
+/** One piece of evidence arriving from the record - a compact document card. */
+export function EvidenceTile({
+  doc,
+  index = 0,
+}: {
+  doc: EvidenceDoc;
+  index?: number;
+}) {
+  const review = doc.state === "review";
+
   return (
     <span
-      className="flex items-center justify-center gap-2 rounded-[10px] border border-grey-mid bg-grey-soft px-2.5 py-2.5"
+      className="flex min-w-0 flex-col gap-2 rounded-[10px] border border-grey-mid bg-white px-3 py-2.5 shadow-[0_8px_18px_-14px_rgba(15,29,84,.55)]"
       style={{ animation: `mp-fade-up .45s ease backwards ${0.08 + index * 0.08}s` }}
-      aria-hidden
     >
-      <Icon name="doc" width={13} height={13} className="shrink-0 text-brand" />
-      <span className="h-1.5 w-9 rounded-full bg-grey-mid" />
+      <span className="flex items-start gap-2">
+        <span
+          className="mt-px flex size-6 shrink-0 items-center justify-center rounded-[7px] border border-brand-pale bg-brand-tint text-brand"
+          aria-hidden
+        >
+          <Icon name="doc" width={12} height={12} />
+        </span>
+
+        <span className="min-w-0 flex-1">
+          <span className="block truncate text-[11.5px] font-semibold leading-snug tracking-[-0.01em] text-ink">
+            {doc.title}
+          </span>
+          <span className={cn(MONO, "mt-0.5 block truncate text-[9.5px] text-ink-muted")}>
+            {doc.meta}
+          </span>
+        </span>
+
+        <span
+          className={cn(
+            "flex size-5 shrink-0 items-center justify-center rounded-full border",
+            review
+              ? "border-brand-pale bg-white text-brand"
+              : "border-brand bg-brand text-white",
+          )}
+          aria-hidden
+        >
+          {review ? (
+            <span className="size-1.5 rounded-full bg-brand" />
+          ) : (
+            <Tick className="size-2.5" />
+          )}
+        </span>
+      </span>
+
+      <span className="flex items-center justify-between gap-2">
+        <span className={cn(MONO, "truncate text-[9px] tracking-[0.04em] text-grey-bdr")}>
+          {doc.ref}
+        </span>
+        <span
+          className={cn(
+            MONO,
+            "shrink-0 rounded-full px-1.5 py-0.5 text-[8.5px] font-semibold uppercase tracking-[0.05em]",
+            review
+              ? "bg-brand-tint text-brand-dark"
+              : "bg-grey-soft text-ink-muted",
+          )}
+        >
+          {review ? "In review" : "Mapped"}
+        </span>
+      </span>
+
+      {/* Quiet document lines - structure, not body copy. */}
+      <span className="flex flex-col gap-1" aria-hidden>
+        <span className="h-1 w-full rounded-full bg-grey-soft" />
+        <span className="h-1 w-4/5 rounded-full bg-grey-soft" />
+        <span className="h-1 w-2/5 rounded-full bg-brand-pale" />
+      </span>
     </span>
   );
 }

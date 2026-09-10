@@ -50,9 +50,6 @@ const node = (at: number) => ({
   animation: `mp-ra-node ${CYCLE} ease-in-out ${at}s infinite`,
 });
 
-/** Where each scan row rests: filled, most of the way, nearly done. */
-const SCAN = ["82%", "64%", "45%"];
-
 export default function ChartReviewStack({
   title,
   status,
@@ -106,16 +103,19 @@ export default function ChartReviewStack({
           </span>
         </div>
 
-        {/* The chart being read: how far the review got on each pass. */}
+        {/* The chart being read: scan bars keep moving on the shared mp-sweep
+            animation used elsewhere on this page. */}
         <div className="flex flex-col gap-1.5 px-5 py-4 max-720:px-4" aria-hidden>
-          {SCAN.map((width) => (
+          {[0, 1, 2].map((i) => (
             <span
-              key={width}
+              key={i}
               className="relative h-1.5 w-full overflow-hidden rounded-full bg-grey-soft"
             >
               <span
-                className="absolute inset-y-0 left-0 rounded-full bg-brand/70"
-                style={{ width }}
+                className="absolute inset-y-0 left-0 w-1/3 rounded-full bg-brand/70"
+                style={{
+                  animation: `mp-sweep 2.4s ease-in-out infinite ${i * 0.28}s`,
+                }}
               />
             </span>
           ))}

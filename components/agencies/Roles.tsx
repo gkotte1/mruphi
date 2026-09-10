@@ -30,6 +30,7 @@ const ROLE_MODULE_ICONS: Record<string, IconName> = {
   "Ambient AI & Dictation": "mic",
   "Revenue Assurance": "chartup",
   "Patient Payments": "card",
+  "Patient Engagement": "community",
   "Referral → NOA": "route",
   "AI-Driven RCM": "exchange",
 };

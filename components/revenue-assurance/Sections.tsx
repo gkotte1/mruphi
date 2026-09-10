@@ -138,7 +138,7 @@ function Track({
 
       <div className="grow px-7 py-6 max-600:px-5">
         <div
-          className="relative grid h-full"
+          className="relative grid h-full gap-y-3"
           style={{ gridTemplateRows: `repeat(${rows}, minmax(0, 1fr))` }}
         >
           {/* The rail, drawn between the first and last node centres. Each row
@@ -359,7 +359,7 @@ export function EhrIntegration({
   return (
     <section id="ehr" className={SECTION}>
       <Reveal>
-        <div className="mx-auto max-w-[1156px] rounded-panel bg-white px-12 py-14 max-720:mx-5 max-720:px-6 max-720:py-10">
+        <div className="mx-auto max-w-[1156px] rounded-panel bg-tint px-12 py-14 max-720:mx-5 max-720:px-6 max-720:py-10">
           <div className="grid grid-cols-[0.88fr_1.12fr] items-center gap-14 max-1080:grid-cols-1 max-1080:gap-10">
             <div className="min-w-0">
               <Eyebrow>EHR Integration</Eyebrow>
@@ -383,7 +383,7 @@ export function EhrIntegration({
                     "flex items-center justify-between gap-3 border-b border-grey-mid px-5 py-3 max-600:px-4",
                   )}
                 >
-                  <span className="min-w-0 truncate text-[11px] uppercase tracking-[0.06em] text-ink-muted">
+                  <span className="min-w-0 truncate text-[11px] font-semibold uppercase tracking-[0.06em] text-ink">
                     Your EHR ⇄ Murphi AI ⇄ Your EHR
                   </span>
                   <span className="relative flex size-1.5 shrink-0" aria-hidden>

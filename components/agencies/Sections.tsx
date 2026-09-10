@@ -48,44 +48,61 @@ export function StartSmall({
               {group.label}
             </span>
 
-            <div className="mt-4 flex flex-wrap gap-2.5">
-              {group.items.map((item) => (
-                <span
-                  key={item}
-                  className="flex items-center gap-2.5 rounded-tile border border-grey-mid bg-white px-3.5 py-2.5"
-                >
-                  <span
-                    className="flex size-5 shrink-0 items-center justify-center rounded-[6px] border border-brand-pale bg-brand-tint text-brand"
-                    aria-hidden
-                  >
-                    <Tick className="size-2.5" />
-                  </span>
-                  <span className="text-[13.5px] font-semibold tracking-[-0.01em] text-ink">
-                    {item}
-                  </span>
-                </span>
-              ))}
+            <div className="mt-4">
+              {group.label === "Hospice" ? (
+                <div className="flex flex-col gap-2.5">
+                  {/* HOPE stays on its own row; Chaplain + IDG share one equal row. */}
+                  {group.items[0] ? <SettingChip item={group.items[0]} /> : null}
+                  <div className="grid grid-cols-2 items-stretch gap-2.5 max-600:grid-cols-1">
+                    {group.items.slice(1).map((item) => (
+                      <SettingChip key={item} item={item} />
+                    ))}
+                  </div>
+                </div>
+              ) : (
+                <div className="flex flex-wrap gap-2.5">
+                  {group.items.map((item) => (
+                    <SettingChip key={item} item={item} />
+                  ))}
 
-              {group.soon ? (
-                <span className="flex items-center gap-2.5 rounded-tile border border-dashed border-grey-mid bg-grey-soft/60 px-3.5 py-2.5">
-                  <span className="text-[13.5px] font-semibold tracking-[-0.01em] text-grey-500">
-                    {group.soon}
-                  </span>
-                  <span
-                    className={cn(
-                      MONO,
-                      "rounded-full border border-grey-mid bg-white px-2 py-0.5 text-[9.5px] uppercase tracking-[0.06em] text-grey-500",
-                    )}
-                  >
-                    Soon
-                  </span>
-                </span>
-              ) : null}
+                  {group.soon ? (
+                    <span className="flex items-center gap-2.5 rounded-tile border border-dashed border-grey-mid bg-grey-soft/60 px-3.5 py-2.5">
+                      <span className="text-[13.5px] font-semibold tracking-[-0.01em] text-grey-500">
+                        {group.soon}
+                      </span>
+                      <span
+                        className={cn(
+                          MONO,
+                          "rounded-full border border-grey-mid bg-white px-2 py-0.5 text-[9.5px] uppercase tracking-[0.06em] text-grey-500",
+                        )}
+                      >
+                        Soon
+                      </span>
+                    </span>
+                  ) : null}
+                </div>
+              )}
             </div>
           </div>
         ))}
       </div>
     </Reveal>
+  );
+}
+
+function SettingChip({ item }: { item: string }) {
+  return (
+    <span className="flex h-full min-w-0 items-center gap-2.5 rounded-tile border border-grey-mid bg-white px-3.5 py-2.5">
+      <span
+        className="flex size-5 shrink-0 items-center justify-center rounded-[6px] border border-brand-pale bg-brand-tint text-brand"
+        aria-hidden
+      >
+        <Tick className="size-2.5" />
+      </span>
+      <span className="min-w-0 text-[13.5px] font-semibold leading-snug tracking-[-0.01em] text-ink">
+        {item}
+      </span>
+    </span>
   );
 }
 
@@ -95,6 +112,7 @@ const RELATED_ICONS: Record<string, IconName> = {
   "Ambient AI & Dictation": "mic",
   "Revenue Assurance": "chartup",
   "Patient Payments": "card",
+  "Patient Engagement": "community",
 };
 
 export function ModuleLinks({
@@ -104,12 +122,12 @@ export function ModuleLinks({
 }) {
   return (
     <Reveal>
-      <div className="grid grid-cols-3 gap-4 max-900:grid-cols-1">
+      <div className="grid grid-cols-4 gap-4 max-1080:grid-cols-2 max-720:grid-cols-1">
         {cards.map((card) => (
           <Link
             key={card.title}
             href={card.href}
-            className="group flex flex-col rounded-panel border border-grey-mid bg-white px-6 py-6 transition-all duration-200 hover:-translate-y-0.5 hover:border-brand-pale hover:shadow-[0_18px_40px_-24px_rgba(15,29,84,.55)]"
+            className="group flex h-full flex-col rounded-panel border border-grey-mid bg-white px-6 py-6 transition-all duration-200 hover:-translate-y-0.5 hover:border-brand-pale hover:shadow-[0_18px_40px_-24px_rgba(15,29,84,.55)]"
           >
             <span className="flex items-center justify-between gap-3">
               <span
@@ -163,7 +181,7 @@ export function EhrLayer({
   return (
     <section id="ehr" className={cn("border-t border-grey-mid", SECTION)}>
       <Reveal>
-        <div className="mx-auto max-w-[1156px] rounded-panel bg-white px-12 py-14 max-720:mx-5 max-720:px-6 max-720:py-10">
+        <div className="mx-auto max-w-[1156px] rounded-panel bg-tint px-12 py-14 max-720:mx-5 max-720:px-6 max-720:py-10">
           <div className="grid grid-cols-[0.9fr_1.1fr] items-center gap-14 max-1080:grid-cols-1 max-1080:gap-10">
             <div className="min-w-0">
               <Eyebrow>EHR Integration</Eyebrow>
@@ -183,7 +201,7 @@ export function EhrLayer({
                     "flex items-center justify-between gap-3 border-b border-grey-mid bg-grey-soft px-5 py-3 max-600:px-4",
                   )}
                 >
-                  <span className="min-w-0 truncate text-[11px] uppercase tracking-[0.06em] text-ink-muted">
+                  <span className="min-w-0 truncate text-[11px] font-semibold uppercase tracking-[0.06em] text-ink">
                     {panelLabel}
                   </span>
                   <span className="relative flex size-1.5 shrink-0" aria-hidden>

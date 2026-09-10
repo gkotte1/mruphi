@@ -82,7 +82,7 @@ export default async function AnnouncementArticle({ params }: Props) {
           <div
             className="pointer-events-none absolute inset-0 -z-10"
             style={{
-              background: "#FFFFFF",
+              background: "#EAF4FF",
             }}
             aria-hidden
           />

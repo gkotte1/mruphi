@@ -30,33 +30,27 @@ const [LATEST, ...REST] = BY_DATE;
 export default function AnnouncementsPage() {
   return (
     <main>
-      <section className="relative isolate pt-[80px]">
+      <section className="bg-hero-bg pt-[80px]">
         <div
-          className="pointer-events-none absolute inset-0 -z-10"
-          style={{
-            background: "#FFFFFF",
-          }}
-          aria-hidden
-        />
+          className={cn(
+            SHELL,
+            "pt-16 pb-14 text-center max-600:pt-10 max-600:pb-10",
+          )}
+        >
+          <p className="type-label inline-flex items-center gap-2 rounded-full border border-brand-ghost bg-brand-tint px-3.5 py-1.5 text-brand-dark">
+            <Icon name="doc" width={13} height={13} />
+            Company
+          </p>
 
-        <div className={cn(SHELL, "pt-16 pb-14 max-600:pt-10 max-600:pb-10")}>
-          {/* A thin #007EFF outline defines the hero without filling it. */}
-          <div className="mx-auto max-w-[1000px] rounded-[32px] border border-brand bg-white px-14 py-16 text-center shadow-[0_30px_80px_-50px_rgba(0,126,255,0.45)] max-1024:px-10 max-600:rounded-[24px] max-600:px-6 max-600:py-10">
-            <p className="type-label inline-flex items-center gap-2 rounded-full border border-brand-ghost bg-brand-tint px-3.5 py-1.5 text-brand-dark">
-              <Icon name="doc" width={13} height={13} />
-              Company
-            </p>
+          <h1 className="mt-7 type-h1 text-ink">Announcements</h1>
 
-            <h1 className="mt-7 type-h1 text-ink">Announcements</h1>
-
-            <p className="type-lead mx-auto mt-6 max-w-[600px] text-grey-dk">
-              Latest updates, partnerships, awards, and milestones from Murphi.ai.
-            </p>
-          </div>
+          <p className="type-lead mx-auto mt-6 max-w-[600px] text-grey-dk">
+            Latest updates, partnerships, awards, and milestones from Murphi.ai.
+          </p>
         </div>
       </section>
 
-      <section className="bg-white pb-28 max-1024:pb-20 max-600:pb-16">
+      <section className="bg-white pt-16 pb-28 max-1024:pb-20 max-600:pt-12 max-600:pb-16">
         <div className={SHELL}>
           <Featured item={LATEST} />
 

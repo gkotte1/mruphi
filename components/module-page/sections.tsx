@@ -92,7 +92,7 @@ export function PageHero({
   visual: ReactNode;
 }) {
   return (
-    <section className="bg-grey-bg pt-7 pb-16 max-720:pt-6 max-720:pb-10">
+    <section className="bg-hero-bg pt-7 pb-16 max-720:pt-6 max-720:pb-10">
       <div
         className={cn(
           CONTAINER,
@@ -632,7 +632,7 @@ export function EhrSection({
   return (
     <section id="ehr" className={SECTION}>
       <Reveal>
-        <div className="mx-auto max-w-[1156px] rounded-panel bg-white px-12 py-14 max-720:mx-5 max-720:px-6 max-720:py-10">
+        <div className="mx-auto max-w-[1156px] rounded-panel bg-tint px-12 py-14 max-720:mx-5 max-720:px-6 max-720:py-10">
           <div className="grid grid-cols-[0.95fr_1.05fr] items-center gap-14 max-1080:grid-cols-1 max-1080:gap-10">
             <div className="min-w-0">
               <Eyebrow>EHR Integration</Eyebrow>
@@ -668,7 +668,7 @@ export function EhrSection({
               <div
                 className={cn(
                   MONO,
-                  "mb-5 text-[11px] uppercase tracking-[0.06em] text-ink-muted",
+                  "mb-5 text-[11px] font-semibold uppercase tracking-[0.06em] text-ink",
                 )}
               >
                 Your EHR ⇄ Murphi AI ⇄ Your EHR

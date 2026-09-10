@@ -1,6 +1,6 @@
 "use client";
 
-import type { ReactNode } from "react";
+import { useCallback, useRef, type ReactNode } from "react";
 import { Icon } from "@/components/icons";
 import Reveal from "@/components/module-page/Reveal";
 import { MONO, Tick } from "@/components/module-page/ui";
@@ -271,19 +271,53 @@ const VIEWS: View[] = [
 ];
 
 export default function Mechanics({ steps }: { steps: Step[] }) {
-  const { index, select, hold, release } = useAutoAdvance(steps.length);
+  const { index, select, hold, release, paused } = useAutoAdvance(steps.length);
+
+  const columnsRef = useRef<HTMLDivElement>(null);
+  const focusHeld = useRef(false);
+
+  const pause = useCallback(() => {
+    hold();
+  }, [hold]);
+
+  const resumeIfOutside = useCallback(
+    (related: EventTarget | null) => {
+      if (related instanceof Node && columnsRef.current?.contains(related)) {
+        return;
+      }
+      if (focusHeld.current) return;
+      release();
+    },
+    [release],
+  );
 
   return (
     <Reveal>
       <div
-        className="grid grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] items-start gap-14 max-1080:grid-cols-1 max-1080:gap-10"
-        onMouseEnter={hold}
-        onMouseLeave={release}
-        onFocusCapture={hold}
-        onBlurCapture={release}
+        ref={columnsRef}
+        className={cn(
+          "grid grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] items-start gap-14 max-1080:grid-cols-1 max-1080:gap-10",
+          paused && "[&_*]:![animation-play-state:paused]",
+        )}
       >
         {/* The rail of stages. */}
-        <ol className="min-w-0">
+        <ol
+          className="min-w-0"
+          onPointerEnter={pause}
+          onPointerLeave={(e) => resumeIfOutside(e.relatedTarget)}
+          onFocusCapture={() => {
+            focusHeld.current = true;
+            hold();
+          }}
+          onBlurCapture={(e) => {
+            if (e.currentTarget.contains(e.relatedTarget as Node | null)) {
+              return;
+            }
+            focusHeld.current = false;
+            if (columnsRef.current?.matches(":hover")) return;
+            release();
+          }}
+        >
           {steps.map((step, i) => {
             const isActive = i === index;
             const done = i < index;
@@ -355,7 +389,11 @@ export default function Mechanics({ steps }: { steps: Step[] }) {
         </ol>
 
         {/* The product view for whichever stage is running. */}
-        <div className="min-w-0 rounded-[28px] border border-brand-pale bg-brand-tint/40 p-7 max-1080:p-6 max-600:rounded-panel max-600:p-4">
+        <div
+          className="min-w-0 rounded-[28px] border border-brand-pale bg-brand-tint/40 p-7 max-1080:p-6 max-600:rounded-panel max-600:p-4"
+          onPointerEnter={pause}
+          onPointerLeave={(e) => resumeIfOutside(e.relatedTarget)}
+        >
           {/* One grid cell for every view, so the height never jumps. */}
           <div className="grid">
             {VIEWS.map((view, i) => (

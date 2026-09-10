@@ -1,4 +1,11 @@
 const PARTNERS = [
+  "Curantis Solutions",
+  "SouthSide CHC",
+  "Carefluence",
+  "Percensys CORE",
+  "DocuguardAI",
+  "AAIC",
+  "Synapse Digital",
   "AWS",
   "Google Cloud",
   "Twilio",
@@ -11,6 +18,24 @@ const PARTNERS = [
   "Vonage",
   "Oasis Technologies Group",
   "WhatsApp",
+  "Smartsheet",
+  "360 Dialogue",
+  "Ejabberd",
+  "Healthcare Synergy",
+  "iTherapyDocs",
+  "BCHCCPro",
+  "Infinity Home Health",
+  "Kassy Health",
+  "Nursing Rehab",
+  "Self Help for the Elderly",
+  "St. Claire Medical Center",
+  "Advanced Home Health and Hospice",
+  "CNS Service Inc",
+  "Distinct Homehealth Services",
+  "PD Hospice",
+  "PrimeCare",
+  "AKESO Healthcare",
+  "Visiting Nurses of Illinois, Inc.",
 ];
 
 const MASK = {
@@ -24,7 +49,9 @@ const MASK = {
 export default function LogoStrip() {
   return (
     <section className="bg-grey-bg pb-16 pt-2 max-600:pb-12">
-      <TickerRow items={PARTNERS} duration="56s" />
+      {/* Duration scales with item count so scroll speed stays near the
+          original 12-name / 56s pace. */}
+      <TickerRow items={PARTNERS} duration="173s" />
     </section>
   );
 }

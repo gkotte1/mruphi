@@ -107,12 +107,13 @@ export function LayerStack({
                   isOpen ? "bg-brand-tint/40" : "hover:bg-grey-bg",
                 )}
               >
-                {/* The stack position, on a rail that runs the whole section. */}
-                <span className="relative flex w-8 shrink-0 justify-center self-stretch">
+                {/* Number column stretches with the row; the badge is grid-centered
+                    so 01–04 sit in the vertical middle instead of hugging the top. */}
+                <span className="relative grid w-8 shrink-0 place-items-center self-stretch">
                   <span
                     className={cn(
                       MONO,
-                      "relative z-10 flex size-8 shrink-0 items-center justify-center rounded-[9px] border text-[10.5px] font-bold transition-colors duration-200",
+                      "relative z-10 col-start-1 row-start-1 flex size-8 items-center justify-center rounded-[9px] border text-[10.5px] font-bold transition-colors duration-200",
                       isOpen
                         ? "border-brand bg-brand text-white"
                         : "border-brand-pale bg-brand-tint text-brand-dark",
@@ -122,7 +123,7 @@ export function LayerStack({
                   </span>
                   {last ? null : (
                     <span
-                      className="absolute top-8 -bottom-5 left-1/2 w-px -translate-x-1/2 bg-brand-pale"
+                      className="pointer-events-none absolute top-[calc(50%+1rem)] -bottom-5 left-1/2 z-0 w-px -translate-x-1/2 bg-brand-pale"
                       aria-hidden
                     />
                   )}
@@ -165,7 +166,7 @@ export function LayerStack({
                 className="overflow-hidden transition-[max-height] duration-[280ms] ease-[ease]"
                 style={{ maxHeight: isOpen ? 420 : 0 }}
               >
-                <div className="px-7 pb-6 pl-[76px] max-600:px-5 max-600:pl-5">
+                <div className="px-7 py-6 pl-[76px] max-600:px-5 max-600:pl-5">
                   {layer.body}
                 </div>
               </div>

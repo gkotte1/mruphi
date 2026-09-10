@@ -1,5 +1,6 @@
 "use client";
 
+import { useCallback, useRef } from "react";
 import Reveal from "@/components/module-page/Reveal";
 import { MONO, Tick } from "@/components/module-page/ui";
 import { useAutoAdvance } from "@/lib/useAutoAdvance";
@@ -10,8 +11,9 @@ import { cn } from "@/lib/cn";
  *
  * The rail and the panel run off one index on the same two-second clock as the
  * mechanics above, so the two sections read as one continuous demonstration
- * rather than two separate widgets. Pointing at the section holds it; picking a
- * check restarts that check's interval before the rotation carries on.
+ * rather than two separate widgets. Pointing at the left rail or the right
+ * panel holds it; picking a check restarts that check's interval before the
+ * rotation carries on.
  *
  * The panels are stacked in one grid cell rather than toggled with `hidden`, so
  * the height never jumps between checks and every panel's copy stays in the
@@ -29,19 +31,54 @@ export type Check = {
 };
 
 export default function Checks({ checks }: { checks: Check[] }) {
-  const { index, select, hold, release } = useAutoAdvance(checks.length);
+  const { index, select, hold, release, paused } = useAutoAdvance(checks.length);
+
+  const columnsRef = useRef<HTMLDivElement>(null);
+  const focusHeld = useRef(false);
+
+  const pause = useCallback(() => {
+    hold();
+  }, [hold]);
+
+  const resumeIfOutside = useCallback(
+    (related: EventTarget | null) => {
+      if (related instanceof Node && columnsRef.current?.contains(related)) {
+        return;
+      }
+      if (focusHeld.current) return;
+      release();
+    },
+    [release],
+  );
 
   return (
     <Reveal>
       <div
-        className="grid grid-cols-[minmax(0,0.36fr)_minmax(0,1fr)] items-start gap-10 max-900:grid-cols-1 max-900:gap-7"
-        onMouseEnter={hold}
-        onMouseLeave={release}
-        onFocusCapture={hold}
-        onBlurCapture={release}
+        ref={columnsRef}
+        className={cn(
+          "grid grid-cols-[minmax(0,0.36fr)_minmax(0,1fr)] items-start gap-10 max-900:grid-cols-1 max-900:gap-7",
+          paused && "[&_*]:![animation-play-state:paused]",
+        )}
       >
         {/* The rail. */}
-        <div role="tablist" className="min-w-0 border-l border-grey-mid">
+        <div
+          role="tablist"
+          className="min-w-0 border-l border-grey-mid"
+          onPointerEnter={pause}
+          onPointerLeave={(e) => resumeIfOutside(e.relatedTarget)}
+          onFocusCapture={() => {
+            focusHeld.current = true;
+            hold();
+          }}
+          onBlurCapture={(e) => {
+            if (e.currentTarget.contains(e.relatedTarget as Node | null)) {
+              return;
+            }
+            focusHeld.current = false;
+            if (columnsRef.current?.matches(":hover")) return;
+            release();
+          }}
+        >
           {checks.map((check, i) => {
             const isActive = i === index;
 
@@ -81,7 +118,11 @@ export default function Checks({ checks }: { checks: Check[] }) {
         </div>
 
         {/* The panel. */}
-        <div className="min-w-0 rounded-[28px] border border-brand-pale bg-brand-tint/40 p-7 max-900:p-6 max-600:rounded-panel max-600:p-4">
+        <div
+          className="min-w-0 rounded-[28px] border border-brand-pale bg-brand-tint/40 p-7 max-900:p-6 max-600:rounded-panel max-600:p-4"
+          onPointerEnter={pause}
+          onPointerLeave={(e) => resumeIfOutside(e.relatedTarget)}
+        >
           <div className="grid">
             {checks.map((check, i) => (
               <div

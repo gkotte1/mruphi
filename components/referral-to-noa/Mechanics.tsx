@@ -41,24 +41,54 @@ import { cn } from "@/lib/cn";
 
 type Step = { num: string; title: string; body: string };
 
-/** A document the intake has sorted, as structure rather than invented text. */
-function DocRow({ index }: { index: number }) {
+/** A classified referral document, shown as a compact file row. */
+function DocRow({
+  name,
+  detail,
+  index,
+}: {
+  name: string;
+  detail?: string;
+  index: number;
+}) {
   return (
     <div
-      className="flex items-center gap-3 border-b border-grey-soft py-2.5 last:border-b-0"
+      className="flex items-center gap-3 border-b border-white/15 py-2.5 last:border-b-0"
       style={{ animation: `mp-fade-up .45s ease backwards ${0.08 + index * 0.07}s` }}
     >
       <span
-        className="flex size-6 shrink-0 items-center justify-center rounded-[7px] border border-grey-mid bg-grey-soft text-brand"
+        className="flex size-6 shrink-0 items-center justify-center rounded-[7px] bg-white/15 text-white"
         aria-hidden
       >
         <Icon name="doc" width={12} height={12} />
       </span>
+      <span className="min-w-0 flex-1">
+        <span className="block truncate text-[12.5px] font-semibold text-white">
+          {name}
+        </span>
+        {detail ? (
+          <span className={cn(MONO, "mt-0.5 block text-[10px] text-white/70")}>
+            {detail}
+          </span>
+        ) : null}
+      </span>
+      <Tick className="ml-auto size-3.5 shrink-0 text-white" />
+    </div>
+  );
+}
+
+/** Compact referral summary lines for the generated-summary step. */
+function SummaryLine({ text, index }: { text: string; index: number }) {
+  return (
+    <div
+      className="flex items-start gap-2.5 border-b border-grey-soft py-2 last:border-b-0"
+      style={{ animation: `mp-fade-up .45s ease backwards ${0.08 + index * 0.07}s` }}
+    >
       <span
-        className={cn("h-2 rounded-full bg-grey-mid", ["w-28", "w-20", "w-24"][index] ?? "w-24")}
+        className="mt-1.5 size-1.5 shrink-0 rounded-full bg-brand"
         aria-hidden
       />
-      <Tick className="ml-auto size-3.5 shrink-0 text-brand" />
+      <span className="min-w-0 text-[12.5px] leading-[1.45] text-ink">{text}</span>
     </div>
   );
 }
@@ -84,10 +114,16 @@ const INTAKE_VIEWS: View[] = [
     body: (
       <>
         <GroupLabel>Documents</GroupLabel>
-        <div>
-          {[0, 1, 2].map((i) => (
-            <DocRow key={i} index={i} />
-          ))}
+        {/* Brand highlight so the classified packet reads as a real log, not
+            empty bars - same width as the Surface body above it. */}
+        <div className="rounded-tile bg-brand px-3.5 py-1 shadow-[0_12px_28px_-14px_rgba(0,106,214,.7)]">
+          <DocRow name="Referral Order.pdf" detail="Physician order" index={0} />
+          <DocRow name="Clinical Notes.pdf" detail="Hospital discharge" index={1} />
+          <DocRow
+            name="Insurance Information.pdf"
+            detail="Eligibility packet"
+            index={2}
+          />
         </div>
       </>
     ),
@@ -109,16 +145,12 @@ const INTAKE_VIEWS: View[] = [
     label: "Referral Summary",
     status: "Generated",
     body: (
-      <div className="rounded-tile border border-grey-mid bg-grey-soft px-4 py-3.5">
-        <div className="flex flex-col gap-2" aria-hidden>
-          {["w-full", "w-11/12", "w-10/12", "w-7/12"].map((width, i) => (
-            <span
-              key={width}
-              className={cn("h-2 rounded-full bg-grey-mid", width)}
-              style={{ animation: `mp-fade-up .45s ease backwards ${0.08 + i * 0.07}s` }}
-            />
-          ))}
-        </div>
+      <div className="rounded-tile border border-grey-mid bg-grey-soft px-4 py-3">
+        <GroupLabel>Summary</GroupLabel>
+        <SummaryLine text="Referral received — skilled nursing evaluation" index={0} />
+        <SummaryLine text="Source: hospital discharge, Portal" index={1} />
+        <SummaryLine text="Primary reason: post-acute SN / PT follow-up" index={2} />
+        <SummaryLine text="Key clinical details ready for intake review" index={3} />
       </div>
     ),
   },

@@ -25,7 +25,7 @@ const SUB_STEPS = ["Fetch", "Analyze", "Automate", "Generate", "Write Back"];
 
 export default function EhrConnectivity() {
   return (
-    <SectionWrap id="ehr">
+    <SectionWrap id="ehr" tone="white">
       <Reveal>
         <div className="mx-auto max-w-[680px] text-center">
           <Eyebrow>EHR Connectivity</Eyebrow>
@@ -40,7 +40,7 @@ export default function EhrConnectivity() {
         </div>
       </Reveal>
 
-      <div className="mx-auto mt-14 max-w-[820px] rounded-hero border border-grey-mid bg-grey-bg px-10 py-10 max-720:px-5 max-720:py-7">
+      <div className="mx-auto mt-14 max-w-[820px] rounded-hero border border-grey-mid bg-white px-10 py-10 max-720:px-5 max-720:py-7">
         <p className="mb-10 text-center text-[16px] leading-[1.5] text-ink">
           Your EHR &rarr; Murphi AI &rarr; Your EHR
         </p>

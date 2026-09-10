@@ -44,5 +44,5 @@ export function useAutoAdvance(length: number, ms: number = STEP_MS) {
   const hold = useCallback(() => setPaused(true), []);
   const release = useCallback(() => setPaused(false), []);
 
-  return { index, select, hold, release, reduced };
+  return { index, select, hold, release, paused, reduced };
 }

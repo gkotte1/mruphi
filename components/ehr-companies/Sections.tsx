@@ -90,7 +90,7 @@ export function Roadmap({
                 </span>
                 {last ? null : (
                   <span
-                    className="absolute top-9 -bottom-6 left-1/2 w-px -translate-x-1/2 bg-brand-pale"
+                    className="absolute top-9 -bottom-6 left-1/2 w-px -translate-x-1/2 bg-brand"
                     aria-hidden
                   />
                 )}
