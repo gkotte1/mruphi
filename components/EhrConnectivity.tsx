@@ -25,15 +25,7 @@ const SUB_STEPS = ["Fetch", "Analyze", "Automate", "Generate", "Write Back"];
 
 export default function EhrConnectivity() {
   return (
-<<<<<<< Updated upstream
     <SectionWrap id="ehr">
-=======
-    <section
-      id="ehr"
-      aria-labelledby="ehr-heading"
-      className={cn("border-t border-grey-mid", SECTION)}
-    >
->>>>>>> Stashed changes
       <Reveal>
         <div className="mx-auto max-w-[680px] text-center">
           <Eyebrow>EHR Connectivity</Eyebrow>
