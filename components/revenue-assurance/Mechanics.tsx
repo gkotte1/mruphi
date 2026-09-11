@@ -33,7 +33,7 @@ function Label({ children }: { children: string }) {
     <div
       className={cn(
         MONO,
-        "mb-2 text-[10px] uppercase tracking-[0.08em] text-grey-bdr",
+        "mb-2 ra-mono text-[10px] uppercase tracking-[0.08em] text-[#B2B2B2]",
       )}
     >
       {children}
@@ -43,8 +43,8 @@ function Label({ children }: { children: string }) {
 
 function Row({ label, value }: { label: string; value: ReactNode }) {
   return (
-    <div className="flex items-baseline justify-between gap-4 border-b border-grey-soft py-2 last:border-b-0">
-      <span className={cn(MONO, "shrink-0 text-[11px] text-ink-muted")}>
+    <div className="flex items-baseline justify-between gap-4 border-b border-[#E3E3E3] py-2 last:border-b-0">
+      <span className={cn(MONO, "ra-mono shrink-0 text-[11px] text-[#878787]")}>
         {label}
       </span>
       <span className="min-w-0 truncate text-right text-[12.5px] font-semibold text-ink">
@@ -57,9 +57,9 @@ function Row({ label, value }: { label: string; value: ReactNode }) {
 /** A document pulled from the record. */
 function DocTile({ name }: { name: string }) {
   return (
-    <span className="flex items-center gap-2 rounded-[10px] border border-grey-mid bg-grey-soft px-2.5 py-2">
-      <Icon name="doc" width={13} height={13} className="shrink-0 text-brand" />
-      <span className={cn(MONO, "min-w-0 truncate text-[11.5px] text-ink")}>
+    <span className="flex items-center gap-2 rounded-[8px] border border-[#E3E3E3] bg-[#F5F5F5] px-2.5 py-2">
+      <Icon name="doc" width={13} height={13} className="shrink-0 text-[#007EFF]" />
+      <span className={cn(MONO, "ra-mono min-w-0 truncate text-[11.5px] text-ink")}>
         {name}
       </span>
     </span>
@@ -74,8 +74,8 @@ function CheckLine({ name, done = true }: { name: string; done?: boolean }) {
         className={cn(
           "flex size-[18px] shrink-0 items-center justify-center rounded-full border",
           done
-            ? "border-brand bg-brand text-white"
-            : "border-grey-mid bg-white text-grey-bdr",
+            ? "border-[#007EFF] bg-[#007EFF] text-white"
+            : "border-[#E3E3E3] bg-white text-[#B2B2B2]",
         )}
         aria-hidden
       >
@@ -99,13 +99,10 @@ function FindingLine({
   const flag = tone === "flag";
 
   return (
-    <li className="flex items-start gap-2.5 border-b border-grey-soft py-2.5 last:border-b-0">
+    <li className="flex items-start gap-2.5 border-b border-[#E3E3E3] py-2.5 last:border-b-0">
       <span
         className={cn(
-          "mt-px flex size-5 shrink-0 items-center justify-center rounded-[6px] border",
-          flag
-            ? "border-brand-deep/20 bg-brand-deep/10 text-brand-deep"
-            : "border-brand-pale bg-brand-tint text-brand",
+          "mt-px flex size-5 shrink-0 items-center justify-center rounded-[6px] border border-[#E3E3E3] bg-[#F5F5F5] text-[#007EFF]",
         )}
         aria-hidden
       >
@@ -115,7 +112,7 @@ function FindingLine({
         <span className="block text-[12.5px] leading-[1.35] font-semibold text-ink">
           {title}
         </span>
-        <span className={cn(MONO, "mt-0.5 block text-[10.5px] text-ink-muted")}>
+        <span className={cn(MONO, "ra-mono mt-0.5 block text-[10.5px] text-[#878787]")}>
           {meta}
         </span>
       </span>
@@ -139,7 +136,7 @@ const VIEWS: View[] = [
           value={
             <span className="inline-flex items-center gap-1.5">
               <span
-                className="size-1.5 rounded-full bg-brand"
+                className="size-1.5 rounded-full bg-[#007EFF]"
                 style={{ animation: "mp-blink 1.6s ease-in-out infinite" }}
                 aria-hidden
               />
@@ -177,9 +174,9 @@ const VIEWS: View[] = [
           </ul>
         </div>
 
-        <div className="mt-3 flex items-center justify-between gap-3 border-t border-grey-soft pt-3">
+        <div className="mt-3 flex items-center justify-between gap-3 border-t border-[#E3E3E3] pt-3">
           <Pips total={4} done={3} />
-          <span className={cn(MONO, "text-[11px] text-ink-muted")}>Analyzing</span>
+          <span className={cn(MONO, "ra-mono text-[11px] text-[#878787]")}>Analyzing</span>
         </div>
       </>
     ),
@@ -207,7 +204,7 @@ const VIEWS: View[] = [
           />
         </ul>
 
-        <div className="mt-3 border-t border-grey-soft pt-3">
+        <div className="mt-3 border-t border-[#E3E3E3] pt-3">
           <Row label="Review status" value="Needs attention" />
         </div>
       </>
@@ -220,11 +217,11 @@ const VIEWS: View[] = [
       <>
         <Row label="Finding" value="02" />
 
-        <div className="mt-3 rounded-tile border-y border-r border-l-[3px] border-y-grey-mid border-r-grey-mid border-l-brand bg-brand-tint px-3.5 py-3">
+        <div className="mt-3 rounded-[8px] border border-[#E3E3E3] bg-[#F5F5F5] px-3.5 py-3">
           <div className="text-[13px] leading-[1.35] font-semibold text-ink">
             Face-to-Face encounter date missing
           </div>
-          <div className={cn(MONO, "mt-0.5 text-[10.5px] text-ink-muted")}>
+          <div className={cn(MONO, "ra-mono mt-0.5 text-[10.5px] text-[#878787]")}>
             Referral documentation
           </div>
         </div>
@@ -238,7 +235,7 @@ const VIEWS: View[] = [
           <Pips total={3} done={2} />
           {/* A state in the mock, not a control - nothing to operate here. */}
           <span
-            className="rounded-full bg-brand px-3.5 py-1.5 text-[11.5px] font-semibold text-white"
+            className="rounded-full bg-[#007EFF] px-3.5 py-1.5 text-[11.5px] font-semibold text-[#F5F5F5]"
             aria-hidden
           >
             Resolve Finding
@@ -258,7 +255,7 @@ const VIEWS: View[] = [
           <CheckLine name="Result approved" />
         </ul>
 
-        <div className="mt-3 border-t border-grey-soft pt-3">
+        <div className="mt-3 border-t border-[#E3E3E3] pt-3">
           <Row label="Write-back" value="Complete" />
         </div>
 
@@ -296,7 +293,7 @@ export default function Mechanics({ steps }: { steps: Step[] }) {
       <div
         ref={columnsRef}
         className={cn(
-          "grid grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] items-start gap-14 max-1080:grid-cols-1 max-1080:gap-10",
+          "grid ra-split grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] items-start gap-16 max-1080:grid-cols-1 max-1080:gap-10",
           paused && "[&_*]:![animation-play-state:paused]",
         )}
       >
@@ -338,16 +335,16 @@ export default function Mechanics({ steps }: { steps: Step[] }) {
                         MONO,
                         "relative z-10 flex size-9 shrink-0 items-center justify-center rounded-full border text-[12px] font-bold transition-colors duration-[420ms] ease-out",
                         isActive
-                          ? "border-brand bg-brand text-white"
+                          ? "border-[#007EFF] bg-[#007EFF] text-[#F5F5F5]"
                           : done
-                            ? "border-brand bg-white text-brand"
-                            : "border-grey-mid bg-white text-grey-500 group-hover:border-brand group-hover:text-brand",
+                            ? "border-[#007EFF] bg-white text-[#007EFF]"
+                            : "border-[#E3E3E3] bg-white text-[#606060] group-hover:border-[#007EFF] group-hover:text-[#007EFF]",
                       )}
                     >
                       {done ? <Tick className="size-3.5" /> : step.num}
                       {isActive ? (
                         <span
-                          className="absolute inset-0 rounded-full border border-brand motion-reduce:hidden"
+                          className="absolute inset-0 rounded-full border border-[#007EFF] motion-reduce:hidden"
                           style={{ animation: "mp-pulse-ring 2s ease-out infinite" }}
                           aria-hidden
                         />
@@ -357,7 +354,7 @@ export default function Mechanics({ steps }: { steps: Step[] }) {
                       <span
                         className={cn(
                           "absolute top-9 -bottom-10 left-1/2 w-px -translate-x-1/2 transition-colors duration-[420ms] ease-out",
-                          done ? "bg-brand" : "bg-grey-mid",
+                          done ? "bg-[#007EFF]" : "bg-[#E3E3E3]",
                         )}
                         aria-hidden
                       />
@@ -367,18 +364,18 @@ export default function Mechanics({ steps }: { steps: Step[] }) {
                   <span
                     className={cn(
                       "min-w-0 border-l-2 pl-5 transition-colors duration-[420ms] ease-out max-600:pl-4",
-                      isActive ? "border-l-brand" : "border-l-transparent",
+                      isActive ? "border-l-[#007EFF]" : "border-l-transparent",
                     )}
                   >
                     <span
                       className={cn(
-                        "block text-[16.5px] font-bold leading-snug tracking-[-0.015em] transition-colors duration-[420ms] ease-out",
-                        isActive ? "text-ink" : "text-grey-500",
+                        "block ra-serif text-[16.5px] font-medium leading-snug transition-colors duration-[420ms] ease-out",
+                        isActive ? "text-ink" : "text-[#606060]",
                       )}
                     >
                       {step.title}
                     </span>
-                    <span className="mt-1.5 block text-[13.5px] leading-[1.55] text-grey-500">
+                    <span className="mt-1.5 block text-[13.5px] leading-[1.55] text-[#606060]">
                       {step.body}
                     </span>
                   </span>
@@ -390,7 +387,7 @@ export default function Mechanics({ steps }: { steps: Step[] }) {
 
         {/* The product view for whichever stage is running. */}
         <div
-          className="min-w-0 rounded-[28px] border border-brand-pale bg-brand-tint/40 p-7 max-1080:p-6 max-600:rounded-panel max-600:p-4"
+          className="ra-card min-w-0 p-7 max-1080:p-6 max-600:p-4"
           onPointerEnter={pause}
           onPointerLeave={(e) => resumeIfOutside(e.relatedTarget)}
         >

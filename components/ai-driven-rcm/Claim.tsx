@@ -8,7 +8,7 @@ import { cn } from "@/lib/cn";
  *
  * The page previously drew that lifecycle as one row of dots and a strip of
  * pills, so it showed the stages but never what happens at any of them. These
- * primitives give it the parts a revenue-cycle interface actually has  - 
+ * primitives give it the parts a revenue-cycle interface actually has - 
  * stage state, the capability running at that stage, an intercepted issue, and
  * the review that clears it.
  *
@@ -39,21 +39,21 @@ export function Surface({
   return (
     <div
       className={cn(
-        "overflow-hidden rounded-panel border border-grey-mid bg-white shadow-[0_20px_50px_rgba(15,29,84,.08)]",
+        "overflow-hidden rounded-[10px] border border-[#E3E3E3] bg-white shadow-[0_1px_2px_rgba(0,0,0,0.03),0_14px_30px_rgba(0,0,0,0.05)]",
         className,
       )}
     >
       <div
         className={cn(
           "flex items-center justify-between gap-3 px-5 py-3 max-720:px-4",
-          onBrand ? "bg-brand" : "border-b border-grey-mid bg-grey-soft",
+          onBrand ? "bg-[#007EFF]" : "border-b border-[#E3E3E3] bg-[#F5F5F5]",
         )}
       >
         <span
           className={cn(
             MONO,
             "flex min-w-0 items-center gap-2 truncate text-[11px] uppercase tracking-[0.06em]",
-            onBrand ? "text-white/90" : "text-ink-muted",
+            onBrand ? "text-white/90" : "text-[#878787]",
           )}
         >
           {label}
@@ -66,11 +66,11 @@ export function Surface({
               "flex shrink-0 items-center gap-1.5 rounded-full px-2.5 py-1 text-[10.5px] font-semibold tracking-[0.04em] uppercase",
               onBrand
                 ? "bg-white/15 text-white"
-                : "border border-brand-pale bg-brand-tint text-brand-dark",
+                : "border border-[#E3E3E3] bg-[#F5F5F5] text-[#007EFF]",
             )}
           >
             <span
-              className={cn("size-1.5 rounded-full", onBrand ? "bg-white" : "bg-brand")}
+              className={cn("size-1.5 rounded-full", onBrand ? "bg-white" : "bg-[#007EFF]")}
               style={{ animation: "mp-blink 1.6s ease-in-out infinite" }}
               aria-hidden
             />
@@ -83,14 +83,14 @@ export function Surface({
                 <span
                   className={cn(
                     "absolute inline-flex size-full rounded-full",
-                    onBrand ? "bg-white/60" : "bg-brand/60",
+                    onBrand ? "bg-white/60" : "bg-[#007EFF]/60",
                   )}
                   style={{ animation: "mp-glow 2.4s ease-in-out infinite" }}
                 />
                 <span
                   className={cn(
                     "relative inline-flex size-1.5 rounded-full",
-                    onBrand ? "bg-white" : "bg-brand",
+                    onBrand ? "bg-white" : "bg-[#007EFF]",
                   )}
                 />
               </span>
@@ -98,7 +98,7 @@ export function Surface({
               <span
                 className={cn(
                   "size-1.5 rounded-full",
-                  onBrand ? "bg-white/50" : "bg-brand-pale",
+                  onBrand ? "bg-white/50" : "bg-[#E3E3E3]",
                 )}
               />
             )}
@@ -109,7 +109,7 @@ export function Surface({
       <div className="px-5 py-[18px] max-720:px-4">{children}</div>
 
       {foot ? (
-        <div className="border-t border-grey-mid bg-grey-bg px-5 py-2.5 max-720:px-4">
+        <div className="border-t border-[#E3E3E3] bg-[#F5F5F5] px-5 py-2.5 max-720:px-4">
           {foot}
         </div>
       ) : null}
@@ -120,8 +120,8 @@ export function Surface({
 /** A labelled value. */
 export function Row({ label, value }: { label: string; value: ReactNode }) {
   return (
-    <div className="flex items-baseline justify-between gap-4 border-b border-grey-soft py-2.5 last:border-b-0">
-      <span className={cn(MONO, "shrink-0 text-[11px] text-ink-muted")}>{label}</span>
+    <div className="flex items-baseline justify-between gap-4 border-b border-[#E3E3E3] py-2.5 last:border-b-0">
+      <span className={cn(MONO, "shrink-0 text-[11px] text-[#878787]")}>{label}</span>
       <span className="min-w-0 truncate text-right text-[12.5px] font-semibold text-ink">
         {value}
       </span>
@@ -132,7 +132,7 @@ export function Row({ label, value }: { label: string; value: ReactNode }) {
 /** The small uppercase label above a group. */
 export function GroupLabel({ children }: { children: string }) {
   return (
-    <div className={cn(MONO, "mb-2 text-[10px] uppercase tracking-[0.08em] text-grey-bdr")}>
+    <div className={cn(MONO, "mb-2 text-[10px] uppercase tracking-[0.08em] text-[#B2B2B2]")}>
       {children}
     </div>
   );
@@ -157,8 +157,8 @@ export function CheckRow({
         className={cn(
           "flex size-[18px] shrink-0 items-center justify-center rounded-full border transition-colors duration-[520ms] ease-out",
           done
-            ? "border-brand bg-brand text-white"
-            : "border-grey-mid bg-white text-grey-bdr",
+            ? "border-[#007EFF] bg-[#007EFF] text-white"
+            : "border-[#E3E3E3] bg-white text-[#B2B2B2]",
         )}
         aria-hidden
       >
@@ -167,7 +167,7 @@ export function CheckRow({
       <span
         className={cn(
           "min-w-0 text-[12.5px] font-semibold transition-colors duration-[520ms] ease-out",
-          done ? "text-ink" : "text-grey-500",
+          done ? "text-ink" : "text-[#606060]",
         )}
       >
         {name}
@@ -182,9 +182,9 @@ export function CheckRow({
  */
 export function FindingCard({ title, meta }: { title: string; meta: string }) {
   return (
-    <div className="flex items-start gap-3 rounded-tile border-y border-r border-l-[3px] border-y-grey-mid border-r-grey-mid border-l-brand-deep bg-brand-tint px-3.5 py-3">
+    <div className="flex items-start gap-3 rounded-[8px] border border-[#E3E3E3] bg-[#F5F5F5] px-3.5 py-3">
       <span
-        className="mt-px flex size-6 shrink-0 items-center justify-center rounded-[7px] border border-brand-deep/20 bg-brand-deep/10 text-brand-deep"
+        className="mt-px flex size-6 shrink-0 items-center justify-center rounded-[7px] border border-[#E3E3E3] bg-white text-[#007EFF]"
         aria-hidden
       >
         <Icon name="shield" width={12} height={12} />
@@ -194,7 +194,7 @@ export function FindingCard({ title, meta }: { title: string; meta: string }) {
         <span className="block text-[13px] leading-[1.35] font-semibold text-ink">
           {title}
         </span>
-        <span className={cn(MONO, "mt-0.5 block text-[10.5px] text-ink-muted")}>
+        <span className={cn(MONO, "mt-0.5 block text-[10.5px] text-[#878787]")}>
           {meta}
         </span>
       </span>
@@ -236,7 +236,7 @@ export function TrackRail({
                   compact
                     ? "flex-1"
                     : "max-1080:mt-0 max-1080:ml-[13px] max-1080:h-6 max-1080:w-0.5",
-                  reached ? "bg-brand" : "bg-grey-mid",
+                  reached ? "bg-[#007EFF]" : "bg-[#E3E3E3]",
                 )}
                 aria-hidden
               />
@@ -252,7 +252,7 @@ export function TrackRail({
               <span
                 className={cn(
                   "text-[11.5px] leading-[1.3] font-semibold transition-colors duration-[520ms] ease-out",
-                  node.state === "pending" ? "text-grey-500" : "text-ink",
+                  node.state === "pending" ? "text-[#606060]" : "text-ink",
                 )}
               >
                 {node.label}
@@ -272,10 +272,10 @@ export function StageDot({ state }: { state: StageState }) {
       className={cn(
         "flex size-[26px] shrink-0 items-center justify-center rounded-full border-2 transition-colors duration-[520ms] ease-out",
         state === "pass"
-          ? "border-brand bg-brand text-white"
+          ? "border-[#007EFF] bg-[#007EFF] text-white"
           : state === "flag"
-            ? "border-brand-deep bg-brand-deep text-white"
-            : "border-grey-mid bg-white text-grey-bdr",
+            ? "border-[#007EFF] bg-[#007EFF] text-white"
+            : "border-[#E3E3E3] bg-white text-[#B2B2B2]",
       )}
       aria-hidden
     >
@@ -299,7 +299,7 @@ export function Pips({ total, done }: { total: number; done: number }) {
           key={i}
           className={cn(
             "h-1.5 rounded-full transition-all duration-[520ms] ease-out",
-            i < done ? "w-5 bg-brand" : "w-2.5 bg-grey-mid",
+            i < done ? "w-5 bg-[#007EFF]" : "w-2.5 bg-[#E3E3E3]",
           )}
         />
       ))}

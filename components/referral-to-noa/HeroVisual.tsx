@@ -15,7 +15,7 @@ import { cn } from "@/lib/cn";
 /**
  * The hero visual: every source, one intake.
  *
- * It used to be five labelled boxes, two columns of chevrons and a grey card  - 
+ * It used to be five labelled boxes, two columns of chevrons and a grey card - 
  * a diagram of the idea. It is now the intake itself: the five sources the page
  * names, feeding one bus into the Murphi mark, with the three states the page
  * already lists clearing in sequence and the referral ending ready to route.
@@ -61,9 +61,9 @@ export default function IntakeFlow({
         <div className="grid grid-cols-5">
           {sources.map((source, i) => (
             <span key={source} className="flex justify-center">
-              <span className="relative flex h-6 w-px bg-brand-pale">
+              <span className="relative flex h-6 w-px bg-[#E3E3E3]">
                 <span
-                  className="absolute left-1/2 size-1.5 -translate-x-1/2 rounded-full bg-brand"
+                  className="absolute left-1/2 size-1.5 -translate-x-1/2 rounded-full bg-[#007EFF]"
                   style={{
                     animation: `mp-flow-pulse-v 2.6s ease-in-out infinite ${i * 0.34}s`,
                   }}
@@ -73,9 +73,9 @@ export default function IntakeFlow({
           ))}
         </div>
 
-        <span className="mx-[10%] block h-px bg-brand-pale" />
+        <span className="mx-[10%] block h-px bg-[#E3E3E3]" />
 
-        <span className="mx-auto flex h-6 w-px bg-brand-pale" />
+        <span className="mx-auto flex h-6 w-px bg-[#E3E3E3]" />
       </div>
 
       {/* Below 900 the sources wrap, so the fan becomes one run. */}
@@ -109,7 +109,7 @@ export default function IntakeFlow({
             <Tick
               className={cn(
                 "size-3.5 shrink-0 transition-colors duration-[420ms] ease-out",
-                cleared === states.length ? "text-brand" : "text-grey-bdr",
+                cleared === states.length ? "text-[#007EFF]" : "text-[#B2B2B2]",
               )}
             />
             <span className={cn(MONO, "text-[11.5px] font-semibold text-ink")}>

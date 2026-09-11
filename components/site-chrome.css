@@ -1,0 +1,230 @@
+/* Shared site Navbar and Footer — matches the homepage chrome. */
+
+.site-chrome {
+  font-family: var(--font-hl-sans), "Manrope", sans-serif;
+  color: #1a1a1a;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.site-chrome a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.site-chrome a:hover {
+  text-decoration: underline;
+  color: #007eff;
+}
+
+.site-chrome .hl-nav-links {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  gap: 28px;
+}
+
+.site-chrome .hl-nav-actions {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  gap: 18px;
+}
+
+.site-chrome .hl-nav-link,
+.site-chrome .hl-nav-download {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  color: #1a1a1a;
+  cursor: pointer;
+  line-height: 1;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.site-chrome .hl-nav-link {
+  gap: 6px;
+}
+
+.site-chrome .hl-nav-link:hover,
+.site-chrome .hl-nav-download:hover {
+  color: #007eff;
+  text-decoration: underline;
+}
+
+.site-chrome .hl-nav-drop {
+  position: relative;
+}
+
+.site-chrome .hl-nav-menu-slot {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-top: 12px;
+  max-width: calc(100vw - 2rem);
+  z-index: 60;
+}
+
+.site-chrome .hl-nav-menu {
+  background: #ffffff;
+  border: 1px solid #e3e3e3;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03), 0 14px 30px rgba(0, 0, 0, 0.05);
+  padding: 10px 8px;
+}
+
+.site-chrome .hl-nav-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.site-chrome .hl-nav-menu a,
+.site-chrome .hl-nav-mobile-list a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  font-size: 14.5px;
+  font-weight: 600;
+  color: #1a1a1a;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+.site-chrome .hl-nav-menu a:hover,
+.site-chrome .hl-nav-mobile-list a:hover {
+  color: #007eff;
+  background: #f5f5f5;
+  text-decoration: none;
+}
+
+.site-chrome .hl-nav-item-icon {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  color: #007eff;
+}
+
+.site-chrome .hl-nav-soon-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 8px 10px;
+}
+
+.site-chrome .hl-nav-soon-line {
+  flex: 1;
+  height: 1px;
+  background: #e3e3e3;
+}
+
+.site-chrome .hl-nav-soon-label {
+  flex-shrink: 0;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: #878787;
+}
+
+.site-chrome .hl-nav-soon {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: #878787;
+}
+
+.site-chrome .hl-nav-toggle,
+.site-chrome .hl-nav-mobile {
+  display: none;
+}
+
+.site-chrome .hl-footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr 1fr;
+  gap: 40px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid #e3e3e3;
+}
+
+.site-chrome .hl-social {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #878787;
+  text-decoration: none;
+}
+
+.site-chrome .hl-social:hover {
+  color: #007eff;
+  text-decoration: none;
+}
+
+@media (max-width: 1100px) {
+  .site-chrome .hl-footer-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .site-chrome .hl-footer-grid > div:first-child {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 860px) {
+  .site-chrome .hl-nav-links {
+    display: none !important;
+  }
+  .site-chrome .hl-nav-download {
+    display: none;
+  }
+  .site-chrome .hl-nav-toggle,
+  .site-chrome .hl-nav-mobile {
+    display: block;
+  }
+  .site-chrome .hl-nav-toggle {
+    display: inline-flex !important;
+  }
+  .site-chrome .hl-footer-grid {
+    grid-template-columns: 1fr 1fr !important;
+  }
+  .site-chrome .hl-footer-grid > div:first-child {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 430px) {
+  .site-chrome .hl-nav-inner {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    gap: 10px !important;
+  }
+  .site-chrome .hl-nav-logo {
+    min-width: 0;
+    max-width: 42vw;
+  }
+  .site-chrome .hl-nav-logo img {
+    width: 100% !important;
+    height: auto !important;
+    max-height: 26px;
+  }
+  .site-chrome .hl-nav-actions {
+    gap: 10px;
+  }
+  .site-chrome .hl-nav-cta {
+    padding: 8px 12px !important;
+    font-size: 13px !important;
+    white-space: nowrap;
+  }
+}

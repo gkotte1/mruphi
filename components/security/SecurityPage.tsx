@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Icon, type IconName } from "@/components/icons";
+import { SimpleHero } from "@/components/inner-page/Hero";
+import { IpWrap } from "@/components/inner-page/Shell";
 import { cn } from "@/lib/cn";
 
 /**
@@ -170,10 +172,6 @@ const SUB_PROCESSORS = [
   ["Firebase", "Crash Logs & Analytics", "USA"],
 ];
 
-const SHELL = "mx-auto w-full max-w-[1280px] px-10 max-1200:px-8 max-600:px-4";
-const BAND = "border-t border-grey-mid py-24 max-1024:py-20 max-600:py-16";
-const H2 = "type-h2 text-ink";
-
 export default function SecurityPage() {
   return (
     <main>
@@ -192,95 +190,74 @@ export default function SecurityPage() {
 /* ── Section 1 ── */
 function Hero() {
   return (
-    <section className="bg-hero-bg pt-[80px]">
-      <div
-        className={cn(
-          SHELL,
-          "py-16 text-center max-600:py-10",
-        )}
-      >
-        <p className="type-label inline-flex items-center gap-2 rounded-full border border-brand-ghost bg-brand-tint px-3.5 py-1.5 text-brand-dark">
-          <Icon name="shield" width={13} height={13} />
-          Security &amp; Compliance
-        </p>
-
-        <h1 className="mx-auto mt-7 max-w-[820px] type-h1 text-ink">
+    <SimpleHero
+      current="Security"
+      badge="Security & Compliance"
+      badgeIcon={<Icon name="shield" width={13} height={13} />}
+      title={
+        <>
           Enterprise-Grade Security
           <br />
           Built for Healthcare AI
-        </h1>
-
-        <p className="type-lead mx-auto mt-6 max-w-[680px] text-grey-dk">
-          Murphi.ai protects patient data with enterprise-grade encryption,
-          rigorous compliance standards, and continuous monitoring. We treat your
-          data security as our primary feature.
-        </p>
-
-        <Link
-          href="/contact-us/"
-          className="group mt-9 btn-primary max-600:w-full max-600:justify-center"
-        >
+        </>
+      }
+      lede="Murphi.ai protects patient data with enterprise-grade encryption, rigorous compliance standards, and continuous monitoring. We treat your data security as our primary feature."
+      actions={
+        <Link href="/contact-us/" className="ip-btn">
           Request Demo
-          <Icon
-            name="arrow"
-            width={17}
-            height={17}
-            className="transition-transform duration-200 group-hover:translate-x-[3px]"
-          />
         </Link>
-
-        <ul className="mx-auto mt-12 flex max-w-[820px] flex-wrap items-center justify-center gap-3 max-600:mt-9">
-          {HERO_BADGES.map((badge) => (
-            <li
-              key={badge.label}
-              className="flex items-center gap-2.5 rounded-full border border-grey-mid bg-white px-4 py-2.5"
-            >
-              <Image
-                src={badge.src}
-                alt=""
-                width={badge.width}
-                height={badge.height}
-                className="h-6 w-auto"
-              />
-              <span className="text-[12.5px] font-bold tracking-[-0.01em] text-grey-dk">
-                {badge.label}
-              </span>
-            </li>
-          ))}
-
-          <li className="flex items-center gap-2.5 rounded-full border border-grey-mid bg-white px-4 py-2.5">
-            <span className="flex size-6 items-center justify-center rounded-full border border-brand-border bg-brand-tint text-brand-dark">
-              <Icon name="doc" width={12} height={12} />
-            </span>
-            <span className="text-[12.5px] font-bold tracking-[-0.01em] text-grey-dk">
-              BAA Available
+      }
+    >
+      <ul className="mx-auto flex max-w-[820px] flex-wrap items-center justify-center gap-3">
+        {HERO_BADGES.map((badge) => (
+          <li
+            key={badge.label}
+            className="flex items-center gap-2.5 rounded-full border border-[#E3E3E3] bg-white px-4 py-2.5"
+          >
+            <Image
+              src={badge.src}
+              alt=""
+              width={badge.width}
+              height={badge.height}
+              className="h-6 w-auto"
+            />
+            <span className="text-[12.5px] font-bold tracking-[-0.01em] text-[#606060]">
+              {badge.label}
             </span>
           </li>
-        </ul>
-      </div>
-    </section>
+        ))}
+
+        <li className="flex items-center gap-2.5 rounded-full border border-[#E3E3E3] bg-white px-4 py-2.5">
+          <span className="flex size-6 items-center justify-center rounded-full border border-[#E3E3E3] bg-[#F5F5F5] text-[#007EFF]">
+            <Icon name="doc" width={12} height={12} />
+          </span>
+          <span className="text-[12.5px] font-bold tracking-[-0.01em] text-[#606060]">
+            BAA Available
+          </span>
+        </li>
+      </ul>
+    </SimpleHero>
   );
 }
 
 /* ── Section 2 ── */
 function Pillars() {
   return (
-    <section aria-labelledby="pillars" className={cn("bg-white", BAND)}>
-      <div className={SHELL}>
-        <p className="type-label text-brand-dark text-center">Certifications</p>
+    <section aria-labelledby="pillars" style={{ padding: "64px 0 96px" }}>
+      <IpWrap>
+        <p className="ip-eyebrow text-center">Certifications</p>
 
-        <h2 id="pillars" className={cn(H2, "mt-4 text-center")}>
+        <h2 id="pillars" className="ip-h2 ip-serif mt-4 text-center">
           Three Pillars of Compliance
         </h2>
 
-        {/* A certification wall: one surface, three seals, hairline divided. */}
-        <ul className="mx-auto mt-12 grid max-w-[1080px] grid-cols-3 gap-px overflow-hidden rounded-[24px] border border-grey-mid bg-grey-mid shadow-[0_24px_60px_-46px_rgba(15,29,84,0.4)] max-1024:grid-cols-1 max-600:mt-9">
+        <ul className="ip-ruled mx-auto mt-12 max-w-[1080px] grid-cols-3 max-1024:grid-cols-1 max-600:mt-9">
           {PILLARS.map((pillar) => (
             <li
               key={pillar.title}
-              className="bg-white p-8 text-center transition-colors duration-200 hover:bg-grey-bg max-600:p-6"
+              className="p-8 text-center transition-colors duration-200 hover:bg-[#F5F5F5] max-600:p-6"
             >
-              <span className="mx-auto flex size-[76px] items-center justify-center rounded-full border border-brand-border/50 bg-grey-bg">
+              <span className="mx-auto flex size-[76px] items-center justify-center rounded-full border border-[#E3E3E3] bg-[#F5F5F5]">
                 <Image
                   src={pillar.src}
                   alt=""
@@ -293,13 +270,13 @@ function Pillars() {
               <h3 className="mt-6 text-[16px] font-bold leading-snug tracking-[-0.02em] text-ink">
                 {pillar.title}
               </h3>
-              <p className="mt-3.5 text-[13.5px] leading-relaxed text-grey-dk/85">
+              <p className="mt-3.5 text-[13.5px] leading-relaxed text-[#606060]">
                 {pillar.body}
               </p>
             </li>
           ))}
         </ul>
-      </div>
+      </IpWrap>
     </section>
   );
 }
@@ -307,37 +284,36 @@ function Pillars() {
 /* ── Section 3 ── */
 function ZeroTrust() {
   return (
-    <section aria-labelledby="zero-trust" className={cn("relative isolate bg-tint", BAND)}>
-      <div className={SHELL}>
+    <section aria-labelledby="zero-trust" className="ip-section ip-band">
+      <IpWrap>
         <div className="mx-auto max-w-[680px] text-center">
-          <p className="type-label text-brand-dark">Zero Trust Architecture</p>
+          <p className="ip-eyebrow">Zero Trust Architecture</p>
 
-          <h2 id="zero-trust" className={cn(H2, "mt-4")}>
+          <h2 id="zero-trust" className="ip-h2 ip-serif mt-4">
             We Never Assume Trust
           </h2>
-          <p className="type-lead mt-5 text-grey-dk">
+          <p className="ip-lead mt-5">
             Every access request is verified, authorized, and encrypted  - 
             regardless of network location or user identity.
           </p>
         </div>
 
-        {/* Three principles applied in order, joined on one rule. */}
-        <ol className="mx-auto mt-12 grid max-w-[1080px] grid-cols-3 gap-px overflow-hidden rounded-panel border border-grey-mid bg-grey-mid max-1024:grid-cols-1 max-600:mt-9">
+        <ol className="ip-ruled mx-auto mt-12 max-w-[1080px] grid-cols-3 max-1024:grid-cols-1 max-600:mt-9">
           {ZERO_TRUST.map((step) => (
-            <li key={step.index} className="bg-white p-7 max-600:p-5">
-              <span className="text-[26px] font-extrabold leading-none tracking-[-0.04em] text-brand/35">
+            <li key={step.index} className="p-7 max-600:p-5">
+              <span className="ip-serif text-[26px] font-medium leading-none tracking-[-0.04em] text-[#007EFF]/35">
                 {step.index}
               </span>
               <h3 className="mt-4 text-[16px] font-bold leading-snug tracking-[-0.02em] text-ink">
                 {step.title}
               </h3>
-              <p className="mt-3.5 text-[13.5px] leading-relaxed text-grey-dk/85">
+              <p className="mt-3.5 text-[13.5px] leading-relaxed text-[#606060]">
                 {step.body}
               </p>
             </li>
           ))}
         </ol>
-      </div>
+      </IpWrap>
     </section>
   );
 }
@@ -364,36 +340,33 @@ function CardBand({
   return (
     <section
       aria-labelledby={id}
-      className={cn("relative isolate", BAND, tinted ? "bg-tint" : "bg-white")}
+      className={cn("ip-section", tinted ? "ip-band" : "")}
     >
-      <div className={SHELL}>
+      <IpWrap>
         <div className="mx-auto max-w-[700px] text-center">
-          <p className="type-label text-brand-dark">{label}</p>
+          <p className="ip-eyebrow">{label}</p>
 
-          <h2 id={id} className={cn(H2, "mt-4")}>
+          <h2 id={id} className="ip-h2 ip-serif mt-4">
             {heading}
           </h2>
-          <p className="type-lead mt-5 text-grey-dk">{intro}</p>
+          <p className="ip-lead mt-5">{intro}</p>
         </div>
 
         {variant === "layers" ? (
-          /* Defence in depth reads as depth: full-width bands, each stepped in
-             a little further than the one above it. */
-          <ol className="mx-auto mt-12 max-w-[1080px] overflow-hidden rounded-panel border border-grey-mid bg-white max-600:mt-9">
+          <ol className="ip-card mx-auto mt-12 max-w-[1080px] overflow-hidden max-600:mt-9">
             {cards.map((card, i) => (
               <li
                 key={card.title}
                 className={cn(
                   "grid grid-cols-[auto_minmax(0,0.42fr)_minmax(0,1fr)] items-center gap-7 px-8 py-7 max-900:grid-cols-[auto_1fr] max-900:gap-x-5 max-900:gap-y-2.5 max-600:px-5",
-                  i === cards.length - 1 ? "" : "border-b border-grey-mid",
+                  i === cards.length - 1 ? "" : "border-b border-[#E3E3E3]",
                 )}
-                style={{ paddingLeft: undefined }}
               >
                 <span className="flex items-center gap-4">
-                  <span className="type-micro w-6 shrink-0 text-grey-dk/35">
+                  <span className="ip-mono w-6 shrink-0 text-[10.5px] font-semibold text-[#B2B2B2]">
                     {`0${i + 1}`}
                   </span>
-                  <span className="flex size-10 shrink-0 items-center justify-center rounded-card border border-brand-border/80 bg-brand-tint text-brand-dark">
+                  <span className="flex size-10 shrink-0 items-center justify-center rounded-[8px] border border-[#E3E3E3] bg-[#F5F5F5] text-[#007EFF]">
                     <Icon name={card.icon} width={18} height={18} />
                   </span>
                 </span>
@@ -401,42 +374,41 @@ function CardBand({
                 <h3 className="text-[16px] font-bold leading-snug tracking-[-0.02em] text-ink">
                   {card.title}
                 </h3>
-                <p className="text-[13.5px] leading-relaxed text-grey-dk/85 max-900:col-start-2">
+                <p className="text-[13.5px] leading-relaxed text-[#606060] max-900:col-start-2">
                   {card.body}
                 </p>
               </li>
             ))}
           </ol>
         ) : (
-          /* Monitoring reads as an operations strip: three watches, each live. */
-          <ul className="mx-auto mt-12 grid max-w-[1080px] grid-cols-3 gap-px overflow-hidden rounded-panel border border-grey-mid bg-grey-mid max-1024:grid-cols-1 max-600:mt-9">
+          <ul className="ip-ruled mx-auto mt-12 max-w-[1080px] grid-cols-3 max-1024:grid-cols-1 max-600:mt-9">
             {cards.map((card) => (
-              <li key={card.title} className="bg-white p-7 max-600:p-5">
+              <li key={card.title} className="p-7 max-600:p-5">
                 <span className="flex items-center justify-between gap-3">
-                  <span className="flex size-10 items-center justify-center rounded-card border border-brand-border/80 bg-brand-tint text-brand-dark">
+                  <span className="flex size-10 items-center justify-center rounded-[8px] border border-[#E3E3E3] bg-[#F5F5F5] text-[#007EFF]">
                     <Icon name={card.icon} width={18} height={18} />
                   </span>
 
                   <span className="relative flex size-1.5 shrink-0" aria-hidden>
                     <span
-                      className="absolute inline-flex size-full rounded-full bg-brand/60 motion-reduce:hidden"
+                      className="absolute inline-flex size-full rounded-full bg-[#007EFF]/60 motion-reduce:hidden"
                       style={{ animation: "mp-glow 2.4s ease-in-out infinite" }}
                     />
-                    <span className="relative inline-flex size-1.5 rounded-full bg-brand" />
+                    <span className="relative inline-flex size-1.5 rounded-full bg-[#007EFF]" />
                   </span>
                 </span>
 
                 <h3 className="mt-5 text-[16px] font-bold leading-snug tracking-[-0.02em] text-ink">
                   {card.title}
                 </h3>
-                <p className="mt-3.5 text-[13.5px] leading-relaxed text-grey-dk/85">
+                <p className="mt-3.5 text-[13.5px] leading-relaxed text-[#606060]">
                   {card.body}
                 </p>
               </li>
             ))}
           </ul>
         )}
-      </div>
+      </IpWrap>
     </section>
   );
 }
@@ -472,21 +444,21 @@ function Surveillance() {
 /* ── Section 6 ── */
 function Controls() {
   return (
-    <section aria-labelledby="controls" className={cn("bg-white", BAND)}>
-      <div className={SHELL}>
-        <p className="type-label text-brand-dark text-center">Technical Safeguards</p>
+    <section aria-labelledby="controls" className="ip-section">
+      <IpWrap>
+        <p className="ip-eyebrow text-center">Technical Safeguards</p>
 
-        <h2 id="controls" className={cn(H2, "mx-auto mt-4 max-w-[720px] text-center")}>
+        <h2 id="controls" className="ip-h2 ip-serif mx-auto mt-4 max-w-[720px] text-center">
           Industry-Leading Controls at Every Layer
         </h2>
 
-        <ul className="mx-auto mt-12 grid max-w-[1080px] grid-cols-2 gap-x-12 border-t border-grey-mid max-1024:grid-cols-1 max-1024:gap-x-0 max-600:mt-9">
+        <ul className="mx-auto mt-12 max-w-[1080px] grid-cols-2 gap-x-12 border-t border-[#E3E3E3] max-1024:grid-cols-1 max-1024:gap-x-0 max-600:mt-9 grid">
           {CONTROLS.map((control) => (
             <li
               key={control.title}
-              className="flex gap-4 border-b border-grey-mid py-7 max-600:py-6"
+              className="flex gap-4 border-b border-[#E3E3E3] py-7 max-600:py-6"
             >
-              <span className="flex size-10 shrink-0 items-center justify-center rounded-card border border-brand-border/80 bg-brand-tint text-brand-dark">
+              <span className="flex size-10 shrink-0 items-center justify-center rounded-[8px] border border-[#E3E3E3] bg-[#F5F5F5] text-[#007EFF]">
                 <Icon name={control.icon} width={18} height={18} />
               </span>
 
@@ -494,14 +466,14 @@ function Controls() {
                 <h3 className="text-[16px] font-bold leading-snug tracking-[-0.02em] text-ink">
                   {control.title}
                 </h3>
-                <p className="mt-2.5 text-[13.5px] leading-relaxed text-grey-dk/85">
+                <p className="mt-2.5 text-[13.5px] leading-relaxed text-[#606060]">
                   {control.body}
                 </p>
               </div>
             </li>
           ))}
         </ul>
-      </div>
+      </IpWrap>
     </section>
   );
 }
@@ -509,38 +481,37 @@ function Controls() {
 /* ── Section 7 ── */
 function ResponsibleAi() {
   return (
-    <section aria-labelledby="responsible-ai" className={cn("relative isolate bg-tint", BAND)}>
-      <div className={SHELL}>
-        <p className="type-label text-brand-dark text-center">AI Governance</p>
+    <section aria-labelledby="responsible-ai" className="ip-section ip-band">
+      <IpWrap>
+        <p className="ip-eyebrow text-center">AI Governance</p>
 
         <h2
           id="responsible-ai"
-          className={cn(H2, "mx-auto mt-4 max-w-[720px] text-center")}
+          className="ip-h2 ip-serif mx-auto mt-4 max-w-[720px] text-center"
         >
           Responsible AI with Comprehensive Oversight
         </h2>
 
-        {/* Governance reads as commitments, one per line. */}
-        <ul className="mx-auto mt-12 max-w-[900px] border-t border-grey-mid max-600:mt-9">
+        <ul className="mx-auto mt-12 max-w-[900px] border-t border-[#E3E3E3] max-600:mt-9">
           {RESPONSIBLE_AI.map((item) => (
             <li
               key={item.title}
-              className="grid grid-cols-[auto_minmax(0,0.5fr)_minmax(0,1fr)] items-start gap-7 border-b border-grey-mid py-7 max-900:grid-cols-[auto_1fr] max-900:gap-x-5 max-900:gap-y-2.5 max-600:py-6"
+              className="grid grid-cols-[auto_minmax(0,0.5fr)_minmax(0,1fr)] items-start gap-7 border-b border-[#E3E3E3] py-7 max-900:grid-cols-[auto_1fr] max-900:gap-x-5 max-900:gap-y-2.5 max-600:py-6"
             >
-              <span className="flex size-10 shrink-0 items-center justify-center rounded-card border border-brand-border/80 bg-brand-tint text-brand-dark">
+              <span className="flex size-10 shrink-0 items-center justify-center rounded-[8px] border border-[#E3E3E3] bg-[#F5F5F5] text-[#007EFF]">
                 <Icon name={item.icon} width={18} height={18} />
               </span>
 
               <h3 className="text-[16px] font-bold leading-snug tracking-[-0.02em] text-ink">
                 {item.title}
               </h3>
-              <p className="text-[13.5px] leading-relaxed text-grey-dk/85 max-900:col-start-2">
+              <p className="text-[13.5px] leading-relaxed text-[#606060] max-900:col-start-2">
                 {item.body}
               </p>
             </li>
           ))}
         </ul>
-      </div>
+      </IpWrap>
     </section>
   );
 }
@@ -548,15 +519,15 @@ function ResponsibleAi() {
 /* ── Section 8 ── */
 function SubProcessors() {
   return (
-    <section aria-labelledby="sub-processors" className={cn("bg-white", BAND)}>
-      <div className={SHELL}>
+    <section aria-labelledby="sub-processors" className="ip-section">
+      <IpWrap>
         <div className="mx-auto max-w-[760px] text-center">
-          <p className="type-label text-brand-dark">Sub-Processors</p>
+          <p className="ip-eyebrow">Sub-Processors</p>
 
-          <h2 id="sub-processors" className={cn(H2, "mt-4")}>
+          <h2 id="sub-processors" className="ip-h2 ip-serif mt-4">
             Third-Party Sub-Processors
           </h2>
-          <p className="type-lead mt-5 text-grey-dk">
+          <p className="ip-lead mt-5">
             We partner with carefully selected third-party sub-processors to
             enhance platform functionality while maintaining strict security and
             compliance standards. All sub-processors are contractually obligated
@@ -564,15 +535,15 @@ function SubProcessors() {
           </p>
         </div>
 
-        <div className="mx-auto mt-12 max-w-[900px] overflow-hidden rounded-panel border border-grey-mid max-600:mt-9">
+        <div className="ip-card mx-auto mt-12 max-w-[900px] overflow-hidden max-600:mt-9">
           <table className="w-full border-collapse text-left">
             <thead>
-              <tr className="bg-grey-bg">
+              <tr className="bg-[#F5F5F5]">
                 {["Vendor", "Purpose", "Location"].map((head) => (
                   <th
                     key={head}
                     scope="col"
-                    className="border-b border-grey-mid px-6 py-4 text-[10.5px] font-bold uppercase tracking-[0.1em] text-brand-deep/55 max-600:px-4"
+                    className="ip-mono border-b border-[#E3E3E3] px-6 py-4 text-[10.5px] font-bold uppercase tracking-[0.1em] text-[#878787] max-600:px-4"
                   >
                     {head}
                   </th>
@@ -581,14 +552,14 @@ function SubProcessors() {
             </thead>
             <tbody>
               {SUB_PROCESSORS.map(([vendor, purpose, location]) => (
-                <tr key={vendor} className="border-b border-grey-mid last:border-b-0">
+                <tr key={vendor} className="border-b border-[#E3E3E3] last:border-b-0">
                   <td className="px-6 py-4 text-[13.5px] font-bold tracking-[-0.012em] text-ink max-600:px-4">
                     {vendor}
                   </td>
-                  <td className="px-6 py-4 text-[13.5px] text-grey-dk/85 max-600:px-4">
+                  <td className="px-6 py-4 text-[13.5px] text-[#606060] max-600:px-4">
                     {purpose}
                   </td>
-                  <td className="px-6 py-4 text-[13.5px] text-grey-dk/85 max-600:px-4">
+                  <td className="px-6 py-4 text-[13.5px] text-[#606060] max-600:px-4">
                     {location}
                   </td>
                 </tr>
@@ -596,7 +567,7 @@ function SubProcessors() {
             </tbody>
           </table>
         </div>
-      </div>
+      </IpWrap>
     </section>
   );
 }

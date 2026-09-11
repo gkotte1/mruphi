@@ -1,12 +1,8 @@
 import Link from "next/link";
 import { Icon, type IconName } from "@/components/icons";
+import { EhrSplit } from "@/components/inner-page/kit";
 import Reveal from "@/components/module-page/Reveal";
-import {
-  Eyebrow,
-  MONO,
-  SECTION,
-  Tick,
-} from "@/components/module-page/ui";
+import { MONO, Tick } from "@/components/module-page/ui";
 import { LayerBand, MODULE_ICONS } from "@/components/agencies/Workflows";
 import { cn } from "@/lib/cn";
 
@@ -30,19 +26,19 @@ export function StartSmall({
 }) {
   return (
     <Reveal>
-      <div className="grid grid-cols-2 overflow-hidden rounded-panel border border-grey-mid bg-white shadow-[0_16px_40px_rgba(15,29,84,.06)] max-720:grid-cols-1">
+      <div className="grid grid-cols-2 overflow-hidden rounded-[10px] border border-[#E3E3E3] bg-white shadow-[0_1px_2px_rgba(0,0,0,0.03),0_14px_30px_rgba(0,0,0,0.05)] max-720:grid-cols-1">
         {groups.map((group, g) => (
           <div
             key={group.label}
             className={cn(
               "px-7 py-6 max-600:px-5",
-              g === 0 ? "border-r border-grey-mid max-720:border-r-0 max-720:border-b" : "",
+              g === 0 ? "border-r border-[#E3E3E3] max-720:border-r-0 max-720:border-b" : "",
             )}
           >
             <span
               className={cn(
                 MONO,
-                "block text-[13px] font-semibold uppercase tracking-[0.05em] text-ink-muted",
+                "block text-[13px] font-semibold uppercase tracking-[0.05em] text-[#878787]",
               )}
             >
               {group.label}
@@ -66,14 +62,14 @@ export function StartSmall({
                   ))}
 
                   {group.soon ? (
-                    <span className="flex items-center gap-2.5 rounded-tile border border-dashed border-grey-mid bg-grey-soft/60 px-3.5 py-2.5">
-                      <span className="text-[13.5px] font-semibold tracking-[-0.01em] text-grey-500">
+                    <span className="flex items-center gap-2.5 rounded-[8px] border border-dashed border-[#E3E3E3] bg-[#F5F5F5] px-3.5 py-2.5">
+                      <span className="text-[13.5px] font-semibold tracking-[-0.01em] text-[#606060]">
                         {group.soon}
                       </span>
                       <span
                         className={cn(
                           MONO,
-                          "rounded-full border border-grey-mid bg-white px-2 py-0.5 text-[9.5px] uppercase tracking-[0.06em] text-grey-500",
+                          "rounded-full border border-[#E3E3E3] bg-white px-2 py-0.5 text-[9.5px] uppercase tracking-[0.06em] text-[#606060]",
                         )}
                       >
                         Soon
@@ -92,9 +88,9 @@ export function StartSmall({
 
 function SettingChip({ item }: { item: string }) {
   return (
-    <span className="flex h-full min-w-0 items-center gap-2.5 rounded-tile border border-grey-mid bg-white px-3.5 py-2.5">
+    <span className="flex h-full min-w-0 items-center gap-2.5 rounded-[8px] border border-[#E3E3E3] bg-white px-3.5 py-2.5">
       <span
-        className="flex size-5 shrink-0 items-center justify-center rounded-[6px] border border-brand-pale bg-brand-tint text-brand"
+        className="flex size-5 shrink-0 items-center justify-center rounded-[6px] border border-[#E3E3E3] bg-[#F5F5F5] text-[#007EFF]"
         aria-hidden
       >
         <Tick className="size-2.5" />
@@ -127,11 +123,11 @@ export function ModuleLinks({
           <Link
             key={card.title}
             href={card.href}
-            className="group flex h-full flex-col rounded-panel border border-grey-mid bg-white px-6 py-6 transition-all duration-200 hover:-translate-y-0.5 hover:border-brand-pale hover:shadow-[0_18px_40px_-24px_rgba(15,29,84,.55)]"
+            className="ip-link-card group flex h-full flex-col rounded-[10px] border border-[#E3E3E3] bg-white px-6 py-6 transition-colors duration-200 hover:border-[#007EFF]"
           >
             <span className="flex items-center justify-between gap-3">
               <span
-                className="flex size-9 shrink-0 items-center justify-center rounded-[10px] border border-brand-pale bg-brand-tint text-brand transition-colors duration-200 group-hover:border-transparent group-hover:bg-brand group-hover:text-white"
+                className="flex size-9 shrink-0 items-center justify-center rounded-[10px] border border-[#E3E3E3] bg-[#F5F5F5] text-[#007EFF] transition-colors duration-200 group-hover:border-transparent group-hover:bg-[#007EFF] group-hover:text-white"
                 aria-hidden
               >
                 <Icon
@@ -145,14 +141,14 @@ export function ModuleLinks({
                 name="arrow"
                 width={17}
                 height={17}
-                className="shrink-0 text-grey-bdr transition-all duration-200 group-hover:translate-x-1 group-hover:text-brand"
+                className="shrink-0 text-[#B2B2B2] transition-all duration-200 group-hover:translate-x-1 group-hover:text-[#007EFF]"
               />
             </span>
 
             <span className="mt-5 block text-[16px] font-bold leading-snug tracking-[-0.015em] text-ink">
               {card.title}
             </span>
-            <span className="mt-2 block text-[13px] leading-[1.6] text-grey-500">
+            <span className="mt-2 block text-[13px] leading-[1.6] text-[#606060]">
               {card.body}
             </span>
           </Link>
@@ -179,98 +175,80 @@ export function EhrLayer({
   steps: string[];
 }) {
   return (
-    <section id="ehr" className={cn("border-t border-grey-mid", SECTION)}>
-      <Reveal>
-        <div className="mx-auto max-w-[1156px] rounded-panel bg-tint px-12 py-14 max-720:mx-5 max-720:px-6 max-720:py-10">
-          <div className="grid grid-cols-[0.9fr_1.1fr] items-center gap-14 max-1080:grid-cols-1 max-1080:gap-10">
-            <div className="min-w-0">
-              <Eyebrow>EHR Integration</Eyebrow>
+    <EhrSplit heading={heading} lede={lede}>
+      <div className="overflow-hidden rounded-[10px] border border-[#E3E3E3] bg-white shadow-[0_1px_2px_rgba(0,0,0,0.03),0_14px_30px_rgba(0,0,0,0.05)]">
+        <div
+          className={cn(
+            MONO,
+            "flex items-center justify-between gap-3 border-b border-[#E3E3E3] bg-[#F5F5F5] px-5 py-3 max-600:px-4",
+          )}
+        >
+          <span className="min-w-0 truncate text-[11px] font-semibold uppercase tracking-[0.06em] text-ink">
+            {panelLabel}
+          </span>
+          <span className="relative flex size-1.5 shrink-0" aria-hidden>
+            <span
+              className="absolute inline-flex size-full rounded-full bg-[#007EFF]/60 motion-reduce:hidden"
+              style={{ animation: "mp-glow 2.4s ease-in-out infinite" }}
+            />
+            <span className="relative inline-flex size-1.5 rounded-full bg-[#007EFF]" />
+          </span>
+        </div>
 
-              <h2 className="mt-4 type-h2 text-ink">{heading}</h2>
+        <div className="px-5 py-5 max-600:px-4">
+          {/* The system the agency keeps. */}
+          <LayerBand label={bandLabel} />
 
-              <p className="mt-4 max-w-[52ch] text-[18px] leading-[1.6] text-grey-500">
-                {lede}
-              </p>
-            </div>
+          <div className="grid grid-cols-3 max-600:grid-cols-2">
+            {steps.map((step) => (
+              <span key={step} className="flex justify-center" aria-hidden>
+                <span className="h-5 w-px bg-[#E3E3E3]" />
+              </span>
+            ))}
+          </div>
 
-            <div className="min-w-0">
-              <div className="overflow-hidden rounded-panel border border-grey-mid bg-white shadow-[0_20px_50px_rgba(15,29,84,.08)]">
-                <div
+          {/* What Murphi runs against it - the last step returns. */}
+          <ol className="grid grid-cols-3 gap-2.5 max-600:grid-cols-2">
+            {steps.map((step, i) => {
+              const returns = i === steps.length - 1;
+
+              return (
+                <li
+                  key={step}
                   className={cn(
-                    MONO,
-                    "flex items-center justify-between gap-3 border-b border-grey-mid bg-grey-soft px-5 py-3 max-600:px-4",
+                    "flex items-center gap-2 rounded-[8px] border px-3 py-2.5",
+                    returns
+                      ? "border-[#007EFF] bg-[#007EFF] text-white"
+                      : "border-[#E3E3E3] bg-white",
                   )}
                 >
-                  <span className="min-w-0 truncate text-[11px] font-semibold uppercase tracking-[0.06em] text-ink">
-                    {panelLabel}
+                  <span
+                    className={cn(
+                      "flex size-5 shrink-0 items-center justify-center rounded-[6px]",
+                      returns
+                        ? "bg-white/20 text-white"
+                        : "border border-[#E3E3E3] bg-[#F5F5F5] text-[#007EFF]",
+                    )}
+                    aria-hidden
+                  >
+                    <Tick className="size-2.5" />
                   </span>
-                  <span className="relative flex size-1.5 shrink-0" aria-hidden>
-                    <span
-                      className="absolute inline-flex size-full rounded-full bg-brand/60 motion-reduce:hidden"
-                      style={{ animation: "mp-glow 2.4s ease-in-out infinite" }}
-                    />
-                    <span className="relative inline-flex size-1.5 rounded-full bg-brand" />
+                  <span
+                    className={cn(
+                      MONO,
+                      "min-w-0 truncate text-[11.5px] font-semibold",
+                      returns ? "text-white" : "text-ink",
+                    )}
+                  >
+                    {step}
                   </span>
-                </div>
-
-                <div className="px-5 py-5 max-600:px-4">
-                  {/* The system the agency keeps. */}
-                  <LayerBand label={bandLabel} />
-
-                  <div className="grid grid-cols-3 max-600:grid-cols-2">
-                    {steps.map((step) => (
-                      <span key={step} className="flex justify-center" aria-hidden>
-                        <span className="h-5 w-px bg-brand-pale" />
-                      </span>
-                    ))}
-                  </div>
-
-                  {/* What Murphi runs against it - the last step returns. */}
-                  <ol className="grid grid-cols-3 gap-2.5 max-600:grid-cols-2">
-                    {steps.map((step, i) => {
-                      const returns = i === steps.length - 1;
-
-                      return (
-                        <li
-                          key={step}
-                          className={cn(
-                            "flex items-center gap-2 rounded-tile border px-3 py-2.5",
-                            returns
-                              ? "border-brand bg-brand text-white"
-                              : "border-grey-mid bg-white",
-                          )}
-                        >
-                          <span
-                            className={cn(
-                              "flex size-5 shrink-0 items-center justify-center rounded-[6px]",
-                              returns
-                                ? "bg-white/20 text-white"
-                                : "border border-brand-pale bg-brand-tint text-brand",
-                            )}
-                            aria-hidden
-                          >
-                            <Tick className="size-2.5" />
-                          </span>
-                          <span
-                            className={cn(
-                              MONO,
-                              "min-w-0 truncate text-[11.5px] font-semibold",
-                              returns ? "text-white" : "text-ink",
-                            )}
-                          >
-                            {step}
-                          </span>
-                        </li>
-                      );
-                    })}
-                  </ol>
-                </div>
-              </div>
-            </div>
-          </div>
+                </li>
+              );
+            })}
+          </ol>
         </div>
-      </Reveal>
-    </section>
+      </div>
+    </EhrSplit>
   );
 }
 

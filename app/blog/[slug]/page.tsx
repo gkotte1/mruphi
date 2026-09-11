@@ -79,7 +79,7 @@ export default async function BlogArticle({ params }: Props) {
 
       <Navbar />
 
-      <main className="pt-[80px]">
+      <main>
         <article className="bg-white">
           <div className="mx-auto w-full max-w-[860px] px-10 py-16 max-1200:px-8 max-600:px-4 max-600:py-12">
             {/* ── Category, title, byline ── */}

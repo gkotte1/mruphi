@@ -74,14 +74,14 @@ export default function ChartReviewStack({
 
       {/* ── The review itself, and what it raised ── */}
       <div
-        className="overflow-hidden rounded-panel border border-grey-mid bg-white shadow-[0_20px_50px_rgba(15,29,84,.08)]"
+        className="overflow-hidden rounded-[8px] border border-[#E3E3E3] bg-white shadow-[0_1px_2px_rgba(0,0,0,0.03),0_14px_30px_rgba(0,0,0,0.05)]"
         style={card(STAGE.review)}
       >
-        <div className="flex flex-wrap items-center justify-between gap-x-3 gap-y-2 bg-brand px-5 py-2.5 max-720:px-4">
+        <div className="flex flex-wrap items-center justify-between gap-x-3 gap-y-2 bg-[#007EFF] px-5 py-2.5 max-720:px-4">
           <span
             className={cn(
               MONO,
-              "flex min-w-0 items-center gap-2 text-[11px] uppercase tracking-[0.06em] text-white/90",
+              "flex min-w-0 items-center gap-2 ra-mono text-[11px] uppercase tracking-[0.06em] text-[#F5F5F5]",
             )}
           >
             <Icon name="scan" width={13} height={13} className="shrink-0" />
@@ -95,7 +95,7 @@ export default function ChartReviewStack({
           <span
             className={cn(
               MONO,
-              "flex shrink-0 items-center gap-1.5 rounded-full bg-white/15 px-2.5 py-1 text-[10.5px] font-semibold uppercase tracking-[0.04em] text-white",
+              "flex shrink-0 items-center gap-1.5 rounded-full bg-white/15 px-2.5 py-1 ra-mono text-[10.5px] font-semibold uppercase tracking-[0.04em] text-white",
             )}
           >
             <span className="size-1.5 rounded-full bg-white" aria-hidden />
@@ -109,10 +109,10 @@ export default function ChartReviewStack({
           {[0, 1, 2].map((i) => (
             <span
               key={i}
-              className="relative h-1.5 w-full overflow-hidden rounded-full bg-grey-soft"
+              className="relative h-1.5 w-full overflow-hidden rounded-full bg-[#F5F5F5]"
             >
               <span
-                className="absolute inset-y-0 left-0 w-1/3 rounded-full bg-brand/70"
+                className="absolute inset-y-0 left-0 w-1/3 rounded-full bg-[#007EFF]/70"
                 style={{
                   animation: `mp-sweep 2.4s ease-in-out infinite ${i * 0.28}s`,
                 }}
@@ -122,7 +122,7 @@ export default function ChartReviewStack({
         </div>
 
         {/* The findings, full bleed so a row highlight runs edge to edge. */}
-        <ul className="border-t border-grey-mid">
+        <ul className="border-t border-[#E3E3E3]">
           {findings.map((finding, i) => (
             <FindingRow
               key={finding.title}
@@ -149,7 +149,7 @@ export default function ChartReviewStack({
         at={STAGE.written}
         badge={
           <span
-            className="flex size-8 shrink-0 items-center justify-center rounded-[9px] bg-brand text-white"
+            className="flex size-8 shrink-0 items-center justify-center rounded-[8px] bg-[#007EFF] text-white"
             aria-hidden
           >
             <Tick className="size-3.5" />
@@ -180,12 +180,12 @@ function SupportCard({
 }) {
   return (
     <div
-      className="flex min-h-[56px] items-center gap-3 rounded-tile border border-grey-mid bg-white px-4 py-3 shadow-[0_10px_26px_-18px_rgba(15,29,84,.35)]"
+      className="flex min-h-[56px] items-center gap-3 rounded-[8px] border border-[#E3E3E3] bg-white px-4 py-3 shadow-[0_1px_2px_rgba(0,0,0,0.03),0_14px_30px_rgba(0,0,0,0.05)]"
       style={card(at)}
     >
       {badge ?? (
         <span
-          className="flex size-8 shrink-0 items-center justify-center rounded-[9px] border-2 border-brand-pale bg-white text-brand"
+          className="flex size-8 shrink-0 items-center justify-center rounded-[8px] border border-[#E3E3E3] bg-[#F5F5F5] text-[#007EFF]"
           style={node(at)}
           aria-hidden
         >
@@ -196,7 +196,7 @@ function SupportCard({
       <span
         className={cn(
           MONO,
-          "min-w-0 flex-1 text-[12px] leading-[1.45] text-grey-500",
+          "min-w-0 flex-1 ra-mono text-[12px] leading-[1.45] text-[#606060]",
         )}
       >
         {children}
@@ -217,9 +217,9 @@ function Connector({ at }: { at: number }) {
     <div className="flex h-10 flex-col items-center" aria-hidden>
       <Dot at={at} />
 
-      <span className="relative my-1 w-px flex-1 bg-brand-pale">
+      <span className="relative my-1 w-px flex-1 bg-[#E3E3E3]">
         <span
-          className="absolute inset-0 origin-top bg-brand opacity-0"
+          className="absolute inset-0 origin-top bg-[#007EFF] opacity-0"
           style={{ animation: `mp-ra-line ${CYCLE} ease-in-out ${at}s infinite` }}
         />
       </span>
@@ -233,7 +233,7 @@ function Connector({ at }: { at: number }) {
 function Dot({ at }: { at: number }) {
   return (
     <span
-      className="size-2 shrink-0 rounded-full border-2 border-brand-pale bg-white"
+      className="size-2 shrink-0 rounded-full border-2 border-[#E3E3E3] bg-white"
       style={node(at)}
     />
   );
@@ -259,7 +259,7 @@ function FindingRow({
 
   return (
     <li
-      className="relative flex min-h-[58px] items-center gap-3 border-b border-grey-mid bg-transparent py-2.5 pr-5 pl-5 last:border-b-0 max-720:pr-4 max-720:pl-4"
+      className="relative flex min-h-[58px] items-center gap-3 border-b border-[#E3E3E3] bg-transparent py-2.5 pr-5 pl-5 last:border-b-0 max-720:pr-4 max-720:pl-4"
       style={{ animation: `mp-ra-row ${CYCLE} ease-in-out ${at}s infinite` }}
     >
       {/* The leading marker, on the row's own edge. It takes no width, so the
@@ -272,10 +272,7 @@ function FindingRow({
 
       <span
         className={cn(
-          "flex size-7 shrink-0 items-center justify-center rounded-[8px] border",
-          flag
-            ? "border-brand-deep/20 bg-brand-deep/10 text-brand-deep"
-            : "border-brand-pale bg-brand-tint text-brand",
+          "flex size-7 shrink-0 items-center justify-center rounded-[8px] border border-[#E3E3E3] bg-[#F5F5F5] text-[#007EFF]",
         )}
         aria-hidden
       >
@@ -286,7 +283,7 @@ function FindingRow({
         <span className="block text-[13px] leading-[1.4] font-semibold text-ink">
           {title}
         </span>
-        <span className={cn(MONO, "mt-0.5 block text-[11px] text-ink-muted")}>
+        <span className={cn(MONO, "ra-mono mt-0.5 block text-[11px] text-[#878787]")}>
           {meta}
         </span>
       </span>
@@ -294,7 +291,7 @@ function FindingRow({
       <span
         className={cn(
           "size-1.5 shrink-0 rounded-full",
-          flag ? "bg-brand-deep" : "bg-brand",
+          flag ? "bg-[#007EFF]" : "bg-[#007EFF]",
         )}
         aria-hidden
       />

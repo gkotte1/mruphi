@@ -10,6 +10,7 @@ const nextConfig: NextConfig = {
       /* The Integration page briefly lived at the singular slug - keep any link
          already pointing there working rather than serving a 404. */
       { source: "/integration", destination: "/integrations/", permanent: true },
+      { source: "/ambient-ai", destination: "/ambient-ai-dictation/", permanent: true },
 
       /* The listing answers on /blogs/; the bare /blog/ points at it rather
          than 404ing, since each post still lives under /blog/<slug>/. */

@@ -2,9 +2,10 @@ import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import OurTeam from "@/components/OurTeam";
-import GetStartedCta from "@/components/GetStartedCta";
 import { Icon, type IconName } from "@/components/icons";
-import { cn } from "@/lib/cn";
+import { SimpleHero } from "@/components/inner-page/Hero";
+import { FinalCta } from "@/components/inner-page/kit";
+import { InnerPage, IpWrap } from "@/components/inner-page/Shell";
 import { pageMetadata } from "@/lib/site";
 
 /**
@@ -20,14 +21,6 @@ export const metadata: Metadata = pageMetadata("/about-us/", {
   description:
     "Murphi.ai is an advanced AI platform purpose-built for home health and hospice - documentation, revenue integrity, compliance, patient engagement, and collections in one connected platform.",
 });
-
-const SHELL = "mx-auto w-full max-w-[1280px] px-10 max-1200:px-8 max-600:px-4";
-const BAND = "py-24 max-1024:py-20 max-600:py-16";
-const H2 = "type-h2 text-ink";
-
-/** Heading left, copy right - the page's editorial rhythm. */
-const EDITORIAL =
-  "grid grid-cols-[minmax(0,0.4fr)_minmax(0,1fr)] items-start gap-16 max-1024:grid-cols-1 max-1024:gap-6";
 
 const MODULES: { title: string; body: string; icon: IconName }[] = [
   {
@@ -140,8 +133,8 @@ function SectionRule({
 }) {
   return (
     <div className="min-w-0">
-      <span className="mb-5 block h-px w-12 bg-brand" aria-hidden />
-      <h2 id={id} className={H2}>
+      <span className="mb-5 block h-px w-12 bg-[#007EFF]" aria-hidden />
+      <h2 id={id} className="ip-h2 ip-serif">
         {children}
       </h2>
     </div>
@@ -150,58 +143,44 @@ function SectionRule({
 
 export default function AboutUsPage() {
   return (
-    <>
+    <InnerPage>
       <Navbar />
 
       <main>
-        {/* ── 1 · About Murphi.ai ── */}
-        <section aria-labelledby="about-heading" className="bg-hero-bg pt-[80px]">
-          <div className={cn(SHELL, "py-16 text-center max-600:py-10")}>
-            <p className="type-label inline-flex items-center gap-2 rounded-full border border-brand-ghost bg-brand-tint px-3.5 py-1.5 text-brand-dark">
-              <Icon name="home" width={13} height={13} />
-              Company
-            </p>
+        <SimpleHero
+          current="About Us"
+          badge="Company"
+          badgeIcon={<Icon name="home" width={13} height={13} />}
+          title="About Murphi.ai"
+          align="center"
+          ledeAlign="left"
+          ledeMax="none"
+          paddingBottom={64}
+          lede="Murphi.ai is an advanced AI platform purpose-built for home health and hospice, helping agencies reduce documentation time, strengthen revenue integrity, improve compliance, engage patients, and accelerate patient payment collections through one connected platform. It supports clinicians, administrators, coders, billers, compliance and QAPI teams, RCM companies, accreditation organizations, and healthcare partners across the agency ecosystem. Murphi.ai also partners with home health and hospice EHR companies to embed AI directly into existing workflows through secure APIs, configurable integrations, and white-label deployment options. By working alongside existing systems, Murphi.ai helps agencies and EHR partners make everyday workflows faster, more accurate, secure, and easier to manage."
+        />
 
-            <h1
-              id="about-heading"
-              className="mx-auto mt-7 max-w-[16ch] type-h1 text-ink"
-            >
-              About Murphi.ai
-            </h1>
-
-            <p className="mx-auto mt-7 max-w-[68ch] text-left type-lead text-grey-dk">
-              Murphi.ai is an advanced AI platform purpose-built for home
-              health and hospice, helping agencies reduce documentation time,
-              strengthen revenue integrity, improve compliance, engage
-              patients, and accelerate patient payment collections through one
-              connected platform. It supports clinicians, administrators,
-              coders, billers, compliance and QAPI teams, RCM companies,
-              accreditation organizations, and healthcare partners across the
-              agency ecosystem. Murphi.ai also partners with home health and
-              hospice EHR companies to embed AI directly into existing
-              workflows through secure APIs, configurable integrations, and
-              white-label deployment options. By working alongside existing
-              systems, Murphi.ai helps agencies and EHR partners make everyday
-              workflows faster, more accurate, secure, and easier to manage.
-            </p>
-          </div>
-        </section>
-
-        {/* ── 2 · Why Murphi.ai ── */}
         <section
           aria-labelledby="why-heading"
-          className={cn("border-t border-grey-mid bg-white", BAND)}
+          className="ip-section ip-band"
         >
-          <div className={cn(SHELL, EDITORIAL)}>
+          <IpWrap
+            className="ip-split"
+            style={{
+              display: "grid",
+              gridTemplateColumns: "minmax(0,0.4fr) minmax(0,1fr)",
+              alignItems: "start",
+              gap: 64,
+            }}
+          >
             <div className="min-w-0">
-              <span className="mb-5 block h-px w-12 bg-brand" aria-hidden />
-              <h2 id="why-heading" className={H2}>
+              <span className="mb-5 block h-px w-12 bg-[#007EFF]" aria-hidden />
+              <h2 id="why-heading" className="ip-h2 ip-serif">
                 Why Murphi.ai
               </h2>
             </div>
 
             <div className="grid min-w-0 max-w-[70ch] gap-6">
-              <p className="type-lead text-grey-dk">
+              <p className="ip-lead">
                 Home health and hospice require specialized workflows across
                 OASIS, clinical documentation, coding, QAPI, compliance, revenue
                 assurance, patient communication, and EHR operations. Generic AI
@@ -211,7 +190,7 @@ export default function AboutUsPage() {
                 one connected platform.
               </p>
 
-              <p className="type-lead text-grey-dk">
+              <p className="ip-lead">
                 For agencies, Murphi.ai helps reduce charting time, close
                 documentation gaps, strengthen compliance, protect revenue,
                 improve collections, and prepare for audits and surveys. By
@@ -221,155 +200,146 @@ export default function AboutUsPage() {
                 exceptional care.
               </p>
             </div>
-          </div>
+          </IpWrap>
         </section>
 
-        {/* ── 3 · One Platform. Four Powerful Modules. ── */}
-        <section
-          aria-labelledby="modules-heading"
-          className={cn("border-t border-grey-mid bg-white", BAND)}
-        >
-          <div className={SHELL}>
+        <section aria-labelledby="modules-heading" className="ip-section">
+          <IpWrap>
             <SectionRule id="modules-heading">
               One Platform. Four Powerful Modules.
             </SectionRule>
 
-            <ul className="mt-12 grid grid-cols-2 gap-px overflow-hidden rounded-[24px] border border-grey-mid bg-grey-mid shadow-[0_24px_60px_-46px_rgba(15,29,84,0.4)] max-900:grid-cols-1 max-600:mt-9">
+            <ul className="ip-ruled mt-12 grid-cols-2 max-900:grid-cols-1 max-600:mt-9">
               {MODULES.map((module) => (
                 <li
                   key={module.title}
-                  className="flex flex-col bg-white px-8 py-9 max-600:px-6 max-600:py-8"
+                  className="flex flex-col px-8 py-9 max-600:px-6 max-600:py-8"
                 >
-                  <span className="flex size-11 items-center justify-center rounded-[12px] border border-brand-border/80 bg-brand-tint text-brand-dark">
+                  <span className="flex size-11 items-center justify-center rounded-[8px] border border-[#E3E3E3] bg-[#F5F5F5] text-[#007EFF]">
                     <Icon name={module.icon} width={20} height={20} />
                   </span>
 
-                  <h3 className="mt-6 text-[18px] font-extrabold leading-snug tracking-[-0.02em] text-ink">
+                  <h3 className="mt-6 text-[18px] font-bold leading-snug tracking-[-0.02em] text-ink">
                     {module.title}
                   </h3>
 
-                  <p className="mt-3.5 text-[14.5px] leading-relaxed text-grey-dk/90">
+                  <p className="mt-3.5 text-[14.5px] leading-relaxed text-[#606060]">
                     {module.body}
                   </p>
                 </li>
               ))}
             </ul>
-          </div>
+          </IpWrap>
         </section>
 
-        {/* ── 4 · Coming Soon ── */}
-        <section
-          aria-labelledby="soon-heading"
-          className={cn("border-t border-grey-mid bg-white", BAND)}
-        >
-          <div className={SHELL}>
+        <section aria-labelledby="soon-heading" className="ip-section ip-band">
+          <IpWrap>
             <div className="flex flex-wrap items-end justify-between gap-4">
               <SectionRule id="soon-heading">Coming Soon</SectionRule>
-              <span className="type-label rounded-full border border-grey-mid bg-grey-soft px-3 py-1 text-grey-dk">
+              <span className="ip-mono rounded-full border border-[#E3E3E3] bg-white px-3 py-1 text-[10.5px] font-semibold tracking-[0.06em] uppercase text-[#878787]">
                 Launching soon
               </span>
             </div>
 
-            <ul className="mt-12 grid grid-cols-2 gap-px overflow-hidden rounded-[24px] border border-grey-mid bg-grey-mid shadow-[0_24px_60px_-46px_rgba(15,29,84,0.4)] max-900:grid-cols-1 max-600:mt-9">
+            <ul className="ip-ruled mt-12 grid-cols-2 max-900:grid-cols-1 max-600:mt-9">
               {COMING_SOON.map((item) => (
                 <li
                   key={item.title}
-                  className="flex flex-col bg-white px-8 py-9 max-600:px-6 max-600:py-8"
+                  className="flex flex-col px-8 py-9 max-600:px-6 max-600:py-8"
                 >
                   <span className="flex items-center justify-between gap-3">
-                    <span className="flex size-11 items-center justify-center rounded-[12px] border border-dashed border-grey-bdr bg-grey-soft text-grey-dk">
+                    <span className="flex size-11 items-center justify-center rounded-[8px] border border-dashed border-[#B2B2B2] bg-white text-[#878787]">
                       <Icon name={item.icon} width={20} height={20} />
                     </span>
-                    <span className="type-label rounded-full border border-grey-mid bg-grey-soft px-2.5 py-1 text-grey-dk">
+                    <span className="ip-mono rounded-full border border-[#E3E3E3] bg-[#F5F5F5] px-2.5 py-1 text-[10.5px] font-semibold tracking-[0.06em] uppercase text-[#878787]">
                       Soon
                     </span>
                   </span>
 
-                  <h3 className="mt-6 text-[18px] font-extrabold leading-snug tracking-[-0.02em] text-ink">
+                  <h3 className="mt-6 text-[18px] font-bold leading-snug tracking-[-0.02em] text-ink">
                     {item.title}
                   </h3>
 
-                  <p className="mt-3.5 text-[14.5px] leading-relaxed text-grey-dk/90">
+                  <p className="mt-3.5 text-[14.5px] leading-relaxed text-[#606060]">
                     {item.body}
                   </p>
                 </li>
               ))}
             </ul>
-          </div>
+          </IpWrap>
         </section>
 
-        {/* ── 5 · What Makes Murphi.ai Different ── */}
-        <section
-          aria-labelledby="different-heading"
-          className={cn("border-t border-grey-mid bg-white", BAND)}
-        >
-          <div className={SHELL}>
+        <section aria-labelledby="different-heading" className="ip-section">
+          <IpWrap>
             <SectionRule id="different-heading">
               What Makes Murphi.ai Different
             </SectionRule>
 
-            <ul className="mt-12 grid grid-cols-3 gap-px overflow-hidden rounded-[24px] border border-grey-mid bg-grey-mid shadow-[0_24px_60px_-46px_rgba(15,29,84,0.4)] max-1080:grid-cols-2 max-600:grid-cols-1 max-600:mt-9">
+            <ul className="ip-ruled mt-12 grid-cols-3 max-1080:grid-cols-2 max-600:grid-cols-1 max-600:mt-9">
               {DIFFERENT.map((item) => (
                 <li
                   key={item.title}
-                  className="flex flex-col bg-white px-7 py-8 max-600:px-6 max-600:py-7"
+                  className="flex flex-col px-7 py-8 max-600:px-6 max-600:py-7"
                 >
-                  <span className="flex size-10 items-center justify-center rounded-[11px] border border-brand-border/80 bg-brand-tint text-brand-dark">
+                  <span className="flex size-10 items-center justify-center rounded-[8px] border border-[#E3E3E3] bg-[#F5F5F5] text-[#007EFF]">
                     <Icon name={item.icon} width={18} height={18} />
                   </span>
 
-                  <h3 className="mt-5 text-[15.5px] font-extrabold leading-snug tracking-[-0.015em] text-ink">
+                  <h3 className="mt-5 text-[15.5px] font-bold leading-snug tracking-[-0.015em] text-ink">
                     {item.title}
                   </h3>
 
-                  <p className="mt-2.5 text-[13.5px] leading-relaxed text-grey-dk/90">
+                  <p className="mt-2.5 text-[13.5px] leading-relaxed text-[#606060]">
                     {item.body}
                   </p>
                 </li>
               ))}
             </ul>
-          </div>
+          </IpWrap>
         </section>
 
-        {/* ── 6 · Our Values ── */}
-        <section
-          aria-labelledby="values-heading"
-          className={cn("border-t border-grey-mid bg-white", BAND)}
-        >
-          <div className={SHELL}>
+        <section aria-labelledby="values-heading" className="ip-section ip-band">
+          <IpWrap>
             <SectionRule id="values-heading">Our Values</SectionRule>
 
-            <ul className="mt-12 grid grid-cols-3 gap-px overflow-hidden rounded-[24px] border border-grey-mid bg-grey-mid shadow-[0_24px_60px_-46px_rgba(15,29,84,0.4)] max-900:grid-cols-1 max-600:mt-9">
+            <ul className="ip-ruled mt-12 grid-cols-3 max-900:grid-cols-1 max-600:mt-9">
               {VALUES.map((value) => (
                 <li
                   key={value.title}
-                  className="flex flex-col bg-white px-8 py-9 max-600:px-6 max-600:py-8"
+                  className="flex flex-col px-8 py-9 max-600:px-6 max-600:py-8"
                 >
-                  <span className="flex size-11 items-center justify-center rounded-[12px] border border-brand-border/80 bg-brand-tint text-brand-dark">
+                  <span className="flex size-11 items-center justify-center rounded-[8px] border border-[#E3E3E3] bg-[#F5F5F5] text-[#007EFF]">
                     <Icon name={value.icon} width={20} height={20} />
                   </span>
 
-                  <h3 className="mt-6 text-[18px] font-extrabold leading-none tracking-[-0.02em] text-ink">
+                  <h3 className="mt-6 text-[18px] font-bold leading-none tracking-[-0.02em] text-ink">
                     {value.title}
                   </h3>
 
-                  <p className="mt-4 text-[14.5px] leading-relaxed text-grey-dk/90">
+                  <p className="mt-4 text-[14.5px] leading-relaxed text-[#606060]">
                     {value.body}
                   </p>
                 </li>
               ))}
             </ul>
-          </div>
+          </IpWrap>
         </section>
 
-        {/* ── 7 · Our Team (existing implementation) ── */}
         <OurTeam />
 
-        {/* ── 8 · Get Started ── */}
-        <GetStartedCta />
+        <FinalCta
+          heading={
+            <>
+              Experience AI Automation
+              <br />
+              at Scale
+            </>
+          }
+          body="Tell us your care setting and we'll show you exactly what Murphi.ai delivers for your organization - a live demo tailored to your workflows and your team."
+        />
       </main>
 
       <Footer />
-    </>
+    </InnerPage>
   );
 }

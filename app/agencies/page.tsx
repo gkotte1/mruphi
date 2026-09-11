@@ -9,13 +9,9 @@ import {
   faqSchema,
 } from "@/lib/schema";
 import { pageMetadata } from "@/lib/site";
-import {
-  Breadcrumb,
-  FinalCta,
-  ModuleSection,
-  PageHero,
-  TrustDot,
-} from "@/components/module-page/sections";
+import InnerHero from "@/components/inner-page/Hero";
+import { FinalCta } from "@/components/inner-page/kit";
+import { InnerPage, IpEyebrow, IpHead, IpWrap } from "@/components/inner-page/Shell";
 import WorkflowLayer from "@/components/agencies/HeroVisual";
 import Roles, { type Role } from "@/components/agencies/Roles";
 import {
@@ -114,73 +110,72 @@ const RELATED = [
 
 export default function AgenciesPage() {
   return (
-    <div>
+    <InnerPage>
       <JsonLd data={faqSchema(FAQS.agencies, "/agencies/")} />
       <JsonLd data={breadcrumbSchema("/agencies/", "Home Health & Hospice Agencies")} />
 
       <Navbar />
 
-      {/* The navigation is position:fixed, so it occupies no space in flow.
-          Without this offset the breadcrumb renders behind it and only clears
-          the bar once the page scrolls. */}
-      <main className="bg-white pt-[80px]">
-        <Breadcrumb current="Home Health & Hospice Agencies" section="who-we-serve" />
-
-        <PageHero
+      <main>
+        <InnerHero
+          current="Home Health & Hospice Agencies"
+          parent={{ label: "Who We Serve", href: "/#serve" }}
           eyebrow="Who We Serve · Agencies"
           title="Run the Whole Agency Without Replacing What Already Works."
           storyTag="Monday, 7:00 AM"
           story="Before the first visit of the day, the owner has already checked the census, approved payroll, and fielded a call about a claim that came back denied. By 9, she's supposed to be reviewing OASIS accuracy too."
           lede="Murphi doesn't ask her to replace the EHR she already runs the agency on. It sits alongside it - one module, or six - each one taking a piece of that morning off her plate."
-          trust={
-            <>
-              HIPAA <TrustDot /> SOC 2 <TrustDot /> ISO 27001 <TrustDot /> BAA
-            </>
-          }
-          secondaryHref="#roles"
-          secondaryLabel="Find Your Role"
+          trust={["HIPAA", "SOC 2", "ISO 27001", "BAA"]}
           visual={
             <WorkflowLayer label="Six Workflows, One Agency" modules={MODULES} />
           }
         />
 
-        <ModuleSection
-          id="roles"
-          kicker="Everybody's Monday Looks Different"
-          heading="Find what changes for your role."
-        >
-          <Roles roles={ROLES} />
-        </ModuleSection>
+        <section id="roles" className="ip-section">
+          <IpWrap>
+            <IpHead>
+              <IpEyebrow>Everybody{"'"}s Monday Looks Different</IpEyebrow>
+              <h2 className="ip-h2 ip-serif" style={{ marginTop: 16, marginBottom: 18 }}>
+                Find what changes for your role.
+              </h2>
+            </IpHead>
+            <Roles roles={ROLES} />
+          </IpWrap>
+        </section>
 
-        <ModuleSection
-          kicker="Start Small"
-          heading="Start with one module. Add more when you're ready."
-        >
-          <StartSmall groups={SETTINGS} />
+        <section className="ip-section ip-band">
+          <IpWrap>
+            <IpHead>
+              <IpEyebrow>Start Small</IpEyebrow>
+              <h2 className="ip-h2 ip-serif" style={{ marginTop: 16, marginBottom: 18 }}>
+                Start with one module. Add more when you{"'"}re ready.
+              </h2>
+            </IpHead>
+            <StartSmall groups={SETTINGS} />
+            <div className="mt-10">
+              <ModuleLinks cards={RELATED} />
+            </div>
+          </IpWrap>
+        </section>
 
-          <div className="mt-10">
-            <ModuleLinks cards={RELATED} />
-          </div>
-        </ModuleSection>
+        <EhrLayer
+          heading="You do not need to replace your EHR to add AI."
+          lede="Murphi connects to the EHR you already use. Fetch, analyze, automate, generate, human review, write back."
+          panelLabel="Your EHR ⇄ Murphi AI ⇄ Your EHR"
+          bandLabel="Your EHR"
+          steps={[
+            "Fetch",
+            "Analyze",
+            "Automate",
+            "Generate",
+            "Human Review",
+            "Write Back",
+          ]}
+        />
 
-        <div className="border-t border-grey-mid">
-          <EhrLayer
-            heading="You do not need to replace your EHR to add AI."
-            lede="Murphi connects to the EHR you already use. Fetch, analyze, automate, generate, human review, write back."
-            panelLabel="Your EHR ⇄ Murphi AI ⇄ Your EHR"
-            bandLabel="Your EHR"
-            steps={[
-              "Fetch",
-              "Analyze",
-              "Automate",
-              "Generate",
-              "Human Review",
-              "Write Back",
-            ]}
-          />
+        <div className="ip-faq ip-band">
+          <FaqSection items={FAQS.agencies} divider="none" />
         </div>
-
-        <FaqSection items={FAQS.agencies} />
 
         <FinalCta
           heading="Give Monday Morning Back."
@@ -189,6 +184,6 @@ export default function AgenciesPage() {
       </main>
 
       <Footer />
-    </div>
+    </InnerPage>
   );
 }

@@ -7,7 +7,8 @@ import IntegrationMethods from "@/components/integration/IntegrationMethods";
 import EhrCapability from "@/components/integration/EhrCapability";
 import PaymentIntegration from "@/components/integration/PaymentIntegration";
 import SecuritySection from "@/components/integration/SecuritySection";
-import GetStartedCta from "@/components/GetStartedCta";
+import { FinalCta } from "@/components/inner-page/kit";
+import { InnerPage } from "@/components/inner-page/Shell";
 
 export const metadata: Metadata = pageMetadata("/integrations/", {
   title: "EHR Integrations - FHIR, HL7, API & Agentic AI",
@@ -17,7 +18,7 @@ export const metadata: Metadata = pageMetadata("/integrations/", {
 
 export default function IntegrationPage() {
   return (
-    <>
+    <InnerPage>
       <Navbar />
       <main>
         <IntegrationHero />
@@ -25,9 +26,18 @@ export default function IntegrationPage() {
         <EhrCapability />
         <PaymentIntegration />
         <SecuritySection />
-        <GetStartedCta />
+        <FinalCta
+          heading={
+            <>
+              Experience AI Automation
+              <br />
+              at Scale
+            </>
+          }
+          body="Tell us your care setting and we'll show you exactly what Murphi.ai delivers for your organization - a live demo tailored to your workflows and your team."
+        />
       </main>
       <Footer />
-    </>
+    </InnerPage>
   );
 }

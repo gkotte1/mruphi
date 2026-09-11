@@ -1,4 +1,5 @@
 import { Icon, type IconName } from "@/components/icons";
+import { IpWrap } from "@/components/inner-page/Shell";
 
 type Method = { index: string; title: string; body: string; icon: IconName };
 
@@ -45,39 +46,35 @@ export default function IntegrationMethods() {
   return (
     <section
       aria-labelledby="methods-heading"
-      className="relative isolate border-t border-grey-mid bg-white py-28 max-1024:py-20 max-600:py-16"
+      style={{ padding: "64px 0 96px" }}
     >
-      <div className="mx-auto w-full max-w-[1280px] px-10 max-1200:px-8 max-600:px-4">
+      <IpWrap>
         <div className="max-w-[720px]">
-          <p className="type-label text-brand-dark">Integration Methods</p>
+          <p className="ip-eyebrow">Integration Methods</p>
 
-          <h2
-            id="methods-heading"
-            className="mt-4 type-h2 text-ink"
-          >
+          <h2 id="methods-heading" className="ip-h2 ip-serif" style={{ marginTop: 16 }}>
             Five Ways to Connect Murphi.ai to Any EHR
           </h2>
 
-          <p className="type-lead mt-5 text-grey-dk">
+          <p className="ip-lead" style={{ marginTop: 18 }}>
             No single integration method works for every EHR. Murphi.ai supports
             five distinct integration pathways - so the right method is always
-            {"available regardless of your EHR's technical architecture."}
+            available regardless of your EHR&apos;s technical architecture.
           </p>
         </div>
 
-        {/* One catalogue, hairline divided - the methods read as a set. */}
-        <ul className="mt-14 grid grid-cols-3 gap-px overflow-hidden rounded-panel border border-grey-mid bg-grey-mid shadow-[0_22px_54px_-40px_rgba(15,29,84,0.5)] max-1024:grid-cols-2 max-768:grid-cols-1 max-600:mt-10">
+        <ul className="ip-ruled mt-14 grid-cols-3 max-1024:grid-cols-2 max-768:grid-cols-1 max-600:mt-10">
           {METHODS.map((method) => (
             <li
               key={method.index}
-              className="group flex flex-col bg-white p-6 transition-colors duration-200 hover:bg-grey-bg max-600:p-5"
+              className="group flex flex-col p-6 transition-colors duration-200 hover:bg-[#F5F5F5] max-600:p-5"
             >
               <div className="flex items-center gap-3">
-                <span className="flex size-10 shrink-0 items-center justify-center rounded-card border border-brand-border/80 bg-brand-tint text-brand-dark transition-colors duration-200 group-hover:border-transparent group-hover:bg-brand group-hover:text-grey-bg">
+                <span className="flex size-10 shrink-0 items-center justify-center rounded-[8px] border border-[#E3E3E3] bg-[#F5F5F5] text-[#007EFF] transition-colors duration-200 group-hover:border-transparent group-hover:bg-[#007EFF] group-hover:text-white">
                   <Icon name={method.icon} width={18} height={18} />
                 </span>
 
-                <span className="type-micro ml-auto text-grey-dk/35">
+                <span className="ip-mono ml-auto text-[10.5px] font-semibold tracking-[0.06em] text-[#B2B2B2]">
                   {method.index}
                 </span>
               </div>
@@ -86,13 +83,13 @@ export default function IntegrationMethods() {
                 {method.title}
               </h3>
 
-              <p className="mt-3.5 text-[13.5px] font-normal leading-relaxed text-grey-dk/85">
+              <p className="mt-3.5 text-[13.5px] font-normal leading-relaxed text-[#606060]">
                 {method.body}
               </p>
             </li>
           ))}
         </ul>
-      </div>
+      </IpWrap>
     </section>
   );
 }

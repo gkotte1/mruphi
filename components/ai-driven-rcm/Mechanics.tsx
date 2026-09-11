@@ -183,7 +183,7 @@ export default function Mechanics({ stages }: { stages: Stage[] }) {
         </div>
 
         {/* What the product is doing at the active stage. */}
-        <div className="mt-12 rounded-[28px] border border-brand-pale bg-brand-tint/40 p-7 max-1080:mt-9 max-1080:p-6 max-600:rounded-panel max-600:p-4">
+        <div className="mt-12 ip-card p-7 max-1080:mt-9 max-1080:p-6 max-600:p-4">
           <div className="mx-auto grid max-w-[540px]">
             {VIEWS.map((view, i) => (
               <div
@@ -241,7 +241,7 @@ function Rail({
               <span
                 className={cn(
                   "mt-[18px] h-0.5 w-5 shrink-0 rounded-full transition-colors duration-[520ms] ease-out",
-                  passed || isActive ? "bg-brand" : "bg-grey-mid",
+                  passed || isActive ? "bg-[#007EFF]" : "bg-[#E3E3E3]",
                 )}
                 aria-hidden
               />
@@ -259,16 +259,16 @@ function Rail({
                     MONO,
                     "relative flex size-9 shrink-0 items-center justify-center rounded-full border text-[12px] font-bold transition-colors duration-[520ms] ease-out",
                     isActive
-                      ? "border-brand bg-brand text-white"
+                      ? "border-[#007EFF] bg-[#007EFF] text-white"
                       : passed
-                        ? "border-brand bg-white text-brand"
-                        : "border-grey-mid bg-white text-grey-500 group-hover:border-brand group-hover:text-brand",
+                        ? "border-[#007EFF] bg-white text-[#007EFF]"
+                        : "border-[#E3E3E3] bg-white text-[#606060] group-hover:border-[#007EFF] group-hover:text-[#007EFF]",
                   )}
                 >
                   {passed ? <Tick className="size-3.5" /> : stage.num}
                   {isActive ? (
                     <span
-                      className="absolute inset-0 rounded-full border border-brand motion-reduce:hidden"
+                      className="absolute inset-0 rounded-full border border-[#007EFF] motion-reduce:hidden"
                       style={{ animation: "mp-pulse-ring 2s ease-out infinite" }}
                       aria-hidden
                     />
@@ -278,7 +278,7 @@ function Rail({
                 <span
                   className={cn(
                     "mt-3 block min-w-0 text-[12px] leading-[1.3] font-bold tracking-[-0.01em] transition-colors duration-[520ms] ease-out",
-                    isActive ? "text-ink" : passed ? "text-ink-muted" : "text-grey-500",
+                    isActive ? "text-ink" : passed ? "text-[#878787]" : "text-[#606060]",
                   )}
                 >
                   {stage.label}

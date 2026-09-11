@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, type ReactNode } from "react";
-import { MONO } from "@/components/module-page/ui";
 import { cn } from "@/lib/cn";
 
 /**
@@ -35,20 +34,20 @@ export default function BrandSwitch({
 
   return (
     <div className="flex flex-col items-center text-center">
-      <div className={cn(MONO, "mb-2.5 text-[12px] uppercase tracking-[0.06em] text-ink-muted")}>
+      <p className="ip-eyebrow" style={{ marginBottom: 16 }}>
         {kicker}
-      </div>
+      </p>
 
-      <h2 className="max-w-[640px] type-h2 text-ink">{heading}</h2>
+      <h2 className="ip-h2 ip-serif max-w-[640px]">{heading}</h2>
 
-      <p className="mt-5 max-w-[58ch] text-[18px] leading-[1.6] text-grey-500">
+      <p className="mt-5 max-w-[58ch] text-[18px] leading-[1.6] text-[#606060]">
         {lede}
       </p>
 
       {/* One track, two equal halves - a control, not two buttons. */}
       <div
         role="tablist"
-        className="mt-9 inline-grid grid-cols-2 gap-1 rounded-full border border-grey-mid bg-grey-soft p-1"
+        className="mt-9 inline-grid grid-cols-2 gap-1 rounded-full border border-[#E3E3E3] bg-[#F5F5F5] p-1"
       >
         {options.map((option) => {
           const selected = option.id === active;
@@ -67,7 +66,7 @@ export default function BrandSwitch({
                 "rounded-full px-7 py-2.5 text-center text-[13.5px] font-semibold whitespace-nowrap transition-colors duration-[280ms] ease-out max-600:px-5",
                 selected
                   ? "bg-ink text-white"
-                  : "text-grey-500 hover:text-ink",
+                  : "text-[#606060] hover:text-ink",
               )}
             >
               {option.label}

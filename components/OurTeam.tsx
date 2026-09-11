@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Icon } from "@/components/icons";
+import { IpWrap } from "@/components/inner-page/Shell";
 import { cn } from "@/lib/cn";
 
 /**
@@ -38,30 +39,23 @@ const TEAM = [
   },
 ];
 
-const SHELL = "mx-auto w-full max-w-[1280px] px-10 max-1200:px-8 max-600:px-4";
-
 export default function OurTeam() {
   return (
-    <section
-      aria-labelledby="team-heading"
-      className="border-t border-grey-mid bg-white py-24 max-1024:py-20 max-600:py-16"
-    >
-      <div className={SHELL}>
-        <span className="mb-5 block h-px w-12 bg-brand" aria-hidden />
+    <section aria-labelledby="team-heading" className="ip-section">
+      <IpWrap>
+        <span className="mb-5 block h-px w-12 bg-[#007EFF]" aria-hidden />
 
-        <h2 id="team-heading" className="type-h2 text-ink">
+        <h2 id="team-heading" className="ip-h2 ip-serif">
           Our Team
         </h2>
 
-        {/* One leadership surface, hairline divided - three profiles, not
-            three floating cards. */}
-        <ul className="mt-12 grid grid-cols-3 gap-px overflow-hidden rounded-[24px] border border-grey-mid bg-grey-mid shadow-[0_24px_60px_-46px_rgba(15,29,84,0.4)] max-900:grid-cols-1 max-600:mt-9">
+        <ul className="ip-ruled mt-12 grid-cols-3 max-900:grid-cols-1 max-600:mt-9">
           {TEAM.map((member) => (
             <li
               key={member.name}
-              className="group flex flex-col items-center bg-white px-8 py-10 text-center transition-colors duration-200 hover:bg-grey-bg max-600:px-6 max-600:py-8"
+              className="group flex flex-col items-center px-8 py-10 text-center transition-colors duration-200 hover:bg-[#F5F5F5] max-600:px-6 max-600:py-8"
             >
-              <span className="relative block size-[168px] shrink-0 overflow-hidden rounded-full border-[3px] border-white shadow-[0_10px_30px_-14px_rgba(15,29,84,0.35)] transition-shadow duration-300 group-hover:shadow-[0_0_0_6px_rgba(0,126,255,0.12),0_16px_38px_-16px_rgba(0,86,173,0.45)] max-600:size-[144px]">
+              <span className="relative block size-[168px] shrink-0 overflow-hidden rounded-full border-[3px] border-white shadow-[0_1px_2px_rgba(0,0,0,0.03),0_14px_30px_rgba(0,0,0,0.05)] transition-shadow duration-300 group-hover:shadow-[0_0_0_4px_rgba(0,126,255,0.12),0_14px_30px_rgba(0,0,0,0.06)] max-600:size-[144px]">
                 <Image
                   src={member.image}
                   alt={member.name}
@@ -71,12 +65,11 @@ export default function OurTeam() {
                 />
               </span>
 
-              <p className="mt-7 text-[18px] font-extrabold leading-none tracking-[-0.02em] text-ink">
+              <p className="mt-7 text-[18px] font-bold leading-none tracking-[-0.02em] text-ink">
                 {member.name}
               </p>
 
-              {/* The role line carries the brand colour, as specified. */}
-              <p className="mt-3 text-[13.5px] font-semibold leading-snug tracking-[-0.01em] text-brand">
+              <p className="mt-3 text-[13.5px] font-semibold leading-snug tracking-[-0.01em] text-[#007EFF]">
                 {member.role}
               </p>
 
@@ -86,8 +79,8 @@ export default function OurTeam() {
                 rel="noopener noreferrer"
                 aria-label={`${member.name} on LinkedIn`}
                 className={cn(
-                  "mt-6 flex size-9 items-center justify-center rounded-[10px] border border-brand-border/60 bg-white text-grey-dk/60 transition-all duration-200",
-                  "hover:-translate-y-0.5 hover:border-brand-border hover:bg-brand-tint hover:text-brand-dark",
+                  "mt-6 flex size-9 items-center justify-center rounded-[8px] border border-[#E3E3E3] bg-white text-[#878787] transition-colors duration-200",
+                  "hover:border-[#007EFF] hover:bg-[#F5F5F5] hover:text-[#007EFF]",
                 )}
               >
                 <Icon name="linkedin" width={16} height={16} />
@@ -95,7 +88,7 @@ export default function OurTeam() {
             </li>
           ))}
         </ul>
-      </div>
+      </IpWrap>
     </section>
   );
 }

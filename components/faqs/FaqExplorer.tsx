@@ -61,7 +61,7 @@ export default function FaqExplorer({
 
         if (visible[0]) setActive(visible[0].target.id);
       },
-      { rootMargin: "-112px 0px -68% 0px", threshold: 0 },
+      { rootMargin: "-80px 0px -68% 0px", threshold: 0 },
     );
 
     for (const node of nodes) observer.observe(node);
@@ -82,7 +82,7 @@ export default function FaqExplorer({
     if (!node) return;
 
     const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    const top = node.getBoundingClientRect().top + window.scrollY - 112;
+    const top = node.getBoundingClientRect().top + window.scrollY - 80;
 
     window.scrollTo({ top, behavior: reduced ? "auto" : "smooth" });
     setActive(id);
@@ -93,12 +93,12 @@ export default function FaqExplorer({
       {/* ── Categories ── */}
       <nav
         aria-label="FAQ categories"
-        className="sticky top-[112px] min-w-0 max-900:static"
+        className="sticky top-[80px] min-w-0 max-900:static"
       >
         <p
           className={cn(
             MONO,
-            "mb-4 text-[11px] uppercase tracking-[0.08em] text-grey-bdr max-900:mb-3",
+            "mb-4 text-[11px] uppercase tracking-[0.08em] text-[#B2B2B2] max-900:mb-3",
           )}
         >
           Categories
@@ -107,7 +107,7 @@ export default function FaqExplorer({
         {/* A ruled list on desktop; a scrollable strip once it stacks. */}
         <div
           ref={railRef}
-          className="border-t border-grey-mid max-900:-mx-8 max-900:flex max-900:gap-2 max-900:overflow-x-auto max-900:border-t-0 max-900:px-8 max-900:pb-1 max-720:-mx-5 max-720:px-5"
+          className="border-t border-[#E3E3E3] max-900:-mx-8 max-900:flex max-900:gap-2 max-900:overflow-x-auto max-900:border-t-0 max-900:px-8 max-900:pb-1 max-720:-mx-5 max-720:px-5"
         >
           {sections.map((section) => {
             const on = section.id === active;
@@ -120,17 +120,17 @@ export default function FaqExplorer({
                 onClick={() => go(section.id)}
                 aria-current={on}
                 className={cn(
-                  "flex w-full items-center justify-between gap-4 border-b border-grey-mid py-3 text-left transition-colors duration-200",
+                  "flex w-full items-center justify-between gap-4 border-b border-[#E3E3E3] py-3 text-left transition-colors duration-200",
                   "max-900:w-auto max-900:shrink-0 max-900:gap-2 max-900:rounded-full max-900:border max-900:px-3.5 max-900:py-2",
                   on
-                    ? "max-900:border-brand max-900:bg-brand-tint"
-                    : "max-900:border-grey-mid max-900:bg-white",
+                    ? "max-900:border-[#007EFF] max-900:bg-[#F5F5F5]"
+                    : "max-900:border-[#E3E3E3] max-900:bg-white",
                 )}
               >
                 <span
                   className={cn(
                     "min-w-0 text-[13.5px] leading-snug font-semibold tracking-[-0.01em] transition-colors duration-200 max-900:whitespace-nowrap",
-                    on ? "text-brand" : "text-grey-500",
+                    on ? "text-[#007EFF]" : "text-[#606060]",
                   )}
                 >
                   {section.label}
@@ -140,7 +140,7 @@ export default function FaqExplorer({
                   className={cn(
                     MONO,
                     "shrink-0 text-[11.5px] font-semibold transition-colors duration-200",
-                    on ? "text-brand" : "text-grey-bdr",
+                    on ? "text-[#007EFF]" : "text-[#B2B2B2]",
                   )}
                 >
                   {section.items.length}
@@ -158,18 +158,18 @@ export default function FaqExplorer({
             key={section.id}
             id={section.id}
             aria-labelledby={`${section.id}-heading`}
-            className={cn("scroll-mt-[112px]", i > 0 ? "mt-16 max-720:mt-12" : "")}
+            className={cn("scroll-mt-[80px]", i > 0 ? "mt-16 max-720:mt-12" : "")}
           >
-            <div className="flex items-baseline justify-between gap-6 border-b border-ink pb-4">
+            <div className="flex items-baseline justify-between gap-6 border-b border-[#1A1A1A] pb-4">
               <h2
                 id={`${section.id}-heading`}
-                className="min-w-0 text-[19px] leading-snug font-bold tracking-[-0.02em] text-ink max-600:text-[17px]"
+                className="ip-serif min-w-0 text-[22px] leading-snug font-medium tracking-[-0.02em] text-ink max-600:text-[19px]"
               >
                 {section.label}
               </h2>
 
               <span
-                className={cn(MONO, "shrink-0 text-[12px] font-bold text-brand")}
+                className={cn(MONO, "shrink-0 text-[12px] font-bold text-[#007EFF]")}
                 aria-hidden
               >
                 {section.number}
@@ -207,7 +207,7 @@ function Row({
   const [open, setOpen] = useState(Boolean(initiallyOpen));
 
   return (
-    <div className="border-b border-grey-mid">
+    <div className="border-b border-[#E3E3E3]">
       <button
         type="button"
         aria-expanded={open}
@@ -217,7 +217,7 @@ function Row({
         <span
           className={cn(
             "min-w-0 text-[15px] leading-[1.5] font-semibold tracking-[-0.012em] transition-colors duration-200",
-            open ? "text-brand" : "text-ink group-hover:text-brand-dark",
+            open ? "text-[#007EFF]" : "text-ink group-hover:text-[#007EFF]",
           )}
         >
           {question}
@@ -231,7 +231,7 @@ function Row({
         className="overflow-hidden transition-[max-height] duration-[280ms] ease-[ease] motion-reduce:transition-none"
         style={{ maxHeight: open ? 420 : 0 }}
       >
-        <p className="max-w-[68ch] pr-10 pb-6 text-[14px] leading-[1.7] text-grey-500 max-600:pr-0 max-600:pb-5">
+        <p className="max-w-[68ch] pr-10 pb-6 text-[14px] leading-[1.7] text-[#606060] max-600:pr-0 max-600:pb-5">
           {answer}
         </p>
       </div>
@@ -246,8 +246,8 @@ function PlusMinus({ open }: { open: boolean }) {
       className={cn(
         "mt-0.5 flex size-6 shrink-0 items-center justify-center rounded-full border transition-colors duration-200",
         open
-          ? "border-brand bg-brand text-white"
-          : "border-grey-mid bg-white text-grey-500 group-hover:border-brand group-hover:text-brand",
+          ? "border-[#007EFF] bg-[#007EFF] text-white"
+          : "border-[#E3E3E3] bg-white text-[#606060] group-hover:border-[#007EFF] group-hover:text-[#007EFF]",
       )}
       aria-hidden
     >

@@ -36,11 +36,11 @@ export function Panel({
   return (
     <div
       className={cn(
-        "overflow-hidden rounded-panel border border-grey-mid bg-white shadow-[0_20px_50px_rgba(15,29,84,.08)]",
+        "overflow-hidden rounded-[10px] border border-[#E3E3E3] bg-white shadow-[0_1px_2px_rgba(0,0,0,0.03),0_14px_30px_rgba(0,0,0,0.05)]",
         className,
       )}
     >
-      <div className="flex items-center justify-between gap-3 bg-brand px-5 py-3 max-720:px-4">
+      <div className="flex items-center justify-between gap-3 bg-[#007EFF] px-5 py-3 max-720:px-4">
         <span
           className={cn(
             MONO,
@@ -68,14 +68,14 @@ export function Panel({
       </div>
 
       {context ? (
-        <div className="flex items-center gap-2.5 border-b border-grey-mid bg-grey-soft px-5 py-2.5 max-720:px-4">
+        <div className="flex items-center gap-2.5 border-b border-[#E3E3E3] bg-[#F5F5F5] px-5 py-2.5 max-720:px-4">
           <span
-            className="flex size-5 shrink-0 items-center justify-center rounded-[6px] border border-brand-pale bg-white text-brand"
+            className="flex size-5 shrink-0 items-center justify-center rounded-[6px] border border-[#E3E3E3] bg-white text-[#007EFF]"
             aria-hidden
           >
             <Icon name="server" width={10} height={10} />
           </span>
-          <span className={cn(MONO, "min-w-0 truncate text-[11px] text-ink-muted")}>
+          <span className={cn(MONO, "min-w-0 truncate text-[11px] text-[#878787]")}>
             {context}
           </span>
         </div>
@@ -84,7 +84,7 @@ export function Panel({
       <div className="px-5 py-[18px] max-720:px-4">{children}</div>
 
       {foot ? (
-        <div className="border-t border-grey-mid bg-grey-bg px-5 py-3 max-720:px-4">
+        <div className="border-t border-[#E3E3E3] bg-[#F5F5F5] px-5 py-3 max-720:px-4">
           {foot}
         </div>
       ) : null}
@@ -95,7 +95,7 @@ export function Panel({
 /** The small uppercase label that heads a zone inside a panel. */
 export function ZoneLabel({ children }: { children: string }) {
   return (
-    <div className={cn(MONO, "mb-2.5 text-[10px] uppercase tracking-[0.08em] text-grey-bdr")}>
+    <div className={cn(MONO, "mb-2.5 text-[10px] uppercase tracking-[0.08em] text-[#B2B2B2]")}>
       {children}
     </div>
   );
@@ -121,12 +121,12 @@ export function EvidenceTile({
 
   return (
     <span
-      className="flex min-w-0 flex-col gap-2 rounded-[10px] border border-grey-mid bg-white px-3 py-2.5 shadow-[0_8px_18px_-14px_rgba(15,29,84,.55)]"
+      className="flex min-w-0 flex-col gap-2 rounded-[10px] border border-[#E3E3E3] bg-white px-3 py-2.5 shadow-[0_1px_2px_rgba(0,0,0,0.03),0_14px_30px_rgba(0,0,0,0.05)]"
       style={{ animation: `mp-fade-up .45s ease backwards ${0.08 + index * 0.08}s` }}
     >
       <span className="flex items-start gap-2">
         <span
-          className="mt-px flex size-6 shrink-0 items-center justify-center rounded-[7px] border border-brand-pale bg-brand-tint text-brand"
+          className="mt-px flex size-6 shrink-0 items-center justify-center rounded-[7px] border border-[#E3E3E3] bg-[#F5F5F5] text-[#007EFF]"
           aria-hidden
         >
           <Icon name="doc" width={12} height={12} />
@@ -136,7 +136,7 @@ export function EvidenceTile({
           <span className="block truncate text-[11.5px] font-semibold leading-snug tracking-[-0.01em] text-ink">
             {doc.title}
           </span>
-          <span className={cn(MONO, "mt-0.5 block truncate text-[9.5px] text-ink-muted")}>
+          <span className={cn(MONO, "mt-0.5 block truncate text-[9.5px] text-[#878787]")}>
             {doc.meta}
           </span>
         </span>
@@ -145,13 +145,13 @@ export function EvidenceTile({
           className={cn(
             "flex size-5 shrink-0 items-center justify-center rounded-full border",
             review
-              ? "border-brand-pale bg-white text-brand"
-              : "border-brand bg-brand text-white",
+              ? "border-[#E3E3E3] bg-white text-[#007EFF]"
+              : "border-[#007EFF] bg-[#007EFF] text-white",
           )}
           aria-hidden
         >
           {review ? (
-            <span className="size-1.5 rounded-full bg-brand" />
+            <span className="size-1.5 rounded-full bg-[#007EFF]" />
           ) : (
             <Tick className="size-2.5" />
           )}
@@ -159,7 +159,7 @@ export function EvidenceTile({
       </span>
 
       <span className="flex items-center justify-between gap-2">
-        <span className={cn(MONO, "truncate text-[9px] tracking-[0.04em] text-grey-bdr")}>
+        <span className={cn(MONO, "truncate text-[9px] tracking-[0.04em] text-[#B2B2B2]")}>
           {doc.ref}
         </span>
         <span
@@ -167,8 +167,8 @@ export function EvidenceTile({
             MONO,
             "shrink-0 rounded-full px-1.5 py-0.5 text-[8.5px] font-semibold uppercase tracking-[0.05em]",
             review
-              ? "bg-brand-tint text-brand-dark"
-              : "bg-grey-soft text-ink-muted",
+              ? "bg-[#F5F5F5] text-[#007EFF]"
+              : "bg-[#F5F5F5] text-[#878787]",
           )}
         >
           {review ? "In review" : "Mapped"}
@@ -177,9 +177,9 @@ export function EvidenceTile({
 
       {/* Quiet document lines - structure, not body copy. */}
       <span className="flex flex-col gap-1" aria-hidden>
-        <span className="h-1 w-full rounded-full bg-grey-soft" />
-        <span className="h-1 w-4/5 rounded-full bg-grey-soft" />
-        <span className="h-1 w-2/5 rounded-full bg-brand-pale" />
+        <span className="h-1 w-full rounded-full bg-[#F5F5F5]" />
+        <span className="h-1 w-4/5 rounded-full bg-[#F5F5F5]" />
+        <span className="h-1 w-2/5 rounded-full bg-[#E3E3E3]" />
       </span>
     </span>
   );
@@ -192,9 +192,9 @@ export function EvidenceTile({
 export function IntelligenceBar({ label }: { label: string }) {
   return (
     <div className="flex items-center gap-3 py-1" aria-hidden={false}>
-      <span className="h-px flex-1 bg-brand-pale" aria-hidden />
+      <span className="h-px flex-1 bg-[#E3E3E3]" aria-hidden />
 
-      <span className="flex shrink-0 items-center gap-2 rounded-full border border-brand-pale bg-white px-3 py-1.5 shadow-[0_8px_20px_-14px_rgba(15,29,84,.7)]">
+      <span className="flex shrink-0 items-center gap-2 rounded-full border border-[#E3E3E3] bg-white px-3 py-1.5 shadow-[0_1px_2px_rgba(0,0,0,0.03),0_8px_18px_rgba(0,0,0,0.05)]">
         <LogoMark size={16} />
         <span
           className={cn(
@@ -206,7 +206,7 @@ export function IntelligenceBar({ label }: { label: string }) {
         </span>
       </span>
 
-      <span className="h-px flex-1 bg-brand-pale" aria-hidden />
+      <span className="h-px flex-1 bg-[#E3E3E3]" aria-hidden />
     </div>
   );
 }
@@ -231,7 +231,7 @@ export function RequirementRow({
 
   return (
     <li
-      className="grid grid-cols-[auto_1fr_auto] items-center gap-3.5 border-b border-grey-soft py-3 last:border-b-0 max-600:gap-2.5"
+      className="grid grid-cols-[auto_1fr_auto] items-center gap-3.5 border-b border-[#E3E3E3] py-3 last:border-b-0 max-600:gap-2.5"
       style={{ animation: `mp-fade-up .45s ease backwards ${0.16 + index * 0.09}s` }}
     >
       {/* The requirement is the anchor, so it leads the row. */}
@@ -240,8 +240,8 @@ export function RequirementRow({
           MONO,
           "flex shrink-0 items-center rounded-[7px] border px-2 py-1 text-[10.5px] font-semibold tracking-[0.02em]",
           gap
-            ? "border-brand-deep/25 bg-brand-deep/10 text-brand-deep"
-            : "border-brand-pale bg-brand-tint text-brand-dark",
+            ? "border-[#007EFF]/25 bg-[#F5F5F5] text-[#007EFF]"
+            : "border-[#E3E3E3] bg-[#F5F5F5] text-[#007EFF]",
         )}
       >
         {requirement}
@@ -255,8 +255,8 @@ export function RequirementRow({
         className={cn(
           "flex size-6 shrink-0 items-center justify-center rounded-full border",
           gap
-            ? "border-brand-deep/25 bg-brand-deep/10 text-brand-deep"
-            : "border-brand bg-brand text-white",
+            ? "border-[#007EFF]/25 bg-[#F5F5F5] text-[#007EFF]"
+            : "border-[#007EFF] bg-[#007EFF] text-white",
         )}
         aria-hidden
       >
@@ -272,7 +272,7 @@ export function FootPair({ ready, gate }: { ready: string; gate: string }) {
     <div className="flex flex-wrap items-center justify-between gap-3">
       <span className="flex items-center gap-2">
         <span
-          className="flex size-5 shrink-0 items-center justify-center rounded-full border border-brand bg-brand text-white"
+          className="flex size-5 shrink-0 items-center justify-center rounded-full border border-[#007EFF] bg-[#007EFF] text-white"
           aria-hidden
         >
           <Tick className="size-2.5" />
@@ -282,12 +282,12 @@ export function FootPair({ ready, gate }: { ready: string; gate: string }) {
 
       <span className="flex items-center gap-2">
         <span
-          className="flex size-5 shrink-0 items-center justify-center rounded-full border border-grey-bdr bg-white text-grey-bdr"
+          className="flex size-5 shrink-0 items-center justify-center rounded-full border border-[#B2B2B2] bg-white text-[#B2B2B2]"
           aria-hidden
         >
           <Icon name="community" width={11} height={11} />
         </span>
-        <span className={cn(MONO, "text-[11px] text-ink-muted")}>{gate}</span>
+        <span className={cn(MONO, "text-[11px] text-[#878787]")}>{gate}</span>
       </span>
     </div>
   );

@@ -37,15 +37,15 @@ export function Panel({
   return (
     <div
       className={cn(
-        "overflow-hidden rounded-panel border border-grey-mid bg-white shadow-[0_16px_40px_rgba(15,29,84,.06)]",
+        "overflow-hidden rounded-[8px] border border-[#E3E3E3] bg-white shadow-[0_1px_2px_rgba(0,0,0,0.03),0_14px_30px_rgba(0,0,0,0.05)]",
         className,
       )}
     >
-      <div className="flex items-center justify-between gap-3 border-b border-grey-mid px-5 py-3 max-720:px-4">
+      <div className="flex items-center justify-between gap-3 border-b border-[#E3E3E3] px-5 py-3 max-720:px-4">
         <span
           className={cn(
             MONO,
-            "truncate text-[11px] uppercase tracking-[0.06em] text-ink-muted",
+            "truncate aa-mono text-[11px] uppercase tracking-[0.06em] text-[#878787]",
           )}
         >
           {label}
@@ -71,7 +71,7 @@ export function Panel({
       <div className="px-5 py-[18px] max-720:px-4">{children}</div>
 
       {foot ? (
-        <div className="border-t border-grey-mid bg-grey-bg px-5 py-2.5 max-720:px-4">
+        <div className="border-t border-[#E3E3E3] bg-[#F5F5F5] px-5 py-2.5 max-720:px-4">
           {foot}
         </div>
       ) : null}
@@ -86,16 +86,16 @@ export function Panel({
 export function Divide({ label }: { label: string }) {
   return (
     <div className="my-4 flex items-center gap-3" aria-hidden>
-      <span className="h-px flex-1 bg-grey-mid" />
+      <span className="h-px flex-1 bg-[#E3E3E3]" />
       <span
         className={cn(
           MONO,
-          "shrink-0 text-[10px] uppercase tracking-[0.08em] text-grey-bdr",
+          "aa-mono shrink-0 text-[10px] uppercase tracking-[0.08em] text-[#B2B2B2]",
         )}
       >
         {label}
       </span>
-      <span className="h-px flex-1 bg-grey-mid" />
+      <span className="h-px flex-1 bg-[#E3E3E3]" />
     </div>
   );
 }

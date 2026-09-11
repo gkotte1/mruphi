@@ -41,15 +41,15 @@ export function Surface({
   return (
     <div
       className={cn(
-        "overflow-hidden rounded-panel border border-grey-mid bg-white shadow-[0_20px_50px_rgba(15,29,84,.08)]",
+        "overflow-hidden rounded-[10px] border border-[#E3E3E3] bg-white shadow-[0_1px_2px_rgba(0,0,0,0.03),0_14px_30px_rgba(0,0,0,0.05)]",
         className,
       )}
     >
-      <div className="flex items-center justify-between gap-3 border-b border-grey-mid bg-grey-soft px-5 py-3 max-720:px-4">
+      <div className="flex items-center justify-between gap-3 border-b border-[#E3E3E3] bg-[#F5F5F5] px-5 py-3 max-720:px-4">
         <span
           className={cn(
             MONO,
-            "min-w-0 truncate text-[11px] uppercase tracking-[0.06em] text-ink-muted",
+            "min-w-0 truncate text-[11px] uppercase tracking-[0.06em] text-[#878787]",
           )}
         >
           {label}
@@ -59,11 +59,11 @@ export function Surface({
           <span
             className={cn(
               MONO,
-              "flex shrink-0 items-center gap-1.5 rounded-full border border-brand-pale bg-brand-tint px-2.5 py-1 text-[10.5px] font-semibold uppercase tracking-[0.04em] text-brand-dark",
+              "flex shrink-0 items-center gap-1.5 rounded-full border border-[#E3E3E3] bg-[#F5F5F5] px-2.5 py-1 text-[10.5px] font-semibold uppercase tracking-[0.04em] text-[#007EFF]",
             )}
           >
             <span
-              className="size-1.5 rounded-full bg-brand"
+              className="size-1.5 rounded-full bg-[#007EFF]"
               style={{ animation: "mp-blink 1.6s ease-in-out infinite" }}
               aria-hidden
             />
@@ -80,8 +80,8 @@ export function Surface({
 /** The layer the workflows attach to. */
 export function LayerBand({ label }: { label: string }) {
   return (
-    <div className="flex items-center justify-center gap-2.5 rounded-tile border border-brand-pale bg-brand-tint/50 px-4 py-3">
-      <span className="flex size-8 shrink-0 items-center justify-center rounded-[9px] border border-grey-mid bg-white p-1.5">
+    <div className="flex items-center justify-center gap-2.5 rounded-[8px] border border-[#E3E3E3] bg-[#F5F5F5] px-4 py-3">
+      <span className="flex size-8 shrink-0 items-center justify-center rounded-[9px] border border-[#E3E3E3] bg-white p-1.5">
         <LogoMark size={18} />
       </span>
       <span className="text-[14px] font-bold leading-none tracking-[-0.015em] text-ink">
@@ -101,7 +101,7 @@ export function Stem({ lit }: { lit: boolean }) {
       <span
         className={cn(
           "h-5 w-px transition-colors duration-[420ms] ease-out",
-          lit ? "bg-brand" : "bg-brand-pale",
+          lit ? "bg-[#007EFF]" : "bg-[#E3E3E3]",
         )}
       />
     </span>
@@ -122,12 +122,12 @@ export function ModuleTile({
   return (
     <div
       className={cn(
-        "flex h-full flex-col gap-2.5 rounded-tile border px-3.5 py-3.5 transition-colors duration-[420ms] ease-out",
+        "flex h-full flex-col gap-2.5 rounded-[8px] border px-3.5 py-3.5 transition-colors duration-[420ms] ease-out",
         soon
-          ? "border-dashed border-grey-mid bg-grey-soft/60"
+          ? "border-dashed border-[#E3E3E3] bg-[#F5F5F5]"
           : active
-            ? "border-brand bg-brand-tint/50"
-            : "border-grey-mid bg-white",
+            ? "border-[#007EFF] bg-[#F5F5F5]"
+            : "border-[#E3E3E3] bg-white",
       )}
     >
       <span className="flex items-center justify-between gap-2">
@@ -135,10 +135,10 @@ export function ModuleTile({
           className={cn(
             "flex size-7 shrink-0 items-center justify-center rounded-[8px] border transition-colors duration-[420ms] ease-out",
             soon
-              ? "border-grey-mid bg-white text-grey-bdr"
+              ? "border-[#E3E3E3] bg-white text-[#B2B2B2]"
               : active
-                ? "border-brand bg-brand text-white"
-                : "border-brand-pale bg-brand-tint text-brand",
+                ? "border-[#007EFF] bg-[#007EFF] text-white"
+                : "border-[#E3E3E3] bg-[#F5F5F5] text-[#007EFF]",
           )}
           aria-hidden
         >
@@ -149,7 +149,7 @@ export function ModuleTile({
           <span
             className={cn(
               MONO,
-              "shrink-0 rounded-full border border-grey-mid bg-white px-2 py-0.5 text-[9px] uppercase tracking-[0.06em] text-grey-500",
+              "shrink-0 rounded-full border border-[#E3E3E3] bg-white px-2 py-0.5 text-[9px] uppercase tracking-[0.06em] text-[#606060]",
             )}
           >
             Soon
@@ -158,14 +158,14 @@ export function ModuleTile({
           <span className="relative flex size-1.5 shrink-0" aria-hidden>
             {active ? (
               <span
-                className="absolute inline-flex size-full rounded-full bg-brand/60 motion-reduce:hidden"
+                className="absolute inline-flex size-full rounded-full bg-[#007EFF]/60 motion-reduce:hidden"
                 style={{ animation: "mp-glow 2.4s ease-in-out infinite" }}
               />
             ) : null}
             <span
               className={cn(
                 "relative inline-flex size-1.5 rounded-full transition-colors duration-[420ms] ease-out",
-                active ? "bg-brand" : "bg-brand-pale",
+                active ? "bg-[#007EFF]" : "bg-[#E3E3E3]",
               )}
             />
           </span>
@@ -175,7 +175,7 @@ export function ModuleTile({
       <span
         className={cn(
           "text-[12.5px] leading-[1.3] font-bold tracking-[-0.01em] transition-colors duration-[420ms] ease-out",
-          soon ? "text-grey-500" : "text-ink",
+          soon ? "text-[#606060]" : "text-ink",
         )}
       >
         {name}

@@ -36,7 +36,7 @@ export function Surface({
   return (
     <div
       className={cn(
-        "overflow-hidden rounded-panel border border-grey-mid bg-white shadow-[0_20px_50px_rgba(15,29,84,.08)]",
+        "overflow-hidden rounded-[10px] border border-[#E3E3E3] bg-white shadow-[0_1px_2px_rgba(0,0,0,0.03),0_14px_30px_rgba(0,0,0,0.05)]",
         className,
       )}
     >
@@ -44,15 +44,15 @@ export function Surface({
         className={cn(
           "flex items-center justify-between gap-3 px-5 py-3 max-720:px-4",
           tone === "brand"
-            ? "bg-brand"
-            : "border-b border-grey-mid bg-grey-soft",
+            ? "bg-[#007EFF]"
+            : "border-b border-[#E3E3E3] bg-[#F5F5F5]",
         )}
       >
         <span
           className={cn(
             MONO,
             "truncate text-[11px] uppercase tracking-[0.06em]",
-            tone === "brand" ? "text-white/90" : "text-ink-muted",
+            tone === "brand" ? "text-white/90" : "text-[#878787]",
           )}
         >
           {label}
@@ -64,14 +64,14 @@ export function Surface({
               <span
                 className={cn(
                   "absolute inline-flex size-full rounded-full",
-                  tone === "brand" ? "bg-white/60" : "bg-brand/60",
+                  tone === "brand" ? "bg-white/60" : "bg-[#007EFF]/60",
                 )}
                 style={{ animation: "mp-glow 2.4s ease-in-out infinite" }}
               />
               <span
                 className={cn(
                   "relative inline-flex size-1.5 rounded-full",
-                  tone === "brand" ? "bg-white" : "bg-brand",
+                  tone === "brand" ? "bg-white" : "bg-[#007EFF]",
                 )}
               />
             </span>
@@ -79,7 +79,7 @@ export function Surface({
             <span
               className={cn(
                 "size-1.5 rounded-full",
-                tone === "brand" ? "bg-white/50" : "bg-brand-pale",
+                tone === "brand" ? "bg-white/50" : "bg-[#E3E3E3]",
               )}
             />
           )}
@@ -89,7 +89,7 @@ export function Surface({
       <div className="px-5 py-[18px] max-720:px-4">{children}</div>
 
       {foot ? (
-        <div className="border-t border-grey-mid bg-grey-bg px-5 py-2.5 max-720:px-4">
+        <div className="border-t border-[#E3E3E3] bg-[#F5F5F5] px-5 py-2.5 max-720:px-4">
           {foot}
         </div>
       ) : null}
@@ -110,8 +110,8 @@ export function Bubble({
       className={cn(
         "max-w-[86%] px-[13px] py-2.5 text-[12.5px] leading-[1.45]",
         side === "out"
-          ? "ml-auto rounded-[16px] rounded-br-[4px] bg-brand text-white"
-          : "rounded-[16px] rounded-bl-[4px] border border-grey-mid bg-grey-soft text-ink",
+          ? "ml-auto rounded-[16px] rounded-br-[4px] bg-[#007EFF] text-white"
+          : "rounded-[16px] rounded-bl-[4px] border border-[#E3E3E3] bg-[#F5F5F5] text-ink",
       )}
     >
       {children}
@@ -130,15 +130,15 @@ export function Correspondent({
   sub: string;
 }) {
   return (
-    <div className="mb-4 flex items-center gap-2.5 border-b border-grey-mid pb-3.5">
-      <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-brand text-[12px] font-bold text-white">
+    <div className="mb-4 flex items-center gap-2.5 border-b border-[#E3E3E3] pb-3.5">
+      <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-[#007EFF] text-[12px] font-bold text-white">
         {initials}
       </span>
       <span className="min-w-0">
         <span className="block truncate text-[13.5px] font-bold text-ink">
           {name}
         </span>
-        <span className={cn(MONO, "block truncate text-[11px] text-ink-muted")}>
+        <span className={cn(MONO, "block truncate text-[11px] text-[#878787]")}>
           {sub}
         </span>
       </span>
@@ -172,9 +172,9 @@ export function ReadGlyph({ className }: { className?: string }) {
 export function Wire({ label, delay = "0s" }: { label?: string; delay?: string }) {
   return (
     <div className="flex flex-col items-center gap-2 py-3">
-      <span className="relative flex h-7 w-px shrink-0 bg-brand-pale" aria-hidden>
+      <span className="relative flex h-7 w-px shrink-0 bg-[#E3E3E3]" aria-hidden>
         <span
-          className="absolute left-1/2 size-1.5 -translate-x-1/2 rounded-full bg-brand"
+          className="absolute left-1/2 size-1.5 -translate-x-1/2 rounded-full bg-[#007EFF]"
           style={{ animation: `mp-flow-pulse-v 2.6s ease-in-out infinite ${delay}` }}
         />
       </span>
@@ -184,14 +184,14 @@ export function Wire({ label, delay = "0s" }: { label?: string; delay?: string }
           <span
             className={cn(
               MONO,
-              "rounded-full border border-brand-pale bg-brand-tint px-3 py-1 text-center text-[11px] uppercase tracking-[0.05em] text-brand-dark",
+              "rounded-full border border-[#E3E3E3] bg-[#F5F5F5] px-3 py-1 text-center text-[11px] uppercase tracking-[0.05em] text-[#007EFF]",
             )}
           >
             {label}
           </span>
-          <span className="relative flex h-7 w-px shrink-0 bg-brand-pale" aria-hidden>
+          <span className="relative flex h-7 w-px shrink-0 bg-[#E3E3E3]" aria-hidden>
             <span
-              className="absolute left-1/2 size-1.5 -translate-x-1/2 rounded-full bg-brand"
+              className="absolute left-1/2 size-1.5 -translate-x-1/2 rounded-full bg-[#007EFF]"
               style={{ animation: "mp-flow-pulse-v 2.6s ease-in-out infinite .6s" }}
             />
           </span>
@@ -215,16 +215,16 @@ export function PhoneFrame({
   /* Bezel stays brand blue; a thin border keeps the phone readable without
      overpowering the card above it. Width matches the staff Surface above. */
   return (
-    <div className="w-full rounded-[34px] border-2 border-brand bg-brand p-0 shadow-[0_24px_54px_-18px_rgba(15,29,84,.45)]">
+    <div className="w-full rounded-[34px] border-2 border-[#007EFF] bg-[#007EFF] p-0 shadow-[0_1px_2px_rgba(0,0,0,0.03),0_14px_30px_rgba(0,0,0,0.05)]">
       <div className="overflow-hidden rounded-[32px] bg-white">
         <div className="flex justify-center pt-2.5" aria-hidden>
-          <span className="h-1 w-14 rounded-full bg-grey-mid" />
+          <span className="h-1 w-14 rounded-full bg-[#E3E3E3]" />
         </div>
 
         <div
           className={cn(
             MONO,
-            "mt-2.5 border-b border-grey-mid px-4 py-2.5 text-center text-[11px] uppercase tracking-[0.06em] text-ink-muted",
+            "mt-2.5 border-b border-[#E3E3E3] px-4 py-2.5 text-center text-[11px] uppercase tracking-[0.06em] text-[#878787]",
           )}
         >
           {label}
@@ -233,7 +233,7 @@ export function PhoneFrame({
         <div className="flex flex-col gap-2.5 px-4 py-4">{children}</div>
 
         <div className="flex justify-center pb-2.5" aria-hidden>
-          <span className="h-1 w-20 rounded-full bg-grey-mid" />
+          <span className="h-1 w-20 rounded-full bg-[#E3E3E3]" />
         </div>
       </div>
     </div>

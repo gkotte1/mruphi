@@ -3,6 +3,7 @@ import { pageMetadata } from "@/lib/site";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ContactPage from "@/components/contact/ContactPage";
+import { InnerPage } from "@/components/inner-page/Shell";
 
 export const metadata: Metadata = pageMetadata("/contact-us/", {
   title: "Contact Murphi.ai | Talk To A Healthcare AI Expert",
@@ -12,10 +13,10 @@ export const metadata: Metadata = pageMetadata("/contact-us/", {
 
 export default function Page() {
   return (
-    <>
+    <InnerPage>
       <Navbar />
       <ContactPage />
       <Footer />
-    </>
+    </InnerPage>
   );
 }

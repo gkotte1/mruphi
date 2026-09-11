@@ -3,55 +3,24 @@
 import { useCallback, useRef, type ReactNode } from "react";
 import { Icon } from "@/components/icons";
 import Reveal from "@/components/module-page/Reveal";
-import {
-  CONTAINER,
-  Kicker,
-  MONO,
-  SECTION,
-  SectionHead,
-} from "@/components/module-page/ui";
 import { Divide, Panel } from "@/components/ambient-ai-dictation/Surface";
 import {
   CaptureWave,
   DocTiles,
   FieldRows,
 } from "@/components/ambient-ai-dictation/Capture";
+import { AaEyebrow, AaHead, AaWrap } from "@/components/ambient-ai-dictation/Shell";
 import { useAutoAdvance } from "@/lib/useAutoAdvance";
 import { cn } from "@/lib/cn";
 
-/**
- * The three moments of a visit, as one interface.
- *
- * The phases used to be an accordion down the left, which meant the reader had
- * to open each one and the panel beside it jumped height as they did. They are
- * now three tabs across the top, and the tab drives both columns: the copy on
- * the left and the product surface on the right change together, so the
- * section reads as tab -> workflow -> product rather than three separate rows.
- *
- * All three views stay mounted in one grid cell and cross-fade, so the section
- * holds the height of the tallest and nothing shifts as the tabs rotate.
- *
- * Every string below is the one the page already carried.
- */
-
-/**
- * How long each tab holds.
- *
- * Two seconds per phase - long enough to read the body copy. The rotation
- * pauses while the pointer is over the left copy or the right surface, or a
- * tab has keyboard focus, and stops altogether under prefers-reduced-motion.
- * Change this one constant to retune the pace.
- */
 const TAB_MS = 2000;
 
-/** Freeze every CSS animation under a hovered column without touching layout. */
 const PAUSE_MOTION = "[&_*]:![animation-play-state:paused]";
 
 type Phase = {
   number: string;
   heading: string;
   body: string;
-  /** The label on the product surface for this phase. */
   panel: string;
   context?: string;
   live?: boolean;
@@ -94,13 +63,43 @@ const PHASES: Phase[] = [
 
         <Divide label="Flagged in real time" />
 
-        <div className="flex items-start gap-3 rounded-tile border-y border-r border-l-[3px] border-y-grey-mid border-r-grey-mid border-l-brand bg-brand-tint px-3.5 py-3">
-          <span className="mt-[1px] flex size-[18px] shrink-0 items-center justify-center rounded-full bg-brand-dark text-white">
+        <div
+          style={{
+            display: "flex",
+            alignItems: "flex-start",
+            gap: 12,
+            border: "1px solid #E3E3E3",
+            borderRadius: 8,
+            background: "#F5F5F5",
+            padding: "12px 14px",
+          }}
+        >
+          <span
+            style={{
+              marginTop: 1,
+              display: "flex",
+              width: 18,
+              height: 18,
+              flexShrink: 0,
+              alignItems: "center",
+              justifyContent: "center",
+              borderRadius: "50%",
+              background: "#007EFF",
+              color: "#ffffff",
+            }}
+          >
             <Icon name="pulse" width={10} height={10} />
           </span>
-          <div className="min-w-0 text-[12.5px] leading-[1.4] text-ink">
+          <div style={{ minWidth: 0, fontSize: 12.5, lineHeight: 1.4, color: "#1A1A1A" }}>
             Wound assessment not yet addressed
-            <small className="mt-0.5 block text-[11px] text-ink-muted">
+            <small
+              style={{
+                display: "block",
+                marginTop: 2,
+                fontSize: 11,
+                color: "#878787",
+              }}
+            >
               Flagged in real time
             </small>
           </div>
@@ -124,8 +123,6 @@ export default function HowItWorks() {
     TAB_MS,
   );
 
-  /* The two columns share one hover zone for leave detection so moving between
-     left and right does not briefly release the hold and advance a step. */
   const columnsRef = useRef<HTMLDivElement>(null);
   const focusHeld = useRef(false);
 
@@ -145,15 +142,16 @@ export default function HowItWorks() {
   );
 
   return (
-    <section id="how" className={cn("border-t border-grey-mid", SECTION)}>
-      <div className={CONTAINER}>
-        <Kicker>Intelligent Documentation Assistance</Kicker>
-        <SectionHead>How Murphi Completes Documentation For You</SectionHead>
+    <section id="how" className="aa-section aa-band">
+      <AaWrap>
+        <AaHead>
+          <AaEyebrow>Intelligent Documentation Assistance</AaEyebrow>
+          <h2 className="aa-h2 aa-serif" style={{ marginTop: 16, marginBottom: 18 }}>
+            How Murphi Completes Documentation For You
+          </h2>
+        </AaHead>
 
         <Reveal>
-          {/* ── The three phases, as tabs ──
-              Keyboard focus on a tab holds the rotation so the copy can be
-              read; the pointer holds it over the left copy or right surface. */}
           <div
             onFocus={() => {
               focusHeld.current = true;
@@ -171,7 +169,8 @@ export default function HowItWorks() {
             <div
               role="tablist"
               aria-label="The three moments of a visit"
-              className="grid grid-cols-3 gap-2 max-600:gap-1.5"
+              className="grid grid-cols-3"
+              style={{ gap: 8 }}
             >
               {PHASES.map((phase, i) => {
                 const on = i === index;
@@ -186,13 +185,19 @@ export default function HowItWorks() {
                     aria-controls={`how-panel-${i}`}
                     tabIndex={on ? 0 : -1}
                     onClick={() => select(i)}
-                    className={cn(
-                      MONO,
-                      "min-w-0 rounded-card border px-4 py-3 text-[12px] font-semibold tracking-[0.05em] transition-colors duration-300 max-600:px-2.5 max-600:py-2.5 max-600:text-[11px]",
-                      on
-                        ? "border-brand bg-brand text-white"
-                        : "border-grey-mid bg-white text-grey-500 hover:border-brand-border hover:text-brand-dark",
-                    )}
+                    className="aa-mono"
+                    style={{
+                      minWidth: 0,
+                      borderRadius: 4,
+                      border: on ? "1px solid #007EFF" : "1px solid #E3E3E3",
+                      background: on ? "#007EFF" : "#ffffff",
+                      color: on ? "#F5F5F5" : "#606060",
+                      padding: "12px 16px",
+                      fontSize: 12,
+                      fontWeight: 600,
+                      letterSpacing: "0.05em",
+                      cursor: "pointer",
+                    }}
                   >
                     {phase.number}
                   </button>
@@ -200,24 +205,29 @@ export default function HowItWorks() {
               })}
             </div>
 
-            {/* The one line that connects the active tab to the content: a
-                third of the rail, sliding under whichever tab is live. */}
-            <div className="relative mt-3 h-px w-full bg-grey-mid" aria-hidden>
+            <div
+              className="relative mt-3 h-px w-full"
+              style={{ background: "#E3E3E3" }}
+              aria-hidden
+            >
               <span
-                className="absolute inset-y-0 left-0 block w-1/3 bg-brand transition-transform duration-[400ms] ease-out"
-                style={{ transform: `translateX(${index * 100}%)` }}
+                className="absolute inset-y-0 left-0 block w-1/3 transition-transform duration-[400ms] ease-out"
+                style={{
+                  background: "#007EFF",
+                  transform: `translateX(${index * 100}%)`,
+                }}
               />
             </div>
           </div>
 
           <div
             ref={columnsRef}
-            className={cn(
-              "mt-10 grid grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)] items-start gap-14 max-1080:grid-cols-1 max-1080:gap-10 max-600:mt-8",
-              paused && PAUSE_MOTION,
-            )}
+            className={cn("aa-split mt-10 grid items-start", paused && PAUSE_MOTION)}
+            style={{
+              gridTemplateColumns: "minmax(0,0.92fr) minmax(0,1.08fr)",
+              gap: 64,
+            }}
           >
-            {/* ── The copy for the active phase ── */}
             <div
               className="grid min-w-0"
               onPointerEnter={pause}
@@ -231,26 +241,26 @@ export default function HowItWorks() {
                   aria-labelledby={`how-tab-${i}`}
                   aria-hidden={i !== index}
                   className={cn(
-                    /* One cell, so the column keeps the height of the longest
-                       body and nothing shifts as the tabs rotate. */
                     "col-start-1 row-start-1 min-w-0 transition-[opacity,transform] duration-[380ms] ease-out",
                     i === index
                       ? "translate-y-0 opacity-100"
                       : "pointer-events-none translate-y-1 opacity-0",
                   )}
                 >
-                  <h3 className="type-h4 text-ink">{phase.heading}</h3>
+                  <h3 className="aa-serif" style={{ fontSize: 30, fontWeight: 500 }}>
+                    {phase.heading}
+                  </h3>
 
-                  <p className="mt-4 max-w-[52ch] text-[15px] leading-[1.65] text-grey-500">
+                  <p className="aa-body" style={{ marginTop: 16, maxWidth: "52ch" }}>
                     {phase.body}
                   </p>
                 </div>
               ))}
             </div>
 
-            {/* ── The surface for the active phase ── */}
             <div
-              className="grid min-w-0 rounded-[28px] border border-brand-pale bg-brand-tint/40 p-7 max-1080:p-6 max-600:rounded-panel max-600:p-4"
+              className="aa-card grid min-w-0"
+              style={{ padding: 28 }}
               onPointerEnter={pause}
               onPointerLeave={(e) => resumeIfOutside(e.relatedTarget)}
             >
@@ -277,7 +287,7 @@ export default function HowItWorks() {
             </div>
           </div>
         </Reveal>
-      </div>
+      </AaWrap>
     </section>
   );
 }

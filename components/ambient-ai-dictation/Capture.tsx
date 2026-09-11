@@ -47,20 +47,20 @@ export function CaptureWave({
   return (
     <div
       className={cn(
-        "relative flex items-center gap-[3px] overflow-hidden rounded-tile border border-grey-mid bg-grey-bg px-3.5",
+        "relative flex items-center gap-[3px] overflow-hidden rounded-[8px] border border-[#E3E3E3] bg-[#F5F5F5] px-3.5",
         quiet ? "h-10 max-600:h-9" : "h-[74px] max-600:h-[62px]",
         className,
       )}
       aria-hidden
     >
-      <span className="absolute inset-x-3.5 top-1/2 h-px bg-grey-mid" />
+      <span className="absolute inset-x-3.5 top-1/2 h-px bg-[#E3E3E3]" />
 
       {WAVE.map((height, i) => (
         <span
           key={i}
           className={cn(
             "relative w-[3px] flex-1 rounded-full",
-            i > WAVE.length - 7 ? "bg-brand-pale" : "bg-brand",
+            i > WAVE.length - 7 ? "bg-[#A3D1FF]" : "bg-[#007EFF]",
           )}
           style={{
             height: `${height * 1.7}%`,
@@ -100,15 +100,15 @@ export function FieldRows({
   cycle?: number;
 }) {
   return (
-    <div className="overflow-hidden rounded-tile border border-grey-mid">
+    <div className="overflow-hidden rounded-[8px] border border-[#E3E3E3]">
       {lines.map((line, i) => (
         <div
           key={line}
           className={cn(
             "flex items-start gap-2.5 px-3.5",
             quiet ? "py-2" : "py-2.5 opacity-0",
-            i === 0 ? "" : "border-t border-grey-mid",
-            i % 2 ? "bg-grey-bg" : "bg-white",
+            i === 0 ? "" : "border-t border-[#E3E3E3]",
+            i % 2 ? "bg-[#F5F5F5]" : "bg-white",
           )}
           style={
             quiet
@@ -117,7 +117,7 @@ export function FieldRows({
           }
         >
           <span
-            className="mt-[1px] flex size-[15px] shrink-0 items-center justify-center rounded-full bg-brand text-white"
+            className="mt-[1px] flex size-[15px] shrink-0 items-center justify-center rounded-full bg-[#007EFF] text-white"
             style={
               cycle === undefined
                 ? undefined
@@ -129,11 +129,11 @@ export function FieldRows({
             <Icon name="check" width={9} height={9} />
           </span>
 
-          <span className="min-w-0 text-[12.5px] leading-[1.45] text-grey-500">
+          <span className="min-w-0 text-[12.5px] leading-[1.45] text-[#606060]">
             {line}
             {!quiet && i === lines.length - 1 ? (
               <span
-                className="ml-0.5 inline-block h-3 w-0.5 bg-brand align-middle"
+                className="ml-0.5 inline-block h-3 w-0.5 bg-[#007EFF] align-middle"
                 style={{ animation: "mp-caret 1s step-end infinite" }}
                 aria-hidden
               />
@@ -182,7 +182,7 @@ export function DocTiles({
         <div
           key={item}
           className={cn(
-            "flex items-center gap-2 rounded-[10px] border border-grey-mid bg-white px-2.5",
+            "flex items-center gap-2 rounded-[8px] border border-[#E3E3E3] bg-white px-2.5",
             quiet ? "py-1.5" : "py-2 opacity-0",
           )}
           style={
@@ -191,7 +191,7 @@ export function DocTiles({
               : { animation: `mp-fade-up .4s ease forwards ${0.9 + i * 0.07}s` }
           }
         >
-          <span className="flex size-[22px] shrink-0 items-center justify-center rounded-[7px] border border-brand-pale bg-brand-tint text-brand-dark">
+          <span className="flex size-[22px] shrink-0 items-center justify-center rounded-[8px] border border-[#E3E3E3] bg-[#F5F5F5] text-[#007EFF]">
             <Icon name="doc" width={12} height={12} />
           </span>
 
@@ -203,7 +203,7 @@ export function DocTiles({
             name="check"
             width={11}
             height={11}
-            className="shrink-0 text-brand"
+            className="shrink-0 text-[#007EFF]"
             style={
               cycle === undefined
                 ? undefined
@@ -223,12 +223,12 @@ export function DocTiles({
 /** A single line of context above the stages - where the record came from. */
 export function ContextRow({ children }: { children: ReactNode }) {
   return (
-    <div className="flex items-center gap-2.5 border-b border-grey-mid bg-grey-bg px-5 py-2.5 max-600:px-4">
-      <span className="flex size-[18px] shrink-0 items-center justify-center rounded-full border border-brand-pale bg-white text-brand">
+    <div className="flex items-center gap-2.5 border-b border-[#E3E3E3] bg-[#F5F5F5] px-5 py-2.5 max-600:px-4">
+      <span className="flex size-[18px] shrink-0 items-center justify-center rounded-full border border-[#E3E3E3] bg-white text-[#007EFF]">
         <Icon name="server" width={10} height={10} />
       </span>
       <span
-        className={cn(MONO, "min-w-0 truncate text-[11px] text-grey-500")}
+        className={cn(MONO, "aa-mono min-w-0 truncate text-[11px] text-[#606060]")}
       >
         {children}
       </span>

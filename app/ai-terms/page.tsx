@@ -1,13 +1,18 @@
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/site";
-import LegalPage from "@/components/legal/LegalPage";
+import BrandLegalPage from "@/components/legal/BrandLegalPage";
+import { getLegalPage } from "@/lib/legal";
 
-export const metadata: Metadata = pageMetadata("/ai-terms/", {
-  title: "AI Terms Of Use | Artificial Intelligence Policy",
-  description:
-    "Review Murphi.ai's AI-specific terms of use governing the use of artificial intelligence features, data processing, and automated outputs within the platform.",
-});
+const page = getLegalPage("ai-terms");
+
+export const metadata: Metadata = {
+  ...pageMetadata("/ai-terms/", {
+    title: page.title,
+    description: page.description,
+  }),
+  title: { absolute: page.title },
+};
 
 export default function AiTermsPage() {
-  return <LegalPage file="ai-terms.md" />;
+  return <BrandLegalPage slug="ai-terms" />;
 }

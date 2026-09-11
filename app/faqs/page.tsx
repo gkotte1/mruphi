@@ -1,15 +1,14 @@
 import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import Reveal from "@/components/module-page/Reveal";
-import { Breadcrumb, FinalCta } from "@/components/module-page/sections";
-import { CONTAINER, Eyebrow, SECTION } from "@/components/module-page/ui";
 import FaqExplorer from "@/components/faqs/FaqExplorer";
 import { FAQ_CATEGORIES } from "@/lib/faqs";
 import { JsonLd } from "@/components/JsonLd";
 import { allFaqsSchema } from "@/lib/schema";
 import { pageMetadata } from "@/lib/site";
-import { cn } from "@/lib/cn";
+import { SimpleHero } from "@/components/inner-page/Hero";
+import { FinalCta } from "@/components/inner-page/kit";
+import { InnerPage, IpWrap } from "@/components/inner-page/Shell";
 
 export const metadata: Metadata = pageMetadata("/faqs/", {
   title: "Home Health & Hospice AI FAQs",
@@ -31,33 +30,22 @@ export const metadata: Metadata = pageMetadata("/faqs/", {
  */
 export default function FaqsPage() {
   return (
-    <div>
+    <InnerPage>
       <JsonLd data={allFaqsSchema("/faqs/")} />
 
       <Navbar />
 
-      {/* The navigation is position:fixed, so it occupies no space in flow.
-          Without this offset the breadcrumb renders behind it and only clears
-          the bar once the page scrolls. */}
-      <main className="bg-white pt-[80px]">
-        <Breadcrumb current="FAQs" />
+      <main>
+        <SimpleHero
+          current="FAQs"
+          eyebrow="FAQs"
+          title="Frequently Asked Questions"
+        />
 
-        <section className="bg-hero-bg pt-7 pb-16 max-720:pt-6 max-720:pb-10">
-          <div className={CONTAINER}>
-            <Reveal>
-              <Eyebrow>FAQs</Eyebrow>
-
-              <h1 className="mt-4 max-w-[16ch] type-h1 text-ink">
-                Frequently Asked Questions
-              </h1>
-            </Reveal>
-          </div>
-        </section>
-
-        <section className={cn("border-t border-grey-mid", SECTION)}>
-          <div className={CONTAINER}>
+        <section style={{ padding: "64px 0 96px" }}>
+          <IpWrap>
             <FaqExplorer categories={FAQ_CATEGORIES} />
-          </div>
+          </IpWrap>
         </section>
 
         <FinalCta
@@ -67,6 +55,6 @@ export default function FaqsPage() {
       </main>
 
       <Footer />
-    </div>
+    </InnerPage>
   );
 }

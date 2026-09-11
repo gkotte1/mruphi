@@ -3,6 +3,7 @@ import { pageMetadata } from "@/lib/site";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import DownloadPage from "@/components/download/DownloadPage";
+import { InnerPage } from "@/components/inner-page/Shell";
 
 export const metadata: Metadata = pageMetadata("/download-app/", {
   title: "Download the Murphi.ai App - iOS & Android",
@@ -12,10 +13,10 @@ export const metadata: Metadata = pageMetadata("/download-app/", {
 
 export default function Page() {
   return (
-    <>
+    <InnerPage>
       <Navbar />
       <DownloadPage />
       <Footer />
-    </>
+    </InnerPage>
   );
 }

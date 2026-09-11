@@ -81,11 +81,11 @@ function DocRow({
 function SummaryLine({ text, index }: { text: string; index: number }) {
   return (
     <div
-      className="flex items-start gap-2.5 border-b border-grey-soft py-2 last:border-b-0"
+      className="flex items-start gap-2.5 border-b border-[#E3E3E3] py-2 last:border-b-0"
       style={{ animation: `mp-fade-up .45s ease backwards ${0.08 + index * 0.07}s` }}
     >
       <span
-        className="mt-1.5 size-1.5 shrink-0 rounded-full bg-brand"
+        className="mt-1.5 size-1.5 shrink-0 rounded-full bg-[#007EFF]"
         aria-hidden
       />
       <span className="min-w-0 text-[12.5px] leading-[1.45] text-ink">{text}</span>
@@ -116,7 +116,7 @@ const INTAKE_VIEWS: View[] = [
         <GroupLabel>Documents</GroupLabel>
         {/* Brand highlight so the classified packet reads as a real log, not
             empty bars - same width as the Surface body above it. */}
-        <div className="rounded-tile bg-brand px-3.5 py-1 shadow-[0_12px_28px_-14px_rgba(0,106,214,.7)]">
+        <div className="rounded-[8px] bg-[#007EFF] px-3.5 py-1 ">
           <DocRow name="Referral Order.pdf" detail="Physician order" index={0} />
           <DocRow name="Clinical Notes.pdf" detail="Hospital discharge" index={1} />
           <DocRow
@@ -145,7 +145,7 @@ const INTAKE_VIEWS: View[] = [
     label: "Referral Summary",
     status: "Generated",
     body: (
-      <div className="rounded-tile border border-grey-mid bg-grey-soft px-4 py-3">
+      <div className="rounded-[8px] border border-[#E3E3E3] bg-[#F5F5F5] px-4 py-3">
         <GroupLabel>Summary</GroupLabel>
         <SummaryLine text="Referral received — skilled nursing evaluation" index={0} />
         <SummaryLine text="Source: hospital discharge, Portal" index={1} />
@@ -251,31 +251,31 @@ export default function Mechanics({
               {/* The handoff between the two workflows. */}
               {g === 0 ? null : (
                 <div className="flex items-center gap-4 py-9 max-720:py-7" aria-hidden>
-                  <span className="h-px flex-1 bg-grey-mid" />
+                  <span className="h-px flex-1 bg-[#E3E3E3]" />
                   <span
                     className={cn(
                       "flex size-8 items-center justify-center rounded-full border transition-colors duration-[420ms] ease-out",
                       running || finished
-                        ? "border-brand bg-brand text-white"
-                        : "border-grey-mid bg-white text-grey-bdr",
+                        ? "border-[#007EFF] bg-[#007EFF] text-white"
+                        : "border-[#E3E3E3] bg-white text-[#B2B2B2]",
                     )}
                   >
                     <Icon name="chevron" width={14} height={14} />
                   </span>
-                  <span className="h-px flex-1 bg-grey-mid" />
+                  <span className="h-px flex-1 bg-[#E3E3E3]" />
                 </div>
               )}
 
               <section
                 className={cn(
-                  "overflow-hidden rounded-[28px] border transition-colors duration-[420ms] ease-out",
+                  "ip-card overflow-hidden transition-colors duration-[420ms] ease-out",
                   running
-                    ? "border-brand-pale bg-brand-tint/40"
-                    : "border-grey-mid bg-grey-bg",
+                    ? "border-[#E3E3E3] bg-[#F5F5F5]"
+                    : "border-[#E3E3E3] bg-[#F5F5F5]",
                 )}
               >
                 {/* The workflow's own heading and progress. */}
-                <div className="flex flex-wrap items-center justify-between gap-4 border-b border-grey-mid px-7 py-4 max-600:px-5">
+                <div className="flex flex-wrap items-center justify-between gap-4 border-b border-[#E3E3E3] px-7 py-4 max-600:px-5">
                   <h3 className="text-[16px] font-bold tracking-[-0.015em] text-ink">
                     {group.lede}
                   </h3>
@@ -286,16 +286,16 @@ export default function Mechanics({
                       {running ? (
                         <>
                           <span
-                            className="absolute inline-flex size-full rounded-full bg-brand/60 motion-reduce:hidden"
+                            className="absolute inline-flex size-full rounded-full bg-[#007EFF]/60 motion-reduce:hidden"
                             style={{ animation: "mp-glow 2.4s ease-in-out infinite" }}
                           />
-                          <span className="relative inline-flex size-1.5 rounded-full bg-brand" />
+                          <span className="relative inline-flex size-1.5 rounded-full bg-[#007EFF]" />
                         </>
                       ) : (
                         <span
                           className={cn(
                             "size-1.5 rounded-full",
-                            finished ? "bg-brand" : "bg-grey-mid",
+                            finished ? "bg-[#007EFF]" : "bg-[#E3E3E3]",
                           )}
                         />
                       )}
@@ -318,7 +318,7 @@ export default function Mechanics({
                               className={cn(
                                 "mt-[18px] h-px w-7 shrink-0 transition-colors duration-[420ms] ease-out",
                                 "max-900:mt-0 max-900:ml-[18px] max-900:h-7 max-900:w-px",
-                                passed || isActive ? "bg-brand" : "bg-grey-mid",
+                                passed || isActive ? "bg-[#007EFF]" : "bg-[#E3E3E3]",
                               )}
                               aria-hidden
                             />
@@ -336,16 +336,16 @@ export default function Mechanics({
                                   MONO,
                                   "relative flex size-9 shrink-0 items-center justify-center rounded-full border text-[12px] font-bold transition-colors duration-[420ms] ease-out",
                                   isActive
-                                    ? "border-brand bg-brand text-white"
+                                    ? "border-[#007EFF] bg-[#007EFF] text-white"
                                     : passed
-                                      ? "border-brand bg-white text-brand"
-                                      : "border-grey-mid bg-white text-grey-500 group-hover:border-brand group-hover:text-brand",
+                                      ? "border-[#007EFF] bg-white text-[#007EFF]"
+                                      : "border-[#E3E3E3] bg-white text-[#606060] group-hover:border-[#007EFF] group-hover:text-[#007EFF]",
                                 )}
                               >
                                 {passed ? <Tick className="size-3.5" /> : step.num}
                                 {isActive ? (
                                   <span
-                                    className="absolute inset-0 rounded-full border border-brand motion-reduce:hidden"
+                                    className="absolute inset-0 rounded-full border border-[#007EFF] motion-reduce:hidden"
                                     style={{ animation: "mp-pulse-ring 2s ease-out infinite" }}
                                     aria-hidden
                                   />
@@ -356,12 +356,12 @@ export default function Mechanics({
                                 <span
                                   className={cn(
                                     "block text-[14.5px] font-bold leading-snug tracking-[-0.012em] transition-colors duration-[420ms] ease-out",
-                                    isActive ? "text-ink" : "text-grey-500",
+                                    isActive ? "text-ink" : "text-[#606060]",
                                   )}
                                 >
                                   {step.title}
                                 </span>
-                                <span className="mt-1 block text-[12.5px] leading-[1.45] text-grey-500">
+                                <span className="mt-1 block text-[12.5px] leading-[1.45] text-[#606060]">
                                   {step.body}
                                 </span>
                               </span>

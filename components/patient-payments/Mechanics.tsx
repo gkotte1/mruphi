@@ -38,7 +38,7 @@ function Label({ children }: { children: string }) {
     <div
       className={cn(
         MONO,
-        "mb-2 text-[10px] uppercase tracking-[0.08em] text-grey-bdr",
+        "mb-2 text-[10px] uppercase tracking-[0.08em] text-[#B2B2B2]",
       )}
     >
       {children}
@@ -53,14 +53,14 @@ function StatusShift({ from, to }: { from: string; to: string }) {
       <span
         className={cn(
           MONO,
-          "rounded-full border border-grey-mid bg-grey-soft px-3 py-1.5 text-[11.5px] text-ink-muted line-through decoration-grey-bdr",
+          "rounded-full border border-[#E3E3E3] bg-[#F5F5F5] px-3 py-1.5 text-[11.5px] text-[#878787] line-through decoration-[#B2B2B2]",
         )}
       >
         {from}
       </span>
 
       <span
-        className="flex size-6 shrink-0 items-center justify-center rounded-full border border-brand-pale bg-brand-tint text-brand"
+        className="flex size-6 shrink-0 items-center justify-center rounded-full border border-[#E3E3E3] bg-[#F5F5F5] text-[#007EFF]"
         aria-hidden
       >
         <Icon name="arrow" width={12} height={12} />
@@ -69,7 +69,7 @@ function StatusShift({ from, to }: { from: string; to: string }) {
       <span
         className={cn(
           MONO,
-          "rounded-full bg-brand px-3 py-1.5 text-[11.5px] font-semibold text-white",
+          "rounded-full bg-[#007EFF] px-3 py-1.5 text-[11.5px] font-semibold text-white",
         )}
       >
         {to}
@@ -83,7 +83,7 @@ function DoneLine({ name }: { name: string }) {
   return (
     <li className="flex items-center gap-2.5 py-1.5">
       <span
-        className="flex size-[18px] shrink-0 items-center justify-center rounded-full border border-brand bg-brand text-white"
+        className="flex size-[18px] shrink-0 items-center justify-center rounded-full border border-[#007EFF] bg-[#007EFF] text-white"
         aria-hidden
       >
         <Tick className="size-2.5" />
@@ -172,7 +172,7 @@ const VIEWS: View[] = [
           <DoneLine name="Reconciliation" />
         </ul>
 
-        <div className="mt-3 border-t border-grey-soft pt-3">
+        <div className="mt-3 border-t border-[#E3E3E3] pt-3">
           <Row label="Balance Status" value="Outstanding → Paid" />
           <Row label="Amount" value="$84.00" />
         </div>
@@ -191,7 +191,7 @@ export default function Mechanics({ steps }: { steps: Step[] }) {
   return (
     <Reveal>
       <div
-        className="grid grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] items-start gap-14 max-1080:grid-cols-1 max-1080:gap-10"
+        className="grid ip-split grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] items-start gap-16 max-1080:grid-cols-1 max-1080:gap-10"
         onMouseEnter={hold}
         onMouseLeave={release}
         onFocusCapture={hold}
@@ -218,16 +218,16 @@ export default function Mechanics({ steps }: { steps: Step[] }) {
                         MONO,
                         "relative z-10 flex size-9 shrink-0 items-center justify-center rounded-full border text-[12px] font-bold transition-colors duration-[420ms] ease-out",
                         isActive
-                          ? "border-brand bg-brand text-white"
+                          ? "border-[#007EFF] bg-[#007EFF] text-white"
                           : done
-                            ? "border-brand bg-white text-brand"
-                            : "border-grey-mid bg-white text-grey-500 group-hover:border-brand group-hover:text-brand",
+                            ? "border-[#007EFF] bg-white text-[#007EFF]"
+                            : "border-[#E3E3E3] bg-white text-[#606060] group-hover:border-[#007EFF] group-hover:text-[#007EFF]",
                       )}
                     >
                       {done ? <Tick className="size-3.5" /> : step.num}
                       {isActive ? (
                         <span
-                          className="absolute inset-0 rounded-full border border-brand motion-reduce:hidden"
+                          className="absolute inset-0 rounded-full border border-[#007EFF] motion-reduce:hidden"
                           style={{ animation: "mp-pulse-ring 2s ease-out infinite" }}
                           aria-hidden
                         />
@@ -237,7 +237,7 @@ export default function Mechanics({ steps }: { steps: Step[] }) {
                       <span
                         className={cn(
                           "absolute top-9 -bottom-10 left-1/2 w-px -translate-x-1/2 transition-colors duration-[420ms] ease-out",
-                          done ? "bg-brand" : "bg-grey-mid",
+                          done ? "bg-[#007EFF]" : "bg-[#E3E3E3]",
                         )}
                         aria-hidden
                       />
@@ -247,18 +247,18 @@ export default function Mechanics({ steps }: { steps: Step[] }) {
                   <span
                     className={cn(
                       "min-w-0 border-l-2 pl-5 transition-colors duration-[420ms] ease-out max-600:pl-4",
-                      isActive ? "border-l-brand" : "border-l-transparent",
+                      isActive ? "border-l-[#007EFF]" : "border-l-transparent",
                     )}
                   >
                     <span
                       className={cn(
                         "block text-[16.5px] font-bold leading-snug tracking-[-0.015em] transition-colors duration-[420ms] ease-out",
-                        isActive ? "text-ink" : "text-grey-500",
+                        isActive ? "text-ink" : "text-[#606060]",
                       )}
                     >
                       {step.title}
                     </span>
-                    <span className="mt-1.5 block text-[13.5px] leading-[1.55] text-grey-500">
+                    <span className="mt-1.5 block text-[13.5px] leading-[1.55] text-[#606060]">
                       {step.body}
                     </span>
                   </span>
@@ -269,7 +269,7 @@ export default function Mechanics({ steps }: { steps: Step[] }) {
         </ol>
 
         {/* The product view for whichever stage is running. */}
-        <div className="min-w-0 rounded-[28px] border border-brand-pale bg-brand-tint/40 p-7 max-1080:p-6 max-600:rounded-panel max-600:p-4">
+        <div className="min-w-0 ip-card p-7 max-1080:p-6 max-600:p-4">
           <div className="grid">
             {VIEWS.map((view, i) => (
               <div

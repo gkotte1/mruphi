@@ -10,6 +10,7 @@ import {
   moduleSchema,
 } from "@/lib/schema";
 import { pageMetadata } from "@/lib/site";
+import { AmbientPage } from "@/components/ambient-ai-dictation/Shell";
 import Hero from "@/components/ambient-ai-dictation/Hero";
 import HowItWorks from "@/components/ambient-ai-dictation/HowItWorks";
 import {
@@ -23,8 +24,6 @@ import {
   WhereItApplies,
 } from "@/components/ambient-ai-dictation/Sections";
 
-/* Every eyebrow, kicker, chip and panel label is set in Plus Jakarta Sans  - 
-   the brand book's primary typeface (page 12), and the site's only family. */
 export const metadata: Metadata = pageMetadata("/ambient-ai-dictation/", {
   title: "Ambient AI & Dictation - AI Scribe for Home Health",
   description:
@@ -33,17 +32,19 @@ export const metadata: Metadata = pageMetadata("/ambient-ai-dictation/", {
 
 export default function AmbientAiDictationPage() {
   return (
-    <div>
+    <AmbientPage>
       <JsonLd data={moduleSchema("/ambient-ai-dictation/")} />
       <JsonLd data={faqSchema(FAQS.ambientAi, "/ambient-ai-dictation/")} />
-      <JsonLd data={breadcrumbSchema("/ambient-ai-dictation/", "Ambient AI & Dictation")} />
+      <JsonLd
+        data={breadcrumbSchema(
+          "/ambient-ai-dictation/",
+          "Ambient AI & Dictation",
+        )}
+      />
 
       <Navbar />
 
-      {/* The navigation is position:fixed, so it occupies no space in flow.
-          Without this offset the breadcrumb renders behind it and only clears
-          the bar once the page scrolls. */}
-      <main className="bg-white pt-[80px]">
+      <main>
         <Hero />
         <HowItWorks />
         <Capabilities />
@@ -51,12 +52,13 @@ export default function AmbientAiDictationPage() {
         <WhereItApplies />
         <Outcomes />
         <EhrIntegration />
-        <FaqSection items={FAQS.ambientAi} />
-
+        <div className="aa-faq aa-band">
+          <FaqSection items={FAQS.ambientAi} divider="none" />
+        </div>
         <FinalCta />
       </main>
 
       <Footer />
-    </div>
+    </AmbientPage>
   );
 }

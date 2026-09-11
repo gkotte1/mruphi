@@ -1,15 +1,12 @@
 import { Icon } from "@/components/icons";
 import Reveal from "@/components/module-page/Reveal";
-import {
-  OutcomeIcon,
-  type OutcomeIconName,
-} from "@/components/module-page/sections";
-import { CONTAINER, Eyebrow, MONO, SECTION, Tick } from "@/components/module-page/ui";
+import { Layers, MONO, Tick } from "@/components/module-page/ui";
 import {
   MurphiNode,
   Run,
   SystemNode,
 } from "@/components/revenue-assurance/Review";
+import { RaEyebrow, RaWrap } from "@/components/revenue-assurance/Shell";
 import { cn } from "@/lib/cn";
 
 /**
@@ -95,11 +92,11 @@ function SameChart() {
       className="flex items-center self-center px-4 max-900:w-full max-900:flex-col max-900:px-0 max-900:py-3"
       aria-hidden
     >
-      <span className="h-px w-4 bg-grey-mid max-900:h-4 max-900:w-px" />
-      <span className="flex size-7 shrink-0 items-center justify-center rounded-full border border-brand-pale bg-white text-brand">
+      <span className="h-px w-4 bg-[#E3E3E3] max-900:h-4 max-900:w-px" />
+      <span className="flex size-7 shrink-0 items-center justify-center rounded-full border border-[#E3E3E3] bg-white text-[#007EFF]">
         <Icon name="exchange" width={12} height={12} />
       </span>
-      <span className="h-px w-4 bg-grey-mid max-900:h-4 max-900:w-px" />
+      <span className="h-px w-4 bg-[#E3E3E3] max-900:h-4 max-900:w-px" />
     </div>
   );
 }
@@ -128,10 +125,8 @@ function Track({
   return (
     <div
       className={cn(
-        "flex h-full flex-col overflow-hidden rounded-panel border bg-white",
-        after
-          ? "border-brand-pale shadow-[0_16px_40px_rgba(15,29,84,.06)]"
-          : "border-grey-mid shadow-[0_10px_26px_-18px_rgba(15,29,84,.35)]",
+        "flex h-full flex-col overflow-hidden rounded-[10px] border bg-white shadow-[0_1px_2px_rgba(0,0,0,0.03),0_14px_30px_rgba(0,0,0,0.05)]",
+        after ? "border-[#E3E3E3]" : "border-[#E3E3E3]",
       )}
     >
       <TrackHead title={title} tone={tone} />
@@ -152,13 +147,13 @@ function Track({
             <span
               className={cn(
                 "absolute inset-y-0 left-1/2 w-px -translate-x-1/2",
-                after ? "bg-brand-pale" : "bg-grey-mid",
+                after ? "bg-[#CCE5FF]" : "bg-[#E3E3E3]",
               )}
             />
             <span
               className={cn(
                 "absolute inset-y-0 left-1/2 w-px origin-top -translate-x-1/2 opacity-0",
-                after ? "bg-brand" : "bg-grey-bdr",
+                after ? "bg-[#007EFF]" : "bg-[#B2B2B2]",
               )}
               style={{ animation: `mp-tl-rail ${TL_CYCLE} ease-in-out infinite` }}
             />
@@ -190,17 +185,15 @@ function TrackHead({
     <div
       className={cn(
         "flex items-center gap-2.5 border-b px-7 py-4 max-600:px-5",
-        after
-          ? "border-brand-pale bg-brand-tint/50"
-          : "border-grey-mid bg-grey-soft",
+        after ? "border-[#E3E3E3] bg-white" : "border-[#E3E3E3] bg-[#F5F5F5]",
       )}
     >
       <span
         className={cn(
           "flex size-5 shrink-0 items-center justify-center rounded-full border",
           after
-            ? "border-brand bg-brand text-white"
-            : "border-grey-bdr bg-white text-grey-bdr",
+            ? "border-[#007EFF] bg-[#007EFF] text-[#F5F5F5]"
+            : "border-[#B2B2B2] bg-white text-[#B2B2B2]",
         )}
         aria-hidden
       >
@@ -214,8 +207,8 @@ function TrackHead({
       <h4
         className={cn(
           MONO,
-          "text-[12px] font-semibold uppercase tracking-[0.06em]",
-          after ? "text-brand-dark" : "text-ink-muted",
+          "ra-mono text-[12px] font-semibold uppercase tracking-[0.06em]",
+          after ? "text-[#007EFF]" : "text-[#878787]",
         )}
       >
         {title}
@@ -250,8 +243,8 @@ function TrackCell({
       {/* The row's turn, inset so it never reaches the card edge. */}
       <span
         className={cn(
-          "absolute -inset-x-3 inset-y-1.5 z-0 rounded-tile opacity-0",
-          after ? "bg-brand-tint/40" : "bg-grey-bg",
+          "absolute -inset-x-3 inset-y-1.5 z-0 rounded-[8px] opacity-0",
+          after ? "bg-[#F5F5F5]" : "bg-[#EFEFEF]",
         )}
         style={on}
         aria-hidden
@@ -264,21 +257,21 @@ function TrackCell({
         <span
           className={cn(
             "absolute inset-0 rounded-full border bg-white",
-            after ? "border-brand-pale" : "border-grey-mid",
+            after ? "border-[#CCE5FF]" : "border-[#E3E3E3]",
           )}
         />
         <span
           className={cn(
             "absolute inset-0 rounded-full border opacity-0",
-            after ? "border-brand bg-brand-tint" : "border-grey-bdr bg-grey-soft",
+            after ? "border-[#007EFF] bg-[#CCE5FF]" : "border-[#B2B2B2] bg-[#F5F5F5]",
           )}
           style={on}
         />
         <span
           className={cn(
             MONO,
-            "relative text-[10px] font-bold",
-            after ? "text-brand-dark" : "text-grey-500",
+            "ra-mono relative text-[10px] font-bold",
+            after ? "text-[#007EFF]" : "text-[#878787]",
           )}
         >
           {index + 1}
@@ -288,7 +281,7 @@ function TrackCell({
       <span
         className={cn(
           "relative z-[2] min-w-0 text-[14px] leading-[1.55]",
-          after ? "text-ink" : "text-grey-500",
+          after ? "text-ink" : "text-[#606060]",
         )}
       >
         {step}
@@ -298,6 +291,72 @@ function TrackCell({
 }
 
 /* ── Outcomes ────────────────────────────────────────────────── */
+
+type OutcomeIconName = "clock" | "tick" | "layers" | "shield" | "info" | "bolt";
+
+function OutcomeIcon({ icon }: { icon: OutcomeIconName }) {
+  const shared = { viewBox: "0 0 24 24", fill: "none", className: "size-7" };
+
+  if (icon === "clock") {
+    return (
+      <svg {...shared} aria-hidden>
+        <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.6" />
+        <path
+          d="M12 7v5l3.5 2"
+          stroke="currentColor"
+          strokeWidth="1.8"
+          strokeLinecap="round"
+        />
+      </svg>
+    );
+  }
+
+  if (icon === "layers") return <Layers className="size-7" />;
+
+  if (icon === "shield") {
+    return (
+      <svg {...shared} aria-hidden>
+        <path
+          d="M12 3l7 3v6c0 4.5-3 8-7 9-4-1-7-4.5-7-9V6l7-3Z"
+          stroke="currentColor"
+          strokeWidth="1.7"
+          strokeLinejoin="round"
+        />
+        <path
+          d="m9 12 2 2 4-4"
+          stroke="currentColor"
+          strokeWidth="1.8"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    );
+  }
+
+  if (icon === "info") {
+    return (
+      <svg {...shared} aria-hidden>
+        <path d="M12 8v5M12 16h.01" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+        <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.6" />
+      </svg>
+    );
+  }
+
+  if (icon === "bolt") {
+    return (
+      <svg {...shared} aria-hidden>
+        <path
+          d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z"
+          stroke="currentColor"
+          strokeWidth="1.6"
+          strokeLinejoin="round"
+        />
+      </svg>
+    );
+  }
+
+  return <Tick className="size-7" />;
+}
 
 export function Outcomes({
   heading,
@@ -309,32 +368,52 @@ export function Outcomes({
   outcomes: { title: string; sub: string; icon: OutcomeIconName }[];
 }) {
   return (
-    <section className="bg-brand py-14">
-      <div className={CONTAINER}>
-        <div className="mx-auto mb-10 max-w-[640px] text-center text-grey-bg">
-          <h2 className="mb-2.5 type-h2 text-white">{heading}</h2>
-          <p className="text-[16px] text-white/[0.68]">{intro}</p>
+    <section className="ra-section ra-band">
+      <RaWrap>
+        <div style={{ maxWidth: 640, margin: "0 auto 64px", textAlign: "center" }}>
+          <h2 className="ra-h2 ra-serif" style={{ marginBottom: 18 }}>
+            {heading}
+          </h2>
+          <p className="ra-lead">{intro}</p>
         </div>
 
-        <div className="grid grid-cols-3 gap-px overflow-hidden rounded-tile bg-white/[0.16] max-720:grid-cols-2">
+        <div
+          className="ra-ruled ra-stats"
+          style={{ gridTemplateColumns: "repeat(3, 1fr)" }}
+        >
           {outcomes.map((outcome) => (
             <div
               key={outcome.title}
-              className="bg-brand px-6 py-8 text-center max-600:px-4 max-600:py-6"
+              style={{ padding: "36px 24px", textAlign: "center" }}
             >
-              <div className="mx-auto mb-4 flex size-12 items-center justify-center rounded-full border border-white/25 bg-white/10">
+              <div
+                style={{
+                  margin: "0 auto 16px",
+                  display: "flex",
+                  width: 40,
+                  height: 40,
+                  alignItems: "center",
+                  justifyContent: "center",
+                  borderRadius: "50%",
+                  border: "1.5px solid #007EFF",
+                  color: "#007EFF",
+                }}
+              >
                 <OutcomeIcon icon={outcome.icon} />
               </div>
-              <div className="mb-1.5 text-[15px] font-bold text-grey-bg">
+              <div
+                className="ra-serif"
+                style={{ marginBottom: 8, fontSize: 16, fontWeight: 500 }}
+              >
                 {outcome.title}
               </div>
-              <div className="text-[12.5px] leading-[1.4] text-white/[0.62]">
+              <div style={{ fontSize: 14, lineHeight: 1.5, color: "#606060" }}>
                 {outcome.sub}
               </div>
             </div>
           ))}
         </div>
-      </div>
+      </RaWrap>
     </section>
   );
 }
@@ -357,30 +436,40 @@ export function EhrIntegration({
   const returnStep = substeps[substeps.length - 1];
 
   return (
-    <section id="ehr" className={SECTION}>
-      <Reveal>
-        <div className="mx-auto max-w-[1156px] rounded-panel bg-tint px-12 py-14 max-720:mx-5 max-720:px-6 max-720:py-10">
-          <div className="grid grid-cols-[0.88fr_1.12fr] items-center gap-14 max-1080:grid-cols-1 max-1080:gap-10">
-            <div className="min-w-0">
-              <Eyebrow>EHR Integration</Eyebrow>
+    <section id="ehr" className="ra-section">
+      <RaWrap>
+        <Reveal>
+          <div
+            className="ra-split"
+            style={{
+              display: "grid",
+              gridTemplateColumns: "0.88fr 1.12fr",
+              alignItems: "center",
+              gap: 64,
+            }}
+          >
+            <div style={{ minWidth: 0 }}>
+              <RaEyebrow>EHR Integration</RaEyebrow>
 
-              <h2 className="mt-4 type-h2 text-ink">{heading}</h2>
+              <h2 className="ra-h2 ra-serif" style={{ marginTop: 16, marginBottom: 18 }}>
+                {heading}
+              </h2>
 
-              <p className="mt-4 max-w-[52ch] text-[18px] leading-[1.6] text-grey-500">
+              <p className="ra-lead" style={{ maxWidth: "52ch", fontSize: 18 }}>
                 {lede}
               </p>
 
-              <p className="mt-5 max-w-[52ch] text-[13px] leading-[1.6] text-ink-muted">
+              <p style={{ marginTop: 20, fontSize: 13, lineHeight: 1.6, color: "#878787" }}>
                 {disclaimer}
               </p>
             </div>
 
-            <div className="min-w-0">
-              <div className="overflow-hidden rounded-panel border border-grey-mid bg-white shadow-[0_20px_50px_rgba(15,29,84,.08)]">
+            <div style={{ minWidth: 0 }}>
+              <div className="ra-card" style={{ overflow: "hidden" }}>
                 <div
                   className={cn(
                     MONO,
-                    "flex items-center justify-between gap-3 border-b border-grey-mid px-5 py-3 max-600:px-4",
+                    "ra-mono flex items-center justify-between gap-3 border-b border-[#E3E3E3] px-5 py-3 max-600:px-4",
                   )}
                 >
                   <span className="min-w-0 truncate text-[11px] font-semibold uppercase tracking-[0.06em] text-ink">
@@ -388,10 +477,10 @@ export function EhrIntegration({
                   </span>
                   <span className="relative flex size-1.5 shrink-0" aria-hidden>
                     <span
-                      className="absolute inline-flex size-full rounded-full bg-brand/60"
+                      className="absolute inline-flex size-full rounded-full bg-[#007EFF]/60"
                       style={{ animation: "mp-glow 2.4s ease-in-out infinite" }}
                     />
-                    <span className="relative inline-flex size-1.5 rounded-full bg-brand" />
+                    <span className="relative inline-flex size-1.5 rounded-full bg-[#007EFF]" />
                   </span>
                 </div>
 
@@ -405,8 +494,8 @@ export function EhrIntegration({
               </div>
             </div>
           </div>
-        </div>
-      </Reveal>
+        </Reveal>
+      </RaWrap>
     </section>
   );
 }
@@ -418,20 +507,66 @@ export function StoryRule({ children }: { children: string }) {
     <div
       className={cn(
         MONO,
-        "my-6 flex items-center gap-4 text-[11.5px] uppercase tracking-[0.06em] text-ink-muted",
+        "ra-mono my-6 flex items-center gap-4 text-[11.5px] uppercase tracking-[0.06em] text-[#878787]",
       )}
     >
-      <span className="h-px flex-1 bg-grey-mid" aria-hidden />
+      <span className="h-px flex-1 bg-[#E3E3E3]" aria-hidden />
       <span className="flex items-center gap-2.5">
         <span
-          className="flex size-5 items-center justify-center rounded-full border border-brand-pale bg-brand-tint text-brand"
+          className="flex size-5 items-center justify-center rounded-full border border-[#E3E3E3] bg-[#F5F5F5] text-[#007EFF]"
           aria-hidden
         >
           <Icon name="exchange" width={11} height={11} />
         </span>
         {children}
       </span>
-      <span className="h-px flex-1 bg-grey-mid" aria-hidden />
+      <span className="h-px flex-1 bg-[#E3E3E3]" aria-hidden />
     </div>
+  );
+}
+
+export function FinalCta({
+  heading,
+  body,
+}: {
+  heading: string;
+  body: string;
+}) {
+  return (
+    <section
+      style={{
+        background: "#006AD6",
+        padding: "120px 32px",
+        textAlign: "center",
+      }}
+    >
+      <h2
+        className="ra-serif ra-cta-h"
+        style={{
+          fontWeight: 500,
+          fontSize: 44,
+          lineHeight: 1.15,
+          maxWidth: 720,
+          margin: "0 auto 20px",
+          color: "#ffffff",
+        }}
+      >
+        {heading}
+      </h2>
+      <p
+        style={{
+          fontSize: 17,
+          color: "#CCE5FF",
+          maxWidth: 520,
+          margin: "0 auto 40px",
+          lineHeight: 1.6,
+        }}
+      >
+        {body}
+      </p>
+      <a href="/contact-us/" className="ra-btn-on-blue">
+        Request Demo
+      </a>
+    </section>
   );
 }

@@ -1,0 +1,158 @@
+/* Scoped to the homepage recreation of "Murphi Landing Color (Standalone)". */
+
+.home-landing {
+  background: #ffffff;
+  font-family: var(--font-hl-sans), "Manrope", sans-serif;
+  color: #1a1a1a;
+  line-height: 1.5;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.home-landing h1,
+.home-landing h2,
+.home-landing h3,
+.home-landing h4 {
+  color: inherit;
+  text-wrap: initial;
+}
+
+.home-landing a {
+  text-decoration: none;
+  color: #1a1a1a;
+}
+
+.home-landing a:hover {
+  text-decoration: underline;
+  color: #007eff;
+}
+
+.home-landing ::selection {
+  background: #007eff;
+  color: #ffffff;
+}
+
+@keyframes hl-riseIn {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes hl-pulseRing {
+  0% {
+    transform: scale(0.75);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1.7);
+    opacity: 0;
+  }
+}
+
+@keyframes hl-waveBar {
+  0%,
+  100% {
+    transform: scaleY(0.35);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes hl-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.home-landing .rise1 {
+  animation: hl-riseIn 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.home-landing .rise2 {
+  animation: hl-riseIn 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.12s both;
+}
+
+.home-landing .rise3 {
+  animation: hl-riseIn 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.24s both;
+}
+
+.home-landing .ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 1.5px solid #007eff;
+  animation: hl-pulseRing 2.4s cubic-bezier(0.2, 0.6, 0.4, 1) infinite;
+}
+
+.home-landing .ring2 {
+  animation-delay: 0.8s;
+}
+
+.home-landing .wbar {
+  width: 4px;
+  border-radius: 2px;
+  background: #007eff;
+  transform-origin: bottom;
+  animation: hl-waveBar 1.1s ease-in-out infinite;
+}
+
+.home-landing .marquee-wrap {
+  overflow: hidden;
+}
+
+.home-landing .marquee-track {
+  display: flex;
+  width: max-content;
+  animation: hl-marquee 34s linear infinite;
+}
+
+.home-landing .marquee-track2 {
+  animation-duration: 46s;
+}
+
+.home-landing .hl-serif {
+  font-family: var(--font-hl-serif), "Spectral", serif;
+}
+
+.home-landing .hl-mono {
+  font-family: var(--font-hl-mono), "JetBrains Mono", monospace;
+}
+
+@media (max-width: 860px) {
+  .home-landing .grid-3 {
+    grid-template-columns: 1fr !important;
+  }
+  .home-landing .grid-4 {
+    grid-template-columns: 1fr 1fr !important;
+  }
+  .home-landing .stat-4 {
+    grid-template-columns: 1fr 1fr !important;
+  }
+  .home-landing .module-row {
+    grid-template-columns: 1fr !important;
+  }
+  .home-landing .module-row > div:nth-child(2) {
+    order: -1;
+  }
+  .home-landing .faq-row {
+    grid-template-columns: 1fr !important;
+    gap: 40px !important;
+  }
+  .home-landing .flow-3 {
+    grid-template-columns: 1fr !important;
+  }
+  .home-landing h1.hero-h1 {
+    font-size: 38px !important;
+  }
+}
+

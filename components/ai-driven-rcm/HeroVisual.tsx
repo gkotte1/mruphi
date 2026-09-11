@@ -48,14 +48,14 @@ export default function ClaimReadiness({
         className="relative z-20"
       >
         {/* Where the claim has got to. */}
-        <div className="rounded-tile border border-grey-mid bg-grey-soft px-4 py-4 max-600:px-3">
+        <div className="rounded-[8px] border border-[#E3E3E3] bg-[#F5F5F5] px-4 py-4 max-600:px-3">
           <TrackRail nodes={nodes} compact />
         </div>
 
         <div className="my-4 flex items-center gap-3" aria-hidden>
-          <span className="h-px flex-1 bg-grey-mid" />
-          <span className="flex size-1.5 rounded-full bg-brand-pale" />
-          <span className="h-px flex-1 bg-grey-mid" />
+          <span className="h-px flex-1 bg-[#E3E3E3]" />
+          <span className="flex size-1.5 rounded-full bg-[#E3E3E3]" />
+          <span className="h-px flex-1 bg-[#E3E3E3]" />
         </div>
 
         {/* What stopped it. */}
@@ -68,12 +68,12 @@ export default function ClaimReadiness({
 
       {/* What clears it. */}
       <div
-        className="relative z-10 mx-auto w-[92%] rounded-tile border border-grey-mid bg-white px-4 py-3 shadow-[0_12px_30px_-18px_rgba(15,29,84,.6)] max-600:w-full"
+        className="relative z-10 mx-auto w-[92%] rounded-[8px] border border-[#E3E3E3] bg-white px-4 py-3 shadow-[0_1px_2px_rgba(0,0,0,0.03),0_14px_30px_rgba(0,0,0,0.05)] max-600:w-full"
         style={{ animation: "mp-fade-up .5s ease backwards .3s" }}
       >
         <span className="flex items-center justify-center gap-2">
           <span
-            className="flex size-5 shrink-0 items-center justify-center rounded-full border border-brand bg-brand text-white"
+            className="flex size-5 shrink-0 items-center justify-center rounded-full border border-[#007EFF] bg-[#007EFF] text-white"
             aria-hidden
           >
             <Tick className="size-2.5" />
@@ -88,7 +88,7 @@ export default function ClaimReadiness({
 
       {/* Who clears it. */}
       <div
-        className="mx-auto flex w-[80%] items-center justify-center gap-2 rounded-full bg-brand px-4 py-2.5 shadow-[0_12px_28px_-14px_rgba(0,106,214,.7)] max-600:w-full"
+        className="mx-auto flex w-[80%] items-center justify-center gap-2 rounded-full bg-[#007EFF] px-4 py-2.5 max-600:w-full"
         style={{ animation: "mp-fade-up .5s ease backwards .42s" }}
       >
         <Icon name="community" width={14} height={14} className="shrink-0 text-white" />
@@ -109,9 +109,9 @@ export default function ClaimReadiness({
 function Connector({ delay = "0s" }: { delay?: string }) {
   return (
     <div className="flex justify-center py-3" aria-hidden>
-      <span className="relative flex h-7 w-px shrink-0 bg-brand-pale">
+      <span className="relative flex h-7 w-px shrink-0 bg-[#E3E3E3]">
         <span
-          className="absolute left-1/2 size-1.5 -translate-x-1/2 rounded-full bg-brand"
+          className="absolute left-1/2 size-1.5 -translate-x-1/2 rounded-full bg-[#007EFF]"
           style={{ animation: `mp-flow-pulse-v 2.6s ease-in-out infinite ${delay}` }}
         />
       </span>

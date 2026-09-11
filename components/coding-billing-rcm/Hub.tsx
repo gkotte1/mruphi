@@ -47,11 +47,11 @@ export default function ClientHub({
               <div
                 className={cn(
                   ROW,
-                  "flex items-center gap-2 rounded-tile border border-grey-mid bg-white px-3 shadow-[0_6px_16px_-12px_rgba(15,29,84,.6)]",
+                  "flex items-center gap-2 rounded-[8px] border border-[#E3E3E3] bg-white px-3 shadow-[0_1px_2px_rgba(0,0,0,0.03),0_8px_18px_rgba(0,0,0,0.04)]",
                 )}
               >
                 <span
-                  className="flex size-5 shrink-0 items-center justify-center rounded-[6px] border border-brand-pale bg-brand-tint text-brand"
+                  className="flex size-5 shrink-0 items-center justify-center rounded-[6px] border border-[#E3E3E3] bg-[#F5F5F5] text-[#007EFF]"
                   aria-hidden
                 >
                   <Icon name="community" width={11} height={11} />
@@ -70,7 +70,7 @@ export default function ClientHub({
           ))}
 
           <span
-            className={cn("absolute right-0 w-px bg-brand-pale max-900:hidden", BUS)}
+            className={cn("absolute right-0 w-px bg-[#E3E3E3] max-900:hidden", BUS)}
             aria-hidden
           />
         </div>
@@ -82,16 +82,16 @@ export default function ClientHub({
           <div className="relative shrink-0">
             {/* Two quiet rings, so the hub reads as a system rather than a card. */}
             <span
-              className="absolute -inset-3 rounded-[34px] border border-brand-pale/60"
+              className="absolute -inset-3 rounded-[34px] border border-[#E3E3E3]/60"
               aria-hidden
             />
             <span
-              className="absolute -inset-6 rounded-[42px] border border-brand-pale/35 motion-reduce:hidden"
+              className="absolute -inset-6 rounded-[42px] border border-[#E3E3E3]/35 motion-reduce:hidden"
               style={{ animation: "mp-glow 3.6s ease-in-out infinite" }}
               aria-hidden
             />
 
-            <div className="relative flex size-[104px] flex-col items-center justify-center gap-2 rounded-[26px] border border-brand-pale bg-white shadow-[0_18px_44px_-20px_rgba(15,29,84,.55)]">
+            <div className="relative flex size-[104px] flex-col items-center justify-center gap-2 rounded-[26px] border border-[#E3E3E3] bg-white shadow-[0_1px_2px_rgba(0,0,0,0.03),0_14px_30px_rgba(0,0,0,0.05)]">
               <LogoMark size={34} />
               <span
                 className={cn(
@@ -110,7 +110,7 @@ export default function ClientHub({
         {/* ── What comes back ── */}
         <div className="relative grid grid-cols-[26px_minmax(0,1fr)] gap-y-3 max-900:grid-cols-1">
           <span
-            className={cn("absolute left-0 w-px bg-brand-pale max-900:hidden", BUS)}
+            className={cn("absolute left-0 w-px bg-[#E3E3E3] max-900:hidden", BUS)}
             aria-hidden
           />
 
@@ -123,11 +123,11 @@ export default function ClientHub({
               <div
                 className={cn(
                   ROW,
-                  "flex items-center gap-2 rounded-tile border border-brand-pale bg-brand-tint px-3",
+                  "flex items-center gap-2 rounded-[8px] border border-[#E3E3E3] bg-[#F5F5F5] px-3",
                 )}
               >
                 <span
-                  className="flex size-5 shrink-0 items-center justify-center rounded-[6px] bg-brand text-white"
+                  className="flex size-5 shrink-0 items-center justify-center rounded-[6px] bg-[#007EFF] text-white"
                   aria-hidden
                 >
                   <Icon
@@ -141,7 +141,7 @@ export default function ClientHub({
                 >
                   {output}
                 </span>
-                <Tick className="size-3 shrink-0 text-brand" />
+                <Tick className="size-3 shrink-0 text-[#007EFF]" />
               </div>
             </div>
           ))}
@@ -153,11 +153,11 @@ export default function ClientHub({
         <span
           className={cn(
             MONO,
-            "inline-flex max-w-full items-center gap-2 rounded-full border border-grey-mid bg-white px-3.5 py-1.5 text-[11px] text-ink-muted",
+            "inline-flex max-w-full items-center gap-2 rounded-full border border-[#E3E3E3] bg-white px-3.5 py-1.5 text-[11px] text-[#878787]",
           )}
         >
           <span
-            className="flex size-4 shrink-0 items-center justify-center rounded-[5px] bg-brand-tint text-brand"
+            className="flex size-4 shrink-0 items-center justify-center rounded-[5px] bg-[#F5F5F5] text-[#007EFF]"
             aria-hidden
           >
             <Icon name="exchange" width={10} height={10} />
@@ -172,9 +172,9 @@ export default function ClientHub({
 /** A stem between a row and its bus, with work travelling along it. */
 function Wire({ delay = "0s" }: { delay?: string }) {
   return (
-    <span className="relative h-px w-full bg-brand-pale">
+    <span className="relative h-px w-full bg-[#E3E3E3]">
       <span
-        className="absolute top-1/2 size-1.5 -translate-y-1/2 rounded-full bg-brand motion-reduce:hidden"
+        className="absolute top-1/2 size-1.5 -translate-y-1/2 rounded-full bg-[#007EFF] motion-reduce:hidden"
         style={{ animation: `mp-flow-pulse 3.2s ease-in-out infinite ${delay}` }}
       />
     </span>
@@ -185,13 +185,13 @@ function Wire({ delay = "0s" }: { delay?: string }) {
 function Feed({ delay = "0s" }: { delay?: string }) {
   return (
     <span
-      className="relative flex h-px w-7 shrink-0 bg-brand-pale max-900:my-4 max-900:h-7 max-900:w-px"
+      className="relative flex h-px w-7 shrink-0 bg-[#E3E3E3] max-900:my-4 max-900:h-7 max-900:w-px"
       aria-hidden
     >
       {/* The travelling dot rides `left`, so it is dropped once the run
           turns vertical rather than animating along the wrong axis. */}
       <span
-        className="absolute top-1/2 size-1.5 -translate-y-1/2 rounded-full bg-brand motion-reduce:hidden max-900:hidden"
+        className="absolute top-1/2 size-1.5 -translate-y-1/2 rounded-full bg-[#007EFF] motion-reduce:hidden max-900:hidden"
         style={{ animation: `mp-flow-pulse 3.2s ease-in-out infinite ${delay}` }}
       />
     </span>

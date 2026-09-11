@@ -1,12 +1,10 @@
 import type { ReactNode } from "react";
 import { Icon } from "@/components/icons";
 import Reveal from "@/components/module-page/Reveal";
-import {
-  OutcomeIcon,
-  type OutcomeIconName,
-} from "@/components/module-page/sections";
-import { CONTAINER, Eyebrow, MONO, Tick } from "@/components/module-page/ui";
+import { MONO, Tick } from "@/components/module-page/ui";
 import { cn } from "@/lib/cn";
+
+export { Outcomes, StoryRule } from "@/components/inner-page/kit";
 
 /**
  * The body of the Coding, Billing & RCM page.
@@ -29,30 +27,30 @@ export function ModelSplit({
 }) {
   return (
     <Reveal>
-      <div className="grid grid-cols-2 overflow-hidden rounded-panel border border-grey-mid bg-white shadow-[0_16px_40px_rgba(15,29,84,.06)] max-720:grid-cols-1">
+      <div className="grid grid-cols-2 overflow-hidden rounded-[10px] border border-[#E3E3E3] bg-white shadow-[0_1px_2px_rgba(0,0,0,0.03),0_14px_30px_rgba(0,0,0,0.05)] max-720:grid-cols-1">
         {models.map((model, i) => (
           <div
             key={model.title}
             className={cn(
               "flex flex-col",
-              i === 0 ? "border-r border-grey-mid max-720:border-r-0 max-720:border-b" : "",
+              i === 0 ? "border-r border-[#E3E3E3] max-720:border-r-0 max-720:border-b" : "",
             )}
           >
             <div className="flex-1 px-8 pt-8 pb-7 max-600:px-6 max-600:pt-6">
-              <Eyebrow>{model.eyebrow}</Eyebrow>
+              <p className="ip-eyebrow">{model.eyebrow}</p>
 
               <h4 className="mt-4 text-[19px] font-bold leading-snug tracking-[-0.015em] text-ink">
                 {model.title}
               </h4>
 
-              <p className="mt-3 text-[14.5px] leading-[1.65] text-grey-500">
+              <p className="mt-3 text-[14.5px] leading-[1.65] text-[#606060]">
                 {model.body}
               </p>
             </div>
 
             {/* The footer band runs across both halves at the same height. */}
-            <div className="border-t border-grey-mid bg-grey-soft px-8 py-5 max-600:px-6">
-              <p className="text-[13px] leading-[1.55] text-ink-muted">
+            <div className="border-t border-[#E3E3E3] bg-[#F5F5F5] px-8 py-5 max-600:px-6">
+              <p className="text-[13px] leading-[1.55] text-[#878787]">
                 <strong className="text-ink">Best for:</strong> {model.bestFor}
               </p>
             </div>
@@ -74,7 +72,7 @@ export function Timelines({
 }) {
   return (
     <Reveal>
-      <div className="overflow-hidden rounded-panel border border-grey-mid bg-white shadow-[0_16px_40px_rgba(15,29,84,.06)]">
+      <div className="overflow-hidden rounded-[10px] border border-[#E3E3E3] bg-white shadow-[0_1px_2px_rgba(0,0,0,0.03),0_14px_30px_rgba(0,0,0,0.05)]">
         <Band {...before} tone="before" />
         <Band {...after} tone="after" />
       </div>
@@ -94,14 +92,14 @@ function Band({
   const after = tone === "after";
 
   return (
-    <div className={cn(after ? "bg-brand-tint/30" : "bg-white", after ? "" : "border-b border-grey-mid")}>
+    <div className={cn(after ? "bg-[#F5F5F5]" : "bg-white", after ? "" : "border-b border-[#E3E3E3]")}>
       <div className="flex items-center justify-center gap-3 px-8 pt-7 pb-5 max-600:px-6">
         <span
           className={cn(
             "flex size-6 shrink-0 items-center justify-center rounded-full border",
             after
-              ? "border-brand bg-brand text-white"
-              : "border-grey-bdr bg-white text-grey-bdr",
+              ? "border-[#007EFF] bg-[#007EFF] text-white"
+              : "border-[#B2B2B2] bg-white text-[#B2B2B2]",
           )}
           aria-hidden
         >
@@ -115,7 +113,7 @@ function Band({
         <h4
           className={cn(
             "text-[17px] font-bold leading-none tracking-[-0.015em]",
-            after ? "text-ink" : "text-grey-500",
+            after ? "text-ink" : "text-[#606060]",
           )}
         >
           {title}
@@ -123,20 +121,20 @@ function Band({
       </div>
 
       {/* Four columns, so each point sits directly above or below its pair. */}
-      <ul className="grid grid-cols-4 gap-px bg-grey-mid max-900:grid-cols-2 max-600:grid-cols-1">
+      <ul className="grid grid-cols-4 gap-px bg-[#E3E3E3] max-900:grid-cols-2 max-600:grid-cols-1">
         {steps.map((step, i) => (
           <li
             key={step}
             className={cn(
               "flex flex-col gap-2.5 px-8 py-6 max-600:px-6 max-600:py-5",
-              after ? "bg-brand-tint/30" : "bg-white",
+              after ? "bg-[#F5F5F5]" : "bg-white",
             )}
           >
             <span
               className={cn(
                 MONO,
                 "text-[10.5px] font-semibold tracking-[0.06em]",
-                after ? "text-brand" : "text-grey-bdr",
+                after ? "text-[#007EFF]" : "text-[#B2B2B2]",
               )}
               aria-hidden
             >
@@ -145,7 +143,7 @@ function Band({
             <span
               className={cn(
                 "text-[13.5px] leading-[1.55]",
-                after ? "text-ink" : "text-grey-500",
+                after ? "text-ink" : "text-[#606060]",
               )}
             >
               {step}
@@ -175,11 +173,11 @@ export function ReviewSurface({
   const murphi = brand === "Murphi.ai";
 
   return (
-    <div className="overflow-hidden rounded-panel border border-grey-mid bg-white shadow-[0_20px_50px_rgba(15,29,84,.08)]">
+    <div className="overflow-hidden rounded-[10px] border border-[#E3E3E3] bg-white shadow-[0_1px_2px_rgba(0,0,0,0.03),0_14px_30px_rgba(0,0,0,0.05)]">
       <div
         className={cn(
           "flex items-center justify-between gap-3 px-5 py-4 max-720:px-4",
-          murphi ? "bg-brand" : "bg-[#6B7280]",
+          murphi ? "bg-[#007EFF]" : "bg-[#6B7280]",
         )}
       >
         <span
@@ -214,15 +212,15 @@ export function ReviewSurface({
           return (
             <li
               key={finding.title}
-              className="flex items-start gap-3 border-b border-grey-soft py-3 last:border-b-0"
+              className="flex items-start gap-3 border-b border-[#E3E3E3] py-3 last:border-b-0"
               style={{ animation: `mp-fade-up .45s ease backwards ${0.1 + i * 0.08}s` }}
             >
               <span
                 className={cn(
                   "mt-px flex size-6 shrink-0 items-center justify-center rounded-[7px] border",
                   flag
-                    ? "border-brand-deep/20 bg-brand-deep/10 text-brand-deep"
-                    : "border-brand-pale bg-brand-tint text-brand",
+                    ? "border-[#007EFF]/20 bg-[#F5F5F5] text-[#007EFF]"
+                    : "border-[#E3E3E3] bg-[#F5F5F5] text-[#007EFF]",
                 )}
                 aria-hidden
               >
@@ -233,7 +231,7 @@ export function ReviewSurface({
                 <span className="block text-[13px] leading-[1.35] font-semibold text-ink">
                   {finding.title}
                 </span>
-                <span className={cn(MONO, "mt-0.5 block text-[10.5px] text-ink-muted")}>
+                <span className={cn(MONO, "mt-0.5 block text-[10.5px] text-[#878787]")}>
                   {finding.meta}
                 </span>
               </span>
@@ -245,7 +243,7 @@ export function ReviewSurface({
       <div
         className={cn(
           MONO,
-          "flex flex-wrap items-center justify-between gap-2 border-t border-grey-mid bg-grey-bg px-5 py-2.5 text-[10.5px] text-ink-muted max-720:px-4",
+          "flex flex-wrap items-center justify-between gap-2 border-t border-[#E3E3E3] bg-[#F5F5F5] px-5 py-2.5 text-[10.5px] text-[#878787] max-720:px-4",
         )}
       >
         <span>Powered by {brand}</span>
@@ -255,76 +253,15 @@ export function ReviewSurface({
   );
 }
 
-/* ── Outcomes, set left-aligned rather than centred ──────────── */
-
-export function Outcomes({
-  heading,
-  outcomes,
-}: {
-  heading: string;
-  outcomes: { title: string; sub: string; icon: OutcomeIconName }[];
-}) {
-  return (
-    <section className="bg-brand py-14">
-      <div className={CONTAINER}>
-        <h2 className="mx-auto mb-10 max-w-[640px] text-center type-h2 text-grey-bg">
-          {heading}
-        </h2>
-
-        <div className="grid grid-cols-3 gap-px overflow-hidden rounded-tile bg-white/[0.16] max-720:grid-cols-2 max-600:grid-cols-1">
-          {outcomes.map((outcome) => (
-            <div key={outcome.title} className="bg-brand px-6 py-7 max-600:px-5">
-              <div className="flex items-center gap-2.5">
-                <span className="flex size-6 shrink-0 items-center justify-center text-white">
-                  <OutcomeIcon icon={outcome.icon} />
-                </span>
-                <div className="min-w-0 text-[15px] font-bold text-grey-bg">
-                  {outcome.title}
-                </div>
-              </div>
-              <div className="mt-2 text-[12.5px] leading-[1.45] text-white/[0.62]">
-                {outcome.sub}
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-/* ── The rule that opens the comparison ──────────────────────── */
-
-export function StoryRule({ children }: { children: string }) {
-  return (
-    <div
-      className={cn(
-        MONO,
-        "my-6 flex items-center gap-4 text-[11.5px] uppercase tracking-[0.06em] text-ink-muted",
-      )}
-    >
-      <span className="h-px flex-1 bg-grey-mid" aria-hidden />
-      <span className="flex items-center gap-2.5">
-        <span
-          className="flex size-5 items-center justify-center rounded-full border border-brand-pale bg-brand-tint text-brand"
-          aria-hidden
-        >
-          <Icon name="layers" width={11} height={11} />
-        </span>
-        {children}
-      </span>
-      <span className="h-px flex-1 bg-grey-mid" aria-hidden />
-    </div>
-  );
-}
+/* ── Outcomes and story rule live in the shared inner-page kit ─ */
 
 /** A short note the page carries under its tool list. */
 export function Note({ children }: { children: ReactNode }) {
   return (
-    <div className="mt-7 flex items-start gap-3 rounded-tile border border-grey-mid bg-grey-soft px-5 py-4">
+    <div className="mt-7 flex items-start gap-3 rounded-[8px] border border-[#E3E3E3] bg-[#F5F5F5] px-5 py-4">
       {/* The page's own note glyph - `info` is an outcome icon, not an IconName. */}
       <span
-        className="mt-px flex size-6 shrink-0 items-center justify-center rounded-full border border-brand-pale bg-white text-brand"
+        className="mt-px flex size-6 shrink-0 items-center justify-center rounded-full border border-[#E3E3E3] bg-white text-[#007EFF]"
         aria-hidden
       >
         <svg viewBox="0 0 24 24" fill="none" className="size-3">
@@ -332,7 +269,7 @@ export function Note({ children }: { children: ReactNode }) {
           <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.8" />
         </svg>
       </span>
-      <p className="text-[13.5px] leading-[1.6] text-grey-500">{children}</p>
+      <p className="text-[13.5px] leading-[1.6] text-[#606060]">{children}</p>
     </div>
   );
 }

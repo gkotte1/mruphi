@@ -44,10 +44,10 @@ export default function Included({
                   onClick={() => select(i)}
                   aria-current={isActive}
                   className={cn(
-                    "flex w-full items-center gap-3 rounded-tile border px-4 py-3.5 text-left transition-all duration-[420ms] ease-out motion-reduce:transition-none",
+                    "flex w-full items-center gap-3 rounded-[8px] border px-4 py-3.5 text-left transition-all duration-[420ms] ease-out motion-reduce:transition-none",
                     isActive
-                      ? "border-brand bg-brand shadow-[0_12px_28px_-14px_rgba(0,106,214,.7)]"
-                      : "border-grey-mid bg-white hover:border-brand-pale",
+                      ? "border-[#007EFF] bg-[#007EFF] "
+                      : "border-[#E3E3E3] bg-white hover:border-[#007EFF]",
                   )}
                 >
                   <span
@@ -55,7 +55,7 @@ export default function Included({
                       "flex size-6 shrink-0 items-center justify-center rounded-[7px] border transition-colors duration-[420ms] ease-out",
                       isActive
                         ? "border-white/30 bg-white/15 text-white"
-                        : "border-brand-pale bg-brand-tint text-brand",
+                        : "border-[#E3E3E3] bg-[#F5F5F5] text-[#007EFF]",
                     )}
                     aria-hidden
                   >
@@ -83,13 +83,13 @@ export default function Included({
               key={item}
               className={cn(
                 "h-1 flex-1 rounded-full transition-colors duration-[420ms] ease-out",
-                i === index ? "bg-brand" : "bg-grey-mid",
+                i === index ? "bg-[#007EFF]" : "bg-[#E3E3E3]",
               )}
             />
           ))}
         </div>
 
-        <p className="mt-[18px] max-w-[64ch] text-[13px] leading-[1.6] text-ink-muted">
+        <p className="mt-[18px] max-w-[64ch] text-[13px] leading-[1.6] text-[#878787]">
           {note}
         </p>
       </div>

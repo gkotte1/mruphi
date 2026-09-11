@@ -1,5 +1,6 @@
 import { LogoMark } from "@/components/Logo";
 import { Icon, type IconName } from "@/components/icons";
+import { IpWrap } from "@/components/inner-page/Shell";
 
 const FLOW: { label: string; icon: IconName; core?: boolean }[] = [
   { label: "Patient", icon: "community" },
@@ -18,26 +19,20 @@ const METRICS: { value: string; label: string; icon: IconName }[] = [
 
 export default function PaymentIntegration() {
   return (
-    <section
-      aria-labelledby="payment-heading"
-      className="relative isolate border-t border-grey-mid bg-white py-28 max-1024:py-20 max-600:py-16"
-    >
-      <div className="mx-auto w-full max-w-[1280px] px-10 max-1200:px-8 max-600:px-4">
+    <section aria-labelledby="payment-heading" className="ip-section">
+      <IpWrap>
         <div className="max-w-[760px]">
-          <p className="type-label text-brand-dark">Payment Integration</p>
+          <p className="ip-eyebrow">Payment Integration</p>
 
-          <h2
-            id="payment-heading"
-            className="mt-4 type-h2 text-ink"
-          >
+          <h2 id="payment-heading" className="ip-h2 ip-serif" style={{ marginTop: 16 }}>
             Everyware Payment Gateway
           </h2>
 
-          <p className="mt-5 text-[16px] font-bold tracking-[-0.015em] text-brand-dark">
+          <p className="mt-5 text-[16px] font-bold tracking-[-0.015em] text-[#007EFF]">
             Everyware - Integrated Payment Gateway
           </p>
 
-          <p className="type-lead mt-3.5 text-grey-dk">
+          <p className="ip-lead" style={{ marginTop: 14 }}>
             Murphi.ai AI Patient Financials uses the Everyware payment gateway  - 
             enabling ACH, credit card, and debit card collection via SMS
             text-to-pay. Provider funds settled within 48 hours. Payments post
@@ -46,8 +41,7 @@ export default function PaymentIntegration() {
           </p>
         </div>
 
-        {/* ── The path a payment takes ── */}
-        <ol className="mt-14 flex items-stretch rounded-[24px] border border-grey-mid bg-grey-bg p-6 max-1024:flex-col max-600:mt-10 max-600:p-4">
+        <ol className="mt-14 flex items-stretch rounded-[10px] border border-[#E3E3E3] bg-[#F5F5F5] p-6 max-1024:flex-col max-600:mt-10 max-600:p-4">
           {FLOW.map((step, i) => (
             <li
               key={step.label}
@@ -58,15 +52,15 @@ export default function PaymentIntegration() {
               <div
                 className={
                   step.core
-                    ? "flex min-w-0 flex-1 items-center gap-2.5 rounded-tile border border-brand-border bg-white px-3.5 py-3 shadow-brand"
-                    : "flex min-w-0 flex-1 items-center gap-2.5 rounded-tile border border-grey-mid bg-white px-3.5 py-3"
+                    ? "flex min-w-0 flex-1 items-center gap-2.5 rounded-[8px] border border-[#007EFF] bg-white px-3.5 py-3"
+                    : "flex min-w-0 flex-1 items-center gap-2.5 rounded-[8px] border border-[#E3E3E3] bg-white px-3.5 py-3"
                 }
               >
                 <span
                   className={
                     step.core
-                      ? "flex size-9 shrink-0 items-center justify-center rounded-full border border-brand-border/70 bg-white"
-                      : "flex size-9 shrink-0 items-center justify-center rounded-full border border-grey-mid bg-grey-bg text-brand-dark"
+                      ? "flex size-9 shrink-0 items-center justify-center rounded-full border border-[#E3E3E3] bg-white"
+                      : "flex size-9 shrink-0 items-center justify-center rounded-full border border-[#E3E3E3] bg-[#F5F5F5] text-[#007EFF]"
                   }
                 >
                   {step.core ? (
@@ -79,8 +73,8 @@ export default function PaymentIntegration() {
                 <span
                   className={
                     step.core
-                      ? "truncate text-[12.5px] font-extrabold tracking-[-0.015em] text-ink"
-                      : "truncate text-[12.5px] font-bold tracking-[-0.015em] text-grey-dk"
+                      ? "truncate text-[12.5px] font-bold tracking-[-0.015em] text-ink"
+                      : "truncate text-[12.5px] font-bold tracking-[-0.015em] text-[#606060]"
                   }
                 >
                   {step.label}
@@ -90,27 +84,26 @@ export default function PaymentIntegration() {
           ))}
         </ol>
 
-        {/* ── Four compact figures ── */}
         <dl className="mt-6 grid grid-cols-4 gap-4 max-1024:grid-cols-2 max-600:gap-3">
           {METRICS.map((metric) => (
             <div
               key={metric.value}
-              className="rounded-[18px] border border-grey-mid bg-white p-5 transition-colors duration-200 hover:border-brand-border max-600:p-4"
+              className="ip-card p-5 transition-colors duration-200 hover:border-[#007EFF] max-600:p-4"
             >
-              <span className="flex size-8 items-center justify-center rounded-[10px] border border-brand-border/70 bg-brand-tint text-brand-dark">
+              <span className="flex size-8 items-center justify-center rounded-[8px] border border-[#E3E3E3] bg-[#F5F5F5] text-[#007EFF]">
                 <Icon name={metric.icon} width={15} height={15} />
               </span>
 
-              <dt className="mt-4 text-[26px] font-extrabold leading-none tracking-[-0.035em] text-ink max-600:text-[22px]">
+              <dt className="ip-serif mt-4 text-[26px] font-medium leading-none tracking-[-0.035em] text-ink max-600:text-[22px]">
                 {metric.value}
               </dt>
-              <dd className="mt-2.5 text-[12.5px] font-medium leading-snug text-grey-dk/75">
+              <dd className="mt-2.5 text-[12.5px] font-medium leading-snug text-[#606060]">
                 {metric.label}
               </dd>
             </div>
           ))}
         </dl>
-      </div>
+      </IpWrap>
     </section>
   );
 }

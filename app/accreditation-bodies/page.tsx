@@ -9,13 +9,9 @@ import {
   faqSchema,
 } from "@/lib/schema";
 import { pageMetadata } from "@/lib/site";
-import {
-  Breadcrumb,
-  FinalCta,
-  ModuleSection,
-  PageHero,
-  TrustDot,
-} from "@/components/module-page/sections";
+import InnerHero from "@/components/inner-page/Hero";
+import { FinalCta } from "@/components/inner-page/kit";
+import { InnerPage, IpHead, IpWrap } from "@/components/inner-page/Shell";
 import SurveyReadiness from "@/components/accreditation-bodies/HeroVisual";
 import {
   BothSides,
@@ -149,31 +145,22 @@ const OUTCOMES = [
 
 export default function AccreditationBodiesPage() {
   return (
-    <div>
+    <InnerPage>
       <JsonLd data={faqSchema(FAQS.accreditationBodies, "/accreditation-bodies/")} />
       <JsonLd data={breadcrumbSchema("/accreditation-bodies/", "Accreditation Bodies")} />
 
       <Navbar />
 
-      {/* The navigation is position:fixed, so it occupies no space in flow.
-          Without this offset the breadcrumb renders behind it and only clears
-          the bar once the page scrolls. */}
-      <main className="bg-white pt-[80px]">
-        <Breadcrumb current="Accreditation Bodies" section="who-we-serve" />
-
-        <PageHero
+      <main>
+        <InnerHero
+          current="Accreditation Bodies"
+          parent={{ label: "Who We Serve", href: "/#serve" }}
           eyebrow="Who We Serve · Accreditation & Audit"
           title="The Night Before the Surveyor Arrives."
           storyTag="Two Desks, Same Night"
           story="At the agency, the DON is pulling training records and F2F documentation into binders by hand. Across town, the surveyor is looking at a stack of paper she'll need to turn into a structured report by Monday."
           lede="Murphi.ai works for both of them - helping the agency walk in prepared, and helping the accreditation body turn evidence into a finished report faster."
-          trust={
-            <>
-              CHAP <TrustDot /> ACHC <TrustDot /> Joint Commission-Aligned
-            </>
-          }
-          secondaryHref="#both-sides"
-          secondaryLabel="See Both Sides"
+          trust={["CHAP", "ACHC", "Joint Commission-Aligned"]}
           visual={
             <SurveyReadiness
               title="Survey Readiness · Agency View"
@@ -196,43 +183,64 @@ export default function AccreditationBodiesPage() {
           }
         />
 
-        <ModuleSection id="both-sides">
-          <StoryRule>The Same Night, Rewritten - For Both</StoryRule>
+        <section id="both-sides" className="ip-section">
+          <IpWrap>
+            <StoryRule>The Same Night, Rewritten - For Both</StoryRule>
+            <IpHead>
+              <h2 className="ip-h2 ip-serif">
+                Built for both sides of the survey.
+              </h2>
+            </IpHead>
+            <BothSides sides={SIDES} />
+          </IpWrap>
+        </section>
 
-          <h2 className="mb-14 max-w-[640px] type-h2 text-ink max-720:mb-9">
-            Built for both sides of the survey.
-          </h2>
+        <section className="ip-section ip-band">
+          <IpWrap>
+            <IpHead>
+              <h2 className="ip-h2 ip-serif">Three ways to work with Murphi.ai.</h2>
+            </IpHead>
+            <WaysList ways={WAYS} />
+          </IpWrap>
+        </section>
 
-          <BothSides sides={SIDES} />
-        </ModuleSection>
+        <section className="ip-section">
+          <IpWrap>
+            <IpHead>
+              <h2 className="ip-h2 ip-serif">AI tools for accreditation & audit.</h2>
+            </IpHead>
+            <ToolSpecs tools={TOOLS} />
+          </IpWrap>
+        </section>
 
-        <ModuleSection heading="Three ways to work with Murphi.ai.">
-          <WaysList ways={WAYS} />
-        </ModuleSection>
+        <section className="ip-section ip-band">
+          <IpWrap>
+            <IpHead>
+              <h2 className="ip-h2 ip-serif">Two workflows, one platform.</h2>
+            </IpHead>
+            <DualWorkflow flows={FLOWS} />
+          </IpWrap>
+        </section>
 
-        <ModuleSection heading="AI tools for accreditation & audit.">
-          <ToolSpecs tools={TOOLS} />
-        </ModuleSection>
-
-        <ModuleSection heading="Two workflows, one platform.">
-          <DualWorkflow flows={FLOWS} />
-        </ModuleSection>
-
-        <ModuleSection>
-          <OversightNote>
-            <strong className="text-brand-dark">
-              Human oversight, on both sides.
-            </strong>{" "}
-            Murphi.ai organizes evidence, auto-fills portal data and surfaces
-            potential findings for agencies and accreditation bodies alike. Survey
-            conclusions and accreditation decisions remain the responsibility of
-            human surveyors.
-          </OversightNote>
-        </ModuleSection>
+        <section className="ip-section">
+          <IpWrap>
+            <OversightNote>
+              <strong className="text-[#007EFF]">
+                Human oversight, on both sides.
+              </strong>{" "}
+              Murphi.ai organizes evidence, auto-fills portal data and surfaces
+              potential findings for agencies and accreditation bodies alike. Survey
+              conclusions and accreditation decisions remain the responsibility of
+              human surveyors.
+            </OversightNote>
+          </IpWrap>
+        </section>
 
         <Outcomes heading="What both sides get back." outcomes={OUTCOMES} />
 
-        <FaqSection items={FAQS.accreditationBodies} divider="none" />
+        <div className="ip-faq">
+          <FaqSection items={FAQS.accreditationBodies} divider="none" />
+        </div>
 
         <FinalCta
           heading="Skip the Night of Binders. Skip the Stack of Paper."
@@ -241,6 +249,6 @@ export default function AccreditationBodiesPage() {
       </main>
 
       <Footer />
-    </div>
+    </InnerPage>
   );
 }

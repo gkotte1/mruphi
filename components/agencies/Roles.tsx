@@ -55,7 +55,7 @@ export default function Roles({ roles }: { roles: Role[] }) {
                 "rounded-full border px-4 py-[9px] text-[13px] font-semibold transition-colors duration-200",
                 role.id === active
                   ? "border-ink bg-ink text-white"
-                  : "border-grey-mid bg-white text-ink hover:border-ink",
+                  : "border-[#E3E3E3] bg-white text-ink hover:border-ink",
               )}
             >
               {role.label}
@@ -76,15 +76,15 @@ export default function Roles({ roles }: { roles: Role[] }) {
                   : "pointer-events-none translate-y-1 opacity-0",
               )}
             >
-              <div className="grid grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] overflow-hidden rounded-panel border border-grey-mid bg-white shadow-[0_16px_40px_rgba(15,29,84,.06)] max-900:grid-cols-1">
-                <div className="border-r border-grey-mid px-8 py-7 max-900:border-r-0 max-900:border-b max-600:px-6">
+              <div className="grid grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] overflow-hidden rounded-[10px] border border-[#E3E3E3] bg-white shadow-[0_1px_2px_rgba(0,0,0,0.03),0_14px_30px_rgba(0,0,0,0.05)] max-900:grid-cols-1">
+                <div className="border-r border-[#E3E3E3] px-8 py-7 max-900:border-r-0 max-900:border-b max-600:px-6">
                   <ColumnLabel>What Changes</ColumnLabel>
-                  <p className="mt-3.5 max-w-[46ch] border-l-[3px] border-brand pl-5 text-[16.5px] leading-[1.6] text-ink max-600:pl-4">
+                  <p className="mt-3.5 max-w-[46ch] border-l-[3px] border-[#007EFF] pl-5 text-[16.5px] leading-[1.6] text-ink max-600:pl-4">
                     {role.what}
                   </p>
                 </div>
 
-                <div className="bg-grey-soft/60 px-8 py-7 max-600:px-6">
+                <div className="bg-[#F5F5F5] px-8 py-7 max-600:px-6">
                   <ColumnLabel>Relevant Modules</ColumnLabel>
 
                   <div className="mt-3.5 flex flex-col gap-2.5">
@@ -110,7 +110,7 @@ function ColumnLabel({ children }: { children: string }) {
     <span
       className={cn(
         MONO,
-        "block text-[13px] font-semibold uppercase tracking-[0.05em] text-ink-muted",
+        "block text-[13px] font-semibold uppercase tracking-[0.05em] text-[#878787]",
       )}
     >
       {children}
@@ -122,16 +122,16 @@ function ModuleRow({ name, soon }: { name: string; soon?: boolean }) {
   return (
     <span
       className={cn(
-        "flex items-center gap-3 rounded-tile border px-3.5 py-2.5",
-        soon ? "border-dashed border-grey-mid bg-white" : "border-grey-mid bg-white",
+        "flex items-center gap-3 rounded-[8px] border px-3.5 py-2.5",
+        soon ? "border-dashed border-[#E3E3E3] bg-white" : "border-[#E3E3E3] bg-white",
       )}
     >
       <span
         className={cn(
           "flex size-6 shrink-0 items-center justify-center rounded-[7px] border",
           soon
-            ? "border-grey-mid bg-grey-soft text-grey-bdr"
-            : "border-brand-pale bg-brand-tint text-brand",
+            ? "border-[#E3E3E3] bg-[#F5F5F5] text-[#B2B2B2]"
+            : "border-[#E3E3E3] bg-[#F5F5F5] text-[#007EFF]",
         )}
         aria-hidden
       >
@@ -141,7 +141,7 @@ function ModuleRow({ name, soon }: { name: string; soon?: boolean }) {
       <span
         className={cn(
           "min-w-0 flex-1 text-[13.5px] font-semibold tracking-[-0.01em]",
-          soon ? "text-grey-500" : "text-ink",
+          soon ? "text-[#606060]" : "text-ink",
         )}
       >
         {name}
@@ -151,7 +151,7 @@ function ModuleRow({ name, soon }: { name: string; soon?: boolean }) {
         <span
           className={cn(
             MONO,
-            "shrink-0 rounded-full border border-grey-mid bg-grey-soft px-2 py-0.5 text-[9.5px] uppercase tracking-[0.06em] text-grey-500",
+            "shrink-0 rounded-full border border-[#E3E3E3] bg-[#F5F5F5] px-2 py-0.5 text-[9.5px] uppercase tracking-[0.06em] text-[#606060]",
           )}
         >
           Soon

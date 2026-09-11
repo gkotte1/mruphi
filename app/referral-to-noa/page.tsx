@@ -11,14 +11,9 @@ import {
 } from "@/lib/schema";
 import { pageMetadata } from "@/lib/site";
 import Reveal from "@/components/module-page/Reveal";
-import { FetchNote, SoonCallout } from "@/components/module-page/extras";
-import {
-  Breadcrumb,
-  FinalCta,
-  ModuleSection,
-  PageHero,
-  TrustDot,
-} from "@/components/module-page/sections";
+import InnerHero from "@/components/inner-page/Hero";
+import { FetchNote, FinalCta, SoonCallout } from "@/components/inner-page/kit";
+import { InnerPage, IpEyebrow, IpHead, IpWrap } from "@/components/inner-page/Shell";
 import IntakeFlow from "@/components/referral-to-noa/HeroVisual";
 import Mechanics from "@/components/referral-to-noa/Mechanics";
 import {
@@ -100,33 +95,24 @@ const OUTCOMES = [
 
 export default function ReferralToNoaPage() {
   return (
-    <div>
+    <InnerPage>
       <JsonLd data={moduleSchema("/referral-to-noa/")} />
       <JsonLd data={faqSchema(FAQS.referralToNoa, "/referral-to-noa/")} />
       <JsonLd data={breadcrumbSchema("/referral-to-noa/", "Referral → NOA")} />
 
       <Navbar />
 
-      {/* The navigation is position:fixed, so it occupies no space in flow.
-          Without this offset the breadcrumb renders behind it and only clears
-          the bar once the page scrolls. */}
-      <main className="bg-white pt-[80px]">
-        <Breadcrumb current="Referral → NOA" />
-
-        <PageHero
+      <main>
+        <InnerHero
+          current="Referral → NOA"
           eyebrow="Referral → NOA"
           badge="Launching Soon"
           title="Don't Let a Referral Wait for Monday."
           storyTag="Friday, 4:58 PM"
           story="A referral lands in the fax tray two minutes before the office closes. It sits there all weekend. By the time it's keyed in Monday morning, the patient has already waited three days for care that hasn't started."
           lede="Murphi classifies, checks and routes referrals the moment they arrive - from fax, email, portal, API or EHR - so the wait is measured in minutes, not a weekend."
-          trust={
-            <>
-              HIPAA <TrustDot /> SOC 2 <TrustDot /> Home Health terminology (NOA)
-            </>
-          }
+          trust={["HIPAA", "SOC 2", "Home Health terminology (NOA)"]}
           primaryLabel="Join the Early Access List"
-          secondaryLabel="See the Workflow"
           visual={
             <IntakeFlow
               sources={["Fax", "Email", "Portal", "API", "EHR"]}
@@ -137,72 +123,85 @@ export default function ReferralToNoaPage() {
           }
         />
 
-        <ModuleSection>
-          <Reveal>
-            <SoonCallout>
-              <strong className="text-brand-dark">Launching Soon.</strong> Referral
-              → NOA is in active development. This page reflects the planned
-              workflow - capabilities may change before general availability.
-            </SoonCallout>
-          </Reveal>
+        <section className="ip-section ip-band">
+          <IpWrap>
+            <Reveal>
+              <SoonCallout>
+                <strong style={{ color: "#007EFF" }}>Launching Soon.</strong> Referral
+                → NOA is in active development. This page reflects the planned
+                workflow - capabilities may change before general availability.
+              </SoonCallout>
+            </Reveal>
 
-          <StoryRule>{"Friday's Referral, Rewritten"}</StoryRule>
+            <StoryRule>{"Friday's Referral, Rewritten"}</StoryRule>
 
-          <Timelines
-            before={{
-              title: "Waits for Monday",
-              steps: [
-                "Referrals arrive by fax, email and portal, in different formats",
-                "Nobody re-keys them until the office reopens",
-                "Completeness, F2F and eligibility are checked separately, by hand",
-                "SOC scheduling waits on every check finishing first",
-              ],
-            }}
-            after={{
-              title: "Starts Friday at 5:00",
-              steps: [
-                "Every source lands in one AI intake dashboard, instantly",
-                "Patient identified and documents classified automatically",
-                "Completeness, compliance and eligibility checked together",
-                "Accepted referrals write straight into the EHR, ready to schedule",
-              ],
-            }}
-          />
-        </ModuleSection>
+            <Timelines
+              before={{
+                title: "Waits for Monday",
+                steps: [
+                  "Referrals arrive by fax, email and portal, in different formats",
+                  "Nobody re-keys them until the office reopens",
+                  "Completeness, F2F and eligibility are checked separately, by hand",
+                  "SOC scheduling waits on every check finishing first",
+                ],
+              }}
+              after={{
+                title: "Starts Friday at 5:00",
+                steps: [
+                  "Every source lands in one AI intake dashboard, instantly",
+                  "Patient identified and documents classified automatically",
+                  "Completeness, compliance and eligibility checked together",
+                  "Accepted referrals write straight into the EHR, ready to schedule",
+                ],
+              }}
+            />
+          </IpWrap>
+        </section>
 
-        <ModuleSection
-          id="how"
-          kicker="The Mechanics"
-          heading="From referral to Notice of Admission."
-        >
-          <Mechanics
-            groups={[
-              { lede: "Intake - from arrival to summary.", steps: INTAKE_STEPS },
-              { lede: "Decision - from check to admission.", steps: DECISION_STEPS },
-            ]}
-          />
-        </ModuleSection>
+        <section id="how" className="ip-section">
+          <IpWrap>
+            <IpHead>
+              <IpEyebrow>The Mechanics</IpEyebrow>
+              <h2 className="ip-h2 ip-serif" style={{ marginTop: 16, marginBottom: 18 }}>
+                From referral to Notice of Admission.
+              </h2>
+            </IpHead>
+            <Mechanics
+              groups={[
+                { lede: "Intake - from arrival to summary.", steps: INTAKE_STEPS },
+                { lede: "Decision - from check to admission.", steps: DECISION_STEPS },
+              ]}
+            />
+          </IpWrap>
+        </section>
 
-        <ModuleSection
-          kicker="Checked Together, Not One at a Time"
-          heading="Compliance checks that used to take a checklist."
-        >
-          <ChecksPanel
-            checks={CHECKS}
-            note={
-              <FetchNote>
-                <strong className="text-ink">Home Health terminology.</strong>{" "}
-                NOA (Notice of Admission) is a Home Health term. Hospice referral
-                and intake use separate, Hospice-appropriate terminology and are
-                not labeled NOA.
-              </FetchNote>
-            }
-          />
-        </ModuleSection>
+        <section className="ip-section">
+          <IpWrap>
+            <IpHead>
+              <IpEyebrow>Checked Together, Not One at a Time</IpEyebrow>
+              <h2 className="ip-h2 ip-serif" style={{ marginTop: 16, marginBottom: 18 }}>
+                Compliance checks that used to take a checklist.
+              </h2>
+            </IpHead>
+            <ChecksPanel
+              checks={CHECKS}
+              note={
+                <FetchNote>
+                  <strong className="text-ink">Home Health terminology.</strong>{" "}
+                  NOA (Notice of Admission) is a Home Health term. Hospice referral
+                  and intake use separate, Hospice-appropriate terminology and are
+                  not labeled NOA.
+                </FetchNote>
+              }
+            />
+          </IpWrap>
+        </section>
 
         <Outcomes heading="What agencies get back." outcomes={OUTCOMES} />
 
-        <FaqSection items={FAQS.referralToNoa} divider="none" />
+        <div className="ip-faq">
+          <FaqSection items={FAQS.referralToNoa} divider="none" />
+        </div>
 
         <FinalCta
           heading="Stop Losing Fridays to a Fax Tray."
@@ -212,6 +211,6 @@ export default function ReferralToNoaPage() {
       </main>
 
       <Footer />
-    </div>
+    </InnerPage>
   );
 }

@@ -3,6 +3,7 @@ import { pageMetadata } from "@/lib/site";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import AnnouncementsPage from "@/components/announcements/AnnouncementsPage";
+import { InnerPage } from "@/components/inner-page/Shell";
 
 export const metadata: Metadata = pageMetadata("/announcements/", {
   title: "Announcements | Latest Healthcare AI News",
@@ -12,10 +13,10 @@ export const metadata: Metadata = pageMetadata("/announcements/", {
 
 export default function Page() {
   return (
-    <>
+    <InnerPage>
       <Navbar />
       <AnnouncementsPage />
       <Footer />
-    </>
+    </InnerPage>
   );
 }

@@ -78,7 +78,7 @@ export default async function AnnouncementArticle({ params }: Props) {
       <Navbar />
 
       <main>
-        <article className="relative isolate overflow-hidden pt-[80px]">
+        <article className="relative isolate overflow-hidden">
           <div
             className="pointer-events-none absolute inset-0 -z-10"
             style={{

@@ -1,13 +1,18 @@
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/site";
-import LegalPage from "@/components/legal/LegalPage";
+import BrandLegalPage from "@/components/legal/BrandLegalPage";
+import { getLegalPage } from "@/lib/legal";
 
-export const metadata: Metadata = pageMetadata("/terms-of-service/", {
-  title: "Terms Of Service | Platform Usage Agreement",
-  description:
-    "Read Murphi.ai's Terms of Service outlining the usage rights, restrictions, and legal agreements for accessing our AI healthcare platform and services.",
-});
+const page = getLegalPage("terms-of-service");
+
+export const metadata: Metadata = {
+  ...pageMetadata("/terms-of-service/", {
+    title: page.title,
+    description: page.description,
+  }),
+  title: { absolute: page.title },
+};
 
 export default function TermsOfServicePage() {
-  return <LegalPage file="terms-of-service.md" />;
+  return <BrandLegalPage slug="terms-of-service" />;
 }

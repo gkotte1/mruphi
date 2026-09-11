@@ -56,14 +56,14 @@ export default function Checks({ checks }: { checks: Check[] }) {
       <div
         ref={columnsRef}
         className={cn(
-          "grid grid-cols-[minmax(0,0.36fr)_minmax(0,1fr)] items-start gap-10 max-900:grid-cols-1 max-900:gap-7",
+          "ra-split grid grid-cols-[minmax(0,0.36fr)_minmax(0,1fr)] items-start gap-10 max-900:grid-cols-1 max-900:gap-7",
           paused && "[&_*]:![animation-play-state:paused]",
         )}
       >
         {/* The rail. */}
         <div
           role="tablist"
-          className="min-w-0 border-l border-grey-mid"
+          className="min-w-0 border-l border-[#E3E3E3]"
           onPointerEnter={pause}
           onPointerLeave={(e) => resumeIfOutside(e.relatedTarget)}
           onFocusCapture={() => {
@@ -92,14 +92,14 @@ export default function Checks({ checks }: { checks: Check[] }) {
                 className={cn(
                   "-ml-px flex w-full items-center justify-between gap-3 border-l-2 py-3.5 pr-3 pl-5 transition-colors duration-[420ms] ease-out text-left max-600:pl-4",
                   isActive
-                    ? "border-l-brand"
-                    : "border-l-transparent hover:border-l-grey-bdr",
+                    ? "border-l-[#007EFF]"
+                    : "border-l-transparent hover:border-l-[#B2B2B2]",
                 )}
               >
                 <span
                   className={cn(
-                    "text-[15px] font-bold tracking-[-0.012em] transition-colors duration-[420ms] ease-out",
-                    isActive ? "text-ink" : "text-grey-500",
+                    "block ra-serif text-[16.5px] font-medium leading-snug tracking-normal transition-colors duration-[420ms] ease-out",
+                    isActive ? "text-ink" : "text-[#606060]",
                   )}
                 >
                   {check.label}
@@ -108,7 +108,7 @@ export default function Checks({ checks }: { checks: Check[] }) {
                 <span
                   className={cn(
                     "size-1.5 shrink-0 rounded-full transition-colors duration-[420ms] ease-out",
-                    isActive ? "bg-brand" : "bg-transparent",
+                    isActive ? "bg-[#007EFF]" : "bg-transparent",
                   )}
                   aria-hidden
                 />
@@ -119,7 +119,7 @@ export default function Checks({ checks }: { checks: Check[] }) {
 
         {/* The panel. */}
         <div
-          className="min-w-0 rounded-[28px] border border-brand-pale bg-brand-tint/40 p-7 max-900:p-6 max-600:rounded-panel max-600:p-4"
+          className="ra-card min-w-0 p-7 max-900:p-6 max-600:p-4"
           onPointerEnter={pause}
           onPointerLeave={(e) => resumeIfOutside(e.relatedTarget)}
         >
@@ -130,7 +130,7 @@ export default function Checks({ checks }: { checks: Check[] }) {
                 role="tabpanel"
                 aria-hidden={i !== index}
                 className={cn(
-                  "col-start-1 row-start-1 rounded-panel border border-grey-mid bg-white p-7 shadow-[0_16px_40px_rgba(15,29,84,.06)] transition-all duration-[420ms] ease-out motion-reduce:transition-none max-600:p-5",
+                  "col-start-1 row-start-1 rounded-[8px] border border-[#E3E3E3] bg-white p-7 shadow-[0_1px_2px_rgba(0,0,0,0.03),0_14px_30px_rgba(0,0,0,0.05)] transition-all duration-[420ms] ease-out motion-reduce:transition-none max-600:p-5",
                   i === index
                     ? "translate-y-0 opacity-100"
                     : "pointer-events-none translate-y-1 opacity-0",
@@ -150,7 +150,7 @@ export default function Checks({ checks }: { checks: Check[] }) {
                 {check.chips ? <CheckTiles chips={check.chips} /> : null}
 
                 {check.note ? (
-                  <p className="mt-5 max-w-[62ch] text-[15px] leading-[1.6] text-grey-500">
+                  <p className="mt-5 max-w-[62ch] text-[15px] leading-[1.6] text-[#606060]">
                     {check.note}
                   </p>
                 ) : null}
@@ -168,7 +168,7 @@ function ColumnLabel({ children }: { children: string }) {
     <h4
       className={cn(
         MONO,
-        "mb-3.5 text-[12px] font-semibold uppercase tracking-[0.06em] text-ink-muted",
+        "ra-mono mb-3.5 text-[12px] font-semibold uppercase tracking-[0.06em] text-[#878787]",
       )}
     >
       {children}
@@ -184,12 +184,12 @@ function CheckTiles({ chips, alt }: { chips: string[]; alt?: boolean }) {
         <li
           key={chip}
           className={cn(
-            "flex items-center gap-3 rounded-tile border px-3.5 py-3",
-            alt ? "border-brand-pale bg-brand-tint/50" : "border-grey-mid bg-grey-soft",
+            "flex items-center gap-3 rounded-[8px] border px-3.5 py-3",
+            alt ? "border-[#E3E3E3] bg-[#F5F5F5]" : "border-[#E3E3E3] bg-white",
           )}
         >
           <span
-            className="flex size-6 shrink-0 items-center justify-center rounded-[7px] border border-brand-pale bg-white text-brand"
+            className="flex size-6 shrink-0 items-center justify-center rounded-[7px] border border-[#E3E3E3] bg-white text-[#007EFF]"
             aria-hidden
           >
             <Tick className="size-3" />

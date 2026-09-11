@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { IpWrap } from "@/components/inner-page/Shell";
 
 /* The three seals shipped in murphi-project-assets/images/certifications/ are
    the real marks, rendered at 60px - above the 64px-wide source's legibility
@@ -43,28 +44,24 @@ export default function SecuritySection() {
   return (
     <section
       aria-labelledby="security-heading"
-      className="relative isolate border-t border-grey-mid bg-tint py-28 max-1024:py-20 max-600:py-16"
+      className="ip-section ip-band"
     >
-      <div className="mx-auto w-full max-w-[1280px] px-10 max-1200:px-8 max-600:px-4">
+      <IpWrap>
         <div className="max-w-[760px]">
-          <p className="type-label text-brand-dark">Security</p>
+          <p className="ip-eyebrow">Security</p>
 
-          <h2
-            id="security-heading"
-            className="mt-4 type-h2 text-ink"
-          >
+          <h2 id="security-heading" className="ip-h2 ip-serif" style={{ marginTop: 16 }}>
             Enterprise-Grade Security Across Every Integration
           </h2>
         </div>
 
-        {/* Three commitments, one per line, each led by its seal. */}
-        <ul className="mx-auto mt-14 max-w-[900px] border-t border-grey-mid max-600:mt-10">
+        <ul className="mx-auto mt-14 max-w-[900px] border-t border-[#E3E3E3] max-600:mt-10">
           {CARDS.map((card) => (
             <li
               key={card.title}
-              className="grid grid-cols-[auto_minmax(0,0.5fr)_minmax(0,1fr)] items-center gap-8 border-b border-grey-mid py-7 max-900:grid-cols-[auto_1fr] max-900:gap-x-6 max-900:gap-y-2.5 max-600:gap-x-4 max-600:py-6"
+              className="grid grid-cols-[auto_minmax(0,0.5fr)_minmax(0,1fr)] items-center gap-8 border-b border-[#E3E3E3] py-7 max-900:grid-cols-[auto_1fr] max-900:gap-x-6 max-900:gap-y-2.5 max-600:gap-x-4 max-600:py-6"
             >
-              <span className="flex size-[76px] items-center justify-center rounded-full border border-brand-border/50 bg-grey-bg">
+              <span className="flex size-[76px] items-center justify-center rounded-full border border-[#E3E3E3] bg-[#F5F5F5]">
                 <Image
                   src={card.src}
                   alt={card.alt}
@@ -78,13 +75,13 @@ export default function SecuritySection() {
                 {card.title}
               </h3>
 
-              <p className="text-[13.5px] font-normal leading-relaxed text-grey-dk/85 max-900:col-start-2">
+              <p className="text-[13.5px] font-normal leading-relaxed text-[#606060] max-900:col-start-2">
                 {card.body}
               </p>
             </li>
           ))}
         </ul>
-      </div>
+      </IpWrap>
     </section>
   );
 }

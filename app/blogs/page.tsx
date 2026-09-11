@@ -3,13 +3,14 @@ import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import GetStartedCta from "@/components/GetStartedCta";
 import { Icon } from "@/components/icons";
 import { JsonLd } from "@/components/JsonLd";
 import { breadcrumbSchema } from "@/lib/schema";
 import { POSTS, blogHref, type BlogPost } from "@/lib/blog";
 import { pageMetadata } from "@/lib/site";
-import { cn } from "@/lib/cn";
+import { SimpleHero } from "@/components/inner-page/Hero";
+import { FinalCta } from "@/components/inner-page/kit";
+import { InnerPage, IpWrap } from "@/components/inner-page/Shell";
 
 /**
  * /blogs/ - the listing.
@@ -30,42 +31,24 @@ export const metadata: Metadata = pageMetadata("/blogs/", {
     "Practical guides for home health and hospice teams on ambient AI documentation, OASIS and PDGM review, patient engagement, payments and EHR integration.",
 });
 
-const SHELL = "mx-auto w-full max-w-[1280px] px-10 max-1200:px-8 max-600:px-4";
-
 export default function BlogPage() {
   return (
-    <>
+    <InnerPage>
       <JsonLd data={breadcrumbSchema("/blogs/", "Blog")} />
 
       <Navbar />
 
-      <main className="pt-[80px]">
-        <section className="bg-hero-bg">
-          <div
-            className={cn(
-              SHELL,
-              "pt-16 pb-14 text-center max-600:pt-10 max-600:pb-10",
-            )}
-          >
-            <p className="type-label inline-flex items-center gap-2 rounded-full border border-brand-ghost bg-brand-tint px-3.5 py-1.5 text-brand-dark">
-              <Icon name="doc" width={13} height={13} />
-              Blog
-            </p>
+      <main>
+        <SimpleHero
+          current="Blog"
+          badge="Blog"
+          badgeIcon={<Icon name="doc" width={13} height={13} />}
+          title="Home Health & Hospice AI, explained."
+          lede="Practical guides on clinical documentation, revenue assurance, patient engagement and EHR integration - written for the teams who do the work."
+        />
 
-            <h1 className="mt-7 type-h1 text-ink">
-              Home Health &amp; Hospice AI, explained.
-            </h1>
-
-            <p className="type-lead mx-auto mt-6 max-w-[620px] text-grey-dk">
-              Practical guides on clinical documentation, revenue assurance,
-              patient engagement and EHR integration - written for the teams
-              who do the work.
-            </p>
-          </div>
-        </section>
-
-        <section className="bg-white pt-16 pb-28 max-1024:pb-20 max-600:pt-12 max-600:pb-16">
-          <div className={SHELL}>
+        <section style={{ padding: "64px 0 96px" }}>
+          <IpWrap>
             {POSTS.length > 0 ? (
               <ul className="grid grid-cols-3 gap-6 max-1024:grid-cols-2 max-768:grid-cols-1 max-600:gap-5">
                 {POSTS.map((post) => (
@@ -75,18 +58,25 @@ export default function BlogPage() {
                 ))}
               </ul>
             ) : (
-              <p className="type-lead text-center text-grey-dk">
-                New posts are on the way.
-              </p>
+              <p className="ip-lead text-center">New posts are on the way.</p>
             )}
-          </div>
+          </IpWrap>
         </section>
 
-        <GetStartedCta />
+        <FinalCta
+          heading={
+            <>
+              Experience AI Automation
+              <br />
+              at Scale
+            </>
+          }
+          body="Tell us your care setting and we'll show you exactly what Murphi.ai delivers for your organization - a live demo tailored to your workflows and your team."
+        />
       </main>
 
       <Footer />
-    </>
+    </InnerPage>
   );
 }
 
@@ -95,52 +85,36 @@ function Card({ post }: { post: BlogPost }) {
   const href = blogHref(post);
 
   return (
-    <article className="group flex w-full flex-col overflow-hidden rounded-panel border border-grey-mid bg-white transition-all duration-200 hover:-translate-y-0.5 hover:border-brand-border hover:shadow-[0_26px_60px_-42px_rgba(0,86,173,0.5)]">
-      <Link href={href} className="block" tabIndex={-1} aria-hidden>
-        {/*
-          The image box is the featured image's own 1200:630. It used to be
-          16/10, and object-cover then scaled a 1.90:1 image to fill a 1.60:1
-          box - cropping roughly a sixth off each side, which on a designed
-          graphic means cutting into the artwork. At the matching ratio there
-          is nothing to crop and nothing to letterbox: the image fills the card
-          width exactly.
-
-          object-contain rather than cover so that a future post whose image is
-          not 1200:630 is shown whole on the grey ground instead of being cut.
-          The hover zoom is gone for the same reason - a 3% scale pushed the
-          edges of the artwork out of frame.
-        */}
-        <span className="relative block aspect-[1200/630] overflow-hidden border-b border-grey-mid bg-grey-bg">
+    <article className="ip-card group flex w-full flex-col overflow-hidden">
+      <Link href={href} className="ip-link-card block" tabIndex={-1} aria-hidden>
+        <span className="relative block aspect-[1200/630] overflow-hidden border-b border-[#E3E3E3] bg-[#F5F5F5]">
           <Image
             src={post.image}
             alt={post.imageAlt}
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
             className="object-contain"
-            /* An SVG needs no raster pipeline - and this one declares only a
-               viewBox, so leaving it unoptimised keeps its own geometry. */
             unoptimized
           />
         </span>
       </Link>
 
       <div className="flex flex-1 flex-col p-6 max-600:p-5">
-        <p className="type-micro text-brand-dark">{post.category}</p>
+        <p className="ip-mono text-[11px] font-semibold tracking-[0.06em] uppercase text-[#007EFF]">
+          {post.category}
+        </p>
 
         <h2 className="mt-3 text-[16px] leading-snug font-bold tracking-[-0.018em] text-ink">
-          <Link
-            href={href}
-            className="transition-colors duration-200 hover:text-brand-dark"
-          >
+          <Link href={href} className="transition-colors duration-200 hover:text-[#007EFF]">
             {post.title}
           </Link>
         </h2>
 
-        <p className="mt-3 line-clamp-3 text-[13.5px] leading-relaxed text-grey-dk/85">
+        <p className="mt-3 line-clamp-3 text-[13.5px] leading-relaxed text-[#606060]">
           {post.excerpt}
         </p>
 
-        <div className="mt-5 flex flex-wrap items-center gap-x-2 gap-y-1 text-[12px] font-semibold text-grey-dk/55">
+        <div className="mt-5 flex flex-wrap items-center gap-x-2 gap-y-1 text-[12px] font-semibold text-[#878787]">
           <span>By {post.author}</span>
           <span aria-hidden>·</span>
           <time dateTime={post.datetime}>{post.date}</time>
@@ -148,7 +122,7 @@ function Card({ post }: { post: BlogPost }) {
 
         <Link
           href={href}
-          className="mt-auto inline-flex items-center gap-2 pt-6 text-[13px] font-bold text-brand-dark transition-colors duration-200 hover:text-brand-deep"
+          className="mt-auto inline-flex items-center gap-2 pt-6 text-[13px] font-bold text-[#007EFF] transition-colors duration-200 hover:text-[#006AD6]"
           tabIndex={-1}
           aria-hidden
         >

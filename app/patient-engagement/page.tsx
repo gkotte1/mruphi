@@ -10,14 +10,9 @@ import {
   moduleSchema,
 } from "@/lib/schema";
 import { pageMetadata } from "@/lib/site";
-import { TechTicker } from "@/components/module-page/extras";
-import {
-  Breadcrumb,
-  FinalCta,
-  ModuleSection,
-  PageHero,
-  TrustDot,
-} from "@/components/module-page/sections";
+import InnerHero from "@/components/inner-page/Hero";
+import { FinalCta, TechTicker } from "@/components/inner-page/kit";
+import { InnerPage, IpEyebrow, IpHead, IpWrap } from "@/components/inner-page/Shell";
 import ConversationStack from "@/components/patient-engagement/HeroVisual";
 import {
   BeforeAfter,
@@ -155,33 +150,22 @@ const OUTCOMES = [
 
 export default function PatientEngagementPage() {
   return (
-    <div>
+    <InnerPage>
       <JsonLd data={moduleSchema("/patient-engagement/")} />
       <JsonLd data={faqSchema(FAQS.patientEngagement, "/patient-engagement/")} />
       <JsonLd data={breadcrumbSchema("/patient-engagement/", "Patient Engagement")} />
 
       <Navbar />
 
-      {/* The navigation is position:fixed, so it occupies no space in flow.
-          Without this offset the breadcrumb renders behind it and only clears
-          the bar once the page scrolls. */}
-      <main className="bg-white pt-[80px]">
-        <Breadcrumb current="Patient Engagement" />
-
-        <PageHero
+      <main>
+        <InnerHero
+          current="Patient Engagement"
           eyebrow="Patient Engagement"
           title="One Platform for Every Conversation."
           storyTag="Wednesday, 2:15 PM"
           story="The front desk phone rings. It's Ana, calling to confirm her mother's PT visit - same as she did Monday, and Tuesday. Nobody wrote down that she already asked."
           lede="Staff message from a secure Murphi app. Patients and caregivers keep texting the way they already do - no download, no portal password. Every exchange, translated, logged and visible in one place."
-          trust={
-            <>
-              HIPAA Compliant <TrustDot /> SOC 2 <TrustDot /> No App Required for
-              Patients
-            </>
-          }
-          secondaryHref="#inside"
-          secondaryLabel="What's Inside"
+          trust={["HIPAA Compliant", "SOC 2", "No App Required for Patients"]}
           visual={
             <ConversationStack
               app={{
@@ -205,41 +189,64 @@ export default function PatientEngagementPage() {
 
         <TechTicker items={TICKER} />
 
-        <ModuleSection
-          id="inside"
-          kicker="What's Inside"
-          heading="One communication layer for staff, patients and families."
-        >
-          <InsideLedger items={INSIDE} />
-        </ModuleSection>
+        <section id="inside" className="ip-section">
+          <IpWrap>
+            <IpHead>
+              <IpEyebrow>What{"'"}s Inside</IpEyebrow>
+              <h2 className="ip-h2 ip-serif" style={{ marginTop: 16, marginBottom: 18 }}>
+                One communication layer for staff, patients and families.
+              </h2>
+            </IpHead>
+            <InsideLedger items={INSIDE} />
+          </IpWrap>
+        </section>
 
-        <ModuleSection
-          kicker="Why This Matters"
-          heading="Communication is the layer everything else runs on."
-        >
-          <WhySplit
-            lede="In home-based care, the team is never in one building. A missed message is a missed visit, a missed signature, or a caregiver left guessing."
-            items={WHY}
-          />
-        </ModuleSection>
+        <section className="ip-section ip-band">
+          <IpWrap>
+            <IpHead>
+              <IpEyebrow>Why This Matters</IpEyebrow>
+              <h2 className="ip-h2 ip-serif" style={{ marginTop: 16, marginBottom: 18 }}>
+                Communication is the layer everything else runs on.
+              </h2>
+            </IpHead>
+            <WhySplit
+              lede="In home-based care, the team is never in one building. A missed message is a missed visit, a missed signature, or a caregiver left guessing."
+              items={WHY}
+            />
+          </IpWrap>
+        </section>
 
-        <ModuleSection kicker="Before & After" heading="The same conversations, rebuilt.">
-          <BeforeAfter rows={TRANSFORM} />
-        </ModuleSection>
+        <section className="ip-section">
+          <IpWrap>
+            <IpHead>
+              <IpEyebrow>Before & After</IpEyebrow>
+              <h2 className="ip-h2 ip-serif" style={{ marginTop: 16, marginBottom: 18 }}>
+                The same conversations, rebuilt.
+              </h2>
+            </IpHead>
+            <BeforeAfter rows={TRANSFORM} />
+          </IpWrap>
+        </section>
 
-        <ModuleSection
-          id="how"
-          kicker="The Mechanics"
-          heading="From message sent to conversation recorded."
-        >
-          <MessageFlow steps={STEPS} />
-        </ModuleSection>
+        <section id="how" className="ip-section">
+          <IpWrap>
+            <IpHead>
+              <IpEyebrow>The Mechanics</IpEyebrow>
+              <h2 className="ip-h2 ip-serif" style={{ marginTop: 16, marginBottom: 18 }}>
+                From message sent to conversation recorded.
+              </h2>
+            </IpHead>
+            <MessageFlow steps={STEPS} />
+          </IpWrap>
+        </section>
 
         <Outcomes heading="What agencies get back." outcomes={OUTCOMES} />
 
         <EhrIntegration />
 
-        <FaqSection items={FAQS.patientEngagement} />
+        <div className="ip-faq ip-band">
+          <FaqSection items={FAQS.patientEngagement} divider="none" />
+        </div>
 
         <FinalCta
           heading="Let Ana Text Instead of Call."
@@ -248,6 +255,6 @@ export default function PatientEngagementPage() {
       </main>
 
       <Footer />
-    </div>
+    </InnerPage>
   );
 }

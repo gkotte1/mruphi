@@ -45,23 +45,23 @@ export function Surface({
 
   return (
     <div
-      className={cn(
-        "overflow-hidden rounded-panel border border-grey-mid bg-white shadow-[0_20px_50px_rgba(15,29,84,.08)]",
-        className,
-      )}
+        className={cn(
+          "overflow-hidden rounded-[8px] border border-[#E3E3E3] bg-white shadow-[0_1px_2px_rgba(0,0,0,0.03),0_14px_30px_rgba(0,0,0,0.05)]",
+          className,
+        )}
     >
       <div
         className={cn(
           "flex items-center justify-between gap-3 px-5 max-720:px-4",
           quiet ? "py-2.5" : "py-3",
-          onBrand ? "bg-brand" : "border-b border-grey-mid bg-grey-soft",
+          onBrand ? "bg-[#007EFF]" : "border-b border-[#E3E3E3] bg-[#F5F5F5]",
         )}
       >
         <span
           className={cn(
             MONO,
-            "flex min-w-0 items-center gap-2 truncate text-[11px] uppercase tracking-[0.06em]",
-            onBrand ? "text-white/90" : "text-ink-muted",
+            "flex min-w-0 items-center gap-2 truncate ra-mono text-[11px] uppercase tracking-[0.06em]",
+            onBrand ? "text-[#F5F5F5]" : "text-[#878787]",
           )}
         >
           {label}
@@ -71,16 +71,16 @@ export function Surface({
           <span
             className={cn(
               MONO,
-              "flex shrink-0 items-center gap-1.5 rounded-full px-2.5 py-1 text-[10.5px] font-semibold tracking-[0.04em] uppercase",
+              "flex shrink-0 items-center gap-1.5 rounded-full px-2.5 py-1 ra-mono text-[10.5px] font-semibold tracking-[0.04em] uppercase",
               onBrand
                 ? "bg-white/15 text-white"
-                : "border border-brand-pale bg-brand-tint text-brand-dark",
+                : "border border-[#E3E3E3] bg-[#F5F5F5] text-[#007EFF]",
             )}
           >
             <span
               className={cn(
                 "size-1.5 rounded-full",
-                onBrand ? "bg-white" : "bg-brand",
+                onBrand ? "bg-white" : "bg-[#007EFF]",
               )}
               style={quiet ? undefined : { animation: "mp-blink 1.6s ease-in-out infinite" }}
               aria-hidden
@@ -94,14 +94,14 @@ export function Surface({
                 <span
                   className={cn(
                     "absolute inline-flex size-full rounded-full",
-                    onBrand ? "bg-white/60" : "bg-brand/60",
+                    onBrand ? "bg-white/60" : "bg-[#007EFF]/60",
                   )}
                   style={quiet ? undefined : { animation: "mp-glow 2.4s ease-in-out infinite" }}
                 />
                 <span
                   className={cn(
                     "relative inline-flex size-1.5 rounded-full",
-                    onBrand ? "bg-white" : "bg-brand",
+                    onBrand ? "bg-white" : "bg-[#007EFF]",
                   )}
                 />
               </span>
@@ -109,7 +109,7 @@ export function Surface({
               <span
                 className={cn(
                   "size-1.5 rounded-full",
-                  onBrand ? "bg-white/50" : "bg-brand-pale",
+                  onBrand ? "bg-white/50" : "bg-[#E3E3E3]",
                 )}
               />
             )}
@@ -122,7 +122,7 @@ export function Surface({
       </div>
 
       {foot ? (
-        <div className="border-t border-grey-mid bg-grey-bg px-5 py-2.5 max-720:px-4">
+        <div className="border-t border-[#E3E3E3] bg-[#F5F5F5] px-5 py-2.5 max-720:px-4">
           {foot}
         </div>
       ) : null}
@@ -147,13 +147,10 @@ export function Finding({
 
   return (
     <li
-      className="flex items-start gap-3 border-b border-grey-mid py-2.5 last:border-b-0 max-600:gap-2.5">
+      className="flex items-start gap-3 border-b border-[#E3E3E3] py-2.5 last:border-b-0 max-600:gap-2.5">
       <span
         className={cn(
-          "mt-px flex size-7 shrink-0 items-center justify-center rounded-[8px] border",
-          flag
-            ? "border-brand-deep/20 bg-brand-deep/10 text-brand-deep"
-            : "border-brand-pale bg-brand-tint text-brand",
+          "mt-px flex size-7 shrink-0 items-center justify-center rounded-[8px] border border-[#E3E3E3] bg-[#F5F5F5] text-[#007EFF]",
         )}
         aria-hidden
       >
@@ -164,13 +161,13 @@ export function Finding({
         <span className="block text-[13px] leading-[1.4] font-semibold text-ink">
           {title}
         </span>
-        <span className={cn(MONO, "mt-0.5 block text-[11px] text-ink-muted")}>
+        <span className={cn(MONO, "ra-mono mt-0.5 block text-[11px] text-[#878787]")}>
           {meta}
         </span>
       </span>
 
       <span
-        className="mt-1 flex size-5 shrink-0 items-center justify-center rounded-full border border-grey-mid text-grey-bdr"
+        className="mt-1 flex size-5 shrink-0 items-center justify-center rounded-full border border-[#E3E3E3] text-[#B2B2B2]"
         aria-hidden
       >
         <Icon name="chevron" width={11} height={11} className="-rotate-90" />
@@ -197,11 +194,11 @@ export function ScanBar({
       {Array.from({ length: rows }, (_, i) => (
         <span
           key={i}
-          className="relative h-1.5 w-full overflow-hidden rounded-full bg-grey-soft"
+          className="relative h-1.5 w-full overflow-hidden rounded-full bg-[#F5F5F5]"
         >
           <span
             className={cn(
-              "absolute inset-y-0 left-0 rounded-full bg-brand/70",
+              "absolute inset-y-0 left-0 rounded-full bg-[#007EFF]/70",
               quiet ? "" : "w-1/3",
             )}
             style={
@@ -225,7 +222,7 @@ export function Pips({ total, done }: { total: number; done: number }) {
           key={i}
           className={cn(
             "h-1.5 rounded-full transition-colors duration-300",
-            i < done ? "w-6 bg-brand" : "w-3 bg-grey-mid",
+            i < done ? "w-6 bg-[#007EFF]" : "w-3 bg-[#E3E3E3]",
           )}
         />
       ))}
@@ -246,7 +243,7 @@ export function SystemNode({
   return (
     <div
       className={cn(
-        "mx-auto flex w-full flex-col items-center gap-2 rounded-tile bg-brand shadow-[0_12px_28px_-14px_rgba(0,106,214,.7)]",
+        "mx-auto flex w-full flex-col items-center gap-2 rounded-[8px] bg-[#007EFF]",
         compact ? "max-w-[220px] px-4 py-3" : "max-w-[300px] px-5 py-4",
       )}
     >
@@ -260,8 +257,8 @@ export function SystemNode({
         <span
           className={cn(
             compact
-              ? "text-[13px] font-bold leading-none tracking-[-0.015em] text-white"
-              : "text-[15px] font-bold leading-none tracking-[-0.015em] text-white",
+              ? "text-[13px] font-bold leading-none tracking-[-0.015em] text-[#F5F5F5]"
+              : "text-[15px] font-bold leading-none tracking-[-0.015em] text-[#F5F5F5]",
           )}
         >
           {label}
@@ -294,12 +291,12 @@ export function MurphiNode({
   return (
     <div
       className={cn(
-        "mx-auto w-full rounded-tile border border-brand-pale bg-white shadow-[0_10px_26px_-16px_rgba(15,29,84,.5)]",
+        "mx-auto w-full rounded-[8px] border border-[#E3E3E3] bg-white",
         compact ? "max-w-[220px] px-3.5 py-3" : "max-w-[300px] px-4 py-4 max-600:px-3.5",
       )}
     >
       <div className="flex items-center justify-center gap-2.5">
-        <span className="flex size-8 shrink-0 items-center justify-center rounded-[9px] border border-grey-mid bg-white p-1.5">
+        <span className="flex size-8 shrink-0 items-center justify-center rounded-[8px] border border-[#E3E3E3] bg-white p-1.5">
           <Image
             src="/brand/app-icons/murphi-icon-192.png"
             alt="Murphi.ai"
@@ -317,16 +314,16 @@ export function MurphiNode({
         {stages.map((stage, i) => (
           <li key={stage} className="flex items-stretch gap-3">
             <div className="relative flex w-[9px] shrink-0 justify-center" aria-hidden>
-              <span className="relative z-10 mt-[7px] size-[7px] shrink-0 rounded-full border-2 border-brand bg-white" />
+              <span className="relative z-10 mt-[7px] size-[7px] shrink-0 rounded-full border-2 border-[#007EFF] bg-white" />
               {i === stages.length - 1 ? null : (
-                <span className="absolute top-[13px] left-1/2 h-[calc(100%-6px)] w-px -translate-x-1/2 bg-brand-pale" />
+                <span className="absolute top-[13px] left-1/2 h-[calc(100%-6px)] w-px -translate-x-1/2 bg-[#E3E3E3]" />
               )}
             </div>
 
             <span
               className={cn(
                 MONO,
-                "min-w-0 truncate text-[12px] text-grey-500",
+                "min-w-0 truncate ra-mono text-[12px] text-[#606060]",
                 i === stages.length - 1 ? "pb-0" : "pb-2.5",
               )}
             >
@@ -358,10 +355,10 @@ export function Run({
       className={cn("flex flex-col items-center", quiet ? "gap-1.5" : "gap-2", pad)}
       aria-hidden
     >
-      <span className={cn("relative flex w-px shrink-0 bg-brand-pale", stem)}>
+      <span className={cn("relative flex w-px shrink-0 bg-[#E3E3E3]", stem)}>
         {quiet ? null : (
           <span
-            className="absolute left-1/2 size-1.5 -translate-x-1/2 rounded-full bg-brand"
+            className="absolute left-1/2 size-1.5 -translate-x-1/2 rounded-full bg-[#007EFF]"
             style={{ animation: "mp-flow-pulse-v 2.6s ease-in-out infinite" }}
           />
         )}
@@ -371,16 +368,15 @@ export function Run({
         <>
           <span
             className={cn(
-              MONO,
-              "rounded-full border border-brand-pale bg-brand-tint px-3 py-1 text-center text-[11px] uppercase tracking-[0.05em] text-brand-dark",
+              "ra-mono rounded-full border border-[#E3E3E3] bg-[#F5F5F5] px-3 py-1 text-center text-[11px] uppercase tracking-[0.05em] text-[#007EFF]",
             )}
           >
             {label}
           </span>
-          <span className={cn("relative flex w-px shrink-0 bg-brand-pale", stem)}>
+          <span className={cn("relative flex w-px shrink-0 bg-[#E3E3E3]", stem)}>
             {quiet ? null : (
               <span
-                className="absolute left-1/2 size-1.5 -translate-x-1/2 rounded-full bg-brand"
+                className="absolute left-1/2 size-1.5 -translate-x-1/2 rounded-full bg-[#007EFF]"
                 style={{ animation: "mp-flow-pulse-v 2.6s ease-in-out infinite .6s" }}
               />
             )}

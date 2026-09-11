@@ -3,6 +3,7 @@ import { pageMetadata } from "@/lib/site";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SecurityPage from "@/components/security/SecurityPage";
+import { InnerPage } from "@/components/inner-page/Shell";
 
 export const metadata: Metadata = pageMetadata("/security/", {
   title: "HIPAA-Compliant AI Security & Compliance",
@@ -12,10 +13,10 @@ export const metadata: Metadata = pageMetadata("/security/", {
 
 export default function Page() {
   return (
-    <>
+    <InnerPage>
       <Navbar />
       <SecurityPage />
       <Footer />
-    </>
+    </InnerPage>
   );
 }

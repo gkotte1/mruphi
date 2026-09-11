@@ -10,20 +10,14 @@ import {
   moduleSchema,
 } from "@/lib/schema";
 import { pageMetadata } from "@/lib/site";
-import {
-  Breadcrumb,
-  FinalCta,
-  ModuleSection,
-  PageHero,
-  TrustDot,
-} from "@/components/module-page/sections";
-import ChartReviewStack from "@/components/revenue-assurance/HeroVisual";
+import { RaEyebrow, RaHead, RaWrap, RevenuePage } from "@/components/revenue-assurance/Shell";
+import Hero from "@/components/revenue-assurance/Hero";
 import Mechanics from "@/components/revenue-assurance/Mechanics";
 import Checks, { type Check } from "@/components/revenue-assurance/Checks";
 import {
   EhrIntegration,
+  FinalCta,
   Outcomes,
-  StoryRule,
   Timelines,
 } from "@/components/revenue-assurance/Sections";
 
@@ -32,24 +26,6 @@ export const metadata: Metadata = pageMetadata("/revenue-assurance/", {
   description:
     "AI chart review for home health and hospice: OASIS, coding, POC, PDGM and ADR gaps surfaced the day the chart is written, fetched straight from your EHR.",
 });
-
-const FINDINGS = [
-  {
-    tone: "flag" as const,
-    title: "Homebound status not fully documented",
-    meta: "Section G · Visit 3",
-  },
-  {
-    tone: "flag" as const,
-    title: "Face-to-Face encounter date missing",
-    meta: "Referral documentation",
-  },
-  {
-    tone: "opportunity" as const,
-    title: "PDGM grouping opportunity identified",
-    meta: "Coding review",
-  },
-];
 
 const STEPS = [
   { num: "01", title: "Fetch Chart", body: "Retrieved directly from your EHR" },
@@ -116,79 +92,69 @@ const OUTCOMES = [
 
 export default function RevenueAssurancePage() {
   return (
-    <div>
+    <RevenuePage>
       <JsonLd data={moduleSchema("/revenue-assurance/")} />
       <JsonLd data={faqSchema(FAQS.revenueAssurance, "/revenue-assurance/")} />
       <JsonLd data={breadcrumbSchema("/revenue-assurance/", "Revenue Assurance")} />
 
       <Navbar />
 
-      {/* The navigation is position:fixed, so it occupies no space in flow.
-          Without this offset the breadcrumb renders behind it and only clears
-          the bar once the page scrolls. */}
-      <main className="bg-white pt-[80px]">
-        <Breadcrumb current="Revenue Assurance" />
+      <main>
+        <Hero />
 
-        <PageHero
-          eyebrow="Revenue Assurance"
-          title="Catch It on Day One, Not on Appeal."
-          storyTag="Six Weeks Later"
-          story="An ADR letter arrives for Mr. Delgado's episode. The homebound documentation was thin. The Face-to-Face date is missing. Nobody remembers visit three - it happened six weeks ago."
-          lede="Murphi reviews every chart the day it's written - fetched straight from your EHR - and surfaces exactly this kind of gap while there's still time to fix it."
-          trust={
-            <>
-              HIPAA <TrustDot /> SOC 2 <TrustDot /> No unsupported ROI claims
-            </>
-          }
-          visual={
-            <ChartReviewStack
-              title="Chart Review · Mr. Delgado, Episode 2"
-              status="3 Findings"
-              fetched="Referral, F2F, OASIS & POC fetched from EHR"
-              findings={FINDINGS}
-              foot={["Found the day it was written", "Write-back ready"]}
+        <section className="ra-section ra-band">
+          <RaWrap>
+            <RaHead>
+              <h2 className="ra-h2 ra-serif" style={{ marginBottom: 18 }}>
+                The Same Chart, Two Timelines
+              </h2>
+            </RaHead>
+            <Timelines
+              before={{
+                title: "Found on Appeal",
+                steps: [
+                  "Chart submitted, no second look before the claim goes out",
+                  "ADR letter arrives weeks later, deadline attached",
+                  "Team re-reads the whole episode from scratch, under pressure",
+                  "Outcome depends on documentation nobody can improve now",
+                ],
+              }}
+              after={{
+                title: "Found on Day One",
+                steps: [
+                  "Every chart gets the same structured review, automatically",
+                  "Findings surface before the claim is ever submitted",
+                  "Reviewer resolves the finding while the visit is still fresh",
+                  "Approved chart writes back to the EHR, ready to bill",
+                ],
+              }}
             />
-          }
-        />
+          </RaWrap>
+        </section>
 
-        <ModuleSection>
-          <StoryRule>The Same Chart, Two Timelines</StoryRule>
-          <Timelines
-            before={{
-              title: "Found on Appeal",
-              steps: [
-                "Chart submitted, no second look before the claim goes out",
-                "ADR letter arrives weeks later, deadline attached",
-                "Team re-reads the whole episode from scratch, under pressure",
-                "Outcome depends on documentation nobody can improve now",
-              ],
-            }}
-            after={{
-              title: "Found on Day One",
-              steps: [
-                "Every chart gets the same structured review, automatically",
-                "Findings surface before the claim is ever submitted",
-                "Reviewer resolves the finding while the visit is still fresh",
-                "Approved chart writes back to the EHR, ready to bill",
-              ],
-            }}
-          />
-        </ModuleSection>
+        <section id="how" className="ra-section">
+          <RaWrap>
+            <RaHead>
+              <RaEyebrow>The Mechanics</RaEyebrow>
+              <h2 className="ra-h2 ra-serif" style={{ marginTop: 16, marginBottom: 18 }}>
+                From chart to resolved finding.
+              </h2>
+            </RaHead>
+            <Mechanics steps={STEPS} />
+          </RaWrap>
+        </section>
 
-        <ModuleSection
-          id="how"
-          kicker="The Mechanics"
-          heading="From chart to resolved finding."
-        >
-          <Mechanics steps={STEPS} />
-        </ModuleSection>
-
-        <ModuleSection
-          kicker="What Murphi Checks"
-          heading="Five kinds of review, run on every chart."
-        >
-          <Checks checks={CHECKS} />
-        </ModuleSection>
+        <section className="ra-section">
+          <RaWrap>
+            <RaHead>
+              <RaEyebrow>What Murphi Checks</RaEyebrow>
+              <h2 className="ra-h2 ra-serif" style={{ marginTop: 16, marginBottom: 18 }}>
+                Five kinds of review, run on every chart.
+              </h2>
+            </RaHead>
+            <Checks checks={CHECKS} />
+          </RaWrap>
+        </section>
 
         <Outcomes
           heading="What agencies get back."
@@ -203,7 +169,9 @@ export default function RevenueAssurancePage() {
           disclaimer="Manual PDF upload is also supported where direct integration isn't available."
         />
 
-        <FaqSection items={FAQS.revenueAssurance} />
+        <div className="ra-faq ra-band">
+          <FaqSection items={FAQS.revenueAssurance} divider="none" />
+        </div>
 
         <FinalCta
           heading={"Never Meet Mr. Delgado's Chart Again - On Appeal."}
@@ -212,6 +180,6 @@ export default function RevenueAssurancePage() {
       </main>
 
       <Footer />
-    </div>
+    </RevenuePage>
   );
 }

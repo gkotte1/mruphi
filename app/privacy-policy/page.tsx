@@ -1,13 +1,18 @@
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/site";
-import LegalPage from "@/components/legal/LegalPage";
+import BrandLegalPage from "@/components/legal/BrandLegalPage";
+import { getLegalPage } from "@/lib/legal";
 
-export const metadata: Metadata = pageMetadata("/privacy-policy/", {
-  title: "Privacy Policy | HIPAA-Compliant Data Protection",
-  description:
-    "Murphi.ai's privacy policy explains how we collect, store, and protect your data in compliance with HIPAA, GDPR, and other applicable data protection regulations.",
-});
+const page = getLegalPage("privacy-policy");
+
+export const metadata: Metadata = {
+  ...pageMetadata("/privacy-policy/", {
+    title: page.title,
+    description: page.description,
+  }),
+  title: { absolute: page.title },
+};
 
 export default function PrivacyPolicyPage() {
-  return <LegalPage file="privacy-policy.md" />;
+  return <BrandLegalPage slug="privacy-policy" />;
 }

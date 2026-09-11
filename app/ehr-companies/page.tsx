@@ -11,23 +11,9 @@ import {
 import { pageMetadata } from "@/lib/site";
 import Reveal from "@/components/module-page/Reveal";
 import { StatusBadge } from "@/components/module-page/interactive";
-import { FetchNote, Lede } from "@/components/module-page/extras";
-import {
-  Breadcrumb,
-  FinalCta,
-  ModuleSection,
-  TrustDot,
-} from "@/components/module-page/sections";
-import {
-  ArrowGlyph,
-  CONTAINER,
-  Eyebrow,
-  MONO,
-  PrimaryButton,
-  SECTION,
-  SectionHead,
-  SecondaryButton,
-} from "@/components/module-page/ui";
+import InnerHero from "@/components/inner-page/Hero";
+import { FetchNote, FinalCta } from "@/components/inner-page/kit";
+import { InnerPage, IpEyebrow, IpHead, IpWrap } from "@/components/inner-page/Shell";
 import EmbeddedLayer from "@/components/ehr-companies/HeroVisual";
 import {
   Explorer,
@@ -40,7 +26,6 @@ import {
   Roadmap,
   SecuritySpecs,
 } from "@/components/ehr-companies/Sections";
-import { cn } from "@/lib/cn";
 
 export const metadata: Metadata = pageMetadata("/ehr-companies/", {
   title: "Home Health & Hospice EHR Companies - Embed AI",
@@ -200,95 +185,59 @@ const INTEGRATIONS = [
 
 export default function EhrCompaniesPage() {
   return (
-    <div>
+    <InnerPage>
       <JsonLd data={faqSchema(FAQS.ehrCompanies, "/ehr-companies/")} />
       <JsonLd data={breadcrumbSchema("/ehr-companies/", "Home Health & Hospice EHR Companies")} />
 
       <Navbar />
 
-      {/* The navigation is position:fixed, so it occupies no space in flow.
-          Without this offset the breadcrumb renders behind it and only clears
-          the bar once the page scrolls. */}
-      <main className="bg-white pt-[80px]">
-        <Breadcrumb current="Home Health & Hospice EHR Companies" section="who-we-serve" />
+      <main>
+        <InnerHero
+          current="Home Health & Hospice EHR Companies"
+          parent={{ label: "Who We Serve", href: "/#serve" }}
+          eyebrow="Who We Serve · EHR Companies"
+          title="Embed Healthcare AI Into Every Clinical Workflow."
+          lede="Murphi.ai enables Home Health, Hospice and Palliative Care platforms to introduce ambient documentation, intelligent assessments, clinical quality checks, and compliance workflows  - without building or maintaining the complete enterprise AI infrastructure internally."
+          trust={[
+            "Embedded & White-Labeled",
+            "API-Driven",
+            "Human-in-the-Loop",
+            "Enterprise AI Infrastructure",
+          ]}
+          primaryHref="#layers"
+          primaryLabel="Explore Features"
+          visual={
+            <EmbeddedLayer
+              title="Clinician Interaction"
+              status="Live"
+              input="Voice, text, EHR data"
+              layerLabel="↓ Murphi.ai - Intelligence Layer ↓"
+              modules={MODULES}
+              output="Structured EHR documentation - validated, compliant, approved"
+              foot={["Launch workflows in phases", "One scalable platform"]}
+            />
+          }
+        />
 
-        {/* This hero carries no story block, so it is laid out here rather than
-            through the shared PageHero. */}
-        <section className="bg-hero-bg pt-7 pb-16 max-720:pt-6 max-720:pb-10">
-          <div
-            className={cn(
-              CONTAINER,
-              "grid grid-cols-2 items-center gap-16 max-1080:grid-cols-1 max-1080:gap-12",
-            )}
-          >
-            <Reveal>
-              <Eyebrow>Who We Serve · EHR Companies</Eyebrow>
-
-              <h1 className="mt-4 max-w-[16ch] type-h1 text-ink">
-                Embed Healthcare AI Into Every Clinical Workflow.
-              </h1>
-
-              <p className="mt-[18px] max-w-[56ch] text-[18px] leading-[1.6] text-grey-500">
-                Murphi.ai enables Home Health, Hospice and Palliative Care
-                platforms to introduce ambient documentation, intelligent
-                assessments, clinical quality checks, and compliance workflows  - 
-                without building or maintaining the complete enterprise AI
-                infrastructure internally.
-              </p>
-
-              <div className="mt-[30px] flex flex-wrap items-center gap-3.5 max-720:flex-col max-720:items-stretch">
-                <PrimaryButton href="#layers">
-                  Explore Features
-                  <ArrowGlyph />
-                </PrimaryButton>
-                <SecondaryButton href="/contact-us/">
-                  Discuss an Integration
-                </SecondaryButton>
-              </div>
-
-              <div
-                className={cn(
-                  MONO,
-                  "mt-8 flex flex-wrap items-center gap-[9px] text-[12px] tracking-[0.02em] text-ink-muted",
-                )}
-              >
-                Embedded &amp; White-Labeled <TrustDot /> API-Driven <TrustDot />{" "}
-                Human-in-the-Loop <TrustDot /> Enterprise AI Infrastructure
-              </div>
-            </Reveal>
-
-            <Reveal>
-              <EmbeddedLayer
-                title="Clinician Interaction"
-                status="Live"
-                input="Voice, text, EHR data"
-                layerLabel="↓ Murphi.ai - Intelligence Layer ↓"
-                modules={MODULES}
-                output="Structured EHR documentation - validated, compliant, approved"
-                foot={["Launch workflows in phases", "One scalable platform"]}
-              />
-            </Reveal>
-          </div>
+        <section className="ip-section">
+          <IpWrap>
+            <Pillars pillars={PILLARS} />
+          </IpWrap>
         </section>
 
-        <ModuleSection>
-          <Pillars pillars={PILLARS} />
-        </ModuleSection>
-
-        <section className={cn("border-t border-grey-mid", SECTION)}>
-          <div className={CONTAINER}>
-            <Eyebrow>Interactive Feature Explorer</Eyebrow>
-            <div className="mt-3">
-              <SectionHead>AI Features Across the Care Continuum</SectionHead>
-            </div>
-
-            <Reveal>
-              <Lede className="mb-[22px]">
+        <section className="ip-section ip-band">
+          <IpWrap>
+            <IpHead>
+              <IpEyebrow>Interactive Feature Explorer</IpEyebrow>
+              <h2 className="ip-h2 ip-serif" style={{ marginTop: 16, marginBottom: 18 }}>
+                AI Features Across the Care Continuum
+              </h2>
+              <p className="ip-lead">
                 Explore by care setting or filter by workflow type. Each feature is
                 available as an embedded component, an API, or a white-labeled
                 experience.
-              </Lede>
-            </Reveal>
+              </p>
+            </IpHead>
 
             <Explorer
               tabs={[
@@ -331,7 +280,7 @@ export default function EhrCompaniesPage() {
                     <FeatureTiles
                       features={["OASIS", "SN / PT / OT / ST", "PDGM"]}
                       extra={
-                        <span className="flex items-center gap-2.5 rounded-tile border border-grey-mid bg-white px-3.5 py-2.5">
+                        <span className="flex items-center gap-2.5 rounded-[8px] border border-[#E3E3E3] bg-white px-3.5 py-2.5">
                           <span className="text-[13.5px] font-semibold tracking-[-0.01em] text-ink">
                             Referral → NOA
                           </span>
@@ -356,25 +305,22 @@ export default function EhrCompaniesPage() {
                 },
               ]}
             />
-          </div>
+          </IpWrap>
         </section>
 
-        <section id="layers" className={cn("border-t border-grey-mid", SECTION)}>
-          <div className={CONTAINER}>
-            <Eyebrow>Platform Infrastructure</Eyebrow>
-            <div className="mt-3">
-              <SectionHead>
+        <section id="layers" className="ip-section">
+          <IpWrap>
+            <IpHead>
+              <IpEyebrow>Platform Infrastructure</IpEyebrow>
+              <h2 className="ip-h2 ip-serif" style={{ marginTop: 16, marginBottom: 18 }}>
                 The Enterprise AI Platform Behind Every Feature
-              </SectionHead>
-            </div>
-
-            <Reveal>
-              <Lede className="mb-[22px]">
+              </h2>
+              <p className="ip-lead">
                 Each visible AI feature is powered by a production-grade
                 infrastructure that handles orchestration, validation, security,
                 and observability automatically. Click a layer to expand it.
-              </Lede>
-            </Reveal>
+              </p>
+            </IpHead>
 
             <LayerStack
               layers={LAYERS.map((layer) => ({
@@ -385,28 +331,27 @@ export default function EhrCompaniesPage() {
             />
 
             <Reveal>
-              <p className="mt-[18px] max-w-[70ch] text-[13px] leading-[1.6] text-ink-muted">
+              <p className="mt-[18px] max-w-[70ch] text-[13px] leading-[1.6] text-[#878787]">
                 The AI feature may be visible to the user. The infrastructure that
                 makes it scalable, reliable, secure, and maintainable operates
                 entirely behind the scenes.
               </p>
             </Reveal>
-          </div>
+          </IpWrap>
         </section>
 
-        <section className={cn("border-t border-grey-mid", SECTION)}>
-          <div className={CONTAINER}>
-            <Eyebrow>Integration Options</Eyebrow>
-            <div className="mt-3">
-              <SectionHead>Three Ways to Integrate Murphi.ai</SectionHead>
-            </div>
-
-            <Reveal>
-              <Lede className="mb-[22px]">
+        <section className="ip-section ip-band">
+          <IpWrap>
+            <IpHead>
+              <IpEyebrow>Integration Options</IpEyebrow>
+              <h2 className="ip-h2 ip-serif" style={{ marginTop: 16, marginBottom: 18 }}>
+                Three Ways to Integrate Murphi.ai
+              </h2>
+              <p className="ip-lead">
                 Choose the approach that matches how your platform is built - or
                 combine all three.
-              </Lede>
-            </Reveal>
+              </p>
+            </IpHead>
 
             <IntegrationOptions
               options={INTEGRATIONS}
@@ -449,46 +394,44 @@ export default function EhrCompaniesPage() {
                 },
               ]}
             />
-          </div>
+          </IpWrap>
         </section>
 
-        <section className={cn("border-t border-grey-mid", SECTION)}>
-          <div className={CONTAINER}>
-            <Eyebrow>Implementation Roadmap</Eyebrow>
-            <div className="mt-3">
-              <SectionHead>From First Feature to Full Platform</SectionHead>
-            </div>
-
-            <Reveal>
-              <Lede className="mb-2">
+        <section className="ip-section">
+          <IpWrap>
+            <IpHead>
+              <IpEyebrow>Implementation Roadmap</IpEyebrow>
+              <h2 className="ip-h2 ip-serif" style={{ marginTop: 16, marginBottom: 18 }}>
+                From First Feature to Full Platform
+              </h2>
+              <p className="ip-lead">
                 Start with one high-value workflow. Expand from there without
                 requiring a large-bang implementation.
-              </Lede>
-            </Reveal>
-
+              </p>
+            </IpHead>
             <Roadmap phases={ROADMAP} />
-          </div>
+          </IpWrap>
         </section>
 
-        <section className={cn("border-t border-grey-mid", SECTION)}>
-          <div className={CONTAINER}>
-            <Eyebrow>Security &amp; Governance</Eyebrow>
-            <div className="mt-3">
-              <SectionHead>Built for Healthcare-Grade Trust</SectionHead>
-            </div>
-
-            <Reveal>
-              <Lede className="mb-[22px]">
+        <section className="ip-section ip-band">
+          <IpWrap>
+            <IpHead>
+              <IpEyebrow>Security &amp; Governance</IpEyebrow>
+              <h2 className="ip-h2 ip-serif" style={{ marginTop: 16, marginBottom: 18 }}>
+                Built for Healthcare-Grade Trust
+              </h2>
+              <p className="ip-lead">
                 Every Murphi.ai workflow is designed with clinical accountability
                 and data stewardship in mind.
-              </Lede>
-            </Reveal>
-
+              </p>
+            </IpHead>
             <SecuritySpecs items={SECURITY} />
-          </div>
+          </IpWrap>
         </section>
 
-        <FaqSection items={FAQS.ehrCompanies} />
+        <div className="ip-faq">
+          <FaqSection items={FAQS.ehrCompanies} divider="none" />
+        </div>
 
         <FinalCta
           heading="Experience AI Automation at Scale"
@@ -497,6 +440,6 @@ export default function EhrCompaniesPage() {
       </main>
 
       <Footer />
-    </div>
+    </InnerPage>
   );
 }

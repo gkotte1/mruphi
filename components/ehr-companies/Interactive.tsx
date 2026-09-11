@@ -30,7 +30,7 @@ export function Explorer({
       <div>
         <div
           role="tablist"
-          className="flex flex-wrap gap-x-8 gap-y-1 border-b border-grey-mid max-720:gap-x-5"
+          className="flex flex-wrap gap-x-8 gap-y-1 border-b border-[#E3E3E3] max-720:gap-x-5"
         >
           {tabs.map((tab) => {
             const selected = tab.id === active;
@@ -45,8 +45,8 @@ export function Explorer({
                 className={cn(
                   "-mb-px border-b-2 pt-1 pb-3.5 text-[14px] font-semibold whitespace-nowrap transition-colors duration-200",
                   selected
-                    ? "border-b-brand text-ink"
-                    : "border-b-transparent text-grey-500 hover:text-ink",
+                    ? "border-b-[#007EFF] text-ink"
+                    : "border-b-transparent text-[#606060] hover:text-ink",
                 )}
               >
                 {tab.label}
@@ -88,7 +88,7 @@ export function LayerStack({
 
   return (
     <Reveal>
-      <div className="overflow-hidden rounded-panel border border-grey-mid bg-white shadow-[0_16px_40px_rgba(15,29,84,.06)]">
+      <div className="overflow-hidden rounded-[10px] border border-[#E3E3E3] bg-white shadow-[0_1px_2px_rgba(0,0,0,0.03),0_14px_30px_rgba(0,0,0,0.05)]">
         {layers.map((layer, i) => {
           const isOpen = open === i;
           const last = i === layers.length - 1;
@@ -96,7 +96,7 @@ export function LayerStack({
           return (
             <div
               key={layer.title}
-              className={cn(last ? "" : "border-b border-grey-mid")}
+              className={cn(last ? "" : "border-b border-[#E3E3E3]")}
             >
               <button
                 type="button"
@@ -104,7 +104,7 @@ export function LayerStack({
                 onClick={() => setOpen(isOpen ? -1 : i)}
                 className={cn(
                   "grid w-full grid-cols-[auto_1fr_auto] items-center gap-5 px-7 py-5 text-left transition-colors duration-200 max-600:gap-4 max-600:px-5",
-                  isOpen ? "bg-brand-tint/40" : "hover:bg-grey-bg",
+                  isOpen ? "bg-[#F5F5F5]" : "hover:bg-[#F5F5F5]",
                 )}
               >
                 {/* Number column stretches with the row; the badge is grid-centered
@@ -115,15 +115,15 @@ export function LayerStack({
                       MONO,
                       "relative z-10 col-start-1 row-start-1 flex size-8 items-center justify-center rounded-[9px] border text-[10.5px] font-bold transition-colors duration-200",
                       isOpen
-                        ? "border-brand bg-brand text-white"
-                        : "border-brand-pale bg-brand-tint text-brand-dark",
+                        ? "border-[#007EFF] bg-[#007EFF] text-white"
+                        : "border-[#E3E3E3] bg-[#F5F5F5] text-[#007EFF]",
                     )}
                   >
                     {String(i + 1).padStart(2, "0")}
                   </span>
                   {last ? null : (
                     <span
-                      className="pointer-events-none absolute top-[calc(50%+1rem)] -bottom-5 left-1/2 z-0 w-px -translate-x-1/2 bg-brand-pale"
+                      className="pointer-events-none absolute top-[calc(50%+1rem)] -bottom-5 left-1/2 z-0 w-px -translate-x-1/2 bg-[#E3E3E3]"
                       aria-hidden
                     />
                   )}
@@ -134,7 +134,7 @@ export function LayerStack({
                     {layer.title}
                   </span>
                   <span
-                    className={cn(MONO, "mt-1 block text-[11.5px] text-ink-muted")}
+                    className={cn(MONO, "mt-1 block text-[11.5px] text-[#878787]")}
                   >
                     {layer.sub}
                   </span>
@@ -144,8 +144,8 @@ export function LayerStack({
                   className={cn(
                     "flex size-7 shrink-0 items-center justify-center rounded-full border transition-all duration-200",
                     isOpen
-                      ? "rotate-180 border-brand bg-brand text-white"
-                      : "border-grey-mid bg-white text-grey-500",
+                      ? "rotate-180 border-[#007EFF] bg-[#007EFF] text-white"
+                      : "border-[#E3E3E3] bg-white text-[#606060]",
                   )}
                   aria-hidden
                 >
@@ -164,9 +164,9 @@ export function LayerStack({
               {/* max-height rather than display, so the layer slides open. */}
               <div
                 className="overflow-hidden transition-[max-height] duration-[280ms] ease-[ease]"
-                style={{ maxHeight: isOpen ? 420 : 0 }}
+                style={{ maxHeight: isOpen ? 520 : 0 }}
               >
-                <div className="px-7 py-6 pl-[76px] max-600:px-5 max-600:pl-5">
+                <div className="px-7 py-8 pl-[76px] max-600:px-5 max-600:py-7 max-600:pl-5">
                   {layer.body}
                 </div>
               </div>
@@ -203,18 +203,18 @@ export function IntegrationOptions({
                 aria-pressed={selected}
                 onClick={() => setActive(option.id)}
                 className={cn(
-                  "relative rounded-tile border px-6 py-6 text-left transition-colors duration-200",
+                  "relative rounded-[8px] border px-6 py-6 text-left transition-colors duration-200",
                   selected
-                    ? "border-brand bg-brand-tint/40"
-                    : "border-grey-mid bg-white hover:border-brand-pale",
+                    ? "border-[#007EFF] bg-[#F5F5F5]"
+                    : "border-[#E3E3E3] bg-white hover:border-[#007EFF]",
                 )}
               >
                 <span
                   className={cn(
                     "mb-4 flex size-7 items-center justify-center rounded-full border text-[10.5px] font-bold transition-colors duration-200",
                     selected
-                      ? "border-brand bg-brand text-white"
-                      : "border-grey-mid bg-white text-grey-500",
+                      ? "border-[#007EFF] bg-[#007EFF] text-white"
+                      : "border-[#E3E3E3] bg-white text-[#606060]",
                   )}
                   aria-hidden
                 >
@@ -224,14 +224,14 @@ export function IntegrationOptions({
                 <span className="block text-[16px] font-bold leading-snug tracking-[-0.015em] text-ink">
                   {option.title}
                 </span>
-                <span className="mt-2 block text-[13.5px] leading-[1.6] text-grey-500">
+                <span className="mt-2 block text-[13.5px] leading-[1.6] text-[#606060]">
                   {option.body}
                 </span>
 
                 {/* The notch that ties the choice to the detail below it. */}
                 {selected ? (
                   <span
-                    className="absolute -bottom-[9px] left-1/2 size-4 -translate-x-1/2 rotate-45 border-r border-b border-brand bg-brand-tint/40 max-900:hidden"
+                    className="absolute -bottom-[9px] left-1/2 size-4 -translate-x-1/2 rotate-45 border-r border-b border-[#007EFF] bg-[#F5F5F5] max-900:hidden"
                     aria-hidden
                   />
                 ) : null}

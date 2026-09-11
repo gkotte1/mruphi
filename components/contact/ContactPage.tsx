@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 import { Icon } from "@/components/icons";
+import { SimpleHero } from "@/components/inner-page/Hero";
+import { IpWrap } from "@/components/inner-page/Shell";
 import { cn } from "@/lib/cn";
 
 /**
@@ -65,8 +67,6 @@ const FIELDS: Field[] = [
   },
 ];
 
-const SHELL = "mx-auto w-full max-w-[1280px] px-10 max-1200:px-8 max-600:px-4";
-
 export default function ContactPage() {
   return (
     <main>
@@ -78,43 +78,35 @@ export default function ContactPage() {
 
 function Hero() {
   return (
-    <section className="bg-hero-bg pt-[80px]">
-      <div
-        className={cn(
-          SHELL,
-          "pt-16 pb-14 text-center max-600:pt-10 max-600:pb-10",
-        )}
-      >
-        <p className="type-label inline-flex items-center gap-2 rounded-full border border-brand-ghost bg-brand-tint px-3.5 py-1.5 text-brand-dark">
-          <Icon name="community" width={13} height={13} />
-          Get In Touch
-        </p>
-
-        <h1 className="mx-auto mt-7 max-w-[800px] type-h1 text-ink">
+    <SimpleHero
+      current="Contact Us"
+      badge="Get In Touch"
+      badgeIcon={<Icon name="community" width={13} height={13} />}
+      title={
+        <>
           {"Let's build the future of "}
-          <span className="text-brand-dark">healthcare AI</span> together
-        </h1>
-
-        <p className="type-lead mx-auto mt-6 max-w-[640px] text-grey-dk">
-          Have questions about EHR integrations, customized modules, or pricing?
-          Our team of enterprise AI specialists is here to help.
-        </p>
-      </div>
-    </section>
+          <span style={{ color: "#007EFF" }}>healthcare AI</span> together
+        </>
+      }
+      lede="Have questions about EHR integrations, customized modules, or pricing? Our team of enterprise AI specialists is here to help."
+    />
   );
 }
 
 function Body() {
   return (
-    <section className="bg-white pt-16 pb-28 max-1024:pb-20 max-600:pt-12 max-600:pb-16">
-      <div
-        className={cn(
-          SHELL,
-          "grid grid-cols-[minmax(0,38fr)_minmax(0,62fr)] items-start gap-x-14 max-1024:grid-cols-1 max-1024:gap-y-12",
-        )}
+    <section style={{ padding: "64px 0 96px" }}>
+      <IpWrap
+        className="ip-split"
+        style={{
+          display: "grid",
+          gridTemplateColumns: "minmax(0,0.38fr) minmax(0,0.62fr)",
+          alignItems: "start",
+          gap: 56,
+        }}
       >
         <div className="min-w-0">
-          <h2 className="type-h4 text-ink">
+          <h2 className="ip-serif text-[22px] font-medium tracking-[-0.02em] text-ink">
             Global Headquarters
           </h2>
 
@@ -122,20 +114,22 @@ function Body() {
             {OFFICES.map((office) => (
               <li
                 key={office.place}
-                className="rounded-panel border border-grey-mid bg-grey-bg p-6 max-600:p-5"
+                className="ip-card p-6 max-600:p-5"
               >
                 <div className="flex items-center gap-3">
                   <span className="text-[22px] leading-none" aria-hidden>
                     {office.flag}
                   </span>
-                  <p className="text-[15.5px] font-extrabold tracking-[-0.02em] text-ink">
+                  <p className="text-[15.5px] font-bold tracking-[-0.02em] text-ink">
                     {office.place}
                   </p>
                 </div>
 
-                <p className="type-micro mt-5 text-grey-dk/45">{office.label}</p>
+                <p className="ip-mono mt-5 text-[11px] font-semibold tracking-[0.06em] uppercase text-[#878787]">
+                  {office.label}
+                </p>
 
-                <address className="mt-2.5 not-italic text-[13.5px] leading-relaxed text-grey-dk/85">
+                <address className="mt-2.5 not-italic text-[13.5px] leading-relaxed text-[#606060]">
                   {office.lines.map((line) => (
                     <span key={line} className="block">
                       {line}
@@ -145,7 +139,7 @@ function Body() {
 
                 <a
                   href={`mailto:${office.email}`}
-                  className="mt-3 inline-flex items-center gap-2 text-[13.5px] font-bold text-brand-dark transition-colors duration-200 hover:text-brand-deep"
+                  className="mt-3 inline-flex items-center gap-2 text-[13.5px] font-bold text-[#007EFF]"
                 >
                   <Icon name="exchange" width={14} height={14} />
                   {office.email}
@@ -156,17 +150,17 @@ function Body() {
         </div>
 
         <div className="min-w-0">
-          <h2 className="type-h4 text-ink">
+          <h2 className="ip-serif text-[22px] font-medium tracking-[-0.02em] text-ink">
             Send Us a Message
           </h2>
-          <p className="mt-4 max-w-[560px] text-[14.5px] leading-relaxed text-grey-dk">
+          <p className="mt-4 max-w-[560px] text-[14.5px] leading-relaxed text-[#606060]">
             Fill out the form below and an AI architecture specialist will review
             your request and get back to you within 24 hours.
           </p>
 
           <ContactForm />
         </div>
-      </div>
+      </IpWrap>
     </section>
   );
 }
@@ -201,14 +195,14 @@ function ContactForm() {
 
   if (state === "sent") {
     return (
-      <div className="mt-8 rounded-panel border border-brand-pale bg-grey-bg p-8 max-600:p-6">
-        <span className="flex size-10 items-center justify-center rounded-full bg-brand-deep text-white">
+      <div className="ip-card mt-8 p-8 max-600:p-6">
+        <span className="flex size-10 items-center justify-center rounded-full bg-[#007EFF] text-white">
           <Icon name="check" width={18} height={18} />
         </span>
-        <p className="mt-5 text-[17px] font-extrabold tracking-[-0.02em] text-ink">
+        <p className="mt-5 text-[17px] font-bold tracking-[-0.02em] text-ink">
           Thank you for your message!
         </p>
-        <p className="mt-3 text-[14px] leading-relaxed text-grey-dk">
+        <p className="mt-3 text-[14px] leading-relaxed text-[#606060]">
           {"We've received your request and will respond to you shortly  - "}{" "}
           usually within 24 hours.
         </p>
@@ -219,12 +213,12 @@ function ContactForm() {
   return (
     <form
       onSubmit={submit}
-      className="mt-8 rounded-[24px] border border-grey-mid bg-white p-8 shadow-[0_24px_60px_-46px_rgba(15,29,84,0.4)] max-600:p-5"
+      className="ip-card mt-8 p-8 max-600:p-5"
     >
       {state === "error" ? (
         <p
           role="alert"
-          className="mb-6 rounded-card border border-grey-mid bg-grey-bg px-4 py-3 text-[13px] font-semibold leading-relaxed text-grey-500"
+          className="mb-6 rounded-[8px] border border-[#E3E3E3] bg-[#F5F5F5] px-4 py-3 text-[13px] font-semibold leading-relaxed text-[#606060]"
         >
           ⚠️ Something went wrong. Please try again or email us at info@murphi.ai
         </p>
@@ -250,7 +244,7 @@ function ContactForm() {
                 rows={5}
                 required={field.required}
                 placeholder={field.placeholder}
-                className="mt-2.5 w-full resize-y rounded-card border border-grey-mid bg-grey-bg px-4 py-3 text-[14px] leading-relaxed text-ink transition-colors duration-200 placeholder:text-ink-muted focus:border-brand-border focus:bg-white"
+                className="mt-2.5 w-full resize-y rounded-[8px] border border-[#E3E3E3] bg-[#F5F5F5] px-4 py-3 text-[14px] leading-relaxed text-ink transition-colors duration-200 placeholder:text-[#878787]"
               />
             ) : (
               <input
@@ -259,7 +253,7 @@ function ContactForm() {
                 type={field.type}
                 required={field.required}
                 placeholder={field.placeholder}
-                className="mt-2.5 w-full rounded-card border border-grey-mid bg-grey-bg px-4 py-3 text-[14px] text-ink transition-colors duration-200 placeholder:text-ink-muted focus:border-brand-border focus:bg-white"
+                className="mt-2.5 w-full rounded-[8px] border border-[#E3E3E3] bg-[#F5F5F5] px-4 py-3 text-[14px] text-ink transition-colors duration-200 placeholder:text-[#878787]"
               />
             )}
           </div>
@@ -269,7 +263,7 @@ function ContactForm() {
       <button
         type="submit"
         disabled={state === "sending"}
-        className="mt-7 btn-primary max-600:w-full"
+        className="ip-btn mt-7 max-600:w-full"
       >
         {state === "sending" ? (
           <>

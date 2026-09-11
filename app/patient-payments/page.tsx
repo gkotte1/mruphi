@@ -10,13 +10,9 @@ import {
   moduleSchema,
 } from "@/lib/schema";
 import { pageMetadata } from "@/lib/site";
-import {
-  Breadcrumb,
-  FinalCta,
-  ModuleSection,
-  PageHero,
-  TrustDot,
-} from "@/components/module-page/sections";
+import InnerHero from "@/components/inner-page/Hero";
+import { FinalCta } from "@/components/inner-page/kit";
+import { InnerPage, IpEyebrow, IpHead, IpWrap } from "@/components/inner-page/Shell";
 import PaymentJourney from "@/components/patient-payments/HeroVisual";
 import Mechanics from "@/components/patient-payments/Mechanics";
 import Included from "@/components/patient-payments/Included";
@@ -83,71 +79,77 @@ const OUTCOMES = [
 
 export default function PatientPaymentsPage() {
   return (
-    <div>
+    <InnerPage>
       <JsonLd data={moduleSchema("/patient-payments/")} />
       <JsonLd data={faqSchema(FAQS.patientPayments, "/patient-payments/")} />
       <JsonLd data={breadcrumbSchema("/patient-payments/", "Patient Payments")} />
 
       <Navbar />
 
-      {/* The navigation is position:fixed, so it occupies no space in flow.
-          Without this offset the breadcrumb renders behind it and only clears
-          the bar once the page scrolls. */}
-      <main className="bg-white pt-[80px]">
-        <Breadcrumb current="Patient Payments" />
-
-        <PageHero
+      <main>
+        <InnerHero
+          current="Patient Payments"
           eyebrow="Patient Payments"
           title="Text. Tap. Paid."
           storyTag="The $84 Balance"
           story="A statement for $84 sits printed, folded, and stamped - somewhere between the office and a mailbox. It will take two weeks to arrive, and a check to come back, if it comes back at all."
           lede="Murphi turns that same balance into a text with a secure link. Most patients pay before the mail truck would have even left the lot."
-          trust={
-            <>
-              HIPAA <TrustDot /> SOC 2 <TrustDot /> PCI-aware payment flow
-            </>
-          }
+          trust={["HIPAA", "SOC 2", "PCI-aware payment flow"]}
           visual={<PaymentJourney />}
         />
 
-        <ModuleSection>
-          <StoryRule>The Same $84, Two Ways</StoryRule>
-          <Timelines
-            before={{
-              title: "By Mail",
-              steps: [
-                "Balance identified, then printed and mailed as a paper statement",
-                "Patient calls the office to pay, or mails a check back",
-                "Staff manually match the payment back to the ledger",
-                "Two to three weeks pass before anyone knows it's resolved",
-              ],
-            }}
-            after={{
-              title: "By Text",
-              steps: [
-                "Balance identified from the EHR, outreach sent automatically",
-                "Patient pays from a text message, in a few taps",
-                "Payment status updates and reconciles automatically",
-                "Resolved before the paper statement would have even shipped",
-              ],
-            }}
-          />
-        </ModuleSection>
+        <section className="ip-section ip-band">
+          <IpWrap>
+            <StoryRule>The Same $84, Two Ways</StoryRule>
+            <Timelines
+              before={{
+                title: "By Mail",
+                steps: [
+                  "Balance identified, then printed and mailed as a paper statement",
+                  "Patient calls the office to pay, or mails a check back",
+                  "Staff manually match the payment back to the ledger",
+                  "Two to three weeks pass before anyone knows it's resolved",
+                ],
+              }}
+              after={{
+                title: "By Text",
+                steps: [
+                  "Balance identified from the EHR, outreach sent automatically",
+                  "Patient pays from a text message, in a few taps",
+                  "Payment status updates and reconciles automatically",
+                  "Resolved before the paper statement would have even shipped",
+                ],
+              }}
+            />
+          </IpWrap>
+        </section>
 
-        <ModuleSection
-          id="how"
-          kicker="The Mechanics"
-          heading="From balance to reconciled payment."
-        >
-          <Mechanics steps={STEPS} />
-        </ModuleSection>
+        <section id="how" className="ip-section">
+          <IpWrap>
+            <IpHead>
+              <IpEyebrow>The Mechanics</IpEyebrow>
+              <h2 className="ip-h2 ip-serif" style={{ marginTop: 16, marginBottom: 18 }}>
+                From balance to reconciled payment.
+              </h2>
+            </IpHead>
+            <Mechanics steps={STEPS} />
+          </IpWrap>
+        </section>
 
-        <ModuleSection kicker="What's Included" heading="What Murphi supports.">
-          <Included
-            items={INCLUDED}
-            note="Murphi facilitates the payment experience and reconciliation - it does not hold provider funds."
-          />
-        </ModuleSection>
+        <section className="ip-section">
+          <IpWrap>
+            <IpHead>
+              <IpEyebrow>What{"'"}s Included</IpEyebrow>
+              <h2 className="ip-h2 ip-serif" style={{ marginTop: 16, marginBottom: 18 }}>
+                What Murphi supports.
+              </h2>
+            </IpHead>
+            <Included
+              items={INCLUDED}
+              note="Murphi facilitates the payment experience and reconciliation - it does not hold provider funds."
+            />
+          </IpWrap>
+        </section>
 
         <Outcomes heading="What agencies get back." outcomes={OUTCOMES} />
 
@@ -157,7 +159,9 @@ export default function PatientPaymentsPage() {
           substeps={["Fetch Balance", "Outreach", "Payment", "Reconcile", "Write Back"]}
         />
 
-        <FaqSection items={FAQS.patientPayments} />
+        <div className="ip-faq ip-band">
+          <FaqSection items={FAQS.patientPayments} divider="none" />
+        </div>
 
         <FinalCta
           heading="Stop Waiting on the Mail Truck."
@@ -166,6 +170,6 @@ export default function PatientPaymentsPage() {
       </main>
 
       <Footer />
-    </div>
+    </InnerPage>
   );
 }

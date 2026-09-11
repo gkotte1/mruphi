@@ -52,7 +52,7 @@ export function Surface({
   return (
     <div
       className={cn(
-        "overflow-hidden rounded-panel border border-grey-mid bg-white shadow-[0_20px_50px_rgba(15,29,84,.08)]",
+        "overflow-hidden rounded-[10px] border border-[#E3E3E3] bg-white shadow-[0_1px_2px_rgba(0,0,0,0.03),0_14px_30px_rgba(0,0,0,0.05)]",
         className,
       )}
     >
@@ -60,14 +60,14 @@ export function Surface({
         className={cn(
           "flex items-center justify-between gap-3 px-5 max-720:px-4",
           compact ? "py-2.5" : "py-3",
-          onBrand ? "bg-brand" : "border-b border-grey-mid bg-grey-soft",
+          onBrand ? "bg-[#007EFF]" : "border-b border-[#E3E3E3] bg-[#F5F5F5]",
         )}
       >
         <span
           className={cn(
             MONO,
             "flex min-w-0 items-center gap-2 truncate text-[11px] uppercase tracking-[0.06em]",
-            onBrand ? "text-white/90" : "text-ink-muted",
+            onBrand ? "text-white/90" : "text-[#878787]",
           )}
         >
           {label}
@@ -80,11 +80,11 @@ export function Surface({
               "flex shrink-0 items-center gap-1.5 rounded-full px-2.5 py-1 text-[10.5px] font-semibold tracking-[0.04em] uppercase",
               onBrand
                 ? "bg-white/15 text-white"
-                : "border border-brand-pale bg-brand-tint text-brand-dark",
+                : "border border-[#E3E3E3] bg-[#F5F5F5] text-[#007EFF]",
             )}
           >
             <span
-              className={cn("size-1.5 rounded-full", onBrand ? "bg-white" : "bg-brand")}
+              className={cn("size-1.5 rounded-full", onBrand ? "bg-white" : "bg-[#007EFF]")}
               /* A settled state should not pulse. */
               style={still ? undefined : { animation: "mp-blink 1.6s ease-in-out infinite" }}
               aria-hidden
@@ -98,14 +98,14 @@ export function Surface({
                 <span
                   className={cn(
                     "absolute inline-flex size-full rounded-full",
-                    onBrand ? "bg-white/60" : "bg-brand/60",
+                    onBrand ? "bg-white/60" : "bg-[#007EFF]/60",
                   )}
                   style={{ animation: "mp-glow 2.4s ease-in-out infinite" }}
                 />
                 <span
                   className={cn(
                     "relative inline-flex size-1.5 rounded-full",
-                    onBrand ? "bg-white" : "bg-brand",
+                    onBrand ? "bg-white" : "bg-[#007EFF]",
                   )}
                 />
               </span>
@@ -113,7 +113,7 @@ export function Surface({
               <span
                 className={cn(
                   "size-1.5 rounded-full",
-                  onBrand ? "bg-white/50" : "bg-brand-pale",
+                  onBrand ? "bg-white/50" : "bg-[#E3E3E3]",
                 )}
               />
             )}
@@ -126,7 +126,7 @@ export function Surface({
       </div>
 
       {foot ? (
-        <div className="border-t border-grey-mid bg-grey-bg px-5 py-2.5 max-720:px-4">
+        <div className="border-t border-[#E3E3E3] bg-[#F5F5F5] px-5 py-2.5 max-720:px-4">
           {foot}
         </div>
       ) : null}
@@ -147,11 +147,11 @@ export function Row({
   return (
     <div
       className={cn(
-        "flex items-baseline justify-between gap-4 border-b border-grey-soft last:border-b-0",
+        "flex items-baseline justify-between gap-4 border-b border-[#E3E3E3] last:border-b-0",
         compact ? "py-[7px]" : "py-2.5",
       )}
     >
-      <span className={cn(MONO, "shrink-0 text-[11px] text-ink-muted")}>{label}</span>
+      <span className={cn(MONO, "shrink-0 text-[11px] text-[#878787]")}>{label}</span>
       <span className="min-w-0 truncate text-right text-[12.5px] font-semibold text-ink">
         {value}
       </span>
@@ -183,7 +183,7 @@ export function Amount({
         {value}
       </span>
       {caption ? (
-        <span className={cn(MONO, "text-[10.5px] uppercase tracking-[0.07em] text-ink-muted")}>
+        <span className={cn(MONO, "text-[10.5px] uppercase tracking-[0.07em] text-[#878787]")}>
           {caption}
         </span>
       ) : null}
@@ -204,8 +204,8 @@ export function Bubble({
       className={cn(
         "max-w-[88%] px-[13px] py-2.5 text-[12.5px] leading-[1.45]",
         side === "out"
-          ? "ml-auto rounded-[16px] rounded-br-[4px] bg-brand text-white"
-          : "rounded-[16px] rounded-bl-[4px] border border-grey-mid bg-grey-soft text-ink",
+          ? "ml-auto rounded-[16px] rounded-br-[4px] bg-[#007EFF] text-white"
+          : "rounded-[16px] rounded-bl-[4px] border border-[#E3E3E3] bg-[#F5F5F5] text-ink",
       )}
     >
       {children}
@@ -226,14 +226,14 @@ export function MethodTile({
       className={cn(
         "flex items-center gap-2 rounded-[10px] border px-2.5 py-2 transition-colors duration-200",
         selected
-          ? "border-brand bg-brand-tint"
-          : "border-grey-mid bg-grey-soft",
+          ? "border-[#007EFF] bg-[#F5F5F5]"
+          : "border-[#E3E3E3] bg-[#F5F5F5]",
       )}
     >
       <span
         className={cn(
           "flex size-4 shrink-0 items-center justify-center rounded-full border",
-          selected ? "border-brand bg-brand text-white" : "border-grey-bdr bg-white",
+          selected ? "border-[#007EFF] bg-[#007EFF] text-white" : "border-[#B2B2B2] bg-white",
         )}
         aria-hidden
       >
@@ -243,7 +243,7 @@ export function MethodTile({
         className={cn(
           MONO,
           "min-w-0 truncate text-[11.5px]",
-          selected ? "font-semibold text-ink" : "text-grey-500",
+          selected ? "font-semibold text-ink" : "text-[#606060]",
         )}
       >
         {name}
@@ -261,7 +261,7 @@ export function Pips({ total, done }: { total: number; done: number }) {
           key={i}
           className={cn(
             "h-1.5 rounded-full transition-all duration-[420ms] ease-out",
-            i < done ? "w-6 bg-brand" : "w-3 bg-grey-mid",
+            i < done ? "w-6 bg-[#007EFF]" : "w-3 bg-[#E3E3E3]",
           )}
         />
       ))}
@@ -282,7 +282,7 @@ export function SystemNode({
   return (
     <div
       className={cn(
-        "mx-auto flex w-full flex-col items-center gap-2 rounded-tile bg-brand shadow-[0_12px_28px_-14px_rgba(0,106,214,.7)]",
+        "mx-auto flex w-full flex-col items-center gap-2 rounded-[8px] bg-[#007EFF] ",
         compact ? "max-w-[220px] px-4 py-3" : "max-w-[300px] px-5 py-4",
       )}
     >
@@ -322,9 +322,9 @@ export function SystemNode({
 /** Murphi's own surface, with whatever stages it is running. */
 export function MurphiNode({ stages }: { stages: string[] }) {
   return (
-    <div className="mx-auto w-full max-w-[300px] rounded-tile border border-brand-pale bg-white px-4 py-4 shadow-[0_10px_26px_-16px_rgba(15,29,84,.5)] max-600:px-3.5">
+    <div className="mx-auto w-full max-w-[300px] rounded-[8px] border border-[#E3E3E3] bg-white px-4 py-4 max-600:px-3.5">
       <div className="flex items-center justify-center gap-2.5">
-        <span className="flex size-8 shrink-0 items-center justify-center rounded-[9px] border border-grey-mid bg-white p-1.5">
+        <span className="flex size-8 shrink-0 items-center justify-center rounded-[9px] border border-[#E3E3E3] bg-white p-1.5">
           <Image
             src="/brand/app-icons/murphi-icon-192.png"
             alt="Murphi.ai"
@@ -342,16 +342,16 @@ export function MurphiNode({ stages }: { stages: string[] }) {
         {stages.map((stage, i) => (
           <li key={stage} className="flex items-stretch gap-3">
             <div className="relative flex w-[9px] shrink-0 justify-center" aria-hidden>
-              <span className="relative z-10 mt-[7px] size-[7px] shrink-0 rounded-full border-2 border-brand bg-white" />
+              <span className="relative z-10 mt-[7px] size-[7px] shrink-0 rounded-full border-2 border-[#007EFF] bg-white" />
               {i === stages.length - 1 ? null : (
-                <span className="absolute top-[13px] left-1/2 h-[calc(100%-6px)] w-px -translate-x-1/2 bg-brand-pale" />
+                <span className="absolute top-[13px] left-1/2 h-[calc(100%-6px)] w-px -translate-x-1/2 bg-[#E3E3E3]" />
               )}
             </div>
 
             <span
               className={cn(
                 MONO,
-                "min-w-0 truncate text-[12px] text-grey-500",
+                "min-w-0 truncate text-[12px] text-[#606060]",
                 i === stages.length - 1 ? "pb-0" : "pb-2.5",
               )}
             >
@@ -382,9 +382,9 @@ export function Run({
 
   return (
     <div className={cn("flex flex-col items-center", gap, pad)} aria-hidden>
-      <span className={cn("relative flex w-px shrink-0 bg-brand-pale", stem)}>
+      <span className={cn("relative flex w-px shrink-0 bg-[#E3E3E3]", stem)}>
         <span
-          className="absolute left-1/2 size-1.5 -translate-x-1/2 rounded-full bg-brand"
+          className="absolute left-1/2 size-1.5 -translate-x-1/2 rounded-full bg-[#007EFF]"
           style={{ animation: "mp-flow-pulse-v 2.6s ease-in-out infinite" }}
         />
       </span>
@@ -394,14 +394,14 @@ export function Run({
           <span
             className={cn(
               MONO,
-              "rounded-full border border-brand-pale bg-brand-tint px-3 py-1 text-center text-[11px] uppercase tracking-[0.05em] text-brand-dark",
+              "rounded-full border border-[#E3E3E3] bg-[#F5F5F5] px-3 py-1 text-center text-[11px] uppercase tracking-[0.05em] text-[#007EFF]",
             )}
           >
             {label}
           </span>
-          <span className={cn("relative flex w-px shrink-0 bg-brand-pale", stem)}>
+          <span className={cn("relative flex w-px shrink-0 bg-[#E3E3E3]", stem)}>
             <span
-              className="absolute left-1/2 size-1.5 -translate-x-1/2 rounded-full bg-brand"
+              className="absolute left-1/2 size-1.5 -translate-x-1/2 rounded-full bg-[#007EFF]"
               style={{ animation: "mp-flow-pulse-v 2.6s ease-in-out infinite .6s" }}
             />
           </span>

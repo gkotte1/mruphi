@@ -40,7 +40,7 @@ export default function Toolset({ tools }: { tools: Tool[] }) {
         <div className="flex justify-center">
           <div
             role="tablist"
-            className="inline-flex flex-wrap justify-center gap-1 rounded-full border border-grey-mid bg-grey-soft p-1 max-720:w-full"
+            className="inline-flex flex-wrap justify-center gap-1 rounded-full border border-[#E3E3E3] bg-[#F5F5F5] p-1 max-720:w-full"
           >
             {tools.map((tool) => (
               <button
@@ -53,7 +53,7 @@ export default function Toolset({ tools }: { tools: Tool[] }) {
                   "rounded-full px-[18px] py-2.5 text-[13.5px] font-semibold whitespace-nowrap transition-colors duration-200 max-720:flex-1",
                   tool.id === active
                     ? "bg-ink text-white"
-                    : "text-grey-500 hover:text-ink",
+                    : "text-[#606060] hover:text-ink",
                 )}
               >
                 {tool.label}
@@ -75,24 +75,24 @@ export default function Toolset({ tools }: { tools: Tool[] }) {
                   : "pointer-events-none translate-y-1 opacity-0",
               )}
             >
-              <div className="overflow-hidden rounded-panel border border-grey-mid bg-white shadow-[0_16px_40px_rgba(15,29,84,.06)]">
-                <div className="flex items-start gap-6 border-b border-grey-mid px-8 py-7 max-600:flex-col max-600:gap-4 max-600:px-6">
+              <div className="overflow-hidden rounded-[10px] border border-[#E3E3E3] bg-white shadow-[0_1px_2px_rgba(0,0,0,0.03),0_14px_30px_rgba(0,0,0,0.05)]">
+                <div className="flex items-start gap-6 border-b border-[#E3E3E3] px-8 py-7 max-600:flex-col max-600:gap-4 max-600:px-6">
                   {tool.count ? (
-                    <span className="text-[44px] font-bold leading-none tracking-[-0.03em] text-brand">
+                    <span className="text-[44px] font-bold leading-none tracking-[-0.03em] text-[#007EFF]">
                       {tool.count}
                     </span>
                   ) : null}
 
                   <span className="min-w-0 flex-1">
                     <StatusBadge tone={tool.badge.tone}>{tool.badge.text}</StatusBadge>
-                    <span className="mt-3 block max-w-[52ch] text-[15px] leading-[1.6] text-grey-500">
+                    <span className="mt-3 block max-w-[52ch] text-[15px] leading-[1.6] text-[#606060]">
                       {tool.text}
                     </span>
                   </span>
                 </div>
 
                 {tool.reports ? (
-                  <ul className="grid grid-cols-3 gap-px bg-grey-mid max-900:grid-cols-2 max-600:grid-cols-1">
+                  <ul className="grid grid-cols-3 gap-px bg-[#E3E3E3] max-900:grid-cols-2 max-600:grid-cols-1">
                     {tool.reports.map((report, i) => (
                       <li
                         key={report}
@@ -101,13 +101,13 @@ export default function Toolset({ tools }: { tools: Tool[] }) {
                         <span
                           className={cn(
                             MONO,
-                            "w-5 shrink-0 text-[10.5px] font-semibold text-grey-bdr",
+                            "w-5 shrink-0 text-[10.5px] font-semibold text-[#B2B2B2]",
                           )}
                           aria-hidden
                         >
                           {String(i + 1).padStart(2, "0")}
                         </span>
-                        <Tick className="size-3.5 shrink-0 text-brand" />
+                        <Tick className="size-3.5 shrink-0 text-[#007EFF]" />
                         <span className="min-w-0 text-[13.5px] font-semibold tracking-[-0.01em] text-ink">
                           {report}
                         </span>

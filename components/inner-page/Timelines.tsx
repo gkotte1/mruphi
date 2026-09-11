@@ -1,0 +1,232 @@
+"use client";
+
+import { useCallback, useRef, useState } from "react";
+import { Icon } from "@/components/icons";
+import Reveal from "@/components/module-page/Reveal";
+import { MONO, Tick } from "@/components/module-page/ui";
+import { cn } from "@/lib/cn";
+
+const TL_CYCLE = "6s";
+const TL_BEAT = 1.5;
+const PAUSE_MOTION = "[&_*]:![animation-play-state:paused]";
+
+const stepOn = (index: number) => ({
+  animation: `mp-tl-on ${TL_CYCLE} ease-in-out ${index * TL_BEAT}s infinite`,
+});
+
+export function Timelines({
+  before,
+  after,
+}: {
+  before: { title: string; steps: string[] };
+  after: { title: string; steps: string[] };
+}) {
+  const rows = Math.max(before.steps.length, after.steps.length);
+  const columnsRef = useRef<HTMLDivElement>(null);
+  const [paused, setPaused] = useState(false);
+
+  const pause = useCallback(() => setPaused(true), []);
+
+  const resumeIfOutside = useCallback((related: EventTarget | null) => {
+    if (related instanceof Node && columnsRef.current?.contains(related)) {
+      return;
+    }
+    setPaused(false);
+  }, []);
+
+  return (
+    <Reveal>
+      <div
+        ref={columnsRef}
+        className={cn(
+          "grid grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] items-stretch max-900:grid-cols-1",
+          paused && PAUSE_MOTION,
+        )}
+        onPointerLeave={(e) => resumeIfOutside(e.relatedTarget)}
+      >
+        <div className="min-h-0 min-w-0" onPointerEnter={pause}>
+          <Track title={before.title} steps={before.steps} rows={rows} tone="before" />
+        </div>
+
+        <SameChart />
+
+        <div className="min-h-0 min-w-0" onPointerEnter={pause}>
+          <Track title={after.title} steps={after.steps} rows={rows} tone="after" />
+        </div>
+      </div>
+    </Reveal>
+  );
+}
+
+function SameChart() {
+  return (
+    <div
+      className="flex items-center self-center px-4 max-900:w-full max-900:flex-col max-900:px-0 max-900:py-3"
+      aria-hidden
+    >
+      <span className="h-px w-4 bg-[#E3E3E3] max-900:h-4 max-900:w-px" />
+      <span className="flex size-7 shrink-0 items-center justify-center rounded-full border border-[#E3E3E3] bg-white text-[#007EFF]">
+        <Icon name="exchange" width={12} height={12} />
+      </span>
+      <span className="h-px w-4 bg-[#E3E3E3] max-900:h-4 max-900:w-px" />
+    </div>
+  );
+}
+
+function Track({
+  title,
+  steps,
+  rows,
+  tone,
+}: {
+  title: string;
+  steps: string[];
+  rows: number;
+  tone: "before" | "after";
+}) {
+  const after = tone === "after";
+
+  return (
+    <div className="flex h-full flex-col overflow-hidden rounded-[10px] border border-[#E3E3E3] bg-white shadow-[0_1px_2px_rgba(0,0,0,0.03),0_14px_30px_rgba(0,0,0,0.05)]">
+      <TrackHead title={title} tone={tone} />
+
+      <div className="grow px-7 py-6 max-600:px-5">
+        <div
+          className="relative grid h-full gap-y-3"
+          style={{ gridTemplateRows: `repeat(${rows}, minmax(0, 1fr))` }}
+        >
+          <span
+            className="pointer-events-none absolute top-[12.5%] bottom-[12.5%] left-0 z-[1] w-7"
+            aria-hidden
+          >
+            <span
+              className={cn(
+                "absolute inset-y-0 left-1/2 w-px -translate-x-1/2",
+                after ? "bg-[#CCE5FF]" : "bg-[#E3E3E3]",
+              )}
+            />
+            <span
+              className={cn(
+                "absolute inset-y-0 left-1/2 w-px origin-top -translate-x-1/2 opacity-0",
+                after ? "bg-[#007EFF]" : "bg-[#B2B2B2]",
+              )}
+              style={{ animation: `mp-tl-rail ${TL_CYCLE} ease-in-out infinite` }}
+            />
+          </span>
+
+          {Array.from({ length: rows }, (_, i) => (
+            <TrackCell key={i} step={steps[i]} index={i} tone={tone} />
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function TrackHead({
+  title,
+  tone,
+}: {
+  title: string;
+  tone: "before" | "after";
+}) {
+  const after = tone === "after";
+
+  return (
+    <div
+      className={cn(
+        "flex items-center gap-2.5 border-b px-7 py-4 max-600:px-5",
+        after ? "border-[#E3E3E3] bg-white" : "border-[#E3E3E3] bg-[#F5F5F5]",
+      )}
+    >
+      <span
+        className={cn(
+          "flex size-5 shrink-0 items-center justify-center rounded-full border",
+          after
+            ? "border-[#007EFF] bg-[#007EFF] text-[#F5F5F5]"
+            : "border-[#B2B2B2] bg-white text-[#B2B2B2]",
+        )}
+        aria-hidden
+      >
+        {after ? (
+          <Tick className="size-2.5" />
+        ) : (
+          <span className="size-1.5 rounded-full bg-current" />
+        )}
+      </span>
+
+      <h4
+        className={cn(
+          MONO,
+          "ip-mono text-[12px] font-semibold uppercase tracking-[0.06em]",
+          after ? "text-[#007EFF]" : "text-[#878787]",
+        )}
+      >
+        {title}
+      </h4>
+    </div>
+  );
+}
+
+function TrackCell({
+  step,
+  index,
+  tone,
+}: {
+  step?: string;
+  index: number;
+  tone: "before" | "after";
+}) {
+  const after = tone === "after";
+  const on = stepOn(index);
+
+  return (
+    <div className="relative flex items-center gap-4 max-600:gap-3.5">
+      <span
+        className={cn(
+          "absolute -inset-x-3 inset-y-1.5 z-0 rounded-[8px] opacity-0",
+          after ? "bg-[#F5F5F5]" : "bg-[#EFEFEF]",
+        )}
+        style={on}
+        aria-hidden
+      />
+
+      <span
+        className="relative z-[2] flex size-7 shrink-0 items-center justify-center"
+        aria-hidden
+      >
+        <span
+          className={cn(
+            "absolute inset-0 rounded-full border bg-white",
+            after ? "border-[#CCE5FF]" : "border-[#E3E3E3]",
+          )}
+        />
+        <span
+          className={cn(
+            "absolute inset-0 rounded-full border opacity-0",
+            after ? "border-[#007EFF] bg-[#CCE5FF]" : "border-[#B2B2B2] bg-[#F5F5F5]",
+          )}
+          style={on}
+        />
+        <span
+          className={cn(
+            MONO,
+            "ip-mono relative text-[10px] font-bold",
+            after ? "text-[#007EFF]" : "text-[#878787]",
+          )}
+        >
+          {index + 1}
+        </span>
+      </span>
+
+      <span
+        className={cn(
+          "relative z-[2] min-w-0 text-[14px] leading-[1.55]",
+          after ? "text-ink" : "text-[#606060]",
+        )}
+      >
+        {step}
+      </span>
+    </div>
+  );
+}

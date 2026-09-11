@@ -1,0 +1,122 @@
+/* Privacy Policy + Terms of Service — Homepage type system, legal-document layout. */
+
+.ip-page .ip-legal-doc {
+  width: 100%;
+  max-width: 720px;
+  margin-inline: auto;
+}
+
+.ip-page .ip-legal-doc h2 {
+  font-family: var(--font-hl-sans), "Manrope", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+  color: #1a1a1a;
+  margin: 40px 0 14px;
+}
+
+.ip-page .ip-legal-doc h2:first-child {
+  margin-top: 0;
+}
+
+.ip-page .ip-legal-doc h3 {
+  font-family: var(--font-hl-sans), "Manrope", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: -0.015em;
+  color: #1a1a1a;
+  margin: 28px 0 12px;
+}
+
+.ip-page .ip-legal-doc p {
+  font-size: 16px;
+  line-height: 1.65;
+  color: #606060;
+  margin: 0 0 16px;
+}
+
+.ip-page .ip-legal-doc ul,
+.ip-page .ip-legal-doc ol {
+  font-size: 16px;
+  line-height: 1.65;
+  color: #606060;
+  margin: 0 0 16px;
+  padding-left: 22px;
+}
+
+.ip-page .ip-legal-doc li {
+  margin: 0 0 6px;
+}
+
+.ip-page .ip-legal-doc a {
+  color: #007eff;
+  text-decoration: underline;
+}
+
+.ip-page .ip-legal-doc a:hover {
+  color: #006ad6;
+}
+
+.ip-page .ip-legal-doc strong {
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.ip-legal-main > section:first-of-type .ip-h1,
+.ip-legal-main > section:first-of-type .ip-lead {
+  width: 100%;
+  max-width: 720px;
+  margin-inline: auto;
+  text-align: left;
+}
+
+.ip-page .ip-legal-archive {
+  margin-top: 56px;
+  border-top: 1px solid #e3e3e3;
+  padding-top: 8px;
+}
+
+.ip-page .ip-legal-archive-toggle {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 12px;
+  padding: 18px 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  text-align: left;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  color: #1a1a1a;
+}
+
+.ip-page .ip-legal-archive-toggle:hover {
+  color: #007eff;
+}
+
+.ip-page .ip-legal-chevron {
+  display: inline-flex;
+  flex-shrink: 0;
+  width: 8px;
+  height: 8px;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: rotate(-45deg);
+  transition: transform 0.2s ease;
+}
+
+.ip-page .ip-legal-chevron.is-open {
+  transform: rotate(45deg);
+}
+
+@media (max-width: 860px) {
+  .ip-page .ip-legal-doc h2 {
+    font-size: 17px;
+    margin-top: 32px;
+  }
+}

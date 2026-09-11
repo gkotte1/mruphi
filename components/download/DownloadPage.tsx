@@ -1,7 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Icon, type IconName } from "@/components/icons";
-import { cn } from "@/lib/cn";
+import { IpWrap } from "@/components/inner-page/Shell";
+import Reveal from "@/components/module-page/Reveal";
 
 /**
  * /download-app/ - wording and destinations from
@@ -82,12 +83,9 @@ const MODULES: { index: string; title: string; body: string; icon: IconName }[] 
     },
   ];
 
-const SHELL = "mx-auto w-full max-w-[1280px] px-10 max-1200:px-8 max-600:px-4";
-const H2 = "type-h2 text-ink";
-
 export default function DownloadPage() {
   return (
-    <main className="bg-white pt-[80px]">
+    <main>
       <Platforms />
       <Modules />
     </main>
@@ -96,32 +94,50 @@ export default function DownloadPage() {
 
 function Platforms() {
   return (
-    <section
-      aria-labelledby="devices"
-      className="bg-white pb-24 pt-16 max-1024:pb-20 max-1024:pt-12 max-600:pb-16 max-600:pt-10"
-    >
-      <div className={SHELL}>
-        <div className="mx-auto max-w-[700px] text-center">
-          <p className="type-label text-brand-dark">Download</p>
+    <section aria-labelledby="devices" style={{ padding: "40px 0 96px" }}>
+      <IpWrap>
+        <nav
+          className="ip-mono"
+          aria-label="Breadcrumb"
+          style={{
+            display: "flex",
+            flexWrap: "wrap",
+            alignItems: "center",
+            gap: 8,
+            marginBottom: 40,
+            fontSize: 12.5,
+            color: "#878787",
+          }}
+        >
+          <Link href="/">Home</Link>
+          <span style={{ color: "#B2B2B2" }}>/</span>
+          <span style={{ color: "#1A1A1A", fontWeight: 600 }}>Download App</span>
+        </nav>
 
-          <h2 id="devices" className={cn(H2, "mt-4")}>
-            Murphi.ai on Every Device
-          </h2>
-          <p className="type-lead mt-5 text-grey-dk">
-            Access Murphi.ai from your iPhone, Android device, or any web browser.
-            One login - all your modules, all your data, wherever you are.
-          </p>
-        </div>
+        <Reveal>
+          <div className="mx-auto max-w-[700px] text-center">
+            <p className="ip-eyebrow" style={{ color: "#007EFF" }}>
+              Download
+            </p>
 
-        {/* One surface split three ways, rather than three floating cards. */}
-        <ul className="mx-auto mt-12 grid max-w-[1080px] grid-cols-3 gap-px overflow-hidden rounded-[24px] border border-grey-mid bg-grey-mid shadow-[0_22px_54px_-40px_rgba(15,29,84,0.55)] max-1024:grid-cols-1 max-600:mt-9">
+            <h1 id="devices" className="ip-h1 ip-serif" style={{ marginTop: 16 }}>
+              Murphi.ai on Every Device
+            </h1>
+            <p className="ip-lead" style={{ marginTop: 18, fontSize: 18 }}>
+              Access Murphi.ai from your iPhone, Android device, or any web browser.
+              One login - all your modules, all your data, wherever you are.
+            </p>
+          </div>
+        </Reveal>
+
+        <ul className="ip-ruled mx-auto mt-12 grid max-w-[1080px] grid-cols-3 max-1024:grid-cols-1 max-600:mt-9">
           {PLATFORMS.map((platform) => (
-            <li key={platform.title} className="flex bg-white">
+            <li key={platform.title} className="flex">
               <Link
                 href={platform.href}
-                className="group flex w-full flex-col p-8 transition-colors duration-200 hover:bg-grey-bg max-600:p-6"
+                className="ip-link-card group flex w-full flex-col p-8 transition-colors duration-200 hover:bg-[#F5F5F5] max-600:p-6"
               >
-                <span className="flex size-14 items-center justify-center rounded-[16px] border border-grey-mid bg-grey-bg p-2.5 transition-colors duration-200 group-hover:border-brand-border group-hover:bg-white">
+                <span className="flex size-14 items-center justify-center rounded-[8px] border border-[#E3E3E3] bg-[#F5F5F5] p-2.5 transition-colors duration-200 group-hover:border-[#007EFF] group-hover:bg-white">
                   <Image
                     src={platform.src}
                     alt=""
@@ -135,61 +151,59 @@ function Platforms() {
                   {platform.title}
                 </h3>
 
-                <p className="mt-3.5 text-[13.5px] leading-relaxed text-grey-dk/85">
+                <p className="mt-3.5 text-[13.5px] leading-relaxed text-[#606060]">
                   {platform.body}
                 </p>
 
-                <span className="mt-auto flex items-center gap-2 pt-6 text-[13.5px] font-bold text-brand-dark transition-colors duration-200 group-hover:text-brand-deep">
+                <span className="mt-auto flex items-center gap-2 pt-6 text-[13.5px] font-bold text-[#007EFF]">
                   {platform.cta}
                 </span>
               </Link>
             </li>
           ))}
         </ul>
-      </div>
+      </IpWrap>
     </section>
   );
 }
 
 function Modules() {
   return (
-    <section
-      aria-labelledby="modules"
-      className="bg-white py-24 max-1024:py-20 max-600:py-16"
-    >
-      <div className={SHELL}>
-        <p className="type-label text-center text-brand-dark">What You Can Do</p>
+    <section aria-labelledby="modules" className="ip-section ip-band">
+      <IpWrap>
+        <p className="ip-eyebrow text-center">What You Can Do</p>
 
-        <h2 id="modules" className={cn(H2, "mt-4 text-center")}>
+        <h2 id="modules" className="ip-h2 ip-serif mt-4 text-center">
           All Modules. One App.
         </h2>
 
-        {/* A ruled index - six capabilities read down, not six boxes. */}
-        <ul className="mx-auto mt-12 grid max-w-[1080px] grid-cols-2 gap-x-14 border-t border-grey-mid max-1024:gap-x-10 max-768:grid-cols-1 max-600:mt-9">
+        <ul className="mx-auto mt-12 grid max-w-[1080px] grid-cols-2 gap-x-14 border-t border-[#E3E3E3] max-1024:gap-x-10 max-768:grid-cols-1 max-600:mt-9">
           {MODULES.map((module) => (
             <li
               key={module.index}
-              className="group flex items-start gap-5 border-b border-grey-mid py-7 max-600:gap-4 max-600:py-6"
+              className="group flex items-start gap-5 border-b border-[#E3E3E3] py-7 max-600:gap-4 max-600:py-6"
             >
               <span className="flex shrink-0 flex-col items-center gap-2.5">
-                <span className="flex size-10 items-center justify-center rounded-card border border-brand-border/80 bg-brand-tint text-brand-dark transition-colors duration-200 group-hover:border-transparent group-hover:bg-brand group-hover:text-grey-bg">
+                <span className="flex size-10 items-center justify-center rounded-[8px] border border-[#E3E3E3] bg-[#F5F5F5] text-[#007EFF] transition-colors duration-200 group-hover:border-transparent group-hover:bg-[#007EFF] group-hover:text-white">
                   <Icon name={module.icon} width={18} height={18} />
                 </span>
-                <span className="type-micro text-grey-dk/35">{module.index}</span>
+                <span className="ip-mono text-[10.5px] font-semibold tracking-[0.06em] text-[#B2B2B2]">
+                  {module.index}
+                </span>
               </span>
 
               <span className="min-w-0">
                 <h3 className="text-[16px] font-bold leading-snug tracking-[-0.02em] text-ink">
                   {module.title}
                 </h3>
-                <p className="mt-2.5 text-[13.5px] leading-relaxed text-grey-dk/85">
+                <p className="mt-2.5 text-[13.5px] leading-relaxed text-[#606060]">
                   {module.body}
                 </p>
               </span>
             </li>
           ))}
         </ul>
-      </div>
+      </IpWrap>
     </section>
   );
 }

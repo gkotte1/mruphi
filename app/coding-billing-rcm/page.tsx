@@ -10,13 +10,9 @@ import {
 } from "@/lib/schema";
 import { pageMetadata } from "@/lib/site";
 import Reveal from "@/components/module-page/Reveal";
-import {
-  Breadcrumb,
-  FinalCta,
-  ModuleSection,
-  PageHero,
-  TrustDot,
-} from "@/components/module-page/sections";
+import InnerHero from "@/components/inner-page/Hero";
+import { FinalCta } from "@/components/inner-page/kit";
+import { InnerPage, IpEyebrow, IpHead, IpWrap } from "@/components/inner-page/Shell";
 import ClientHub from "@/components/coding-billing-rcm/Hub";
 import BrandSwitch from "@/components/coding-billing-rcm/BrandSwitch";
 import Toolset, { type Tool } from "@/components/coding-billing-rcm/Toolset";
@@ -144,30 +140,22 @@ const OUTCOMES = [
 
 export default function CodingBillingRcmPage() {
   return (
-    <div>
+    <InnerPage>
       <JsonLd data={faqSchema(FAQS.codingBillingRcm, "/coding-billing-rcm/")} />
       <JsonLd data={breadcrumbSchema("/coding-billing-rcm/", "Coding, Billing, RCM & Consulting Companies")} />
 
       <Navbar />
 
-      {/* The navigation is position:fixed, so it occupies no space in flow.
-          Without this offset the breadcrumb renders behind it and only clears
-          the bar once the page scrolls. */}
-      <main className="bg-white pt-[80px]">
-        <Breadcrumb current="Coding, Billing, RCM & Consulting Companies" section="who-we-serve" />
-
-        <PageHero
+      <main>
+        <InnerHero
+          current="Coding, Billing, RCM & Consulting Companies"
+          parent={{ label: "Who We Serve", href: "/#serve" }}
           eyebrow="Who We Serve · Consultants"
           title="One Tuesday. Forty Clients."
           storyTag="Tuesday, 8:00 AM"
           story="Priya has forty agency clients on her roster and one Tuesday to get through OASIS review for all of them. Every client has its own EHR, its own quirks, its own deadline."
           lede="Murphi gives coding and billing consultants AI-powered compliance and revenue tools that work the same way across every client - so Priya's Tuesday scales without adding a person to do it."
-          trust={
-            <>
-              HIPAA <TrustDot /> SOC 2 <TrustDot /> Client-level data separation
-            </>
-          }
-          hideSecondary
+          trust={["HIPAA", "SOC 2", "Client-level data separation"]}
           visual={
             <ClientHub
               clients={CLIENTS}
@@ -177,95 +165,110 @@ export default function CodingBillingRcmPage() {
           }
         />
 
-        <ModuleSection
-          kicker="Work the Way You Want"
-          heading="Two ways to run Priya's Tuesday."
-        >
-          <ModelSplit models={MODELS} />
-        </ModuleSection>
+        <section className="ip-section">
+          <IpWrap>
+            <IpHead>
+              <IpEyebrow>Work the Way You Want</IpEyebrow>
+              <h2 className="ip-h2 ip-serif" style={{ marginTop: 16, marginBottom: 18 }}>
+                Two ways to run Priya{"'"}s Tuesday.
+              </h2>
+            </IpHead>
+            <ModelSplit models={MODELS} />
+          </IpWrap>
+        </section>
 
-        <ModuleSection
-          kicker="What Runs on Every Client's Charts"
-          heading="AI tools for coding & billing consultants."
-        >
-          <Toolset tools={TOOLS} />
+        <section className="ip-section ip-band">
+          <IpWrap>
+            <IpHead>
+              <IpEyebrow>What Runs on Every Client{"'"}s Charts</IpEyebrow>
+              <h2 className="ip-h2 ip-serif" style={{ marginTop: 16, marginBottom: 18 }}>
+                AI tools for coding & billing consultants.
+              </h2>
+            </IpHead>
+            <Toolset tools={TOOLS} />
+            <Reveal>
+              <Note>
+                <strong className="text-ink">AI accuracy.</strong> 90–95% AI
+                accuracy on all reports, with a structured human review workflow so
+                Priya keeps quality control before anything reaches a client.
+              </Note>
+            </Reveal>
+          </IpWrap>
+        </section>
 
-          <Reveal>
-            <Note>
-              <strong className="text-ink">AI accuracy.</strong> 90–95% AI
-              accuracy on all reports, with a structured human review workflow so
-              Priya keeps quality control before anything reaches a client.
-            </Note>
-          </Reveal>
-        </ModuleSection>
-
-        <ModuleSection>
-          <StoryRule>Forty Clients, Two Timelines</StoryRule>
-          <Timelines
-            before={{
-              title: "Without Murphi",
-              steps: [
-                "Client forty-one means hiring reviewer forty-one",
-                "Review quality drifts depending on who's covering what that week",
-                "Turnaround slows every time the roster grows",
-                "Every client's reporting is assembled from scratch",
-              ],
-            }}
-            after={{
-              title: "With Murphi",
-              steps: [
-                "Client forty-one runs on the same platform as client one",
-                "Every client gets the identical, standardized review process",
-                "Repetitive chart analysis is automated - turnaround holds steady",
-                "Client data stays separated, even inside one platform",
-              ],
-            }}
-          />
-        </ModuleSection>
+        <section className="ip-section">
+          <IpWrap>
+            <StoryRule>Forty Clients, Two Timelines</StoryRule>
+            <Timelines
+              before={{
+                title: "Without Murphi",
+                steps: [
+                  "Client forty-one means hiring reviewer forty-one",
+                  "Review quality drifts depending on who's covering what that week",
+                  "Turnaround slows every time the roster grows",
+                  "Every client's reporting is assembled from scratch",
+                ],
+              }}
+              after={{
+                title: "With Murphi",
+                steps: [
+                  "Client forty-one runs on the same platform as client one",
+                  "Every client gets the identical, standardized review process",
+                  "Repetitive chart analysis is automated - turnaround holds steady",
+                  "Client data stays separated, even inside one platform",
+                ],
+              }}
+            />
+          </IpWrap>
+        </section>
 
         {/* The head is rendered inside the switch so the kicker, heading,
             control and panel all share one centre line. */}
-        <ModuleSection>
-          <Reveal>
-            <BrandSwitch
-              kicker="Your Name on the Door"
-              heading="White-label where it fits your business."
-              lede={"Toggle to see the same review presented under Murphi's brand - or under Priya's."}
-              options={[
-                { id: "murphi", label: "Murphi Brand" },
-                { id: "yours", label: "Your Brand" },
-              ]}
-              panels={[
-                {
-                  id: "murphi",
-                  body: (
-                    <ReviewSurface
-                      brand="Murphi.ai"
-                      status="Live"
-                      findings={FINDINGS}
-                      client="Client: Agency A"
-                    />
-                  ),
-                },
-                {
-                  id: "yours",
-                  body: (
-                    <ReviewSurface
-                      brand="Your Brand"
-                      status="Live"
-                      findings={FINDINGS}
-                      client="Client: Agency A"
-                    />
-                  ),
-                },
-              ]}
-            />
-          </Reveal>
-        </ModuleSection>
+        <section className="ip-section">
+          <IpWrap>
+            <Reveal>
+              <BrandSwitch
+                kicker="Your Name on the Door"
+                heading="White-label where it fits your business."
+                lede={"Toggle to see the same review presented under Murphi's brand - or under Priya's."}
+                options={[
+                  { id: "murphi", label: "Murphi Brand" },
+                  { id: "yours", label: "Your Brand" },
+                ]}
+                panels={[
+                  {
+                    id: "murphi",
+                    body: (
+                      <ReviewSurface
+                        brand="Murphi.ai"
+                        status="Live"
+                        findings={FINDINGS}
+                        client="Client: Agency A"
+                      />
+                    ),
+                  },
+                  {
+                    id: "yours",
+                    body: (
+                      <ReviewSurface
+                        brand="Your Brand"
+                        status="Live"
+                        findings={FINDINGS}
+                        client="Client: Agency A"
+                      />
+                    ),
+                  },
+                ]}
+              />
+            </Reveal>
+          </IpWrap>
+        </section>
 
         <Outcomes heading="What consulting firms get back." outcomes={OUTCOMES} />
 
-        <FaqSection items={FAQS.codingBillingRcm} divider="none" />
+        <div className="ip-faq">
+          <FaqSection items={FAQS.codingBillingRcm} divider="none" />
+        </div>
 
         <FinalCta
           heading="Make Every Tuesday Feel Like Client One."
@@ -274,6 +277,6 @@ export default function CodingBillingRcmPage() {
       </main>
 
       <Footer />
-    </div>
+    </InnerPage>
   );
 }

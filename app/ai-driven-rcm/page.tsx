@@ -11,14 +11,9 @@ import {
 } from "@/lib/schema";
 import { pageMetadata } from "@/lib/site";
 import Reveal from "@/components/module-page/Reveal";
-import { FetchNote, SoonCallout } from "@/components/module-page/extras";
-import {
-  Breadcrumb,
-  FinalCta,
-  ModuleSection,
-  PageHero,
-  TrustDot,
-} from "@/components/module-page/sections";
+import InnerHero from "@/components/inner-page/Hero";
+import { FetchNote, FinalCta, SoonCallout } from "@/components/inner-page/kit";
+import { InnerPage, IpEyebrow, IpHead, IpWrap } from "@/components/inner-page/Shell";
 import ClaimReadiness from "@/components/ai-driven-rcm/HeroVisual";
 import Mechanics from "@/components/ai-driven-rcm/Mechanics";
 import {
@@ -34,9 +29,6 @@ export const metadata: Metadata = pageMetadata("/ai-driven-rcm/", {
     "AI-driven revenue cycle management for home health and hospice: claim readiness, denial prevention and ERA/EOB reconciliation tracked across the full claim lifecycle.",
 });
 
-/* The claim lifecycle, as one continuous nine-stage run, numbered 01–09.
-   Payment and reconciliation stay two independent stages - the money arriving
-   and the money being matched are separate events. */
 const STAGES = [
   { num: "01", label: "Eligibility" },
   { num: "02", label: "Authorization" },
@@ -88,20 +80,16 @@ const OUTCOMES = [
 
 export default function AiDrivenRcmPage() {
   return (
-    <div>
+    <InnerPage>
       <JsonLd data={moduleSchema("/ai-driven-rcm/")} />
       <JsonLd data={faqSchema(FAQS.aiDrivenRcm, "/ai-driven-rcm/")} />
       <JsonLd data={breadcrumbSchema("/ai-driven-rcm/", "AI-Driven RCM")} />
 
       <Navbar />
 
-      {/* The navigation is position:fixed, so it occupies no space in flow.
-          Without this offset the breadcrumb renders behind it and only clears
-          the bar once the page scrolls. */}
-      <main className="bg-white pt-[80px]">
-        <Breadcrumb current="AI-Driven RCM" />
-
-        <PageHero
+      <main>
+        <InnerHero
+          current="AI-Driven RCM"
           eyebrow="AI-Driven RCM"
           badge="Launching Soon"
           title="Meet the Problem Before the Payer Does."
@@ -110,13 +98,8 @@ export default function AiDrivenRcmPage() {
             'A denial letter arrives: "insufficient documentation." Ninety days too late to fix what actually happened - a coding step that never made it into the claim in the first place.'
           }
           lede="Murphi tracks each claim across eligibility, authorization, documentation and coding - and intercepts the same kind of issue while it's still a fixable step, not a finished denial."
-          trust={
-            <>
-              HIPAA <TrustDot /> SOC 2 <TrustDot /> Human review before submission
-            </>
-          }
+          trust={["HIPAA", "SOC 2", "Human review before submission"]}
           primaryLabel="Join the Early Access List"
-          secondaryLabel="See the Workflow"
           visual={
             <ClaimReadiness
               title="Claim Readiness"
@@ -136,62 +119,78 @@ export default function AiDrivenRcmPage() {
           }
         />
 
-        <ModuleSection>
-          <Reveal>
-            <SoonCallout>
-              <strong className="text-brand-dark">Launching Soon.</strong> AI-Driven
-              RCM is in active development. This page reflects the planned workflow
-              - capabilities may change before general availability.
-            </SoonCallout>
-          </Reveal>
+        <section className="ip-section ip-band">
+          <IpWrap>
+            <Reveal>
+              <SoonCallout>
+                <strong style={{ color: "#007EFF" }}>Launching Soon.</strong> AI-Driven
+                RCM is in active development. This page reflects the planned workflow
+                - capabilities may change before general availability.
+              </SoonCallout>
+            </Reveal>
 
-          <StoryRule>The Same Gap, Two Moments</StoryRule>
+            <StoryRule>The Same Gap, Two Moments</StoryRule>
 
-          <Timelines
-            before={{
-              title: "Found in the Denial Letter",
-              steps: [
-                "Claim submitted, then denials are analyzed afterward",
-                "EOB/ERA reconciliation is manual and time-consuming",
-                "An appeal package is assembled from scratch, ninety days late",
-                "The same root cause repeats on the next claim",
-              ],
-            }}
-            after={{
-              title: "Found Before the Claim Ships",
-              steps: [
-                "Claim readiness is checked at each stage, before submission",
-                "Issues are intercepted and routed for resolution",
-                "Denial analysis and appeal assembly are AI-assisted, when needed",
-                "Payment reconciliation happens against 837/835 data",
-              ],
-            }}
-          />
-        </ModuleSection>
+            <Timelines
+              before={{
+                title: "Found in the Denial Letter",
+                steps: [
+                  "Claim submitted, then denials are analyzed afterward",
+                  "EOB/ERA reconciliation is manual and time-consuming",
+                  "An appeal package is assembled from scratch, ninety days late",
+                  "The same root cause repeats on the next claim",
+                ],
+              }}
+              after={{
+                title: "Found Before the Claim Ships",
+                steps: [
+                  "Claim readiness is checked at each stage, before submission",
+                  "Issues are intercepted and routed for resolution",
+                  "Denial analysis and appeal assembly are AI-assisted, when needed",
+                  "Payment reconciliation happens against 837/835 data",
+                ],
+              }}
+            />
+          </IpWrap>
+        </section>
 
-        <ModuleSection
-          id="how"
-          kicker="The Mechanics"
-          heading="A claim's path, end to end."
-        >
-          <Mechanics stages={STAGES} />
-        </ModuleSection>
+        <section id="how" className="ip-section">
+          <IpWrap>
+            <IpHead>
+              <IpEyebrow>The Mechanics</IpEyebrow>
+              <h2 className="ip-h2 ip-serif" style={{ marginTop: 16, marginBottom: 18 }}>
+                A claim{"'"}s path, end to end.
+              </h2>
+            </IpHead>
+            <Mechanics stages={STAGES} />
+          </IpWrap>
+        </section>
 
-        <ModuleSection kicker="What's Automated" heading="What Murphi automates.">
-          <AutomatedPanel
-            items={AUTOMATED}
-            note={
-              <FetchNote>
-                Murphi surfaces issues and assists resolution - claim submission
-                decisions remain with your team.
-              </FetchNote>
-            }
-          />
-        </ModuleSection>
+        <section className="ip-section">
+          <IpWrap>
+            <IpHead>
+              <IpEyebrow>What{"'"}s Automated</IpEyebrow>
+              <h2 className="ip-h2 ip-serif" style={{ marginTop: 16, marginBottom: 18 }}>
+                What Murphi automates.
+              </h2>
+            </IpHead>
+            <AutomatedPanel
+              items={AUTOMATED}
+              note={
+                <FetchNote>
+                  Murphi surfaces issues and assists resolution - claim submission
+                  decisions remain with your team.
+                </FetchNote>
+              }
+            />
+          </IpWrap>
+        </section>
 
         <Outcomes heading="What agencies get back." outcomes={OUTCOMES} />
 
-        <FaqSection items={FAQS.aiDrivenRcm} divider="none" />
+        <div className="ip-faq">
+          <FaqSection items={FAQS.aiDrivenRcm} divider="none" />
+        </div>
 
         <FinalCta
           heading={"Read the Denial Letter Before It's Written."}
@@ -201,6 +200,6 @@ export default function AiDrivenRcmPage() {
       </main>
 
       <Footer />
-    </div>
+    </InnerPage>
   );
 }
