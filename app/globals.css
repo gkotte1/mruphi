@@ -920,3 +920,18 @@
     opacity: 0;
   }
 }
+
+/* BotWyse launcher is position:fixed at bottom:20px inside a closed shadow
+   root. Establishing this host as its containing block lets us raise the
+   button (~96px from the viewport bottom) without changing size, colour or
+   the 20px right inset. */
+botwyse-widget {
+  position: fixed;
+  right: 0;
+  bottom: 76px;
+  width: 0;
+  height: 0;
+  overflow: visible;
+  transform: translateY(0);
+  z-index: 999999;
+}

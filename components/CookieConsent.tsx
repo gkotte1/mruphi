@@ -77,7 +77,7 @@ export default function CookieConsent() {
         left: 0,
         right: 0,
         bottom: 0,
-        zIndex: 900,
+        zIndex: 2147483000,
         boxSizing: "border-box",
         width: "100%",
         maxWidth: "100%",

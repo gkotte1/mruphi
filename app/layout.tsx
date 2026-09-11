@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Manrope, Plus_Jakarta_Sans } from "next/font/google";
+import Script from "next/script";
 import CookieConsent from "@/components/CookieConsent";
 import { JsonLd } from "@/components/JsonLd";
 import { organizationSchema } from "@/lib/schema";
@@ -94,6 +95,14 @@ export default function RootLayout({
         {/* Asked once, site-wide. Renders nothing once a choice is stored, and
             never blocks the page. */}
         <CookieConsent />
+
+        {/* BotWyse chat widget. Loaded once from the root layout so every
+            route shares the same agent, including after client navigations. */}
+        <Script
+          src="https://chat.postwyse.com/botwyse-widget.js"
+          data-agent-key="pb_344454aa55d69bcbff0f866c2720810aca132ece55c6151c"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );
