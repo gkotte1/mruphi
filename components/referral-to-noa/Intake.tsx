@@ -153,14 +153,24 @@ export function SourceCard({
   name,
   live,
   delay = "0s",
+  full,
 }: {
   name: string;
   /** Sources are always open; the pulse just shows the line is alive. */
   live?: boolean;
   delay?: string;
+  /** Show the full source name instead of a truncated first letter. */
+  full?: boolean;
 }) {
   return (
-    <div className="flex items-center gap-2 rounded-[8px] border border-[#E3E3E3] bg-white px-2.5 py-2 shadow-[0_6px_16px_-12px_rgba(15,29,84,.6)]">
+    <div
+      className={cn(
+        "relative rounded-[8px] border border-[#E3E3E3] bg-white shadow-[0_6px_16px_-12px_rgba(15,29,84,.6)]",
+        full
+          ? "flex min-w-0 flex-col items-center gap-1 px-1 py-2"
+          : "flex items-center gap-2 px-2.5 py-2",
+      )}
+    >
       <span
         className="flex size-6 shrink-0 items-center justify-center rounded-[7px] border border-[#E3E3E3] bg-[#F5F5F5] text-[#007EFF]"
         aria-hidden
@@ -168,13 +178,24 @@ export function SourceCard({
         <Icon name={SOURCE_ICONS[name] ?? "doc"} width={12} height={12} />
       </span>
 
-      <span className={cn(MONO, "min-w-0 flex-1 truncate text-[11.5px] font-semibold text-ink")}>
+      <span
+        className={cn(
+          MONO,
+          "font-semibold text-ink",
+          full
+            ? "whitespace-nowrap text-center text-[11.5px] leading-none"
+            : "min-w-0 flex-1 truncate text-[11.5px]",
+        )}
+      >
         {name}
       </span>
 
       {live ? (
         <span
-          className="size-1.5 shrink-0 rounded-full bg-[#007EFF]"
+          className={cn(
+            "size-1.5 rounded-full bg-[#007EFF]",
+            full ? "absolute top-1.5 right-1.5" : "shrink-0",
+          )}
           style={{ animation: `mp-blink 2.4s ease-in-out infinite ${delay}` }}
           aria-hidden
         />

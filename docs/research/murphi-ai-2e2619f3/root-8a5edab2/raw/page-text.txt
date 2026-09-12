@@ -1,0 +1,654 @@
+body data-cmplz=1 class="home wp-singular page-template page-template-elementor_header_footer page page-id-15703 wp-embed-responsive wp-theme-techkit theme-techkit woocommerce-no-js ehf-header ehf-footer ehf-template-techkit ehf-stylesheet-techkit rtsb-shopbuilder-plugin rtsb-shopbuilder-v-3.4.1 rtsb_theme_Murphi rtsb-elementor-pro-v-4.2.2 woocommerce jkit-color-scheme header-style-1 footer-style-3 no-sidebar right-sidebar product-grid-view elementor-default elementor-template-full-width elementor-kit-427 elementor-page elementor-page-15703">
+Skip to main content
+Murphi AI
+HIPAA Compliant
+SOC 2 Certified
+ISO 27001
+BAA Signed
+Any EHR Integration
+All US Time Zones
+24/7 Support ·
+Submit a Support Ticket →
+⬦ Announcement
+Murphi.ai is proud to announce that it has been recognized as a
+strong>Bronze Stevie® Award Winner
+/strong> at the prestigious 2026 American Business Awards®, one of the most respected business award programs in the United States.
+/strong>
+Read more →
+strong>Healthcare Synergy
+/strong>
+·
+strong>iTherapyDocs
+/strong>
+·
+strong>Curantis Solutions
+/strong>
+·
+strong>SouthSide CHC
+/strong>
+·
+strong>Carefluence
+/strong>
+·
+strong>Percensys CORE
+/strong>
+·
+strong>DocuguardAI
+/strong>
+·
+strong>AAIC
+/strong>
+·
+strong>Synapse Digital
+/strong>
+·
+strong>AWS
+/strong>
+·
+strong>Google Cloud
+/strong>
+·
+strong>Twilio
+/strong>
+·
+strong>OpenAI
+/strong>
+·
+strong>VertexAI
+/strong>
+·
+strong>Claude
+/strong>
+·
+strong>Everyware
+/strong>
+·
+strong>Fortis
+/strong>
+·
+strong>Sinch
+/strong>
+·
+strong>Vonage
+/strong>
+·
+strong>Oasis Technologies Group
+/strong>
+·
+strong>WhatsApp
+/strong>
+·
+strong>Smartsheet
+/strong>
+·
+strong>360 Dialogue
+/strong>
+·
+strong>Ejabberd
+/strong>
+·
+strong>Healthcare Synergy
+/strong>
+·
+strong>iTherapyDocs
+/strong>
+·
+strong>Curantis Solutions
+/strong>
+·
+strong>SouthSide CHC
+/strong>
+·
+strong>Carefluence
+/strong>
+·
+strong>Percensys CORE
+/strong>
+·
+strong>DocuguardAI
+/strong>
+·
+strong>AAIC
+/strong>
+·
+strong>Synapse Digital
+/strong>
+·
+strong>AWS
+/strong>
+·
+strong>GCP / Google Cloud
+/strong>
+·
+strong>Twilio
+/strong>
+·
+strong>OpenAI
+/strong>
+·
+strong>VertexAI
+/strong>
+·
+strong>Claude
+/strong>
+·
+strong>Everyware
+/strong>
+·
+strong>Fortis
+/strong>
+·
+strong>Sinch
+/strong>
+·
+strong>Vonage
+/strong>
+·
+strong>Oasis Technologies Group
+/strong>
+·
+strong>WhatsApp
+/strong>
+·
+strong>Smartsheet
+/strong>
+·
+strong>360 Dialogue
+/strong>
+·
+How Murphi.ai Works
+Connect via APIs or Login to
+Experience AI Automation
+Murphi.ai is an AI-native platform built for three distinct audiences — each with their own integration path, their own model, and their own set of benefits.
+PaaS — For Healthcare Platforms
+Add AI features to your platform via encrypted APIs
+Integrate Murphi.ai into your EHR or healthcare platform via encrypted API, SSO, or iFrame. Your customers get AI-powered workflows immediately — under your brand, with zero token cost to you.
+ul class="model-bullets">
+Encrypted API · SSO · iFrame · FHIR R4 · HL7 v2
+White-labeled — your brand, your customers
+Zero token cost — Murphi absorbs AI infrastructure
+Data and IP remain yours entirely
+/ul>
+Explore PaaS →
+SaaS — For Providers & Agencies
+Log in and deploy AI modules for your workflows
+Log into Murphi.ai and access AI modules purpose-built for your workflows — clinical documentation, revenue assurance, patient payments, and contract optimization.
+ul class="model-bullets">
+4 core live modules — more coming soon
+Integrates with your existing EHR
+Per-module reports, analytics, and audit logs
+HIPAA-grade security across every module
+/ul>
+See core modules →
+Channel — For Compliance, QAPI & Billing Consultants
+Serve your clients better with AI
+Compliance consultants, QAPI firms, and coding/billing companies use Murphi.ai to deliver AI-powered services to their agency clients — their way.
+ul class="model-bullets">
+Managed Services — run AI reports for your clients
+Self-Service — give clients their own workspace
+White-label the entire platform under your brand
+90–95% AI accuracy + human review workflow
+/ul>
+Explore Channel Partners →
+/body>
+/html>
+!DOCTYPE html>
+html lang="en">
+head>
+meta charset="UTF-8">
+meta name="viewport" content="width=device-width,initial-scale=1.0">
+title>Solutions by Care Setting — Murphi.ai
+/title>
+/head>
+body>
+Solutions by Care Setting
+Your Care Setting.
+Your Solution.
+Select your care setting to see what Murphi.ai delivers for you — clinical documentation, revenue assurance, patient payments, and more.
+⬦ Post-Acute Care
+⬦ Health Systems
+⬦ Primary & Specialty
+⬦ Mental & Behavioral
+⬦ EHR Companies
+Home Health, Hospice & Palliative Care
+Home Health Agencies
+Hospice Organizations
+Palliative Care Teams
+SNFs
+Post-acute care runs on documentation complexity, reimbursement rules, and OASIS compliance. Murphi.ai automates the highest-burden workflows so clinicians spend time on patients, not paperwork.
+Ambient AI / Scribe
+Record visits, auto-generate OASIS notes, SN visit notes, and upload to EHR. 70% time saved.
+Revenue Assurance
+AI-driven coding review, OASIS accuracy validation, and compliance documentation for HH/hospice billing.
+Private Pay
+Text-based collection of co-pays and patient-responsible amounts. AR cycle drops from 100 to 15 days.
+Care Coordination
+PHI-secure messaging, document sharing, and EHR-synced care team communication.
+Explore Post-Acute Solution →
+Outcomes for Post-Acute Customers
+70%
+Reduction in documentation time
+98.7%
+Transcription accuracy
+75%
+Bad debt cut
+15 days
+AR cycle (down from 100+)
+"Murphi AI has truly transformed how we approach clinical workflow documentation in hospice and palliative care. Documentation that used to take up valuable clinical time is now streamlined, accurate, and intuitive — empowering our clients to focus more on patient care."
+Vicki Goodman
+Chief Revenue Officer, Curantis Solutions
+Health Systems & Hospitals
+Health Systems
+Hospitals
+Ambulatory Networks
+IDNs
+Health systems carry complex payer contracts, high patient-responsible balances, and growing documentation burdens. Murphi.ai automates all three — optimizing contracts, collecting patient payments, and reducing clinician charting time.
+AI Contract Analyzer
+PADU Plus methodology — surfaces payer underpayments, flags non-compliant clauses, and optimizes reimbursement rates across your payer mix.
+AI Patient Financials
+Automate co-pay, deductible, and coinsurance collections via text-to-pay. Provider paid within 48 hours via Everyware gateway.
+Ambient AI
+Voice-to-note clinical documentation for inpatient and outpatient clinicians. Reduces charting time by 70% — synced directly to your EHR.
+RCM Automation
+Pre-authorization, coding accuracy, claims submission, denial management, and remittance reconciliation — coming soon.
+Explore Health Systems Solution →
+Outcomes for Health Systems
+10-20%
+Revenue Increase with Contract Analyzer
+4-6 Hrs
+Daily Time Saved with Ambient AI Solutions
+15 Days
+AR Cycle Reduction from 100+ Days
+48 hrs
+Funds in bank account
+"Stuart Smith, Vice President of Finance at Duke University Health System, has joined Murphi.ai as Board Advisor — bringing deep health system financial expertise to guide our enterprise and health system strategy."
+Murphi.ai Board Announcement
+Stuart Smith · VP Finance, Duke University Health System
+Primary & Specialty Care
+Primary Care Practices
+CHCs / FQHCs
+Specialty Clinics
+DME
+Primary and specialty practices lose hours to charting and struggle to collect patient-responsible balances. Murphi.ai eliminates both — AI documentation from voice and automated text-to-pay collections, without adding headcount.
+Ambient AI
+Generate SOAP notes and specialty-specific templates (cardiology, sleep, pain, allergy, vascular) from voice. 55 languages. Syncs to your EHR automatically.
+AI Patient Financials
+Text-to-pay for co-pays, deductibles, and balances. Patients pay via SMS link — no app download required. AR cycle drops to 15 days.
+Billing & Claims — E&M
+Eligibility verification, charge readiness, ICD/CPT coding, claims submission, and denial management. Coming soon.
+Engage — HIPAA Messaging
+HIPAA-compliant patient messaging — reduce call volume and hold times. Coming soon.
+Explore Primary Care Solution →
+Outcomes for Primary & Specialty
+70%
+Documentation time saved
+↑60%
+Patient response rate
+80%
+Hold times & call volume
+48 hrs
+Average payment time
+"Our patients love to use the app and communicate easily over texting vs. calling and waiting on hold. We have greatly increased our response time and decreased our call volume and hold times."
+Kristen Anderson
+Administration, AAIC
+Mental & Behavioral Health
+Outpatient Behavioral
+SUD Programs
+Residential Treatment
+IOP / PHP
+Behavioral health documentation is high-volume, compliance-sensitive, and structured. Murphi.ai generates clinical notes from voice, automates self-pay collections, and keeps every session audit-ready — without adding administrative burden.
+Ambient AI
+Generate PIE, BIRP, SOAP, and DAP notes from voice. Assessment forms (GAD-7, PHQ-9, AUDIT-C) auto-populated. Every note audit-ready at session end.
+AI Patient Financials
+Self-pay and out-of-pocket collections via text-to-pay. Bad debt reduced by 75%. No patient app download required.
+Case Management
+Automate treatment plans, goal summaries, utilization reports, and care plan documentation directly from clinical conversations.
+Engage — HIPAA Messaging
+HIPAA-compliant care team and patient messaging. PHI-secure. Coming soon.
+Explore Mental Health Solution →
+Outcomes for Behavioral Health
+90%
+Time saved on progress notes
+100%
+Notes completed per session
+75%
+Self-pay bad debt reduction
+Always
+Audit-ready documentation
+"Murphi offers a high quality product and is absolutely wonderful to work with. Their team is responsive and supportive, and their product unmatched. Highly recommend!"
+Kylie Roy
+CEO, Percensys CORE Learning
+EHR / EMR & Tech Companies
+EHR Platforms
+RCM Companies
+Health IT Vendors
+PBM / DME / ERP
+Your customers want AI. Building it from scratch takes years. Murphi.ai gives your platform AI-powered clinical, revenue, and financial workflows via encrypted API — live in days, under your brand, at zero token cost to you.
+Encrypted API · SSO · iFrame
+Integrate once via REST API, SSO, or iFrame. FHIR R4 and HL7 v2 supported. Any EHR connected in days — no rebuild required.
+Fully White-Labeled
+Your logo, your UI, your pricing, your customer relationships. Your customers never see Murphi.ai — they see your product enhanced by AI.
+Your Data & IP
+All input and output data belongs entirely to you and your customers. Murphi.ai holds zero data rights — ever.
+AI Roadmap Support
+Co-develop features, map your AI journey, and access Murphi.ai's full module library — clinical, revenue, payments, and contracts.
+Explore EHR Partnership →
+Why EHR companies choose Murphi.ai
+15 days
+Time to first AI feature live
+Zero
+Token cost to you
+100%
+White-label capable
+Zero
+Rebuild required
+/body>
+/html>
+!DOCTYPE html>
+html lang="en">
+head>
+meta charset="UTF-8">
+meta name="viewport" content="width=device-width,initial-scale=1.0">
+title>Murphi.ai - Second Block
+/title>
+/head>
+body>
+SaaS Modules
+AI Automation for Clinicians, Compliance Consultants,
+br>
+Billers & Contract Analysts
+Each module has purpose-built workflows, reports, analytics, and audit logs — governed by HIPAA-grade security and role-based access control. Deploy one or all four.
+Module 01
+Ambient AI & Clinical Documentation
+Voice-to-note for home health, hospice, PCP, and mental health. OASIS, SOAP, SN notes, therapy notes, assessments — generated and synced to EHR automatically.
+Post-Acute
+Primary Care
+Mental Health
+Learn more →
+Module 02
+Revenue Assurance & Compliance
+AI-driven coding review and OASIS accuracy validation for post-acute agencies. Reduce denials, pass audits, and maximize legitimate reimbursement.
+Home Health
+Hospice
+SNF
+Learn more →
+Module 03
+AI Patient Financials
+Text-based patient payment platform for any segment. AR drops from 100 to 15 days. Bad debt cut by 75%. No EHR integration required to start.
+All Segments
+Co-pay
+Deductibles
+Learn more →
+Module 04
+Contract Analyzer
+AI-powered payer contract review and compliance auditing for health systems. Identify underpayments, flag non-compliant clauses, and optimize reimbursement rates.
+Health Systems
+Hospitals
+IDNs
+Learn more →
+Coming Soon
+Billing & Claims — Post-Acute
+Billing & Claims — E&M & Specialties
+Referral & Intake
+Credentialing
+For EHR & Tech Companies:
+Embed AI Features into Your Workflows with Encrypted APIs
+Murphi.ai integrates into your EHR or healthcare platform via encrypted API, SSO, or iFrame. Your customers get AI-powered clinical, RCM, and financial workflows immediately — under your brand, with zero token cost.
+ul class="paas-bullets">
+Encrypted REST API · SSO · iFrame · FHIR R4 · HL7 v2 · Agentic AI
+Fully white-labeled — your brand, your customer relationships
+Zero token cost — Murphi absorbs all AI infrastructure costs
+HIPAA · SOC 2 · ISO 27001 · BAA — enterprise-grade compliance
+Data and IP remain entirely yours
+/ul>
+Explore EHR Partnership →
+① Live PaaS Partners
+✓ LIVE
+Healthcare Synergy
+✓ LIVE
+Curantis Solutions
+✓ LIVE
+CORE Percensys
+✓ LIVE
+Synapse Digital
+② Encrypted API · SSO · iFrame
+Murphi.ai AI Platform
+HIPAA
+SOC 2
+ISO 27001
+BAA
+White-label
+③ Integration Methods
+Agentic AI
+RPA
+FHIR R4
+HL7 v2
+Direct API
+EHR Capability
+WellSky
+Axxess
+Kantime
+MatrixCare
+HCHB
+Netsmart
+EPIC
++ More
+Customer Reviews
+Real Outcomes.
+Real Customers.
+From PaaS partners and direct SaaS customers to primary care practices and behavioral health organizations — Murphi.ai delivers across every care setting.
+Post-Acute · Hospice
+★★★★★
+"Murphi AI has truly transformed how we approach clinical workflow documentation in hospice and palliative care. Documentation that used to take up valuable clinical time is now streamlined, accurate, and intuitive."
+VG
+Vicki Goodman
+CRO, Curantis Solutions
+EHR Platform · PaaS
+★★★★★
+"Murphi.ai transformed our Healthcare Synergy EHR with AI automation, enhanced clinician engagement, and streamlined workflows without disrupting development. Their team acts as a true extension of our engineering team."
+DC
+Dave Crow
+President, Healthcare Synergy
+Primary Care · Patient Payments
+★★★★★
+"We have been working with Murphi.ai for about 6 months. They have been instrumental in helping us set up a patient payment platform, all through text message. They adapt to our needs with consistent communication."
+MG
+Mara Garcia
+Revenue Cycle Manager, SouthSide CHC
+Primary Care · Patient Engagement
+★★★★★
+"Our patients love to use the app and communicate easily over texting vs. calling and waiting on hold. We have greatly increased our response time and decreased our call volume and hold times."
+KA
+Kristen Anderson
+Administration, AAIC
+Mental Health · PaaS
+★★★★★
+"Murphi.ai has been an incredible partner in transforming iTherapyDocs with AI-driven automation. Seamless rewrite, voice-to-text notes, progress notes, goals, and pre-authorization automation — saving valuable time across the board."
+PB
+Phillip Brow
+Co-founder, iTherapyDocs
+Mental Health · PaaS
+★★★★★
+"Murphi offers a high quality product and is absolutely wonderful to work with. Their team is responsive and supportive, and their product is truly unmatched in overall quality and performance. Highly recommend!"
+KR
+Kylie Roy
+CEO, Percensys CORE Learning
+Healthcare Platform · Integration
+★★★★★
+"It is a powerful patient engagement platform that simplifies interactions. It connects with EHR systems through the Carefluence FHIR API for data. Healthcare becomes more connected, efficient, and patient-friendly."
+LW
+Lloyd Williams
+Co-founder, Carefluence
+Post-Acute · Hospice
+★★★★★
+"Murphi AI has truly transformed how we approach clinical workflow documentation in hospice and palliative care. Documentation that used to take up valuable clinical time is now streamlined, accurate, and intuitive."
+VG
+Vicki Goodman
+CRO, Curantis Solutions
+EHR Platform · PaaS
+★★★★★
+"Murphi.ai transformed our Healthcare Synergy EHR with AI automation, enhanced clinician engagement, and streamlined workflows without disrupting development. Their team acts as a true extension of our engineering team."
+DC
+Dave Crow
+President, Healthcare Synergy
+Primary Care · Patient Payments
+★★★★★
+"We have been working with Murphi.ai for about 6 months. They have been instrumental in helping us set up a patient payment platform, all through text message. They adapt to our needs with consistent communication."
+MG
+Mara Garcia
+Revenue Cycle Manager, SouthSide CHC
+Primary Care · Patient Engagement
+★★★★★
+"Our patients love to use the app and communicate easily over texting vs. calling and waiting on hold. We have greatly increased our response time and decreased our call volume and hold times."
+KA
+Kristen Anderson
+Administration, AAIC
+Mental Health · PaaS
+★★★★★
+"Murphi.ai has been an incredible partner in transforming iTherapyDocs with AI-driven automation. Seamless rewrite, voice-to-text notes, progress notes, goals, and pre-authorization automation — saving valuable administrative time across the board."
+PB
+Phillip Brow
+Co-founder, iTherapyDocs
+Mental Health · PaaS
+★★★★★
+"Murphi offers a high quality product and is absolutely wonderful to work with. Their team is responsive and supportive, and their product unmatched. Highly recommend!"
+KR
+Kylie Roy
+CEO, Percensys CORE Learning
+Healthcare Platform · Integration
+★★★★★
+"It is a powerful patient engagement platform that simplifies interactions. It connects with EHR systems through the Carefluence FHIR API for accurate and meaningful patient data. Healthcare becomes more connected, efficient, and patient-friendly."
+LW
+Lloyd Williams
+Co-founder, Carefluence
+/body>
+/html>
+!DOCTYPE html>
+html lang="en">
+head>
+meta charset="UTF-8">
+meta name="viewport" content="width=device-width,initial-scale=1.0">
+title>ninthBlockBlue — Murphi.ai Homepage Block
+/title>
+/head>
+body>
+Get Started
+Experience AI Automation
+br>
+at Scale
+Tell us your care setting and we'll show you exactly what Murphi.ai delivers for your organization — a live demo tailored to your workflows and your team.
+Request Demo
+/body>
+/html>
+img src="https://murphi.ai/wp-content/uploads/2026/05/Group-1261154387-8.png" alt="Murphi.ai Logo" />
+AI-native platform for platforms, providers, and consultants — clinical documentation, revenue assurance, patient payments, and contract optimization. Operated by Deskfactors Inc.
+HIPAA
+SOC 2
+ISO 27001
+BAA
+Download Old App
+Web via QR Code
+Segments
+Post-Acute Care
+Health Systems
+Primary & Specialty
+Mental Health
+EHR Platforms
+RCM Companies
+Coding & Billing Consultants
+QAPI & Compliance Firms
+Accreditation Bodies
+Solutions
+Ambient AI
+Revenue Assurance
+AI Patient Financials
+AI Contract Analyzer
+EHR Integration Layer
+White Label Platform
+Company
+About Us
+Blog
+Announcements
+FAQs
+Support Ticket
+Contact Us
+Access
+Integrations
+Security
+Legal
+Privacy Policy
+Terms of Service
+AI Terms of Use
+Pictures and logos on this website belong to their respective owners and are for representational purposes only.
+br> © 2026 Deskfactors Inc. All Rights Reserved.
+30-minute product demo
+Connect with Murphi.ai and see healthcare AI in action
+Explore Ambient AI, Clinical Documentation, Revenue & Quality Assurance, RCM, Patient Payments, Contract Analyzer and embedding AI features into your EHR and Healthcare platforms.
+AI-native healthcare workflows
+PaaS, SaaS, and white-label options
+HIPAA-ready product discussions
+form class="connect-form" id="murphiAiConnectForm">
+label for="murphiAiFullName">Full name *
+/label>
+input id="murphiAiFullName" name="full_name" type="text" autocomplete="name" required>
+label for="murphiAiEmail">Email *
+/label>
+input id="murphiAiEmail" name="email" type="email" autocomplete="email" required>
+label for="murphiAiCompany">Company name
+/label>
+input id="murphiAiCompany" name="company_name" type="text" autocomplete="organization">
+label for="murphiAiProblem">Explain problem statement / requirements
+(optional)
+/label>
+textarea id="murphiAiProblem" name="problem" placeholder="Example: We want to automate clinical documentation, revenue checks, or patient financial workflows.">
+/textarea>
+Request demo
+Thanks. Your demo request has been captured.
+/form>
+Manage Consent
+To provide the best experiences, we use technologies like cookies to store and/or access device information. Consenting to these technologies will allow us to process data such as browsing behavior or unique IDs on this site. Not consenting or withdrawing consent, may adversely affect certain features and functions.
+Functional
+input type="checkbox" id="cmplz-functional-optout" data-category="cmplz_functional" class="cmplz-consent-checkbox cmplz-functional" size="40" value="1"/>
+label class="cmplz-label" for="cmplz-functional-optout">
+Functional
+/label>
+Always active
+The technical storage or access is strictly necessary for the legitimate purpose of enabling the use of a specific service explicitly requested by the subscriber or user, or for the sole purpose of carrying out the transmission of a communication over an electronic communications network.
+Preferences
+input type="checkbox" id="cmplz-preferences-optout" data-category="cmplz_preferences" class="cmplz-consent-checkbox cmplz-preferences" size="40" value="1"/>
+label class="cmplz-label" for="cmplz-preferences-optout">
+Preferences
+/label>
+The technical storage or access is necessary for the legitimate purpose of storing preferences that are not requested by the subscriber or user.
+Statistics
+input type="checkbox" id="cmplz-statistics-optout" data-category="cmplz_statistics" class="cmplz-consent-checkbox cmplz-statistics" size="40" value="1"/>
+label class="cmplz-label" for="cmplz-statistics-optout">
+Statistics
+/label>
+The technical storage or access that is used exclusively for statistical purposes.
+The technical storage or access that is used exclusively for anonymous statistical purposes. Without a subpoena, voluntary compliance on the part of your Internet Service Provider, or additional records from a third party, information stored or retrieved for this purpose alone cannot usually be used to identify you.
+Marketing
+input type="checkbox" id="cmplz-marketing-optout" data-category="cmplz_marketing" class="cmplz-consent-checkbox cmplz-marketing" size="40" value="1"/>
+label class="cmplz-label" for="cmplz-marketing-optout">
+Marketing
+/label>
+The technical storage or access is required to create user profiles to send advertising, or to track the user on a website or across several websites for similar marketing purposes.
+ul>
+Manage options
+Manage services
+Manage {vendor_count} vendors
+Read more about these purposes
+/ul>
+Accept
+Deny
+View preferences
+Save preferences
+View preferences
+ul>
+{title}
+{title}
+{title}
+/ul>
+Manage consent
+/body>
+/html>

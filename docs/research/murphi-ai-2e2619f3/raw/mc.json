@@ -1,0 +1,773 @@
+{
+ "slug": "ai-for-managed-care-functions-health-system-and-hospitals",
+ "title": "AI For Managed Care Functions - Health System And Hospitals | Murphi AI",
+ "description": "Murphi.ai's Contract Analyzer uses the PADU+ methodology to dissect every payer contract clause, compare it against your own manuals and policies, surface",
+ "hero": {
+  "breadcrumb": [
+   {
+    "label": "Who We Serve — Health Systems & Hospitals",
+    "tone": "white",
+    "href": "/health-systems-hospitals/",
+    "icon": "mc-bc-0"
+   },
+   {
+    "label": "AI for Managed Care Functions",
+    "tone": "on",
+    "href": null,
+    "icon": null
+   }
+  ],
+  "separator": "›",
+  "h1": "AI-Powered Payer Contract Intelligence for Health Systems",
+  "sub": "Murphi.ai's Contract Analyzer uses the PADU+ methodology to dissect every payer contract clause, compare it against your own manuals and policies, surface contract evidence at a click, and help your managed care team build sharper negotiation leverage.",
+  "buttons": [
+   {
+    "variant": "wh",
+    "label": "Request Demo",
+    "href": "/contact-us/"
+   },
+   {
+    "variant": "ol",
+    "label": "See Contract Analyzer →",
+    "href": "/contract-analyzer/"
+   }
+  ],
+  "advisor": {
+   "initials": "SS",
+   "name": "Stuart Smith · Board Advisor, Murphi.ai",
+   "text": "VP Finance, Duke University Health System — guiding Murphi.ai's managed care and health system strategy.",
+   "tag": "Board Advisory Announcement · 2026"
+  }
+ },
+ "who": {
+  "eye": "Who It's For",
+  "h2": "Managed Care & Payer Contracting Teams",
+  "tags": [
+   "Health Systems & IDNs",
+   "VP / Director of Managed Care",
+   "Payer Contracting Teams",
+   "Revenue Integrity",
+   "CFO / Finance",
+   "Revenue Cycle Leadership",
+   "Compliance Officers",
+   "Coding & Billing Consultants"
+  ],
+  "p": "Managed care contracts govern every dollar a health system earns from commercial payers — yet most contracting teams still read them in PDF, compare terms manually, and build negotiation prep in spreadsheets. Murphi.ai's Payer Contract Analyzer replaces that manual process with AI-powered clause analysis, evidence-linked findings, and structured negotiation notes — all in one secure workspace."
+ },
+ "trust": {
+  "items": [
+   {
+    "icon": "mc-trust-1",
+    "label": "HIPAA Compliant"
+   },
+   {
+    "icon": "mc-trust-2",
+    "label": "SOC 2 Certified"
+   },
+   {
+    "icon": "mc-trust-3",
+    "label": "ISO 27001"
+   },
+   {
+    "icon": "mc-trust-4",
+    "label": "BAA Signed"
+   },
+   {
+    "icon": "mc-trust-5",
+    "label": "Contract Data Encrypted at Rest"
+   }
+  ],
+  "link": {
+   "label": "24/7 Support · Submit a Ticket →",
+   "href": "/support-ticket/"
+  }
+ },
+ "stats": {
+  "eye": "Why It Matters",
+  "h2": "The Managed Care Problem Is Hiding in Your Contracts",
+  "sub": "Health systems leave significant revenue on the table every year because contract terms are misapplied, misunderstood, or never negotiated in the first place.",
+  "boxes": [
+   {
+    "value": "10–20%",
+    "label": "Revenue increase potential identified by Contract Analyzer"
+   },
+   {
+    "value": "80%+",
+    "label": "Reduction in manual contract research time"
+   },
+   {
+    "value": "Hours → Minutes",
+    "label": "Time to find and verify a specific contract clause"
+   },
+   {
+    "value": "100%",
+    "label": "Clause findings backed by evidence — no hallucinations"
+   }
+  ]
+ },
+ "padu": {
+  "eye": "The PADU+ Methodology",
+  "h2": "How Murphi.ai Reads Every Contract Clause",
+  "sub": "Every clause in every payer contract is scored using the PADU+ framework — a four-tier assessment model developed specifically for managed care contract analysis. Each clause is rated Preferred, Acceptable, Discouraged, or Unacceptable, linked to the exact source text, and compared against your internal manuals and payer policies.",
+  "prose": [
+   {
+    "text": "PADU+ gives your contracting team a clear, consistent language for evaluating contract quality. A "
+   },
+   {
+    "text": "Preferred",
+    "strong": true,
+    "color": null
+   },
+   {
+    "text": " clause is the gold standard your negotiators should be pushing toward. An "
+   },
+   {
+    "text": "Acceptable",
+    "strong": true,
+    "color": null
+   },
+   {
+    "text": " clause meets baseline requirements. A "
+   },
+   {
+    "text": "Discouraged",
+    "strong": true,
+    "color": null
+   },
+   {
+    "text": " clause introduces risk or unfavorable terms worth challenging. An "
+   },
+   {
+    "text": "Unacceptable",
+    "strong": true,
+    "color": null
+   },
+   {
+    "text": " clause is a hard stop — it must be removed or renegotiated before execution. Every rating is traceable to the contract page and line."
+   }
+  ],
+  "rows": [
+   {
+    "badge": "P",
+    "letter": "P",
+    "title": "Preferred — Clause is the gold standard for your organization",
+    "desc": "Contract language is optimal — it fully aligns with your operational standards, protects your reimbursement, and reflects best-practice contract terms. Your negotiators should use Preferred clauses as the benchmark to anchor future renewals.",
+    "example": "e.g. \"Payment within 30 days of clean electronic claim receipt, with interest accruing on delayed payments\" — Preferred: tight timeline plus interest provision."
+   },
+   {
+    "badge": "A",
+    "letter": "A",
+    "title": "Acceptable — Clause meets baseline requirements",
+    "desc": "The term is not optimal but meets the minimum threshold your organization can operate within. No immediate action needed, but these clauses should be tracked as targets for improvement at the next renewal cycle.",
+    "example": "e.g. \"Payment within 45 days of clean claim receipt\" — Acceptable: within state prompt-pay law, but not as favorable as a 30-day term."
+   },
+   {
+    "badge": "D",
+    "letter": "D",
+    "title": "Discouraged — Clause introduces financial or operational risk",
+    "desc": "The term is unfavorable and creates meaningful exposure — reimbursement risk, operational burden, or compliance complexity. Your managed care team should push back on Discouraged clauses before signing and prioritize removing them at renewal.",
+    "example": "e.g. \"Payer reserves the right to retrospective audit up to 36 months\" — Discouraged: extends beyond industry norm of 12–24 months; creates prolonged financial uncertainty."
+   },
+   {
+    "badge": "U",
+    "letter": "U",
+    "title": "Unacceptable — Clause must be removed or renegotiated",
+    "desc": "The term is a hard stop. It violates your operational policies, creates unacceptable financial risk, conflicts with a regulatory requirement, or gives the payer unrestricted unilateral power. Do not execute a contract with an Unacceptable clause unresolved.",
+    "example": "e.g. \"Payer may amend reimbursement rates at any time without prior notice to Provider\" — Unacceptable: no rate stability, no notice, no recourse."
+   },
+   {
+    "badge": "PLUS",
+    "letter": "+",
+    "title": "PLUS Extensions — Context tags beyond the four-tier score",
+    "desc": "Each PADU rating carries additional context tags: Negotiation Leverage, Reimbursement Risk, Rate Opportunity, Compliance Gap, Manual Conflict — so your team knows not just how a clause scores, but what to do with it next.",
+    "example": "e.g. A Discouraged audit clause tagged \"Negotiation Leverage\" signals it's a strong trade in renewal — offer to accept 24 months in exchange for a rate improvement."
+   }
+  ]
+ },
+ "analyzer": {
+  "eye": "Live Product Demo",
+  "h2": "The Payer Contract Analyzer — In Action",
+  "sub": "Upload a contract, select a finding, and see the clause evidence and comparison instantly. Add negotiation notes without leaving the screen.",
+  "topbar": {
+   "dots": [
+    "#EF4444",
+    "#F59E0B",
+    "#22C55E"
+   ],
+   "title": "Murphi.ai — Payer Contract Analyzer",
+   "badge": "PADU+ Active"
+  },
+  "contractsLabel": "Contracts",
+  "contracts": [
+   {
+    "icon": "mc-doc-6",
+    "tone": null,
+    "name": "Aetna Commercial 2026",
+    "sub": "147 clauses · 23 findings",
+    "active": true
+   },
+   {
+    "icon": "mc-doc-7",
+    "tone": null,
+    "name": "BCBS Amendment A",
+    "sub": "89 clauses · 11 findings",
+    "active": false
+   },
+   {
+    "icon": "mc-doc-8",
+    "tone": null,
+    "name": "UHC Facility 2025",
+    "sub": "212 clauses · 31 findings",
+    "active": false
+   }
+  ],
+  "referenceLabel": "Reference Documents",
+  "references": [
+   {
+    "icon": "mc-doc-9",
+    "tone": "blue",
+    "name": "Operations Manual v4.2",
+    "sub": "Uploaded · 2026-01-15",
+    "active": false
+   },
+   {
+    "icon": "mc-doc-10",
+    "tone": "amber",
+    "name": "Aetna Provider Manual",
+    "sub": "Payer · 2026 Edition",
+    "active": false
+   }
+  ],
+  "summaryLabel": "PADU+ Summary",
+  "summary": [
+   {
+    "tone": "p",
+    "label": "Preferred",
+    "count": "8"
+   },
+   {
+    "tone": "a",
+    "label": "Acceptable",
+    "count": "7"
+   },
+   {
+    "tone": "d",
+    "label": "Discouraged",
+    "count": "5"
+   },
+   {
+    "tone": "u",
+    "label": "Unacceptable",
+    "count": "3"
+   }
+  ],
+  "tabs": [
+   {
+    "key": "all",
+    "label": "All Findings (23)",
+    "dot": null,
+    "active": true
+   },
+   {
+    "key": "U",
+    "label": "Unacceptable (3)",
+    "dot": "mc-dot-11",
+    "active": false
+   },
+   {
+    "key": "D",
+    "label": "Discouraged (5)",
+    "dot": "mc-dot-12",
+    "active": false
+   },
+   {
+    "key": "A",
+    "label": "Acceptable (7)",
+    "dot": "mc-dot-13",
+    "active": false
+   },
+   {
+    "key": "P",
+    "label": "Preferred (8)",
+    "dot": "mc-dot-14",
+    "active": false
+   }
+  ],
+  "findings": [
+   {
+    "id": 1,
+    "status": "U",
+    "clause": "Section 6.1 — Reimbursement Rate Amendment Rights",
+    "summary": "Payer may amend rates at any time without advance notice — no rate stability guaranteed.",
+    "evidence": "Payer reserves the right to modify, amend, or replace applicable fee schedules and reimbursement rates at its sole discretion at any time, with or without prior notice to Provider.",
+    "comparison": "Operations Manual Section 5.2 requires a minimum 90-day advance notice for any reimbursement rate change. Aetna Provider Manual Section 3.1 states changes are communicated 30 days in advance. This contract clause grants the payer unlimited unilateral rate-change authority with zero notice obligation.",
+    "note": "UNACCEPTABLE — do not execute without removing this clause. Request: rates locked for the contract term with a minimum 90-day written notice for any amendment, and a right to terminate if proposed rates are below our cost threshold."
+   },
+   {
+    "id": 2,
+    "status": "U",
+    "clause": "Section 14.2 — Unilateral Contract Modification",
+    "summary": "Payer can materially alter contract terms by posting updates to its website with no direct notice.",
+    "evidence": "Payer may modify the terms of this Agreement, including but not limited to covered services, reimbursement schedules, and administrative requirements, by posting notice of such modifications to the Payer's provider portal. Continued submission of claims by Provider shall constitute acceptance of such modifications.",
+    "comparison": "State insurance code requires written notice of material contract changes to contracted providers. Operations Manual Section 2.4 prohibits acceptance of contract modifications by conduct. Claim submission cannot legally constitute contract acceptance under the doctrine of mutual assent.",
+    "note": "UNACCEPTABLE — website-posting plus claim-submission-as-acceptance is legally suspect and operationally unworkable. Require all material modifications to be in writing, signed, and subject to a 60-day opt-out window."
+   },
+   {
+    "id": 3,
+    "status": "D",
+    "clause": "Section 8.4 — Retrospective Audit Lookback Period",
+    "summary": "Payer retains right to audit and recoup payments for up to 36 months — double the industry norm.",
+    "evidence": "Payer reserves the right to conduct retrospective claim audits and to recoup any amounts determined to be overpaid for a period not to exceed thirty-six (36) months from the date of original payment.",
+    "comparison": "Operations Manual Section 12.3 establishes a 12-month internal standard for retrospective audit exposure. BCBS Provider Manual references 12–24 months as standard audit periods. This 36-month window extends recoupment risk significantly beyond both internal policy and industry practice.",
+    "note": "DISCOURAGED — push back at renewal. Offer 18 months as a counter. If payer insists on 36 months, require a corresponding 36-month timely filing window and interest on delayed payments."
+   },
+   {
+    "id": 4,
+    "status": "D",
+    "clause": "Section 4.2 — Timely Filing Window",
+    "summary": "Contract sets a 90-day filing deadline — below our 120-day operational standard.",
+    "evidence": "Provider shall submit all claims for covered services within ninety (90) days of the date of service. Claims submitted after this period shall be considered untimely and may be denied without right of appeal.",
+    "comparison": "Operations Manual Section 7.1 requires 120-day timely filing windows for all commercial contracts to accommodate downstream documentation and coding workflows. State law does not mandate a specific window. Industry standard for commercial contracts is 90–180 days.",
+    "note": "DISCOURAGED — 90 days creates operational risk for complex cases. Request 120 days to align with internal policy. If denied, flag all encounters over 75 days for priority billing review."
+   },
+   {
+    "id": 5,
+    "status": "A",
+    "clause": "Section 3.1 — Clean Claim Payment Timeline",
+    "summary": "30-day electronic, 45-day paper payment terms — meets state prompt payment law and internal standard.",
+    "evidence": "Payer shall remit payment for clean claims within thirty (30) days of receipt for electronic submissions and forty-five (45) days for paper submissions, in accordance with applicable state prompt payment requirements.",
+    "comparison": "State prompt payment law mandates electronic claims paid within 30 days. Operations Manual Section 8.2 sets 30-day internal target for commercial payers. This contract aligns with both. Payer Provider Manual confirms same standard.",
+    "note": "ACCEPTABLE — meets baseline. At next renewal, push for 21-day electronic payment to move toward Preferred status. Also seek interest on late payments beyond 30 days."
+   },
+   {
+    "id": 6,
+    "status": "P",
+    "clause": "Section 3.4 — Interest on Late Payments",
+    "summary": "Payer owes 1.5% monthly interest on clean claims paid beyond 30 days — fully Preferred.",
+    "evidence": "In the event Payer fails to remit payment on a clean claim within thirty (30) days of receipt, Payer shall pay interest on the outstanding balance at a rate of one and one-half percent (1.5%) per month from the day following the due date until paid in full.",
+    "comparison": "Operations Manual Section 8.3 identifies interest-on-late-payments as a target provision for all contract renewals. Aetna Provider Manual does not include this provision in its standard agreement — this is a negotiated enhancement above the standard. State prompt payment law imposes only 10% annual interest; this contract exceeds that floor.",
+    "note": "PREFERRED — retain in all renewals. Use this clause as a benchmark when negotiating other Aetna agreements for the same service lines."
+   }
+  ],
+  "highlights": [
+   "at its sole discretion",
+   "with or without prior notice",
+   "sole discretion",
+   "thirty-six (36) months",
+   "without prior notice to Provider",
+   "one and one-half percent",
+   "ninety (90) days",
+   "without right of appeal",
+   "continued submission of claims"
+  ],
+  "statusLabels": {
+   "P": "Preferred",
+   "A": "Acceptable",
+   "D": "Discouraged",
+   "U": "Unacceptable"
+  },
+  "emptyText": "No findings in this category.",
+  "placeholder": "Select a finding to view the contract clause evidence and comparison.",
+  "evidenceLabel": "Contract Clause",
+  "compareLabel": "Compared Against Reference",
+  "notesLabel": "Negotiation Notes",
+  "notePlaceholder": "Add a negotiation note for this clause...",
+  "saveLabel": "Save Note",
+  "savedLabel": "Saved"
+ },
+ "steps": {
+  "eye": "How It Works",
+  "h2": "From Contract PDF to Negotiation-Ready in Minutes",
+  "sub": "No manual reading, no spreadsheet comparison, no version confusion. Murphi.ai does the analysis — your team makes the decisions.",
+  "items": [
+   {
+    "n": "1",
+    "title": "Upload Contract PDF",
+    "desc": "Drag in any payer contract — main agreement, exhibit, or amendment. All pages processed."
+   },
+   {
+    "n": "2",
+    "title": "Upload Reference Documents",
+    "desc": "Add your operations manual, payer provider manual, or fee schedule. Murphi uses these for comparison."
+   },
+   {
+    "n": "3",
+    "title": "PADU+ Analysis Runs",
+    "desc": "AI rates every clause — Preferred, Acceptable, Discouraged, or Unacceptable — with evidence and reasoning linked to the source text."
+   },
+   {
+    "n": "4",
+    "title": "Review Findings & Evidence",
+    "desc": "Click any finding to see the exact contract language, the comparison source, and the AI's reasoning."
+   },
+   {
+    "n": "5",
+    "title": "Add Negotiation Notes",
+    "desc": "Annotate Discouraged and Unacceptable clauses directly in the platform — building your negotiation brief as you review."
+   }
+  ]
+ },
+ "features": {
+  "eye": "Module Features",
+  "h2": "What the Contract Analyzer Does Today",
+  "sub": "Every feature listed here is live. We are honest about what exists — and what is on the roadmap.",
+  "cards": [
+   {
+    "icon": "mc-feat-15",
+    "status": "live",
+    "statusLabel": "● Live",
+    "title": "PADU+ Clause Classification",
+    "desc": "Every contract clause is rated Preferred, Acceptable, Discouraged, or Unacceptable using the PADU+ methodology — with AI reasoning and evidence for each finding.",
+    "items": [
+     "Processes full contract PDFs including exhibits and amendments",
+     "Rates every clause, not just flagged terms",
+     "Displays P / A / D / U status badge alongside each finding",
+     "Reasoning shown inline — traceable to the source clause"
+    ],
+    "drawer": {
+     "t": "Contract AI",
+     "n": "PADU+ Clause Classification",
+     "d": "Every contract clause is rated Preferred, Acceptable, Discouraged, or Unacceptable using the PADU+ methodology — with reasoning and evidence surfaced alongside each finding.",
+     "steps": [
+      "Upload PDF contract",
+      "AI reads and segments every clause",
+      "Each clause rated Preferred / Acceptable / Discouraged / Unacceptable",
+      "Findings listed with color-coded status badge",
+      "Click to view evidence and reasoning from source text"
+     ]
+    }
+   },
+   {
+    "icon": "mc-feat-16",
+    "status": "live",
+    "statusLabel": "● Live",
+    "title": "Evidence Preview",
+    "desc": "Every finding links to the exact contract clause that generated it — highlighted in context. Your team verifies AI findings against source text in one click.",
+    "items": [
+     "Exact contract language shown for each PADU+ finding",
+     "Relevant sentence or phrase highlighted automatically",
+     "No manual searching of the PDF required",
+     "Full surrounding paragraph shown for context"
+    ],
+    "drawer": {
+     "t": "Contract AI",
+     "n": "Evidence Preview",
+     "d": "For every PADU+ finding, Murphi.ai surfaces the exact contract clause — highlighted at the relevant sentence — so your team can verify the AI finding against the source document instantly.",
+     "steps": [
+      "Select a finding from the analysis list",
+      "Evidence panel opens automatically",
+      "Exact clause shown with highlight",
+      "Relevant sentence or phrase underlined",
+      "No need to search the PDF manually"
+     ]
+    }
+   },
+   {
+    "icon": "mc-feat-17",
+    "status": "live",
+    "statusLabel": "● Live",
+    "title": "Manual & Policy Comparison",
+    "desc": "Upload your operations manual and the payer's provider manual. Murphi compares every contract clause against both — surfacing conflicts, gaps, and discrepancies.",
+    "items": [
+     "Supports your operations manual upload (PDF or Word)",
+     "Ingests payer provider manuals for side-by-side comparison",
+     "Conflicts between contract and manual rated Discouraged or Unacceptable",
+     "Reference from the manual shown alongside contract evidence"
+    ],
+    "drawer": {
+     "t": "Contract AI",
+     "n": "Manual & Policy Comparison",
+     "d": "Murphi.ai compares each contract clause against your uploaded operations manual and the payer's own provider manual — surfacing conflicts, gaps, and discrepancies that create financial risk.",
+     "steps": [
+      "Upload operations manual and payer policy",
+      "AI maps contract clauses to relevant manual sections",
+      "Conflicts and gaps rated Discouraged or Unacceptable",
+      "Exact reference from the manual shown in evidence panel",
+      "Team reviews with both documents side-by-side"
+     ]
+    }
+   },
+   {
+    "icon": "mc-feat-18",
+    "status": "live",
+    "statusLabel": "● Live",
+    "title": "Negotiation Notes",
+    "desc": "Add structured negotiation notes to any PADU+ finding — directly in the platform. Build your complete payer negotiation brief as you review, clause by clause.",
+    "items": [
+     "Inline annotation on any contract clause or finding",
+     "Notes attributed to the team member who added them",
+     "Filter to view only clauses with negotiation notes",
+     "Export notes for payer negotiation prep and meetings"
+    ],
+    "drawer": {
+     "t": "Contract AI",
+     "n": "Negotiation Notes",
+     "d": "Your managed care team can add structured negotiation notes directly to any finding — building a complete payer negotiation brief inside the same platform, clause by clause.",
+     "steps": [
+      "Click any finding to open the evidence panel",
+      "Type negotiation note in the annotation field",
+      "Notes saved and attributed to the team member",
+      "Filter view by clauses with notes attached",
+      "Export notes for payer negotiation prep sessions"
+     ]
+    }
+   },
+   {
+    "icon": "mc-feat-19",
+    "status": "live",
+    "statusLabel": "● Live",
+    "title": "Multi-Contract Workspace",
+    "desc": "Manage your full payer contract library in one workspace — Aetna, BCBS, UHC, Cigna, and any other payer. Switch between contracts instantly, with all annotations preserved.",
+    "items": [
+     "Unlimited contract uploads per workspace",
+     "Separate PADU+ analysis per contract and amendment",
+     "Switch between contracts with a single click",
+     "All notes and annotations maintained per contract"
+    ],
+    "drawer": {
+     "t": "Contract AI",
+     "n": "Multi-Contract Management",
+     "d": "Upload and manage multiple payer contracts in a single workspace — compare PADU+ findings across contracts, track amendments, and maintain a complete managed care contract library.",
+     "steps": [
+      "Upload multiple contracts to the workspace",
+      "Each contract analyzed independently",
+      "Switch between contracts with one click",
+      "PADU+ summary shown per contract",
+      "Annotations and notes maintained per contract"
+     ]
+    }
+   },
+   {
+    "icon": "mc-feat-20",
+    "status": "soon",
+    "statusLabel": "Coming Soon",
+    "title": "Reimbursement Rate Benchmarking",
+    "desc": "Compare your contracted rates against Medicare benchmark and market rates — identifying where your contracts are underpaying and quantifying the revenue opportunity.",
+    "items": [
+     "Medicare rate comparison per CPT code",
+     "Market rate percentile positioning",
+     "Revenue opportunity quantification by payer",
+     "Negotiation target rate generation"
+    ],
+    "drawer": null
+   }
+  ]
+ },
+ "useCases": {
+  "eye": "Use Cases",
+  "h2": "Who Uses It and Why",
+  "sub": "The Contract Analyzer is built for every team involved in payer relationships — from contracting through compliance.",
+  "items": [
+   {
+    "role": "VP / Director of Managed Care",
+    "title": "Prepare for Payer Renewals in Days, Not Weeks",
+    "desc": "Upload the expiring contract, review every Unacceptable and Discouraged clause, add negotiation notes clause by clause, and walk into the renewal meeting with a complete, prioritized brief — built by AI, owned by your team.",
+    "tags": [
+     "PADU+ Analysis",
+     "Negotiation Notes",
+     "Evidence Preview"
+    ]
+   },
+   {
+    "role": "Revenue Integrity / Revenue Cycle",
+    "title": "Identify Contract Terms That Drive Underpayments",
+    "desc": "Cross-reference Discouraged and Unacceptable contract clauses with your operations manual to identify where payer payment behavior diverges from contract terms — building the evidence base for recoupment and appeals.",
+    "tags": [
+     "Manual Comparison",
+     "Discouraged Findings",
+     "Policy Reference"
+    ]
+   },
+   {
+    "role": "Compliance Officer / Legal Counsel",
+    "title": "Audit Contract Language Against Regulatory Requirements",
+    "desc": "Upload federal and state regulatory guidelines alongside the payer contract. Murphi flags clauses that conflict with prompt payment laws, network adequacy requirements, or CMS rules — with source evidence for every finding.",
+    "tags": [
+     "Regulatory Comparison",
+     "Evidence Preview",
+     "Dispute Documentation"
+    ]
+   },
+   {
+    "role": "CFO / Finance Leadership",
+    "title": "Quantify the Revenue at Risk in Your Contract Portfolio",
+    "desc": "Get a PADU+ summary across all payer contracts — how many clauses are Unacceptable, Discouraged, Acceptable, or Preferred — and prioritize which payer relationship needs the most urgent attention.",
+    "tags": [
+     "Portfolio View",
+     "Risk Summary",
+     "Multi-Contract"
+    ]
+   },
+   {
+    "role": "Coding & Billing Consultants",
+    "title": "Validate Contract Terms Against Billing Operations",
+    "desc": "Upload client contracts alongside your billing policies. Identify clauses that create billing compliance risk — timely filing windows, clean claim definitions, modifier policies — and deliver a structured findings report to the client.",
+    "tags": [
+     "Client Contracts",
+     "Billing Policy",
+     "Findings Export"
+    ]
+   },
+   {
+    "role": "Managed Care Contracting Team",
+    "title": "Track Amendments and Compare Contract Versions",
+    "desc": "Upload both the base contract and a proposed amendment. Murphi analyzes each document and lets your team compare PADU+ findings between versions — instantly surfacing what changed and what it means.",
+    "tags": [
+     "Amendment Upload",
+     "Version Comparison",
+     "Change Summary"
+    ]
+   }
+  ]
+ },
+ "roadmap": {
+  "eye": "What's Live · What's Next",
+  "h2": "Managed Care AI — Honest Roadmap",
+  "sub": "We are transparent about what is live today and what is on the roadmap. The current module is the foundation for everything that follows.",
+  "items": [
+   {
+    "tone": "green",
+    "icon": "mc-road-21",
+    "n": "",
+    "title": "Payer Contract Analyzer",
+    "desc": [
+     {
+      "text": "PADU+ classification, evidence preview, manual comparison, and negotiation notes. "
+     },
+     {
+      "text": "Live now.",
+      "strong": true,
+      "color": "green"
+     }
+    ]
+   },
+   {
+    "tone": "blue",
+    "icon": null,
+    "n": "2",
+    "title": "Rate Benchmarking",
+    "desc": [
+     {
+      "text": "Compare contracted rates against Medicare and market benchmarks. Quantify revenue opportunity per payer. "
+     },
+     {
+      "text": "Coming soon.",
+      "strong": true,
+      "color": "amber"
+     }
+    ]
+   },
+   {
+    "tone": "blue",
+    "icon": null,
+    "n": "3",
+    "title": "Underpayment Detection",
+    "desc": [
+     {
+      "text": "Connect contract terms to actual claims payments — surfacing systematic underpayments and quantifying recovery. "
+     },
+     {
+      "text": "Roadmap.",
+      "strong": true,
+      "color": "amber"
+     }
+    ]
+   },
+   {
+    "tone": "blue",
+    "icon": null,
+    "n": "4",
+    "title": "Payer Policy Monitoring",
+    "desc": [
+     {
+      "text": "Continuous monitoring of payer policy updates — alerting when a policy change affects your contracted terms. "
+     },
+     {
+      "text": "Roadmap.",
+      "strong": true,
+      "color": "amber"
+     }
+    ]
+   }
+  ]
+ },
+ "security": {
+  "eye": "Security & Governance",
+  "h2": "Your Contract Data Is Safe",
+  "sub": "Payer contracts are among the most sensitive financial documents a health system holds. Murphi.ai treats them accordingly.",
+  "cards": [
+   {
+    "icon": "mc-sec-22",
+    "title": "Encryption at Rest & in Transit",
+    "desc": "All contract documents and analysis data encrypted with AES-256 at rest and TLS 1.3 in transit"
+   },
+   {
+    "icon": "mc-sec-23",
+    "title": "Role-Based Access Control",
+    "desc": "Contracts visible only to authorized team members — configurable by contract, payer, or user role"
+   },
+   {
+    "icon": "mc-sec-24",
+    "title": "Audit Trail",
+    "desc": "Every view, annotation, and export logged with user and timestamp — full activity history per contract"
+   },
+   {
+    "icon": "mc-sec-25",
+    "title": "SOC 2 Certified",
+    "desc": "Independent third-party security certification — audit completed and maintained annually"
+   },
+   {
+    "icon": "mc-sec-26",
+    "title": "ISO 27001",
+    "desc": "Information security management aligned to international standards"
+   },
+   {
+    "icon": "mc-sec-27",
+    "title": "BAA Signed",
+    "desc": "Business Associate Agreements executed with every health system organization"
+   },
+   {
+    "icon": "mc-sec-28",
+    "title": "No Training on Your Data",
+    "desc": "Your contract documents are never used to train AI models — your proprietary terms stay private"
+   },
+   {
+    "icon": "mc-sec-29",
+    "title": "AWS & GCP Only",
+    "desc": "HIPAA-eligible cloud infrastructure — no other cloud providers used for data processing"
+   }
+  ]
+ },
+ "drawer": {
+  "closeIcon": "mc-drawer-30",
+  "cta": {
+   "label": "Request a Demo →",
+   "href": "/contact-us/"
+  },
+  "sections": [
+   {
+    "label": "How It Works",
+    "chips": []
+   },
+   {
+    "label": "Access Options",
+    "chips": [
+     "Web Application",
+     "HIPAA-Secure Upload",
+     "Team Workspace",
+     "Export to PDF / Word"
+    ]
+   },
+   {
+    "label": "Security Controls",
+    "chips": [
+     "AES-256 Encryption",
+     "Role-Based Access",
+     "Full Audit Trail",
+     "No Model Training on Your Data",
+     "BAA Covered"
+    ]
+   }
+  ]
+ }
+}

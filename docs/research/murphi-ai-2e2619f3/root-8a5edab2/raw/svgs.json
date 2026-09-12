@@ -1,0 +1,520 @@
+[
+ {
+  "svg": "<svg viewBox=\"0 0 15 15\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M7.5 1v13M1 7.5h13\" stroke=\"#006AD6\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+  "count": 1,
+  "after": "Post-Acute Care Home Health · Hospice · Palliative",
+  "before": "mh-col-title\">Provider Segments",
+  "i": 119779
+ },
+ {
+  "svg": "<svg viewBox=\"0 0 15 15\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"2\" y=\"4\" width=\"11\" height=\"9\" rx=\"1.5\" stroke=\"#006AD6\" stroke-width=\"1.5\"/><path d=\"M5 4V3a2.5 2.5 0 015 0v1\" stroke=\"#006AD6\" stroke-width=\"1.5\"/></svg>",
+  "count": 1,
+  "after": "Health Systems & Hospitals Inpatient · Outpatient · Ambulato",
+  "before": "iv>",
+  "i": 120242
+ },
+ {
+  "svg": "<svg viewBox=\"0 0 15 15\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"7.5\" cy=\"5\" r=\"3\" stroke=\"#006AD6\" stroke-width=\"1.5\"/><path d=\"M2 13c0-3 2.5-5 5.5-5s5.5 2 5.5 5\" stroke=\"#006AD6\" stroke-width=\"1.5\" stroke-linecap=\"round\"/></svg>",
+  "count": 1,
+  "after": "Primary & Specialty Care PCP · Cardiology · Oncology",
+  "before": "/div>",
+  "i": 120786
+ },
+ {
+  "svg": "<svg viewBox=\"0 0 15 15\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M7.5 2C4.5 2 2 4.5 2 7.5c0 1.5.6 2.8 1.5 3.8L2 13l1.7-1.5C4.7 12.4 6 13 7.5 13c3 0 5.5-2.5 5.5-5.5S10.5 2 7.5 2z\" stroke=\"#006AD6\" stroke-width=\"1.5\"/></svg>",
+  "count": 1,
+  "after": "Mental & Behavioral Health Outpatient · SUD · Residential <a",
+  "before": "iv>",
+  "i": 121335
+ },
+ {
+  "svg": "<svg viewBox=\"0 0 15 15\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M7.5 1.5L2.5 3.5v3.5c0 3.5 2.2 6 5 7 2.8-1 5-3.5 5-7V3.5L7.5 1.5z\" stroke=\"#006AD6\" stroke-width=\"1.4\" stroke-linejoin=\"round\"/><path d=\"M5.5 7.5l1.5 1.5 2.5-3\" stroke=\"#006AD6\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>",
+  "count": 1,
+  "after": "Public Health & Corrections Community Health Platform Buyers",
+  "before": "div>",
+  "i": 121883
+ },
+ {
+  "svg": "<svg viewBox=\"0 0 15 15\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"2\" y=\"2\" width=\"11\" height=\"11\" rx=\"2\" stroke=\"#006AD6\" stroke-width=\"1.5\"/><path d=\"M5 7.5h5M5 5h5M5 10h3\" stroke=\"#006AD6\" stroke-width=\"1.3\" stroke-linecap=\"round\"/></svg>",
+  "count": 1,
+  "after": "EHR / EMR Companies Embed AI via APIs <div class=",
+  "before": "mh-col-title\">Platform Buyers",
+  "i": 122601
+ },
+ {
+  "svg": "<svg viewBox=\"0 0 15 15\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"7.5\" cy=\"7.5\" r=\"5.5\" stroke=\"#006AD6\" stroke-width=\"1.5\"/><path d=\"M7.5 5v2.5l2 1.5\" stroke=\"#006AD6\" stroke-width=\"1.3\" stroke-linecap=\"round\"/></svg>",
+  "count": 1,
+  "after": "RCM Companies AI-powered RCM workflows Channel Partners",
+  "before": "via APIs",
+  "i": 123130
+ },
+ {
+  "svg": "<svg viewBox=\"0 0 15 15\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M4 5l-2 2.5 2 2.5M11 5l2 2.5-2 2.5M9 3l-3 9\" stroke=\"#006AD6\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>",
+  "count": 1,
+  "after": "Coding & Billing Consultants Recommend Murphi.ai",
+  "before": "=\"mh-col-title\">Channel Partners",
+  "i": 123743
+ },
+ {
+  "svg": "<svg viewBox=\"0 0 15 15\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M2 8l3.5 3.5 7.5-7\" stroke=\"#006AD6\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>",
+  "count": 1,
+  "after": "QAPI & Compliance Firms AI documentation audit",
+  "before": "phi.ai",
+  "i": 124246
+ },
+ {
+  "svg": "<svg viewBox=\"0 0 15 15\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M7.5 1.5l1.5 4h4l-3.3 2.4 1.3 4L7.5 9.5 4 11.9l1.3-4L2 5.5h4z\" stroke=\"#006AD6\" stroke-width=\"1.3\" stroke-linejoin=\"round\"/></svg>",
+  "count": 1,
+  "after": "Accreditation Bodies CHAP · ACHC aligned <li class=\"mh-na",
+  "before": "it",
+  "i": 124726
+ },
+ {
+  "svg": "<svg viewBox=\"0 0 15 15\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"5\" y=\"1\" width=\"5\" height=\"8\" rx=\"2.5\" stroke=\"#006AD6\" stroke-width=\"1.5\"/><path d=\"M2.5 8.5A5 5 0 0012.5 8.5M7.5 13.5V11\" stroke=\"#006AD6\" stroke-width=\"1.5\" stroke-linecap=\"round\"/></svg>",
+  "count": 1,
+  "after": "Ambient AI Voice-to-note <div class=\"mh-icon-",
+  "before": "iv class=\"mh-col-title\">SaaS Modules",
+  "i": 125514
+ },
+ {
+  "svg": "<svg viewBox=\"0 0 15 15\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M2 11l3-3 2.5 2.5L11 5l2 2\" stroke=\"#006AD6\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>",
+  "count": 1,
+  "after": "Revenue Assurance Audits & compliance <di",
+  "before": "note",
+  "i": 126050
+ },
+ {
+  "svg": "<svg viewBox=\"0 0 15 15\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"1.5\" y=\"3.5\" width=\"12\" height=\"8\" rx=\"1.5\" stroke=\"#006AD6\" stroke-width=\"1.5\"/><path d=\"M5 7.5h5M7.5 5.5v4\" stroke=\"#006AD6\" stroke-width=\"1.3\" stroke-linecap=\"round\"/></svg>",
+  "count": 1,
+  "after": "AI Patient Financials Text-to-pay <div class=",
+  "before": "",
+  "i": 126531
+ },
+ {
+  "svg": "<svg viewBox=\"0 0 15 15\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"2\" y=\"1.5\" width=\"11\" height=\"12\" rx=\"1.5\" stroke=\"#006AD6\" stroke-width=\"1.5\"/><path d=\"M4.5 5h6M4.5 7.5h6M4.5 10h4\" stroke=\"#006AD6\" stroke-width=\"1.3\" stroke-linecap=\"round\"/></svg>",
+  "count": 1,
+  "after": "Contract Analyzer Payer contract optimization PaaS / API",
+  "before": "-pay",
+  "i": 127062
+ },
+ {
+  "svg": "<svg viewBox=\"0 0 15 15\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"3\" cy=\"7.5\" r=\"1.5\" stroke=\"#006AD6\" stroke-width=\"1.3\"/><circle cx=\"12\" cy=\"4\" r=\"1.5\" stroke=\"#006AD6\" stroke-width=\"1.3\"/><circle cx=\"12\" cy=\"11\" r=\"1.5\" stroke=\"#006AD6\" stroke-width=\"1.3\"/><path d=\"M4.5 7.5L10.5 4.5M4.5 7.5L10.5 10.5\" stroke=\"#006AD6\" stroke-width=\"1.3\"/></svg>",
+  "count": 1,
+  "after": "EHR Integration Layer FHIR · HL7 <div class=\"mh-",
+  "before": "div class=\"mh-col-title\">PaaS / API",
+  "i": 127702
+ },
+ {
+  "svg": "<svg viewBox=\"0 0 15 15\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"2\" y=\"2\" width=\"11\" height=\"11\" rx=\"2\" stroke=\"#006AD6\" stroke-width=\"1.5\"/><path d=\"M5 5h5M5 7.5h3M5 10h4\" stroke=\"#006AD6\" stroke-width=\"1.3\" stroke-linecap=\"round\"/></svg>",
+  "count": 1,
+  "after": "White Label Platform Your own AI platform",
+  "before": "R · HL7",
+  "i": 128339
+ },
+ {
+  "svg": "<svg width=\"14\" height=\"14\" viewBox=\"0 0 14 14\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"> <path d=\"M7 1v8M4 6l3 3 3-3M2 11h10\" stroke=\"#006AD6\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/> </svg>",
+  "count": 2,
+  "after": "Download App Sign Up / Sign In <div class=\"mh-hamburger",
+  "before": "",
+  "i": 128968
+ },
+ {
+  "svg": "<svg viewBox=\"0 0 20 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" style=\"width:20px;height:20px;display:block;\"> <line x1=\"3\" y1=\"5.5\" x2=\"17\" y2=\"5.5\" stroke=\"#006AD6\" stroke-width=\"1.5\" stroke-linecap=\"round\"/> <line x1=\"3\" y1=\"10\" x2=\"17\" y2=\"10\" stroke=\"#006AD6\" stroke-width=\"1.5\" stroke-linecap=\"round\"/> <line x1=\"3\" y1=\"14.5\" x2=\"13\" y2=\"14.5\" stroke=\"#006AD6\" stroke-width=\"1.5\" stroke-linecap=\"round\"/> </svg>",
+  "count": 1,
+  "after": "Provider Segments <a href=\"https://murphi.ai/post-acute-car",
+  "before": "n",
+  "i": 129552
+ },
+ {
+  "svg": "<svg viewBox=\"0 0 15 15\" fill=\"none\"><path d=\"M7.5 1v13M1 7.5h13\" stroke=\"#006AD6\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+  "count": 1,
+  "after": "Post-Acute Care Home Health · Hospice · Palliative <div clas",
+  "before": "v class=\"mh-mob-section-title\">Provider Segments",
+  "i": 130339
+ },
+ {
+  "svg": "<svg viewBox=\"0 0 15 15\" fill=\"none\"><rect x=\"2\" y=\"4\" width=\"11\" height=\"9\" rx=\"1.5\" stroke=\"#006AD6\" stroke-width=\"1.5\"/><path d=\"M5 4V3a2.5 2.5 0 015 0v1\" stroke=\"#006AD6\" stroke-width=\"1.5\"/></svg>",
+  "count": 1,
+  "after": "Health Systems & Hospitals Inpatient · Outpatient · Ambulato",
+  "before": "· Hospice · Palliative",
+  "i": 130742
+ },
+ {
+  "svg": "<svg viewBox=\"0 0 15 15\" fill=\"none\"><circle cx=\"7.5\" cy=\"5\" r=\"3\" stroke=\"#006AD6\" stroke-width=\"1.5\"/><path d=\"M2 13c0-3 2.5-5 5.5-5s5.5 2 5.5 5\" stroke=\"#006AD6\" stroke-width=\"1.5\" stroke-linecap=\"round\"/></svg>",
+  "count": 1,
+  "after": "Primary & Specialty Care PCP · Cardiology · Oncology <div cl",
+  "before": "Outpatient · Ambulatory",
+  "i": 131226
+ },
+ {
+  "svg": "<svg viewBox=\"0 0 15 15\" fill=\"none\"><path d=\"M7.5 2C4.5 2 2 4.5 2 7.5c0 1.5.6 2.8 1.5 3.8L2 13l1.7-1.5C4.7 12.4 6 13 7.5 13c3 0 5.5-2.5 5.5-5.5S10.5 2 7.5 2z\" stroke=\"#006AD6\" stroke-width=\"1.5\"/></svg>",
+  "count": 1,
+  "after": "Mental & Behavioral Health Outpatient · SUD · Residential <d",
+  "before": "Cardiology · Oncology",
+  "i": 131715
+ },
+ {
+  "svg": "<svg viewBox=\"0 0 15 15\" fill=\"none\"><path d=\"M7.5 1.5L2.5 3.5v3.5c0 3.5 2.2 6 5 7 2.8-1 5-3.5 5-7V3.5L7.5 1.5z\" stroke=\"#006AD6\" stroke-width=\"1.4\" stroke-linejoin=\"round\"/><path d=\"M5.5 7.5l1.5 1.5 2.5-3\" stroke=\"#006AD6\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>",
+  "count": 1,
+  "after": "Public Health & Corrections Community Health <div class=\"mh-",
+  "before": "t · SUD · Residential",
+  "i": 132199
+ },
+ {
+  "svg": "<svg viewBox=\"0 0 15 15\" fill=\"none\"><rect x=\"2\" y=\"2\" width=\"11\" height=\"11\" rx=\"2\" stroke=\"#006AD6\" stroke-width=\"1.5\"/><path d=\"M5 7.5h5M5 5h5M5 10h3\" stroke=\"#006AD6\" stroke-width=\"1.3\" stroke-linecap=\"round\"/></svg>",
+  "count": 1,
+  "after": "EHR / EMR Companies Embed AI via APIs <svg viewBo",
+  "before": "v class=\"mh-mob-section-title\">Platform Buyers",
+  "i": 132903
+ },
+ {
+  "svg": "<svg viewBox=\"0 0 15 15\" fill=\"none\"><circle cx=\"7.5\" cy=\"7.5\" r=\"5.5\" stroke=\"#006AD6\" stroke-width=\"1.5\"/><path d=\"M7.5 5v2.5l2 1.5\" stroke=\"#006AD6\" stroke-width=\"1.3\" stroke-linecap=\"round\"/></svg>",
+  "count": 1,
+  "after": "RCM Companies AI-powered RCM workflows <div class=\"mh-mob-se",
+  "before": "h-mob-link-sub\">Embed AI via APIs",
+  "i": 133372
+ },
+ {
+  "svg": "<svg viewBox=\"0 0 15 15\" fill=\"none\"><path d=\"M4 5l-2 2.5 2 2.5M11 5l2 2.5-2 2.5M9 3l-3 9\" stroke=\"#006AD6\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>",
+  "count": 1,
+  "after": "Coding & Billing Consultants Recommend Murphi.ai <div class=",
+  "before": "div class=\"mh-mob-section-title\">Channel Partners",
+  "i": 133972
+ },
+ {
+  "svg": "<svg viewBox=\"0 0 15 15\" fill=\"none\"><path d=\"M2 8l3.5 3.5 7.5-7\" stroke=\"#006AD6\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>",
+  "count": 1,
+  "after": "QAPI & Compliance Firms AI documentation audit <div class=\"m",
+  "before": "b-link-sub\">Recommend Murphi.ai",
+  "i": 134415
+ },
+ {
+  "svg": "<svg viewBox=\"0 0 15 15\" fill=\"none\"><path d=\"M7.5 1.5l1.5 4h4l-3.3 2.4 1.3 4L7.5 9.5 4 11.9l1.3-4L2 5.5h4z\" stroke=\"#006AD6\" stroke-width=\"1.3\" stroke-linejoin=\"round\"/></svg>",
+  "count": 1,
+  "after": "Accreditation Bodies CHAP · ACHC aligned <div class=\"mh-mob-",
+  "before": "sub\">AI documentation audit",
+  "i": 134835
+ },
+ {
+  "svg": "<svg viewBox=\"0 0 15 15\" fill=\"none\"><rect x=\"5\" y=\"1\" width=\"5\" height=\"8\" rx=\"2.5\" stroke=\"#006AD6\" stroke-width=\"1.5\"/><path d=\"M2.5 8.5A5 5 0 0012.5 8.5M7.5 13.5V11\" stroke=\"#006AD6\" stroke-width=\"1.5\" stroke-linecap=\"round\"/></svg>",
+  "count": 1,
+  "after": "Ambient AI Voice-to-note <svg viewBox=\"0 0 15",
+  "before": "n\"> Solutions",
+  "i": 135401
+ },
+ {
+  "svg": "<svg viewBox=\"0 0 15 15\" fill=\"none\"><path d=\"M2 11l3-3 2.5 2.5L11 5l2 2\" stroke=\"#006AD6\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>",
+  "count": 1,
+  "after": "Revenue Assurance Audits & compliance <sv",
+  "before": "h-mob-link-sub\">Voice-to-note",
+  "i": 135877
+ },
+ {
+  "svg": "<svg viewBox=\"0 0 15 15\" fill=\"none\"><rect x=\"1.5\" y=\"3.5\" width=\"12\" height=\"8\" rx=\"1.5\" stroke=\"#006AD6\" stroke-width=\"1.5\"/><path d=\"M5 7.5h5M7.5 5.5v4\" stroke=\"#006AD6\" stroke-width=\"1.3\" stroke-linecap=\"round\"/></svg>",
+  "count": 1,
+  "after": "Patient Financials Text-to-pay <svg viewBox=\"",
+  "before": "-sub\">Audits & compliance",
+  "i": 136298
+ },
+ {
+  "svg": "<svg viewBox=\"0 0 15 15\" fill=\"none\"><rect x=\"2\" y=\"1.5\" width=\"11\" height=\"12\" rx=\"1.5\" stroke=\"#006AD6\" stroke-width=\"1.5\"/><path d=\"M4.5 5h6M4.5 7.5h6M4.5 10h4\" stroke=\"#006AD6\" stroke-width=\"1.3\" stroke-linecap=\"round\"/></svg>",
+  "count": 1,
+  "after": "Contract Analyzer Payer contract optimization <svg",
+  "before": "\"mh-mob-link-sub\">Text-to-pay",
+  "i": 136766
+ },
+ {
+  "svg": "<svg viewBox=\"0 0 15 15\" fill=\"none\"><circle cx=\"3\" cy=\"7.5\" r=\"1.5\" stroke=\"#006AD6\" stroke-width=\"1.3\"/><circle cx=\"12\" cy=\"4\" r=\"1.5\" stroke=\"#006AD6\" stroke-width=\"1.3\"/><circle cx=\"12\" cy=\"11\" r=\"1.5\" stroke=\"#006AD6\" stroke-width=\"1.3\"/><path d=\"M4.5 7.5L10.5 4.5M4.5 7.5L10.5 10.5\" stroke=\"#006AD6\" stroke-width=\"1.3\"/></svg>",
+  "count": 1,
+  "after": "EHR Integration Layer FHIR · HL7 <svg viewBox=\"0",
+  "before": "nk-sub\">Payer contract optimization",
+  "i": 137251
+ },
+ {
+  "svg": "<svg viewBox=\"0 0 15 15\" fill=\"none\"><rect x=\"2\" y=\"2\" width=\"11\" height=\"11\" rx=\"2\" stroke=\"#006AD6\" stroke-width=\"1.5\"/><path d=\"M5 5h5M5 7.5h3M5 10h4\" stroke=\"#006AD6\" stroke-width=\"1.3\" stroke-linecap=\"round\"/></svg>",
+  "count": 1,
+  "after": "White Label Platform Your own AI platform",
+  "before": "ass=\"mh-mob-link-sub\">FHIR · HL7",
+  "i": 137828
+ },
+ {
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#ffffff\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z\"/><polyline points=\"9 22 9 12 15 12 15 22\"/></svg>",
+  "count": 1,
+  "after": "EHR &amp; Healthcare Platforms Em",
+  "before": "tems:center;justify-content:center;flex-shrink:0\">",
+  "i": 171725
+ },
+ {
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"rgba(255,255,255,.85)\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M4.8 2.3A.3.3 0 1 0 5 2H4a2 2 0 0 0-2 2v5a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6V4a2 2 0 0 0-2-2h-1a.2.2 0 1 0 .3.3\"/><path d=\"M8 15v1a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6v-4\"/><circle cx=\"20\" cy=\"10\" r=\"2\"/></svg>",
+  "count": 1,
+  "after": "Providers &amp; Agencies Log in t",
+  "before": "tems:center;justify-content:center;flex-shrink:0\">",
+  "i": 172707
+ },
+ {
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"rgba(255,255,255,.85)\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"2\" y=\"7\" width=\"20\" height=\"14\" rx=\"2\" ry=\"2\"/><path d=\"M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2\"/><line x1=\"12\" y1=\"12\" x2=\"12\" y2=\"16\"/><line x1=\"10\" y1=\"14\" x2=\"14\" y2=\"14\"/></svg>",
+  "count": 1,
+  "after": "Compliance, QAPI, Billing Consultants <div class=\"engage-sub",
+  "before": "tems:center;justify-content:center;flex-shrink:0\">",
+  "i": 173805
+ },
+ {
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#ffffff\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z\"/><path d=\"M19 10v2a7 7 0 0 1-14 0v-2\"/><line x1=\"12\" y1=\"19\" x2=\"12\" y2=\"23\"/><line x1=\"8\" y1=\"23\" x2=\"16\" y2=\"23\"/></svg>",
+  "count": 1,
+  "after": "Ambient AI <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16",
+  "before": ";margin-bottom:10px\"> SAAS Modules",
+  "i": 174897
+ },
+ {
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#ffffff\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z\"/><polyline points=\"9 12 11 14 15 10\"/></svg>",
+  "count": 1,
+  "after": "Revenue Assurance <svg xmlns=\"http://www.w3.org/2000/svg\" wi",
+  "before": "2\" y1=\"19\" x2=\"12\" y2=\"23\"/> Ambient AI",
+  "i": 175346
+ },
+ {
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#ffffff\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"1\" y=\"4\" width=\"22\" height=\"16\" rx=\"2\" ry=\"2\"/><line x1=\"1\" y1=\"10\" x2=\"23\" y2=\"10\"/></svg>",
+  "count": 1,
+  "after": "Patient Financials <svg xmlns=\"http://www.w3.org/2000/svg\" w",
+  "before": "3v7c0 6 8 10 8 10z\"/> Revenue Assurance",
+  "i": 175715
+ },
+ {
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#ffffff\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z\"/><polyline points=\"14 2 14 8 20 8\"/><line x1=\"16\" y1=\"13\" x2=\"8\" y2=\"13\"/><line x1=\"16\" y1=\"17\" x2=\"8\" y2=\"17\"/><polyline points=\"10 9 9 9 8 9\"/></svg>",
+  "count": 1,
+  "after": "Contract Analyzer <sv",
+  "before": "\"16\" rx=\"2\" ry=\"2\"/> Patient Financials",
+  "i": 176087
+ },
+ {
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"12\" height=\"12\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#006AD6\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z\"/></svg>",
+  "count": 1,
+  "after": "HIPAA Compliant <svg xmlns=\"http://www.w3.org/2000/svg\" widt",
+  "before": "",
+  "i": 176740
+ },
+ {
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"12\" height=\"12\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#006AD6\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M22 11.08V12a10 10 0 1 1-5.93-9.14\"/><polyline points=\"22 4 12 14.01 9 11.01\"/></svg>",
+  "count": 1,
+  "after": "SOC 2 Certified <svg xmlns=\"http://www.w3.org/2000/svg\" widt",
+  "before": "10z\"/> HIPAA Compliant",
+  "i": 177127
+ },
+ {
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"12\" height=\"12\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#006AD6\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"3\" y=\"11\" width=\"18\" height=\"11\" rx=\"2\" ry=\"2\"/><path d=\"M7 11V7a5 5 0 0 1 10 0v4\"/></svg>",
+  "count": 1,
+  "after": "ISO 27001 <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"12\"",
+  "before": ".01\"/> SOC 2 Certified",
+  "i": 177547
+ },
+ {
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"12\" height=\"12\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#006AD6\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z\"/><polyline points=\"14 2 14 8 20 8\"/><polyline points=\"9 15 11 17 15 13\"/></svg>",
+  "count": 1,
+  "after": "BAA Signed <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"12",
+  "before": "1 10 0v4\"/> ISO 27001",
+  "i": 177966
+ },
+ {
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"12\" height=\"12\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#006AD6\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"16 3 21 3 21 8\"/><line x1=\"4\" y1=\"20\" x2=\"21\" y2=\"3\"/><polyline points=\"21 16 21 21 16 21\"/><line x1=\"15\" y1=\"15\" x2=\"21\" y2=\"21\"/></svg>",
+  "count": 1,
+  "after": "Any EHR Integration <svg xmlns=\"http://www.w3.org/2000/svg\" ",
+  "before": "17 15 13\"/> BAA Signed",
+  "i": 178435
+ },
+ {
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"12\" height=\"12\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#006AD6\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"12\" cy=\"12\" r=\"10\"/><polyline points=\"12 6 12 12 16 14\"/></svg>",
+  "count": 1,
+  "after": "All US Time Zones 24/7 Support ·&nbsp; Submit a Support Tick",
+  "before": "/> Any EHR Integration",
+  "i": 178920
+ },
+ {
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"12\" height=\"12\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#ffffff\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M22 12h-4l-3 9L9 3l-3 9H2\"/></svg>",
+  "count": 1,
+  "after": "Announcement Murphi.ai is proud to announce that it has been",
+  "before": "ing:.05em;text-transform:uppercase;flex-shrink:0\">",
+  "i": 179964
+ },
+ {
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z\"/><polyline points=\"9 22 9 12 15 12 15 22\"/></svg>",
+  "count": 1,
+  "after": "Post-Acute Care <svg xmlns=\"http://www.w3.org/2000/svg\" widt",
+  "before": "on, revenue assurance, patient payments, and more.",
+  "i": 194564
+ },
+ {
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\"/><path d=\"M9 12h6M12 9v6\"/></svg>",
+  "count": 1,
+  "after": "Health Systems <svg xmlns=\"http://www.w3.org/2000/svg\" width",
+  "before": "2z\"/> Post-Acute Care",
+  "i": 194958
+ },
+ {
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M4.5 2A2.5 2.5 0 0 0 2 4.5v2A7.5 7.5 0 0 0 9.5 14v3.5A2.5 2.5 0 0 0 12 20a2.5 2.5 0 0 0 2.5-2.5V14A7.5 7.5 0 0 0 22 6.5v-2A2.5 2.5 0 0 0 19.5 2\"/><circle cx=\"19\" cy=\"19\" r=\"2\"/></svg>",
+  "count": 1,
+  "after": "Primary &amp; Specialty <svg xmlns=\"http://www.w3.org/2000/s",
+  "before": "h=\"18\" height=\"18\" rx=\"2\"/> Health Systems",
+  "i": 195321
+ },
+ {
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z\"/><path d=\"M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z\"/></svg>",
+  "count": 1,
+  "after": "Mental &amp; Behavioral <svg xmlns=\"http://www.w3.org/2000/s",
+  "before": "0 0 19.5 2\"/> Primary &amp; Specialty",
+  "i": 195803
+ },
+ {
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"12\" cy=\"12\" r=\"3\"/><path d=\"M19.07 4.93l-1.41 1.41M4.93 4.93l1.41 1.41M19.07 19.07l-1.41-1.41M4.93 19.07l1.41 1.41M12 2v2M12 20v2M2 12h2M20 12h2\"/></svg>",
+  "count": 1,
+  "after": "EHR Companies Home Health, Hospice &",
+  "before": " 6.588A4 4 0 1 1 12 18Z\"/> Mental &amp; Behavioral",
+  "i": 196288
+ },
+ {
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 2a3 3 0 0 1 3 3v7a3 3 0 0 1-6 0V5a3 3 0 0 1 3-3z\"/><path d=\"M19 10v2a7 7 0 0 1-14 0v-2\"/><line x1=\"12\" y1=\"19\" x2=\"12\" y2=\"22\"/></svg>",
+  "count": 4,
+  "after": "Ambient AI / Scribe Record visits, auto-generate OASIS notes",
+  "before": "pend time on patients, not paperwork.",
+  "i": 197531
+ },
+ {
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"18\" y1=\"20\" x2=\"18\" y2=\"10\"/><line x1=\"12\" y1=\"20\" x2=\"12\" y2=\"4\"/><line x1=\"6\" y1=\"20\" x2=\"6\" y2=\"14\"/><line x1=\"2\" y1=\"20\" x2=\"22\" y2=\"20\"/></svg>",
+  "count": 1,
+  "after": "Revenue Assurance AI-driven coding review, OASIS accuracy va",
+  "before": "SN visit notes, and upload to EHR. 70% time saved.",
+  "i": 198174
+ },
+ {
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"1\" y=\"4\" width=\"22\" height=\"16\" rx=\"2\" ry=\"2\"/><line x1=\"1\" y1=\"10\" x2=\"23\" y2=\"10\"/></svg>",
+  "count": 4,
+  "after": "Private Pay Text-based collection of co-pays and patient-res",
+  "before": "d compliance documentation for HH/hospice billing.",
+  "i": 198838
+ },
+ {
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2\"/><rect x=\"8\" y=\"2\" width=\"8\" height=\"4\" rx=\"1\" ry=\"1\"/></svg>",
+  "count": 2,
+  "after": "Care Coordination PHI-secure messaging, document sharing, an",
+  "before": "sible amounts. AR cycle drops from 100 to 15 days.",
+  "i": 199435
+ },
+ {
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z\"/><polyline points=\"14 2 14 8 20 8\"/><line x1=\"16\" y1=\"13\" x2=\"8\" y2=\"13\"/><line x1=\"16\" y1=\"17\" x2=\"8\" y2=\"17\"/><polyline points=\"10 9 9 9 8 9\"/></svg>",
+  "count": 1,
+  "after": "AI Contract Analyzer PADU Plus methodology — surfaces payer ",
+  "before": "and reducing clinician charting time.",
+  "i": 202130
+ },
+ {
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"12\" y1=\"1\" x2=\"12\" y2=\"23\"/><path d=\"M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6\"/></svg>",
+  "count": 2,
+  "after": "RCM Automation Pre-authorization, coding accuracy, claims su",
+  "before": "harting time by 70% — synced directly to your EHR.",
+  "i": 204205
+ },
+ {
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z\"/></svg>",
+  "count": 2,
+  "after": "Engage — HIPAA Messaging HIPAA-compliant patient messaging —",
+  "before": "ms submission, and denial management. Coming soon.",
+  "i": 208888
+ },
+ {
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M18 6L6 18M7 7l10 10\"/><path d=\"M10 3v4M14 3v4M3 10h4M3 14h4M20 10h1M20 14h1\"/></svg>",
+  "count": 1,
+  "after": "Encrypted API · SSO · iFrame Integrate once via REST API, SS",
+  "before": "our brand, at zero token cost to you.",
+  "i": 215975
+ },
+ {
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z\"/><line x1=\"7\" y1=\"7\" x2=\"7.01\" y2=\"7\"/></svg>",
+  "count": 1,
+  "after": "Fully White-Labeled Your logo, your UI, your pricing, your c",
+  "before": ". Any EHR connected in days — no rebuild required.",
+  "i": 216605
+ },
+ {
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"3\" y=\"11\" width=\"18\" height=\"11\" rx=\"2\" ry=\"2\"/><path d=\"M7 11V7a5 5 0 0 1 10 0v4\"/></svg>",
+  "count": 1,
+  "after": "Your Data &amp; IP All input and output data belongs entirel",
+  "before": " Murphi.ai — they see your product enhanced by AI.",
+  "i": 217280
+ },
+ {
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polygon points=\"3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21\"/><line x1=\"9\" y1=\"3\" x2=\"9\" y2=\"18\"/><line x1=\"15\" y1=\"6\" x2=\"15\" y2=\"21\"/></svg>",
+  "count": 1,
+  "after": "AI Roadmap Support Co-develop features, map your AI journey,",
+  "before": "ustomers. Murphi.ai holds zero data rights — ever.",
+  "i": 217892
+ },
+ {
+  "svg": "<svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"> <circle cx=\"12\" cy=\"12\" r=\"10\" fill=\"none\" stroke=\"rgba(255,255,255,.65)\" stroke-width=\"1.6\"/> <path d=\"M10 8.5l6 3.5-6 3.5V8.5z\" fill=\"rgba(255,255,255,.65)\" stroke=\"none\"/> </svg>",
+  "count": 1,
+  "after": "<svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" ",
+  "before": "ocials\">",
+  "i": 307866
+ },
+ {
+  "svg": "<svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"> <path d=\"M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z\" fill=\"none\" stroke=\"rgba(255,255,255,.65)\" stroke-width=\"1.6\" stroke-linejoin=\"round\"/> <circle cx=\"4\" cy=\"4\" r=\"2\" fill=\"none\" stroke=\"rgba(255,255,255,.65)\" stroke-width=\"1.6\"/> <line x1=\"2\" y1=\"9\" x2=\"2\" y2=\"21\" stroke=\"rgba(255,255,255,.65)\" stroke-width=\"1.6\" stroke-linecap=\"round\"/> <line x1=\"6\" y1=\"9\" x2=\"6\" y2=\"21\" stroke=\"rgba(255,255,255,.65)\" stroke-width=\"1.6\" stroke-linecap=\"round\"/> </svg>",
+  "count": 1,
+  "after": "<svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" ",
+  "before": "",
+  "i": 308350
+ },
+ {
+  "svg": "<svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"> <path d=\"M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z\" fill=\"none\" stroke=\"rgba(255,255,255,.65)\" stroke-width=\"1.6\" stroke-linejoin=\"round\"/> </svg>",
+  "count": 1,
+  "after": "<svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" ",
+  "before": "rrer\" aria-label=\"Facebook\" class=\"mf-social-btn\">",
+  "i": 309177
+ },
+ {
+  "svg": "<svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"> <rect x=\"2\" y=\"2\" width=\"20\" height=\"20\" rx=\"5\" fill=\"none\" stroke=\"rgba(255,255,255,.65)\" stroke-width=\"1.6\"/> <circle cx=\"12\" cy=\"12\" r=\"4\" fill=\"none\" stroke=\"rgba(255,255,255,.65)\" stroke-width=\"1.6\"/> <circle cx=\"17.5\" cy=\"6.5\" r=\"1\" fill=\"rgba(255,255,255,.65)\" stroke=\"none\"/> </svg>",
+  "count": 1,
+  "after": "<line x",
+  "before": "",
+  "i": 309629
+ },
+ {
+  "svg": "<svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"> <line x1=\"4\" y1=\"4\" x2=\"20\" y2=\"20\" stroke=\"rgba(255,255,255,.65)\" stroke-width=\"1.8\" stroke-linecap=\"round\"/> <line x1=\"20\" y1=\"4\" x2=\"4\" y2=\"20\" stroke=\"rgba(255,255,255,.65)\" stroke-width=\"1.8\" stroke-linecap=\"round\"/> </svg>",
+  "count": 1,
+  "after": "",
+  "before": "",
+  "i": 310206
+ },
+ {
+  "svg": "<svg width=\"16\" height=\"12\" viewBox=\"0 0 24 17\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"> <rect x=\"1\" y=\"1\" width=\"22\" height=\"15\" rx=\"4\" fill=\"none\" stroke=\"rgba(255,255,255,.65)\" stroke-width=\"1.6\"/> <path d=\"M10 5.5l6 3-6 3v-6z\" fill=\"rgba(255,255,255,.65)\" stroke=\"none\"/> </svg>",
+  "count": 1,
+  "after": "<svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" ",
+  "before": "",
+  "i": 310727
+ },
+ {
+  "svg": "<svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"> <path d=\"M21.8 12.2c0-.6-.1-1.2-.2-1.8H12v3.4h5.5a4.7 4.7 0 01-2 3.1v2.5h3.3c1.9-1.8 3-4.4 3-7.2z\" fill=\"rgba(255,255,255,.65)\" stroke=\"none\"/> <path d=\"M12 22c2.7 0 5-.9 6.7-2.4l-3.3-2.5c-.9.6-2.1 1-3.4 1-2.6 0-4.8-1.7-5.6-4.1H3v2.6C4.7 19.9 8.1 22 12 22z\" fill=\"rgba(255,255,255,.5)\" stroke=\"none\"/> <path d=\"M6.4 14c-.2-.6-.3-1.3-.3-2s.1-1.4.3-2V7.4H3A10 10 0 002 12c0 1.6.4 3.1 1 4.5L6.4 14z\" fill=\"rgba(255,255,255,.4)\" stroke=\"none\"/> <path d=\"M12 5.9c1.5 0 2.8.5 3.8 1.5l2.9-2.9C16.9 2.9 14.7 2 12 2 8.1 2 4.7 4.1 3 7.4L6.4 10c.8-2.4 3-4.1 5.6-4.1z\" fill=\"rgba(255,255,255,.65)\" stroke=\"none\"/> </svg>",
+  "count": 1,
+  "after": "<!-- =======================================================",
+  "before": "",
+  "i": 311216
+ },
+ {
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"> <line x1=\"5\" y1=\"5\" x2=\"19\" y2=\"19\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\"/> <line x1=\"19\" y1=\"5\" x2=\"5\" y2=\"19\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\"/> </svg>",
+  "count": 1,
+  "after": "30-minute product demo <h2 id=\"murphiAiConnectTitle\" style=\"",
+  "before": "ass=\"connect-modal\">",
+  "i": 319016
+ },
+ {
+  "svg": "<svg aria-hidden=\"true\" focusable=\"false\" data-prefix=\"fas\" data-icon=\"times\" class=\"svg-inline--fa fa-times fa-w-11\" role=\"img\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 352 512\"><path fill=\"currentColor\" d=\"M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z\"></path></svg>",
+  "count": 1,
+  "after": "To provide the best experiences, we use technologies like co",
+  "before": "Manage Consent",
+  "i": 325723
+ },
+ {
+  "svg": "<svg aria-hidden=\"true\" focusable=\"false\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 448 512\" height=\"18\"><path d=\"M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z\"/></svg>",
+  "count": 4,
+  "after": "The technical storage or access is strictly necessary for th",
+  "before": "aria-labelledby=\"cmplz-title-functional-1-optout\">",
+  "i": 327788
+ }
+]

@@ -24,14 +24,15 @@ export default function BrandLegalPage({ slug }: { slug: LegalSlug }) {
         <SimpleHero
           current={page.h1}
           title={page.h1}
-          lede={page.heroSub}
           align="center"
-          ledeAlign="left"
         />
 
-        <section style={{ padding: "64px 0 96px" }}>
+        <section className="ip-legal-body">
           <IpWrap>
             <article className="ip-legal-doc">
+              {page.heroSub ? (
+                <p className="ip-legal-lede">{page.heroSub}</p>
+              ) : null}
               <LegalProse blocks={blocks} semantic />
               <BrandLegalArchive label={page.archive.label} blocks={archive} />
             </article>

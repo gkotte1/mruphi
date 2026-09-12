@@ -199,6 +199,7 @@ export function SimpleHero({
   lede,
   ledeAlign = "center",
   ledeMax,
+  ledeClassName,
   align = "center",
   paddingBottom = 0,
   actions,
@@ -217,6 +218,8 @@ export function SimpleHero({
    * instead of a centered narrow measure. Other pages keep the default.
    */
   ledeMax?: string;
+  /** Optional extra class names for the hero description. */
+  ledeClassName?: string;
   /** Accepted so existing page calls stay valid; heading width is shared CSS. */
   titleMax?: string;
   align?: "left" | "center";
@@ -316,7 +319,7 @@ export function SimpleHero({
 
             {lede ? (
               <p
-                className="ip-lead"
+                className={ledeClassName ?? "ip-lead"}
                 style={{
                   marginTop: 18,
                   marginLeft:
@@ -325,8 +328,8 @@ export function SimpleHero({
                     ledeMax === "none" || align !== "center" ? 0 : "auto",
                   maxWidth:
                     ledeMax ?? (ledeAlign === "left" ? "68ch" : "56ch"),
-                  fontSize: 18,
                   textAlign: ledeAlign,
+                  ...(ledeClassName ? undefined : { fontSize: 18 }),
                 }}
               >
                 {lede}

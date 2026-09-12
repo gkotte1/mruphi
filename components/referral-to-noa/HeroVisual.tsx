@@ -52,7 +52,7 @@ export default function IntakeFlow({
       {/* Where referrals come from. */}
       <div className="grid grid-cols-5 gap-2 max-900:grid-cols-3 max-900:gap-2.5 max-600:grid-cols-2">
         {sources.map((source, i) => (
-          <SourceCard key={source} name={source} live delay={`${i * 0.4}s`} />
+          <SourceCard key={source} name={source} live delay={`${i * 0.4}s`} full />
         ))}
       </div>
 

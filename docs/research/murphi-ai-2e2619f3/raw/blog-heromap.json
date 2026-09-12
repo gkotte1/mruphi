@@ -1,0 +1,770 @@
+{
+ "5235": {
+  "src": "/images/murphi-ai-2e2619f3/blog/blog_01-1.jpg",
+  "width": 1170,
+  "height": 729,
+  "alt": ""
+ },
+ "5236": {
+  "src": "/images/murphi-ai-2e2619f3/blog/blog_02.jpg",
+  "width": 1170,
+  "height": 729,
+  "alt": ""
+ },
+ "5237": {
+  "src": "/images/murphi-ai-2e2619f3/blog/blog_03.jpg",
+  "width": 1170,
+  "height": 729,
+  "alt": ""
+ },
+ "5238": {
+  "src": "/images/murphi-ai-2e2619f3/blog/blog_04.jpg",
+  "width": 1170,
+  "height": 729,
+  "alt": ""
+ },
+ "5239": {
+  "src": "/images/murphi-ai-2e2619f3/blog/blog_05.jpg",
+  "width": 1170,
+  "height": 729,
+  "alt": ""
+ },
+ "5240": {
+  "src": "/images/murphi-ai-2e2619f3/blog/blog_06.jpg",
+  "width": 1170,
+  "height": 729,
+  "alt": ""
+ },
+ "5241": {
+  "src": "/images/murphi-ai-2e2619f3/blog/blog_07.jpg",
+  "width": 1170,
+  "height": 729,
+  "alt": ""
+ },
+ "5242": {
+  "src": "/images/murphi-ai-2e2619f3/blog/blog_08.jpg",
+  "width": 1170,
+  "height": 729,
+  "alt": ""
+ },
+ "5243": {
+  "src": "/images/murphi-ai-2e2619f3/blog/blog_09.jpg",
+  "width": 1170,
+  "height": 729,
+  "alt": ""
+ },
+ "9631": {
+  "src": "/images/murphi-ai-2e2619f3/blog/blog12-1536x864.jpg",
+  "width": 1536,
+  "height": 864,
+  "alt": "A doctor discusses information on a laptop with a male patient in a well-lit medical office using a HIPAA compliant chat."
+ },
+ "16016": {
+  "src": "/images/murphi-ai-2e2619f3/blog/Murphi-Pros-and-cons-of-AI-in-Healthcare-Thumbnail-2.png",
+  "width": 1280,
+  "height": 720,
+  "alt": ""
+ },
+ "16048": {
+  "src": "/images/murphi-ai-2e2619f3/blog/2147763789-685ac4bae86e7.webp",
+  "width": 1000,
+  "height": 667,
+  "alt": ""
+ },
+ "16370": {
+  "src": "/images/murphi-ai-2e2619f3/blog/ai-in-speech-therapy.webp",
+  "width": 1280,
+  "height": 720,
+  "alt": "A woman in glasses and a pink shirt engages in conversation with another woman, discussing AI speech therapy."
+ },
+ "16374": {
+  "src": "/images/murphi-ai-2e2619f3/blog/cost-of-implementing-ai-in-healthcare.webp",
+  "width": 1280,
+  "height": 720,
+  "alt": "A doctor holds a device displaying icons, symbolizing the cost of implementing AI in healthcare."
+ },
+ "16380": {
+  "src": "/images/murphi-ai-2e2619f3/blog/automated-prior-authorization.webp",
+  "width": 1280,
+  "height": 720,
+  "alt": "A doctor writes on a clipboard, focusing on automated prior authorization paperwork."
+ },
+ "16387": {
+  "src": "/images/murphi-ai-2e2619f3/blog/denial-management-automation.webp",
+  "width": 1280,
+  "height": 720,
+  "alt": "A close-up of a document featuring a prominent \"Rejected\" stamp, illustrating denial management automation."
+ },
+ "16392": {
+  "src": "/images/murphi-ai-2e2619f3/blog/ai-medication-management.webp",
+  "width": 1280,
+  "height": 720,
+  "alt": "A robot examines a refrigerator displaying various medication pills, highlighting AI's role in medication management."
+ },
+ "16734": {
+  "src": "/images/murphi-ai-2e2619f3/blog/integrating-cds-into-clinical-workflow.webp",
+  "width": 1280,
+  "height": 720,
+  "alt": ""
+ },
+ "16737": {
+  "src": "/images/murphi-ai-2e2619f3/blog/5-rights-of-clinical-decision-support.webp",
+  "width": 1280,
+  "height": 720,
+  "alt": "A group of doctors and nurses stands in front of multiple monitors, discussing the 5 Rights of Clinical Decision Support."
+ },
+ "16741": {
+  "src": "/images/murphi-ai-2e2619f3/blog/digital-patient-engagement-tools.webp",
+  "width": 1280,
+  "height": 720,
+  "alt": "Use of digital patient engagement tools in healthcare."
+ },
+ "16744": {
+  "src": "/images/murphi-ai-2e2619f3/blog/patient-engagement-strategies.webp",
+  "width": 1280,
+  "height": 720,
+  "alt": "A female doctor talks to an elderly woman, emphasizing patient engagement strategies for better healthcare outcomes."
+ },
+ "16933": {
+  "src": "/images/murphi-ai-2e2619f3/blog/benefits-of-interoperability-in-healthcare​-1536x838.webp",
+  "width": 1536,
+  "height": 838,
+  "alt": "A physician with a tablet featuring medical symbols, highlighting the advantages of interoperability in healthcare systems."
+ },
+ "16936": {
+  "src": "/images/murphi-ai-2e2619f3/blog/improve-interoperability-in-healthcare​​-1536x838.webp",
+  "width": 1536,
+  "height": 838,
+  "alt": "Red icons on a white hexagon depict interoperability concepts, highlighting advancements in healthcare connectivity."
+ },
+ "16942": {
+  "src": "/images/murphi-ai-2e2619f3/blog/ai-patient-engagement-1536x838.webp",
+  "width": 1536,
+  "height": 838,
+  "alt": "A doctor shows a tablet to a patient, highlighting AI Patient Engagement technology in a healthcare setting."
+ },
+ "16945": {
+  "src": "/images/murphi-ai-2e2619f3/blog/ehr-data-migration-1536x838.webp",
+  "width": 1536,
+  "height": 838,
+  "alt": "Futuristic interface displaying various icons and data related to EHR data migration."
+ },
+ "16948": {
+  "src": "/images/murphi-ai-2e2619f3/blog/benefits-of-data-analytics-in-healthcare-1536x838.webp",
+  "width": 1536,
+  "height": 838,
+  "alt": "People standing around a laptop and tablet, focused on the benefits of data analytics in healthcare."
+ },
+ "16951": {
+  "src": "/images/murphi-ai-2e2619f3/blog/healthcare-coding-and-compliance-audit-1536x838.webp",
+  "width": 1536,
+  "height": 838,
+  "alt": "Medical audit software for healthcare coding and compliance audits, enhancing accuracy and efficiency in medical billing."
+ },
+ "16955": {
+  "src": "/images/murphi-ai-2e2619f3/blog/semantic-interoperability-in-healthcare-1536x838.webp",
+  "width": 1536,
+  "height": 838,
+  "alt": "Visual representation of two people in a room with a computer and phone, focusing on Semantic Interoperability in Healthcare."
+ },
+ "16960": {
+  "src": "/images/murphi-ai-2e2619f3/blog/soap-notes-for-speech-therapists.webp",
+  "width": 1280,
+  "height": 720,
+  "alt": "A woman teaches a child to pronounce the letter 's' during a speech therapy session focused on articulation skills."
+ },
+ "16963": {
+  "src": "/images/murphi-ai-2e2619f3/blog/occupational-therapy-soap-note.webp",
+  "width": 1280,
+  "height": 720,
+  "alt": "A person writes in a notebook on a wooden table, with a cup of coffee nearby, focusing on an occupational therapy soap note."
+ },
+ "16967": {
+  "src": "/images/murphi-ai-2e2619f3/blog/top-rated-ehr.webp",
+  "width": 1280,
+  "height": 720,
+  "alt": "A woman in a white coat sits on a desk, using a laptop and phone, representing a top-rated EHR system."
+ },
+ "16972": {
+  "src": "/images/murphi-ai-2e2619f3/blog/free-ai-medical-codes-mapping-tools.webp",
+  "width": 1280,
+  "height": 720,
+  "alt": "A woman in a lab coat stands before a futuristic interface, showcasing free AI medical codes mapping tools."
+ },
+ "17004": {
+  "src": "/images/murphi-ai-2e2619f3/blog/ehr-integration-challenges.webp",
+  "width": 1280,
+  "height": 720,
+  "alt": "Digital healthcare future with a focus on EHR integration challenges and solutions for improved patient care."
+ },
+ "17007": {
+  "src": "/images/murphi-ai-2e2619f3/blog/benefits-of-care-coordination.webp",
+  "width": 1280,
+  "height": 720,
+  "alt": "A woman receives a blood pressure check from her doctor, emphasizing the benefits of effective care coordination."
+ },
+ "17012": {
+  "src": "/images/murphi-ai-2e2619f3/blog/improve-clinical-operations-efficiency.webp",
+  "width": 1280,
+  "height": 720,
+  "alt": "A man in a hospital gown stands before a digital skeleton, highlighting advancements in clinical operations efficiency."
+ },
+ "17181": {
+  "src": "/images/murphi-ai-2e2619f3/blog/patient-onboarding-automation-.webp",
+  "width": 1280,
+  "height": 720,
+  "alt": "A man in a suit holds a tablet displaying a digital human body image, representing patient onboarding automation."
+ },
+ "17183": {
+  "src": "/images/murphi-ai-2e2619f3/blog/healthcare-automation-companies.webp",
+  "width": 1280,
+  "height": 720,
+  "alt": "A man in a hospital bed with a healthcare robot beside him, illustrating advancements in healthcare automation."
+ },
+ "17187": {
+  "src": "/images/murphi-ai-2e2619f3/blog/reduce-medical-errors-1536x864.png",
+  "width": 1536,
+  "height": 864,
+  "alt": "Two masked individuals at a desk, collaborating or discussing something important."
+ },
+ "17221": {
+  "src": "/images/murphi-ai-2e2619f3/blog/healthcare-payer-automation.webp",
+  "width": 1280,
+  "height": 720,
+  "alt": ""
+ },
+ "17225": {
+  "src": "/images/murphi-ai-2e2619f3/blog/clinical-workflow-automation.webp",
+  "width": 1280,
+  "height": 720,
+  "alt": "A group of doctors and nurses gather around a tablet, discussing clinical workflow automation strategies."
+ },
+ "17229": {
+  "src": "/images/murphi-ai-2e2619f3/blog/automation-clinical-diagnostics.webp",
+  "width": 1280,
+  "height": 720,
+  "alt": "Doctor holding stethoscope and liver, highlighting automation in clinical diagnostics."
+ },
+ "17233": {
+  "src": "/images/murphi-ai-2e2619f3/blog/medical-coding-automation.webp",
+  "width": 1280,
+  "height": 720,
+  "alt": "Woman in blue shirt sits at desk with computer, working on medical coding automation."
+ },
+ "17336": {
+  "src": "/images/murphi-ai-2e2619f3/blog/healthcare-revenue-cycle-management-trends.webp",
+  "width": 1280,
+  "height": 720,
+  "alt": "A doctor at a desk analyzes healthcare revenue cycle management trends on a computer screen displaying various graphs."
+ },
+ "17374": {
+  "src": "/images/murphi-ai-2e2619f3/blog/ehr-integration-strategies.webp",
+  "width": 1280,
+  "height": 720,
+  "alt": "Visual representation of the 2026 EHR integration strategy, detailing goals and methods for effective healthcare data management."
+ },
+ "17376": {
+  "src": "/images/murphi-ai-2e2619f3/blog/ai-for-healthcare-data-processing.webp",
+  "width": 1280,
+  "height": 720,
+  "alt": "Graphic showing how AI is reshaping healthcare data processing in 2026, underlining significant technological advancements."
+ },
+ "17380": {
+  "src": "/images/murphi-ai-2e2619f3/blog/clinical-case-management-model.webp",
+  "width": 1280,
+  "height": 720,
+  "alt": "2026 guide on clinical case management model, showcasing a structured approach to patient care and support."
+ },
+ "17385": {
+  "src": "/images/murphi-ai-2e2619f3/blog/choose-revenue-cycle-management-system-for-healthcare.webp",
+  "width": 1280,
+  "height": 720,
+  "alt": "Image illustrating how to choose the right revenue cycle management system in 2026."
+ },
+ "17605": {
+  "src": "/images/murphi-ai-2e2619f3/blog/ehr-integration-strategies-1.webp",
+  "width": 1280,
+  "height": 720,
+  "alt": "hospital workflow automation​"
+ },
+ "17631": {
+  "src": "/images/murphi-ai-2e2619f3/blog/Frame-1618871891-1536x879.png",
+  "width": 1536,
+  "height": 879,
+  "alt": "DocuGuard Integrates with Murphi to Transform Healthcare Workflows"
+ },
+ "17640": {
+  "src": "/images/murphi-ai-2e2619f3/blog/Frame-1618871889-5-1536x717.png",
+  "width": 1536,
+  "height": 717,
+  "alt": "Stuart Smith Of Duke Health Joins Murphi As Board Advisor"
+ },
+ "17654": {
+  "src": "/images/murphi-ai-2e2619f3/blog/ehr-integration-strategies-6.png",
+  "width": 1280,
+  "height": 720,
+  "alt": "workflow automation in healthcare"
+ },
+ "17655": {
+  "src": "/images/murphi-ai-2e2619f3/blog/ehr-integration-strategies-7.png",
+  "width": 1280,
+  "height": 720,
+  "alt": "automation in healthcare"
+ },
+ "17657": {
+  "src": "/images/murphi-ai-2e2619f3/blog/ehr-integration-strategies-8-1.png",
+  "width": 1280,
+  "height": 720,
+  "alt": "ai in case management"
+ },
+ "17658": {
+  "src": "/images/murphi-ai-2e2619f3/blog/ehr-integration-strategies-9.png",
+  "width": 1280,
+  "height": 720,
+  "alt": "improve private pay collections"
+ },
+ "17661": {
+  "src": "/images/murphi-ai-2e2619f3/blog/ehr-integration-strategies-12.png",
+  "width": 1280,
+  "height": 720,
+  "alt": "automation in healthcare"
+ },
+ "17663": {
+  "src": "/images/murphi-ai-2e2619f3/blog/ehr-integration-strategies-15.png",
+  "width": 1280,
+  "height": 720,
+  "alt": "ai in medical coding"
+ },
+ "17665": {
+  "src": "/images/murphi-ai-2e2619f3/blog/ehr-integration-strategies-16.png",
+  "width": 1280,
+  "height": 720,
+  "alt": "healthcare billing"
+ },
+ "17666": {
+  "src": "/images/murphi-ai-2e2619f3/blog/ehr-integration-strategies-17.png",
+  "width": 1280,
+  "height": 720,
+  "alt": "Revenue Cycle Management"
+ },
+ "17824": {
+  "src": "/images/murphi-ai-2e2619f3/blog/ai-in-home-health-care.webp",
+  "width": 1280,
+  "height": 720,
+  "alt": "Elderly woman and nurse smiling at each other, representing compassionate care. Text reads 'AI in Home Health Care: Transforming Patient Outcomes in 2026. Murphi.ai logo visible."
+ },
+ "17861": {
+  "src": "/images/murphi-ai-2e2619f3/blog/future-of-healthcare-revenue-cycle-management.webp",
+  "width": 1280,
+  "height": 720,
+  "alt": "Conceptual image representing the future of healthcare revenue cycle management in 2026."
+ },
+ "17867": {
+  "src": "/images/murphi-ai-2e2619f3/blog/remote-therapeutic-monitoring-companies.webp",
+  "width": 1280,
+  "height": 720,
+  "alt": "Visual representation of choosing the right partner for remote therapeutic monitoring solutions."
+ },
+ "17935": {
+  "src": "/images/murphi-ai-2e2619f3/blog/healthcare-interoperability-standards.webp",
+  "width": 1280,
+  "height": 720,
+  "alt": "Diagram illustrating healthcare interoperability standards for seamless data exchange among medical systems."
+ },
+ "17941": {
+  "src": "/images/murphi-ai-2e2619f3/blog/patient-engagement-platform-roi-analysis.webp",
+  "width": 1280,
+  "height": 720,
+  "alt": "Visual representation of ROI analysis for a patient engagement platform, detailing cost savings and efficiency improvements."
+ },
+ "17984": {
+  "src": "/images/murphi-ai-2e2619f3/blog/ChatGPT-Image-Jan-16-2026-07_06_03-PM.png",
+  "width": 1536,
+  "height": 1024,
+  "alt": "ambient ai tools"
+ },
+ "18076": {
+  "src": "/images/murphi-ai-2e2619f3/blog/llms-in-healthcare.webp",
+  "width": 1280,
+  "height": 720,
+  "alt": "Illustration showing a digital profile with AI elements emerging from a laptop, highlighting the text 'LLMs in Healthcare' by Murphi.ai, and noting AI's role in transforming clinical documentation."
+ },
+ "18079": {
+  "src": "/images/murphi-ai-2e2619f3/blog/face-to-face-documentation.webp",
+  "width": 1280,
+  "height": 720,
+  "alt": "Healthcare professional explaining documentation to a patient. Text: 'Face-to-Face Documentation Requirements, Your Complete Guide for Home Health Compliance.' Logo: Murphi.ai."
+ },
+ "18083": {
+  "src": "/images/murphi-ai-2e2619f3/blog/healthcare-claims-denial-prevention-ai.webp",
+  "width": 1280,
+  "height": 720,
+  "alt": "AI Claims Denial Prevention text beside a health insurance claim form on a clipboard, with a stethoscope. Professional and informative tone."
+ },
+ "18089": {
+  "src": "/images/murphi-ai-2e2619f3/blog/ai-for-prior-authorization.webp",
+  "width": 1280,
+  "height": 720,
+  "alt": "\"AI for Prior Authorization\" text beside a woman in a lab coat analyzing AI data on a computer. Modern technology and healthcare theme."
+ },
+ "18094": {
+  "src": "/images/murphi-ai-2e2619f3/blog/generative-ai-in-claims-processing.webp",
+  "width": 1280,
+  "height": 720,
+  "alt": "Generative AI in Claims Processing. A person uses a tablet with floating digital icons. Text highlights healthcare efficiency improvements."
+ },
+ "18098": {
+  "src": "/images/murphi-ai-2e2619f3/blog/ehr-api-integration.webp",
+  "width": 1280,
+  "height": 720,
+  "alt": "EHR API Integration in 2026 sign with person using tablet, surrounded by digital interface icons. Futuristic, tech-focused tone."
+ },
+ "18234": {
+  "src": "/images/murphi-ai-2e2619f3/blog/Frame-1618872138-1536x1024.png",
+  "width": 1536,
+  "height": 1024,
+  "alt": ""
+ },
+ "18236": {
+  "src": "/images/murphi-ai-2e2619f3/blog/Frame-1618872139-1536x1024.png",
+  "width": 1536,
+  "height": 1024,
+  "alt": ""
+ },
+ "18238": {
+  "src": "/images/murphi-ai-2e2619f3/blog/Frame-1618872142-1536x931.png",
+  "width": 1536,
+  "height": 931,
+  "alt": ""
+ },
+ "18239": {
+  "src": "/images/murphi-ai-2e2619f3/blog/Frame-1618872141-1-1536x1024.png",
+  "width": 1536,
+  "height": 1024,
+  "alt": ""
+ },
+ "18241": {
+  "src": "/images/murphi-ai-2e2619f3/blog/Frame-1618872137-1-1536x1081.png",
+  "width": 1536,
+  "height": 1081,
+  "alt": ""
+ },
+ "18242": {
+  "src": "/images/murphi-ai-2e2619f3/blog/3-3-1536x1025.png",
+  "width": 1536,
+  "height": 1025,
+  "alt": ""
+ },
+ "18255": {
+  "src": "/images/murphi-ai-2e2619f3/blog/1-5.png",
+  "width": 1180,
+  "height": 745,
+  "alt": "AI vs human medical scribe"
+ },
+ "18270": {
+  "src": "/images/murphi-ai-2e2619f3/blog/3-4.png",
+  "width": 1180,
+  "height": 745,
+  "alt": "ai patient engagement software solution"
+ },
+ "18271": {
+  "src": "/images/murphi-ai-2e2619f3/blog/4-3.png",
+  "width": 1180,
+  "height": 745,
+  "alt": "AI medical charting"
+ },
+ "18272": {
+  "src": "/images/murphi-ai-2e2619f3/blog/2-3.png",
+  "width": 1180,
+  "height": 745,
+  "alt": "best medical transcription software"
+ },
+ "18298": {
+  "src": "/images/murphi-ai-2e2619f3/blog/7-1.png",
+  "width": 1180,
+  "height": 745,
+  "alt": "ambient AI in healthcare"
+ },
+ "18299": {
+  "src": "/images/murphi-ai-2e2619f3/blog/8-1.png",
+  "width": 1180,
+  "height": 745,
+  "alt": "Ai clinical notes software"
+ },
+ "18300": {
+  "src": "/images/murphi-ai-2e2619f3/blog/6.png",
+  "width": 1180,
+  "height": 745,
+  "alt": "chatgpt medical diagnosis"
+ },
+ "18301": {
+  "src": "/images/murphi-ai-2e2619f3/blog/5-4.png",
+  "width": 1180,
+  "height": 745,
+  "alt": "pharma patient engagement software"
+ },
+ "18302": {
+  "src": "/images/murphi-ai-2e2619f3/blog/9.png",
+  "width": 1180,
+  "height": 745,
+  "alt": "chronic care management companies"
+ },
+ "18384": {
+  "src": "/images/murphi-ai-2e2619f3/blog/doctor-reviewing-aigenerated-documents-assist-diagnosing-complex-medical-conditions-ensuring-precise-patient-care-1536x1023.jpg",
+  "width": 1536,
+  "height": 1023,
+  "alt": "AI progress note generator"
+ },
+ "18386": {
+  "src": "/images/murphi-ai-2e2619f3/blog/female-graphic-designer-looking-color-chart-while-holding-digital-tablet-1536x1024.jpg",
+  "width": 1536,
+  "height": 1024,
+  "alt": "therapy progress note generator"
+ },
+ "18400": {
+  "src": "/images/murphi-ai-2e2619f3/blog/physician-reviewing-mri-scan-x-ray-test-results-with-patient-office-1536x1024.jpg",
+  "width": 1536,
+  "height": 1024,
+  "alt": "ai for healthcare compliance"
+ },
+ "18418": {
+  "src": "/images/murphi-ai-2e2619f3/blog/healthcare-experts-strategic-meeting-discussing-treatment-protocols-1536x1024.jpg",
+  "width": 1536,
+  "height": 1024,
+  "alt": "Top RAG Healthcare Providers"
+ },
+ "18420": {
+  "src": "/images/murphi-ai-2e2619f3/blog/reflecting-positive-changes-shot-group-nurses-having-meeting-with-their-head-doctor-1536x1042.jpg",
+  "width": 1536,
+  "height": 1042,
+  "alt": "FHIR integration"
+ },
+ "18569": {
+  "src": "/images/murphi-ai-2e2619f3/blog/medic-team-discussing-germs-clinic-1-1536x1024.jpg",
+  "width": 1536,
+  "height": 1024,
+  "alt": "interoperability in healthcare"
+ },
+ "18573": {
+  "src": "/images/murphi-ai-2e2619f3/blog/medical-specialist-explaining-diagnostics-through-test-results-with-old-patient-checkup-doing-1536x864.jpg",
+  "width": 1536,
+  "height": 864,
+  "alt": "clinical prediction model"
+ },
+ "18580": {
+  "src": "/images/murphi-ai-2e2619f3/blog/senior-chemist-analysing-blood-sample-while-coworkers-discussing-1536x864.jpg",
+  "width": 1536,
+  "height": 864,
+  "alt": "rag in healthcare"
+ },
+ "18585": {
+  "src": "/images/murphi-ai-2e2619f3/blog/african-american-doctor-presenting-x-ray-diagnostics-tablet-1536x864.jpg",
+  "width": 1536,
+  "height": 864,
+  "alt": "healthcare data extraction"
+ },
+ "18658": {
+  "src": "/images/murphi-ai-2e2619f3/blog/team-specialists-reviewing-ecg-results-meeting-private-clinic-1536x1024.jpg",
+  "width": 1536,
+  "height": 1024,
+  "alt": "Automated Data Extraction Healthcare"
+ },
+ "18664": {
+  "src": "/images/murphi-ai-2e2619f3/blog/general-practitioner-presenting-test-findings-via-scan-interpretation-tablet-1536x864.jpg",
+  "width": 1536,
+  "height": 864,
+  "alt": "ocr for medical documents"
+ },
+ "18669": {
+  "src": "/images/murphi-ai-2e2619f3/blog/nurse-writing-patient-details-symptoms-files-help-doctor-1536x1024.jpg",
+  "width": 1536,
+  "height": 1024,
+  "alt": "ROI of AI in Healthcare"
+ },
+ "18680": {
+  "src": "/images/murphi-ai-2e2619f3/blog/unstructured-data-in-healthcare-1536x864.jpg",
+  "width": 1536,
+  "height": 864,
+  "alt": "unstructured data in healthcare"
+ },
+ "18740": {
+  "src": "/images/murphi-ai-2e2619f3/blog/medical-specialist-explaining-diagnostic-test-results-cabinet-1536x864.jpg",
+  "width": 1536,
+  "height": 864,
+  "alt": "medical billing automation"
+ },
+ "19243": {
+  "src": "/images/murphi-ai-2e2619f3/blog/doctor-neurologist-showing-mri-brain-scan-results-her-colleagues-1536x1024.jpg",
+  "width": 1536,
+  "height": 1024,
+  "alt": "hospital discharge summary"
+ },
+ "19244": {
+  "src": "/images/murphi-ai-2e2619f3/blog/manager-wearing-face-mask-covid19-explaining-financial-graph-african-employee-multiethnic-team-working-company-with-new-normal-respecting-social-distance-because-global-pandemic-with-cor-1536x1024.jpg",
+  "width": 1536,
+  "height": 1024,
+  "alt": "remote patient monitoring benefits"
+ },
+ "19245": {
+  "src": "/images/murphi-ai-2e2619f3/blog/old-woman-asking-general-practitioner-about-disease-prevention-new-treatment-1536x1024.jpg",
+  "width": 1536,
+  "height": 1024,
+  "alt": "SNF billing automation"
+ },
+ "19246": {
+  "src": "/images/murphi-ai-2e2619f3/blog/specialist-explaining-virus-presentation-laptop-pensioner-with-face-mask-doctor-talking-about-coronavirus-display-illustration-giving-medical-advice-senior-man-1536x1024.jpg",
+  "width": 1536,
+  "height": 1024,
+  "alt": "AI patient monitoring"
+ },
+ "19253": {
+  "src": "/images/murphi-ai-2e2619f3/blog/stomatolog-nurse-tooth-clinic-checking-patient-appointment-looking-computer-monitor-stomatology-assistant-teeth-doctor-discussing-reception-dental-office-1-1536x1024.jpg",
+  "width": 1536,
+  "height": 1024,
+  "alt": "patient payment systems healthcare"
+ },
+ "19464": {
+  "src": "/images/murphi-ai-2e2619f3/blog/woman-physician-offering-drugs-painkillers-prescription-medicine-1-1536x864.jpg",
+  "width": 1536,
+  "height": 864,
+  "alt": "Build vs buy AI healthcare"
+ },
+ "19498": {
+  "src": "/images/murphi-ai-2e2619f3/blog/young-handsome-physician-medical-robe-with-stethoscope-1536x1024.jpg",
+  "width": 1536,
+  "height": 1024,
+  "alt": "Healthcare AI"
+ },
+ "19727": {
+  "src": "/images/murphi-ai-2e2619f3/blog/team-young-nurses-learning-practice-from-doctor-expert-cabinet-1536x1024.jpg",
+  "width": 1536,
+  "height": 1024,
+  "alt": "Murphi.ai Apple News"
+ },
+ "19862": {
+  "src": "/images/murphi-ai-2e2619f3/blog/medic-team-discussing-germs-clinic-2-1536x1024.jpg",
+  "width": 1536,
+  "height": 1024,
+  "alt": ""
+ },
+ "20499": {
+  "src": "/images/murphi-ai-2e2619f3/blog/african-american-nurse-evaluating-lab-test-results-discussing-recovery-plan-1536x1024.jpg",
+  "width": 1536,
+  "height": 1024,
+  "alt": "EHR AI integration strategy"
+ },
+ "20627": {
+  "src": "/images/murphi-ai-2e2619f3/blog/healthcare-specialist-using-thermometer-check-fever-measurements-1536x1024.jpg",
+  "width": 1536,
+  "height": 1024,
+  "alt": "Healthcare AI Platform"
+ },
+ "20631": {
+  "src": "/images/murphi-ai-2e2619f3/blog/experienced-general-practitioner-consulting-patient-health-insurance-1536x864.jpg",
+  "width": 1536,
+  "height": 864,
+  "alt": ""
+ },
+ "20633": {
+  "src": "/images/murphi-ai-2e2619f3/blog/medical-specialist-explaining-diagnostic-test-results-cabinet-1-1536x864.jpg",
+  "width": 1536,
+  "height": 864,
+  "alt": "autonomous medical coding"
+ },
+ "20664": {
+  "src": "/images/murphi-ai-2e2619f3/blog/healthcare-provider-presenting-lab-test-results-patient-cabinet-1536x864.jpg",
+  "width": 1536,
+  "height": 864,
+  "alt": "AI scribe for Athenahealth"
+ },
+ "20670": {
+  "src": "/images/murphi-ai-2e2619f3/blog/ChatGPT-Image-Jun-16-2026-10_41_35-AM.png",
+  "width": 1536,
+  "height": 1024,
+  "alt": ""
+ },
+ "20684": {
+  "src": "/images/murphi-ai-2e2619f3/blog/Revenue-Assurance-for-Home-Health-Hospice-2-1536x1024.png",
+  "width": 1536,
+  "height": 1024,
+  "alt": ""
+ },
+ "20694": {
+  "src": "/images/murphi-ai-2e2619f3/blog/old-physician-consulting-woman-by-measuring-temperature-check-up-1536x1024.jpg",
+  "width": 1536,
+  "height": 1024,
+  "alt": "Artificial Intelligence"
+ },
+ "20722": {
+  "src": "/images/murphi-ai-2e2619f3/blog/employee-using-computer-analyze-datasets-being-assisted-by-helpful-coworker-1536x864.jpg",
+  "width": 1536,
+  "height": 864,
+  "alt": "artificial intelligence"
+ },
+ "20730": {
+  "src": "/images/murphi-ai-2e2619f3/blog/african-american-doctor-presenting-x-ray-diagnostics-tablet-1536x864.jpg",
+  "width": 1536,
+  "height": 864,
+  "alt": "medical device integration"
+ },
+ "20767": {
+  "src": "/images/murphi-ai-2e2619f3/blog/african-american-doctor-presenting-x-ray-diagnostics-tablet-11-1536x864.jpg",
+  "width": 1536,
+  "height": 864,
+  "alt": "best ai for doctors"
+ },
+ "20777": {
+  "src": "/images/murphi-ai-2e2619f3/blog/african-american-doctor-presenting-x-ray-diagnostics-tablet-14-1536x864.jpg",
+  "width": 1536,
+  "height": 864,
+  "alt": "Behavioral health AI documentation"
+ },
+ "20783": {
+  "src": "/images/murphi-ai-2e2619f3/blog/african-american-doctor-presenting-x-ray-diagnostics-tablet-15-1536x864.jpg",
+  "width": 1536,
+  "height": 864,
+  "alt": "best patient billing software"
+ },
+ "20785": {
+  "src": "/images/murphi-ai-2e2619f3/blog/patient-telling-doctor-about-symptoms-disease-1536x1025.jpg",
+  "width": 1536,
+  "height": 1025,
+  "alt": ""
+ },
+ "20793": {
+  "src": "/images/murphi-ai-2e2619f3/blog/young-doctor-supporting-his-patient-1536x1056.jpg",
+  "width": 1536,
+  "height": 1056,
+  "alt": "predictive analytics in healthcare"
+ },
+ "20937": {
+  "src": "/images/murphi-ai-2e2619f3/blog/medium-shot-doctor-checking-blood-pressure-female-patient-1536x1025.jpg",
+  "width": 1536,
+  "height": 1025,
+  "alt": "benefits of ai in radiology"
+ },
+ "20942": {
+  "src": "/images/murphi-ai-2e2619f3/blog/happy-doctor-holding-clipboard-with-patients-1536x1024.jpg",
+  "width": 1536,
+  "height": 1024,
+  "alt": "robotic process automation in healthcare"
+ },
+ "20946": {
+  "src": "/images/murphi-ai-2e2619f3/blog/young-woman-doctor-gp-white-medical-uniform-consult-male-patient-private-hospital-female-therapist-speak-talk-with-man-client-consultation-clinic-1536x1024.jpg",
+  "width": 1536,
+  "height": 1024,
+  "alt": "ai in healthcare rcm"
+ },
+ "21129": {
+  "src": "/images/murphi-ai-2e2619f3/blog/health-surgical-notebook-room-hospital-men-1536x1024.jpg",
+  "width": 1536,
+  "height": 1024,
+  "alt": "medical billing errors cost"
+ },
+ "21134": {
+  "src": "/images/murphi-ai-2e2619f3/blog/doctor-provides-cancer-screening-guidance-patient-discussing-mri-scans-1536x864.jpg",
+  "width": 1536,
+  "height": 864,
+  "alt": "autonomous medical coding vs CAC"
+ }
+}

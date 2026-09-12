@@ -193,7 +193,7 @@ export default function AiDrivenRcmPage() {
         </div>
 
         <FinalCta
-          heading={"Read the Denial Letter Before It's Written."}
+          heading={"Generate Appeal Letters for Details with detailed documentation."}
           body="AI-Driven RCM is launching soon. Join the early access list to be first to see it on your claims."
           primaryLabel="Join Early Access"
         />

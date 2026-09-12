@@ -1,3 +1,5 @@
+import "./pulse-mic.css";
+
 export function MicIcon({ size = 30 }: { size?: number }) {
   return (
     <svg
@@ -56,6 +58,7 @@ export function CheckIcon({ size = 16 }: { size?: number }) {
 export function PulseMic({ size = 56, icon = 30 }: { size?: number; icon?: number }) {
   return (
     <div
+      className="hl-pulse-mic"
       style={{
         position: "relative",
         width: size,
@@ -66,8 +69,8 @@ export function PulseMic({ size = 56, icon = 30 }: { size?: number; icon?: numbe
         flexShrink: 0,
       }}
     >
-      <span className="ring" />
-      <span className="ring ring2" />
+      <span className="hl-pulse-mic-ring" />
+      <span className="hl-pulse-mic-ring hl-pulse-mic-ring2" />
       <MicIcon size={icon} />
     </div>
   );

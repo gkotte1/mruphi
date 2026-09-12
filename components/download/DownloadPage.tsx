@@ -65,21 +65,9 @@ const MODULES: { index: string; title: string; body: string; icon: IconName }[] 
     },
     {
       index: "04",
-      title: "Revenue Assurance Reports",
+      title: "Clinician & Patient Engagement",
       icon: "chartup",
-      body: "View and manage your 28 AI compliance reports from anywhere. Review findings, approve reports, and track compliance status across your organization.",
-    },
-    {
-      index: "05",
-      title: "Patient Payment Tracking",
-      icon: "card",
-      body: "Monitor outstanding balances, track SMS payment link delivery and response, and view real-time collections performance across your patient population.",
-    },
-    {
-      index: "06",
-      title: "HIPAA Secure - Always",
-      icon: "shield",
-      body: "All app data encrypted end-to-end. Biometric authentication supported. Session timeout controls. BAA in place. HIPAA compliant on iOS, Android, and web.",
+      body: "Keep clinicians connected. keep patients engaged. Automate reminders, follow-ups, education, and routine communication. less administrative work.",
     },
   ];
 

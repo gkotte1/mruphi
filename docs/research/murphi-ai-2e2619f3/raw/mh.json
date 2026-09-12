@@ -1,0 +1,1102 @@
+{
+ "slug": "embed-ai-into-ehr-workflows-mental-and-behavioural-health",
+ "title": "Embed AI Into EHR Workflows :- Mental And Behavioural Health | Murphi AI",
+ "description": "Murphi.ai gives EHR platforms a complete, embeddable AI layer — ambient documentation, clinical intelligence, agentic RCM, CDI, and patient payment",
+ "hero": {
+  "breadcrumb": [
+   {
+    "label": "Who We Serve — Mental & Behavioral Health",
+    "active": false,
+    "href": "/mental-behavioral-health/"
+   },
+   {
+    "label": "Embed AI into EHR Workflows",
+    "active": true,
+    "href": null
+   }
+  ],
+  "separator": "›",
+  "h1": "Embed Mental & Behavioral Health AI Features into Your EHR Workflows",
+  "sub": "Murphi.ai gives EHR platforms a complete, embeddable AI layer — ambient documentation, clinical intelligence, agentic RCM, CDI, and patient payment automation. Delivered via encrypted API, SSO, or iFrame. Under your brand. Zero token cost.",
+  "buttons": [
+   {
+    "variant": "solid",
+    "label": "Request Demo",
+    "href": "/contact-us/"
+   },
+   {
+    "variant": "outline",
+    "label": "See All Solutions →",
+    "href": "/ehr-emr-companies/"
+   }
+  ]
+ },
+ "who": {
+  "eyebrow": "Who It's For",
+  "title": "Mental & Behavioral Health",
+  "tags": [
+   "Outpatient Behavioral Health",
+   "SUD Programs",
+   "Residential Treatment",
+   "IOP / PHP",
+   "Community Mental Health",
+   "Crisis Services"
+  ],
+  "desc": "Behavioral health documentation is high-volume, compliance-sensitive, and highly structured. Murphi.ai gives your EHR platform ambient AI documentation, agentic RCM workflows, CDI, and self-pay collection automation — embeddable into your existing screens and workflows without a platform rebuild."
+ },
+ "trust": {
+  "items": [
+   {
+    "icon": "mh-trust-0",
+    "label": "HIPAA Compliant"
+   },
+   {
+    "icon": "mh-trust-1",
+    "label": "SOC 2 Certified"
+   },
+   {
+    "icon": "mh-trust-2",
+    "label": "ISO 27001"
+   },
+   {
+    "icon": "mh-trust-3",
+    "label": "BAA Signed"
+   },
+   {
+    "icon": "mh-trust-4",
+    "label": "Any EHR Integration"
+   },
+   {
+    "icon": "mh-trust-5",
+    "label": "All US Time Zones"
+   }
+  ],
+  "link": {
+   "label": "24/7 Support · Submit a Ticket →",
+   "href": "/support-ticket/"
+  }
+ },
+ "stats": {
+  "eyebrow": "Proven Outcomes",
+  "title": "Real Results from Behavioral Health Platforms",
+  "sub": "Outcomes reported by EHR platforms and behavioral health organizations using Murphi.ai today.",
+  "boxes": [
+   {
+    "value": "90%",
+    "label": "Time saved on progress notes per session"
+   },
+   {
+    "value": "100%",
+    "label": "Notes completed before patient leaves the room"
+   },
+   {
+    "value": "75%",
+    "label": "Self-pay bad debt reduction"
+   },
+   {
+    "value": "15 days",
+    "label": "AR cycle — down from 100+ days"
+   }
+  ]
+ },
+ "values": {
+  "eyebrow": "Embeddable AI Modules",
+  "title": "Four AI Capabilities You Can Embed Today",
+  "sub": "Each module integrates into your existing EHR screens via API, SSO, or iFrame. Your brand. Your customers. Zero token cost.",
+  "cards": [
+   {
+    "icon": "mh-val-6",
+    "title": "Ambient AI Documentation",
+    "desc": "PIE, BIRP, SOAP, DAP notes generated from session voice. PHQ-9, GAD-7, AUDIT-C auto-populated. Clinician approves before EHR write-back."
+   },
+   {
+    "icon": "mh-val-7",
+    "title": "Agentic RCM Workflows",
+    "desc": "AI agents handle pre-auth, coding, denial management, and remittance reconciliation — end-to-end, without replacing your billing team."
+   },
+   {
+    "icon": "mh-val-8",
+    "title": "Patient Payment Module",
+    "desc": "Text-to-pay for self-pay and co-pay balances. AR drops from 100+ to 15 days. 75% bad debt reduction. No EHR integration required to start."
+   },
+   {
+    "icon": "mh-val-9",
+    "title": "CDI & Compliance Intelligence",
+    "desc": "Real-time clinical documentation improvement, medical necessity checks, safety plan validation, and audit trail — built into every note workflow."
+   }
+  ]
+ },
+ "ambient": {
+  "eyebrow": "Ambient AI",
+  "title": "Session Voice to Compliant Note — Before the Patient Leaves",
+  "sub": "Murphi.ai listens during the clinical session and generates structured notes in the format your EHR and payers require. Assessment scores auto-populate from the same audio. Clinicians review and approve — one tap to write to EHR.",
+  "chips": [
+   "PIE Notes",
+   "BIRP Notes",
+   "SOAP Notes",
+   "DAP Notes",
+   "Group Therapy",
+   "Crisis Notes",
+   "Case Management",
+   "Discharge Summary"
+  ],
+  "stats": [
+   {
+    "value": "90%",
+    "label": "Documentation time saved"
+   },
+   {
+    "value": "4–6 hrs",
+    "label": "Returned to clinicians daily"
+   },
+   {
+    "value": "55+",
+    "label": "Languages supported"
+   }
+  ],
+  "demo": {
+   "dots": [
+    "#EF4444",
+    "#F59E0B",
+    "#22C55E"
+   ],
+   "session": "Individual Therapy · 50 min",
+   "recording": "Recording",
+   "noteLabel": "AI-Generated BIRP Note — Murphi.ai",
+   "note": [
+    {
+     "text": "Behavior",
+     "strong": true
+    },
+    {
+     "text": "Client presented with mild anxiety related to occupational stressors. Engaged appropriately throughout session, maintained eye contact. "
+    },
+    {
+     "text": "Intervention",
+     "strong": true
+    },
+    {
+     "text": "CBT techniques applied — cognitive restructuring and thought record exercise completed. Grounding strategies reviewed. "
+    },
+    {
+     "text": "Response",
+     "strong": true
+    },
+    {
+     "text": "Client demonstrated improved insight into cognitive distortions. Subjective distress reduced from 7/10 to 4/10. "
+    },
+    {
+     "text": "Plan",
+     "strong": true
+    },
+    {
+     "text": "Continue CBT protocol. Client to complete thought diary before next session. Follow-up in 1 week. "
+    }
+   ],
+   "scoresLabel": "Assessments Auto-Populated from Session Audio",
+   "scores": [
+    {
+     "name": "PHQ-9",
+     "value": "8",
+     "label": "Mild Depression"
+    },
+    {
+     "name": "GAD-7",
+     "value": "11",
+     "label": "Mod. Anxiety"
+    },
+    {
+     "name": "AUDIT-C",
+     "value": "2",
+     "label": "Low Risk"
+    }
+   ],
+   "actions": [
+    {
+     "variant": "primary",
+     "label": "✓ Approve & Send to EHR"
+    },
+    {
+     "variant": "secondary",
+     "label": "Edit"
+    },
+    {
+     "variant": "secondary",
+     "label": "Flag"
+    }
+   ]
+  }
+ },
+ "features": {
+  "eyebrow": "Feature Explorer",
+  "title": "All AI Features Available for Embedding",
+  "sub": "Browse by workflow type. Every feature is embeddable via API, SSO, iFrame, or as a fully white-labeled component inside your EHR.",
+  "tabs": [
+   {
+    "key": "all",
+    "label": "All Features",
+    "active": true
+   },
+   {
+    "key": "documentation",
+    "label": "Documentation",
+    "active": false
+   },
+   {
+    "key": "clinical",
+    "label": "Clinical Intelligence",
+    "active": false
+   },
+   {
+    "key": "rcm",
+    "label": "RCM & Revenue",
+    "active": false
+   },
+   {
+    "key": "patient",
+    "label": "Patient Experience",
+    "active": false
+   },
+   {
+    "key": "compliance",
+    "label": "Compliance & Audit",
+    "active": false
+   }
+  ],
+  "filters": [
+   {
+    "key": "all",
+    "label": "All Types",
+    "active": true
+   },
+   {
+    "key": "Ambient AI",
+    "label": "Ambient AI",
+    "active": false
+   },
+   {
+    "key": "Voice-to-Text",
+    "label": "Voice-to-Text",
+    "active": false
+   },
+   {
+    "key": "Clinical AI",
+    "label": "Clinical AI",
+    "active": false
+   },
+   {
+    "key": "Agentic AI",
+    "label": "Agentic AI",
+    "active": false
+   },
+   {
+    "key": "Compliance AI",
+    "label": "Compliance AI",
+    "active": false
+   },
+   {
+    "key": "Payments",
+    "label": "Payments",
+    "active": false
+   },
+   {
+    "key": "Workflow Automation",
+    "label": "Automation",
+    "active": false
+   }
+  ],
+  "badgeClasses": {
+   "Ambient AI": "ambient",
+   "Voice-to-Text": "voice",
+   "Clinical AI": "clinical",
+   "Agentic AI": "agentic",
+   "Compliance AI": "compliance",
+   "Payments": "payments",
+   "Workflow Automation": "workflow"
+  },
+  "empty": "No features match this filter. Try selecting All Types.",
+  "countSuffix": {
+   "one": "feature",
+   "many": "features"
+  },
+  "categories": [
+   {
+    "key": "documentation",
+    "label": "Clinical Documentation",
+    "icon": "mh-cat-10",
+    "tab": "documentation",
+    "features": [
+     {
+      "name": "Ambient AI Session Capture",
+      "desc": "Listens to therapy sessions and generates compliant notes in PIE, BIRP, SOAP, or DAP format — ready for clinician review before the patient leaves.",
+      "type": "Ambient AI",
+      "tone": "blue",
+      "icon": "mh-feat-11"
+     },
+     {
+      "name": "PIE Note Generation",
+      "desc": "Structures Problem-Intervention-Evaluation notes from ambient or voice input with clinical specificity for behavioral health payers.",
+      "type": "Ambient AI",
+      "tone": "blue",
+      "icon": "mh-feat-12"
+     },
+     {
+      "name": "BIRP Note Generation",
+      "desc": "Generates Behavior-Intervention-Response-Plan notes from session audio, capturing clinician reasoning and patient response.",
+      "type": "Ambient AI",
+      "tone": "blue",
+      "icon": "mh-feat-13"
+     },
+     {
+      "name": "SOAP Note Generation",
+      "desc": "Creates Subjective-Objective-Assessment-Plan notes for psychiatry, primary care behavioral health, and integrated care settings.",
+      "type": "Ambient AI",
+      "tone": "blue",
+      "icon": "mh-feat-14"
+     },
+     {
+      "name": "DAP Note Generation",
+      "desc": "Produces Data-Assessment-Plan notes aligned to outpatient therapy documentation standards.",
+      "type": "Ambient AI",
+      "tone": "blue",
+      "icon": "mh-feat-15"
+     },
+     {
+      "name": "Group Therapy Notes",
+      "desc": "Documents group session notes with individual member observations from a single ambient capture or clinician voice summary.",
+      "type": "Ambient AI",
+      "tone": "blue",
+      "icon": "mh-feat-16"
+     },
+     {
+      "name": "Crisis Intervention Notes",
+      "desc": "Generates structured crisis notes capturing risk assessment, safety planning, and clinical decision rationale at the point of care.",
+      "type": "Ambient AI",
+      "tone": "blue",
+      "icon": "mh-feat-17"
+     },
+     {
+      "name": "Voice-to-Text (55 Languages)",
+      "desc": "Transcribes clinician speech in over 55 languages with behavioral health terminology optimization and punctuation correction.",
+      "type": "Voice-to-Text",
+      "tone": "teal",
+      "icon": "mh-feat-18"
+     },
+     {
+      "name": "AI Rewrite",
+      "desc": "Improves draft clinical text for clarity, specificity, and payer compliance — turning vague notes into billable, defensible documentation.",
+      "type": "Workflow Automation",
+      "tone": "indigo",
+      "icon": "mh-feat-19"
+     },
+     {
+      "name": "Smart Summary",
+      "desc": "Generates a concise patient summary from multiple session notes, assessments, and clinical documents for care team handoffs.",
+      "type": "Clinical AI",
+      "tone": "green",
+      "icon": "mh-feat-20"
+     },
+     {
+      "name": "Handwriting-to-Text",
+      "desc": "Converts handwritten session notes and intake forms into structured digital text using AI-powered recognition.",
+      "type": "Workflow Automation",
+      "tone": "indigo",
+      "icon": "mh-feat-21"
+     },
+     {
+      "name": "Discharge Summary Generation",
+      "desc": "Creates structured discharge summaries from session history, treatment plan, and final assessment data.",
+      "type": "Clinical AI",
+      "tone": "green",
+      "icon": "mh-feat-22"
+     }
+    ]
+   },
+   {
+    "key": "clinical",
+    "label": "Clinical Intelligence",
+    "icon": "mh-cat-23",
+    "tab": "clinical",
+    "features": [
+     {
+      "name": "Assessment Auto-Population",
+      "desc": "Extracts PHQ-9, GAD-7, AUDIT-C, PCL-5, and other standardized scores directly from session audio — no manual entry.",
+      "type": "Clinical AI",
+      "tone": "green",
+      "icon": "mh-feat-24"
+     },
+     {
+      "name": "Patient Summary Reading",
+      "desc": "Reads and interprets existing patient records to surface key clinical facts, diagnoses, and care history before each session.",
+      "type": "Clinical AI",
+      "tone": "green",
+      "icon": "mh-feat-25"
+     },
+     {
+      "name": "Pre-Session Clinical Brief",
+      "desc": "Generates a concise brief for the clinician before each session — diagnosis, last note summary, open treatment goals, and flagged items.",
+      "type": "Clinical AI",
+      "tone": "green",
+      "icon": "mh-feat-26"
+     },
+     {
+      "name": "Ask Murphi – Clinical Q&A",
+      "desc": "Allows clinicians to ask natural-language questions against the patient record — What was the last PHQ-9 score, or has suicidal ideation been documented.",
+      "type": "Clinical AI",
+      "tone": "teal",
+      "icon": "mh-feat-27"
+     },
+     {
+      "name": "Treatment Plan Generation",
+      "desc": "Drafts individualized treatment plans from intake assessment, diagnosis, and session goals — structured for payer review and regulatory audits.",
+      "type": "Clinical AI",
+      "tone": "green",
+      "icon": "mh-feat-28"
+     },
+     {
+      "name": "Treatment Plan Progress Review",
+      "desc": "Evaluates session notes against active treatment plan goals and surfaces goal attainment summaries for utilization review.",
+      "type": "Clinical AI",
+      "tone": "green",
+      "icon": "mh-feat-29"
+     },
+     {
+      "name": "Clinical Documentation Improvement (CDI)",
+      "desc": "Reviews session notes for specificity, completeness, and coding defensibility — prompting clinicians to add supporting detail before finalization.",
+      "type": "Clinical AI",
+      "tone": "green",
+      "icon": "mh-feat-30"
+     },
+     {
+      "name": "Medical Necessity Check",
+      "desc": "Evaluates each note against payer LCD and coverage criteria to confirm medical necessity documentation is sufficient before billing.",
+      "type": "Clinical AI",
+      "tone": "green",
+      "icon": "mh-feat-31"
+     },
+     {
+      "name": "Document Comparison",
+      "desc": "Compares two versions of a clinical document — treatment plans, session notes, or assessments — and highlights changes for review.",
+      "type": "Clinical AI",
+      "tone": "blue",
+      "icon": "mh-feat-32"
+     },
+     {
+      "name": "Suicidality & Safety Documentation Check",
+      "desc": "Verifies risk assessments, safety plans, and clinical rationale are documented whenever suicidal ideation or self-harm is mentioned.",
+      "type": "Compliance AI",
+      "tone": "amber",
+      "icon": "mh-feat-33"
+     },
+     {
+      "name": "Utilization Review Summary",
+      "desc": "Compiles clinical progress summaries for utilization review requests, recertification, and level-of-care transitions.",
+      "type": "Clinical AI",
+      "tone": "green",
+      "icon": "mh-feat-34"
+     },
+     {
+      "name": "Referral Document Scrubbing",
+      "desc": "Extracts and validates clinical information from inbound referral PDFs — auto-populating the EHR on intake.",
+      "type": "Workflow Automation",
+      "tone": "indigo",
+      "icon": "mh-feat-35"
+     }
+    ]
+   },
+   {
+    "key": "rcm",
+    "label": "RCM & Revenue",
+    "icon": "mh-cat-36",
+    "tab": "rcm",
+    "features": [
+     {
+      "name": "Pre-Authorization Agent",
+      "desc": "AI agent monitors the schedule, gathers clinical documentation, and submits prior auth requests to payers automatically.",
+      "type": "Agentic AI",
+      "tone": "indigo",
+      "icon": "mh-feat-37"
+     },
+     {
+      "name": "CPT & ICD-10 Coding Suggestions",
+      "desc": "Reviews session notes and suggests CPT procedure codes, ICD-10 diagnoses, and modifiers with confidence scores.",
+      "type": "Clinical AI",
+      "tone": "green",
+      "icon": "mh-feat-38"
+     },
+     {
+      "name": "Claims Readiness Check",
+      "desc": "Validates that all required fields, diagnosis codes, and documentation are in order before a claim is submitted.",
+      "type": "Agentic AI",
+      "tone": "indigo",
+      "icon": "mh-feat-39"
+     },
+     {
+      "name": "Denial Management Agent",
+      "desc": "Reads remittance files, classifies denial reasons, drafts appeal letters with supporting documentation, and tracks resolution.",
+      "type": "Agentic AI",
+      "tone": "indigo",
+      "icon": "mh-feat-40"
+     },
+     {
+      "name": "Remittance Reconciliation",
+      "desc": "Matches 835 ERA payments against expected amounts and flags underpayments and contractual variances for review.",
+      "type": "Agentic AI",
+      "tone": "indigo",
+      "icon": "mh-feat-41"
+     },
+     {
+      "name": "Eligibility & Benefits Verification",
+      "desc": "Verifies patient insurance eligibility and behavioral health benefits before appointments — surfacing co-pay and coverage details.",
+      "type": "Workflow Automation",
+      "tone": "indigo",
+      "icon": "mh-feat-42"
+     },
+     {
+      "name": "Pre-Auth Status Tracking",
+      "desc": "Monitors outstanding prior auth requests and alerts staff on expiring auths and information requests.",
+      "type": "Agentic AI",
+      "tone": "indigo",
+      "icon": "mh-feat-43"
+     },
+     {
+      "name": "Level-of-Care Documentation Review",
+      "desc": "Reviews documentation supporting PHP, IOP, residential, and inpatient determinations against payer standards.",
+      "type": "Compliance AI",
+      "tone": "amber",
+      "icon": "mh-feat-44"
+     },
+     {
+      "name": "Credentialing Intelligence",
+      "desc": "Tracks clinician credentialing status, payer enrollment, and re-credentialing timelines — alerting before lapses affect claims.",
+      "type": "Workflow Automation",
+      "tone": "indigo",
+      "icon": "mh-feat-45"
+     }
+    ]
+   },
+   {
+    "key": "patient",
+    "label": "Patient Experience",
+    "icon": "mh-cat-46",
+    "tab": "patient",
+    "features": [
+     {
+      "name": "AI Patient Financial Module",
+      "desc": "Collects co-pays, deductibles, and self-pay balances via secure SMS text-to-pay. Patients pay in under 60 seconds. No app download.",
+      "type": "Payments",
+      "tone": "green",
+      "icon": "mh-feat-47"
+     },
+     {
+      "name": "Automated Payment Reminders",
+      "desc": "Sends HIPAA-compliant SMS reminders at optimal times — reducing manual follow-up calls significantly.",
+      "type": "Payments",
+      "tone": "green",
+      "icon": "mh-feat-48"
+     },
+     {
+      "name": "Intake Form Auto-Population",
+      "desc": "Extracts and pre-fills patient intake forms from referral documents, prior records, and verified insurance data.",
+      "type": "Workflow Automation",
+      "tone": "indigo",
+      "icon": "mh-feat-49"
+     },
+     {
+      "name": "Medication Capture & Reconciliation",
+      "desc": "Captures current medications from referral documents and patient-reported info — flagging discrepancies for clinical review.",
+      "type": "Clinical AI",
+      "tone": "green",
+      "icon": "mh-feat-50"
+     },
+     {
+      "name": "HIPAA-Compliant Patient Messaging",
+      "desc": "Enables secure, PHI-safe care team and patient messaging — reducing call volume and hold times.",
+      "type": "Workflow Automation",
+      "tone": "teal",
+      "icon": "mh-feat-51"
+     },
+     {
+      "name": "Payment Plan Management",
+      "desc": "Structures and tracks multi-session payment plans for high-balance self-pay patients — with automated SMS milestones.",
+      "type": "Payments",
+      "tone": "green",
+      "icon": "mh-feat-52"
+     },
+     {
+      "name": "Patient-Reported Outcome Capture",
+      "desc": "Delivers PHQ-9, GAD-7, and other outcome measures to patients via SMS before sessions — responses pre-populate the EHR.",
+      "type": "Clinical AI",
+      "tone": "blue",
+      "icon": "mh-feat-53"
+     }
+    ]
+   },
+   {
+    "key": "compliance",
+    "label": "Compliance & Audit",
+    "icon": "mh-cat-54",
+    "tab": "compliance",
+    "features": [
+     {
+      "name": "AI Audit Trail & Reporting",
+      "desc": "Logs every AI action, human review decision, edit, and approval with timestamp, user, and confidence score — exportable for audits.",
+      "type": "Compliance AI",
+      "tone": "amber",
+      "icon": "mh-feat-55"
+     },
+     {
+      "name": "Note Quality Checker",
+      "desc": "Reviews completed session notes for clinical specificity, medical necessity language, and audit-readiness before finalization.",
+      "type": "Compliance AI",
+      "tone": "amber",
+      "icon": "mh-feat-56"
+     },
+     {
+      "name": "Informed Consent Documentation Check",
+      "desc": "Verifies that informed consent, HIPAA notice, and release of information documentation is complete and current.",
+      "type": "Compliance AI",
+      "tone": "amber",
+      "icon": "mh-feat-57"
+     },
+     {
+      "name": "Safety Plan Documentation Validator",
+      "desc": "Ensures that whenever acute risk is documented, a current and clinically specific safety plan is on file.",
+      "type": "Compliance AI",
+      "tone": "amber",
+      "icon": "mh-feat-58"
+     },
+     {
+      "name": "Treatment Plan Expiration Monitor",
+      "desc": "Tracks treatment plan review and signature dates — alerting supervisors before plans expire.",
+      "type": "Workflow Automation",
+      "tone": "indigo",
+      "icon": "mh-feat-59"
+     },
+     {
+      "name": "CARF / Joint Commission Check",
+      "desc": "Reviews documentation for alignment with CARF and Joint Commission accreditation standards — flagging gaps before audits.",
+      "type": "Compliance AI",
+      "tone": "amber",
+      "icon": "mh-feat-60"
+     },
+     {
+      "name": "42 CFR Part 2 Flag & Workflow",
+      "desc": "Identifies SUD-related documentation and applies heightened access controls aligned to 42 CFR Part 2.",
+      "type": "Compliance AI",
+      "tone": "amber",
+      "icon": "mh-feat-61"
+     },
+     {
+      "name": "Supervision & Co-Signature Workflow",
+      "desc": "Routes notes from provisionally licensed clinicians to supervisors for mandatory co-signature — with deadline tracking.",
+      "type": "Workflow Automation",
+      "tone": "indigo",
+      "icon": "mh-feat-62"
+     },
+     {
+      "name": "Telehealth Documentation Compliance",
+      "desc": "Checks that telehealth session notes include required modality documentation, patient location attestation, and payer elements.",
+      "type": "Compliance AI",
+      "tone": "amber",
+      "icon": "mh-feat-63"
+     },
+     {
+      "name": "Human Review & Approval Workflow",
+      "desc": "Every AI-generated output passes through clinician review before entering the EHR record — with full edit capability.",
+      "type": "Compliance AI",
+      "tone": "teal",
+      "icon": "mh-feat-64"
+     }
+    ]
+   }
+  ]
+ },
+ "rcm": {
+  "eyebrow": "Agentic RCM",
+  "title": "Revenue Cycle Automation Driven by AI Agents",
+  "sub": "Embed AI agents across the entire revenue cycle — from pre-authorization through denial resolution — into your existing billing workflows.",
+  "cards": [
+   {
+    "icon": "mh-rcm-65",
+    "badge": "Agentic AI",
+    "title": "Pre-Authorization Agent",
+    "desc": "Monitors the schedule, gathers clinical documentation, and submits prior auth requests automatically — reducing manual workload by over 80%.",
+    "steps": [
+     "Identifies sessions requiring auth from schedule",
+     "Pulls supporting clinical documentation",
+     "Formats and submits auth to payer portals",
+     "Tracks status and alerts on exceptions"
+    ]
+   },
+   {
+    "icon": "mh-rcm-66",
+    "badge": "Agentic AI",
+    "title": "Coding & Claims Agent",
+    "desc": "Reviews session notes, suggests CPT and ICD-10 codes with confidence scores, and checks medical necessity before claim submission.",
+    "steps": [
+     "Reads approved notes from EHR",
+     "Suggests CPT codes with confidence scores",
+     "Applies payer-specific coding rules",
+     "Routes edge cases to coder with context"
+    ]
+   },
+   {
+    "icon": "mh-rcm-67",
+    "badge": "Agentic AI",
+    "title": "Denial Management Agent",
+    "desc": "Reads remittance files, classifies denial codes, drafts appeal letters, and tracks resolution timelines — autonomous for standard denial types.",
+    "steps": [
+     "Reads 835 ERA files and classifies denials",
+     "Maps denial code to documentation gap",
+     "Generates appeal letter with evidence",
+     "Escalates complex denials with pre-built brief"
+    ]
+   },
+   {
+    "icon": "mh-rcm-68",
+    "badge": "Clinical AI",
+    "title": "Medical Necessity Intelligence",
+    "desc": "Reviews every note against payer LCD criteria before billing — catching documentation deficiencies before they become denials.",
+    "steps": [
+     "Checks notes against payer coverage criteria",
+     "Identifies missing diagnosis justification",
+     "Flags notes below medical necessity threshold",
+     "Prompts clinician to add detail pre-billing"
+    ]
+   }
+  ]
+ },
+ "pay": {
+  "eyebrow": "Patient Payment Module",
+  "title": "Embed Text-to-Pay Self-Pay Collection Into Your EHR",
+  "sub": "Behavioral health practices carry among the highest self-pay rates in healthcare. Murphi.ai collects co-pays, deductibles, and self-pay balances via secure SMS — patients pay in under 60 seconds. No EHR integration required to start. Embeds into billing screens via API when ready.",
+  "outcomes": [
+   {
+    "value": "15 days",
+    "label": "AR cycle — down from 100+ days"
+   },
+   {
+    "value": "75%",
+    "label": "Self-pay bad debt reduction"
+   },
+   {
+    "value": "48 hrs",
+    "label": "Average time to funds in account"
+   },
+   {
+    "value": "↑60%",
+    "label": "Patient response vs. paper billing"
+   }
+  ],
+  "tags": [
+   "No patient app download",
+   "HIPAA-compliant SMS",
+   "Everyware gateway",
+   "55+ languages",
+   "API embeddable"
+  ],
+  "phone": {
+   "title": "Murphi.ai · Secure Pay",
+   "sms": [
+    {
+     "text": "Hi Sarah — your session on July 15 has a patient responsibility of "
+    },
+    {
+     "text": "$45.00",
+     "strong": true
+    },
+    {
+     "text": ". Tap below to pay securely. Reply HELP for questions."
+    }
+   ],
+   "amountLabel": "Amount Due",
+   "amount": "$45.00",
+   "amountSub": "Co-pay · Session 07/15/2026",
+   "button": "Pay $45.00 Securely →",
+   "note": "256-bit encrypted · HIPAA compliant"
+  }
+ },
+ "integration": {
+  "eyebrow": "Integration Options",
+  "title": "Three Ways to Embed Murphi.ai",
+  "sub": "Choose the approach that matches how your EHR platform is built — or combine all three.",
+  "cards": [
+   {
+    "icon": "mh-int-69",
+    "title": "Embedded Components",
+    "desc": "Drop AI capabilities directly into your existing clinical screens and workflow steps — no context switch for clinicians."
+   },
+   {
+    "icon": "mh-int-70",
+    "title": "Encrypted API & SSO",
+    "desc": "Connect Murphi.ai to your EHR data, documents, and actions via FHIR R4, HL7 v2, or REST API. HIPAA-grade encryption throughout."
+   },
+   {
+    "icon": "mh-int-71",
+    "title": "White-Label Platform",
+    "desc": "Launch the complete Murphi.ai AI platform under your brand. Your logo, your pricing, your customer relationships — Murphi never visible."
+   }
+  ]
+ },
+ "platform": {
+  "eyebrow": "Platform Infrastructure",
+  "title": "The AI Infrastructure Behind Every Feature",
+  "sub": "Your team sees a clean integration. Behind it, Murphi.ai runs the orchestration, governance, security, and observability automatically.",
+  "layers": [
+   {
+    "tone": "blue",
+    "eyebrow": "Experience Layer",
+    "name": "What Clinicians & Patients See",
+    "chips": [
+     "Embedded EHR Components",
+     "White-Labeled Workflows",
+     "Mobile & Web Apps",
+     "Clinician Review Interface",
+     "Patient SMS & Portal"
+    ]
+   },
+   {
+    "tone": "indigo",
+    "eyebrow": "AI Orchestration Layer",
+    "name": "Intelligence & Agentic Engine",
+    "chips": [
+     "Multi-Model Orchestration",
+     "Agentic AI Workflows",
+     "Prompt & Version Management",
+     "RAG & Clinical Context",
+     "Confidence Scoring",
+     "Token Optimization"
+    ]
+   },
+   {
+    "tone": "teal",
+    "eyebrow": "Integration Layer",
+    "name": "EHR Data In · Output Out",
+    "chips": [
+     "REST APIs",
+     "FHIR R4",
+     "HL7 v2",
+     "SSO / iFrame",
+     "PDF Processing",
+     "RPA When Required",
+     "835 Remittance"
+    ]
+   },
+   {
+    "tone": "gray",
+    "eyebrow": "Governance & Operations",
+    "name": "Security, Compliance & Support",
+    "chips": [
+     "HIPAA-Aligned Controls",
+     "Audit Logs",
+     "Role-Based Access",
+     "Model Monitoring",
+     "Human-in-the-Loop",
+     "24/7 Support",
+     "BAA Signed"
+    ]
+   }
+  ],
+  "callout": [
+   {
+    "text": "Zero token cost to your platform.",
+    "strong": true
+   },
+   {
+    "text": " Murphi.ai absorbs all AI infrastructure costs. Your platform pays a flat fee — never a per-token or per-model charge. Your data and IP remain entirely yours."
+   }
+  ]
+ },
+ "testimonials": {
+  "eyebrow": "Customer Outcomes",
+  "title": "Behavioral Health EHR Platforms Using Murphi.ai",
+  "sub": "",
+  "cards": [
+   {
+    "stars": "★★★★★",
+    "quote": "\"Murphi.ai has been an incredible partner in transforming iTherapyDocs with AI-driven automation. Seamless rewrite, voice-to-text notes, progress notes, goals, and pre-authorization automation — saving valuable time across the board.\"",
+    "initials": "PB",
+    "name": "Phillip Brow",
+    "role": "Co-founder, iTherapyDocs",
+    "tag": "Mental Health · PaaS"
+   },
+   {
+    "stars": "★★★★★",
+    "quote": "\"Murphi offers a high quality product and is absolutely wonderful to work with. Their team is responsive and supportive, and their product is truly unmatched in overall quality and performance. Highly recommend!\"",
+    "initials": "KR",
+    "name": "Kylie Roy",
+    "role": "CEO, Percensys CORE Learning",
+    "tag": "Mental Health · PaaS"
+   }
+  ]
+ },
+ "roadmap": {
+  "eyebrow": "Implementation Path",
+  "title": "Live in 15 Days, Not Months",
+  "sub": "Start with one high-value workflow. The same integration layer scales to every module without a platform rebuild.",
+  "items": [
+   {
+    "n": "1",
+    "title": "Map & Discover",
+    "desc": "Identify the highest-burden workflows — typically ambient documentation or self-pay collections."
+   },
+   {
+    "n": "2",
+    "title": "Pilot Integration",
+    "desc": "API or SSO integration live. First AI feature active within 15 days. Clinician feedback collected."
+   },
+   {
+    "n": "3",
+    "title": "Validate & Launch",
+    "desc": "Compliance controls confirmed, human-review workflow hardened, full production rollout."
+   },
+   {
+    "n": "4",
+    "title": "Expand Platform-Wide",
+    "desc": "Add RCM, payments, CDI, and care coordination on the integration already in place."
+   }
+  ]
+ },
+ "security": {
+  "eyebrow": "Security & Compliance",
+  "title": "Built for Behavioral Health-Grade Trust",
+  "sub": "Every Murphi.ai workflow includes 42 CFR Part 2 awareness for SUD programs, and HIPAA controls built into every layer.",
+  "cards": [
+   {
+    "icon": "mh-sec-72",
+    "title": "HIPAA-Aligned",
+    "desc": "PHI handling and access controls in every workflow layer"
+   },
+   {
+    "icon": "mh-sec-73",
+    "title": "42 CFR Part 2",
+    "desc": "SUD documentation with heightened confidentiality controls"
+   },
+   {
+    "icon": "mh-sec-74",
+    "title": "SOC 2 Certified",
+    "desc": "Independent third-party audit completed annually"
+   },
+   {
+    "icon": "mh-sec-75",
+    "title": "ISO 27001",
+    "desc": "International information security management standards"
+   },
+   {
+    "icon": "mh-sec-76",
+    "title": "Audit Trails",
+    "desc": "Every AI action and approval logged with full attribution"
+   },
+   {
+    "icon": "mh-sec-77",
+    "title": "Human-in-the-Loop",
+    "desc": "Clinician approval required before any EHR write-back"
+   },
+   {
+    "icon": "mh-sec-78",
+    "title": "BAA Signed",
+    "desc": "Business Associate Agreements with every partner platform"
+   },
+   {
+    "icon": "mh-sec-79",
+    "title": "AWS & GCP Only",
+    "desc": "HIPAA-eligible cloud — no other providers used"
+   }
+  ]
+ },
+ "drawer": {
+  "closeIcon": "mh-drawer-80",
+  "cta": {
+   "label": "Discuss This Integration →",
+   "href": "/contact-us/"
+  },
+  "stepsLabel": "Workflow Steps",
+  "steps": [
+   {
+    "tone": null,
+    "n": "1",
+    "strong": {
+     "default": "Input"
+    },
+    "text": {
+     "agentic": "EHR schedule, clinical notes, payer portal data, or 835 remittance files",
+     "payments": "Patient balance data from EHR or billing system",
+     "default": "Session voice, EHR record, or clinical documents"
+    }
+   },
+   {
+    "tone": null,
+    "n": "2",
+    "strong": {
+     "default": "Murphi.ai Processing"
+    },
+    "text": {
+     "agentic": "AI agent executes autonomously — gathering data, formatting, and submitting",
+     "payments": "HIPAA-compliant SMS generated with secure payment link via Everyware",
+     "default": "AI extracts, structures, and validates relevant clinical information"
+    }
+   },
+   {
+    "tone": null,
+    "n": "3",
+    "strong": {
+     "agentic": "Agent Action",
+     "default": "Validation & Gap Check"
+    },
+    "text": {
+     "agentic": "Agent completes action and logs result",
+     "default": "Missing elements and compliance gaps flagged for clinician"
+    }
+   },
+   {
+    "tone": "t",
+    "n": "4",
+    "strong": {
+     "default": "Human Review"
+    },
+    "text": {
+     "payments": "Staff reviews payment status and exceptions",
+     "default": "Clinician reviews AI output, edits if needed, and approves"
+    }
+   },
+   {
+    "tone": "g",
+    "n": "5",
+    "strong": {
+     "default": "EHR Output"
+    },
+    "text": {
+     "agentic": "Result posted to EHR or billing system with full audit log",
+     "payments": "Payment collected, EHR balance updated, receipt sent to patient",
+     "default": "Approved output written to EHR at field level with audit trail"
+    }
+   }
+  ],
+  "sections": [
+   {
+    "label": "EHR Integration Options",
+    "chips": [
+     "Embedded Component",
+     "REST API",
+     "SSO / iFrame",
+     "FHIR R4",
+     "White-Label"
+    ]
+   },
+   {
+    "label": "Audit & Compliance Controls",
+    "chips": [
+     "AI Action Log",
+     "Human Approval Record",
+     "Edit History",
+     "Confidence Score Stored",
+     "HIPAA-Aligned",
+     "BAA Covered"
+    ]
+   }
+  ],
+  "costLabel": "Zero Token Cost to Your Platform",
+  "costBody": "Murphi.ai absorbs all AI infrastructure costs. Your platform pays a flat fee — never a per-token or per-model charge. Your data and IP remain entirely yours."
+ }
+}

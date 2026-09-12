@@ -1,0 +1,25 @@
+/* Same pulse used by PulseMic on the homepage Accurate Charting visual.
+   Kept next to the component so it also runs on /ambient-ai-dictation/. */
+
+@keyframes hl-pulseRing {
+  0% {
+    transform: scale(0.75);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1.7);
+    opacity: 0;
+  }
+}
+
+.hl-pulse-mic .hl-pulse-mic-ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 1.5px solid #007eff;
+  animation: hl-pulseRing 2.4s cubic-bezier(0.2, 0.6, 0.4, 1) infinite;
+}
+
+.hl-pulse-mic .hl-pulse-mic-ring2 {
+  animation-delay: 0.8s;
+}

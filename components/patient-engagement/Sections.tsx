@@ -281,14 +281,14 @@ function IntegrationPanel() {
         </span>
       </div>
 
-      <div className="px-5 py-5 max-600:px-4">
+      <div className="px-4 py-4 max-600:px-3.5">
         <SystemNode label="EHR" />
 
         <Run />
 
-        <div className="mx-auto w-full max-w-[300px] rounded-[8px] border border-[#E3E3E3] bg-white px-4 py-4 max-600:px-3.5">
-          <div className="flex items-center justify-center gap-2.5">
-            <span className="flex size-8 shrink-0 items-center justify-center rounded-[9px] border border-[#E3E3E3] bg-white p-1.5">
+        <div className="mx-auto w-full max-w-[240px] rounded-[8px] border border-[#E3E3E3] bg-[#F5F5F5] px-3 py-2.5">
+          <div className="flex items-center justify-center gap-2">
+            <span className="flex size-6 shrink-0 items-center justify-center rounded-[8px] border border-[#E3E3E3] bg-white p-1">
               <Image
                 src="/brand/app-icons/murphi-icon-192.png"
                 alt="Murphi.ai"
@@ -302,9 +302,9 @@ function IntegrationPanel() {
             </span>
           </div>
 
-          <ol className="mx-auto mt-4 grid w-fit gap-0">
+          <ol className="mx-auto mt-2.5 grid w-fit gap-0">
             {PIPELINE.map((step, i) => (
-              <li key={step} className="flex items-stretch gap-3">
+              <li key={step} className="flex items-stretch gap-2">
                 <div className="relative flex w-[9px] shrink-0 justify-center" aria-hidden>
                   <span className="relative z-10 mt-[7px] size-[7px] shrink-0 rounded-full border-2 border-[#007EFF] bg-white" />
                   {i === PIPELINE.length - 1 ? null : (
@@ -315,7 +315,7 @@ function IntegrationPanel() {
                 <span
                   className={cn(
                     MONO,
-                    "min-w-0 truncate pb-2.5 text-[12px] text-[#606060]",
+                    "min-w-0 truncate pb-1.5 text-[11px] text-[#606060]",
                     i === PIPELINE.length - 1 ? "pb-0" : "",
                   )}
                 >
@@ -334,31 +334,27 @@ function IntegrationPanel() {
   );
 }
 
-/** One end of the round trip - the customer's own system, on #007EFF. */
+/** One end of the round trip - the customer's own system. */
 function SystemNode({ label, returned }: { label: string; returned?: boolean }) {
   return (
-    <div className="mx-auto flex w-full max-w-[300px] flex-col items-center gap-2 rounded-[8px] bg-[#007EFF] px-5 py-4 ">
-      <span className="flex items-center gap-2.5">
-        <span className="flex size-7 shrink-0 items-center justify-center rounded-[8px] bg-white/15 text-white">
-          <Icon name="server" width={14} height={14} />
-        </span>
-
-        <span className="text-[15px] font-bold leading-none tracking-[-0.015em] text-white">
-          {label}
-        </span>
+    <div className="mx-auto flex w-full max-w-[240px] items-center justify-center gap-2 rounded-[8px] border border-[#E3E3E3] bg-[#F5F5F5] px-3 py-2">
+      <span className="flex size-6 shrink-0 items-center justify-center rounded-[6px] border border-[#E3E3E3] bg-white text-[#007EFF]">
+        <Icon name="server" width={12} height={12} />
       </span>
 
-      <span className={cn(MONO, "flex items-center gap-1.5")}>
-        {returned ? (
-          <Tick className="size-3 shrink-0 text-white" />
-        ) : (
-          <span
-            className="size-1.5 rounded-full bg-white/80"
-            style={{ animation: "mp-blink 2s ease-in-out infinite" }}
-            aria-hidden
-          />
-        )}
+      <span className="text-[13px] font-bold leading-none tracking-[-0.015em] text-ink">
+        {label}
       </span>
+
+      {returned ? (
+        <Tick className="size-3 shrink-0 text-[#007EFF]" />
+      ) : (
+        <span
+          className="size-1.5 rounded-full bg-[#007EFF]"
+          style={{ animation: "mp-blink 2s ease-in-out infinite" }}
+          aria-hidden
+        />
+      )}
     </div>
   );
 }
@@ -366,8 +362,8 @@ function SystemNode({ label, returned }: { label: string; returned?: boolean }) 
 /** The run between two surfaces, with the record moving along it. */
 function Run({ label }: { label?: string }) {
   return (
-    <div className="flex flex-col items-center gap-2 py-3" aria-hidden>
-      <span className="relative flex h-7 w-px shrink-0 bg-[#E3E3E3]">
+    <div className="flex flex-col items-center gap-1.5 py-1.5" aria-hidden>
+      <span className="relative flex h-4 w-px shrink-0 bg-[#E3E3E3]">
         <span
           className="absolute left-1/2 size-1.5 -translate-x-1/2 rounded-full bg-[#007EFF]"
           style={{ animation: "mp-flow-pulse-v 2.6s ease-in-out infinite" }}
@@ -384,7 +380,7 @@ function Run({ label }: { label?: string }) {
           >
             {label}
           </span>
-          <span className="relative flex h-7 w-px shrink-0 bg-[#E3E3E3]">
+          <span className="relative flex h-4 w-px shrink-0 bg-[#E3E3E3]">
             <span
               className="absolute left-1/2 size-1.5 -translate-x-1/2 rounded-full bg-[#007EFF]"
               style={{ animation: "mp-flow-pulse-v 2.6s ease-in-out infinite .6s" }}

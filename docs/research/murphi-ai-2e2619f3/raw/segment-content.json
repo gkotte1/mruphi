@@ -1,0 +1,1434 @@
+{
+ "post-acute-care": {
+  "slug": "post-acute-care",
+  "title": "AI Platform For Home Health, Hospice & Palliative Care",
+  "description": "Cut documentation time 70% and AR cycles to 15 days — one AI platform for home health, hospice, and palliative care billing and compliance.",
+  "heroTags": [
+   {
+    "label": "Who We Serve — Post-Acute Care",
+    "href": null,
+    "arrow": null
+   },
+   {
+    "label": "White Label Partner Program",
+    "href": "/white-label-partner-program/",
+    "arrow": "glyph"
+   },
+   {
+    "label": "Embed AI into EHR Workflows",
+    "href": "/ehr-ai-integration-platform/",
+    "arrow": "glyph"
+   }
+  ],
+  "h1Lines": [
+   "AI Automation for Home Health, Hospice & Palliative Care"
+  ],
+  "h1Highlight": null,
+  "variant": "bold",
+  "kpiValue": "largeShrink",
+  "h1MaxWidth": 800,
+  "contentMaxWidth": 1200,
+  "heroSub": "Murphi.ai automates clinical documentation, revenue assurance, and patient collections for home health, hospice, and palliative care. From OASIS to payment — one AI platform covers the full episode of care.",
+  "heroBtns": [
+   {
+    "href": "/contact-us/",
+    "variant": "btn-w",
+    "label": "Request Demo"
+   },
+   {
+    "href": "/white-labeling/",
+    "variant": "btn-ghost",
+    "label": "See All Solutions"
+   }
+  ],
+  "sections": [
+   {
+    "tag": "Who It's For",
+    "heading": "Home Health, Hospice & Palliative Care",
+    "alt": true,
+    "lead": "Post-acute care runs on documentation complexity, reimbursement rules, and OASIS compliance. Murphi.ai automates the highest-burden workflows so clinicians spend time on patients, not paperwork — while maximizing every dollar of legitimate reimbursement.",
+    "whoTags": [
+     "Home Health Agencies",
+     "Hospice Organizations",
+     "Palliative Care Teams",
+     "SNFs",
+     "Private Duty Nursing"
+    ],
+    "whoTagsAfterLead": false
+   },
+   {
+    "tag": "Core Modules",
+    "heading": "AI Automation Across Every Post-Acute Workflow",
+    "alt": false,
+    "grid": "feature",
+    "features": [
+     {
+      "status": "live",
+      "badgeLabel": "Live",
+      "title": "Ambient AI & Clinical Documentation",
+      "desc": "Record visits and auto-generate OASIS, SN, PT, OT, ST, IDG, and palliative care notes from voice. 55 languages. Medication scan. Handwriting capture. Syncs directly to your EHR.",
+      "attribution": null,
+      "noteLabel": null,
+      "noteText": null
+     },
+     {
+      "status": "live",
+      "badgeLabel": "Live",
+      "title": "Revenue Assurance & Compliance",
+      "desc": "28 AI compliance reports — 15 for Home Health (F2F, Coding, OASIS, ADR, PDGM, Recertifications) and 13 for Hospice (CTI Validator, HOPE, IDG, EOLRBA). Reduces denials and passes audits.",
+      "attribution": null,
+      "noteLabel": null,
+      "noteText": null
+     },
+     {
+      "status": "live",
+      "badgeLabel": "Live",
+      "title": "AI Patient Financials",
+      "desc": "Text-to-pay for co-pays and patient-responsible balances. Reads AR from EHR, sends SMS payment link, posts payment back automatically. Provider paid within 48 hours via Everyware gateway.",
+      "attribution": null,
+      "noteLabel": null,
+      "noteText": null
+     },
+     {
+      "status": "live",
+      "badgeLabel": "Live",
+      "title": "Engage — HIPAA Messaging",
+      "desc": "HIPAA-compliant care team and patient messaging. PHI-secure. Reduces call volume and improves care coordination across your field teams.",
+      "attribution": null,
+      "noteLabel": null,
+      "noteText": null
+     },
+     {
+      "status": "soon",
+      "badgeLabel": "COMING SOON",
+      "title": "End-of-Life Risk Band Analyzer (EOLRBA)",
+      "desc": "AI-powered risk stratification for hospice patients. Identifies high-risk patients, flags documentation gaps, and ensures compliance with CMS hospice eligibility requirements.",
+      "attribution": null,
+      "noteLabel": null,
+      "noteText": null
+     },
+     {
+      "status": "soon",
+      "badgeLabel": "Coming Soon",
+      "title": "Billing & Claims — Post-Acute",
+      "desc": "End-to-end billing automation for home health and hospice — eligibility, RAP submission, claims, denial management, and remittance reconciliation.",
+      "attribution": null,
+      "noteLabel": null,
+      "noteText": null
+     }
+    ]
+   },
+   {
+    "tag": "Outcomes",
+    "heading": "Real Results for Post-Acute Agencies",
+    "alt": true,
+    "kpis": [
+     {
+      "value": "70%",
+      "label": "Reduction in clinical documentation time"
+     },
+     {
+      "value": "98.7%",
+      "label": "Transcription accuracy rate"
+     },
+     {
+      "value": "75%",
+      "label": "Bad debt reduction"
+     },
+     {
+      "value": "15 days",
+      "label": "AR cycle (down from 100+)"
+     }
+    ],
+    "quote": {
+     "text": "\"Murphi AI has truly transformed how we approach clinical workflow documentation in hospice and palliative care. Documentation that used to take up valuable clinical time is now streamlined, accurate, and intuitive — empowering our clients to focus more on patient care.\"",
+     "author": "Vicki Goodman",
+     "role": "Chief Revenue Officer, Curantis Solutions"
+    }
+   },
+   {
+    "tag": "EHR Integration",
+    "heading": "Works with Your Existing EHR",
+    "alt": false,
+    "lead": "Murphi.ai connects to post-acute EHRs via Agentic AI, RPA, FHIR R4, and HL7 v2. No rip-and-replace required.",
+    "whoTags": [
+     "WellSky",
+     "Axxess",
+     "Kantime",
+     "MatrixCare",
+     "HCHB",
+     "Netsmart",
+     "Careficient",
+     "+ Any FHIR/HL7 EHR"
+    ],
+    "whoTagsAfterLead": true
+   }
+  ]
+ },
+ "health-systems-hospitals": {
+  "slug": "health-systems-hospitals",
+  "title": "AI Solutions For Health Systems & Hospitals | Murphi.ai",
+  "description": "Murphi.ai empowers health systems and hospitals with AI-driven clinical documentation, inpatient billing, compliance, and revenue cycle management at scale.",
+  "heroTags": [
+   {
+    "label": "Who We Serve — Health Systems",
+    "href": null,
+    "arrow": null
+   },
+   {
+    "label": "AI FOR MANAGED CARE FUNCTIONS",
+    "href": "/ai-for-managed-care-functions-health-system-and-hospitals/",
+    "arrow": "icon"
+   }
+  ],
+  "h1Lines": [
+   "AI-Powered Contract Optimization,Patient Collections & Clinical Documentation"
+  ],
+  "h1Highlight": null,
+  "variant": "tight",
+  "kpiValue": "small",
+  "h1MaxWidth": 1000,
+  "contentMaxWidth": 1200,
+  "heroSub": "Murphi.ai automates payer contract optimization, patient-responsible collections, and clinical documentation for health systems and hospitals. One platform — contracts, payments, and charting all covered.",
+  "heroBtns": [
+   {
+    "href": "/contact-us/",
+    "variant": "btn-w",
+    "label": "Request Demo"
+   },
+   {
+    "href": "/white-labeling/",
+    "variant": "btn-ghost",
+    "label": "See All Solutions"
+   }
+  ],
+  "sections": [
+   {
+    "tag": "Who It's For",
+    "heading": "Health Systems & Hospitals",
+    "alt": true,
+    "lead": "Health systems carry complex payer contracts, high patient-responsible balances, and growing documentation burdens. Murphi.ai automates all three — optimizing contracts, collecting patient payments, and reducing clinician charting time across inpatient and outpatient settings.",
+    "whoTags": [
+     "Health Systems",
+     "Hospitals",
+     "Ambulatory Networks",
+     "Integrated Delivery Networks (IDNs)"
+    ],
+    "whoTagsAfterLead": false
+   },
+   {
+    "tag": "Core Modules",
+    "heading": "AI Automation for Health System Revenue & Clinical Workflows",
+    "alt": false,
+    "grid": "feature",
+    "features": [
+     {
+      "status": "live",
+      "badgeLabel": "Live",
+      "title": "AI Contract Analyzer",
+      "desc": "PADU Plus methodology — analyzes payer contracts, generates operating manuals, compares contracts vs. manuals, and surfaces compliance gaps and reimbursement leakage. Identifies underpayments and flags non-compliant clauses.",
+      "attribution": null,
+      "noteLabel": null,
+      "noteText": null
+     },
+     {
+      "status": "live",
+      "badgeLabel": "Live",
+      "title": "AI Patient Financials",
+      "desc": "Automate co-pay, deductible, and coinsurance collections via text-to-pay. Reads AR from your EHR, sends SMS payment link, posts back automatically. Provider paid within 48 hours via Everyware gateway.",
+      "attribution": null,
+      "noteLabel": null,
+      "noteText": null
+     },
+     {
+      "status": "live",
+      "badgeLabel": "Live",
+      "title": "Ambient AI",
+      "desc": "Voice-to-note clinical documentation for inpatient and outpatient clinicians. SOAP notes, specialty templates, discharge summaries. Reduces charting time by 70% and syncs directly to Epic, Cerner, Athena, or your EHR.",
+      "attribution": null,
+      "noteLabel": null,
+      "noteText": null
+     },
+     {
+      "status": "live",
+      "badgeLabel": "Live",
+      "title": "Engage — HIPAA Messaging",
+      "desc": "HIPAA-compliant patient and care team messaging. Reduces inbound call volume and improves patient satisfaction scores.",
+      "attribution": null,
+      "noteLabel": null,
+      "noteText": null
+     },
+     {
+      "status": "soon",
+      "badgeLabel": "Coming Soon",
+      "title": "RCM Automation",
+      "desc": "Pre-authorization, coding accuracy, claims submission, denial management, and remittance reconciliation. Built for health system revenue cycle complexity.",
+      "attribution": null,
+      "noteLabel": null,
+      "noteText": null
+     },
+     {
+      "status": "soon",
+      "badgeLabel": "Coming Soon",
+      "title": "Credentialing",
+      "desc": "License verification, OIG/SAM exclusion checks, and NCQA-compliant provider credentialing workflows — automated and audit-ready.",
+      "attribution": null,
+      "noteLabel": null,
+      "noteText": null
+     }
+    ]
+   },
+   {
+    "tag": "Outcomes",
+    "heading": "Measurable Impact for Health Systems",
+    "alt": true,
+    "kpis": [
+     {
+      "value": "10-20%",
+      "label": "Revenue Increase with Contract Analyzer"
+     },
+     {
+      "value": "4-6 Hrs",
+      "label": "Daily Time Saved with Ambient AI Solutions"
+     },
+     {
+      "value": "15 Days",
+      "label": "AR Cycle Reduction from 100+ Days"
+     },
+     {
+      "value": "48 hrs",
+      "label": "Funds in bank account"
+     }
+    ],
+    "quote": {
+     "text": "\"Stuart Smith, Vice President of Finance at Duke University Health System, has joined Murphi.ai as Board Advisor — bringing deep health system financial expertise to guide our enterprise and health system strategy.\"",
+     "author": "Murphi.ai Board Announcement",
+     "role": "Stuart Smith · VP Finance, Duke University Health System"
+    }
+   },
+   {
+    "tag": "EHR Integration",
+    "heading": "Connects to Your Health System EHR",
+    "alt": false,
+    "lead": "Murphi.ai integrates via FHIR R4, HL7 v2, Agentic AI, and direct API. No rip-and-replace required.",
+    "whoTags": [
+     "Epic",
+     "Cerner",
+     "Athena",
+     "ECW",
+     "Allscripts",
+     "+ Any FHIR/HL7 EHR"
+    ],
+    "whoTagsAfterLead": true
+   }
+  ]
+ },
+ "primary-specialty-care": {
+  "slug": "primary-specialty-care",
+  "title": "Cut Charting Time In Primary & Specialty Care | Murphi",
+  "description": "Voice-based SOAP notes for cardiology, sleep, and allergy clinics, plus automated text-to-pay collections — no new app, no EHR replacement.",
+  "heroTags": [
+   {
+    "label": "Who We Serve — Primary & Specialty",
+    "href": null,
+    "arrow": null
+   },
+   {
+    "label": "Embed AI Into EHR Workflows",
+    "href": "/primary-and-speciality-care-embed-into-ehr/",
+    "arrow": "icon"
+   }
+  ],
+  "h1Lines": [
+   "Reduce Documentation & Collect Patient Payments Automatically"
+  ],
+  "h1Highlight": null,
+  "variant": "tight",
+  "kpiValue": "large",
+  "h1MaxWidth": 800,
+  "contentMaxWidth": 1200,
+  "heroSub": "Murphi.ai eliminates two of the biggest pain points in primary and specialty care — hours lost to charting and unpaid patient balances. AI documentation from voice, automated text-to-pay collections, no EHR replacement required.",
+  "heroBtns": [
+   {
+    "href": "/contact-us/",
+    "variant": "btn-w",
+    "label": "Request Demo"
+   },
+   {
+    "href": "/white-labeling/",
+    "variant": "btn-ghost",
+    "label": "See All Solutions"
+   }
+  ],
+  "sections": [
+   {
+    "tag": "Who It's For",
+    "heading": "Primary & Specialty Care",
+    "alt": true,
+    "lead": "Primary and specialty practices lose hours to charting and struggle to collect patient-responsible balances. Murphi.ai eliminates both — AI documentation from voice and automated text-to-pay collections — without adding headcount or changing your EHR.",
+    "whoTags": [
+     "Primary Care Practices",
+     "CHCs / FQHCs",
+     "Specialty Clinics",
+     "DME Providers",
+     "Cardiology",
+     "Sleep / Pain / Allergy"
+    ],
+    "whoTagsAfterLead": false
+   },
+   {
+    "tag": "Core Modules",
+    "heading": "AI Automation for Primary & Specialty Workflows",
+    "alt": false,
+    "grid": "feature",
+    "features": [
+     {
+      "status": "live",
+      "badgeLabel": "Live",
+      "title": "Ambient AI",
+      "desc": "Generate SOAP notes and specialty-specific templates from voice — cardiology, sleep, pain, allergy, vascular, and more. 55 languages. Medication scan. Syncs automatically to your EHR.",
+      "attribution": null,
+      "noteLabel": null,
+      "noteText": null
+     },
+     {
+      "status": "live",
+      "badgeLabel": "Live",
+      "title": "AI Patient Financials",
+      "desc": "Text-to-pay for co-pays, deductibles, and outstanding balances. No patient app required. Reads AR from EHR, sends SMS link, posts payment back automatically. Provider paid within 48 hours.",
+      "attribution": null,
+      "noteLabel": null,
+      "noteText": null
+     },
+     {
+      "status": "live",
+      "badgeLabel": "Live",
+      "title": "Engage — HIPAA Messaging",
+      "desc": "HIPAA-compliant patient messaging via SMS. Reduce call volume and hold times. Patients respond 60% faster vs. phone.",
+      "attribution": null,
+      "noteLabel": null,
+      "noteText": null
+     },
+     {
+      "status": "live",
+      "badgeLabel": "Live",
+      "title": "Billing & Claims — E&M",
+      "desc": "Eligibility verification, charge readiness, ICD/CPT coding, claims submission, and denial management for primary and specialty E&M billing.",
+      "attribution": null,
+      "noteLabel": null,
+      "noteText": null
+     },
+     {
+      "status": "soon",
+      "badgeLabel": "Coming Soon",
+      "title": "Referral & Intake",
+      "desc": "Auto-accept referrals, verify eligibility, and sync intake documentation to your EHR — reducing administrative lag and improving patient throughput.",
+      "attribution": null,
+      "noteLabel": null,
+      "noteText": null
+     },
+     {
+      "status": "soon",
+      "badgeLabel": "Coming Soon",
+      "title": "Credentialing",
+      "desc": "Provider license verification, OIG/SAM exclusion checks, and NCQA-compliant credentialing workflows — automated and audit-ready.",
+      "attribution": null,
+      "noteLabel": null,
+      "noteText": null
+     }
+    ]
+   },
+   {
+    "tag": "Outcomes",
+    "heading": "Measurable Impact for Primary & Specialty Practices",
+    "alt": true,
+    "kpis": [
+     {
+      "value": "70%",
+      "label": "Documentation time saved"
+     },
+     {
+      "value": "↑60%",
+      "label": "Patient response rate increase"
+     },
+     {
+      "value": "80%",
+      "label": "Call volume reduction"
+     },
+     {
+      "value": "48 hrs",
+      "label": "Average payment time"
+     }
+    ],
+    "quote": {
+     "text": "\"Our patients love to use the app and communicate easily over texting vs. calling and waiting on hold. We have greatly increased our response time and decreased our call volume and hold times.\"",
+     "author": "Kristen Anderson",
+     "role": "Administration, AAIC"
+    }
+   }
+  ]
+ },
+ "mental-behavioral-health": {
+  "slug": "mental-behavioral-health",
+  "title": "AI For Mental & Behavioral Health Providers | Murphi.ai",
+  "description": "Murphi.ai's AI platform helps mental and behavioral health providers automate progress notes, therapy documentation, billing, and regulatory compliance.",
+  "heroTags": [
+   {
+    "label": "Who We Serve — Mental & Behavioral Health",
+    "href": null,
+    "arrow": null
+   },
+   {
+    "label": "Embed AI into EHR Workflows",
+    "href": "/embed-ai-into-ehr-workflows-mental-and-behavioural-health/",
+    "arrow": "glyph"
+   }
+  ],
+  "h1Lines": [
+   "Ambient AI, Clinical Documentation, Agentic AI for RCM for Mental & Behavioral Health"
+  ],
+  "h1Highlight": null,
+  "variant": "roomy",
+  "kpiValue": "large",
+  "h1MaxWidth": 800,
+  "contentMaxWidth": 1200,
+  "heroSub": "Murphi.ai generates compliance-ready behavioral health notes from voice and automates self-pay collections. Every session audit-ready, every balance collected — without adding administrative burden.",
+  "heroBtns": [
+   {
+    "href": "/contact-us/",
+    "variant": "btn-w",
+    "label": "Request Demo"
+   },
+   {
+    "href": "/white-labeling/",
+    "variant": "btn-ghost",
+    "label": "See All Solutions"
+   }
+  ],
+  "sections": [
+   {
+    "tag": "Who It's For",
+    "heading": "Mental & Behavioral Health",
+    "alt": true,
+    "lead": "Behavioral health documentation is high-volume, compliance-sensitive, and highly structured. Murphi.ai generates clinical notes from voice, automates self-pay collections, and keeps every session audit-ready — without adding administrative burden to your clinicians.",
+    "whoTags": [
+     "Outpatient Behavioral Health",
+     "SUD Programs",
+     "Residential Treatment",
+     "IOP / PHP",
+     "Community Mental Health"
+    ],
+    "whoTagsAfterLead": false
+   },
+   {
+    "tag": "Core Modules",
+    "heading": "AI Automation for Behavioral Health Workflows",
+    "alt": false,
+    "grid": "feature",
+    "features": [
+     {
+      "status": "live",
+      "badgeLabel": "Live",
+      "title": "Ambient AI",
+      "desc": "Generate PIE, BIRP, SOAP, and DAP notes from voice. Assessment forms (GAD-7, PHQ-9, AUDIT-C) auto-populated. Treatment plans, goal summaries, and utilization reports — every note audit-ready at session end.",
+      "attribution": null,
+      "noteLabel": null,
+      "noteText": null
+     },
+     {
+      "status": "live",
+      "badgeLabel": "Live",
+      "title": "AI Patient Financials",
+      "desc": "Self-pay and out-of-pocket collections via text-to-pay. No patient app required. Bad debt reduced by 75%. Reads AR from EHR and posts payments back automatically.",
+      "attribution": null,
+      "noteLabel": null,
+      "noteText": null
+     },
+     {
+      "status": "live",
+      "badgeLabel": "Live",
+      "title": "Engage — HIPAA Messaging",
+      "desc": "HIPAA-compliant care team and patient messaging. PHI-secure SMS interoperability. Reduces no-shows and improves patient engagement between sessions.",
+      "attribution": null,
+      "noteLabel": null,
+      "noteText": null
+     },
+     {
+      "status": "live",
+      "badgeLabel": "Live",
+      "title": "Billing & Claims",
+      "desc": "Behavioral health-specific billing — eligibility, coding, claims, and denial management. Supports CPT codes for individual, group, and crisis therapy sessions.",
+      "attribution": null,
+      "noteLabel": null,
+      "noteText": null
+     },
+     {
+      "status": "soon",
+      "badgeLabel": "Coming Soon",
+      "title": "Referral & Intake",
+      "desc": "Streamline referral acceptance, intake documentation, and eligibility verification — reducing the time from referral to first appointment.",
+      "attribution": null,
+      "noteLabel": null,
+      "noteText": null
+     },
+     {
+      "status": "soon",
+      "badgeLabel": "Coming Soon",
+      "title": "Credentialing",
+      "desc": "Provider license and credential verification, OIG/SAM exclusion checks, and payer enrollment — automated and always current.",
+      "attribution": null,
+      "noteLabel": null,
+      "noteText": null
+     }
+    ]
+   },
+   {
+    "tag": "Outcomes",
+    "heading": "Measurable Impact for Behavioral Health Organizations",
+    "alt": true,
+    "kpis": [
+     {
+      "value": "90%",
+      "label": "Time saved on progress notes"
+     },
+     {
+      "value": "100%",
+      "label": "Notes completed per session"
+     },
+     {
+      "value": "75%",
+      "label": "Self-pay bad debt reduction"
+     },
+     {
+      "value": "Always",
+      "label": "Audit-ready documentation"
+     }
+    ],
+    "quote": {
+     "text": "\"Murphi offers a high quality product and is absolutely wonderful to work with. Their team is responsive and supportive, and their product unmatched. Highly recommend!\"",
+     "author": "Kylie Roy",
+     "role": "CEO, Percensys CORE Learning"
+    }
+   },
+   {
+    "tag": "EHR Integration",
+    "heading": "Connects to Your EHR — No Re-platforming Required",
+    "alt": false,
+    "lead": "Murphi.ai integrates with leading behavioral health EHR platforms via FHIR and HL7 standards. Notes sync back automatically. AR is read and payments posted without manual entry."
+   }
+  ]
+ },
+ "ehr-emr-companies": {
+  "slug": "ehr-emr-companies",
+  "title": "How To Add AI To Your EHR Platform Via API",
+  "description": "Add AI-powered workflows to your EHR platform through encrypted APIs — under your own brand, live in 15 days, at zero token cost.",
+  "heroTags": [
+   {
+    "label": "Who We Serve — EHR / EMR Companies",
+    "href": null,
+    "arrow": null
+   }
+  ],
+  "h1Lines": [
+   "Add AI Features to Your EHR "
+  ],
+  "h1Highlight": "Platform via Encrypted APIs",
+  "variant": "roomy",
+  "kpiValue": "large",
+  "h1MaxWidth": 800,
+  "contentMaxWidth": 1200,
+  "heroSub": "Your customers want AI. Murphi.ai gives your EHR platform AI-powered workflows via encrypted API — live in 15 days, under your brand, at zero token cost.",
+  "heroBtns": [
+   {
+    "href": "/contact-us/",
+    "variant": "btn-w",
+    "label": "Request Demo"
+   },
+   {
+    "href": "/",
+    "variant": "btn-ghost",
+    "label": "Back to Home"
+   }
+  ],
+  "sections": [
+   {
+    "tag": "Who It's For",
+    "heading": "EHR / EMR Companies",
+    "alt": true,
+    "lead": "Your customers want AI. Building it from scratch takes years and significant engineering investment. Murphi.ai gives your platform AI-powered clinical, revenue, and financial workflows via encrypted API — live in days, under your brand, at zero token cost to you.",
+    "whoTags": [
+     "EHR Platforms",
+     "EMR Vendors",
+     "Health IT Companies",
+     "Practice Management Systems"
+    ],
+    "whoTagsAfterLead": false
+   },
+   {
+    "tag": "Our Differentiators",
+    "heading": "Things That Make Murphi.ai Different for EHR Platforms",
+    "alt": false,
+    "grid": "feature",
+    "features": [
+     {
+      "status": null,
+      "badgeLabel": null,
+      "title": "Encrypted API · SSO · iFrame",
+      "desc": "Integrate once via REST API, SSO, or iFrame. FHIR R4 and HL7 v2 supported. Agentic AI and RPA connectors available. Any EHR connected in days — no rebuild required on your end.",
+      "attribution": null,
+      "noteLabel": null,
+      "noteText": null
+     },
+     {
+      "status": null,
+      "badgeLabel": null,
+      "title": "Fully White-Labeled",
+      "desc": "Your logo, your UI, your pricing, your customer relationships. Your customers never see Murphi.ai — they see your product enhanced by AI. We are invisible infrastructure.",
+      "attribution": null,
+      "noteLabel": null,
+      "noteText": null
+     },
+     {
+      "status": null,
+      "badgeLabel": null,
+      "title": "Your Data & IP",
+      "desc": "All input and output data belongs entirely to you and your customers. Murphi.ai holds zero data rights — ever. HIPAA, SOC 2, ISO 27001, and BAA in place.",
+      "attribution": null,
+      "noteLabel": null,
+      "noteText": null
+     },
+     {
+      "status": null,
+      "badgeLabel": null,
+      "title": "Zero Token Cost",
+      "desc": "Murphi.ai absorbs all AI infrastructure costs. You pay adoption and co-development fees only — no per-token charges that erode your margins as usage scales.",
+      "attribution": null,
+      "noteLabel": null,
+      "noteText": null
+     },
+     {
+      "status": null,
+      "badgeLabel": null,
+      "title": "AI Roadmap Support",
+      "desc": "We co-develop features, map your AI journey, and evolve with your product roadmap. Access Murphi.ai's full module library — clinical, revenue, payments, and contracts.",
+      "attribution": null,
+      "noteLabel": null,
+      "noteText": null
+     },
+     {
+      "status": null,
+      "badgeLabel": null,
+      "title": "Partner Analytics",
+      "desc": "Adoption dashboards, usage analytics, and conversion insights — so you understand how your customers are using AI features and where to invest next.",
+      "attribution": null,
+      "noteLabel": null,
+      "noteText": null
+     }
+    ]
+   },
+   {
+    "tag": "Live Partners",
+    "heading": "EHR Platforms Already Live with Murphi.ai",
+    "alt": true,
+    "cardRow": {
+     "columns": "three",
+     "padding": 24,
+     "descSize": 13,
+     "descLeading": 1.65,
+     "cards": [
+      {
+       "status": "live",
+       "badgeLabel": "Live",
+       "title": "Healthcare Synergy",
+       "desc": "AI-enabled our Healthcare Synergy EHR by transforming clinician care, compliance and workflows. A true extension of our engineering team.",
+       "attribution": "— Dave Crow, President",
+       "noteLabel": null,
+       "noteText": null
+      },
+      {
+       "status": "live",
+       "badgeLabel": "Live",
+       "title": "Curantis Solutions",
+       "desc": "Hospice and palliative care EHR platform — Murphi.ai powers clinical documentation automation for Curantis customers across the US.",
+       "attribution": "— Viki Goodman, CRO",
+       "noteLabel": null,
+       "noteText": null
+      },
+      {
+       "status": "live",
+       "badgeLabel": "Live",
+       "title": "CORE Percensys",
+       "desc": "Mental health and behavioral health platforms with Murphi.ai AI features embedded and live for their customer base.",
+       "attribution": "— Kylie Roy, CEO",
+       "noteLabel": null,
+       "noteText": null
+      }
+     ]
+    }
+   },
+   {
+    "tag": "Why Choose Murphi.ai",
+    "heading": "What EHR Companies Get",
+    "alt": false,
+    "kpis": [
+     {
+      "value": "15 days",
+      "label": "Time to first AI feature live"
+     },
+     {
+      "value": "Zero",
+      "label": "Token cost to you"
+     },
+     {
+      "value": "100%",
+      "label": "White-label capable"
+     },
+     {
+      "value": "Zero",
+      "label": "Rebuild required"
+     }
+    ]
+   }
+  ]
+ },
+ "rcm-companies": {
+  "slug": "rcm-companies",
+  "title": "White-Label AI For RCM Companies, Scale Without Hiring",
+  "description": "Embed AI into your RCM platform via encrypted API — automate patient collections, payer contract analysis, and E&M billing, fully white-labeled.",
+  "heroTags": [
+   {
+    "label": "Who We Serve — RCM Companies",
+    "href": null,
+    "arrow": null
+   }
+  ],
+  "h1Lines": [
+   "AI-Powered Revenue Cycle Workflows",
+   "for RCM Companies"
+  ],
+  "h1Highlight": null,
+  "variant": "rcm",
+  "kpiValue": "large",
+  "h1MaxWidth": 800,
+  "contentMaxWidth": 1200,
+  "heroSub": "Murphi.ai embeds AI into your RCM platform via encrypted API — automating patient collections, payer contract analysis, and E&M billing workflows. Fully white-labeled, zero token cost to you.",
+  "heroBtns": [
+   {
+    "href": "/contact-us/",
+    "variant": "btn-w",
+    "label": "Request Demo"
+   },
+   {
+    "href": "/",
+    "variant": "btn-ghost",
+    "label": "Back to Home"
+   }
+  ],
+  "sections": [
+   {
+    "tag": "Who It's For",
+    "heading": "RCM Companies",
+    "alt": true,
+    "lead": "RCM companies face increasing pressure to deliver better outcomes for clients at lower cost. Murphi.ai embeds AI into your revenue cycle workflows via encrypted API — automating patient collections, E&M billing, and contract analysis under your brand.",
+    "whoTags": [
+     "Medical Billing Companies",
+     "RCM Outsourcing Firms",
+     "Clearinghouse Vendors",
+     "Revenue Cycle Technology Companies"
+    ],
+    "whoTagsAfterLead": false
+   },
+   {
+    "tag": "Core Capabilities",
+    "heading": "AI Revenue Cycle Automation for RCM Companies",
+    "alt": false,
+    "grid": "feature",
+    "features": [
+     {
+      "status": "live",
+      "badgeLabel": "Live",
+      "title": "AI Patient Financials",
+      "desc": "Embed text-to-pay patient collections into your RCM platform. Reads AR from EHR, sends SMS payment links, posts payments back automatically. Provider paid within 48 hours via Everyware gateway.",
+      "attribution": null,
+      "noteLabel": null,
+      "noteText": null
+     },
+     {
+      "status": "live",
+      "badgeLabel": "Live",
+      "title": "AI Contract Analyzer",
+      "desc": "PADU Plus methodology for payer contract review — surface underpayments, flag non-compliant clauses, and optimize reimbursement rates for your clients.",
+      "attribution": null,
+      "noteLabel": null,
+      "noteText": null
+     },
+     {
+      "status": "live",
+      "badgeLabel": "Live",
+      "title": "Billing & Claims — E&M",
+      "desc": "Eligibility verification, charge readiness, ICD/CPT coding, claims submission, and denial management for E&M and specialty billing workflows.",
+      "attribution": null,
+      "noteLabel": null,
+      "noteText": null
+     },
+     {
+      "status": null,
+      "badgeLabel": "PaaS",
+      "title": "Encrypted API Integration",
+      "desc": "Embed any Murphi.ai module into your RCM platform via encrypted REST API, SSO, or iFrame. Zero token cost. Fully white-labeled. Your brand, your customers.",
+      "attribution": null,
+      "noteLabel": null,
+      "noteText": null
+     },
+     {
+      "status": null,
+      "badgeLabel": "PaaS",
+      "title": "Your Data & IP",
+      "desc": "All client data remains yours. Murphi.ai holds zero data rights. HIPAA, SOC 2, ISO 27001, and BAA in place — enterprise-grade compliance from day one.",
+      "attribution": null,
+      "noteLabel": null,
+      "noteText": null
+     },
+     {
+      "status": null,
+      "badgeLabel": "PaaS",
+      "title": "AI Roadmap Support",
+      "desc": "Co-develop AI features specific to RCM use cases. Access Murphi.ai's full module library as your product roadmap evolves.",
+      "attribution": null,
+      "noteLabel": null,
+      "noteText": null
+     }
+    ]
+   },
+   {
+    "tag": "Outcomes",
+    "heading": "What RCM Companies Deliver for Their Clients",
+    "alt": true,
+    "kpis": [
+     {
+      "value": "10-20%",
+      "label": "Revenue Increases with Contract Analyzer"
+     },
+     {
+      "value": "98%",
+      "label": "Revenue Assurance Accuracy with Review"
+     },
+     {
+      "value": "15 Days",
+      "label": "AR Cycle Reduction (from 100+)"
+     },
+     {
+      "value": "75%",
+      "label": "Add Debt Reduction"
+     }
+    ]
+   }
+  ]
+ },
+ "coding-billing": {
+  "slug": "coding-billing",
+  "title": "AI Compliance For Medical Coding & Billing Consultants",
+  "description": "Give your coding and billing agency clients AI-powered compliance and revenue assurance tools that cut errors and strengthen audit readiness.",
+  "heroTags": [
+   {
+    "label": "Channel Partners — Coding & Billing",
+    "href": null,
+    "arrow": null
+   }
+  ],
+  "h1Lines": [
+   "Serve Your Agency Clients",
+   "with AI-Powered Coding & Billing Automation"
+  ],
+  "h1Highlight": null,
+  "variant": "theme",
+  "kpiValue": "large",
+  "h1MaxWidth": 800,
+  "contentMaxWidth": 1200,
+  "heroSub": "Murphi.ai gives coding and billing consultants AI-powered compliance and revenue assurance tools. Serve more clients, deliver better results, and scale your practice without scaling your hours.",
+  "heroBtns": [
+   {
+    "href": "/contact-us/",
+    "variant": "btn-w",
+    "label": "Request Demo"
+   },
+   {
+    "href": "/",
+    "variant": "btn-ghost",
+    "label": "Back to Home"
+   }
+  ],
+  "sections": [
+   {
+    "tag": "Who It's For",
+    "heading": "Coding & Billing Consultants",
+    "alt": true,
+    "lead": "Coding and billing consultants serve multiple agency clients simultaneously — each with their own EHR, their own compliance requirements, and their own reimbursement challenges. Murphi.ai gives you AI-powered tools to serve all of them better, faster, and at scale.",
+    "whoTags": [
+     "Medical Coding Consultants",
+     "Billing Consultants",
+     "HIM Professionals",
+     "Post-Acute Coding Specialists"
+    ],
+    "whoTagsAfterLead": false
+   },
+   {
+    "tag": "Two Models",
+    "heading": "Work the Way You Want",
+    "alt": false,
+    "cardRow": {
+     "columns": "two",
+     "padding": 32,
+     "descSize": 14,
+     "descLeading": 1.7,
+     "cards": [
+      {
+       "status": null,
+       "badgeLabel": "Managed Services",
+       "title": "You Run Reports for Your Clients",
+       "desc": "Log into Murphi.ai, access your client's data, run AI compliance and coding reports, and deliver results directly to your client. You stay in control of the workflow and the client relationship.",
+       "attribution": null,
+       "noteLabel": "Best for:",
+       "noteText": "Consultants who want to maintain hands-on control over deliverables and client communication."
+      },
+      {
+       "status": null,
+       "badgeLabel": "Self-Service Agency",
+       "title": "Your Clients Work in Their Own Workspace",
+       "desc": "Each client gets their own Murphi.ai workspace. They run reports themselves — you provide oversight, training, and guidance. Scale your practice without scaling your hours.",
+       "attribution": null,
+       "noteLabel": "Best for:",
+       "noteText": "Consultants who want to serve more clients without proportionally increasing their time investment."
+      }
+     ]
+    }
+   },
+   {
+    "tag": "Core Modules",
+    "heading": "AI Tools for Coding & Billing Consultants",
+    "alt": true,
+    "grid": "feature",
+    "features": [
+     {
+      "status": "live",
+      "badgeLabel": "Live",
+      "title": "Revenue Assurance — Home Health",
+      "desc": "15 AI compliance reports — Face-to-Face documentation, OASIS accuracy, coding review, ADR preparation, PDGM optimization, and recertification validation.",
+      "attribution": null,
+      "noteLabel": null,
+      "noteText": null
+     },
+     {
+      "status": "live",
+      "badgeLabel": "Live",
+      "title": "Revenue Assurance — Hospice",
+      "desc": "13 AI compliance reports — CTI Validator, HOPE assessment review, IDG documentation, End-of-Life Risk Band Analyzer (EOLRBA), and more.",
+      "attribution": null,
+      "noteLabel": null,
+      "noteText": null
+     },
+     {
+      "status": null,
+      "badgeLabel": "White Label",
+      "title": "White-Label Option",
+      "desc": "Offer Murphi.ai under your own brand. Your clients see your platform, your logo, your practice — powered by Murphi.ai AI in the background.",
+      "attribution": null,
+      "noteLabel": null,
+      "noteText": null
+     }
+    ],
+    "callout": {
+     "label": "AI Accuracy:",
+     "text": "90–95% AI accuracy on all reports, with a structured human review workflow so you maintain quality control before delivering to clients."
+    }
+   }
+  ]
+ },
+ "qapi-compliance": {
+  "slug": "qapi-compliance",
+  "title": "AI-Driven Compliance Audits For QAPI Programs",
+  "description": "Generate 28 CHAP- and ACHC-aligned compliance and quality reports automatically, built for QAPI and compliance firms.",
+  "heroTags": [
+   {
+    "label": "Channel Partners — QAPI & Compliance",
+    "href": null,
+    "arrow": null
+   }
+  ],
+  "h1Lines": [
+   "AI-Powered Compliance Audits & Quality Reports",
+   "for QAPI Firms"
+  ],
+  "h1Highlight": null,
+  "variant": "theme",
+  "kpiValue": "large",
+  "h1MaxWidth": 800,
+  "contentMaxWidth": 1200,
+  "heroSub": "Murphi.ai gives QAPI and compliance firms AI-powered audit and compliance reports — 28 reports, CHAP and ACHC aligned. Deliver more accurate findings for more clients, faster.",
+  "heroBtns": [
+   {
+    "href": "/contact-us/",
+    "variant": "btn-w",
+    "label": "Request Demo"
+   },
+   {
+    "href": "/",
+    "variant": "btn-ghost",
+    "label": "Back to Home"
+   }
+  ],
+  "sections": [
+   {
+    "tag": "Who It's For",
+    "heading": "QAPI & Compliance Firms",
+    "alt": true,
+    "lead": "QAPI and compliance firms are responsible for the quality and accuracy of their clients' documentation, coding, and compliance posture. Murphi.ai gives you AI-powered audit and compliance tools — so you deliver better outcomes for more clients, faster.",
+    "whoTags": [
+     "QAPI Consultants",
+     "Compliance Firms",
+     "Quality Improvement Organizations",
+     "Healthcare Audit Firms"
+    ],
+    "whoTagsAfterLead": false
+   },
+   {
+    "tag": "Two Models",
+    "heading": "Work the Way You Want",
+    "alt": false,
+    "cardRow": {
+     "columns": "two",
+     "padding": 32,
+     "descSize": 14,
+     "descLeading": 1.7,
+     "cards": [
+      {
+       "status": null,
+       "badgeLabel": "Managed Services",
+       "title": "You Run Compliance Reports for Clients",
+       "desc": "Access your clients' data in Murphi.ai, run AI compliance and QAPI reports, and deliver findings with your own analysis and recommendations. Full control over the client deliverable.",
+       "attribution": null,
+       "noteLabel": "Best for:",
+       "noteText": "QAPI firms that want to maintain oversight and deliver branded compliance reports."
+      },
+      {
+       "status": null,
+       "badgeLabel": "Self-Service Agency",
+       "title": "Your Clients Run Their Own Reports",
+       "desc": "Give each client their own Murphi.ai workspace. They run compliance and QAPI reports independently — you provide guidance, training, and escalation support.",
+       "attribution": null,
+       "noteLabel": "Best for:",
+       "noteText": "QAPI firms scaling their client base without adding proportional headcount."
+      }
+     ]
+    }
+   },
+   {
+    "tag": "Core Modules",
+    "heading": "AI Compliance & QAPI Tools",
+    "alt": true,
+    "grid": "feature",
+    "features": [
+     {
+      "status": "live",
+      "badgeLabel": "Live",
+      "title": "Revenue Assurance — 28 Reports",
+      "desc": "15 Home Health compliance reports and 13 Hospice compliance reports. CHAP and ACHC aligned. AI-powered with 90–95% accuracy and human review workflow.",
+      "attribution": null,
+      "noteLabel": null,
+      "noteText": null
+     },
+     {
+      "status": "soon",
+      "badgeLabel": "Coming Soon",
+      "title": "EOLRBA — End-of-Life Risk Band Analyzer",
+      "desc": "AI-powered risk stratification for hospice patients. Identifies documentation gaps, flags eligibility concerns, and ensures compliance with CMS hospice requirements.",
+      "attribution": null,
+      "noteLabel": null,
+      "noteText": null
+     },
+     {
+      "status": null,
+      "badgeLabel": "White Label",
+      "title": "White-Label Platform",
+      "desc": "Offer the full Murphi.ai compliance platform under your own brand. Your clients see your name, your logo, and your practice — powered by Murphi.ai.",
+      "attribution": null,
+      "noteLabel": null,
+      "noteText": null
+     }
+    ]
+   }
+  ]
+ },
+ "accreditation-audit": {
+  "slug": "accreditation-audit",
+  "title": "AI Compliance Documentation For CHAP & ACHC Accreditation",
+  "description": "Generate accreditation and audit reports aligned to CHAP, ACHC, and Joint Commission standards built for post-acute and home health providers.",
+  "heroTags": [
+   {
+    "label": "Channel Partners — Accreditation & Audit",
+    "href": null,
+    "arrow": null
+   }
+  ],
+  "h1Lines": [
+   "AI-Aligned Compliance Documentation for CHAP, ACHC & Joint Commission"
+  ],
+  "h1Highlight": null,
+  "variant": "theme",
+  "kpiValue": "large",
+  "h1MaxWidth": 800,
+  "contentMaxWidth": 1180,
+  "heroSub": "Murphi.ai generates AI-powered accreditation and audit reports aligned to CHAP, ACHC, and Joint Commission standards. Built for providers preparing for surveys and accreditation bodies running them.",
+  "heroBtns": [
+   {
+    "href": "/contact-us/",
+    "variant": "btn-w",
+    "label": "Request Demo"
+   },
+   {
+    "href": "/",
+    "variant": "btn-ghost",
+    "label": "Back to Home"
+   }
+  ],
+  "sections": [
+   {
+    "tag": "Who It's For",
+    "heading": "Accreditation & Audit Bodies",
+    "alt": true,
+    "lead": "Accreditation bodies, surveyors, and accreditation consultants need AI tools that work for both sides — helping providers prepare documentation that meets survey standards, and helping accreditation organizations generate and manage audit and survey reports efficiently.",
+    "whoTags": [
+     "CHAP",
+     "ACHC",
+     "Joint Commission Aligned",
+     "Accreditation Consultants",
+     "Healthcare Audit Firms"
+    ],
+    "whoTagsAfterLead": false
+   },
+   {
+    "tag": "Three Models",
+    "heading": "Built for Every Accreditation Use Case",
+    "alt": false,
+    "cardRow": {
+     "columns": "three",
+     "padding": 28,
+     "descSize": 13,
+     "descLeading": 1.7,
+     "cards": [
+      {
+       "status": null,
+       "badgeLabel": "For Providers",
+       "title": "Help Providers Prepare",
+       "desc": "Run AI compliance reports aligned to CHAP, ACHC, and Joint Commission survey standards — so your provider clients walk into surveys fully prepared. Gap analysis, documentation review, and corrective action tracking.",
+       "attribution": null,
+       "noteLabel": null,
+       "noteText": null
+      },
+      {
+       "status": null,
+       "badgeLabel": "For Accreditation Bodies",
+       "title": "Streamline Survey & Audit Reports",
+       "desc": "Generate structured survey and audit reports using AI — aligned to your accreditation standards. Reduce time spent on manual report generation and focus on analysis and follow-up.",
+       "attribution": null,
+       "noteLabel": null,
+       "noteText": null
+      },
+      {
+       "status": null,
+       "badgeLabel": "PaaS",
+       "title": "Embed AI in Your Platform",
+       "desc": "If you operate a platform used by accreditation companies or surveyors, embed Murphi.ai AI features via encrypted API — under your brand, at zero token cost, with full data ownership.",
+       "attribution": null,
+       "noteLabel": null,
+       "noteText": null
+      }
+     ]
+    }
+   },
+   {
+    "tag": "Core Modules",
+    "heading": "AI Tools for Accreditation & Audit",
+    "alt": true,
+    "grid": "feature",
+    "features": [
+     {
+      "status": "live",
+      "badgeLabel": "Live",
+      "title": "Revenue Assurance — 28 Reports",
+      "desc": "28 AI compliance reports aligned to CHAP, ACHC, and Joint Commission standards. Home Health (15 reports) and Hospice (13 reports). 90–95% AI accuracy with human review workflow.",
+      "attribution": null,
+      "noteLabel": null,
+      "noteText": null
+     },
+     {
+      "status": "live",
+      "badgeLabel": "Live",
+      "title": "Gap Analysis",
+      "desc": "AI-powered comparison of current provider documentation against accreditation requirements. Surfaces specific gaps, missing elements, and corrective action recommendations.",
+      "attribution": null,
+      "noteLabel": null,
+      "noteText": null
+     },
+     {
+      "status": null,
+      "badgeLabel": "White Label",
+      "title": "White-Label Platform",
+      "desc": "Offer AI-powered accreditation tools under your own brand. Your clients — providers or surveyors — see your platform. Murphi.ai powers it invisibly.",
+      "attribution": null,
+      "noteLabel": null,
+      "noteText": null
+     }
+    ]
+   }
+  ]
+ },
+ "public-health-and-corrections": {
+  "slug": "public-health-and-corrections",
+  "title": "Public Health And Corrections | Murphi AI",
+  "description": "Murphi.ai turns custody-based encounters into compliance-ready clinical notes and keeps MedPass and eMAR documentation audit-clean — from booking to release,",
+  "heroTags": [
+   {
+    "label": "Who We Serve — Public Health & Corrections",
+    "href": null,
+    "arrow": null
+   },
+   {
+    "label": "Embed AI into EHR Workflows",
+    "href": "/public-health-and-corrections-embed-ai-into-ehr-workflows/",
+    "arrow": "glyph"
+   }
+  ],
+  "h1Lines": [
+   "Ambient AI & Clinical Documentation for Correctional Healthcare"
+  ],
+  "h1Highlight": null,
+  "variant": "civic",
+  "kpiValue": "largeShrink",
+  "h1MaxWidth": 800,
+  "contentMaxWidth": 1200,
+  "heroSub": "Murphi.ai turns custody-based encounters into compliance-ready clinical notes and keeps MedPass and eMAR documentation audit-clean — from booking to release, without adding a single extra click for your clinical staff.",
+  "heroBtns": [
+   {
+    "href": "/contact-us/",
+    "variant": "btn-w",
+    "label": "Request Demo"
+   },
+   {
+    "href": "/white-labeling/",
+    "variant": "btn-ghost",
+    "label": "See All Solutions"
+   }
+  ],
+  "sections": [
+   {
+    "tag": "Who It's For",
+    "heading": "Public Health & Corrections",
+    "alt": true,
+    "lead": "Correctional healthcare runs on high patient turnover, custody constraints, and some of the heaviest audit and accreditation scrutiny in medicine — NCCHC, ACA, state DOC, and court-monitored consent decrees all watching the same chart. Murphi.ai generates clinical notes from voice at intake, sick call, and chronic care visits, and keeps documentation audit-ready across every encounter — without adding administrative burden to your correctional clinicians.",
+    "whoTags": [
+     "County Jails",
+     "State DOC Facilities",
+     "Federal Detention",
+     "Juvenile Justice Facilities",
+     "Community Corrections",
+     "Public Health Departments"
+    ],
+    "whoTagsAfterLead": false
+   },
+   {
+    "tag": "Core Modules",
+    "heading": "AI Automation for Correctional Healthcare Workflows",
+    "alt": false,
+    "grid": "feature",
+    "features": [
+     {
+      "status": "live",
+      "badgeLabel": "Live",
+      "title": "Ambient AI & Scribe",
+      "desc": "Generate intake H&Ps, chronic care progress notes, sick call encounters, and mental health/SUD notes from voice. Vitals and assessment data auto-populate into the chart at session end.",
+      "attribution": null,
+      "noteLabel": null,
+      "noteText": null
+     },
+     {
+      "status": "live",
+      "badgeLabel": "Live",
+      "title": "eMAR & MedPass Documentation Intelligence",
+      "desc": "AI-assisted documentation layered onto MedPass workflows — refusal reasons, injection sites, and administration records captured cleanly, with anomalies flagged before they surface as audit findings.",
+      "attribution": null,
+      "noteLabel": null,
+      "noteText": null
+     },
+     {
+      "status": "live",
+      "badgeLabel": "Live",
+      "title": "Translation — 55+ Languages",
+      "desc": "Real-time translation for patient communication and note generation, built for the language diversity of correctional populations.",
+      "attribution": null,
+      "noteLabel": null,
+      "noteText": null
+     },
+     {
+      "status": "live",
+      "badgeLabel": "Live",
+      "title": "Behavior & Risk Intelligence",
+      "desc": "Surfaces behavior patterns and risk indicators across encounters — repeat sick call visits, medication refusals, escalating complaints — to support classification and housing decisions.",
+      "attribution": null,
+      "noteLabel": null,
+      "noteText": null
+     },
+     {
+      "status": "live",
+      "badgeLabel": "Live",
+      "title": "CDI & Compliance Intelligence",
+      "desc": "Real-time documentation improvement against NCCHC/ACA and state DOC audit standards, with a full audit trail behind every note.",
+      "attribution": null,
+      "noteLabel": null,
+      "noteText": null
+     },
+     {
+      "status": "live",
+      "badgeLabel": "Live",
+      "title": "Engage — HIPAA Messaging",
+      "desc": "HIPAA-compliant messaging across custody, medical, and mental health staff. Streamlines handoffs during transport, transfer, and shift change without exposing PHI.",
+      "attribution": null,
+      "noteLabel": null,
+      "noteText": null
+     }
+    ]
+   },
+   {
+    "tag": "Outcomes",
+    "heading": "Measurable Impact for Correctional Healthcare Organizations",
+    "alt": true,
+    "kpis": [
+     {
+      "value": "90%",
+      "label": "Time saved on intake & sick-call documentation"
+     },
+     {
+      "value": "100%",
+      "label": "Notes completed before the clinician leaves the pod"
+     },
+     {
+      "value": "55+",
+      "label": "Languages supported"
+     },
+     {
+      "value": "Always",
+      "label": "Audit-ready documentation"
+     }
+    ]
+   },
+   {
+    "tag": "EHR Integration",
+    "heading": "Connects to Your EHR — No Re-Platforming Required",
+    "alt": false,
+    "banner": {
+     "body": "Murphi.ai integrates with correctional and public health EHR platforms — including corrections-focused systems like Sapphire EHR — via FHIR and HL7 standards. Notes sync back automatically, and MedPass/eMAR data stays in your system of record."
+    }
+   }
+  ]
+ }
+}

@@ -1,0 +1,1649 @@
+{
+ "slug": "primary-and-speciality-care-embed-into-ehr",
+ "title": "Primary And Speciality Care - Embed Into EHR | Murphi AI",
+ "description": "Murphi.ai gives EHR platforms a complete, embeddable AI layer — ambient SOAP documentation, specialty-specific templates, agentic E&M billing, CDI, and",
+ "hero": {
+  "breadcrumb": [
+   {
+    "label": "Who We Serve — Primary & Specialty Care",
+    "active": false,
+    "href": "/primary-specialty-care/"
+   },
+   {
+    "label": "Embed AI into EHR Workflows",
+    "active": true,
+    "href": null
+   }
+  ],
+  "separator": "›",
+  "h1": "Embed Primary & Specialty Care AI Features into Your EHR Workflows",
+  "sub": "Murphi.ai gives EHR platforms a complete, embeddable AI layer — ambient SOAP documentation, specialty-specific templates, agentic E&M billing, CDI, and text-to-pay patient collections. Delivered via encrypted API, SSO, or iFrame. Under your brand. Zero token cost.",
+  "buttons": [
+   {
+    "variant": "solid",
+    "label": "Request Demo",
+    "href": "/contact-us/"
+   },
+   {
+    "variant": "outline",
+    "label": "See All Solutions",
+    "href": "/ehr-emr-companies/"
+   }
+  ]
+ },
+ "who": {
+  "eye": "Who It's For",
+  "h2": "Primary & Specialty Care",
+  "tags": [
+   "Primary Care Practices",
+   "CHCs / FQHCs",
+   "Cardiology",
+   "Sleep / Pain / Allergy",
+   "Vascular & Surgical",
+   "Oncology",
+   "Neurology",
+   "Orthopedics",
+   "DME Providers",
+   "Urgent Care"
+  ],
+  "p": "Primary and specialty practices lose hours every day to charting and struggle to collect patient-responsible balances. Murphi.ai eliminates both — AI documentation from voice across any specialty, agentic E&M billing workflows, and automated text-to-pay collections — without adding headcount or replacing your EHR platform."
+ },
+ "trust": {
+  "items": [
+   {
+    "icon": "pc-trust-0",
+    "label": "HIPAA Compliant"
+   },
+   {
+    "icon": "pc-trust-1",
+    "label": "SOC 2 Certified"
+   },
+   {
+    "icon": "pc-trust-2",
+    "label": "ISO 27001"
+   },
+   {
+    "icon": "pc-trust-3",
+    "label": "BAA Signed"
+   },
+   {
+    "icon": "pc-trust-4",
+    "label": "Any EHR Integration"
+   },
+   {
+    "icon": "pc-trust-5",
+    "label": "All US Time Zones"
+   }
+  ],
+  "link": {
+   "label": "24/7 Support · Submit a Ticket",
+   "icon": "pc-tlink-6",
+   "href": "/support-ticket/"
+  }
+ },
+ "stats": {
+  "eye": "Proven Outcomes",
+  "h2": "Real Results Across Primary & Specialty Platforms",
+  "sub": "Outcomes reported by EHR platforms and practices using Murphi.ai today.",
+  "boxes": [
+   {
+    "value": "70%",
+    "label": "Documentation time saved per encounter"
+   },
+   {
+    "value": "60%",
+    "label": "Patient response rate increase"
+   },
+   {
+    "value": "80%",
+    "label": "Call volume reduction"
+   },
+   {
+    "value": "48 hrs",
+    "label": "Average payment time — down from 100+ days"
+   }
+  ]
+ },
+ "specialties": {
+  "eye": "Specialty Feature Explorer",
+  "h2": "AI Features by Specialty — Ready to Embed",
+  "sub": "Select a specialty to see the exact AI workflows available for embedding into your EHR platform.",
+  "tabs": [
+   {
+    "key": "pcp",
+    "icon": "pc-spectab-7",
+    "label": "Primary Care",
+    "active": true
+   },
+   {
+    "key": "cardio",
+    "icon": "pc-spectab-8",
+    "label": "Cardiology",
+    "active": false
+   },
+   {
+    "key": "sleep",
+    "icon": "pc-spectab-9",
+    "label": "Sleep / Pain / Allergy",
+    "active": false
+   },
+   {
+    "key": "onco",
+    "icon": "pc-spectab-10",
+    "label": "Oncology",
+    "active": false
+   },
+   {
+    "key": "neuro",
+    "icon": "pc-spectab-11",
+    "label": "Neurology",
+    "active": false
+   },
+   {
+    "key": "ortho",
+    "icon": "pc-spectab-12",
+    "label": "Orthopedics",
+    "active": false
+   },
+   {
+    "key": "fqhc",
+    "icon": "pc-spectab-13",
+    "label": "CHC / FQHC",
+    "active": false
+   },
+   {
+    "key": "dme",
+    "icon": "pc-spectab-14",
+    "label": "DME / Vascular",
+    "active": false
+   }
+  ],
+  "headingPrefix": "AI Features for",
+  "badge": {
+   "icon": "pc-sibadge-15",
+   "line1": "Available Now",
+   "line2": "via API · SSO · iFrame"
+  },
+  "items": [
+   {
+    "key": "pcp",
+    "label": "Primary Care",
+    "icon": "pc-specico-16",
+    "desc": "Primary care practices lose 2–4 hours daily to SOAP note documentation and spend weeks chasing patient co-pay balances. Murphi.ai generates visit notes from voice and collects balances via SMS — with zero change to the EHR.",
+    "chips": [
+     "Annual Wellness",
+     "Chronic Care Management",
+     "Sick Visits",
+     "Preventive Screenings",
+     "Referral Coordination"
+    ],
+    "features": [
+     {
+      "name": "Ambient SOAP Note Generation",
+      "desc": "Listens to the PCP encounter and generates structured SOAP notes with problem list, assessment, and plan — ready for EHR sync.",
+      "type": "Ambient AI",
+      "tone": "blue",
+      "icon": "pc-feat-17"
+     },
+     {
+      "name": "Annual Wellness Visit Documentation",
+      "desc": "Auto-generates AWV documentation covering health risk assessment, preventive care review, and personalized prevention plan.",
+      "type": "Ambient AI",
+      "tone": "blue",
+      "icon": "pc-feat-18"
+     },
+     {
+      "name": "Chronic Care Management Notes",
+      "desc": "Structures CCM care plan notes from clinician voice for 20-minute monthly visits — with time logging for billing.",
+      "type": "Ambient AI",
+      "tone": "blue",
+      "icon": "pc-feat-19"
+     },
+     {
+      "name": "E&M Level Suggestion",
+      "desc": "Suggests E&M level (99213, 99214, etc.) based on MDM or time documentation — with CPT rationale for the coder.",
+      "type": "Clinical AI",
+      "tone": "green",
+      "icon": "pc-feat-20"
+     },
+     {
+      "name": "ICD-10 Coding Suggestions",
+      "desc": "Extracts diagnosis codes from the SOAP note with confidence scores and payer-specific coding guidance.",
+      "type": "Clinical AI",
+      "tone": "green",
+      "icon": "pc-feat-21"
+     },
+     {
+      "name": "Referral Letter Generation",
+      "desc": "Drafts structured referral letters from the encounter note — including reason for referral, clinical summary, and supporting findings.",
+      "type": "Workflow Automation",
+      "tone": "indigo",
+      "icon": "pc-feat-22"
+     },
+     {
+      "name": "Medication Scan & Reconciliation",
+      "desc": "Captures medications from encounter audio and reconciles against the existing medication list — flagging discrepancies for review.",
+      "type": "Clinical AI",
+      "tone": "green",
+      "icon": "pc-feat-23"
+     },
+     {
+      "name": "Patient Text-to-Pay",
+      "desc": "Collects co-pays, deductibles, and outstanding balances via HIPAA-compliant SMS — patients pay in under 60 seconds.",
+      "type": "Payments",
+      "tone": "green",
+      "icon": "pc-feat-24"
+     }
+    ]
+   },
+   {
+    "key": "cardio",
+    "label": "Cardiology",
+    "icon": "pc-specico-25",
+    "desc": "Cardiology encounters involve complex multi-system SOAP notes, procedure documentation, and high patient-responsible balances. Murphi.ai generates specialty-specific cardiology templates from voice and automates billing workflows.",
+    "chips": [
+     "Clinic Visits",
+     "Stress Testing",
+     "Echocardiography",
+     "Cardiac Catheterization",
+     "Device Checks"
+    ],
+    "features": [
+     {
+      "name": "Cardiology SOAP Note Generation",
+      "desc": "Generates cardiology-specific SOAP notes from voice — capturing cardiovascular HPI, ROS, cardiac exam findings, and structured plan.",
+      "type": "Ambient AI",
+      "tone": "blue",
+      "icon": "pc-feat-26"
+     },
+     {
+      "name": "Cardiac Procedure Documentation",
+      "desc": "Documents stress test, echocardiography, and cath lab procedure notes from ambient or voice input with structured findings.",
+      "type": "Ambient AI",
+      "tone": "blue",
+      "icon": "pc-feat-27"
+     },
+     {
+      "name": "Device Check Documentation",
+      "desc": "Generates pacemaker and ICD device check visit notes with device parameters, arrhythmia episodes, and programming changes.",
+      "type": "Ambient AI",
+      "tone": "blue",
+      "icon": "pc-feat-28"
+     },
+     {
+      "name": "Cardiology E&M & CPT Coding",
+      "desc": "Suggests cardiology-specific CPT codes (93000, 93306, 93454, etc.) and ICD-10 diagnoses with billing rationale.",
+      "type": "Clinical AI",
+      "tone": "green",
+      "icon": "pc-feat-29"
+     },
+     {
+      "name": "Cardiac Risk Assessment Documentation",
+      "desc": "Structures cardiovascular risk assessment documentation from encounter notes — including risk score, lifestyle counseling, and plan.",
+      "type": "Clinical AI",
+      "tone": "green",
+      "icon": "pc-feat-30"
+     },
+     {
+      "name": "Pre-Auth for Cardiac Procedures",
+      "desc": "AI agent prepares and submits prior authorization for cardiac imaging, catheterization, and device implants automatically.",
+      "type": "Agentic AI",
+      "tone": "indigo",
+      "icon": "pc-feat-31"
+     },
+     {
+      "name": "Medication Scan — Cardiac",
+      "desc": "Auto-populates cardiac medication list from encounter audio — anticoagulants, beta-blockers, statins — with dose and frequency.",
+      "type": "Clinical AI",
+      "tone": "green",
+      "icon": "pc-feat-32"
+     },
+     {
+      "name": "Patient Balance Collections",
+      "desc": "Collects cardiac visit co-pays and outstanding balances via HIPAA-compliant SMS text-to-pay. Provider paid within 48 hours.",
+      "type": "Payments",
+      "tone": "green",
+      "icon": "pc-feat-33"
+     }
+    ]
+   },
+   {
+    "key": "sleep",
+    "label": "Sleep / Pain / Allergy",
+    "icon": "pc-specico-34",
+    "desc": "Sleep, pain, and allergy clinics generate high documentation volume across complex multi-visit programs. Murphi.ai generates specialty-specific templates from voice and streamlines prior authorization for CPAP, procedures, and biologics.",
+    "chips": [
+     "Sleep Studies",
+     "Pain Management",
+     "Allergy Testing",
+     "CPAP Follow-Up",
+     "Biologic Infusions"
+    ],
+    "features": [
+     {
+      "name": "Sleep Study Interpretation Note",
+      "desc": "Generates sleep study interpretation notes from physician dictation — AHI, hypopnea index, sleep architecture, and treatment plan.",
+      "type": "Voice-to-Text",
+      "tone": "teal",
+      "icon": "pc-feat-35"
+     },
+     {
+      "name": "CPAP/BiPAP Follow-Up Documentation",
+      "desc": "Structures CPAP compliance review notes from voice — usage hours, AHI on therapy, mask fit, and plan adjustment.",
+      "type": "Ambient AI",
+      "tone": "blue",
+      "icon": "pc-feat-36"
+     },
+     {
+      "name": "Pain Management Visit Notes",
+      "desc": "Generates pain management SOAP notes capturing pain scores, functional assessment, opioid risk documentation, and procedure plan.",
+      "type": "Ambient AI",
+      "tone": "blue",
+      "icon": "pc-feat-37"
+     },
+     {
+      "name": "Allergy Evaluation & Testing Notes",
+      "desc": "Documents allergy evaluation, skin test results, and immunotherapy plan from ambient encounter capture.",
+      "type": "Ambient AI",
+      "tone": "blue",
+      "icon": "pc-feat-38"
+     },
+     {
+      "name": "Biologic Pre-Auth Agent",
+      "desc": "AI agent prepares and submits prior authorization for dupilumab, benralizumab, and other specialty biologics with clinical documentation.",
+      "type": "Agentic AI",
+      "tone": "indigo",
+      "icon": "pc-feat-39"
+     },
+     {
+      "name": "CPAP Pre-Auth & DME Documentation",
+      "desc": "Prepares CPAP and DME prior authorization packages — sleep study results, clinical necessity, and physician letter automatically.",
+      "type": "Agentic AI",
+      "tone": "indigo",
+      "icon": "pc-feat-40"
+     },
+     {
+      "name": "Procedure Consent Documentation",
+      "desc": "Generates structured procedure consent documentation for pain injections, allergy desensitization, and sleep procedures.",
+      "type": "Workflow Automation",
+      "tone": "indigo",
+      "icon": "pc-feat-41"
+     },
+     {
+      "name": "Patient Collections — Specialty",
+      "desc": "Collects procedure co-pays and outstanding specialty balances via HIPAA SMS text-to-pay. No patient app required.",
+      "type": "Payments",
+      "tone": "green",
+      "icon": "pc-feat-42"
+     }
+    ]
+   },
+   {
+    "key": "onco",
+    "label": "Oncology",
+    "icon": "pc-specico-43",
+    "desc": "Oncology encounters require high-precision documentation covering diagnosis, staging, treatment plans, and toxicity monitoring. Murphi.ai generates oncology-specific templates from voice and automates prior authorization for chemotherapy and biologics.",
+    "chips": [
+     "Hematology/Oncology",
+     "Infusion Centers",
+     "Radiation Oncology",
+     "Palliative Oncology",
+     "Tumor Board Prep"
+    ],
+    "features": [
+     {
+      "name": "Oncology New Patient Note",
+      "desc": "Generates structured new patient oncology notes — cancer history, staging, performance status, treatment plan, and goals of care.",
+      "type": "Ambient AI",
+      "tone": "blue",
+      "icon": "pc-feat-44"
+     },
+     {
+      "name": "Chemotherapy Visit Documentation",
+      "desc": "Documents chemo infusion visit notes from voice — protocol, cycle number, toxicity assessment, and dose modifications.",
+      "type": "Ambient AI",
+      "tone": "blue",
+      "icon": "pc-feat-45"
+     },
+     {
+      "name": "Toxicity & Side Effect Documentation",
+      "desc": "Structures CTCAE toxicity grading, patient-reported symptoms, and dose modification decisions from encounter audio.",
+      "type": "Clinical AI",
+      "tone": "amber",
+      "icon": "pc-feat-46"
+     },
+     {
+      "name": "Chemo Pre-Auth Agent",
+      "desc": "Prepares and submits prior authorization for chemotherapy and targeted therapy regimens — with regimen documentation and clinical rationale.",
+      "type": "Agentic AI",
+      "tone": "indigo",
+      "icon": "pc-feat-47"
+     },
+     {
+      "name": "Oncology ICD-10 & CPT Coding",
+      "desc": "Suggests oncology-specific ICD-10 codes (C codes, Z codes) and chemotherapy CPT codes with confidence scores.",
+      "type": "Clinical AI",
+      "tone": "green",
+      "icon": "pc-feat-48"
+     },
+     {
+      "name": "Tumor Board Summary Generation",
+      "desc": "Drafts structured tumor board case summaries from physician dictation — pathology, imaging, staging, and treatment recommendations.",
+      "type": "Clinical AI",
+      "tone": "green",
+      "icon": "pc-feat-49"
+     },
+     {
+      "name": "Survivorship Care Plan Documentation",
+      "desc": "Generates survivorship care plans from encounter data — follow-up schedule, surveillance imaging, and late effects monitoring.",
+      "type": "Clinical AI",
+      "tone": "green",
+      "icon": "pc-feat-50"
+     },
+     {
+      "name": "Oncology Patient Financial Support",
+      "desc": "Collects infusion co-pays and outstanding balances via HIPAA SMS. Integrates with patient assistance program identification.",
+      "type": "Payments",
+      "tone": "green",
+      "icon": "pc-feat-51"
+     }
+    ]
+   },
+   {
+    "key": "neuro",
+    "label": "Neurology",
+    "icon": "pc-specico-52",
+    "desc": "Neurology encounters generate complex SOAP notes covering neurological exam findings, cognitive assessments, and medication titration across a high volume of chronic patients. Murphi.ai generates neurology-specific templates from voice.",
+    "chips": [
+     "General Neurology",
+     "Epilepsy",
+     "Movement Disorders",
+     "Headache",
+     "Cognitive Neurology"
+    ],
+    "features": [
+     {
+      "name": "Neurology SOAP Note Generation",
+      "desc": "Generates neurology SOAP notes from voice — neurological HPI, cranial nerve exam, motor, sensory, reflex, and coordination findings.",
+      "type": "Ambient AI",
+      "tone": "blue",
+      "icon": "pc-feat-53"
+     },
+     {
+      "name": "Epilepsy Visit Documentation",
+      "desc": "Structures seizure clinic notes from voice — seizure type, frequency, medication levels, side effects, and EEG review.",
+      "type": "Ambient AI",
+      "tone": "blue",
+      "icon": "pc-feat-54"
+     },
+     {
+      "name": "Movement Disorder Visit Notes",
+      "desc": "Documents Parkinson's and movement disorder visits — UPDRS scoring, dyskinesia assessment, and medication adjustment plan.",
+      "type": "Ambient AI",
+      "tone": "blue",
+      "icon": "pc-feat-55"
+     },
+     {
+      "name": "Cognitive Assessment Documentation",
+      "desc": "Structures MoCA, MMSE, and cognitive assessment results from encounter into the note with interpretation and care plan.",
+      "type": "Clinical AI",
+      "tone": "green",
+      "icon": "pc-feat-56"
+     },
+     {
+      "name": "Headache & Migraine Visit Notes",
+      "desc": "Generates headache clinic notes capturing headache diary review, disability scoring (MIDAS), and preventive therapy plan.",
+      "type": "Ambient AI",
+      "tone": "blue",
+      "icon": "pc-feat-57"
+     },
+     {
+      "name": "Neurology Medication Titration Log",
+      "desc": "Auto-populates medication titration documentation — AED dose changes, titration schedule, and monitoring plan from voice.",
+      "type": "Clinical AI",
+      "tone": "green",
+      "icon": "pc-feat-58"
+     },
+     {
+      "name": "Neurology CPT & E&M Coding",
+      "desc": "Suggests neurology-specific CPT codes and E&M level based on neurological exam complexity and medical decision-making.",
+      "type": "Clinical AI",
+      "tone": "green",
+      "icon": "pc-feat-59"
+     },
+     {
+      "name": "Prior Auth — Neurology Biologics",
+      "desc": "Prepares authorization for CGRP antagonists, anti-seizure medication access programs, and neurology-specific biologics.",
+      "type": "Agentic AI",
+      "tone": "indigo",
+      "icon": "pc-feat-60"
+     }
+    ]
+   },
+   {
+    "key": "ortho",
+    "label": "Orthopedics",
+    "icon": "pc-specico-61",
+    "desc": "Orthopedic practices document high volumes of procedure notes, post-op visits, and injection documentation. Murphi.ai generates orthopedic-specific templates from voice and automates surgical prior authorization workflows.",
+    "chips": [
+     "Orthopedic Surgery",
+     "Sports Medicine",
+     "Spine",
+     "Podiatry",
+     "Physiatry / PM&R"
+    ],
+    "features": [
+     {
+      "name": "Orthopedic Clinic Note Generation",
+      "desc": "Generates orthopedic office visit notes from voice — mechanism of injury, functional status, orthopedic exam, imaging review, and plan.",
+      "type": "Ambient AI",
+      "tone": "blue",
+      "icon": "pc-feat-62"
+     },
+     {
+      "name": "Post-Operative Visit Documentation",
+      "desc": "Structures post-op visit notes from ambient capture — wound assessment, ROM, weight-bearing status, and physical therapy referral.",
+      "type": "Ambient AI",
+      "tone": "blue",
+      "icon": "pc-feat-63"
+     },
+     {
+      "name": "Injection Procedure Documentation",
+      "desc": "Documents corticosteroid, PRP, and hyaluronic acid injection notes with anatomical site, technique, patient response, and plan.",
+      "type": "Ambient AI",
+      "tone": "blue",
+      "icon": "pc-feat-64"
+     },
+     {
+      "name": "Surgical Pre-Auth Agent",
+      "desc": "AI agent prepares and submits prior authorization for orthopedic procedures — arthroscopy, joint replacement, and spinal surgery.",
+      "type": "Agentic AI",
+      "tone": "indigo",
+      "icon": "pc-feat-65"
+     },
+     {
+      "name": "Orthopedic CPT & Surgical Coding",
+      "desc": "Suggests orthopedic CPT codes for procedures, modifiers for bilateral/multiple surgeries, and ICD-10 diagnoses.",
+      "type": "Clinical AI",
+      "tone": "green",
+      "icon": "pc-feat-66"
+     },
+     {
+      "name": "Functional Status & ADL Documentation",
+      "desc": "Structures functional status assessments — AAOS outcomes, VAS pain scores, and ADL impact — from patient-reported and physician input.",
+      "type": "Clinical AI",
+      "tone": "green",
+      "icon": "pc-feat-67"
+     },
+     {
+      "name": "Implant & DME Documentation",
+      "desc": "Documents brace, splint, and durable medical equipment orders with clinical necessity and fitting instructions for billing.",
+      "type": "Workflow Automation",
+      "tone": "indigo",
+      "icon": "pc-feat-68"
+     },
+     {
+      "name": "Patient Collections — Ortho",
+      "desc": "Collects orthopedic surgery co-pays and outstanding balances via HIPAA SMS text-to-pay. Auto posts payment to EHR billing.",
+      "type": "Payments",
+      "tone": "green",
+      "icon": "pc-feat-69"
+     }
+    ]
+   },
+   {
+    "key": "fqhc",
+    "label": "CHC / FQHC",
+    "icon": "pc-specico-70",
+    "desc": "Federally Qualified Health Centers and Community Health Centers serve high-volume, multilingual patient populations with complex documentation and grant reporting requirements. Murphi.ai supports 55+ languages and UDS-aligned reporting.",
+    "chips": [
+     "FQHCs",
+     "CHCs",
+     "Migrant Health Centers",
+     "Rural Health Clinics",
+     "School-Based Health"
+    ],
+    "features": [
+     {
+      "name": "Multilingual Ambient Documentation",
+      "desc": "Generates SOAP notes from clinician-patient encounters in 55+ languages — no interpreter documentation gap.",
+      "type": "Ambient AI",
+      "tone": "blue",
+      "icon": "pc-feat-71"
+     },
+     {
+      "name": "UDS-Aligned Visit Documentation",
+      "desc": "Structures visit notes with UDS reporting fields — clinical quality measures, health center program requirements, and patient population data.",
+      "type": "Clinical AI",
+      "tone": "green",
+      "icon": "pc-feat-72"
+     },
+     {
+      "name": "Sliding Scale & Discount Documentation",
+      "desc": "Documents sliding fee scale determination, federal poverty level attestation, and discount application for billing compliance.",
+      "type": "Workflow Automation",
+      "tone": "indigo",
+      "icon": "pc-feat-73"
+     },
+     {
+      "name": "Social Determinants of Health Capture",
+      "desc": "Extracts SDOH screening responses from encounter audio and structures Z-codes for UDS and payer reporting.",
+      "type": "Clinical AI",
+      "tone": "green",
+      "icon": "pc-feat-74"
+     },
+     {
+      "name": "Grant & Program Reporting Support",
+      "desc": "Compiles encounter data summaries for federal grant reporting — HRSA, Section 330, and state health department requirements.",
+      "type": "Workflow Automation",
+      "tone": "indigo",
+      "icon": "pc-feat-75"
+     },
+     {
+      "name": "340B Medication Documentation",
+      "desc": "Documents 340B-eligible prescriptions with qualifying patient attestation and program compliance requirements.",
+      "type": "Compliance AI",
+      "tone": "amber",
+      "icon": "pc-feat-76"
+     },
+     {
+      "name": "FQHC Prospective Payment System Coding",
+      "desc": "Suggests PPS visit codes, qualifying services, and cost report documentation for FQHC billing compliance.",
+      "type": "Clinical AI",
+      "tone": "green",
+      "icon": "pc-feat-77"
+     },
+     {
+      "name": "Patient Financial Assistance Collections",
+      "desc": "Collects patient-responsible balances using HIPAA-compliant SMS text-to-pay — multilingual SMS support for diverse patient populations.",
+      "type": "Payments",
+      "tone": "green",
+      "icon": "pc-feat-78"
+     }
+    ]
+   },
+   {
+    "key": "dme",
+    "label": "DME / Vascular",
+    "icon": "pc-specico-79",
+    "desc": "DME providers and vascular surgery practices carry significant documentation burden for prior authorization, CMN, and post-procedure visits. Murphi.ai automates CMN generation, vascular SOAP notes, and DME pre-authorization.",
+    "chips": [
+     "DME / HME Suppliers",
+     "Vascular Surgery",
+     "Wound Care",
+     "Hyperbaric Medicine",
+     "Podiatry"
+    ],
+    "features": [
+     {
+      "name": "Certificate of Medical Necessity Generation",
+      "desc": "Auto-generates CMN forms from clinical notes and physician orders — CPAP, oxygen, wheelchair, and prosthetics with ICD-10 support.",
+      "type": "Workflow Automation",
+      "tone": "indigo",
+      "icon": "pc-feat-80"
+     },
+     {
+      "name": "Vascular SOAP Note Generation",
+      "desc": "Generates vascular surgery SOAP notes from voice — ankle-brachial index, duplex findings, wound assessment, and intervention plan.",
+      "type": "Ambient AI",
+      "tone": "blue",
+      "icon": "pc-feat-81"
+     },
+     {
+      "name": "Wound Care Visit Documentation",
+      "desc": "Structures wound care visit notes — wound measurements, tissue characterization, debridement documentation, and dressing plan.",
+      "type": "Ambient AI",
+      "tone": "blue",
+      "icon": "pc-feat-82"
+     },
+     {
+      "name": "DME Prior Auth Agent",
+      "desc": "AI agent prepares DME prior authorization packages — clinical necessity, qualifying diagnoses, face-to-face documentation, and payer submission.",
+      "type": "Agentic AI",
+      "tone": "indigo",
+      "icon": "pc-feat-83"
+     },
+     {
+      "name": "Oxygen Therapy Documentation",
+      "desc": "Generates oxygen qualification documentation — saturation testing, clinical necessity, and physician attestation for CMS compliance.",
+      "type": "Compliance AI",
+      "tone": "amber",
+      "icon": "pc-feat-84"
+     },
+     {
+      "name": "Hyperbaric Oxygen Documentation",
+      "desc": "Structures HBO treatment session notes with wound response, treatment number, pressure/duration, and wound measurement trending.",
+      "type": "Ambient AI",
+      "tone": "blue",
+      "icon": "pc-feat-85"
+     },
+     {
+      "name": "Vascular CPT & ICD-10 Coding",
+      "desc": "Suggests vascular-specific CPT codes for open and endovascular procedures, wound care, and diagnostic imaging with modifier guidance.",
+      "type": "Clinical AI",
+      "tone": "green",
+      "icon": "pc-feat-86"
+     },
+     {
+      "name": "Patient Collections — DME & Vascular",
+      "desc": "Collects DME rental payments and vascular visit balances via HIPAA-compliant SMS text-to-pay. Auto-posts to billing system.",
+      "type": "Payments",
+      "tone": "green",
+      "icon": "pc-feat-87"
+     }
+    ]
+   }
+  ]
+ },
+ "features": {
+  "eye": "All Features",
+  "h2": "Complete AI Feature Library for Embedding",
+  "sub": "Every feature is embeddable via API, SSO, iFrame, or white-label. Filter by workflow type.",
+  "tabs": [
+   {
+    "key": "all",
+    "label": "All Features",
+    "active": true
+   },
+   {
+    "key": "documentation",
+    "label": "Documentation",
+    "active": false
+   },
+   {
+    "key": "clinical",
+    "label": "Clinical Intelligence",
+    "active": false
+   },
+   {
+    "key": "rcm",
+    "label": "RCM & Billing",
+    "active": false
+   },
+   {
+    "key": "patient",
+    "label": "Patient Experience",
+    "active": false
+   },
+   {
+    "key": "compliance",
+    "label": "Compliance & CDI",
+    "active": false
+   }
+  ],
+  "filters": [
+   {
+    "key": "all",
+    "label": "All Types",
+    "active": true
+   },
+   {
+    "key": "Ambient AI",
+    "label": "Ambient AI",
+    "active": false
+   },
+   {
+    "key": "Voice-to-Text",
+    "label": "Voice-to-Text",
+    "active": false
+   },
+   {
+    "key": "Clinical AI",
+    "label": "Clinical AI",
+    "active": false
+   },
+   {
+    "key": "Agentic AI",
+    "label": "Agentic AI",
+    "active": false
+   },
+   {
+    "key": "Compliance AI",
+    "label": "Compliance AI",
+    "active": false
+   },
+   {
+    "key": "Payments",
+    "label": "Payments",
+    "active": false
+   },
+   {
+    "key": "Workflow Automation",
+    "label": "Automation",
+    "active": false
+   }
+  ],
+  "badgeClasses": {
+   "Ambient AI": "ambient",
+   "Voice-to-Text": "voice",
+   "Clinical AI": "clinical",
+   "Agentic AI": "agentic",
+   "Compliance AI": "compliance",
+   "Payments": "payments",
+   "Workflow Automation": "workflow",
+   "RCM": "rcm"
+  },
+  "empty": "No features match this filter. Try selecting All Types.",
+  "countSuffix": {
+   "one": "feature",
+   "many": "features"
+  },
+  "viewLabel": "View workflow",
+  "viewIcon": "pc-view-88",
+  "categories": [
+   {
+    "key": "documentation",
+    "label": "Clinical Documentation",
+    "icon": "pc-catico-89",
+    "tab": "documentation",
+    "features": [
+     {
+      "name": "Ambient SOAP Note Generation",
+      "desc": "Listens to the encounter and generates structured SOAP notes with specialty-specific fields — HPI, exam, assessment, and plan.",
+      "type": "Ambient AI",
+      "tone": "blue",
+      "icon": "pc-feat-90"
+     },
+     {
+      "name": "Specialty Template Library",
+      "desc": "Cardiology, sleep, allergy, oncology, neurology, orthopedics, FQHC — each with specialty-specific exam fields and structured output.",
+      "type": "Ambient AI",
+      "tone": "blue",
+      "icon": "pc-feat-91"
+     },
+     {
+      "name": "Voice-to-Text (55 Languages)",
+      "desc": "Transcribes clinician speech in over 55 languages with medical terminology optimization and intelligent punctuation.",
+      "type": "Voice-to-Text",
+      "tone": "teal",
+      "icon": "pc-feat-92"
+     },
+     {
+      "name": "Procedure Note Generation",
+      "desc": "Generates structured procedure notes from physician dictation — indications, technique, findings, and post-procedure plan.",
+      "type": "Ambient AI",
+      "tone": "blue",
+      "icon": "pc-feat-93"
+     },
+     {
+      "name": "AI Rewrite",
+      "desc": "Improves draft clinical text for clarity, completeness, and E&M documentation standards — strengthening medical necessity language.",
+      "type": "Workflow Automation",
+      "tone": "indigo",
+      "icon": "pc-feat-94"
+     },
+     {
+      "name": "Referral Letter Generation",
+      "desc": "Drafts specialty referral letters from the encounter note — reason for referral, clinical summary, and supporting findings.",
+      "type": "Workflow Automation",
+      "tone": "indigo",
+      "icon": "pc-feat-95"
+     },
+     {
+      "name": "Discharge & Transfer Summary",
+      "desc": "Creates structured discharge summaries from inpatient or observation visits — diagnosis, course, medications, and follow-up plan.",
+      "type": "Clinical AI",
+      "tone": "green",
+      "icon": "pc-feat-96"
+     },
+     {
+      "name": "Handwriting-to-Text",
+      "desc": "Converts handwritten office notes and procedure documentation into structured digital text for EHR filing.",
+      "type": "Workflow Automation",
+      "tone": "indigo",
+      "icon": "pc-feat-97"
+     },
+     {
+      "name": "Smart Summary",
+      "desc": "Generates a concise visit summary from lengthy documentation for care team handoffs and referral communications.",
+      "type": "Clinical AI",
+      "tone": "green",
+      "icon": "pc-feat-98"
+     }
+    ]
+   },
+   {
+    "key": "clinical",
+    "label": "Clinical Intelligence",
+    "icon": "pc-catico-99",
+    "tab": "clinical",
+    "features": [
+     {
+      "name": "Pre-Visit Clinical Brief",
+      "desc": "Generates a concise pre-visit summary for the clinician — active problems, last visit note, pending results, and open orders.",
+      "type": "Clinical AI",
+      "tone": "green",
+      "icon": "pc-feat-100"
+     },
+     {
+      "name": "Medication Scan & Reconciliation",
+      "desc": "Captures medications from encounter audio and reconciles against the existing medication list — flagging discrepancies for review.",
+      "type": "Clinical AI",
+      "tone": "green",
+      "icon": "pc-feat-101"
+     },
+     {
+      "name": "E&M Level Suggestion",
+      "desc": "Suggests evaluation and management level based on MDM complexity or time — with CPT rationale and documentation checklist.",
+      "type": "Clinical AI",
+      "tone": "green",
+      "icon": "pc-feat-102"
+     },
+     {
+      "name": "ICD-10 Coding Suggestions",
+      "desc": "Extracts primary and secondary diagnosis codes from the SOAP note with confidence scores and payer-specific coding guidance.",
+      "type": "Clinical AI",
+      "tone": "green",
+      "icon": "pc-feat-103"
+     },
+     {
+      "name": "Document Comparison",
+      "desc": "Compares two versions of clinical documents — care plans, referral letters, or visit notes — highlighting changes for clinician review.",
+      "type": "Clinical AI",
+      "tone": "blue",
+      "icon": "pc-feat-104"
+     },
+     {
+      "name": "Ask Murphi — Clinical Q&A",
+      "desc": "Allows clinicians to ask natural-language questions against the patient record — 'What was last A1c?' or 'When was last mammogram?'",
+      "type": "Clinical AI",
+      "tone": "teal",
+      "icon": "pc-feat-105"
+     },
+     {
+      "name": "Screening & Preventive Care Gap Detection",
+      "desc": "Identifies overdue screenings and preventive care gaps from the patient record — mammography, colonoscopy, HbA1c, and more.",
+      "type": "Clinical AI",
+      "tone": "green",
+      "icon": "pc-feat-106"
+     },
+     {
+      "name": "Social Determinants of Health Capture",
+      "desc": "Extracts SDOH screening responses from encounter audio and structures Z-codes for payer and program reporting.",
+      "type": "Clinical AI",
+      "tone": "green",
+      "icon": "pc-feat-107"
+     },
+     {
+      "name": "Patient-Reported Outcome Capture",
+      "desc": "Delivers validated outcome questionnaires to patients via SMS before visits — responses pre-populate the EHR for the clinician.",
+      "type": "Clinical AI",
+      "tone": "blue",
+      "icon": "pc-feat-108"
+     }
+    ]
+   },
+   {
+    "key": "rcm",
+    "label": "RCM & Billing",
+    "icon": "pc-catico-109",
+    "tab": "rcm",
+    "features": [
+     {
+      "name": "E&M Coding Agent",
+      "desc": "Reviews encounter documentation and suggests E&M level, CPT codes, and modifiers with confidence scores — editable before claim submission.",
+      "type": "Agentic AI",
+      "tone": "indigo",
+      "icon": "pc-feat-110"
+     },
+     {
+      "name": "Eligibility & Benefits Verification",
+      "desc": "Verifies insurance eligibility and specialty benefits before appointments — surfacing co-pay, deductible, and authorization requirements.",
+      "type": "Agentic AI",
+      "tone": "indigo",
+      "icon": "pc-feat-111"
+     },
+     {
+      "name": "Prior Authorization Agent",
+      "desc": "Monitors the schedule, prepares clinical documentation, and submits prior auth requests for procedures, imaging, and specialty medications.",
+      "type": "Agentic AI",
+      "tone": "indigo",
+      "icon": "pc-feat-112"
+     },
+     {
+      "name": "Denial Management Agent",
+      "desc": "Reads 835 remittance files, classifies denial codes, drafts appeals with clinical evidence, and tracks resolution timelines.",
+      "type": "Agentic AI",
+      "tone": "indigo",
+      "icon": "pc-feat-113"
+     },
+     {
+      "name": "Charge Readiness Check",
+      "desc": "Validates that all required documentation elements are present and sufficient before a claim is submitted — reducing first-pass denials.",
+      "type": "Agentic AI",
+      "tone": "indigo",
+      "icon": "pc-feat-114"
+     },
+     {
+      "name": "Remittance Reconciliation",
+      "desc": "Matches ERA payments against expected amounts and flags underpayments, adjustments, and contractual variances for review.",
+      "type": "Agentic AI",
+      "tone": "indigo",
+      "icon": "pc-feat-115"
+     },
+     {
+      "name": "CMN & DME Documentation",
+      "desc": "Auto-generates Certificate of Medical Necessity forms from clinical notes and orders — CPAP, oxygen, wheelchair, prosthetics.",
+      "type": "Workflow Automation",
+      "tone": "indigo",
+      "icon": "pc-feat-116"
+     },
+     {
+      "name": "Credentialing Intelligence",
+      "desc": "Tracks provider license status, payer enrollment, OIG/SAM exclusion checks, and re-credentialing timelines.",
+      "type": "Workflow Automation",
+      "tone": "indigo",
+      "icon": "pc-feat-117"
+     },
+     {
+      "name": "Medical Necessity Check",
+      "desc": "Reviews every encounter note against payer LCD criteria before billing — prompting clinicians to add documentation before submission.",
+      "type": "Compliance AI",
+      "tone": "amber",
+      "icon": "pc-feat-118"
+     }
+    ]
+   },
+   {
+    "key": "patient",
+    "label": "Patient Experience",
+    "icon": "pc-catico-119",
+    "tab": "patient",
+    "features": [
+     {
+      "name": "AI Patient Financial Module",
+      "desc": "Collects co-pays, deductibles, and outstanding balances via HIPAA-compliant SMS text-to-pay. Patients pay in under 60 seconds.",
+      "type": "Payments",
+      "tone": "green",
+      "icon": "pc-feat-120"
+     },
+     {
+      "name": "Automated Payment Reminders",
+      "desc": "Sends HIPAA-compliant SMS reminders at optimal engagement times — reducing manual billing follow-up calls significantly.",
+      "type": "Payments",
+      "tone": "green",
+      "icon": "pc-feat-121"
+     },
+     {
+      "name": "Intake Form Auto-Population",
+      "desc": "Pre-fills patient intake forms from referral documents, prior records, and verified insurance data — reducing lobby wait time.",
+      "type": "Workflow Automation",
+      "tone": "indigo",
+      "icon": "pc-feat-122"
+     },
+     {
+      "name": "HIPAA-Compliant Patient Messaging",
+      "desc": "Enables secure, PHI-safe messaging between care team and patients — reduces call volume and hold times across the practice.",
+      "type": "Workflow Automation",
+      "tone": "teal",
+      "icon": "pc-feat-123"
+     },
+     {
+      "name": "Payment Plan Management",
+      "desc": "Structures and tracks installment payment plans for high-balance patients — with automated SMS milestone reminders.",
+      "type": "Payments",
+      "tone": "green",
+      "icon": "pc-feat-124"
+     },
+     {
+      "name": "Eligibility Pre-Visit Notification",
+      "desc": "Sends patients an automated pre-visit SMS with their estimated co-pay and insurance status — reducing front desk friction.",
+      "type": "Workflow Automation",
+      "tone": "indigo",
+      "icon": "pc-feat-125"
+     },
+     {
+      "name": "Post-Visit Follow-Up Messaging",
+      "desc": "Sends HIPAA-safe post-visit follow-up messages — medication reminders, follow-up appointment prompts, and satisfaction surveys.",
+      "type": "Workflow Automation",
+      "tone": "indigo",
+      "icon": "pc-feat-126"
+     }
+    ]
+   },
+   {
+    "key": "compliance",
+    "label": "Compliance & CDI",
+    "icon": "pc-catico-127",
+    "tab": "compliance",
+    "features": [
+     {
+      "name": "Clinical Documentation Improvement (CDI)",
+      "desc": "Reviews encounter notes for specificity, E&M completeness, and coding defensibility — prompting clinicians to add supporting detail.",
+      "type": "Compliance AI",
+      "tone": "amber",
+      "icon": "pc-feat-128"
+     },
+     {
+      "name": "AI Audit Trail & Reporting",
+      "desc": "Logs every AI action, human review decision, edit, and approval with timestamp and user — exportable for payer and CMS audits.",
+      "type": "Compliance AI",
+      "tone": "amber",
+      "icon": "pc-feat-129"
+     },
+     {
+      "name": "Note Quality Checker",
+      "desc": "Reviews completed encounter notes for clinical specificity, medical necessity language, and audit-readiness before finalization.",
+      "type": "Compliance AI",
+      "tone": "amber",
+      "icon": "pc-feat-130"
+     },
+     {
+      "name": "Informed Consent Documentation Check",
+      "desc": "Verifies that procedure informed consent documentation is present, signed, and filed before scheduling or performing the procedure.",
+      "type": "Compliance AI",
+      "tone": "amber",
+      "icon": "pc-feat-131"
+     },
+     {
+      "name": "HEDIS & Quality Measure Documentation",
+      "desc": "Identifies HEDIS measure opportunities and ensures encounter documentation supports quality measure attribution and reporting.",
+      "type": "Clinical AI",
+      "tone": "green",
+      "icon": "pc-feat-132"
+     },
+     {
+      "name": "340B Program Compliance Check",
+      "desc": "Verifies 340B patient eligibility and documents qualifying visits for in-scope drug dispensing program compliance.",
+      "type": "Compliance AI",
+      "tone": "amber",
+      "icon": "pc-feat-133"
+     },
+     {
+      "name": "Human Review & Approval Workflow",
+      "desc": "Every AI-generated output passes through clinician review before EHR write-back — with full edit capability and approval log.",
+      "type": "Compliance AI",
+      "tone": "teal",
+      "icon": "pc-feat-134"
+     },
+     {
+      "name": "MIPS / MACRA Documentation Support",
+      "desc": "Structures documentation to support MIPS performance category reporting — quality, PI, improvement activities, and cost.",
+      "type": "Compliance AI",
+      "tone": "amber",
+      "icon": "pc-feat-135"
+     }
+    ]
+   }
+  ]
+ },
+ "ambient": {
+  "eye": "Ambient AI",
+  "h2": "Specialty SOAP Notes from Voice — Before the Patient Leaves",
+  "sub": "Murphi.ai listens during the clinical encounter and generates structured SOAP notes with specialty-specific fields — cardiology, sleep, allergy, pain, oncology, and more. Medication scan auto-populates from the session. Syncs to EHR automatically after clinician approval.",
+  "chips": [
+   "SOAP Notes",
+   "Specialty Templates",
+   "Medication Scan",
+   "E&M Level Suggestion",
+   "ICD-10 Coding",
+   "Referral Notes",
+   "Follow-Up Plans",
+   "55+ Languages"
+  ],
+  "stats": [
+   {
+    "value": "70%",
+    "label": "Charting time saved"
+   },
+   {
+    "value": "4–6 hrs",
+    "label": "Returned to clinicians daily"
+   },
+   {
+    "value": "55+",
+    "label": "Languages supported"
+   }
+  ],
+  "demo": {
+   "dots": [
+    "#EF4444",
+    "#F59E0B",
+    "#22C55E"
+   ],
+   "info": "Cardiology · Follow-Up Visit · 20 min",
+   "recording": "Recording",
+   "noteLabel": "AI-Generated SOAP Note — Cardiology",
+   "note": [
+    {
+     "text": "Subjective",
+     "strong": true
+    },
+    {
+     "text": "Patient reports improved exercise tolerance since last visit. Denies chest pain, palpitations, or syncope. Reports mild dyspnea on exertion with two flights of stairs. "
+    },
+    {
+     "text": "Objective",
+     "strong": true
+    },
+    {
+     "text": "BP 132/78, HR 68 bpm regular. RRR, no murmurs. Lungs CTA bilaterally. No peripheral edema. EKG: NSR, no acute changes. "
+    },
+    {
+     "text": "Assessment",
+     "strong": true
+    },
+    {
+     "text": "Stable hypertensive heart disease. HTN well-controlled on current regimen. Dyspnea on exertion — functional, likely deconditioning. "
+    },
+    {
+     "text": "Plan",
+     "strong": true
+    },
+    {
+     "text": "Continue lisinopril 10mg QD. Echocardiogram ordered. Cardiac rehab referral placed. Follow up in 8 weeks or sooner PRN. "
+    }
+   ],
+   "rx": [
+    {
+     "text": "Medication Scan — Auto-Populated",
+     "strong": true
+    },
+    {
+     "text": "Lisinopril 10mg QD · Atorvastatin 40mg QHS · Aspirin 81mg QD · Metoprolol succinate 25mg QD"
+    }
+   ],
+   "actions": [
+    {
+     "variant": "primary",
+     "icon": "pc-act-136",
+     "label": "Approve & Sync to EHR"
+    },
+    {
+     "variant": "secondary",
+     "icon": null,
+     "label": "Edit"
+    },
+    {
+     "variant": "secondary",
+     "icon": null,
+     "label": "Flag"
+    }
+   ]
+  }
+ },
+ "rcm": {
+  "eye": "Agentic E&M Billing",
+  "h2": "Revenue Cycle Automation for Primary & Specialty",
+  "sub": "Embed AI agents across the E&M billing cycle — eligibility through denial resolution — into your existing billing workflows.",
+  "cards": [
+   {
+    "icon": "pc-rcm-137",
+    "badge": "Agentic AI",
+    "title": "Eligibility & Benefits Verification",
+    "desc": "Verifies insurance eligibility and specialty-specific benefits before appointments — surfacing co-pay, deductible, and authorization requirements automatically.",
+    "steps": [
+     "Pulls payer eligibility from schedule 24–48 hrs ahead",
+     "Surfaces co-pay, deductible, and auth requirements",
+     "Flags missing or lapsed coverage before the visit",
+     "Posts results to EHR patient record automatically"
+    ]
+   },
+   {
+    "icon": "pc-rcm-138",
+    "badge": "Agentic AI",
+    "title": "E&M Level & CPT Coding Agent",
+    "desc": "Reviews encounter documentation and suggests E&M level, CPT codes, ICD-10 diagnoses, and modifiers with confidence scores — editable before claim submission.",
+    "steps": [
+     "Reads approved SOAP notes from EHR",
+     "Suggests E&M level (99213, 99214, etc.) with rationale",
+     "Applies specialty-specific CPT and modifier rules",
+     "Routes underdocumented encounters back to clinician"
+    ]
+   },
+   {
+    "icon": "pc-rcm-139",
+    "badge": "Agentic AI",
+    "title": "Denial Management Agent",
+    "desc": "Reads remittance files, classifies denial reason codes, drafts appeal letters, and tracks resolution timelines — fully autonomous for standard denial types.",
+    "steps": [
+     "Reads 835 ERA files and classifies denials",
+     "Maps denial to documentation or coding gap",
+     "Generates appeal letter with clinical evidence",
+     "Escalates complex cases with pre-built summary brief"
+    ]
+   },
+   {
+    "icon": "pc-rcm-140",
+    "badge": "Clinical AI",
+    "title": "Medical Necessity & Charge Readiness",
+    "desc": "Reviews every encounter note for E&M medical necessity documentation standards and charge readiness before claim submission — catching deficiencies before they become denials.",
+    "steps": [
+     "Checks note against payer LCD and E&M guidelines",
+     "Identifies missing HPI, ROS, or exam elements",
+     "Flags encounters below medical necessity threshold",
+     "Prompts clinician to add documentation before billing"
+    ]
+   }
+  ]
+ },
+ "pay": {
+  "eye": "AI Patient Financials",
+  "h2": "Embed Text-to-Pay Collections Into Your EHR Platform",
+  "sub": "Primary and specialty practices carry significant patient-responsible balances from co-pays, deductibles, and outstanding visits. Murphi.ai reads AR from your EHR, sends a secure SMS payment link, and posts the payment back automatically. Patients pay in under 60 seconds. Provider paid within 48 hours.",
+  "outcomes": [
+   {
+    "value": "48 hrs",
+    "icon": null,
+    "label": "Average time to payment — down from 100+ days AR"
+   },
+   {
+    "value": "60%",
+    "icon": "pc-oc-141",
+    "label": "Patient response rate vs. phone and paper billing"
+   },
+   {
+    "value": "80%",
+    "icon": null,
+    "label": "Reduction in billing call volume"
+   },
+   {
+    "value": "0",
+    "icon": null,
+    "label": "New apps required — patients pay via SMS"
+   }
+  ],
+  "tags": [
+   "No patient app download",
+   "HIPAA-compliant SMS",
+   "Reads AR from EHR",
+   "Auto posts payment back",
+   "55+ languages",
+   "Everyware gateway"
+  ],
+  "phone": {
+   "title": "Murphi.ai · Secure Pay",
+   "sms": [
+    {
+     "text": "Hi James — your visit on July 18 at Cardiology Associates has a patient responsibility of "
+    },
+    {
+     "text": "$85.00",
+     "strong": true
+    },
+    {
+     "text": ". Tap below to pay securely. Reply HELP for questions."
+    }
+   ],
+   "amountLabel": "Amount Due",
+   "amount": "$85.00",
+   "amountSub": "Co-pay · Cardiology Visit 07/18/2026",
+   "button": "Pay $85.00 Securely",
+   "buttonIcon": "pc-paybtn-142",
+   "note": "256-bit encrypted · HIPAA compliant"
+  }
+ },
+ "testimonial": {
+  "eye": "Customer Voice",
+  "h2": "What Primary & Specialty Teams Are Saying",
+  "sub": "",
+  "stars": 5,
+  "starIcon": "pc-star-143",
+  "quote": "\"Our patients love to use the app and communicate easily over texting vs. calling and waiting on hold. We have greatly increased our response time and decreased our call volume and hold times.\"",
+  "initials": "KA",
+  "name": "Kristen Anderson",
+  "role": "Administration, AAIC",
+  "tag": "Primary & Specialty Care · Patient Financials"
+ },
+ "platform": {
+  "eye": "Platform Infrastructure",
+  "h2": "The AI Infrastructure Behind Every Feature",
+  "sub": "Your team sees a clean API integration. Behind it, Murphi.ai runs orchestration, governance, security, and observability automatically.",
+  "layers": [
+   {
+    "tone": "blue",
+    "eye": "Experience Layer",
+    "name": "What Clinicians & Patients See",
+    "chips": [
+     "Embedded EHR Components",
+     "White-Labeled Workflows",
+     "Mobile & Web Apps",
+     "Clinician Review Interface",
+     "Patient SMS & Portal"
+    ]
+   },
+   {
+    "tone": "indigo",
+    "eye": "AI Orchestration Layer",
+    "name": "Intelligence & Agentic Engine",
+    "chips": [
+     "Multi-Model Orchestration",
+     "Agentic AI Workflows",
+     "Prompt & Version Management",
+     "RAG & Clinical Context",
+     "Confidence Scoring",
+     "Token Optimization"
+    ]
+   },
+   {
+    "tone": "teal",
+    "eye": "Integration Layer",
+    "name": "EHR Data In · Output Out",
+    "chips": [
+     "REST APIs",
+     "FHIR R4",
+     "HL7 v2",
+     "SSO / iFrame",
+     "PDF Processing",
+     "835 Remittance",
+     "RPA When Required"
+    ]
+   },
+   {
+    "tone": "gray",
+    "eye": "Governance & Operations",
+    "name": "Security, Compliance & Support",
+    "chips": [
+     "HIPAA-Aligned Controls",
+     "Audit Logs",
+     "Role-Based Access",
+     "Model Monitoring",
+     "Human-in-the-Loop",
+     "24/7 Support",
+     "BAA Signed"
+    ]
+   }
+  ],
+  "note": [
+   {
+    "text": "Zero token cost to your platform.",
+    "strong": true
+   },
+   {
+    "text": " Murphi.ai absorbs all AI infrastructure costs. Your platform pays a flat fee — never a per-token or per-model charge. Your data and IP remain entirely yours."
+   }
+  ]
+ },
+ "integration": {
+  "eye": "Integration Options",
+  "h2": "Three Ways to Embed Murphi.ai",
+  "sub": "Choose the approach that matches your EHR architecture — or combine all three.",
+  "cards": [
+   {
+    "icon": "pc-int-144",
+    "title": "Embedded Components",
+    "desc": "Drop AI capabilities directly into existing clinical screens — note generation, charge readiness, and payment collection — with no context switch for clinicians."
+   },
+   {
+    "icon": "pc-int-145",
+    "title": "Encrypted API & SSO",
+    "desc": "Connect Murphi.ai to EHR data, documents, and billing via FHIR R4, HL7 v2, or REST API. HIPAA-grade encryption. Syncs automatically at field level."
+   },
+   {
+    "icon": "pc-int-146",
+    "title": "White-Label Platform",
+    "desc": "Launch the full Murphi.ai AI platform under your brand. Your logo, your pricing, your customer relationships. Murphi never visible to end users."
+   }
+  ]
+ },
+ "roadmap": {
+  "eye": "Implementation Path",
+  "h2": "Live in 15 Days, Not Months",
+  "sub": "Start with one high-value workflow. The same integration layer scales to every module without a platform rebuild.",
+  "items": [
+   {
+    "n": "1",
+    "title": "Map & Discover",
+    "desc": "Identify highest-burden workflows — typically ambient SOAP documentation or patient balance collections."
+   },
+   {
+    "n": "2",
+    "title": "Pilot Integration",
+    "desc": "API or SSO integration live. First AI feature active within 15 days. Clinician feedback loop active."
+   },
+   {
+    "n": "3",
+    "title": "Validate & Launch",
+    "desc": "Compliance controls confirmed, human-review workflow hardened, full production rollout authorized."
+   },
+   {
+    "n": "4",
+    "title": "Expand Platform-Wide",
+    "desc": "Add agentic billing, CDI, and patient payments on the integration layer already in place."
+   }
+  ]
+ },
+ "security": {
+  "eye": "Security & Compliance",
+  "h2": "Built for Clinical-Grade Trust",
+  "sub": "Every Murphi.ai workflow includes HIPAA-aligned controls, audit trails, and human-in-the-loop approval at every step.",
+  "cards": [
+   {
+    "icon": "pc-sec-147",
+    "title": "HIPAA-Aligned",
+    "desc": "PHI handling and access controls built into every workflow layer"
+   },
+   {
+    "icon": "pc-sec-148",
+    "title": "SOC 2 Certified",
+    "desc": "Independent third-party security audit completed annually"
+   },
+   {
+    "icon": "pc-sec-149",
+    "title": "ISO 27001",
+    "desc": "International information security management standards"
+   },
+   {
+    "icon": "pc-sec-150",
+    "title": "BAA Signed",
+    "desc": "Business Associate Agreements with every partner platform"
+   },
+   {
+    "icon": "pc-sec-151",
+    "title": "Audit Trails",
+    "desc": "Every AI action and approval logged with full attribution"
+   },
+   {
+    "icon": "pc-sec-152",
+    "title": "Human-in-the-Loop",
+    "desc": "Clinician approval required before any EHR write-back"
+   },
+   {
+    "icon": "pc-sec-153",
+    "title": "Encryption",
+    "desc": "Data encrypted in transit and at rest across all layers"
+   },
+   {
+    "icon": "pc-sec-154",
+    "title": "AWS & GCP Only",
+    "desc": "HIPAA-eligible cloud — no other providers used"
+   }
+  ]
+ },
+ "drawer": {
+  "closeIcon": "pc-dclose-155",
+  "cta": {
+   "label": "Discuss This Integration",
+   "icon": "pc-dcta-156",
+   "href": "/contact-us/"
+  },
+  "stepsLabel": "Workflow Steps",
+  "steps": [
+   {
+    "tone": null,
+    "n": "1",
+    "strong": {
+     "default": "Input"
+    },
+    "text": {
+     "agentic": "EHR schedule, clinical notes, payer portal data, or 835 remittance files",
+     "payments": "Patient balance data from EHR or billing system",
+     "default": "Session voice, EHR encounter data, or clinical documents"
+    }
+   },
+   {
+    "tone": null,
+    "n": "2",
+    "strong": {
+     "default": "Murphi.ai Processing"
+    },
+    "text": {
+     "agentic": "AI agent executes autonomously — gathering data, formatting, and submitting to payer or billing system",
+     "payments": "HIPAA-compliant SMS generated with secure payment link via Everyware gateway",
+     "default": "AI extracts, structures, and validates relevant clinical information with specialty context"
+    }
+   },
+   {
+    "tone": null,
+    "n": "3",
+    "strong": {
+     "agentic": "Agent Action",
+     "default": "Validation & Quality Check"
+    },
+    "text": {
+     "agentic": "Agent completes action and logs result with full audit trail",
+     "default": "Missing elements, coding gaps, or documentation issues flagged for clinician"
+    }
+   },
+   {
+    "tone": "t",
+    "n": "4",
+    "strong": {
+     "default": "Human Review"
+    },
+    "text": {
+     "payments": "Billing staff reviews payment status and exception queue",
+     "default": "Clinician or coder reviews AI output, edits if needed, and approves"
+    }
+   },
+   {
+    "tone": "g",
+    "n": "5",
+    "strong": {
+     "default": "EHR Output"
+    },
+    "text": {
+     "agentic": "Result posted to EHR, payer portal, or billing system with full audit log",
+     "payments": "Payment collected, EHR balance updated, receipt sent to patient",
+     "default": "Approved output written to EHR at field level with complete audit trail"
+    }
+   }
+  ],
+  "sections": [
+   {
+    "label": "EHR Integration Options",
+    "chips": [
+     "Embedded Component",
+     "REST API",
+     "SSO / iFrame",
+     "FHIR R4",
+     "HL7 v2",
+     "White-Label"
+    ]
+   },
+   {
+    "label": "Audit & Compliance Controls",
+    "chips": [
+     "AI Action Log",
+     "Human Approval Record",
+     "Edit History",
+     "Confidence Score Stored",
+     "HIPAA-Aligned",
+     "BAA Covered"
+    ]
+   }
+  ],
+  "costLabel": "Zero Token Cost to Your Platform",
+  "costBody": "Murphi.ai absorbs all AI infrastructure costs. Your platform pays a flat fee — never a per-token or per-model charge. Your data and IP remain entirely yours."
+ }
+}

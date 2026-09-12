@@ -27,7 +27,7 @@ export const metadata: Metadata = pageMetadata("/agencies/", {
 });
 
 const MODULES = [
-  { name: "Clinical Documentation" },
+  { name: "Ambient AI & Dictation" },
   { name: "Patient Engagement" },
   { name: "Revenue Assurance" },
   { name: "Patient Payments" },
@@ -39,10 +39,10 @@ const ROLES: Role[] = [
     label: "Owner / Administrator",
     what: "The census check, the payroll approval and the denial call don't go away - but the OASIS review she was supposed to get to by 9 already happened overnight.",
     modules: [
-      "Ambient AI",
+      "Ambient AI & Dictation",
       "Revenue Assurance",
-      "Patient Payments",
       "Patient Engagement",
+      "Patient Payments",
     ],
   },
   {
@@ -97,14 +97,14 @@ const RELATED = [
     body: "Catch it on day one - chart review before submission, fetched directly from your EHR.",
   },
   {
-    title: "Patient Payments",
-    href: "/patient-payments/",
-    body: "Text. Tap. Paid. - collections with automatic reconciliation.",
-  },
-  {
     title: "Patient Engagement",
     href: "/patient-engagement/",
     body: "Meet patients where they are - secure SMS outreach without an app install.",
+  },
+  {
+    title: "Patient Payments",
+    href: "/patient-payments/",
+    body: "Text. Tap. Paid. - collections with automatic reconciliation.",
   },
 ];
 
@@ -121,7 +121,7 @@ export default function AgenciesPage() {
           current="Home Health & Hospice Agencies"
           parent={{ label: "Who We Serve", href: "/#serve" }}
           eyebrow="Who We Serve · Agencies"
-          title="Run the Whole Agency Without Replacing What Already Works."
+          title="AI enable agency workflows"
           storyTag="Monday, 7:00 AM"
           story="Before the first visit of the day, the owner has already checked the census, approved payroll, and fielded a call about a claim that came back denied. By 9, she's supposed to be reviewing OASIS accuracy too."
           lede="Murphi doesn't ask her to replace the EHR she already runs the agency on. It sits alongside it - one module, or six - each one taking a piece of that morning off her plate."
@@ -148,7 +148,7 @@ export default function AgenciesPage() {
             <IpHead>
               <IpEyebrow>Start Small</IpEyebrow>
               <h2 className="ip-h2 ip-serif" style={{ marginTop: 16, marginBottom: 18 }}>
-                Start with one module. Add more when you{"'"}re ready.
+                Leverage all four Modules with EHR integration
               </h2>
             </IpHead>
             <StartSmall groups={SETTINGS} />

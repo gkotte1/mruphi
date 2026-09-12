@@ -71,9 +71,9 @@ const WAYS = [
 
 const TOOLS = [
   {
-    title: "Revenue Assurance - 28 Reports",
+    title: "Revenue Assurance",
     badge: { tone: "live" as const, text: "Live" },
-    body: "28 AI compliance reports aligned to CHAP, ACHC and Joint Commission standards - 15 for Home Health, 13 for Hospice. 90–95% AI accuracy, with a structured human review workflow before anything is finalized.",
+    body: "35 AI compliance reports aligned to CHAP, ACHC and Joint Commission standards - 20 for Home Health, 15 for Hospice. 90–95% AI accuracy, with a structured human review workflow before anything is finalized.",
   },
   {
     title: "Gap Analysis",

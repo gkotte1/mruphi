@@ -19,6 +19,7 @@ import { cn } from "@/lib/cn";
 
 export const MODULE_ICONS: Record<string, IconName> = {
   "Clinical Documentation": "doc",
+  "Ambient AI & Dictation": "doc",
   "Revenue Assurance": "chartup",
   "Patient Engagement": "community",
   "Patient Payments": "card",

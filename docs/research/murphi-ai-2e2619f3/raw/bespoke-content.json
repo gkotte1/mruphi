@@ -1,0 +1,753 @@
+{
+ "integration": {
+  "slug": "integration",
+  "title": "EHR Integration For Healthcare AI — 5 Ways To Connect",
+  "description": "Agentic AI, RPA, FHIR R4, HL7 v2, and Direct API connect Murphi.ai to any EHR with no replacement required. Works with Epic, Cerner, WellSky, and more.",
+  "hero": {
+   "tag": "Integrations",
+   "h1Lines": [
+    "Connect Murphi.ai to Any EHR or Healthcare Platform"
+   ],
+   "sub": "Five integration methods — Agentic AI, RPA, FHIR R4, HL7 v2, and Direct API. No EHR replacement required. Live in days.",
+   "buttons": [
+    {
+     "href": "/contact-us/",
+     "variant": "solid",
+     "label": "Request Demo"
+    },
+    {
+     "href": "/",
+     "variant": "ghost",
+     "label": "Back to Home"
+    }
+   ]
+  },
+  "sections": [
+   {
+    "tag": "Integration Methods",
+    "heading": "Five Ways to Connect Murphi.ai to Any EHR",
+    "alt": true,
+    "lead": "No single integration method works for every EHR. Murphi.ai supports five distinct integration pathways — so the right method is always available regardless of your EHR's technical architecture.",
+    "methods": [
+     {
+      "padding": 24,
+      "title": "Agentic AI",
+      "description": "AI agents navigate EHR interfaces autonomously — reading data, entering notes, and triggering workflows without API access. Works with any EHR that has a web or desktop interface. No vendor cooperation required.",
+      "descSize": 13
+     },
+     {
+      "padding": 24,
+      "title": "RPA",
+      "description": "Robotic Process Automation automates repetitive EHR tasks — data entry, form completion, document upload, and report generation. Ideal for EHRs without modern APIs.",
+      "descSize": 13
+     },
+     {
+      "padding": 24,
+      "title": "FHIR R4",
+      "description": "Standards-based FHIR R4 integration for EHRs with modern APIs. Bidirectional data exchange — read patient data, write clinical notes, and trigger workflows via FHIR resources.",
+      "descSize": 13
+     },
+     {
+      "padding": 24,
+      "title": "HL7 v2",
+      "description": "Legacy HL7 v2 message integration for EHRs using ADT, ORM, ORU, and MDM message types. Connect EHRs using HL7 v2 without replacing existing infrastructure.",
+      "descSize": 13
+     },
+     {
+      "padding": 24,
+      "title": "Direct REST API",
+      "description": "Direct API integration for EHR platforms and health IT vendors. REST endpoints for all Murphi.ai modules — read, write, and trigger workflows programmatically.",
+      "descSize": 13
+     },
+     {
+      "padding": 24,
+      "title": "Adapter Platforms",
+      "description": "Integration via Carefluence FHIR API adapter (current integration partner) and Rhapsody integration engine (available). Connect to any EHR via third-party adapters when direct integration is not available.",
+      "descSize": 13
+     }
+    ],
+    "methodColumns": "grid"
+   },
+   {
+    "tag": "EHR Capability",
+    "heading": "Can Connect with most EHRs",
+    "alt": false,
+    "tagGroups": [
+     {
+      "title": "Post-Acute EHRs",
+      "subtitle": "Home health, hospice, palliative care, and SNF platforms",
+      "tags": [
+       "WellSky",
+       "Axxess",
+       "Kantime",
+       "MatrixCare",
+       "HCHB",
+       "Netsmart",
+       "Careficient",
+       "+ Any FHIR/HL7"
+      ]
+     },
+     {
+      "title": "Health System & Specialty EHRs",
+      "subtitle": "Hospitals, health systems, primary care, and specialty clinics",
+      "tags": [
+       "Epic",
+       "Cerner (Oracle Health)",
+       "Athena",
+       "ECW",
+       "Allscripts",
+       "NextGen",
+       "+ Any FHIR/HL7"
+      ]
+     }
+    ]
+   },
+   {
+    "tag": "Payment Integration",
+    "heading": "Everyware Payment Gateway",
+    "alt": true,
+    "methods": [
+     {
+      "padding": 28,
+      "title": "Everyware — Integrated Payment Gateway",
+      "description": "Murphi.ai AI Patient Financials uses the Everyware payment gateway — enabling ACH, credit card, and debit card collection via SMS text-to-pay. Provider funds settled within 48 hours. Payments post back to the EHR automatically. PCI-compliant, HIPAA-compatible processing built specifically for healthcare providers.",
+      "descSize": 14
+     }
+    ],
+    "methodColumns": "two",
+    "kpis": [
+     {
+      "value": "48 hrs",
+      "label": "Funds in provider bank account"
+     },
+     {
+      "value": "PCI",
+      "label": "Compliant payment processing"
+     },
+     {
+      "value": "ACH",
+      "label": "Credit & Debit accepted"
+     },
+     {
+      "value": "Auto",
+      "label": "EHR post-back on every payment"
+     }
+    ]
+   },
+   {
+    "tag": "Security",
+    "heading": "Enterprise-Grade Security Across Every Integration",
+    "alt": false,
+    "cards": [
+     {
+      "title": "HIPAA Compliant",
+      "description": "All data encrypted in transit and at rest using AES-256. BAA in place for every customer. PHI never leaves your environment without explicit authorization."
+     },
+     {
+      "title": "SOC 2 Type II",
+      "description": "Independently audited security controls. Annual SOC 2 Type II certification. Available on request with NDA in place."
+     },
+     {
+      "title": "ISO 27001",
+      "description": "ISO 27001 certified information security management. Enterprise-grade security framework applied to every integration and data flow."
+     }
+    ]
+   }
+  ]
+ },
+ "white-labeling": {
+  "slug": "white-labeling",
+  "title": "White-Label AI Healthcare Platform | Murphi.ai",
+  "description": "Launch your own branded AI healthcare solution with Murphi.ai's white-label platform. Full customization, HIPAA compliance, and seamless EHR integration included.",
+  "hero": {
+   "tag": "Solutions — White Label",
+   "h1Lines": [
+    "Your Platform. Your Brand.",
+    "Murphi.ai Powers It Invisibly."
+   ],
+   "sub": "Fully white-labeled AI platform — your logo, your pricing, your customer relationships. Zero token cost. Your data and IP. Live in days via API, SSO, or iFrame.",
+   "buttons": [
+    {
+     "href": "/contact-us/",
+     "variant": "solid",
+     "label": "Request Demo"
+    },
+    {
+     "href": "/",
+     "variant": "ghost",
+     "label": "Back to Home"
+    }
+   ],
+   "statusCard": {
+    "title": "Platform Model",
+    "badge": "Available Now",
+    "facts": [
+     "Your brand — fully white-labeled",
+     "Zero token cost to you",
+     "Your data & IP — always",
+     "Encrypted API · SSO · iFrame",
+     "AI roadmap co-development",
+     "Live in days — not months"
+    ]
+   }
+  },
+  "sections": [
+   {
+    "grey": true,
+    "tag": "What White Label Means",
+    "heading": "Your Platform. Your Brand. Murphi.ai Powers It Invisibly.",
+    "lead": "White labeling means your customers experience your product — your logo, your UI, your pricing. Murphi.ai is the AI infrastructure layer underneath. Invisible. Scalable. Powerful.",
+    "cards": [
+     {
+      "attribution": null,
+      "padding": 24,
+      "centered": false,
+      "hasIcon": false,
+      "status": null,
+      "badgeLabel": null,
+      "title": "Your Brand Throughout",
+      "description": "Logo, color scheme, domain, email communications — all yours. Murphi.ai never appears to your customers. They interact with your product, enhanced by AI."
+     },
+     {
+      "attribution": null,
+      "padding": 24,
+      "centered": false,
+      "hasIcon": false,
+      "status": null,
+      "badgeLabel": null,
+      "title": "Your Pricing",
+      "description": "You set the price. You control the margin. Murphi.ai charges you a platform fee — you decide what to charge your customers. Full pricing flexibility."
+     },
+     {
+      "attribution": null,
+      "padding": 24,
+      "centered": false,
+      "hasIcon": false,
+      "status": null,
+      "badgeLabel": null,
+      "title": "Your Customer Relationships",
+      "description": "You own the customer relationship entirely. Murphi.ai never contacts, markets to, or sells to your customers directly."
+     },
+     {
+      "attribution": null,
+      "padding": 24,
+      "centered": false,
+      "hasIcon": false,
+      "status": null,
+      "badgeLabel": null,
+      "title": "Your Data & IP",
+      "description": "All input data, output data, and rendered content belongs to you and your customers. Murphi.ai holds zero data rights — contractually guaranteed."
+     },
+     {
+      "attribution": null,
+      "padding": 24,
+      "centered": false,
+      "hasIcon": false,
+      "status": null,
+      "badgeLabel": null,
+      "title": "Zero Token Cost",
+      "description": "Murphi.ai absorbs all AI infrastructure and token costs. You pay a platform fee — not per-token charges that erode margins as usage grows."
+     },
+     {
+      "attribution": null,
+      "padding": 24,
+      "centered": false,
+      "hasIcon": false,
+      "status": null,
+      "badgeLabel": null,
+      "title": "AI Roadmap Co-Development",
+      "description": "We map your AI journey alongside your product roadmap. Co-develop features specific to your use case. Access Murphi.ai's full module library as your needs evolve."
+     }
+    ],
+    "columns": "feature"
+   },
+   {
+    "grey": false,
+    "tag": "Integration Options",
+    "heading": "Three Ways to Embed Murphi.ai",
+    "cards": [
+     {
+      "attribution": null,
+      "padding": 28,
+      "centered": true,
+      "hasIcon": true,
+      "status": null,
+      "badgeLabel": null,
+      "title": "REST API",
+      "description": "Programmatic integration. Your platform calls Murphi.ai APIs directly. Full control over data flow, rendering, and user experience. Most flexible option."
+     },
+     {
+      "attribution": null,
+      "padding": 28,
+      "centered": true,
+      "hasIcon": true,
+      "status": null,
+      "badgeLabel": null,
+      "title": "SSO",
+      "description": "Single Sign-On integration. Your users authenticate once in your platform — Murphi.ai features accessible without separate login. Seamless user experience."
+     },
+     {
+      "attribution": null,
+      "padding": 28,
+      "centered": true,
+      "hasIcon": true,
+      "status": null,
+      "badgeLabel": null,
+      "title": "iFrame",
+      "description": "Embed Murphi.ai modules as iFrame components within your existing UI. Fastest integration path — live in days. Full white-label appearance maintained."
+     }
+    ],
+    "columns": "three"
+   },
+   {
+    "grey": true,
+    "tag": "Live Partners",
+    "heading": "Who Is Already White-Labeling Murphi.ai",
+    "cards": [
+     {
+      "attribution": "— Dave Crow, President",
+      "padding": 24,
+      "centered": false,
+      "hasIcon": false,
+      "status": "live",
+      "badgeLabel": "Live",
+      "title": "Healthcare Synergy",
+      "description": "AI-enabled our Healthcare Synergy EHR by transforming clinician care, compliance and workflows. A true extension of our engineering team."
+     },
+     {
+      "attribution": "— Vicki Goodman",
+      "padding": 24,
+      "centered": false,
+      "hasIcon": false,
+      "status": "live",
+      "badgeLabel": "Live",
+      "title": "Curantis Solutions",
+      "description": "Hospice and palliative care platform — Murphi.ai AI documentation features white-labeled and live for Curantis customers across the US."
+     },
+     {
+      "attribution": "— Kylie Roy",
+      "padding": 24,
+      "centered": false,
+      "hasIcon": false,
+      "status": "live",
+      "badgeLabel": "Live",
+      "title": "CORE Percensys",
+      "description": "Mental health and behavioral health platforms with Murphi.ai AI features embedded, white-labeled, and live for their customer base."
+     }
+    ],
+    "columns": "three"
+   },
+   {
+    "grey": false,
+    "tag": "Related",
+    "heading": "Explore the Full Platform",
+    "related": [
+     {
+      "href": "/ehr-emr-companies/",
+      "title": "EHR Companies",
+      "description": "Add AI to your EHR platform via encrypted APIs"
+     },
+     {
+      "href": "/rcm-companies/",
+      "title": "RCM Companies",
+      "description": "AI revenue cycle workflows for RCM platforms"
+     },
+     {
+      "href": "/integration/",
+      "title": "EHR Integration Layer",
+      "description": "Five ways to connect to any EHR"
+     }
+    ]
+   }
+  ]
+ },
+ "security": {
+  "slug": "security",
+  "title": "HIPAA-Compliant AI Security & Compliance | Murphi.ai",
+  "description": "Murphi.ai maintains enterprise-grade security with HIPAA compliance, SOC 2 certification, end-to-end encryption, and role-based access control to protect patient data.",
+  "hero": {
+   "tag": "Security & Compliance",
+   "h1Lines": [
+    "Enterprise-Grade Security",
+    "Built for Healthcare AI"
+   ],
+   "sub": "Murphi.ai protects patient data with enterprise-grade encryption, rigorous compliance standards, and continuous monitoring. We treat your data security as our primary feature.",
+   "certs": [
+    {
+     "icon": "https://murphi.ai/wp-content/uploads/2026/05/Frame-2147203098-2.png",
+     "title": "HIPAA",
+     "subtitle": "Compliant"
+    },
+    {
+     "icon": "https://murphi.ai/wp-content/uploads/2026/05/Frame-2147203096-1.png",
+     "title": "SOC 2 Type II",
+     "subtitle": "Certified"
+    },
+    {
+     "icon": "https://murphi.ai/wp-content/uploads/2026/05/Frame-2147203097-1.png",
+     "title": "ISO 27001",
+     "subtitle": "Certified"
+    },
+    {
+     "icon": "https://murphi.ai/wp-content/uploads/2026/05/Frame-2147203100-1.png",
+     "title": "BAA",
+     "subtitle": "Available"
+    }
+   ]
+  },
+  "sections": [
+   {
+    "alt": false,
+    "tag": "Certifications",
+    "heading": "Three Pillars of Compliance",
+    "cards": [
+     {
+      "kind": "cert-card",
+      "icon": "https://murphi.ai/wp-content/uploads/2026/05/Frame-2147203096-1.png",
+      "title": "SOC 2 Type II",
+      "description": "Murphi.ai maintains SOC 2 Type II compliance, demonstrating that our security, availability, and confidentiality controls are not only properly designed but consistently operating effectively over time."
+     },
+     {
+      "kind": "cert-card",
+      "icon": "https://murphi.ai/wp-content/uploads/2026/05/Frame-2147203098-2.png",
+      "title": "HIPAA Compliant",
+      "description": "We implement administrative, physical, and technical safeguards to ensure the confidentiality, integrity, and availability of Protected Health Information (PHI) across every deployment."
+     },
+     {
+      "kind": "cert-card",
+      "icon": "https://murphi.ai/wp-content/uploads/2026/05/Frame-2147203097-1.png",
+      "title": "ISO 27001",
+      "description": "Confirming that we operate a formally governed, risk-driven Information Security Management System (ISMS) that protects information assets across the enterprise."
+     }
+    ],
+    "columns": "three"
+   },
+   {
+    "alt": true,
+    "tag": "Zero Trust Architecture",
+    "heading": "We Never Assume Trust",
+    "lead": "Every access request is verified, authorized, and encrypted — regardless of network location or user identity.",
+    "cards": [
+     {
+      "kind": "sec-card",
+      "icon": null,
+      "title": "Verify Explicitly",
+      "description": "Every request is authenticated, authorized, and encrypted, regardless of network location. No implicit trust — ever."
+     },
+     {
+      "kind": "sec-card",
+      "icon": null,
+      "title": "Least-Privilege Access",
+      "description": "We enforce minimum necessary permissions (JIT/JEA) to strictly limit data exposure. Users access only what their role requires."
+     },
+     {
+      "kind": "sec-card",
+      "icon": null,
+      "title": "Continuous Validation",
+      "description": "Trust is constantly re-evaluated based on real-time identity and device health signals. No standing access — every session verified."
+     }
+    ],
+    "columns": "three"
+   },
+   {
+    "alt": false,
+    "tag": "Defence-in-Depth",
+    "heading": "Layered Protection at Every Level",
+    "lead": "Multiple layers of security controls — so a failure at one layer never results in a breach.",
+    "cards": [
+     {
+      "kind": "sec-card",
+      "icon": null,
+      "title": "Network Security",
+      "description": "Firewalls, intrusion detection, and prevention systems continuously monitor and defend against threats across every network boundary."
+     },
+     {
+      "kind": "sec-card",
+      "icon": null,
+      "title": "Data & Application Security",
+      "description": "Secure coding standards, AES-256 encryption, and strict access controls protect applications and data at every layer of the stack."
+     },
+     {
+      "kind": "sec-card",
+      "icon": null,
+      "title": "AI-Powered Security",
+      "description": "Adversarial defenses and input sanitization block prompt injections. No sensitive information is memorized by AI models."
+     }
+    ],
+    "columns": "three"
+   },
+   {
+    "alt": true,
+    "tag": "Continuous Monitoring",
+    "heading": "24/7 Security Surveillance",
+    "lead": "Around-the-clock security monitoring powered by advanced AI and expert security analysts.",
+    "cards": [
+     {
+      "kind": "sec-card",
+      "icon": null,
+      "title": "AI Threat Detection",
+      "description": "Automated threat detection using advanced analytics — identifying anomalies and potential incidents before they escalate."
+     },
+     {
+      "kind": "sec-card",
+      "icon": null,
+      "title": "Security Operations",
+      "description": "Our dedicated Security Operations team responds to incidents with rapid resolution protocols and documented escalation procedures."
+     },
+     {
+      "kind": "sec-card",
+      "icon": null,
+      "title": "Cloud Management",
+      "description": "Cloud-native logs are continuously monitored and analyzed to detect suspicious activity across all Murphi.ai services and integrations."
+     }
+    ],
+    "columns": "three"
+   },
+   {
+    "alt": false,
+    "tag": "Technical Safeguards",
+    "heading": "Industry-Leading Controls at Every Layer",
+    "cards": [
+     {
+      "kind": "sec-card",
+      "icon": null,
+      "title": "Secure Cloud Hosting — AWS & GCP",
+      "description": "Hosted on Amazon Web Services and Google Cloud Platform — the most secure and compliant cloud infrastructure available. Geo-redundancy with regional failover ensures continuous service availability. Advanced DDoS protection blocks large-scale attacks."
+     },
+     {
+      "kind": "sec-card",
+      "icon": null,
+      "title": "Identity & Access Management",
+      "description": "Granular Role-Based Access Control (RBAC) limits users to role-relevant data only. Least privilege principles applied across every system. Strong multi-factor authentication and SSO support prevent unauthorized entry."
+     },
+     {
+      "kind": "sec-card",
+      "icon": null,
+      "title": "Vulnerability Management",
+      "description": "OWASP-aligned secure coding practices. Frequent automated assessments and annual third-party penetration testing. Responsible vulnerability disclosure program — ethical hackers help identify and report potential vulnerabilities."
+     },
+     {
+      "kind": "sec-card",
+      "icon": null,
+      "title": "Disaster Recovery",
+      "description": "Comprehensive recovery and business continuity plans minimize downtime. Recovery plans regularly tested and reviewed. Critical data automatically backed up and stored redundantly across geographic regions."
+     },
+     {
+      "kind": "sec-card",
+      "icon": null,
+      "title": "Data Encryption & Protection",
+      "description": "TLS 1.2+ encryption for all data in transit. AES-256 encryption for all data at rest. Cryptographic controls enforced with strict access controls and secure key management. PHI never transmitted unencrypted."
+     },
+     {
+      "kind": "sec-card",
+      "icon": null,
+      "title": "Business Associate Agreement (BAA)",
+      "description": "A fully executed BAA is available for every Murphi.ai customer — required by HIPAA for any business handling PHI. Covers all Murphi.ai services, integrations, and data processing activities."
+     }
+    ],
+    "columns": "two"
+   },
+   {
+    "alt": true,
+    "tag": "AI Governance",
+    "heading": "Responsible AI with Comprehensive Oversight",
+    "cards": [
+     {
+      "kind": "sec-card",
+      "icon": null,
+      "title": "Responsible AI Practices",
+      "description": "AI systems developed in accordance with ethical principles — emphasizing fairness, transparency, and accountability. Regular bias assessments and compliance reviews."
+     },
+     {
+      "kind": "sec-card",
+      "icon": null,
+      "title": "No Training on Customer Data",
+      "description": "Customer data is never used to train foundational AI models. Your data remains completely isolated from model development — contractually guaranteed."
+     },
+     {
+      "kind": "sec-card",
+      "icon": null,
+      "title": "Human Oversight & Risk Management",
+      "description": "AI outputs are monitored by qualified personnel. Regular assessments identify risks, bias, and compliance gaps. Human review workflows built into every AI-generated output."
+     }
+    ],
+    "columns": "three"
+   },
+   {
+    "alt": true,
+    "tag": "Sub-Processors",
+    "heading": "Third-Party Sub-Processors",
+    "lead": "We partner with carefully selected third-party sub-processors to enhance platform functionality while maintaining strict security and compliance standards. All sub-processors are contractually obligated to adhere to our security policies and regulatory requirements.",
+    "table": {
+     "headers": [
+      "Vendor",
+      "Purpose",
+      "Location"
+     ],
+     "rows": [
+      [
+       "Amazon Web Services",
+       "Cloud Infrastructure",
+       "USA"
+      ],
+      [
+       "Google Cloud Platform",
+       "Cloud Infrastructure",
+       "USA"
+      ],
+      [
+       "Everyware",
+       "Payment Processing",
+       "USA"
+      ],
+      [
+       "Fortis",
+       "Payment Processing",
+       "USA"
+      ],
+      [
+       "Twilio",
+       "Communication & Messaging",
+       "USA"
+      ],
+      [
+       "360 Dialog",
+       "Communication & Messaging",
+       "USA"
+      ],
+      [
+       "Firebase",
+       "Crash Logs & Analytics",
+       "USA"
+      ]
+     ]
+    }
+   }
+  ]
+ },
+ "about-us": {
+  "slug": "about-us",
+  "title": "About Murphi.ai | AI-Driven Healthcare Innovation",
+  "description": "Learn about Murphi.ai's mission to transform healthcare with AI. Meet our team, explore our values, and discover how we're building the future of clinical workflow automation.",
+  "hero": {
+   "h1Lines": [
+    "About Murphi.ai"
+   ],
+   "body": [
+    "Murphi.ai is a AI Native automation platform purpose built for U.S. healthcare. It enables EHRs, RCM companies, coding and billing firms, and provider organizations to become full native AI powered platforms without redesigning their systems or depending on fragmented third party tools. Additionally, Murphi also offers SaaS modules such as Ambient AI, Revenue Assurance, Contract Analyzer, Patient Financials."
+   ]
+  },
+  "sections": [
+   {
+    "tone": "plain",
+    "tag": "",
+    "tagDot": false,
+    "intro": [
+     {
+      "title": "Why Murphi.ai",
+      "paragraphs": [
+       "Our platform automates clinical documentation, coding, compliance reviews, intake workflows, eligibility checks, insurance extraction, patient responsible payments, and interoperability tasks.",
+       "Our white-label architecture lets partners launch AI features directly inside their own platforms, fully aligned with their UX, workflows, and data models. Each module is customizable for desktop, web, and mobile."
+      ]
+     },
+     {
+      "title": "Headquartered in North Carolina",
+      "paragraphs": [
+       "Murphi.ai delivers enterprise grade AI modules that support Home Health, Hospice, Palliative Care, Primary Care, Mental and Behavioral Health, Community Health, Skilled Nursing, and more.",
+       "The platform is also expanding into Payers, MCOs, ACOs, and physician groups. Development center in Bangalore, India. Operated by Deskfactors Inc."
+      ]
+     }
+    ]
+   },
+   {
+    "tone": "alt",
+    "tag": "Our Differentiators",
+    "tagDot": true,
+    "diff": [
+     {
+      "title": "Al Native Platform covering both PaaS and Saas Modules"
+     },
+     {
+      "title": "Full white-label capability that strengthens partner brand ownership"
+     },
+     {
+      "title": "Fast deployment — most partners go live in 4 to 12 weeks with confidence"
+     },
+     {
+      "title": "Full customization of UI, logic, and workflow paths for teams and products"
+     },
+     {
+      "title": "Enterprise-grade security (HIPAA, SOC 2, ISO 27001 practices, PHI encryption)"
+     },
+     {
+      "title": "Proven adoption across EHRs, RCM companies, and healthcare agencies"
+     }
+    ]
+   },
+   {
+    "tone": "dark",
+    "tag": "What Powers Murphi.ai",
+    "tagDot": false,
+    "visionMission": [
+     {
+      "label": "Our Vision",
+      "title": "AI that reduces effort, cuts cost, and grows revenue",
+      "description": "Our vision is to create a future where every healthcare platform becomes AI-native — operating with higher productivity, lower friction, and stronger financial performance."
+     },
+     {
+      "label": "Our Mission",
+      "title": "Deploy AI for better health outcomes",
+      "description": "Our mission is simple — bring AI into every healthcare workflow. The goal: empower clinicians to deliver faster, more accurate, outcome-driven care."
+     }
+    ]
+   },
+   {
+    "tone": "plain",
+    "tag": "Our Core Values",
+    "tagDot": true,
+    "values": [
+     {
+      "icon": null,
+      "title": "Trust",
+      "description": "Trust sits at the center of every relationship we build with partners, customers, and patients. In healthcare it's non-negotiable. Murphi.ai commits to transparency, security, and reliability in every workflow we touch, protecting data with top-tier compliance and delivering on our promises. Partners can depend on us as an extension of their own platform because trust isn't just a value — it's the currency of our business."
+     },
+     {
+      "icon": null,
+      "title": "Innovation",
+      "description": "Murphi.ai exists to push the limits of healthcare technology. Innovation drives every product decision as we continuously build and refine AI modules that deliver capabilities most platforms can't develop in house quickly or cost effectively. From clinical documentation to revenue cycle automation, our approach ensures partners stay ahead of industry needs with next generation AI."
+     },
+     {
+      "icon": null,
+      "title": "Customer Delight",
+      "description": "Our customers' success is our own. We stay hands on, responsive, and fully aligned with their goals, whether it's white label deployment, workflow customization, or continuous model improvements. The focus is precision and outcomes that exceed expectations. We stay involved well beyond go live to ensure value, adoption, and long term impact because customer delight isn't an aspiration, it's how we operate."
+     }
+    ]
+   },
+   {
+    "tone": "alt",
+    "tag": "Our Team",
+    "tagDot": true,
+    "team": [
+     {
+      "photo": "https://murphi.ai/wp-content/uploads/2026/03/image-43927.png",
+      "name": "Guru Tadiparti",
+      "role": "Founder & CEO",
+      "link": "https://www.linkedin.com/in/gurutadiparti"
+     },
+     {
+      "photo": "https://murphi.ai/wp-content/uploads/2026/04/Screenshot-2026-01-05-at-4.22.10-PM-e1775479595395.png",
+      "name": "Venkata M Rao",
+      "role": "Enterprise Architecture",
+      "link": "https://www.linkedin.com/in/venkatamadhu/"
+     },
+     {
+      "photo": "https://murphi.ai/wp-content/uploads/2026/05/Stuart-Smith-1.png",
+      "name": "Stuart Smith",
+      "role": "Board Advisor, Duke Health System",
+      "link": "https://www.linkedin.com/in/stuart-smith-b40b8814/"
+     }
+    ]
+   }
+  ]
+ }
+}

@@ -26,7 +26,7 @@ const OFFICES = [
     place: "Bengaluru, India",
     label: "India Office Address",
     lines: [
-      "4/02 15th Cross, Southend, Jayanagar II Block,",
+      "4/02, 15th Cross, Southend, Jayanagar II Block,",
       "Bengaluru, Karnataka 560011, India",
     ],
     email: "info@murphi.ai",
@@ -82,13 +82,8 @@ function Hero() {
       current="Contact Us"
       badge="Get In Touch"
       badgeIcon={<Icon name="community" width={13} height={13} />}
-      title={
-        <>
-          {"Let's build the future of "}
-          <span style={{ color: "#007EFF" }}>healthcare AI</span> together
-        </>
-      }
-      lede="Have questions about EHR integrations, customized modules, or pricing? Our team of enterprise AI specialists is here to help."
+      title="Let us know how we can AI enable your workflows"
+      lede="Have questions about modules, workflows, EHR integrations? Our team of enterprise AI specialists is here to help."
     />
   );
 }

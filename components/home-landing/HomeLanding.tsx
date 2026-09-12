@@ -75,39 +75,45 @@ const LOGOS = [
 const QUOTES = [
   {
     quote:
-      "\u201cDocumentation that used to take up valuable clinical time is now streamlined, accurate, and intuitive.\u201d",
+      '"Murphi AI has truly transformed how we approach clinical workflow documentation in hospice and palliative care. Documentation that used to take up valuable clinical time is now streamlined, accurate, and intuitive."',
     name: "Vicki Goodman",
     role: "CRO, Curantis Solutions",
   },
   {
     quote:
-      "\u201cTheir team acts as a true extension of our engineering team \u2014 seamless AI automation across our EHR.\u201d",
+      '"Murphi.ai transformed our Healthcare Synergy EHR with AI automation, enhanced clinician engagement, and streamlined workflows without disrupting development. Their team acts as a true extension of our engineering team."',
     name: "Dave Crow",
     role: "President, Healthcare Synergy",
   },
   {
     quote:
-      "\u201cWe have greatly increased our response time and decreased our call volume and hold times.\u201d",
-    name: "Kristen Anderson",
-    role: "Administration, AAIC",
-  },
-  {
-    quote:
-      "\u201cWe have been instrumental in helping set up a patient payment platform, all through text message.\u201d",
+      '"We have been working with Murphi.ai for about 6 months. They have been instrumental in helping us set up a patient payment platform, all through text message. They adapt to our needs with consistent communication."',
     name: "Mara Garcia",
     role: "Revenue Cycle Manager, SouthSide CHC",
   },
   {
     quote:
-      "\u201cSeamless voice-to-text notes, progress notes, goals, and pre-authorization automation \u2014 saving valuable time.\u201d",
+      '"Our patients love to use the app and communicate easily over texting vs. calling and waiting on hold. We have greatly increased our response time and decreased our call volume and hold times."',
+    name: "Kristen Anderson",
+    role: "Administration, AAIC",
+  },
+  {
+    quote:
+      '"Murphi.ai has been an incredible partner in transforming iTherapyDocs with AI-driven automation. Seamless rewrite, voice-to-text notes, progress notes, goals, and pre-authorization automation — saving valuable time across the board."',
     name: "Phillip Brow",
     role: "Co-founder, iTherapyDocs",
   },
   {
     quote:
-      "\u201cTheir team is responsive and supportive, and their product is truly unmatched. Highly recommend!\u201d",
+      '"Murphi offers a high quality product and is absolutely wonderful to work with. Their team is responsive and supportive, and their product is truly unmatched in overall quality and performance. Highly recommend!"',
     name: "Kylie Roy",
-    role: "CEO, Percensys CORE",
+    role: "CEO, Percensys CORE Learning",
+  },
+  {
+    quote:
+      '"It  is a powerful patient engagement platform that simplifies interactions. It connects with EHR systems through the Carefluence FHIR API for data. Healthcare becomes more connected, efficient, and patient-friendly."',
+    name: "Lloyd Williams",
+    role: "Co-founder, Carefluence",
   },
 ];
 
@@ -1205,7 +1211,12 @@ function Testimonials() {
       <div className="marquee-wrap">
         <div
           className="marquee-track marquee-track2"
-          style={{ gap: 20, paddingLeft: 32, paddingRight: 20 }}
+          style={{
+            gap: 20,
+            paddingLeft: 32,
+            paddingRight: 20,
+            animationDuration: "62s",
+          }}
         >
           {cards.map((c, i) => (
             <figure
@@ -1215,17 +1226,21 @@ function Testimonials() {
                 border: "1px solid #E3E3E3",
                 borderRadius: 8,
                 padding: "32px 28px",
-                width: 340,
+                width: 380,
                 flexShrink: 0,
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "space-between",
-                minHeight: 220,
               }}
             >
               <blockquote
                 className="hl-serif"
-                style={{ fontSize: 17, fontStyle: "italic", lineHeight: 1.5 }}
+                style={{
+                  fontSize: 17,
+                  fontStyle: "italic",
+                  lineHeight: 1.5,
+                  overflowWrap: "break-word",
+                }}
               >
                 {c.quote}
               </blockquote>

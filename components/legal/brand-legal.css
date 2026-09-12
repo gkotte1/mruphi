@@ -1,9 +1,32 @@
-/* Privacy Policy + Terms of Service — Homepage type system, legal-document layout. */
+/* Privacy Policy + Terms of Service + AI Terms — shared legal-document layout. */
+
+.ip-legal-main > section:first-of-type .ip-h1 {
+  text-align: center;
+}
+
+.ip-page .ip-legal-body {
+  padding: 48px 0 96px;
+}
 
 .ip-page .ip-legal-doc {
   width: 100%;
   max-width: 720px;
   margin-inline: auto;
+  text-align: left;
+}
+
+.ip-page .ip-legal-doc .legal-prose,
+.ip-page .ip-legal-archive {
+  text-align: left;
+}
+
+.ip-page .ip-legal-lede {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: -0.015em;
+  color: #1a1a1a;
+  margin: 0 0 32px;
 }
 
 .ip-page .ip-legal-doc h2 {
@@ -16,7 +39,12 @@
   margin: 40px 0 14px;
 }
 
-.ip-page .ip-legal-doc h2:first-child {
+.ip-page .ip-legal-doc h2:first-child,
+.ip-page .ip-legal-doc .legal-prose > h2:first-child {
+  margin-top: 0;
+}
+
+.ip-page .ip-legal-doc .ip-legal-lede + .legal-prose > h2:first-child {
   margin-top: 0;
 }
 
@@ -43,7 +71,7 @@
   line-height: 1.65;
   color: #606060;
   margin: 0 0 16px;
-  padding-left: 22px;
+  padding-left: 1.25em;
 }
 
 .ip-page .ip-legal-doc li {
@@ -62,14 +90,6 @@
 .ip-page .ip-legal-doc strong {
   font-weight: 700;
   color: #1a1a1a;
-}
-
-.ip-legal-main > section:first-of-type .ip-h1,
-.ip-legal-main > section:first-of-type .ip-lead {
-  width: 100%;
-  max-width: 720px;
-  margin-inline: auto;
-  text-align: left;
 }
 
 .ip-page .ip-legal-archive {
@@ -115,8 +135,16 @@
 }
 
 @media (max-width: 860px) {
+  .ip-page .ip-legal-body {
+    padding: 36px 0 72px;
+  }
+
   .ip-page .ip-legal-doc h2 {
     font-size: 17px;
     margin-top: 32px;
+  }
+
+  .ip-page .ip-legal-lede {
+    margin-bottom: 24px;
   }
 }

@@ -11,7 +11,7 @@ import {
 } from "@/lib/schema";
 import { pageMetadata } from "@/lib/site";
 import InnerHero from "@/components/inner-page/Hero";
-import { FinalCta, TechTicker } from "@/components/inner-page/kit";
+import { FinalCta } from "@/components/inner-page/kit";
 import { InnerPage, IpEyebrow, IpHead, IpWrap } from "@/components/inner-page/Shell";
 import ConversationStack from "@/components/patient-engagement/HeroVisual";
 import {
@@ -28,14 +28,6 @@ export const metadata: Metadata = pageMetadata("/patient-engagement/", {
   description:
     "HIPAA-compliant texting and patient engagement for home health and hospice. Secure staff messaging, visit confirmation automation and document signature - no app for patients.",
 });
-
-const TICKER = [
-  "Staff Messaging - Murphi App",
-  "Patients & Families - Text, No App",
-  "Reminders - Automated",
-  "Communication History - Full Audit Trail",
-  "Document Signature - In Thread",
-];
 
 const INSIDE = [
   {
@@ -186,8 +178,6 @@ export default function PatientEngagementPage() {
             />
           }
         />
-
-        <TechTicker items={TICKER} />
 
         <section id="inside" className="ip-section">
           <IpWrap>

@@ -1,0 +1,728 @@
+{
+ "ambient-ai": {
+  "slug": "ambient-ai",
+  "layout": {
+   "aside": 300,
+   "subMaxWidth": 560,
+   "subGap": 32,
+   "headingGap": 16,
+   "leadMaxWidth": 640,
+   "leadGap": 32,
+   "leadLeading": 1.7,
+   "quoteRoleGap": 4,
+   "density": "standard",
+   "heroTypeScale": "responsive",
+   "kpiMobileCols": 2,
+   "headingMobile": "flat24",
+   "eyebrowMobile": 10
+  },
+  "title": "Ambient AI: Voice-to-Note Documentation For Care Teams",
+  "description": "Record clinical visits and generate compliant notes automatically, synced straight to your EHR — built for every care setting.",
+  "heroTag": "Solutions — Ambient AI",
+  "h1Lines": [
+   "Voice-to-Note Clinical Documentation",
+   "for Every Care Setting"
+  ],
+  "heroSub": "Murphi.ai Ambient AI records clinical visits and generates compliant notes automatically — synced to your EHR. 70% less documentation time. 98.7% accuracy.",
+  "heroButtons": [
+   {
+    "href": "/contact-us/",
+    "variant": "solid",
+    "label": "Request Demo"
+   },
+   {
+    "href": "/",
+    "variant": "ghost",
+    "label": "Back to Home"
+   }
+  ],
+  "statusCard": {
+   "title": "Module Status",
+   "badge": "✓ Live — Production Ready",
+   "facts": [
+    "Voice-to-note in real time",
+    "55 languages supported",
+    "EHR sync — automatic",
+    "98.7% transcription accuracy",
+    "70% documentation time saved",
+    "HIPAA · SOC 2 · ISO 27001"
+   ]
+  },
+  "sections": [
+   {
+    "grey": true,
+    "tag": "How It Works",
+    "heading": "From Voice to EHR in Four Steps",
+    "lead": "Clinicians record their visit naturally. Murphi.ai does the rest — generating a structured, compliant clinical note and syncing it to your EHR automatically.",
+    "steps": [
+     {
+      "num": "1",
+      "title": "Record",
+      "description": "Clinician speaks naturally during or after the visit. No scripting, no keywords, no special phrases required."
+     },
+     {
+      "num": "2",
+      "title": "Transcribe",
+      "description": "Murphi.ai transcribes with 98.7% accuracy across 55 languages. Medication names, clinical terms, and diagnoses recognized automatically."
+     },
+     {
+      "num": "3",
+      "title": "Generate",
+      "description": "AI generates a structured clinical note in the correct format — OASIS, SOAP, PIE, BIRP, DAP, IDG, or your specialty template."
+     },
+     {
+      "num": "4",
+      "title": "Sync",
+      "description": "Note is reviewed, approved, and synced directly to your EHR. No copy-paste. No rekeying. Documentation complete."
+     }
+    ]
+   },
+   {
+    "grey": false,
+    "tag": "Note Types",
+    "heading": "Every Note Type. Every Care Setting.",
+    "features": [
+     {
+      "status": null,
+      "badgeLabel": null,
+      "title": "Post-Acute Care",
+      "description": "OASIS-E assessments, SN visit notes, PT/OT/ST therapy notes, IDG summaries, hospice CTI documentation, recertification notes, and discharge summaries."
+     },
+     {
+      "status": null,
+      "badgeLabel": null,
+      "title": "Behavioral Health",
+      "description": "PIE, BIRP, SOAP, and DAP progress notes. Assessment forms including GAD-7, PHQ-9, and AUDIT-C auto-populated from conversation. Treatment plan documentation."
+     },
+     {
+      "status": null,
+      "badgeLabel": null,
+      "title": "Primary & Specialty Care",
+      "description": "SOAP notes with specialty-specific templates — cardiology, sleep medicine, pain management, allergy, vascular, and more. HPI, ROS, PE, Assessment, Plan generated from voice."
+     },
+     {
+      "status": null,
+      "badgeLabel": null,
+      "title": "Health Systems",
+      "description": "Inpatient and outpatient documentation. Discharge summaries, H&P notes, operative notes, and progress notes. Integrates with Epic, Cerner, Athena, and more."
+     },
+     {
+      "status": null,
+      "badgeLabel": null,
+      "title": "Medication Scan",
+      "description": "Scan medication bottles or packaging with the Murphi.ai mobile app. Medication names, dosages, and instructions auto-populated into the clinical note."
+     },
+     {
+      "status": null,
+      "badgeLabel": null,
+      "title": "Handwriting Capture",
+      "description": "Photograph handwritten clinical notes or forms. Murphi.ai digitizes, structures, and incorporates them into the electronic clinical record automatically."
+     }
+    ]
+   },
+   {
+    "grey": true,
+    "tag": "Outcomes",
+    "heading": "What Clinicians Experience",
+    "kpis": [
+     {
+      "value": "70%",
+      "label": "Reduction in documentation time"
+     },
+     {
+      "value": "98.7%",
+      "label": "Transcription accuracy"
+     },
+     {
+      "value": "55",
+      "label": "Languages supported"
+     },
+     {
+      "value": "100%",
+      "label": "Notes completed per session"
+     }
+    ],
+    "quote": {
+     "text": "\"Murphi AI has truly transformed how we approach clinical workflow documentation in hospice and palliative care. Documentation that used to take up valuable clinical time is now streamlined, accurate, and intuitive.\"",
+     "author": "Vicki Goodman",
+     "role": "Chief Revenue Officer, Curantis Solutions"
+    }
+   },
+   {
+    "grey": false,
+    "tag": "EHR Integration",
+    "heading": "Can Connect with Most EHRs",
+    "lead": "Murphi.ai Ambient AI integrates via Agentic AI, RPA, FHIR R4, and HL7 v2. Notes sync directly — no copy-paste, no manual upload.",
+    "tagCloud": [
+     "WellSky",
+     "Axxess",
+     "Kantime",
+     "MatrixCare",
+     "HCHB",
+     "Netsmart",
+     "EPIC",
+     "Cerner",
+     "Athena",
+     "ECW",
+     "Allscripts",
+     "+ Any FHIR/HL7 EHR"
+    ]
+   },
+   {
+    "grey": true,
+    "tag": "Related Modules",
+    "heading": "Complete Your Clinical Workflow",
+    "related": [
+     {
+      "href": "/revenue-assurance/",
+      "title": "Revenue Assurance",
+      "description": "28 AI compliance reports for HH & Hospice"
+     },
+     {
+      "href": "/ai-patient-financials/",
+      "title": "AI Patient Financials",
+      "description": "Text-to-pay · AR automation · 48hr settlement"
+     },
+     {
+      "href": "/contract-analyzer/",
+      "title": "Contract Analyzer",
+      "description": "Payer contract optimization"
+     }
+    ]
+   }
+  ]
+ },
+ "revenue-assurance": {
+  "slug": "revenue-assurance",
+  "layout": {
+   "aside": 320,
+   "subMaxWidth": null,
+   "subGap": 28,
+   "headingGap": 12,
+   "leadMaxWidth": null,
+   "leadGap": 32,
+   "leadLeading": 1.7,
+   "quoteRoleGap": 2,
+   "density": "standard",
+   "heroTypeScale": "static",
+   "kpiMobileCols": 2,
+   "headingMobile": "clamp34",
+   "eyebrowMobile": 11.5
+  },
+  "title": "28 AI Compliance Reports For Home Health & Hospice",
+  "description": "CHAP & ACHC-aligned AI compliance reporting for home health and hospice — covering F2F, OASIS, PDGM, CTI, and HOPE at 90–95% accuracy.",
+  "heroTag": "Solutions — Revenue Assurance",
+  "h1Lines": [
+   "28 AI Compliance Reports for",
+   "Home Health & Hospice"
+  ],
+  "heroSub": "15 Home Health reports and 13 Hospice reports — covering every compliance requirement from F2F documentation to EOLRBA. CHAP and ACHC aligned.",
+  "heroButtons": [
+   {
+    "href": "/contact-us/",
+    "variant": "solid",
+    "label": "Request Demo"
+   },
+   {
+    "href": "/",
+    "variant": "ghost",
+    "label": "Back to Home"
+   }
+  ],
+  "statusCard": {
+   "title": "Module Status",
+   "badge": "✓ Live — Production Ready",
+   "facts": [
+    "28 AI compliance reports",
+    "15 Home Health reports",
+    "13 Hospice reports",
+    "CHAP & ACHC aligned",
+    "90–95% AI accuracy",
+    "Human review workflow included"
+   ]
+  },
+  "sections": [
+   {
+    "grey": true,
+    "tag": "Home Health Reports",
+    "heading": "15 AI Compliance Reports for Home Health",
+    "lead": "Every report a home health agency needs to maximize reimbursement, pass audits, and stay compliant with CMS requirements.",
+    "footnote": "+ 9 additional Home Health compliance reports available in the full module",
+    "features": [
+     {
+      "status": null,
+      "badgeLabel": null,
+      "title": "Face-to-Face (F2F) Validator",
+      "description": "AI validates F2F documentation completeness, timing, and physician signature requirements — before claims are submitted."
+     },
+     {
+      "status": null,
+      "badgeLabel": null,
+      "title": "OASIS Accuracy Review",
+      "description": "AI reviews OASIS assessments for accuracy, completeness, and consistency with clinical documentation. Reduces OASIS-related denials."
+     },
+     {
+      "status": null,
+      "badgeLabel": null,
+      "title": "Coding Review",
+      "description": "AI-powered ICD-10 coding review for accuracy and specificity. Identifies under-coding and over-coding before billing."
+     },
+     {
+      "status": null,
+      "badgeLabel": null,
+      "title": "ADR Preparation",
+      "description": "AI prepares Additional Documentation Request responses — pulling relevant clinical records and organizing them for reviewer submission."
+     },
+     {
+      "status": null,
+      "badgeLabel": null,
+      "title": "PDGM Optimization",
+      "description": "AI analyzes episodes under PDGM — validating LUPA thresholds, functional impairment levels, and comorbidity captures for maximum legitimate reimbursement."
+     },
+     {
+      "status": null,
+      "badgeLabel": null,
+      "title": "Recertification Validator",
+      "description": "AI validates recertification documentation — physician orders, OASIS timing, and eligibility criteria — before each new benefit period."
+     }
+    ]
+   },
+   {
+    "grey": false,
+    "tag": "Hospice Reports",
+    "heading": "13 AI Compliance Reports for Hospice",
+    "lead": "Comprehensive hospice compliance documentation — from admission through bereavement, aligned to CMS and accreditation standards.",
+    "footnote": "+ 7 additional Hospice compliance reports available in the full module",
+    "features": [
+     {
+      "status": null,
+      "badgeLabel": null,
+      "title": "CTI Validator",
+      "description": "AI validates Certification of Terminal Illness documentation — physician narrative, prognosis support, and signature requirements for every certification period."
+     },
+     {
+      "status": null,
+      "badgeLabel": null,
+      "title": "HOPE Assessment Review",
+      "description": "AI reviews Hospice Outcomes and Patient Evaluation (HOPE) assessments for accuracy, completeness, and submission timing compliance."
+     },
+     {
+      "status": null,
+      "badgeLabel": null,
+      "title": "IDG Documentation",
+      "description": "AI validates Interdisciplinary Group meeting documentation — attendance, patient and family involvement, care plan updates, and frequency requirements."
+     },
+     {
+      "status": null,
+      "badgeLabel": null,
+      "title": "EOLRBA — End-of-Life Risk Band Analyzer",
+      "description": "AI-powered risk stratification for hospice patients. Identifies documentation gaps, flags eligibility concerns, and ensures compliance with CMS hospice eligibility requirements."
+     },
+     {
+      "status": null,
+      "badgeLabel": null,
+      "title": "Level of Care Validator",
+      "description": "AI validates appropriate level of care documentation — routine home care, continuous home care, inpatient respite, and general inpatient criteria."
+     },
+     {
+      "status": null,
+      "badgeLabel": null,
+      "title": "Recertification Review",
+      "description": "AI validates hospice recertification documentation — face-to-face encounter, physician narrative, and eligibility criteria for each 60-day period."
+     }
+    ]
+   },
+   {
+    "grey": true,
+    "tag": "Accuracy & Review",
+    "heading": "AI Accuracy + Human Review Workflow",
+    "quote": {
+     "text": "\"Murphi offers a high quality product and is absolutely wonderful to work with. Their team is responsive and supportive, and their product unmatched. Highly recommend!\"",
+     "author": "Kylie Roy",
+     "role": "CEO, Percensys CORE Learning"
+    },
+    "twoCol": {
+     "kpis": [
+      {
+       "value": "28",
+       "label": "Total compliance reports"
+      },
+      {
+       "value": "85-95%",
+       "label": "AI Accuracy on all"
+      },
+      {
+       "value": "98%",
+       "label": "With Human Review"
+      },
+      {
+       "value": "50%",
+       "label": "Less Efforts and for Half cost"
+      }
+     ],
+     "cards": [
+      {
+       "title": "Human Review Workflow",
+       "description": "Every AI-generated compliance report goes through a structured human review workflow before delivery. Coders, compliance consultants, and clinical staff review, annotate, and approve AI findings — ensuring accuracy and accountability on every report. AI accelerates the work. Humans own the outcome."
+      }
+     ]
+    }
+   },
+   {
+    "grey": false,
+    "tag": "Related Modules",
+    "heading": "Complete Your Revenue Workflow",
+    "related": [
+     {
+      "href": "/ambient-ai/",
+      "title": "Ambient AI",
+      "description": "Voice-to-note · OASIS · SN/PT/OT/ST"
+     },
+     {
+      "href": "/ai-patient-financials/",
+      "title": "AI Patient Financials",
+      "description": "Text-to-pay · AR automation · 48hr settlement"
+     },
+     {
+      "href": "/contract-analyzer/",
+      "title": "AI Contract Analyzer",
+      "description": "PADU Plus · Payer optimization · Gap analysis"
+     }
+    ]
+   }
+  ]
+ },
+ "ai-patient-financials": {
+  "slug": "ai-patient-financials",
+  "layout": {
+   "aside": 300,
+   "subMaxWidth": 560,
+   "subGap": 32,
+   "headingGap": 12,
+   "leadMaxWidth": null,
+   "leadGap": 8,
+   "leadLeading": 1.65,
+   "quoteRoleGap": 2,
+   "density": "roomy",
+   "heroTypeScale": "static",
+   "kpiMobileCols": 1,
+   "headingMobile": "clamp28",
+   "eyebrowMobile": 11.5
+  },
+  "title": "Text-to-Pay Patient Collections: AR From 100 Days To 15",
+  "description": "Read AR straight from your EHR, send SMS payment links, and get paid within 48 hours — with bad debt cut by 75%.",
+  "heroTag": "Solutions — AI Patient Financials",
+  "h1Lines": [
+   "Text-to-Pay Patient Collections —",
+   "AR from 100 Days to 15"
+  ],
+  "heroSub": "Murphi.ai reads AR from your EHR, sends SMS payment links, and posts collections back automatically. Provider paid within 48 hours. Bad debt reduced by 75%.",
+  "heroButtons": [
+   {
+    "href": "/contact-us/",
+    "variant": "solid",
+    "label": "Request Demo"
+   },
+   {
+    "href": "/",
+    "variant": "ghost",
+    "label": "Back to Home"
+   }
+  ],
+  "statusCard": {
+   "title": "Module Status",
+   "badge": "✓ Live — Production Ready",
+   "facts": [
+    "Text-to-pay — no app required",
+    "ACH · Credit · Debit · QR Code",
+    "Provider paid within 48 hours",
+    "Everyware gateway integrated",
+    "EHR AR read & post-back",
+    "All segments · Any EHR"
+   ]
+  },
+  "sections": [
+   {
+    "grey": true,
+    "tag": "How It Works",
+    "heading": "Integrate with any EHR and get paid in 4 steps",
+    "lead": "Murphi.ai reads your outstanding AR, sends payment links automatically, and posts collected payments back to your EHR — all without manual intervention.",
+    "steps": [
+     {
+      "num": "1",
+      "title": "Read AR",
+      "description": "Murphi.ai reads outstanding patient-responsible balances directly from your EHR — co-pays, deductibles, coinsurance, and private-pay balances."
+     },
+     {
+      "num": "2",
+      "title": "Send Link",
+      "description": "Patients receive a personalized SMS payment link — no app download, no account creation. Works on any smartphone. 60% patient response rate."
+     },
+     {
+      "num": "3",
+      "title": "Patient Pays",
+      "description": "Patients pay via ACH, credit card, debit card, or QR code. Secure, PCI-compliant, processed via the Everyware payment gateway."
+     },
+     {
+      "num": "4",
+      "title": "Auto Post-Back",
+      "description": "Payment is posted back to the EHR automatically. Provider receives funds within 48 hours. AR cycle drops from 100+ days to 15 days."
+     }
+    ]
+   },
+   {
+    "grey": false,
+    "tag": "Payment Methods",
+    "heading": "No more $2 /Invoice for Printing and Postage",
+    "features": [
+     {
+      "status": null,
+      "badgeLabel": null,
+      "title": "Text-to-Pay",
+      "description": "SMS payment link sent directly to the patient's phone. No app download, no account required. Patients click, review their balance, and pay in under 60 seconds."
+     },
+     {
+      "status": null,
+      "badgeLabel": null,
+      "title": "QR Code",
+      "description": "QR code at point of service — in the waiting room, on a statement, or on a discharge summary. Patient scans and pays immediately on their device."
+     },
+     {
+      "status": null,
+      "badgeLabel": null,
+      "title": "ACH / Bank Transfer",
+      "description": "Direct bank account payment — lower processing fees, ideal for larger balances. Patients enter routing and account number once. Future payments remembered."
+     },
+     {
+      "status": null,
+      "badgeLabel": null,
+      "title": "Credit & Debit Card",
+      "description": "All major credit and debit cards accepted. PCI-compliant processing via Everyware gateway. Tokenized card-on-file for future payments."
+     },
+     {
+      "status": null,
+      "badgeLabel": null,
+      "title": "Payment Plans",
+      "description": "Configure installment payment plans for larger balances. Patients agree to a schedule — Murphi.ai sends reminders and processes each installment automatically."
+     },
+     {
+      "status": null,
+      "badgeLabel": null,
+      "title": "Auto Post-Back",
+      "description": "Every collected payment posts back to the EHR automatically — no manual reconciliation, no rekeying. AR updated in real time."
+     }
+    ]
+   },
+   {
+    "grey": true,
+    "tag": "Outcomes",
+    "heading": "What Providers Experience",
+    "kpis": [
+     {
+      "value": "75%",
+      "label": "Bad debt reduction"
+     },
+     {
+      "value": "15 days",
+      "label": "AR cycle (from 100+)"
+     },
+     {
+      "value": "48 hrs",
+      "label": "Funds in bank account"
+     },
+     {
+      "value": "60%",
+      "label": "Patient response rate"
+     }
+    ],
+    "quote": {
+     "text": "\"Murphi.ai has been instrumental in helping us set up a patient payment platform, all through text message. They are able to adapt to our needs as necessary, and have consistent communication with our staff as issues or new ideas come up.\"",
+     "author": "Mara Garcia",
+     "role": "Southside Community Health Services, RC Manager"
+    }
+   },
+   {
+    "grey": false,
+    "tag": "Who It Serves",
+    "heading": "Works Across Every Care Setting",
+    "lead": "AI Patient Financials is the only Murphi.ai module that serves every segment — any patient-responsible balance, any care setting, any EHR.",
+    "tagCloud": [
+     "Home Health Agencies",
+     "Hospice Organizations",
+     "Health Systems",
+     "Primary Care Practices",
+     "Specialty Clinics",
+     "Behavioral Health",
+     "CHCs / FQHCs",
+     "Private Duty Nursing",
+     "DME Providers",
+     "SNFs"
+    ]
+   },
+   {
+    "grey": true,
+    "tag": "Related Modules",
+    "heading": "Complete Your Clinical Workflow",
+    "related": [
+     {
+      "href": "/ambient-ai/",
+      "title": "Ambient AI",
+      "description": "Voice-to-note · 70% documentation time saved"
+     },
+     {
+      "href": "/revenue-assurance/",
+      "title": "Revenue Assurance",
+      "description": "28 AI compliance reports · HH & Hospice"
+     },
+     {
+      "href": "/contract-analyzer/",
+      "title": "Contract Analyzer",
+      "description": "Payer contract optimization"
+     }
+    ]
+   }
+  ]
+ },
+ "contract-analyzer": {
+  "slug": "contract-analyzer",
+  "layout": {
+   "aside": 320,
+   "subMaxWidth": null,
+   "subGap": 28,
+   "headingGap": 12,
+   "leadMaxWidth": null,
+   "leadGap": 32,
+   "leadLeading": 1.7,
+   "quoteRoleGap": 2,
+   "density": "standard",
+   "heroTypeScale": "static",
+   "kpiMobileCols": 2,
+   "headingMobile": "clamp34",
+   "eyebrowMobile": 11.5
+  },
+  "title": "AI Payer Contract Analyzer: Surface Underpayments Fast",
+  "description": "Flag non-compliant clauses, surface underpayments, and generate operating manuals from payer contracts — built on our PADU Plus methodology.",
+  "heroTag": "Solutions — AI Contract Analyzer",
+  "h1Lines": [
+   "AI-Powered Payer Contract Review & Reimbursement Optimization"
+  ],
+  "heroSub": "Murphi.ai surfaces underpayments, flags non-compliant clauses, and generates operating manuals from payer contracts. PADU Plus methodology.",
+  "heroButtons": [
+   {
+    "href": "/contact-us/",
+    "variant": "solid",
+    "label": "Request Demo"
+   },
+   {
+    "href": "/",
+    "variant": "ghost",
+    "label": "Back to Home"
+   }
+  ],
+  "statusCard": {
+   "title": "Module Status",
+   "badge": "✓ Live — Production Ready",
+   "facts": [
+    "PADU Plus methodology",
+    "Payer contract analysis",
+    "Operating manual generation",
+    "Contract vs. manual gap analysis",
+    "Reimbursement leakage detection",
+    "Health systems · Hospitals · IDNs"
+   ]
+  },
+  "sections": [
+   {
+    "grey": true,
+    "tag": "The PADU Plus Methodology",
+    "heading": "A Systematic Approach to Payer Contract Optimization",
+    "lead": "PADU Plus is Murphi.ai's proprietary methodology for payer contract analysis — moving beyond rate comparison to surface systemic underpayments, compliance gaps, and operational misalignments.",
+    "features": [
+     {
+      "status": null,
+      "badgeLabel": null,
+      "title": "Contract Analysis",
+      "description": "AI reads and analyzes payer contracts — fee schedules, coverage policies, billing rules, timely filing requirements, and reimbursement methodologies. Every clause reviewed, every rate captured."
+     },
+     {
+      "status": null,
+      "badgeLabel": null,
+      "title": "Operating Manual Generation",
+      "description": "AI generates plain-language operating manuals from contract language — translating complex payer terms into actionable workflows for billing, coding, and clinical staff."
+     },
+     {
+      "status": null,
+      "badgeLabel": null,
+      "title": "Contract vs. Manual Gap Analysis",
+      "description": "AI compares what the contract says against how your organization actually operates — surfacing compliance gaps, billing errors, and process misalignments before they become denials or audits."
+     },
+     {
+      "status": null,
+      "badgeLabel": null,
+      "title": "Reimbursement Leakage Detection",
+      "description": "AI identifies systematic underpayments — claims paid at incorrect rates, missing carve-outs, and overlooked contract provisions. Surfaces underpayment patterns across your payer mix."
+     },
+     {
+      "status": null,
+      "badgeLabel": null,
+      "title": "Non-Compliant Clause Flagging",
+      "description": "AI flags contract clauses that conflict with CMS guidelines, state regulations, or your organization's billing practices — before contract execution or renewal."
+     },
+     {
+      "status": null,
+      "badgeLabel": null,
+      "title": "Payer Mix Optimization",
+      "description": "AI analyzes reimbursement rates across your full payer mix — identifying which payers, service lines, and contract structures are performing below benchmark."
+     }
+    ]
+   },
+   {
+    "grey": false,
+    "tag": "Who It Serves",
+    "heading": "Built for Managed Care Functions and RCM Companies",
+    "tagCloud": [
+     "Health Systems",
+     "Hospitals",
+     "Integrated Delivery Networks (IDNs)",
+     "Ambulatory Networks",
+     "Multi-site Practices",
+     "RCM Companies"
+    ],
+    "twoCol": {
+     "cards": [
+      {
+       "title": "For Health System Finance Teams",
+       "description": "Identify underpayments, prepare for payer negotiations, and ensure every contract clause is operationalized correctly across your billing and coding teams."
+      },
+      {
+       "title": "For RCM Companies",
+       "description": "Embed AI contract analysis into your RCM platform via encrypted API. Deliver payer contract optimization as a premium service to your health system clients — under your brand."
+      }
+     ]
+    }
+   },
+   {
+    "grey": true,
+    "tag": "Related Modules",
+    "heading": "Complete Your Revenue Optimization Stack",
+    "related": [
+     {
+      "href": "/ai-patient-financials/",
+      "title": "AI Patient Financials",
+      "description": "Text-to-pay · AR from 100 to 15 days"
+     },
+     {
+      "href": "/revenue-assurance/",
+      "title": "Revenue Assurance",
+      "description": "28 AI compliance reports · HH & Hospice"
+     },
+     {
+      "href": "/ambient-ai/",
+      "title": "Ambient AI",
+      "description": "Voice-to-note"
+     }
+    ]
+   }
+  ]
+ }
+}

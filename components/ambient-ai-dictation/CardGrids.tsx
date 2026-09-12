@@ -118,8 +118,11 @@ export function Capabilities() {
                   <p
                     style={{
                       marginTop: 6,
+                      fontFamily: 'var(--font-hl-sans), "Manrope", sans-serif',
                       fontSize: 15,
+                      fontWeight: 400,
                       lineHeight: 1.65,
+                      letterSpacing: "normal",
                       color: "#606060",
                     }}
                   >
@@ -177,7 +180,16 @@ export function BuiltFor() {
                 >
                   {item.title}
                 </h4>
-                <p style={{ fontSize: 15, lineHeight: 1.65, color: "#606060" }}>
+                <p
+                  style={{
+                    fontFamily: 'var(--font-hl-sans), "Manrope", sans-serif',
+                    fontSize: 15,
+                    fontWeight: 400,
+                    lineHeight: 1.65,
+                    letterSpacing: "normal",
+                    color: "#606060",
+                  }}
+                >
                   {item.body}
                 </p>
               </div>

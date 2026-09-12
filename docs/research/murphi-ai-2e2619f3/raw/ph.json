@@ -1,0 +1,1034 @@
+{
+ "slug": "public-health-and-corrections-embed-ai-into-ehr-workflows",
+ "title": "Public Health And Corrections - Embed AI Into EHR Workflows | Murphi AI",
+ "description": "Murphi.ai gives correctional and public health EHR platforms a complete, embeddable AI layer — scribe, ambient documentation, voice-to-text dictation,",
+ "hero": {
+  "breadcrumb": [
+   {
+    "label": "Who We Serve — Public Health & Corrections",
+    "active": false,
+    "href": "/public-health-and-corrections/"
+   },
+   {
+    "label": "Embed AI into EHR Workflows",
+    "active": true,
+    "href": null
+   }
+  ],
+  "separator": "›",
+  "h1": "Embed Public Health & Corrections AI Features into Your EHR Workflows",
+  "sub": "Murphi.ai gives correctional and public health EHR platforms a complete, embeddable AI layer — scribe, ambient documentation, voice-to-text dictation, translation, clinical summaries, and behavior & risk intelligence. Delivered via encrypted API, SSO, or iFrame. Under your brand. Zero token cost.",
+  "buttons": [
+   {
+    "variant": "solid",
+    "label": "Request Demo",
+    "href": "/contact-us/"
+   },
+   {
+    "variant": "outline",
+    "label": "See All Solutions →",
+    "href": "/white-labeling/"
+   }
+  ]
+ },
+ "who": {
+  "eyebrow": "Who It's For",
+  "title": "Public Health & Corrections",
+  "tags": [
+   "County Jails",
+   "State DOC Facilities",
+   "Federal Detention",
+   "Juvenile Justice Facilities",
+   "Community Corrections",
+   "Public Health Departments"
+  ],
+  "desc": "Correctional healthcare runs on high patient turnover, custody constraints, and some of the heaviest audit and accreditation scrutiny in medicine — NCCHC, ACA, state DOC, and court-monitored consent decrees all watching the same chart. Murphi.ai gives your EHR platform ambient AI documentation, voice-to-text dictation, translation, and behavior & risk intelligence — embeddable into your existing screens and workflows without a platform rebuild."
+ },
+ "trust": {
+  "items": [
+   {
+    "icon": "ph-trust-0",
+    "label": "HIPAA Compliant"
+   },
+   {
+    "icon": "ph-trust-1",
+    "label": "SOC 2 Certified"
+   },
+   {
+    "icon": "ph-trust-2",
+    "label": "ISO 27001"
+   },
+   {
+    "icon": "ph-trust-3",
+    "label": "BAA Signed"
+   },
+   {
+    "icon": "ph-trust-4",
+    "label": "Any EHR Integration"
+   },
+   {
+    "icon": "ph-trust-5",
+    "label": "All US Time Zones"
+   }
+  ],
+  "link": {
+   "label": "24/7 Support · Submit a Ticket →",
+   "href": "/support-ticket/"
+  }
+ },
+ "stats": {
+  "eyebrow": "Proven Outcomes",
+  "title": "What Correctional Healthcare Platforms Gain",
+  "sub": "Correctional EHRs carry a workload most healthcare software never sees — intake screening on every booking, documentation across remote housing units, and records that have to hold up to NCCHC, ACA, and state DOC audits at once.",
+  "boxes": [
+   {
+    "value": "90%",
+    "label": "Time saved on intake & chronic care documentation"
+   },
+   {
+    "value": "100%",
+    "label": "Notes completed before the clinician leaves the pod"
+   },
+   {
+    "value": "55+",
+    "label": "Languages supported for dictation & translation"
+   },
+   {
+    "value": "4–8 wks",
+    "label": "Typical beta go-live timeline"
+   }
+  ]
+ },
+ "values": {
+  "eyebrow": "Embeddable AI Modules",
+  "title": "AI Capabilities You Can Embed Today",
+  "sub": "Each module integrates into your existing EHR screens via API, SSO, or iFrame. Your brand. Your customers. Zero token cost.",
+  "cards": [
+   {
+    "icon": "ph-val-6",
+    "title": "Scribe & Ambient AI",
+    "desc": "Real-time ambient scribe drafts intake, sick call, and chronic care notes live from voice — documentation is done before the clinician leaves the pod."
+   },
+   {
+    "icon": "ph-val-7",
+    "title": "Voice-to-Text & Translation",
+    "desc": "Real-time dictation and 55+ language translation for patient communication and note generation — built for correctional population diversity."
+   },
+   {
+    "icon": "ph-val-8",
+    "title": "Clinical Summaries & Risk Intelligence",
+    "desc": "Auto-generated summaries at transfer or shift change, plus behavior pattern and risk-behavior flags surfaced from the clinical record."
+   },
+   {
+    "icon": "ph-val-9",
+    "title": "CDI & Compliance Intelligence",
+    "desc": "Real-time clinical documentation improvement against NCCHC/ACA and state DOC standards, MedPass/eMAR exception checks, and full audit trail."
+   }
+  ]
+ },
+ "ambient": {
+  "eyebrow": "Scribe & Ambient AI",
+  "title": "Custody Encounter Voice to Compliant Note — Before the Next Call",
+  "sub": "Murphi.ai listens during the intake screening, sick call, or chronic care encounter and generates structured notes in the format your EHR and DOC contract require. Clinicians review and approve — one tap to write to EHR.",
+  "chips": [
+   "Intake H&P",
+   "Chronic Care Note",
+   "Sick Call Note",
+   "Mental Health / SUD Note",
+   "Transfer Summary",
+   "Discharge / Release Summary",
+   "Segregation Check",
+   "Voice-to-Text Dictation"
+  ],
+  "stats": [
+   {
+    "value": "90%",
+    "label": "Documentation time saved"
+   },
+   {
+    "value": "4–6 hrs",
+    "label": "Returned to clinicians daily"
+   },
+   {
+    "value": "55+",
+    "label": "Languages supported"
+   }
+  ],
+  "demo": {
+   "dots": [
+    "#EF4444",
+    "#F59E0B",
+    "#22C55E"
+   ],
+   "session": "Intake Encounter · 15 min Screening",
+   "recording": "Recording",
+   "noteLabel": "AI-Generated Intake Note — Murphi.ai",
+   "note": [
+    {
+     "text": "Subjective",
+     "strong": true
+    },
+    {
+     "text": "Patient booked into facility, reports no acute complaints. Denies chest pain, SOB, or active withdrawal symptoms. Reports history of hypertension, currently on lisinopril. "
+    },
+    {
+     "text": "Objective",
+     "strong": true
+    },
+    {
+     "text": "Vitals stable, BP 128/82. Alert and oriented x4. No visible signs of trauma or acute distress. "
+    },
+    {
+     "text": "Assessment",
+     "strong": true
+    },
+    {
+     "text": "Stable for general population housing. Chronic care follow-up required for hypertension. "
+    },
+    {
+     "text": "Plan",
+     "strong": true
+    },
+    {
+     "text": "Continue home medication pending formulary review. Schedule chronic care clinic within 14 days. "
+    }
+   ],
+   "scoresLabel": "Assessments Auto-Populated from Encounter Audio",
+   "scores": [
+    {
+     "name": "COWS",
+     "value": "0",
+     "icon": null,
+     "label": "No Withdrawal"
+    },
+    {
+     "name": "Behavior",
+     "value": "—",
+     "icon": null,
+     "label": "No Flags Noted"
+    },
+    {
+     "name": "Immun.",
+     "value": "",
+     "icon": "ph-score-10",
+     "label": "Up to Date"
+    }
+   ],
+   "actions": [
+    {
+     "variant": "primary",
+     "icon": "ph-act-11",
+     "label": "Approve & Send to EHR"
+    },
+    {
+     "variant": "secondary",
+     "icon": null,
+     "label": "Edit"
+    },
+    {
+     "variant": "secondary",
+     "icon": null,
+     "label": "Flag"
+    }
+   ]
+  }
+ },
+ "features": {
+  "eyebrow": "Feature Explorer",
+  "title": "All AI Features Available for Embedding",
+  "sub": "Browse by workflow type. Every feature is embeddable via API, SSO, iFrame, or as a fully white-labeled component inside your EHR.",
+  "tabs": [
+   {
+    "key": "all",
+    "label": "All Features",
+    "active": true
+   },
+   {
+    "key": "documentation",
+    "label": "Documentation",
+    "active": false
+   },
+   {
+    "key": "clinical",
+    "label": "Clinical Intelligence",
+    "active": false
+   },
+   {
+    "key": "behavior",
+    "label": "Behavior & Risk",
+    "active": false
+   },
+   {
+    "key": "rcm",
+    "label": "RCM & Revenue",
+    "active": false
+   },
+   {
+    "key": "compliance",
+    "label": "Compliance & Audit",
+    "active": false
+   }
+  ],
+  "filters": [
+   {
+    "key": "all",
+    "label": "All Types",
+    "active": true
+   },
+   {
+    "key": "Ambient AI",
+    "label": "Ambient AI",
+    "active": false
+   },
+   {
+    "key": "Voice-to-Text",
+    "label": "Voice-to-Text",
+    "active": false
+   },
+   {
+    "key": "Translation",
+    "label": "Translation",
+    "active": false
+   },
+   {
+    "key": "Clinical AI",
+    "label": "Clinical AI",
+    "active": false
+   },
+   {
+    "key": "Agentic AI",
+    "label": "Agentic AI",
+    "active": false
+   },
+   {
+    "key": "Compliance AI",
+    "label": "Compliance AI",
+    "active": false
+   },
+   {
+    "key": "Workflow Automation",
+    "label": "Automation",
+    "active": false
+   }
+  ],
+  "badgeClasses": {
+   "Ambient AI": "ambient",
+   "Voice-to-Text": "voice",
+   "Translation": "translation",
+   "Clinical AI": "clinical",
+   "Agentic AI": "agentic",
+   "Compliance AI": "compliance",
+   "Payments": "payments",
+   "Workflow Automation": "workflow"
+  },
+  "empty": "No features match this filter. Try selecting All Types.",
+  "countSuffix": {
+   "one": "feature",
+   "many": "features"
+  },
+  "categories": [
+   {
+    "key": "documentation",
+    "label": "Clinical Documentation",
+    "icon": "note",
+    "tab": "documentation",
+    "features": [
+     {
+      "name": "Scribe — Real-Time Ambient Scribe",
+      "desc": "Listens live during the clinical encounter and drafts the note as it happens — documentation is done before the clinician leaves the pod.",
+      "type": "Ambient AI",
+      "tone": "blue",
+      "icon": "mic"
+     },
+     {
+      "name": "Ambient AI Intake Capture",
+      "desc": "Generates a structured intake H&P from voice during booking health screening — no separate charting step after the encounter.",
+      "type": "Ambient AI",
+      "tone": "blue",
+      "icon": "brain"
+     },
+     {
+      "name": "Chronic Care Note Generation",
+      "desc": "Structures chronic care progress notes from voice, capturing status, medication continuation, and follow-up plan.",
+      "type": "Ambient AI",
+      "tone": "blue",
+      "icon": "pill"
+     },
+     {
+      "name": "Sick Call Note Generation",
+      "desc": "Generates structured sick call encounter notes from voice, formatted for rapid clinician review and audit.",
+      "type": "Ambient AI",
+      "tone": "blue",
+      "icon": "stethoscope"
+     },
+     {
+      "name": "Mental Health / SUD Note Generation",
+      "desc": "Produces mental health and substance use encounter notes aligned to correctional behavioral health documentation standards.",
+      "type": "Ambient AI",
+      "tone": "blue",
+      "icon": "clipboard"
+     },
+     {
+      "name": "Transfer & Discharge Summary Generation",
+      "desc": "Creates structured transfer and release summaries from encounter history so the next facility or clinician has what they need.",
+      "type": "Ambient AI",
+      "tone": "blue",
+      "icon": "upload"
+     },
+     {
+      "name": "Voice-to-Text Dictation",
+      "desc": "Clinicians dictate directly into any note field or free-text form. Transcription happens in real time — no separate app.",
+      "type": "Voice-to-Text",
+      "tone": "teal",
+      "icon": "talk"
+     },
+     {
+      "name": "Translation — 55+ Languages",
+      "desc": "Real-time translation for patient communication and note generation, built for the language diversity of correctional populations.",
+      "type": "Translation",
+      "tone": "teal",
+      "icon": "globe"
+     },
+     {
+      "name": "AI Rewrite",
+      "desc": "Improves draft clinical text for clarity, specificity, and audit compliance — turning vague notes into defensible documentation.",
+      "type": "Workflow Automation",
+      "tone": "indigo",
+      "icon": "pencil"
+     },
+     {
+      "name": "Clinical Summaries",
+      "desc": "Auto-generated chart summaries at transfer, shift change, or court appearance — condensing the full record into what the next clinician needs.",
+      "type": "Clinical AI",
+      "tone": "green",
+      "icon": "file"
+     },
+     {
+      "name": "Handwriting-to-Text",
+      "desc": "Converts handwritten encounter notes and intake forms into structured digital text using AI-powered recognition.",
+      "type": "Workflow Automation",
+      "tone": "indigo",
+      "icon": "pencil"
+     }
+    ]
+   },
+   {
+    "key": "clinical",
+    "label": "Clinical Intelligence",
+    "icon": "brain",
+    "tab": "clinical",
+    "features": [
+     {
+      "name": "Assessment Auto-Population",
+      "desc": "Extracts vitals, TB/PPD results, immunization status, and withdrawal scores directly from encounter audio — no manual entry.",
+      "type": "Clinical AI",
+      "tone": "green",
+      "icon": "bar-chart"
+     },
+     {
+      "name": "Patient Summary Reading",
+      "desc": "Reads and interprets existing patient records to surface key clinical facts, diagnoses, and care history before each encounter.",
+      "type": "Clinical AI",
+      "tone": "green",
+      "icon": "book"
+     },
+     {
+      "name": "Pre-Encounter Clinical Brief",
+      "desc": "Generates a concise brief for the clinician before each encounter — chronic conditions, last note summary, and flagged items.",
+      "type": "Clinical AI",
+      "tone": "green",
+      "icon": "notepad"
+     },
+     {
+      "name": "Ask Murphi – Clinical Q&A",
+      "desc": "Allows clinicians to ask natural-language questions against the patient record — 'When was the last TB screening?' or 'Has withdrawal been documented?'",
+      "type": "Clinical AI",
+      "tone": "teal",
+      "icon": "chat"
+     },
+     {
+      "name": "Chronic Care Plan Generation",
+      "desc": "Drafts individualized chronic care plans from intake assessment, diagnosis, and encounter goals — structured for audit and accreditation review.",
+      "type": "Clinical AI",
+      "tone": "green",
+      "icon": "target"
+     },
+     {
+      "name": "Clinical Documentation Improvement (CDI)",
+      "desc": "Reviews encounter notes for specificity, completeness, and defensibility — prompting clinicians to add supporting detail before finalization.",
+      "type": "Clinical AI",
+      "tone": "green",
+      "icon": "check-circle"
+     },
+     {
+      "name": "Document Comparison",
+      "desc": "Compares two versions of a clinical document — care plans, encounter notes, or assessments — and highlights changes for review.",
+      "type": "Clinical AI",
+      "tone": "blue",
+      "icon": "search"
+     },
+     {
+      "name": "Referral Document Scrubbing",
+      "desc": "Extracts and validates clinical information from inbound transfer and referral records — auto-populating the EHR on intake.",
+      "type": "Workflow Automation",
+      "tone": "indigo",
+      "icon": "mail"
+     }
+    ]
+   },
+   {
+    "key": "behavior",
+    "label": "Behavior & Risk",
+    "icon": "compass",
+    "tab": "behavior",
+    "features": [
+     {
+      "name": "Behavior Pattern Detection",
+      "desc": "Surfaces patterns across encounters — repeat sick call visits, medication refusals, escalating complaints — that might otherwise stay buried in individual notes.",
+      "type": "Clinical AI",
+      "tone": "green",
+      "icon": "trending-up"
+     },
+     {
+      "name": "Risk Behavior Flagging",
+      "desc": "Flags risk indicators drawn from clinical notes — self-harm language, withdrawal signs, aggression history — to support classification and housing decisions.",
+      "type": "Compliance AI",
+      "tone": "amber",
+      "icon": "shield"
+     },
+     {
+      "name": "Withdrawal Risk Scoring",
+      "desc": "Auto-captures COWS/CIWA-style withdrawal indicators from the encounter and scores them alongside the note.",
+      "type": "Clinical AI",
+      "tone": "green",
+      "icon": "medical"
+     },
+     {
+      "name": "Classification & Housing Support Brief",
+      "desc": "Compiles the clinical and behavioral record into a brief that supports — never replaces — custody classification and housing decisions.",
+      "type": "Clinical AI",
+      "tone": "green",
+      "icon": "folder"
+     },
+     {
+      "name": "Segregation / Restrictive Housing Check Documentation",
+      "desc": "Structures periodic segregation and restrictive housing health checks into a consistent, audit-ready format.",
+      "type": "Compliance AI",
+      "tone": "amber",
+      "icon": "lock"
+     }
+    ]
+   },
+   {
+    "key": "rcm",
+    "label": "RCM & Revenue",
+    "icon": "dollar",
+    "tab": "rcm",
+    "features": [
+     {
+      "name": "Coding & Claims Agent",
+      "desc": "Reviews approved notes, suggests CPT and ICD-10 codes with confidence scores, and checks documentation before claim submission.",
+      "type": "Agentic AI",
+      "tone": "indigo",
+      "icon": "tag"
+     },
+     {
+      "name": "Eligibility Check at Booking & Release",
+      "desc": "Verifies Medicaid suspension/reinstatement status at intake and release, surfacing gaps for billing staff to act on.",
+      "type": "Workflow Automation",
+      "tone": "indigo",
+      "icon": "search"
+     }
+    ]
+   },
+   {
+    "key": "compliance",
+    "label": "Compliance & Audit",
+    "icon": "shield",
+    "tab": "compliance",
+    "features": [
+     {
+      "name": "AI Audit Trail & Reporting",
+      "desc": "Logs every AI action, human review decision, edit, and approval with timestamp, user, and confidence score — exportable for audits.",
+      "type": "Compliance AI",
+      "tone": "amber",
+      "icon": "folder"
+     },
+     {
+      "name": "Note Quality Checker",
+      "desc": "Reviews completed encounter notes for clinical specificity and audit-readiness before finalization.",
+      "type": "Compliance AI",
+      "tone": "amber",
+      "icon": "check-circle"
+     },
+     {
+      "name": "Informed Consent Documentation Check",
+      "desc": "Verifies that informed consent, HIPAA notice, and release of information documentation is complete and current.",
+      "type": "Compliance AI",
+      "tone": "amber",
+      "icon": "clipboard"
+     },
+     {
+      "name": "NCCHC / ACA Accreditation Check",
+      "desc": "Reviews documentation for alignment with NCCHC and ACA correctional healthcare accreditation standards — flagging gaps before audits.",
+      "type": "Compliance AI",
+      "tone": "amber",
+      "icon": "award"
+     },
+     {
+      "name": "42 CFR Part 2 Flag & Workflow",
+      "desc": "Identifies SUD-related documentation and applies heightened access controls aligned to 42 CFR Part 2.",
+      "type": "Compliance AI",
+      "tone": "amber",
+      "icon": "lock"
+     },
+     {
+      "name": "Supervision & Co-Signature Workflow",
+      "desc": "Routes notes from provisionally licensed clinicians to supervisors for mandatory co-signature — with deadline tracking.",
+      "type": "Workflow Automation",
+      "tone": "indigo",
+      "icon": "user"
+     },
+     {
+      "name": "Medication Administration Exception Detection",
+      "desc": "Reviews eMAR/MedPass documentation against protocol in real time — flagging missed doses, refusal patterns, and non-formulary gaps before they surface as audit findings.",
+      "type": "Compliance AI",
+      "tone": "amber",
+      "icon": "pill"
+     },
+     {
+      "name": "TB/PPD & Immunization Tracking Compliance",
+      "desc": "Confirms TB screening and immunization documentation is complete and current against facility and state DOC requirements.",
+      "type": "Compliance AI",
+      "tone": "amber",
+      "icon": "stethoscope"
+     },
+     {
+      "name": "Human Review & Approval Workflow",
+      "desc": "Every AI-generated output passes through clinician review before entering the EHR record — with full edit capability.",
+      "type": "Compliance AI",
+      "tone": "teal",
+      "icon": "eye"
+     }
+    ]
+   }
+  ]
+ },
+ "iconShell": "<svg class=\"icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\">",
+ "iconLibrary": [
+  "mic",
+  "talk",
+  "compass",
+  "clipboard",
+  "check",
+  "tag",
+  "lock",
+  "shield",
+  "award",
+  "note",
+  "eye",
+  "file",
+  "cloud",
+  "close",
+  "upload",
+  "globe",
+  "pencil",
+  "bar-chart",
+  "book",
+  "notepad",
+  "chat",
+  "target",
+  "check-circle",
+  "search",
+  "mail",
+  "trending-up",
+  "medical",
+  "folder",
+  "brain",
+  "plug",
+  "puzzle",
+  "dollar",
+  "user",
+  "pill",
+  "stethoscope"
+ ],
+ "rcm": {
+  "eyebrow": "Agentic RCM",
+  "title": "Lightweight Revenue Cycle Support",
+  "sub": "Documentation and compliance are the priority for corrections. Where it's useful, Murphi.ai also offers light agentic support on the billing side — without replacing your billing team.",
+  "maxWidth": "620",
+  "cards": [
+   {
+    "icon": "ph-rcm-12",
+    "badge": "Agentic AI",
+    "title": "Coding & Compliance Support",
+    "desc": "Reviews approved notes, suggests CPT and ICD-10 codes with confidence scores, and checks documentation against medical necessity criteria before claims go out — reducing rework for your billing team.",
+    "steps": [
+     "Reads approved notes from the EHR",
+     "Suggests codes with confidence scores",
+     "Flags documentation gaps before submission"
+    ]
+   }
+  ]
+ },
+ "risk": {
+  "eyebrow": "Behavior & Risk Intelligence",
+  "title": "Surface Behavior Patterns Before They Become Incidents",
+  "sub": "Correctional records hold the signal — repeat sick call visits, medication refusals, escalating complaints, withdrawal indicators — but it's usually buried across dozens of individual notes. Murphi.ai surfaces it in the same session, feeding classification and housing decisions instead of a retrospective chart review.",
+  "outcomes": [
+   {
+    "value": "Same-session",
+    "label": "Risk flags surfaced as the note is written"
+   },
+   {
+    "value": "55+",
+    "label": "Languages for accurate patient communication"
+   },
+   {
+    "value": "Real-time",
+    "label": "Withdrawal & self-harm risk scoring"
+   },
+   {
+    "value": "Zero",
+    "label": "Manual chart review needed to catch patterns"
+   }
+  ],
+  "tags": [
+   "Same-session flagging",
+   "COWS / CIWA scoring",
+   "Classification support",
+   "55+ languages",
+   "API embeddable"
+  ],
+  "demo": {
+   "dots": [
+    "#EF4444",
+    "#F59E0B",
+    "#22C55E"
+   ],
+   "session": "Chronic Care Visit · Week 3",
+   "recording": null,
+   "noteLabel": "AI-Generated Behavior & Risk Brief — Murphi.ai",
+   "note": [
+    {
+     "text": "Pattern Detected",
+     "strong": true
+    },
+    {
+     "text": "Third sick call visit in 9 days, up from a typical baseline of one per month for this patient. "
+    },
+    {
+     "text": "Risk Indicator",
+     "strong": true
+    },
+    {
+     "text": "Language consistent with elevated distress noted in today's encounter — no explicit self-harm statement. "
+    },
+    {
+     "text": "Recommendation",
+     "strong": true
+    },
+    {
+     "text": "Flag for mental health follow-up prior to next housing review. "
+    }
+   ],
+   "scoresLabel": "Risk Scores Auto-Populated from Encounter",
+   "scores": [
+    {
+     "name": "COWS",
+     "value": "2",
+     "icon": null,
+     "label": "Mild Signs"
+    },
+    {
+     "name": "Behavior",
+     "value": "↑",
+     "icon": null,
+     "label": "Escalating Pattern"
+    },
+    {
+     "name": "Priority",
+     "value": "Med",
+     "icon": null,
+     "label": "Follow-Up Flagged"
+    }
+   ],
+   "actions": [
+    {
+     "variant": "primary",
+     "icon": "ph-act-13",
+     "label": "Route to Mental Health"
+    },
+    {
+     "variant": "secondary",
+     "icon": null,
+     "label": "Edit"
+    },
+    {
+     "variant": "secondary",
+     "icon": null,
+     "label": "Dismiss"
+    }
+   ]
+  }
+ },
+ "integration": {
+  "eyebrow": "Integration Options",
+  "title": "Three Ways to Embed Murphi.ai",
+  "sub": "Choose the approach that matches how your EHR platform is built — or combine all three.",
+  "cards": [
+   {
+    "icon": "ph-int-14",
+    "title": "Embedded Components",
+    "desc": "Drop AI capabilities directly into your existing clinical and MedPass screens — no context switch for correctional clinicians or nursing staff."
+   },
+   {
+    "icon": "ph-int-15",
+    "title": "Encrypted API & SSO",
+    "desc": "Connect Murphi.ai to your EHR data, documents, and actions via FHIR R4, HL7 v2, or REST API. HIPAA-grade encryption throughout."
+   },
+   {
+    "icon": "ph-int-16",
+    "title": "White-Label Platform",
+    "desc": "Launch the complete Murphi.ai AI platform under your brand. Your logo, your pricing, your customer relationships — Murphi never visible."
+   }
+  ]
+ },
+ "platform": {
+  "eyebrow": "Platform Infrastructure",
+  "title": "The AI Infrastructure Behind Every Feature",
+  "sub": "Your team sees a clean integration. Behind it, Murphi.ai runs the orchestration, governance, security, and observability automatically.",
+  "layers": [
+   {
+    "tone": "blue",
+    "eyebrow": "Experience Layer",
+    "name": "What Clinicians & Patients See",
+    "chips": [
+     "Embedded EHR Components",
+     "White-Labeled Workflows",
+     "Mobile & Web Apps",
+     "Clinician Review Interface",
+     "Secure Care Team Messaging"
+    ]
+   },
+   {
+    "tone": "indigo",
+    "eyebrow": "AI Orchestration Layer",
+    "name": "Intelligence & Agentic Engine",
+    "chips": [
+     "Multi-Model Orchestration",
+     "Agentic AI Workflows",
+     "Prompt & Version Management",
+     "RAG & Clinical Context",
+     "Confidence Scoring",
+     "Token Optimization"
+    ]
+   },
+   {
+    "tone": "teal",
+    "eyebrow": "Integration Layer",
+    "name": "EHR Data In · Output Out",
+    "chips": [
+     "REST APIs",
+     "FHIR R4",
+     "HL7 v2",
+     "SSO / iFrame",
+     "PDF Processing",
+     "RPA When Required",
+     "835 Remittance"
+    ]
+   },
+   {
+    "tone": "gray",
+    "eyebrow": "Governance & Operations",
+    "name": "Security, Compliance & Support",
+    "chips": [
+     "HIPAA-Aligned Controls",
+     "Audit Logs",
+     "Role-Based Access",
+     "Model Monitoring",
+     "Human-in-the-Loop",
+     "24/7 Support",
+     "BAA Signed"
+    ]
+   }
+  ],
+  "callout": [
+   {
+    "text": "Zero token cost to your platform.",
+    "strong": true
+   },
+   {
+    "text": " Murphi.ai absorbs all AI infrastructure costs. Your platform pays a flat fee — never a per-token or per-model charge. Your data and IP remain entirely yours."
+   }
+  ]
+ },
+ "roadmap": {
+  "eyebrow": "Implementation Path",
+  "title": "Beta Live in 4–8 Weeks, Not Months",
+  "sub": "Start with one high-value workflow. The same integration layer scales to every module without a platform rebuild.",
+  "items": [
+   {
+    "n": "1",
+    "title": "Map & Discover",
+    "desc": "Identify the highest-burden workflows — typically intake documentation, dictation, or translation at booking."
+   },
+   {
+    "n": "2",
+    "title": "Pilot Integration",
+    "desc": "API or SSO integration live. First AI feature active within 4–8 weeks. Clinician feedback collected."
+   },
+   {
+    "n": "3",
+    "title": "Validate & Launch",
+    "desc": "Compliance controls confirmed, human-review workflow hardened, full production rollout."
+   },
+   {
+    "n": "4",
+    "title": "Expand Platform-Wide",
+    "desc": "Add clinical summaries, behavior & risk intelligence, and coding support on the integration already in place."
+   }
+  ]
+ },
+ "security": {
+  "eyebrow": "Security & Compliance",
+  "title": "Built for Correctional-Grade Trust",
+  "sub": "Every Murphi.ai workflow includes 42 CFR Part 2 awareness for SUD/MAT documentation, and HIPAA controls built into every layer.",
+  "cards": [
+   {
+    "icon": "ph-sec-17",
+    "title": "HIPAA-Aligned",
+    "desc": "PHI handling and access controls in every workflow layer"
+   },
+   {
+    "icon": "ph-sec-18",
+    "title": "42 CFR Part 2",
+    "desc": "SUD documentation with heightened confidentiality controls"
+   },
+   {
+    "icon": "ph-sec-19",
+    "title": "SOC 2 Certified",
+    "desc": "Independent third-party audit completed annually"
+   },
+   {
+    "icon": "ph-sec-20",
+    "title": "ISO 27001",
+    "desc": "International information security management standards"
+   },
+   {
+    "icon": "ph-sec-21",
+    "title": "Audit Trails",
+    "desc": "Every AI action and approval logged with full attribution"
+   },
+   {
+    "icon": "ph-sec-22",
+    "title": "Human-in-the-Loop",
+    "desc": "Clinician approval required before any EHR write-back"
+   },
+   {
+    "icon": "ph-sec-23",
+    "title": "BAA Signed",
+    "desc": "Business Associate Agreements with every partner platform"
+   },
+   {
+    "icon": "ph-sec-24",
+    "title": "AWS & GCP Only",
+    "desc": "HIPAA-eligible cloud — no other providers used"
+   }
+  ]
+ },
+ "drawer": {
+  "closeIcon": "ph-drawer-25",
+  "cta": {
+   "label": "Discuss This Integration →",
+   "href": "/contact-us/"
+  },
+  "stepsLabel": "Workflow Steps",
+  "steps": [
+   {
+    "tone": null,
+    "n": "1",
+    "strong": {
+     "default": "Input"
+    },
+    "text": {
+     "agentic": "EHR schedule, clinical notes, payer portal data, or 835 remittance files",
+     "payments": "Patient balance data from EHR or billing system",
+     "default": "Session voice, EHR record, or clinical documents"
+    }
+   },
+   {
+    "tone": null,
+    "n": "2",
+    "strong": {
+     "default": "Murphi.ai Processing"
+    },
+    "text": {
+     "agentic": "AI agent executes autonomously — gathering data, formatting, and submitting",
+     "payments": "HIPAA-compliant SMS generated with secure payment link via Everyware",
+     "default": "AI extracts, structures, and validates relevant clinical information"
+    }
+   },
+   {
+    "tone": null,
+    "n": "3",
+    "strong": {
+     "agentic": "Agent Action",
+     "default": "Validation & Gap Check"
+    },
+    "text": {
+     "agentic": "Agent completes action and logs result",
+     "default": "Missing elements and compliance gaps flagged for clinician"
+    }
+   },
+   {
+    "tone": "t",
+    "n": "4",
+    "strong": {
+     "default": "Human Review"
+    },
+    "text": {
+     "payments": "Staff reviews payment status and exceptions",
+     "default": "Clinician reviews AI output, edits if needed, and approves"
+    }
+   },
+   {
+    "tone": "g",
+    "n": "5",
+    "strong": {
+     "default": "EHR Output"
+    },
+    "text": {
+     "agentic": "Result posted to EHR or billing system with full audit log",
+     "payments": "Payment collected, EHR balance updated, receipt sent to patient",
+     "default": "Approved output written to EHR at field level with audit trail"
+    }
+   }
+  ],
+  "sections": [
+   {
+    "label": "EHR Integration Options",
+    "chips": [
+     "Embedded Component",
+     "REST API",
+     "SSO / iFrame",
+     "FHIR R4",
+     "White-Label"
+    ]
+   },
+   {
+    "label": "Audit & Compliance Controls",
+    "chips": [
+     "AI Action Log",
+     "Human Approval Record",
+     "Edit History",
+     "Confidence Score Stored",
+     "HIPAA-Aligned",
+     "BAA Covered"
+    ]
+   }
+  ],
+  "costLabel": "Zero Token Cost to Your Platform",
+  "costBody": "Murphi.ai absorbs all AI infrastructure costs. Your platform pays a flat fee — never a per-token or per-model charge. Your data and IP remain entirely yours."
+ }
+}

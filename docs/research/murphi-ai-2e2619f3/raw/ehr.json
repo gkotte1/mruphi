@@ -1,0 +1,1077 @@
+{
+ "slug": "ehr-ai-integration-platform",
+ "title": "EHR AI Integration Platform | Murphi AI",
+ "description": "Murphi.ai enables Home Health, Hospice, and Palliative Care platforms to introduce ambient documentation, intelligent assessments, clinical quality checks,",
+ "hero": {
+  "pills": [
+   {
+    "label": "EHR AI Integration Platform",
+    "href": null
+   },
+   {
+    "label": "Who We Serve — Post-Acute Care",
+    "href": "/post-acute-care/"
+   },
+   {
+    "label": "White-Label Partner Program",
+    "href": "/white-label-partner-program/"
+   }
+  ],
+  "h1Before": "Embed Healthcare AI Into Every",
+  "h1Em": "Clinical Workflow",
+  "h1After": "",
+  "sub": "Murphi.ai enables Home Health, Hospice, and Palliative Care platforms to introduce ambient documentation, intelligent assessments, clinical quality checks, and compliance workflows—without building or maintaining the complete enterprise AI infrastructure internally.",
+  "buttons": [
+   {
+    "variant": "primary",
+    "label": "Explore Features",
+    "href": "/integration/"
+   },
+   {
+    "variant": "outline",
+    "label": "Discuss an Integration",
+    "href": "/contact-us/"
+   }
+  ],
+  "nodes": [
+   {
+    "icon": "ehr-node-0",
+    "label": "Clinician Interaction",
+    "sub": "Voice, text, EHR data"
+   },
+   {
+    "icon": "ehr-node-1",
+    "label": "Structured EHR Documentation",
+    "sub": "Validated, compliant, approved"
+   }
+  ],
+  "arrow": "→",
+  "ai": {
+   "logo": "Murphi.ai",
+   "label": "Intelligence Layer",
+   "chips": [
+    "Ambient AI",
+    "Voice-to-Text",
+    "Document Intelligence",
+    "Clinical Validation",
+    "Compliance Review",
+    "Workflow Automation"
+   ]
+  }
+ },
+ "valueStrip": {
+  "message": "Launch individual AI workflows in phases while using one scalable platform across the entire product.",
+  "cards": [
+   {
+    "icon": "ehr-value-2",
+    "title": "Embedded and White-Labeled",
+    "desc": "Deploy under your brand, inside your existing user experience"
+   },
+   {
+    "icon": "ehr-value-3",
+    "title": "API-Driven Integration",
+    "desc": "Connect to EHR data, documents, and actions through clean APIs"
+   },
+   {
+    "icon": "ehr-value-4",
+    "title": "Human-in-the-Loop",
+    "desc": "Clinician review and approval before any EHR write-back"
+   },
+   {
+    "icon": "ehr-value-5",
+    "title": "Enterprise AI Infrastructure",
+    "desc": "Production-grade orchestration, governance, and observability"
+   }
+  ]
+ },
+ "features": {
+  "tag": "Interactive Feature Explorer",
+  "title": "AI Features Across the Care Continuum",
+  "sub": "Explore by care setting or filter by workflow type. Each feature is available as an embedded component, API, or white-labeled experience.",
+  "tabs": [
+   {
+    "key": "all",
+    "label": "All Features"
+   },
+   {
+    "key": "shared",
+    "label": "Shared AI Capabilities"
+   },
+   {
+    "key": "homeheath",
+    "label": "Home Health"
+   },
+   {
+    "key": "hospice",
+    "label": "Hospice & Palliative Care"
+   }
+  ],
+  "filters": [
+   {
+    "key": "all",
+    "label": "All Types"
+   },
+   {
+    "key": "Documentation",
+    "label": "Documentation"
+   },
+   {
+    "key": "Assessments",
+    "label": "Assessments"
+   },
+   {
+    "key": "Intake",
+    "label": "Intake & Referrals"
+   },
+   {
+    "key": "Medications",
+    "label": "Medications"
+   },
+   {
+    "key": "Quality",
+    "label": "Quality & Compliance"
+   },
+   {
+    "key": "Coding",
+    "label": "Coding & Revenue"
+   },
+   {
+    "key": "Care",
+    "label": "Care Coordination"
+   }
+  ],
+  "empty": "No features match the selected filter.",
+  "groups": [
+   {
+    "key": "shared",
+    "label": "Shared AI Capabilities",
+    "color": "blue",
+    "categories": [
+     {
+      "name": "Documentation",
+      "items": [
+       {
+        "name": "Ambient AI Clinical Documentation",
+        "desc": "Converts spoken clinician-patient encounters into structured clinical notes using ambient listening.",
+        "type": "Ambient AI",
+        "icon": "mic",
+        "iconColor": "purple",
+        "category": "Documentation"
+       },
+       {
+        "name": "Multilingual Voice-to-Text",
+        "desc": "Transcribes clinical speech in multiple languages with healthcare terminology optimization.",
+        "type": "Voice-to-Text",
+        "icon": "message-circle",
+        "iconColor": "teal",
+        "category": "Documentation"
+       },
+       {
+        "name": "AI Rewrite",
+        "desc": "Reformats and improves draft clinical text for clarity, completeness, and compliance.",
+        "type": "Document AI",
+        "icon": "edit-3",
+        "iconColor": "blue",
+        "category": "Documentation"
+       },
+       {
+        "name": "Smart Summary",
+        "desc": "Generates concise clinical summaries from long documentation or encounter transcripts.",
+        "type": "Clinical AI",
+        "icon": "file-text",
+        "iconColor": "green",
+        "category": "Documentation"
+       },
+       {
+        "name": "Progress Summary",
+        "desc": "Produces structured progress summaries for patient records and care transitions.",
+        "type": "Document AI",
+        "icon": "bar-chart",
+        "iconColor": "blue",
+        "category": "Documentation"
+       },
+       {
+        "name": "Handwriting-to-Text",
+        "desc": "Converts handwritten clinical forms and notes into structured digital text.",
+        "type": "Document AI",
+        "icon": "edit-3",
+        "iconColor": "blue",
+        "category": "Documentation"
+       },
+       {
+        "name": "Document Comparison",
+        "desc": "Identifies differences between two versions of clinical documents or care plans.",
+        "type": "Document AI",
+        "icon": "search",
+        "iconColor": "blue",
+        "category": "Documentation"
+       }
+      ]
+     },
+     {
+      "name": "Intake & Referrals",
+      "items": [
+       {
+        "name": "Referral Document Scrubbing",
+        "desc": "Extracts and validates clinical information from inbound referral PDFs and fax documents.",
+        "type": "Document AI",
+        "icon": "mail",
+        "iconColor": "blue",
+        "category": "Intake"
+       },
+       {
+        "name": "Referral Summary",
+        "desc": "Generates a structured summary of referral information for care team handoff.",
+        "type": "Clinical AI",
+        "icon": "clipboard",
+        "iconColor": "green",
+        "category": "Intake"
+       },
+       {
+        "name": "Referral Medication Pre-Population",
+        "desc": "Extracts and pre-populates medication lists from referral documentation.",
+        "type": "Document AI",
+        "icon": "pill",
+        "iconColor": "blue",
+        "category": "Intake"
+       },
+       {
+        "name": "AI-Powered Intake Form",
+        "desc": "Auto-fills patient intake forms from available referral, EHR, and clinical document sources.",
+        "type": "Workflow Automation",
+        "icon": "file-text",
+        "iconColor": "purple",
+        "category": "Intake"
+       }
+      ]
+     },
+     {
+      "name": "Medications",
+      "items": [
+       {
+        "name": "Medication Capture and Reconciliation",
+        "desc": "Captures medications from multiple sources and flags discrepancies for clinician review.",
+        "type": "Clinical AI",
+        "icon": "stethoscope",
+        "iconColor": "green",
+        "category": "Medications"
+       }
+      ]
+     },
+     {
+      "name": "Quality & Compliance",
+      "items": [
+       {
+        "name": "Clinical Documentation Gap Checker",
+        "desc": "Identifies missing or incomplete clinical documentation elements before submission.",
+        "type": "Compliance AI",
+        "icon": "search",
+        "iconColor": "blue",
+        "category": "Quality"
+       },
+       {
+        "name": "Visit Note Quality Checker",
+        "desc": "Reviews visit notes for completeness, clinical specificity, and regulatory alignment.",
+        "type": "Compliance AI",
+        "icon": "check-circle",
+        "iconColor": "blue",
+        "category": "Quality"
+       },
+       {
+        "name": "Plan-of-Care Checker",
+        "desc": "Validates plan-of-care documentation against clinical standards and payer requirements.",
+        "type": "Compliance AI",
+        "icon": "clipboard",
+        "iconColor": "blue",
+        "category": "Quality"
+       },
+       {
+        "name": "Human Review and Approval",
+        "desc": "Structured workflow for clinician sign-off before any AI output is written into the EHR.",
+        "type": "Workflow Automation",
+        "icon": "eye",
+        "iconColor": "teal",
+        "category": "Quality"
+       },
+       {
+        "name": "AI Audit Trail and Reporting",
+        "desc": "Logs every AI action, human review decision, and document change for compliance reporting.",
+        "type": "Compliance AI",
+        "icon": "folder",
+        "iconColor": "blue",
+        "category": "Quality"
+       }
+      ]
+     },
+     {
+      "name": "Coding & Revenue",
+      "items": [
+       {
+        "name": "Diagnosis and Coding Suggestions",
+        "desc": "Suggests ICD-10 codes based on clinical documentation content and assessment findings.",
+        "type": "Clinical AI",
+        "icon": "tag",
+        "iconColor": "green",
+        "category": "Coding"
+       }
+      ]
+     },
+     {
+      "name": "Assessments",
+      "items": [
+       {
+        "name": "Patient Summary Reading",
+        "desc": "Reads and interprets existing patient summary documents to surface key clinical facts.",
+        "type": "Clinical AI",
+        "icon": "book-open",
+        "iconColor": "green",
+        "category": "Assessments"
+       },
+       {
+        "name": "Ask Murphi – Clinical Q&A",
+        "desc": "Allows clinicians to ask natural language questions against patient records and clinical context.",
+        "type": "Clinical AI",
+        "icon": "message-square",
+        "iconColor": "teal",
+        "category": "Assessments"
+       },
+       {
+        "name": "Pre-Encounter Brief",
+        "desc": "Generates a concise patient brief for clinicians before a scheduled visit or encounter.",
+        "type": "Clinical AI",
+        "icon": "clipboard-list",
+        "iconColor": "green",
+        "category": "Assessments"
+       },
+       {
+        "name": "Post-Encounter Check",
+        "desc": "Reviews post-encounter documentation for gaps, clinical completeness, and follow-up actions.",
+        "type": "Compliance AI",
+        "icon": "check-square",
+        "iconColor": "blue",
+        "category": "Assessments"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "key": "homeheath",
+    "label": "Home Health",
+    "color": "teal",
+    "categories": [
+     {
+      "name": "Assessments & Admission",
+      "items": [
+       {
+        "name": "Ambient AI for Start of Care",
+        "desc": "Captures and structures the start-of-care clinical encounter through ambient AI listening.",
+        "type": "Ambient AI",
+        "icon": "mic",
+        "iconColor": "purple",
+        "category": "Assessments"
+       },
+       {
+        "name": "OASIS-E1 Voice-to-Text",
+        "desc": "Transcribes OASIS-E1 assessment responses directly from spoken clinician input.",
+        "type": "Voice-to-Text",
+        "icon": "message-circle",
+        "iconColor": "teal",
+        "category": "Assessments"
+       },
+       {
+        "name": "OASIS-E1 Handwriting-to-Text",
+        "desc": "Converts handwritten OASIS assessment forms into structured digital data.",
+        "type": "Document AI",
+        "icon": "edit-3",
+        "iconColor": "blue",
+        "category": "Assessments"
+       },
+       {
+        "name": "OASIS Scrubber and Checker",
+        "desc": "Validates OASIS item responses for consistency, completeness, and CMS guideline compliance.",
+        "type": "Compliance AI",
+        "icon": "search",
+        "iconColor": "blue",
+        "category": "Assessments"
+       },
+       {
+        "name": "OASIS Coding Support",
+        "desc": "Suggests OASIS item responses and primary diagnoses based on clinical documentation.",
+        "type": "Clinical AI",
+        "icon": "tag",
+        "iconColor": "green",
+        "category": "Assessments"
+       },
+       {
+        "name": "Admission Documentation Generation",
+        "desc": "Generates structured admission documentation from assessment data and encounter notes.",
+        "type": "Document AI",
+        "icon": "file-text",
+        "iconColor": "blue",
+        "category": "Assessments"
+       }
+      ]
+     },
+     {
+      "name": "Discipline-Specific Documentation",
+      "items": [
+       {
+        "name": "Skilled Nursing Visit Notes",
+        "desc": "Generates structured skilled nursing visit notes from ambient or voice input.",
+        "type": "Ambient AI",
+        "icon": "stethoscope",
+        "iconColor": "purple",
+        "category": "Documentation"
+       },
+       {
+        "name": "Physical Therapy Visit Notes",
+        "desc": "Creates PT visit notes capturing functional goals, interventions, and patient response.",
+        "type": "Ambient AI",
+        "icon": "activity",
+        "iconColor": "purple",
+        "category": "Documentation"
+       },
+       {
+        "name": "Occupational Therapy Visit Notes",
+        "desc": "Documents OT encounters including ADL assessments, adaptive strategies, and outcomes.",
+        "type": "Ambient AI",
+        "icon": "handshake",
+        "iconColor": "purple",
+        "category": "Documentation"
+       },
+       {
+        "name": "Speech Therapy Visit Notes",
+        "desc": "Generates SLP visit documentation covering communication, swallowing, and cognition.",
+        "type": "Ambient AI",
+        "icon": "message-square",
+        "iconColor": "purple",
+        "category": "Documentation"
+       },
+       {
+        "name": "Medical Social Work Notes",
+        "desc": "Structures social work encounter documentation for psychosocial and resource needs.",
+        "type": "Ambient AI",
+        "icon": "handshake",
+        "iconColor": "purple",
+        "category": "Documentation"
+       },
+       {
+        "name": "Home Health Aide Notes",
+        "desc": "Captures and structures aide visit activities, patient status, and caregiver observations.",
+        "type": "Document AI",
+        "icon": "home",
+        "iconColor": "blue",
+        "category": "Documentation"
+       },
+       {
+        "name": "Therapy Evaluation and Reassessment Notes",
+        "desc": "Generates evaluation and reassessment documentation for therapy disciplines.",
+        "type": "Document AI",
+        "icon": "clipboard",
+        "iconColor": "blue",
+        "category": "Documentation"
+       }
+      ]
+     },
+     {
+      "name": "Quality, Eligibility & Compliance",
+      "items": [
+       {
+        "name": "Homebound Status Validation",
+        "desc": "Reviews clinical documentation to validate and support homebound status criteria.",
+        "type": "Compliance AI",
+        "icon": "check-circle",
+        "iconColor": "blue",
+        "category": "Quality"
+       },
+       {
+        "name": "Face-to-Face Encounter Validation",
+        "desc": "Validates face-to-face encounter documentation for timing, content, and physician narrative.",
+        "type": "Compliance AI",
+        "icon": "user",
+        "iconColor": "blue",
+        "category": "Quality"
+       },
+       {
+        "name": "Skilled Need Validation",
+        "desc": "Reviews documentation to confirm skilled need justification against Medicare standards.",
+        "type": "Compliance AI",
+        "icon": "lock",
+        "iconColor": "blue",
+        "category": "Quality"
+       },
+       {
+        "name": "L1, L2 and L3 Documentation Review",
+        "desc": "Applies layered clinical documentation review for pre-claim, pre-billing, and ADR readiness.",
+        "type": "Compliance AI",
+        "icon": "bar-chart",
+        "iconColor": "blue",
+        "category": "Quality"
+       }
+      ]
+     },
+     {
+      "name": "Recertification, Payment & Audit",
+      "items": [
+       {
+        "name": "Recertification Summary",
+        "desc": "Generates physician recertification summaries from current clinical and progress documentation.",
+        "type": "Document AI",
+        "icon": "refresh-cw",
+        "iconColor": "blue",
+        "category": "Coding"
+       },
+       {
+        "name": "60-Day Progress Summary",
+        "desc": "Creates structured 60-day progress summaries for PDGM period reporting.",
+        "type": "Document AI",
+        "icon": "trending-up",
+        "iconColor": "blue",
+        "category": "Coding"
+       },
+       {
+        "name": "PDGM Review",
+        "desc": "Analyzes documentation for PDGM accuracy, grouper alignment, and revenue optimization.",
+        "type": "Clinical AI",
+        "icon": "dollar",
+        "iconColor": "green",
+        "category": "Coding"
+       },
+       {
+        "name": "Home Health ADR Review",
+        "desc": "Prepares and reviews documentation packages in response to Additional Documentation Requests.",
+        "type": "Compliance AI",
+        "icon": "folder-open",
+        "iconColor": "blue",
+        "category": "Quality"
+       },
+       {
+        "name": "Transfer Summary",
+        "desc": "Generates structured transfer summaries for care continuity across settings.",
+        "type": "Document AI",
+        "icon": "repeat",
+        "iconColor": "blue",
+        "category": "Care"
+       },
+       {
+        "name": "Discharge Summary",
+        "desc": "Creates compliant discharge summaries capturing patient outcomes, instructions, and follow-up.",
+        "type": "Document AI",
+        "icon": "send",
+        "iconColor": "blue",
+        "category": "Care"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "key": "hospice",
+    "label": "Hospice & Palliative Care",
+    "color": "purple",
+    "categories": [
+     {
+      "name": "Admission & Assessments",
+      "items": [
+       {
+        "name": "Hospice Ambient AI",
+        "desc": "Captures hospice intake and care encounters through ambient AI in the clinical environment.",
+        "type": "Ambient AI",
+        "icon": "mic",
+        "iconColor": "purple",
+        "category": "Assessments"
+       },
+       {
+        "name": "HOPE Voice-to-Text",
+        "desc": "Transcribes HOPE assessment items from spoken clinician input at point of care.",
+        "type": "Voice-to-Text",
+        "icon": "message-circle",
+        "iconColor": "teal",
+        "category": "Assessments"
+       },
+       {
+        "name": "HOPE Checker",
+        "desc": "Reviews HOPE assessment documentation for completeness and CMS compliance.",
+        "type": "Compliance AI",
+        "icon": "search",
+        "iconColor": "blue",
+        "category": "Assessments"
+       },
+       {
+        "name": "Hospice Admission Summary",
+        "desc": "Generates a structured admission summary from intake assessment and referral documents.",
+        "type": "Document AI",
+        "icon": "clipboard",
+        "iconColor": "blue",
+        "category": "Assessments"
+       },
+       {
+        "name": "Hospice Eligibility Review",
+        "desc": "Analyzes clinical documentation to support six-month terminal prognosis eligibility.",
+        "type": "Clinical AI",
+        "icon": "stethoscope",
+        "iconColor": "green",
+        "category": "Assessments"
+       },
+       {
+        "name": "Terminal Prognosis Support",
+        "desc": "Generates clinical narratives supporting terminal prognosis from available documentation.",
+        "type": "Clinical AI",
+        "icon": "file-text",
+        "iconColor": "green",
+        "category": "Assessments"
+       }
+      ]
+     },
+     {
+      "name": "Certification & Recertification",
+      "items": [
+       {
+        "name": "Certification of Terminal Illness Validator",
+        "desc": "Reviews CTI documentation for clinical narrative completeness and regulatory compliance.",
+        "type": "Compliance AI",
+        "icon": "check-circle",
+        "iconColor": "blue",
+        "category": "Quality"
+       },
+       {
+        "name": "Face-to-Face Encounter Validator",
+        "desc": "Validates hospice face-to-face encounter documentation for timing and required content.",
+        "type": "Compliance AI",
+        "icon": "user",
+        "iconColor": "blue",
+        "category": "Quality"
+       },
+       {
+        "name": "Recertification Summary",
+        "desc": "Generates recertification narrative from current clinical status and IDG documentation.",
+        "type": "Document AI",
+        "icon": "refresh-cw",
+        "iconColor": "blue",
+        "category": "Documentation"
+       },
+       {
+        "name": "Decline Analysis",
+        "desc": "Documents evidence of clinical decline to support recertification and continued eligibility.",
+        "type": "Clinical AI",
+        "icon": "trending-up",
+        "iconColor": "green",
+        "category": "Assessments"
+       }
+      ]
+     },
+     {
+      "name": "Interdisciplinary Care",
+      "items": [
+       {
+        "name": "Interdisciplinary Group Preparation",
+        "desc": "Compiles and organizes patient clinical data for IDG meeting review.",
+        "type": "Workflow Automation",
+        "icon": "users",
+        "iconColor": "teal",
+        "category": "Care"
+       },
+       {
+        "name": "Ambient AI for IDG Meetings",
+        "desc": "Captures IDG meeting discussions and generates structured follow-up documentation.",
+        "type": "Ambient AI",
+        "icon": "mic",
+        "iconColor": "purple",
+        "category": "Care"
+       },
+       {
+        "name": "IDG Summary and Follow-Up",
+        "desc": "Produces post-IDG meeting summaries with assigned action items and care plan updates.",
+        "type": "Document AI",
+        "icon": "file-text",
+        "iconColor": "blue",
+        "category": "Care"
+       },
+       {
+        "name": "Symptom and Pain Summary",
+        "desc": "Generates a structured symptom and pain management summary from clinical encounters.",
+        "type": "Clinical AI",
+        "icon": "pill",
+        "iconColor": "green",
+        "category": "Assessments"
+       }
+      ]
+     },
+     {
+      "name": "Discipline-Specific Documentation",
+      "items": [
+       {
+        "name": "Hospice Nursing Notes",
+        "desc": "Creates structured hospice nursing visit notes from ambient or voice documentation input.",
+        "type": "Ambient AI",
+        "icon": "stethoscope",
+        "iconColor": "purple",
+        "category": "Documentation"
+       },
+       {
+        "name": "Hospice Physician and NP Notes",
+        "desc": "Generates physician and nurse practitioner hospice encounter documentation.",
+        "type": "Ambient AI",
+        "icon": "stethoscope",
+        "iconColor": "purple",
+        "category": "Documentation"
+       },
+       {
+        "name": "Social Work Notes",
+        "desc": "Documents social work encounters covering psychosocial, resource, and advance care needs.",
+        "type": "Ambient AI",
+        "icon": "handshake",
+        "iconColor": "purple",
+        "category": "Documentation"
+       },
+       {
+        "name": "Chaplain and Spiritual Care Notes",
+        "desc": "Structures chaplaincy and spiritual care encounter documentation.",
+        "type": "Document AI",
+        "icon": "plus",
+        "iconColor": "blue",
+        "category": "Documentation"
+       },
+       {
+        "name": "Hospice Aide Notes",
+        "desc": "Captures and structures aide visit activities, patient comfort, and caregiver observations.",
+        "type": "Document AI",
+        "icon": "home",
+        "iconColor": "blue",
+        "category": "Documentation"
+       }
+      ]
+     },
+     {
+      "name": "Compliance, Utilization & Transitions",
+      "items": [
+       {
+        "name": "Level-of-Care Documentation Review",
+        "desc": "Reviews documentation supporting GIP, respite, or continuous home care level changes.",
+        "type": "Compliance AI",
+        "icon": "bar-chart",
+        "iconColor": "blue",
+        "category": "Quality"
+       },
+       {
+        "name": "Live Discharge Review",
+        "desc": "Prepares and validates documentation for clinically appropriate live discharges.",
+        "type": "Compliance AI",
+        "icon": "send",
+        "iconColor": "blue",
+        "category": "Quality"
+       },
+       {
+        "name": "Death and Bereavement Documentation",
+        "desc": "Generates structured death and bereavement follow-up documentation for the record.",
+        "type": "Document AI",
+        "icon": "heart",
+        "iconColor": "blue",
+        "category": "Documentation"
+       },
+       {
+        "name": "Hospice ADR Review",
+        "desc": "Organizes and reviews clinical documentation in response to hospice ADRs.",
+        "type": "Compliance AI",
+        "icon": "folder-open",
+        "iconColor": "blue",
+        "category": "Quality"
+       },
+       {
+        "name": "Hospice Cap and Utilization Intelligence",
+        "desc": "Analyzes utilization patterns and cap exposure with documentation to support decisions.",
+        "type": "Clinical AI",
+        "icon": "lightbulb",
+        "iconColor": "green",
+        "category": "Coding"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "settingLabels": {
+   "shared": "All Settings",
+   "homeheath": "Home Health",
+   "hospice": "Hospice & Palliative"
+  }
+ },
+ "platform": {
+  "tag": "Platform Infrastructure",
+  "title": "The Enterprise AI Platform Behind Every Feature",
+  "sub": "Each visible AI feature is powered by a production-grade infrastructure that handles orchestration, validation, security, and observability automatically.",
+  "layers": [
+   {
+    "tone": "blue",
+    "label": "Experience Layer",
+    "name": "What Clinicians See",
+    "chips": [
+     "Embedded EHR Components",
+     "White-Labeled Workflows",
+     "Mobile & Web Experiences",
+     "Clinician Review Interface"
+    ]
+   },
+   {
+    "tone": "purple",
+    "label": "AI Orchestration Layer",
+    "name": "Intelligence Engine",
+    "chips": [
+     "Multi-Model Orchestration",
+     "Prompt & Version Management",
+     "RAG & Clinical Context",
+     "Structured Output Validation",
+     "Confidence Scoring",
+     "Cost & Token Optimization"
+    ]
+   },
+   {
+    "tone": "teal",
+    "label": "Integration Layer",
+    "name": "Data In, Data Out",
+    "chips": [
+     "REST APIs",
+     "Webhooks",
+     "JSON / HL7 FHIR",
+     "PDF Processing",
+     "RPA When Required",
+     "Field-Level EHR Mapping"
+    ]
+   },
+   {
+    "tone": "gray",
+    "label": "Operations & Governance Layer",
+    "name": "Security & Compliance",
+    "chips": [
+     "Audit Logs",
+     "Usage Telemetry",
+     "Performance Monitoring",
+     "Security Controls",
+     "Human-in-the-Loop",
+     "Continuous Production Support"
+    ]
+   }
+  ],
+  "calloutStrong": "The AI feature may be visible to the user.",
+  "calloutRest": "The infrastructure that makes it scalable, reliable, secure, and maintainable operates entirely behind the scenes."
+ },
+ "integration": {
+  "tag": "Integration Options",
+  "title": "Three Ways to Integrate Murphi.ai",
+  "sub": "Choose the approach that matches how your platform is built—or combine all three.",
+  "cards": [
+   {
+    "icon": "ehr-int-6",
+    "title": "Embedded Components",
+    "desc": "Add AI directly into existing screens and clinical workflows without redirecting users to a separate tool."
+   },
+   {
+    "icon": "ehr-int-7",
+    "title": "APIs & Workflow Services",
+    "desc": "Connect Murphi.ai capabilities to EHR data, documents, and actions through a clean, documented API layer."
+   },
+   {
+    "icon": "ehr-int-8",
+    "title": "White-Labeled AI Platform",
+    "desc": "Launch AI capabilities under your existing brand and user experience. Clinicians never see the Murphi name."
+   }
+  ]
+ },
+ "roadmap": {
+  "tag": "Implementation Roadmap",
+  "title": "From First Feature to Full Platform",
+  "sub": "Start with one high-value workflow. Expand from there without requiring a large-bang implementation.",
+  "steps": [
+   {
+    "tone": "n1",
+    "num": "1",
+    "title": "Discover & Map",
+    "desc": "Identify the highest-impact clinical workflows and EHR integration points."
+   },
+   {
+    "tone": "n2",
+    "num": "2",
+    "title": "Pilot Selected Workflows",
+    "desc": "Deploy one or two AI features in a limited environment with clinician feedback loops."
+   },
+   {
+    "tone": "n3",
+    "num": "3",
+    "title": "Validate & Launch",
+    "desc": "Harden quality, compliance controls, and human-review workflows before production rollout."
+   },
+   {
+    "tone": "n4",
+    "num": "4",
+    "title": "Expand Across the Platform",
+    "desc": "Activate additional AI modules using the same integration layer already in place."
+   }
+  ],
+  "note": "Start with high-value workflows and expand progressively without requiring one large implementation."
+ },
+ "security": {
+  "tag": "Security & Governance",
+  "title": "Built for Healthcare-Grade Trust",
+  "sub": "Every Murphi.ai workflow is designed with clinical accountability and data stewardship in mind.",
+  "cards": [
+   {
+    "icon": "ehr-sec-9",
+    "title": "HIPAA-Aligned Workflows",
+    "desc": "Designed around PHI handling, access controls, and disclosure requirements"
+   },
+   {
+    "icon": "ehr-sec-10",
+    "title": "Role-Based Access",
+    "desc": "Permissions scoped to clinical role, organization, and data type"
+   },
+   {
+    "icon": "ehr-sec-11",
+    "title": "Encryption",
+    "desc": "Data encrypted in transit and at rest across all layers"
+   },
+   {
+    "icon": "ehr-sec-12",
+    "title": "Audit Trails",
+    "desc": "Every AI action, review decision, and edit is logged and queryable"
+   },
+   {
+    "icon": "ehr-sec-13",
+    "title": "Human Review",
+    "desc": "Clinician approval required before any AI output enters the EHR record"
+   },
+   {
+    "icon": "ehr-sec-14",
+    "title": "Data Retention Controls",
+    "desc": "Configurable retention policies aligned with organizational requirements"
+   },
+   {
+    "icon": "ehr-sec-15",
+    "title": "Model Monitoring",
+    "desc": "Continuous tracking of output quality, drift, and confidence thresholds"
+   },
+   {
+    "icon": "ehr-sec-16",
+    "title": "Output Validation",
+    "desc": "Structured validation rules applied before any clinical output is surfaced"
+   }
+  ]
+ },
+ "drawer": {
+  "closeIcon": "ehr-drawer-17",
+  "cta": {
+   "label": "Discuss This Integration",
+   "href": "/contact-us/"
+  },
+  "sections": [
+   {
+    "label": "Workflow Steps",
+    "steps": [
+     {
+      "review": false,
+      "numTone": null,
+      "num": "1",
+      "strong": "Input Sources",
+      "text": "EHR data, referral documents, or ambient voice captured at point of care"
+     },
+     {
+      "review": false,
+      "numTone": null,
+      "num": "2",
+      "strong": "Murphi.ai Extraction",
+      "text": "AI extracts, normalizes, and structures relevant clinical information"
+     },
+     {
+      "review": false,
+      "numTone": null,
+      "num": "3",
+      "strong": "Validation & Gap Flagging",
+      "text": "Missing elements and compliance gaps are flagged for clinician attention"
+     },
+     {
+      "review": true,
+      "numTone": "review",
+      "num": "4",
+      "strong": "Clinician Review & Approval",
+      "text": "Clinician reviews, edits, and approves the AI-generated output"
+     },
+     {
+      "review": false,
+      "numTone": "output",
+      "num": "5",
+      "strong": "EHR Write-Back",
+      "text": "Approved output is written into the EHR record at the field level"
+     }
+    ],
+    "chips": []
+   },
+   {
+    "label": "EHR Integration Options",
+    "steps": [],
+    "chips": [
+     "Embedded Component",
+     "REST API",
+     "Webhook",
+     "White-Label"
+    ]
+   },
+   {
+    "label": "Audit & Compliance Controls",
+    "steps": [],
+    "chips": [
+     "AI Action Log",
+     "Human Approval Record",
+     "Edit History",
+     "Confidence Score Stored",
+     "HIPAA-Aligned"
+    ]
+   }
+  ]
+ },
+ "iconLibrary": [
+  "mic",
+  "message-circle",
+  "message-square",
+  "edit-3",
+  "file-text",
+  "bar-chart",
+  "search",
+  "mail",
+  "clipboard",
+  "pill",
+  "check-circle",
+  "eye",
+  "folder",
+  "folder-open",
+  "tag",
+  "book-open",
+  "clipboard-list",
+  "check-square",
+  "stethoscope",
+  "activity",
+  "users",
+  "home",
+  "refresh-cw",
+  "trending-up",
+  "dollar",
+  "repeat",
+  "send",
+  "user",
+  "lock",
+  "plus",
+  "heart",
+  "lightbulb",
+  "link",
+  "settings",
+  "layers",
+  "zap",
+  "shield",
+  "calendar",
+  "x",
+  "hospital",
+  "plug",
+  "puzzle",
+  "handshake"
+ ],
+ "iconFallback": "file-text"
+}

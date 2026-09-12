@@ -3,10 +3,10 @@ import type { CSSProperties } from "react";
 import { Icon } from "@/components/icons";
 import Reveal from "@/components/module-page/Reveal";
 import {
-  CaptureWave,
   DocTiles,
   FieldRows,
 } from "@/components/ambient-ai-dictation/Capture";
+import { PulseMic } from "@/components/home-landing/marks";
 import { AaWrap } from "@/components/ambient-ai-dictation/Shell";
 
 const GENERATED = [
@@ -215,8 +215,16 @@ function MockCard() {
           </span>
         </div>
 
-        <div style={{ padding: "12px 20px" }}>
-          <CaptureWave quiet live />
+        <div
+          style={{
+            padding: "12px 20px",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            minHeight: 96,
+          }}
+        >
+          <PulseMic size={56} icon={30} />
         </div>
       </div>
 

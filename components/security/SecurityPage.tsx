@@ -162,16 +162,6 @@ const RESPONSIBLE_AI: { title: string; body: string; icon: IconName }[] = [
   },
 ];
 
-const SUB_PROCESSORS = [
-  ["Amazon Web Services", "Cloud Infrastructure", "USA"],
-  ["Google Cloud Platform", "Cloud Infrastructure", "USA"],
-  ["Everyware", "Payment Processing", "USA"],
-  ["Fortis", "Payment Processing", "USA"],
-  ["Twilio", "Communication & Messaging", "USA"],
-  ["360 Dialog", "Communication & Messaging", "USA"],
-  ["Firebase", "Crash Logs & Analytics", "USA"],
-];
-
 export default function SecurityPage() {
   return (
     <main>
@@ -182,7 +172,6 @@ export default function SecurityPage() {
       <Surveillance />
       <Controls />
       <ResponsibleAi />
-      <SubProcessors />
     </main>
   );
 }
@@ -511,62 +500,6 @@ function ResponsibleAi() {
             </li>
           ))}
         </ul>
-      </IpWrap>
-    </section>
-  );
-}
-
-/* ── Section 8 ── */
-function SubProcessors() {
-  return (
-    <section aria-labelledby="sub-processors" className="ip-section">
-      <IpWrap>
-        <div className="mx-auto max-w-[760px] text-center">
-          <p className="ip-eyebrow">Sub-Processors</p>
-
-          <h2 id="sub-processors" className="ip-h2 ip-serif mt-4">
-            Third-Party Sub-Processors
-          </h2>
-          <p className="ip-lead mt-5">
-            We partner with carefully selected third-party sub-processors to
-            enhance platform functionality while maintaining strict security and
-            compliance standards. All sub-processors are contractually obligated
-            to adhere to our security policies and regulatory requirements.
-          </p>
-        </div>
-
-        <div className="ip-card mx-auto mt-12 max-w-[900px] overflow-hidden max-600:mt-9">
-          <table className="w-full border-collapse text-left">
-            <thead>
-              <tr className="bg-[#F5F5F5]">
-                {["Vendor", "Purpose", "Location"].map((head) => (
-                  <th
-                    key={head}
-                    scope="col"
-                    className="ip-mono border-b border-[#E3E3E3] px-6 py-4 text-[10.5px] font-bold uppercase tracking-[0.1em] text-[#878787] max-600:px-4"
-                  >
-                    {head}
-                  </th>
-                ))}
-              </tr>
-            </thead>
-            <tbody>
-              {SUB_PROCESSORS.map(([vendor, purpose, location]) => (
-                <tr key={vendor} className="border-b border-[#E3E3E3] last:border-b-0">
-                  <td className="px-6 py-4 text-[13.5px] font-bold tracking-[-0.012em] text-ink max-600:px-4">
-                    {vendor}
-                  </td>
-                  <td className="px-6 py-4 text-[13.5px] text-[#606060] max-600:px-4">
-                    {purpose}
-                  </td>
-                  <td className="px-6 py-4 text-[13.5px] text-[#606060] max-600:px-4">
-                    {location}
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
       </IpWrap>
     </section>
   );

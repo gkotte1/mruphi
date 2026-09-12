@@ -1,0 +1,1254 @@
+{
+ "pages": [
+  {
+   "n": 1,
+   "count": 6
+  },
+  {
+   "n": 2,
+   "count": 6
+  },
+  {
+   "n": 3,
+   "count": 6
+  },
+  {
+   "n": 4,
+   "count": 6
+  },
+  {
+   "n": 5,
+   "count": 6
+  },
+  {
+   "n": 6,
+   "count": 6
+  },
+  {
+   "n": 7,
+   "count": 6
+  },
+  {
+   "n": 8,
+   "count": 6
+  },
+  {
+   "n": 9,
+   "count": 6
+  },
+  {
+   "n": 10,
+   "count": 6
+  },
+  {
+   "n": 11,
+   "count": 6
+  },
+  {
+   "n": 12,
+   "count": 6
+  },
+  {
+   "n": 13,
+   "count": 6
+  },
+  {
+   "n": 14,
+   "count": 6
+  },
+  {
+   "n": 15,
+   "count": 6
+  },
+  {
+   "n": 16,
+   "count": 6
+  },
+  {
+   "n": 17,
+   "count": 4
+  },
+  {
+   "n": 18,
+   "count": 2
+  },
+  {
+   "n": 19,
+   "count": 8
+  },
+  {
+   "n": 20,
+   "count": 14
+  },
+  {
+   "n": 21,
+   "count": 14
+  },
+  {
+   "n": 22,
+   "count": 8
+  },
+  {
+   "n": 23,
+   "count": 2
+  },
+  {
+   "n": 24,
+   "count": 0
+  }
+ ],
+ "items": [
+  {
+   "href": "https://murphi.ai/ai-in-healthcare-dragon-medical-vs-ambient-ai/",
+   "title": "Dragon Medical vs Ambient AI: Which Documentation Tool Is Right for Your Practice?",
+   "cat": "Healthcare Technology Guides",
+   "catHref": "https://murphi.ai/category/healthcare-technology-guides/",
+   "date": "2026-07-27T07:14:41+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/uploads/2026/07/medium-shot-doctor-checking-blood-pressure-female-patient-scaled-1024x600.jpg"
+  },
+  {
+   "href": "https://murphi.ai/ai-home-health-star-ratings/",
+   "title": "AI for Home Health Star Ratings: How to Improve CAHPS Scores",
+   "cat": "Home Health & Remote Care",
+   "catHref": "https://murphi.ai/category/home-health-remote-care/",
+   "date": "2026-07-25T08:52:04+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/uploads/2026/06/experienced-general-practitioner-consulting-patient-health-insurance-scaled-1024x600.jpg"
+  },
+  {
+   "href": "https://murphi.ai/oasis-vs-mds-3-0-ai-automation/",
+   "title": "OASIS vs MDS 3.0: AI Documentation Differences Explained",
+   "cat": "Healthcare Technology Guides",
+   "catHref": "https://murphi.ai/category/healthcare-technology-guides/",
+   "date": "2026-07-23T07:58:35+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/uploads/2026/07/patient-telling-doctor-about-symptoms-disease-scaled-1024x600.jpg"
+  },
+  {
+   "href": "https://murphi.ai/ai-for-wellsky-home-health-documentation-automation-guide/",
+   "title": "AI for Wellsky: Home Health Documentation Automation Guide",
+   "cat": "AI in Healthcare",
+   "catHref": "https://murphi.ai/category/ai-in-healthcare/",
+   "date": "2026-07-18T08:44:17+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/uploads/2026/07/patient-telling-doctor-about-symptoms-disease-scaled-1024x600.jpg"
+  },
+  {
+   "href": "https://murphi.ai/the-roi-of-healthcare-ai-a-complete-guide-for-cfos/",
+   "title": "The ROI of Healthcare AI: A Complete Guide for CFOs",
+   "cat": "AI in Healthcare",
+   "catHref": "https://murphi.ai/category/ai-in-healthcare/",
+   "date": "2026-07-10T16:31:02+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/uploads/2026/07/employee-using-computer-analyze-datasets-being-assisted-by-helpful-coworker-scaled-1024x600.jpg"
+  },
+  {
+   "href": "https://murphi.ai/home-health-lupa-avoidance-ai-strategy-guide/",
+   "title": "Home Health LUPA Avoidance: AI Strategy Guide",
+   "cat": "Home Health & Remote Care",
+   "catHref": "https://murphi.ai/category/home-health-remote-care/",
+   "date": "2026-07-05T07:16:42+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/uploads/2026/07/happy-doctor-holding-clipboard-with-patients-scaled-1024x600.jpg"
+  },
+  {
+   "href": "https://murphi.ai/build-vs-buy-ai-for-healthcare/",
+   "title": "Build vs Buy AI for Healthcare Platforms: Cost Analysis Guide",
+   "cat": "AI in Healthcare",
+   "catHref": "https://murphi.ai/category/ai-in-healthcare/",
+   "date": "2026-06-30T06:11:07+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/uploads/2026/05/woman-physician-offering-drugs-painkillers-prescription-medicine-1-scaled-1024x600.jpg"
+  },
+  {
+   "href": "https://murphi.ai/how-ehr-vendors-add-ai/",
+   "title": "How EHR Vendors Can Monetize AI: A Product Team Playbook",
+   "cat": "AI in Healthcare",
+   "catHref": "https://murphi.ai/category/ai-in-healthcare/",
+   "date": "2026-06-27T05:58:22+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/uploads/2026/06/african-american-nurse-evaluating-lab-test-results-discussing-recovery-plan-scaled-1024x600.jpg"
+  },
+  {
+   "href": "https://murphi.ai/dragon-medical-vs-ambient-ai/",
+   "title": "Dragon Medical vs Ambient AI: Feature Comparison Guide",
+   "cat": "AI in Healthcare",
+   "catHref": "https://murphi.ai/category/ai-in-healthcare/",
+   "date": "2026-06-24T05:57:01+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/uploads/2026/06/old-physician-consulting-woman-by-measuring-temperature-check-up-scaled-1024x600.jpg"
+  },
+  {
+   "href": "https://murphi.ai/ai-scribe-for-eclinicalworks/",
+   "title": "AI Scribe for eClinicalWorks: Complete Setup Guide",
+   "cat": "Interoperability & Integrations",
+   "catHref": "https://murphi.ai/category/interoperability-integrations/",
+   "date": "2026-06-20T10:59:42+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/uploads/2026/06/medical-specialist-explaining-diagnostic-test-results-cabinet-1-scaled-1024x600.jpg"
+  },
+  {
+   "href": "https://murphi.ai/ai-scribe-for-athenahealth/",
+   "title": "AI Scribe for Athenahealth: Features and Comparison Guide",
+   "cat": "Healthcare Technology Guides",
+   "catHref": "https://murphi.ai/category/healthcare-technology-guides/",
+   "date": "2026-06-18T19:58:10+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/uploads/2026/06/healthcare-provider-presenting-lab-test-results-patient-cabinet-scaled-1024x600.jpg"
+  },
+  {
+   "href": "https://murphi.ai/best-healthcare-ai-platform-guide/",
+   "title": "Healthcare AI Platforms: The Complete Buyer’s Guide",
+   "cat": "Healthcare Technology Guides",
+   "catHref": "https://murphi.ai/category/healthcare-technology-guides/",
+   "date": "2026-06-16T11:24:02+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/uploads/2026/06/healthcare-specialist-using-thermometer-check-fever-measurements-scaled-1024x600.jpg"
+  },
+  {
+   "href": "https://murphi.ai/ai-agents-in-healthcare/",
+   "title": "AI Agents in Healthcare: What They Are and Why They Matter",
+   "cat": "AI in Healthcare",
+   "catHref": "https://murphi.ai/category/ai-in-healthcare/",
+   "date": "2026-06-11T11:44:07+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/uploads/2026/06/african-american-nurse-evaluating-lab-test-results-discussing-recovery-plan-scaled-1024x600.jpg"
+  },
+  {
+   "href": "https://murphi.ai/ai-scribe-for-epic/",
+   "title": "AI Scribe for Epic: Integration, Setup, and ROI Guide",
+   "cat": "Interoperability & Integrations",
+   "catHref": "https://murphi.ai/category/interoperability-integrations/",
+   "date": "2026-06-07T10:59:40+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/uploads/2026/06/experienced-general-practitioner-consulting-patient-health-insurance-scaled-1024x600.jpg"
+  },
+  {
+   "href": "https://murphi.ai/ehr-integration-api/",
+   "title": "Overcoming the EHR Integration Hurdle with Murphi APIs",
+   "cat": "Interoperability & Integrations",
+   "catHref": "https://murphi.ai/category/interoperability-integrations/",
+   "date": "2026-05-23T06:33:19+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/uploads/2026/05/old-woman-asking-general-practitioner-about-disease-prevention-new-treatment-scaled-1024x600.jpg"
+  },
+  {
+   "href": "https://murphi.ai/remote-patient-monitoring-benefits/",
+   "title": "Real-Time RPM: How AI Alerts Prevent Hospital Readmissions",
+   "cat": "Home Health & Remote Care",
+   "catHref": "https://murphi.ai/category/home-health-remote-care/",
+   "date": "2026-05-19T05:57:45+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/uploads/2026/05/manager-wearing-face-mask-covid19-explaining-financial-graph-african-employee-multiethnic-team-working-company-with-new-normal-respecting-social-distance-because-global-pandemic-with-cor-scaled-1024x600.jpg"
+  },
+  {
+   "href": "https://murphi.ai/hipaa-compliant-ai/",
+   "title": "Why SOC2 and ISO 27001 are Mandatory for Healthcare AI",
+   "cat": "Healthcare Operations & Compliance",
+   "catHref": "https://murphi.ai/category/healthcare-operations-compliance/",
+   "date": "2026-05-09T06:31:10+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/uploads/2026/05/specialist-explaining-virus-presentation-laptop-pensioner-with-face-mask-doctor-talking-about-coronavirus-display-illustration-giving-medical-advice-senior-man-scaled-1024x600.jpg"
+  },
+  {
+   "href": "https://murphi.ai/unstructured-data-in-healthcare/",
+   "title": "Solving the Unstructured Data Crisis in Modern Healthcare",
+   "cat": "AI in Healthcare",
+   "catHref": "https://murphi.ai/category/ai-in-healthcare/",
+   "date": "2026-05-05T12:23:10+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/uploads/2026/05/unstructured-data-in-healthcare-scaled-1024x600.jpg"
+  },
+  {
+   "href": "https://murphi.ai/white-label-healthcare-ai-platform/",
+   "title": "Murphi.ai Featured in CEO Weekly for Its White-Label Healthcare AI Platform",
+   "cat": "AI in Healthcare",
+   "catHref": "https://murphi.ai/category/ai-in-healthcare/",
+   "date": "2026-05-02T06:35:15+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/uploads/2026/05/young-handsome-physician-medical-robe-with-stethoscope-scaled-1024x600.jpg"
+  },
+  {
+   "href": "https://murphi.ai/roi-of-ai-in-healthcare/",
+   "title": "The ROI of AI Scribes: Recovering 20+ Hours per Physician",
+   "cat": "AI in Healthcare",
+   "catHref": "https://murphi.ai/category/ai-in-healthcare/",
+   "date": "2026-04-27T05:25:56+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/uploads/2026/04/nurse-writing-patient-details-symptoms-files-help-doctor-scaled-1024x600.jpg"
+  },
+  {
+   "href": "https://murphi.ai/for-medical-documents/",
+   "title": "Is AI-Powered OCR for Medical Documents Worth the Investment?",
+   "cat": "AI in Healthcare",
+   "catHref": "https://murphi.ai/category/ai-in-healthcare/",
+   "date": "2026-04-25T05:30:42+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/uploads/2026/04/general-practitioner-presenting-test-findings-via-scan-interpretation-tablet-scaled-1024x600.jpg"
+  },
+  {
+   "href": "https://murphi.ai/automated-data-extraction-in-healthcare/",
+   "title": "Automated Data Extraction in Healthcare: 2026 Guide",
+   "cat": "AI in Healthcare",
+   "catHref": "https://murphi.ai/category/ai-in-healthcare/",
+   "date": "2026-04-23T05:08:22+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/uploads/2026/04/team-specialists-reviewing-ecg-results-meeting-private-clinic-scaled-1024x600.jpg"
+  },
+  {
+   "href": "https://murphi.ai/top-rag-healthcare/",
+   "title": "Top 10 RAG Development Companies for Healthcare",
+   "cat": "AI in Healthcare",
+   "catHref": "https://murphi.ai/category/ai-in-healthcare/",
+   "date": "2026-04-21T06:22:37+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/uploads/2026/03/healthcare-experts-strategic-meeting-discussing-treatment-protocols-scaled-1024x600.jpg"
+  },
+  {
+   "href": "https://murphi.ai/interoperability-in-healthcare/",
+   "title": "What Does True Interoperability in Healthcare Actually Look Like?",
+   "cat": "Interoperability & Integrations",
+   "catHref": "https://murphi.ai/category/interoperability-integrations/",
+   "date": "2026-04-17T12:18:53+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/uploads/2026/04/medic-team-discussing-germs-clinic-1-scaled-1024x600.jpg"
+  },
+  {
+   "href": "https://murphi.ai/clinical-prediction-model/",
+   "title": "Clinical Prediction Model: A 2026 Guide to Development",
+   "cat": "AI in Healthcare",
+   "catHref": "https://murphi.ai/category/ai-in-healthcare/",
+   "date": "2026-04-13T12:20:26+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/uploads/2026/04/medical-specialist-explaining-diagnostics-through-test-results-with-old-patient-checkup-doing-scaled-1024x600.jpg"
+  },
+  {
+   "href": "https://murphi.ai/rag-in-healthcare/",
+   "title": "RAG in Healthcare: A Guide to More Accurate Medical AI",
+   "cat": "AI in Healthcare",
+   "catHref": "https://murphi.ai/category/ai-in-healthcare/",
+   "date": "2026-04-08T12:28:06+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/uploads/2026/04/senior-chemist-analysing-blood-sample-while-coworkers-discussing-scaled-1024x600.jpg"
+  },
+  {
+   "href": "https://murphi.ai/healthcare-data-extraction/",
+   "title": "Can Healthcare Data Extraction Reduce Clinical and Billing Errors?",
+   "cat": "AI in Healthcare",
+   "catHref": "https://murphi.ai/category/ai-in-healthcare/",
+   "date": "2026-04-04T12:36:58+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/uploads/2026/04/african-american-doctor-presenting-x-ray-diagnostics-tablet-scaled-1024x600.jpg"
+  },
+  {
+   "href": "https://murphi.ai/ehr-interoperability-reduce-administrative-burden/",
+   "title": "Can EHR Interoperability Reduce Administrative Burden?",
+   "cat": "AI in Healthcare",
+   "catHref": "https://murphi.ai/category/ai-in-healthcare/",
+   "date": "2026-03-28T06:28:51+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/plugins/shopbuilder/assets/images/demo.png"
+  },
+  {
+   "href": "https://murphi.ai/hl7-integration/",
+   "title": "HL7 Integration Guide 2026: Standards, Steps & Benefits",
+   "cat": "Interoperability & Integrations",
+   "catHref": "https://murphi.ai/category/interoperability-integrations/",
+   "date": "2026-03-26T08:39:47+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/uploads/2026/03/healthcare-experts-strategic-meeting-discussing-treatment-protocols-scaled-1024x600.jpg"
+  },
+  {
+   "href": "https://murphi.ai/fhir-integration/",
+   "title": "FHIR Integration Guide",
+   "cat": "Interoperability & Integrations",
+   "catHref": "https://murphi.ai/category/interoperability-integrations/",
+   "date": "2026-03-23T07:01:30+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/uploads/2026/03/reflecting-positive-changes-shot-group-nurses-having-meeting-with-their-head-doctor-scaled-1024x600.jpg"
+  },
+  {
+   "href": "https://murphi.ai/ai-for-healthcare-compliance/",
+   "title": "AI for Healthcare Compliance",
+   "cat": "AI in Healthcare",
+   "catHref": "https://murphi.ai/category/ai-in-healthcare/",
+   "date": "2026-03-19T10:27:36+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/uploads/2026/03/physician-reviewing-mri-scan-x-ray-test-results-with-patient-office-scaled-1024x600.jpg"
+  },
+  {
+   "href": "https://murphi.ai/ambient-ai-healthcare-companies/",
+   "title": "Top 10 Ambient AI Healthcare Companies in 2026",
+   "cat": "AI in Healthcare",
+   "catHref": "https://murphi.ai/category/ai-in-healthcare/",
+   "date": "2026-03-16T12:35:40+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/uploads/2026/01/ChatGPT-Image-Jan-16-2026-07_06_03-PM-1024x600.png"
+  },
+  {
+   "href": "https://murphi.ai/ambient-ai-in-healthcare/",
+   "title": "The Role of Ambient AI in Healthcare: Pros, Cons, Use Cases & More",
+   "cat": "AI in Healthcare",
+   "catHref": "https://murphi.ai/category/ai-in-healthcare/",
+   "date": "2026-03-11T06:41:47+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/plugins/shopbuilder/assets/images/demo.png"
+  },
+  {
+   "href": "https://murphi.ai/ai-note-generator/",
+   "title": "AI Progress Notes: How an AI Progress Note Generator Helps Clinicians Write Notes Faster",
+   "cat": "AI in Healthcare",
+   "catHref": "https://murphi.ai/category/ai-in-healthcare/",
+   "date": "2026-03-08T06:40:38+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/uploads/2026/03/doctor-reviewing-aigenerated-documents-assist-diagnosing-complex-medical-conditions-ensuring-precise-patient-care-scaled-1024x600.jpg"
+  },
+  {
+   "href": "https://murphi.ai/ai-therapy-progress-note-generator/",
+   "title": "AI Progress Note Generators for Therapists: Speech Therapy and Behavioral Health Documentation",
+   "cat": "AI in Healthcare",
+   "catHref": "https://murphi.ai/category/ai-in-healthcare/",
+   "date": "2026-03-05T05:59:33+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/uploads/2026/03/female-graphic-designer-looking-color-chart-while-holding-digital-tablet-scaled-1024x600.jpg"
+  },
+  {
+   "href": "https://murphi.ai/best-ai-clinical-notes-software-for-clinics-doctors/",
+   "title": "Best AI Clinical Notes Software for Clinics & Doctors (Free vs Paid)",
+   "cat": "Healthcare Technology Guides",
+   "catHref": "https://murphi.ai/category/healthcare-technology-guides/",
+   "date": "2026-02-28T19:28:17+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/uploads/2026/02/8-1-1024x600.png"
+  },
+  {
+   "href": "https://murphi.ai/chronic-care-management-companies/",
+   "title": "Top Chronic Care Management Companies & Software Platforms (2026 Pricing)",
+   "cat": "Care Management & Patient Engagement",
+   "catHref": "https://murphi.ai/category/care-management-patient-engagement/",
+   "date": "2026-02-27T19:29:42+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/uploads/2026/02/9-1024x600.png"
+  },
+  {
+   "href": "https://murphi.ai/conversational-ai-in-healthcare/",
+   "title": "Conversational AI in Healthcare: AI Chatbots for Clinical Use (2026)",
+   "cat": "AI in Healthcare",
+   "catHref": "https://murphi.ai/category/ai-in-healthcare/",
+   "date": "2026-02-26T19:29:40+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/uploads/2026/02/7-1-1024x600.png"
+  },
+  {
+   "href": "https://murphi.ai/chatgpt-medical-diagnosis/",
+   "title": "ChatGPT Medical Diagnosis: Can AI Give Medical Advice",
+   "cat": "AI in Healthcare",
+   "catHref": "https://murphi.ai/category/ai-in-healthcare/",
+   "date": "2026-02-25T19:26:12+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/uploads/2026/02/6-1024x600.png"
+  },
+  {
+   "href": "https://murphi.ai/pharma-patient-engagement-software/",
+   "title": "Pharma Patient Engagement Software for Cardiology & Clinical Trials (2026)",
+   "cat": "Care Management & Patient Engagement",
+   "catHref": "https://murphi.ai/category/care-management-patient-engagement/",
+   "date": "2026-02-24T19:14:41+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/uploads/2026/02/5-4-1024x600.png"
+  },
+  {
+   "href": "https://murphi.ai/ai-patient-engagement-software-solutions/",
+   "title": "9 Best AI Patient Engagement Software Solutions for Healthcare (2026)",
+   "cat": "Care Management & Patient Engagement",
+   "catHref": "https://murphi.ai/category/care-management-patient-engagement/",
+   "date": "2026-02-23T18:57:20+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/uploads/2026/03/3-4-1024x600.png"
+  },
+  {
+   "href": "https://murphi.ai/ai-medical-charting-benefits-use-cases/",
+   "title": "AI Medical Charting: Benefits, Use Cases & AI Charting Software Guide",
+   "cat": "AI in Healthcare",
+   "catHref": "https://murphi.ai/category/ai-in-healthcare/",
+   "date": "2026-02-22T18:44:50+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/uploads/2026/03/4-3-1024x600.png"
+  },
+  {
+   "href": "https://murphi.ai/best-medical-transcription-software/",
+   "title": "7 Best Medical Transcription Software (2026)",
+   "cat": "Healthcare Technology Guides",
+   "catHref": "https://murphi.ai/category/healthcare-technology-guides/",
+   "date": "2026-02-21T16:56:02+00:00",
+   "author": "Murphi Admin",
+   "img": "https://murphi.ai/wp-content/uploads/2026/03/2-3-1024x600.png"
+  },
+  {
+   "href": "https://murphi.ai/ai-vs-human-medical-scribe/",
+   "title": "AI Medical Scribe vs Traditional Medical Transcription: What You Need to Know (2026)",
+   "cat": "AI in Healthcare",
+   "catHref": "https://murphi.ai/category/ai-in-healthcare/",
+   "date": "2026-02-20T16:51:22+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/uploads/2026/03/1-5-1024x600.png"
+  },
+  {
+   "href": "https://murphi.ai/ehr-api-integration/",
+   "title": "EHR API Integration: Complete Implementation Guide For 2026",
+   "cat": "Interoperability & Integrations",
+   "catHref": "https://murphi.ai/category/interoperability-integrations/",
+   "date": "2026-01-23T10:00:56+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/uploads/2026/01/ehr-api-integration-1024x600.webp"
+  },
+  {
+   "href": "https://murphi.ai/face-to-face-documentation/",
+   "title": "Face-to-Face Documentation Requirements: Your Complete Guide for Home Health Compliance",
+   "cat": "Home Health & Remote Care",
+   "catHref": "https://murphi.ai/category/home-health-remote-care/",
+   "date": "2026-01-15T10:00:30+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/uploads/2026/01/face-to-face-documentation-1024x600.webp"
+  },
+  {
+   "href": "https://murphi.ai/llms-in-healthcare/",
+   "title": "LLMs in Healthcare: Your Cheat Code for Beating Documentation Hell",
+   "cat": "AI in Healthcare",
+   "catHref": "https://murphi.ai/category/ai-in-healthcare/",
+   "date": "2026-01-12T10:00:09+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/uploads/2026/01/llms-in-healthcare-1024x600.webp"
+  },
+  {
+   "href": "https://murphi.ai/patient-engagement-platform-roi-analysis/",
+   "title": "Patient Engagement Platform ROI Analysis: What Healthcare Leaders Need to Know in 2026",
+   "cat": "Care Management & Patient Engagement",
+   "catHref": "https://murphi.ai/category/care-management-patient-engagement/",
+   "date": "2026-01-10T10:00:05+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/uploads/2026/01/patient-engagement-platform-roi-analysis-1024x600.webp"
+  },
+  {
+   "href": "https://murphi.ai/healthcare-interoperability-standards/",
+   "title": "What Are the Most Important Healthcare Interoperability Standards in 2026?",
+   "cat": "Interoperability & Integrations",
+   "catHref": "https://murphi.ai/category/interoperability-integrations/",
+   "date": "2026-01-05T10:00:10+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/uploads/2026/01/healthcare-interoperability-standards-1024x600.webp"
+  },
+  {
+   "href": "https://murphi.ai/ai-in-home-health/",
+   "title": "AI in Home Health Care: Transforming Patient Outcomes in 2026",
+   "cat": "Home Health & Remote Care",
+   "catHref": "https://murphi.ai/category/home-health-remote-care/",
+   "date": "2025-12-15T10:00:27+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/uploads/2025/12/ai-in-home-health-care-1024x600.webp"
+  },
+  {
+   "href": "https://murphi.ai/remote-therapeutic-monitoring-companies/",
+   "title": "Remote Therapeutic Monitoring Companies: A Complete Guide to Choosing the Right RTM Partner in 2026",
+   "cat": "Home Health & Remote Care",
+   "catHref": "https://murphi.ai/category/home-health-remote-care/",
+   "date": "2025-12-05T10:00:04+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/uploads/2026/01/remote-therapeutic-monitoring-companies-1024x600.webp"
+  },
+  {
+   "href": "https://murphi.ai/clinical-case-management-model/",
+   "title": "Clinical Case Management Model Guide: Types, Benefits & More",
+   "cat": "Care Management & Patient Engagement",
+   "catHref": "https://murphi.ai/category/care-management-patient-engagement/",
+   "date": "2025-11-22T10:00:48+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/uploads/2025/12/clinical-case-management-model-1024x600.webp"
+  },
+  {
+   "href": "https://murphi.ai/ai-for-healthcare-data-processing/",
+   "title": "How AI is Transforming Healthcare Data Processing in 2026",
+   "cat": "AI in Healthcare",
+   "catHref": "https://murphi.ai/category/ai-in-healthcare/",
+   "date": "2025-11-15T10:00:51+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/uploads/2025/11/ai-for-healthcare-data-processing-1024x600.webp"
+  },
+  {
+   "href": "https://murphi.ai/ehr-integration-strategy/",
+   "title": "EHR Integration Strategy for 2026: Key Component, Benefits, and Common Challenges",
+   "cat": "Interoperability & Integrations",
+   "catHref": "https://murphi.ai/category/interoperability-integrations/",
+   "date": "2025-11-11T10:00:20+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/uploads/2025/11/ehr-integration-strategies-1024x600.webp"
+  },
+  {
+   "href": "https://murphi.ai/reduce-medical-errors/",
+   "title": "Reduce Medical Errors: Proven Methods for Safer Care",
+   "cat": "Healthcare Operations & Compliance",
+   "catHref": "https://murphi.ai/category/healthcare-operations-compliance/",
+   "date": "2025-10-18T10:00:36+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/uploads/2025/11/reduce-medical-errors-1024x600.png"
+  },
+  {
+   "href": "https://murphi.ai/patient-onboarding-automation/",
+   "title": "How Patient Onboarding Automation Enhances Experience",
+   "cat": "Care Management & Patient Engagement",
+   "catHref": "https://murphi.ai/category/care-management-patient-engagement/",
+   "date": "2025-10-12T10:00:51+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/uploads/2025/10/patient-onboarding-automation--1024x600.webp"
+  },
+  {
+   "href": "https://murphi.ai/automation-in-clinical-diagnostics/",
+   "title": "The Complete Guide to Automation in Clinical Diagnostics: Transforming Healthcare Workflows in 2026",
+   "cat": "AI in Healthcare",
+   "catHref": "https://murphi.ai/category/ai-in-healthcare/",
+   "date": "2025-10-05T10:00:55+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/uploads/2025/11/automation-clinical-diagnostics-1024x600.webp"
+  },
+  {
+   "href": "https://murphi.ai/improve-clinical-operations-efficiency/",
+   "title": "How to Improve Clinical Operations efficiency in 2026",
+   "cat": "Healthcare Operations & Compliance",
+   "catHref": "https://murphi.ai/category/healthcare-operations-compliance/",
+   "date": "2025-09-17T10:00:00+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/uploads/2025/10/improve-clinical-operations-efficiency-1024x600.webp"
+  },
+  {
+   "href": "https://murphi.ai/benefits-of-care-coordination/",
+   "title": "Benefits of Care Coordination: Quality, Cost & Access",
+   "cat": "Care Management & Patient Engagement",
+   "catHref": "https://murphi.ai/category/care-management-patient-engagement/",
+   "date": "2025-09-15T10:00:17+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/uploads/2025/10/benefits-of-care-coordination-1024x600.webp"
+  },
+  {
+   "href": "https://murphi.ai/ehr-integration-challenges/",
+   "title": "7 Common EHR Integration Challenges in 2026 (and Solutions)",
+   "cat": "Interoperability & Integrations",
+   "catHref": "https://murphi.ai/category/interoperability-integrations/",
+   "date": "2025-09-12T10:00:30+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/uploads/2025/10/ehr-integration-challenges-1024x600.webp"
+  },
+  {
+   "href": "https://murphi.ai/free-ai-medical-codes-mapping-tools/",
+   "title": "Top 10 Free AI Medical Codes Mapping Tools [2026]",
+   "cat": "Healthcare Technology Guides",
+   "catHref": "https://murphi.ai/category/healthcare-technology-guides/",
+   "date": "2025-09-10T10:00:33+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/uploads/2025/09/free-ai-medical-codes-mapping-tools-1024x600.webp"
+  },
+  {
+   "href": "https://murphi.ai/top-rated-ehr/",
+   "title": "2026’s Top Rated EHR Solutions for Medical Practices",
+   "cat": "Interoperability & Integrations",
+   "catHref": "https://murphi.ai/category/interoperability-integrations/",
+   "date": "2025-09-09T10:00:45+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/uploads/2025/09/top-rated-ehr-1024x600.webp"
+  },
+  {
+   "href": "https://murphi.ai/occupational-therapy-soap-note/",
+   "title": "The Right Way of Writing Occupational Therapy SOAP Note (AI Included)",
+   "cat": "Healthcare Technology Guides",
+   "catHref": "https://murphi.ai/category/healthcare-technology-guides/",
+   "date": "2025-09-07T10:00:23+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/uploads/2025/09/occupational-therapy-soap-note-1024x600.webp"
+  },
+  {
+   "href": "https://murphi.ai/soap-notes-for-speech-therapists/",
+   "title": "The Ultimate Guide to SOAP Notes for Speech Therapists in 2025",
+   "cat": "Healthcare Technology Guides",
+   "catHref": "https://murphi.ai/category/healthcare-technology-guides/",
+   "date": "2025-09-05T10:00:57+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/uploads/2025/09/soap-notes-for-speech-therapists-1024x600.webp"
+  },
+  {
+   "href": "https://murphi.ai/semantic-interoperability-in-healthcare/",
+   "title": "A Practical Guide for Implementing Semantic Interoperability in Healthcare",
+   "cat": "Interoperability & Integrations",
+   "catHref": "https://murphi.ai/category/interoperability-integrations/",
+   "date": "2025-08-20T10:00:02+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/uploads/2025/08/semantic-interoperability-in-healthcare-scaled-1024x600.webp"
+  },
+  {
+   "href": "https://murphi.ai/healthcare-coding-and-compliance-audit/",
+   "title": "5 Steps to Prepare for a Successful Healthcare Coding and Compliance Audit",
+   "cat": "Healthcare Operations & Compliance",
+   "catHref": "https://murphi.ai/category/healthcare-operations-compliance/",
+   "date": "2025-08-18T10:00:56+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/uploads/2025/08/healthcare-coding-and-compliance-audit-scaled-1024x600.webp"
+  },
+  {
+   "href": "https://murphi.ai/benefits-of-data-analytics-in-healthcare/",
+   "title": "Top 8 Benefits of Data Analytics in Healthcare [2025]",
+   "cat": "AI in Healthcare",
+   "catHref": "https://murphi.ai/category/ai-in-healthcare/",
+   "date": "2025-08-16T10:00:17+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/uploads/2025/08/benefits-of-data-analytics-in-healthcare-scaled-1024x600.webp"
+  },
+  {
+   "href": "https://murphi.ai/ehr-data-migration-blueprint/",
+   "title": "EHR Data Migration: A Step-by-Step Blueprint with Best Practices in 2025",
+   "cat": "Interoperability & Integrations",
+   "catHref": "https://murphi.ai/category/interoperability-integrations/",
+   "date": "2025-08-14T10:00:13+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/uploads/2025/08/ehr-data-migration-scaled-1024x600.webp"
+  },
+  {
+   "href": "https://murphi.ai/the-future-is-ai-patient-engagement/",
+   "title": "The Future is AI Patient Engagement! Here’s Why",
+   "cat": "Care Management & Patient Engagement",
+   "catHref": "https://murphi.ai/category/care-management-patient-engagement/",
+   "date": "2025-08-12T10:00:56+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/uploads/2025/08/ai-patient-engagement-scaled-1024x600.webp"
+  },
+  {
+   "href": "https://murphi.ai/medical-device-integration/",
+   "title": "Why Medical Device Integration Should Be a Strategic Priority in 2026",
+   "cat": "Interoperability & Integrations",
+   "catHref": "https://murphi.ai/category/interoperability-integrations/",
+   "date": "2025-08-10T10:00:10+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/uploads/2026/07/african-american-doctor-presenting-x-ray-diagnostics-tablet-scaled-1024x600.jpg"
+  },
+  {
+   "href": "https://murphi.ai/improve-interoperability-in-healthcare/",
+   "title": "How Can Hospitals Improve Interoperability in Current Time?",
+   "cat": "Interoperability & Integrations",
+   "catHref": "https://murphi.ai/category/interoperability-integrations/",
+   "date": "2025-08-08T10:00:52+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/uploads/2025/08/improve-interoperability-in-healthcare​​-scaled-1024x600.webp"
+  },
+  {
+   "href": "https://murphi.ai/benefits-of-interoperability-in-healthcare/",
+   "title": "7 Key Benefits of Interoperability in Healthcare 2025",
+   "cat": "Interoperability & Integrations",
+   "catHref": "https://murphi.ai/category/interoperability-integrations/",
+   "date": "2025-08-06T10:00:43+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/uploads/2025/08/benefits-of-interoperability-in-healthcare​-scaled-1024x600.webp"
+  },
+  {
+   "href": "https://murphi.ai/patient-engagement-strategies/",
+   "title": "7 Patient Engagement Strategies That Actually Work in 2025",
+   "cat": "Care Management & Patient Engagement",
+   "catHref": "https://murphi.ai/category/care-management-patient-engagement/",
+   "date": "2025-08-04T10:00:20+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/uploads/2025/08/patient-engagement-strategies-1024x600.webp"
+  },
+  {
+   "href": "https://murphi.ai/digital-patient-engagement-tools/",
+   "title": "10 Digital Patient Engagement Tools That Enhance Healthcare",
+   "cat": "Care Management & Patient Engagement",
+   "catHref": "https://murphi.ai/category/care-management-patient-engagement/",
+   "date": "2025-08-03T10:00:21+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/uploads/2025/08/digital-patient-engagement-tools-1024x600.webp"
+  },
+  {
+   "href": "https://murphi.ai/5-rights-of-clinical-decision-support/",
+   "title": "The 5 Rights of Clinical Decision Support Explained",
+   "cat": "AI in Healthcare",
+   "catHref": "https://murphi.ai/category/ai-in-healthcare/",
+   "date": "2025-08-02T10:00:22+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/uploads/2025/08/5-rights-of-clinical-decision-support-1024x600.webp"
+  },
+  {
+   "href": "https://murphi.ai/ai-in-medical-coding/",
+   "title": "AI in Medical Coding: Innovation or Industry Disruption?",
+   "cat": "AI in Healthcare",
+   "catHref": "https://murphi.ai/category/ai-in-healthcare/",
+   "date": "2025-07-17T10:00:05+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/uploads/2025/07/ehr-integration-strategies-15-1024x600.png"
+  },
+  {
+   "href": "https://murphi.ai/ai-medication-management/",
+   "title": "A Guide to Utilizing AI in Medication Management [2025]",
+   "cat": "AI in Healthcare",
+   "catHref": "https://murphi.ai/category/ai-in-healthcare/",
+   "date": "2025-07-15T10:00:30+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/uploads/2025/07/ai-medication-management-1024x600.webp"
+  },
+  {
+   "href": "https://murphi.ai/ai-medical-scribe-cost/",
+   "title": "How Much Does an AI Medical Scribe Really Cost in 2026?",
+   "cat": "AI in Healthcare",
+   "catHref": "https://murphi.ai/category/ai-in-healthcare/",
+   "date": "2025-07-11T10:00:49+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/uploads/2026/07/medium-shot-doctor-checking-blood-pressure-female-patient-scaled-1024x600.jpg"
+  },
+  {
+   "href": "https://murphi.ai/cost-of-implementing-ai-in-healthcare/",
+   "title": "What is the Cost of Implementing AI in Healthcare [2025 Updated]",
+   "cat": "AI in Healthcare",
+   "catHref": "https://murphi.ai/category/ai-in-healthcare/",
+   "date": "2025-07-07T10:00:59+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/uploads/2025/07/cost-of-implementing-ai-in-healthcare-1024x600.webp"
+  },
+  {
+   "href": "https://murphi.ai/impact-of-ai-speech-therapy-in-healthcare/",
+   "title": "7 Ways AI Speech Therapy is Making an Impact in 2026",
+   "cat": "AI in Healthcare",
+   "catHref": "https://murphi.ai/category/ai-in-healthcare/",
+   "date": "2025-07-05T10:00:50+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/uploads/2025/07/ai-in-speech-therapy-1024x600.webp"
+  },
+  {
+   "href": "https://murphi.ai/drug-discovery/",
+   "title": "Exploring the Role of Generative AI in Revolutionizing Drug Discovery",
+   "cat": "AI in Healthcare",
+   "catHref": "https://murphi.ai/category/ai-in-healthcare/",
+   "date": "2025-06-29T08:38:28+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/plugins/shopbuilder/assets/images/demo.png"
+  },
+  {
+   "href": "https://murphi.ai/data-mining-healthcare/",
+   "title": "Data Mining Healthcare: Benefits, Examples & Use Cases",
+   "cat": "AI in Healthcare",
+   "catHref": "https://murphi.ai/category/ai-in-healthcare/",
+   "date": "2025-06-25T08:04:41+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/uploads/2026/07/employee-using-computer-analyze-datasets-being-assisted-by-helpful-coworker-scaled-1024x600.jpg"
+  },
+  {
+   "href": "https://murphi.ai/ai-in-chronic-disease-management/",
+   "title": "AI in Chronic Disease Management: Role and Strategies for Success",
+   "cat": "Care Management & Patient Engagement",
+   "catHref": "https://murphi.ai/category/care-management-patient-engagement/",
+   "date": "2025-06-23T07:53:40+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/uploads/2026/07/employee-using-computer-analyze-datasets-being-assisted-by-helpful-coworker-scaled-1024x600.jpg"
+  },
+  {
+   "href": "https://murphi.ai/benefits-of-ai-in-radiology/",
+   "title": "Top Benefits of AI in Radiology with Use Cases and Examples",
+   "cat": "AI in Healthcare",
+   "catHref": "https://murphi.ai/category/ai-in-healthcare/",
+   "date": "2025-06-21T07:32:01+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/uploads/2026/07/medium-shot-doctor-checking-blood-pressure-female-patient-scaled-1024x600.jpg"
+  },
+  {
+   "href": "https://murphi.ai/ai-applications-in-medical-diagnosis/",
+   "title": "AI Applications in Medical Diagnosis: From Detection to Treatment",
+   "cat": "AI in Healthcare",
+   "catHref": "https://murphi.ai/category/ai-in-healthcare/",
+   "date": "2025-06-19T17:42:26+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/plugins/shopbuilder/assets/images/demo.png"
+  },
+  {
+   "href": "https://murphi.ai/ai-in-medical-imaging/",
+   "title": "AI in Medical Imaging: Enhancing Accuracy and Speed in Radiology",
+   "cat": "AI in Healthcare",
+   "catHref": "https://murphi.ai/category/ai-in-healthcare/",
+   "date": "2025-06-17T17:30:59+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/plugins/shopbuilder/assets/images/demo.png"
+  },
+  {
+   "href": "https://murphi.ai/ai-triage/",
+   "title": "AI Triage for Healthcare: Improve Efficiency in Emergency Care",
+   "cat": "AI in Healthcare",
+   "catHref": "https://murphi.ai/category/ai-in-healthcare/",
+   "date": "2025-06-13T16:19:12+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/plugins/shopbuilder/assets/images/demo.png"
+  },
+  {
+   "href": "https://murphi.ai/ai-patient-monitoring/",
+   "title": "AI Patient Monitoring: Impact, Use Cases and More in 2026",
+   "cat": "Home Health & Remote Care",
+   "catHref": "https://murphi.ai/category/home-health-remote-care/",
+   "date": "2025-06-11T15:21:27+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/uploads/2026/05/specialist-explaining-virus-presentation-laptop-pensioner-with-face-mask-doctor-talking-about-coronavirus-display-illustration-giving-medical-advice-senior-man-scaled-1024x600.jpg"
+  },
+  {
+   "href": "https://murphi.ai/healthcare-digital-assistants/",
+   "title": "Healthcare Digital Assistants: Use Cases, Examples & Benefits",
+   "cat": "AI in Healthcare",
+   "catHref": "https://murphi.ai/category/ai-in-healthcare/",
+   "date": "2025-06-09T17:10:04+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/plugins/shopbuilder/assets/images/demo.png"
+  },
+  {
+   "href": "https://murphi.ai/patient-discharge-summary/",
+   "title": "Patient Discharge Summary: What It Includes and Why It Matters",
+   "cat": "Healthcare Technology Guides",
+   "catHref": "https://murphi.ai/category/healthcare-technology-guides/",
+   "date": "2025-06-05T15:36:21+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/plugins/shopbuilder/assets/images/demo.png"
+  },
+  {
+   "href": "https://murphi.ai/everything-you-need-to-know-about-ai-chatbot-for-healthcare/",
+   "title": "Everything You Need to Know About AI Chatbot for Healthcare",
+   "cat": "AI in Healthcare",
+   "catHref": "https://murphi.ai/category/ai-in-healthcare/",
+   "date": "2025-05-28T16:36:18+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/plugins/shopbuilder/assets/images/demo.png"
+  },
+  {
+   "href": "https://murphi.ai/why-murphi-is-the-best-medical-scribe/",
+   "title": "Why Murphi is the best medical scribe?",
+   "cat": "Blog",
+   "catHref": "https://murphi.ai/category/blog/",
+   "date": "2025-05-24T16:00:52+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/plugins/shopbuilder/assets/images/demo.png"
+  },
+  {
+   "href": "https://murphi.ai/how-does-murphi-ai-reduce-costs-in-healthcare/",
+   "title": "How Does Murphi AI Reduce Costs in Healthcare?",
+   "cat": "Blog",
+   "catHref": "https://murphi.ai/category/blog/",
+   "date": "2025-05-22T13:25:46+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/plugins/shopbuilder/assets/images/demo.png"
+  },
+  {
+   "href": "https://murphi.ai/doctors-note-template-examples-how-to-create-one-with-murphi/",
+   "title": "Doctors Note Template Examples | How to Create One with Murphi",
+   "cat": "Healthcare Technology Guides",
+   "catHref": "https://murphi.ai/category/healthcare-technology-guides/",
+   "date": "2025-05-19T12:58:35+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/plugins/shopbuilder/assets/images/demo.png"
+  },
+  {
+   "href": "https://murphi.ai/the-best-ai-for-doctors-right-now-and-how-it-helps/",
+   "title": "The Best AI for Doctors Right Now and How It Helps",
+   "cat": "AI in Healthcare",
+   "catHref": "https://murphi.ai/category/ai-in-healthcare/",
+   "date": "2025-05-16T10:10:38+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/uploads/2026/07/african-american-doctor-presenting-x-ray-diagnostics-tablet-11-scaled-1024x600.jpg"
+  },
+  {
+   "href": "https://murphi.ai/generative-ai-in-healthcare-use-cases-benefits-and-applications/",
+   "title": "Generative AI in healthcare | Use cases, benefits, and applications",
+   "cat": "AI in Healthcare",
+   "catHref": "https://murphi.ai/category/ai-in-healthcare/",
+   "date": "2025-05-15T15:34:04+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/plugins/shopbuilder/assets/images/demo.png"
+  },
+  {
+   "href": "https://murphi.ai/emr-vs-ehr-whats-the-difference-and-why-does-it-matter/",
+   "title": "EMR vs EHR: What’s the Difference and Why Does it Matter?",
+   "cat": "Blog",
+   "catHref": "https://murphi.ai/category/blog/",
+   "date": "2025-05-13T09:49:29+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/plugins/shopbuilder/assets/images/demo.png"
+  },
+  {
+   "href": "https://murphi.ai/top-remote-patient-monitoring-companies-leading-healthcare-in-2026/",
+   "title": "Top Remote Patient Monitoring Companies Leading Healthcare in 2026",
+   "cat": "Home Health & Remote Care",
+   "catHref": "https://murphi.ai/category/home-health-remote-care/",
+   "date": "2025-05-09T08:04:24+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/plugins/shopbuilder/assets/images/demo.png"
+  },
+  {
+   "href": "https://murphi.ai/benefits-of-remote-patient-monitoring/",
+   "title": "Exploring the Benefits of Remote Patient Monitoring with Murphi.ai",
+   "cat": "Home Health & Remote Care",
+   "catHref": "https://murphi.ai/category/home-health-remote-care/",
+   "date": "2025-04-26T14:46:37+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/plugins/shopbuilder/assets/images/demo.png"
+  },
+  {
+   "href": "https://murphi.ai/how-conversational-ai-in-healthcare-is-transforming-healthcare-use-cases-and-future/",
+   "title": "Conversational AI in Healthcare | Use cases and Future",
+   "cat": "AI in Healthcare",
+   "catHref": "https://murphi.ai/category/ai-in-healthcare/",
+   "date": "2025-04-20T14:41:26+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/plugins/shopbuilder/assets/images/demo.png"
+  },
+  {
+   "href": "https://murphi.ai/ehr-integration/",
+   "title": "EHR Integration: 2025 Guide to Seamless Healthcare",
+   "cat": "Interoperability & Integrations",
+   "catHref": "https://murphi.ai/category/interoperability-integrations/",
+   "date": "2025-03-10T16:46:31+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/plugins/shopbuilder/assets/images/demo.png"
+  },
+  {
+   "href": "https://murphi.ai/ai-in-healthcare-companies/",
+   "title": "Top 10 AI Companies in Healthcare with Game-Changing Innovations in 2026",
+   "cat": "AI in Healthcare",
+   "catHref": "https://murphi.ai/category/ai-in-healthcare/",
+   "date": "2025-02-28T19:39:17+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/uploads/2026/07/young-woman-doctor-gp-white-medical-uniform-consult-male-patient-private-hospital-female-therapist-speak-talk-with-man-client-consultation-clinic-scaled-1024x600.jpg"
+  },
+  {
+   "href": "https://murphi.ai/predictive-analytics-in-healthcare/",
+   "title": "AI Predictive Analytics in Healthcare: How AI is Transforming Patient Care and Clinical Outcomes",
+   "cat": "AI in Healthcare",
+   "catHref": "https://murphi.ai/category/ai-in-healthcare/",
+   "date": "2024-12-27T14:54:41+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/uploads/2026/07/young-doctor-supporting-his-patient-scaled-1024x600.jpg"
+  },
+  {
+   "href": "https://murphi.ai/ai-in-healthcare-rcm/",
+   "title": "AI in Healthcare RCM: Key Impacts & Use Cases for 2026 & Beyond",
+   "cat": "Blog",
+   "catHref": "https://murphi.ai/category/blog/",
+   "date": "2024-12-23T13:39:32+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/uploads/2026/07/young-woman-doctor-gp-white-medical-uniform-consult-male-patient-private-hospital-female-therapist-speak-talk-with-man-client-consultation-clinic-scaled-1024x600.jpg"
+  },
+  {
+   "href": "https://murphi.ai/pros-and-cons-of-ai-in-healthcare/",
+   "title": "Pros and Cons of AI in Healthcare & Medicine (Updated 2025)",
+   "cat": "AI in Healthcare",
+   "catHref": "https://murphi.ai/category/ai-in-healthcare/",
+   "date": "2024-12-19T11:30:20+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/uploads/2024/12/Murphi-Pros-and-cons-of-AI-in-Healthcare-Thumbnail-2-1024x600.png"
+  },
+  {
+   "href": "https://murphi.ai/murphi-ai-combining-lateral-patient-records-to-arrive-at-summaries/",
+   "title": "Murphi.ai: Combining Lateral Patient Records to Arrive at Summaries",
+   "cat": "Blog",
+   "catHref": "https://murphi.ai/category/blog/",
+   "date": "2024-12-11T05:56:00+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/uploads/2021/06/blog_01-1-1024x600.jpg"
+  },
+  {
+   "href": "https://murphi.ai/health-information-exchanges-leveraging-payments-a-path-to-enhanced-healthcare/",
+   "title": "Health Information Exchanges Leveraging Payments: A Path to Enhanced Healthcare",
+   "cat": "Interoperability & Integrations",
+   "catHref": "https://murphi.ai/category/interoperability-integrations/",
+   "date": "2024-12-10T05:56:09+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/uploads/2021/06/blog_02-1024x600.jpg"
+  },
+  {
+   "href": "https://murphi.ai/recurring-partial-payment-methods-reduce-debt-collections/",
+   "title": "Recurring & Partial Payment Methods Reduce Debt Collections",
+   "cat": "Blog",
+   "catHref": "https://murphi.ai/category/blog/",
+   "date": "2024-12-09T05:56:04+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/uploads/2021/06/blog_03-1024x600.jpg"
+  },
+  {
+   "href": "https://murphi.ai/increasing-private-pay-and-automation/",
+   "title": "Increasing Private Pay and Automation",
+   "cat": "Blog",
+   "catHref": "https://murphi.ai/category/blog/",
+   "date": "2024-12-08T05:55:43+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/uploads/2021/06/blog_04-1024x600.jpg"
+  },
+  {
+   "href": "https://murphi.ai/integrating-with-ehr-and-automation-of-private-pay/",
+   "title": "Integrating with EHR and Automation of Private Pay",
+   "cat": "Interoperability & Integrations",
+   "catHref": "https://murphi.ai/category/interoperability-integrations/",
+   "date": "2024-12-07T05:55:38+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/uploads/2021/06/blog_05-1024x600.jpg"
+  },
+  {
+   "href": "https://murphi.ai/deploying-murphi-ai-to-for-summarizing-patient-records/",
+   "title": "Deploying Murphi.ai to for summarizing patient records",
+   "cat": "Blog",
+   "catHref": "https://murphi.ai/category/blog/",
+   "date": "2024-12-06T05:55:33+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/uploads/2021/06/blog_06-1024x600.jpg"
+  },
+  {
+   "href": "https://murphi.ai/how-is-murphi-ai-useful-in-healthcare/",
+   "title": "How is Murphi.ai Useful in Healthcare?",
+   "cat": "Blog",
+   "catHref": "https://murphi.ai/category/blog/",
+   "date": "2024-12-05T05:54:59+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/uploads/2021/06/blog_07-1024x600.jpg"
+  },
+  {
+   "href": "https://murphi.ai/what-are-the-top-benefits-of-ai-based-healthcare-chatbots-to-healthcare-providers/",
+   "title": "What Are The Top Benefits of AI-Based Healthcare Chatbots to Healthcare Providers?",
+   "cat": "AI in Healthcare",
+   "catHref": "https://murphi.ai/category/ai-in-healthcare/",
+   "date": "2024-12-05T05:54:43+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/uploads/2021/06/blog_08-1024x600.jpg"
+  },
+  {
+   "href": "https://murphi.ai/top-5-benefits-of-using-a-hipaa-compliant-video-call-software/",
+   "title": "Top 5 Benefits of Using a HIPAA Compliant Video Call Software",
+   "cat": "Blog",
+   "catHref": "https://murphi.ai/category/blog/",
+   "date": "2024-12-04T05:54:39+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/uploads/2021/06/blog_09-1024x600.jpg"
+  },
+  {
+   "href": "https://murphi.ai/why-patient-appointment-reminder-software-is-a-must-for-your-practice/",
+   "title": "Why Patient Appointment Reminder Software Is A Must For Your Practice?",
+   "cat": "Care Management & Patient Engagement",
+   "catHref": "https://murphi.ai/category/care-management-patient-engagement/",
+   "date": "2024-11-26T11:50:49+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/uploads/2021/06/blog_04-1024x600.jpg"
+  },
+  {
+   "href": "https://murphi.ai/hipaa-compliant-chat-api/",
+   "title": "Your One-Stop Guide: How To Choose A HIPAA Compliant Chat API",
+   "cat": "Healthcare Technology Guides",
+   "catHref": "https://murphi.ai/category/healthcare-technology-guides/",
+   "date": "2024-11-24T05:27:57+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/uploads/2021/06/blog12-1024x600.jpg"
+  },
+  {
+   "href": "https://murphi.ai/how-patient-communication-software-can-help-you-with-staffing-shortages/",
+   "title": "How Patient Communication Software Can Help You with Staffing Shortages",
+   "cat": "Care Management & Patient Engagement",
+   "catHref": "https://murphi.ai/category/care-management-patient-engagement/",
+   "date": "2024-11-21T09:02:35+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/plugins/shopbuilder/assets/images/demo.png"
+  },
+  {
+   "href": "https://murphi.ai/what-to-look-for-in-hipaa-compliant-video-conferencing-software/",
+   "title": "What to Look for in HIPAA-Compliant Video Conferencing Software",
+   "cat": "Healthcare Technology Guides",
+   "catHref": "https://murphi.ai/category/healthcare-technology-guides/",
+   "date": "2024-11-18T09:05:50+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/plugins/shopbuilder/assets/images/demo.png"
+  },
+  {
+   "href": "https://murphi.ai/enhancing-healthcare-delivery-the-impact-of-secure-messaging-solutions/",
+   "title": "Enhancing Healthcare Delivery: The Impact of Secure Messaging Solutions",
+   "cat": "Healthcare Operations & Compliance",
+   "catHref": "https://murphi.ai/category/healthcare-operations-compliance/",
+   "date": "2024-11-16T09:09:39+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/plugins/shopbuilder/assets/images/demo.png"
+  },
+  {
+   "href": "https://murphi.ai/how-can-care-coordination-software-streamline-administrative-tasks/",
+   "title": "How Can Care Coordination Software Streamline Administrative Tasks?",
+   "cat": "Care Management & Patient Engagement",
+   "catHref": "https://murphi.ai/category/care-management-patient-engagement/",
+   "date": "2024-11-14T09:12:41+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/plugins/shopbuilder/assets/images/demo.png"
+  },
+  {
+   "href": "https://murphi.ai/how-can-case-management-software-enhance-collaboration-among-teams/",
+   "title": "How Can Case Management Software Enhance Collaboration Among Teams?",
+   "cat": "Care Management & Patient Engagement",
+   "catHref": "https://murphi.ai/category/care-management-patient-engagement/",
+   "date": "2024-11-13T09:13:25+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/plugins/shopbuilder/assets/images/demo.png"
+  },
+  {
+   "href": "https://murphi.ai/why-hipaa-compliant-instant-messaging-is-essential-for-telemedicine/",
+   "title": "Why HIPAA-Compliant Instant Messaging is Essential for Telemedicine?",
+   "cat": "Home Health & Remote Care",
+   "catHref": "https://murphi.ai/category/home-health-remote-care/",
+   "date": "2024-11-12T09:22:15+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/plugins/shopbuilder/assets/images/demo.png"
+  },
+  {
+   "href": "https://murphi.ai/why-hipaa-compliant-apps-are-essential-for-remote-patient-monitoring/",
+   "title": "Why HIPAA Compliant Apps Are Essential for Remote Patient Monitoring?",
+   "cat": "Home Health & Remote Care",
+   "catHref": "https://murphi.ai/category/home-health-remote-care/",
+   "date": "2024-11-10T09:23:43+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/uploads/2025/06/2147763789-685ac4bae86e7.webp"
+  },
+  {
+   "href": "https://murphi.ai/how-to-build-trust-with-patients-through-hipaa-compliant-phone-apps/",
+   "title": "How to Build Trust with Patients Through HIPAA-Compliant Phone Apps?",
+   "cat": "Healthcare Operations & Compliance",
+   "catHref": "https://murphi.ai/category/healthcare-operations-compliance/",
+   "date": "2024-11-09T09:24:33+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/plugins/shopbuilder/assets/images/demo.png"
+  },
+  {
+   "href": "https://murphi.ai/how-value-based-care-software-enhances-population-health-management/",
+   "title": "How Value-Based Care Software Enhances Population Health Management?",
+   "cat": "Care Management & Patient Engagement",
+   "catHref": "https://murphi.ai/category/care-management-patient-engagement/",
+   "date": "2024-11-05T09:26:15+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/plugins/shopbuilder/assets/images/demo.png"
+  },
+  {
+   "href": "https://murphi.ai/why-care-coordination-software-is-essential-for-modern-healthcare/",
+   "title": "Why Care Coordination Software is Essential for Modern Healthcare",
+   "cat": "Care Management & Patient Engagement",
+   "catHref": "https://murphi.ai/category/care-management-patient-engagement/",
+   "date": "2024-10-18T06:54:13+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/plugins/shopbuilder/assets/images/demo.png"
+  },
+  {
+   "href": "https://murphi.ai/murphi-ai-easily-managing-patient-payables/",
+   "title": "Murphi.ai: Easily Managing Patient Payables",
+   "cat": "Blog",
+   "catHref": "https://murphi.ai/category/blog/",
+   "date": "2024-10-12T06:24:21+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/plugins/shopbuilder/assets/images/demo.png"
+  },
+  {
+   "href": "https://murphi.ai/how-hipaa-compliant-payment-solutions-protect-patient-privacy/",
+   "title": "How HIPAA Compliant Payment Solutions Protect Patient Privacy",
+   "cat": "Healthcare Operations & Compliance",
+   "catHref": "https://murphi.ai/category/healthcare-operations-compliance/",
+   "date": "2024-10-06T05:34:55+00:00",
+   "author": "Murphi AI",
+   "img": "https://murphi.ai/wp-content/plugins/shopbuilder/assets/images/demo.png"
+  }
+ ]
+}

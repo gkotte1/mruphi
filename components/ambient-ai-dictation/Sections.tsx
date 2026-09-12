@@ -324,33 +324,33 @@ function IntegrationPanel() {
         </span>
       </div>
 
-      <div style={{ padding: 20 }}>
+      <div style={{ padding: 16 }}>
         <SystemNode label="EHR" />
         <FlowLink />
         <div
           style={{
             margin: "0 auto",
             width: "100%",
-            maxWidth: 300,
+            maxWidth: 240,
             borderRadius: 8,
             border: "1px solid #E3E3E3",
-            background: "#ffffff",
-            padding: 16,
+            background: "#F5F5F5",
+            padding: "10px 12px",
           }}
         >
-          <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 10 }}>
+          <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 8 }}>
             <span
               style={{
                 display: "flex",
-                width: 32,
-                height: 32,
+                width: 24,
+                height: 24,
                 flexShrink: 0,
                 alignItems: "center",
                 justifyContent: "center",
                 borderRadius: 8,
                 border: "1px solid #E3E3E3",
                 background: "#ffffff",
-                padding: 6,
+                padding: 4,
               }}
             >
               <Image
@@ -366,9 +366,9 @@ function IntegrationPanel() {
             </span>
           </div>
 
-          <ol style={{ margin: "16px auto 0", display: "grid", width: "fit-content", gap: 0 }}>
+          <ol style={{ margin: "10px auto 0", display: "grid", width: "fit-content", gap: 0 }}>
             {PIPELINE.map((step, i) => (
-              <li key={step} style={{ display: "flex", alignItems: "stretch", gap: 12 }}>
+              <li key={step} style={{ display: "flex", alignItems: "stretch", gap: 8 }}>
                 <div
                   className="relative flex w-[9px] shrink-0 justify-center"
                   aria-hidden
@@ -388,8 +388,8 @@ function IntegrationPanel() {
                   className="aa-mono"
                   style={{
                     minWidth: 0,
-                    paddingBottom: i === PIPELINE.length - 1 ? 0 : 10,
-                    fontSize: 12,
+                    paddingBottom: i === PIPELINE.length - 1 ? 0 : 6,
+                    fontSize: 11,
                     color: "#606060",
                   }}
                 >
@@ -413,60 +413,47 @@ function SystemNode({ label, returned }: { label: string; returned?: boolean }) 
         margin: "0 auto",
         display: "flex",
         width: "100%",
-        maxWidth: 300,
-        flexDirection: "column",
+        maxWidth: 240,
         alignItems: "center",
+        justifyContent: "center",
         gap: 8,
         borderRadius: 8,
-        background: "#007EFF",
-        padding: "16px 20px",
+        border: "1px solid #E3E3E3",
+        background: "#F5F5F5",
+        padding: "8px 12px",
       }}
     >
-      <span style={{ display: "flex", alignItems: "center", gap: 10 }}>
-        <span
-          style={{
-            display: "flex",
-            width: 28,
-            height: 28,
-            flexShrink: 0,
-            alignItems: "center",
-            justifyContent: "center",
-            borderRadius: 8,
-            background: "rgba(255,255,255,0.15)",
-            color: "#ffffff",
-          }}
-        >
-          <Icon name="server" width={14} height={14} />
-        </span>
-        <span style={{ fontSize: 15, fontWeight: 700, lineHeight: 1, color: "#F5F5F5" }}>
-          {label}
-        </span>
-      </span>
       <span
-        className="aa-mono"
         style={{
           display: "flex",
+          width: 24,
+          height: 24,
+          flexShrink: 0,
           alignItems: "center",
-          gap: 6,
-          fontSize: 10,
-          textTransform: "uppercase",
-          letterSpacing: "0.07em",
-          color: "rgba(245,245,245,0.7)",
+          justifyContent: "center",
+          borderRadius: 6,
+          border: "1px solid #E3E3E3",
+          background: "#ffffff",
+          color: "#007EFF",
         }}
       >
-        {returned ? (
-          <Tick className="size-3 shrink-0 text-white" />
-        ) : (
-          <span
-            className="size-1.5 rounded-full"
-            style={{
-              background: "rgba(255,255,255,0.8)",
-              animation: "mp-blink 2s ease-in-out infinite",
-            }}
-            aria-hidden
-          />
-        )}
+        <Icon name="server" width={12} height={12} />
       </span>
+      <span style={{ fontSize: 13, fontWeight: 700, lineHeight: 1, color: "#1A1A1A" }}>
+        {label}
+      </span>
+      {returned ? (
+        <Tick className="size-3 shrink-0 text-[#007EFF]" />
+      ) : (
+        <span
+          className="size-1.5 rounded-full"
+          style={{
+            background: "#007EFF",
+            animation: "mp-blink 2s ease-in-out infinite",
+          }}
+          aria-hidden
+        />
+      )}
     </div>
   );
 }
@@ -478,12 +465,12 @@ function FlowLink({ label }: { label?: string }) {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        gap: 8,
-        padding: "12px 0",
+        gap: 6,
+        padding: "6px 0",
       }}
       aria-hidden
     >
-      <span className="relative flex h-7 w-px shrink-0" style={{ background: "#E3E3E3" }}>
+      <span className="relative flex h-4 w-px shrink-0" style={{ background: "#E3E3E3" }}>
         <span
           className="absolute left-1/2 size-1.5 -translate-x-1/2 rounded-full"
           style={{
@@ -509,7 +496,7 @@ function FlowLink({ label }: { label?: string }) {
           >
             {label}
           </span>
-          <span className="relative flex h-7 w-px shrink-0" style={{ background: "#E3E3E3" }}>
+          <span className="relative flex h-4 w-px shrink-0" style={{ background: "#E3E3E3" }}>
             <span
               className="absolute left-1/2 size-1.5 -translate-x-1/2 rounded-full"
               style={{

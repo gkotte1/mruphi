@@ -1,0 +1,389 @@
+{
+ "slug": "white-label-partner-program",
+ "title": "White Label Partner Program | Murphi AI",
+ "description": "Offer Home Health and Hospice agencies the flexibility to use Murphi.ai internally — or outsource the entire Revenue Assurance process to your managed",
+ "hero": {
+  "pills": [
+   {
+    "label": "White-Label Partner Program",
+    "href": null
+   },
+   {
+    "label": "Who We Serve — Post-Acute Care",
+    "href": "/post-acute-care/"
+   },
+   {
+    "label": "Embed AI into EHR Workflows",
+    "href": "/ehr-ai-integration-platform/"
+   }
+  ],
+  "h1Before": "Two ways to monetize your",
+  "h1Em": "AI-Native Revenue Assurance",
+  "h1After": "platform",
+  "sub": "Offer Home Health and Hospice agencies the flexibility to use Murphi.ai internally — or outsource the entire Revenue Assurance process to your managed services team.",
+  "stats": [
+   {
+    "value": "98%+",
+    "label": "Final Accuracy"
+   },
+   {
+    "value": "85–95%",
+    "label": "AI Baseline"
+   },
+   {
+    "value": "2",
+    "label": "Revenue Streams"
+   },
+   {
+    "value": "1",
+    "label": "White-Label Platform"
+   }
+  ]
+ },
+ "models": {
+  "tag": "Deployment Models",
+  "title": "Choose how your clients engage",
+  "sub": "Both models run on the same white-labeled Murphi.ai platform — one SaaS subscription, one managed service, one AI engine.",
+  "cards": [
+   {
+    "tone": "blue",
+    "icon": "<svg class=\"icon-no-fill\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#1877F2\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\" style=\"fill:none!important\"><rect x=\"2\" y=\"3\" width=\"20\" height=\"14\" rx=\"2\" style=\"fill:none!important\"/><line x1=\"8\" y1=\"21\" x2=\"16\" y2=\"21\" style=\"fill:none!important\"/><line x1=\"12\" y1=\"17\" x2=\"12\" y2=\"21\" style=\"fill:none!important\"/><circle cx=\"12\" cy=\"10\" r=\"2\" style=\"fill:none!important\"/><path d=\"M7 10h2m6 0h2\" style=\"fill:none!important\"/></svg>",
+    "badge": "Model 1 — SaaS",
+    "title": "AI Productivity Enhancement",
+    "description": "Your white-labeled platform is placed in the hands of the agency's own clinicians, coders, QA, and billing staff. Murphi.ai does the heavy lifting — your client team reviews and approves.",
+    "flowLabel": "Workflow",
+    "flow": [
+     {
+      "dot": "#94A3B8",
+      "pulse": false,
+      "text": "Agency clinical documentation",
+      "chip": null,
+      "chipTone": "ai"
+     },
+     {
+      "dot": "#1877F2",
+      "pulse": true,
+      "text": "Murphi.ai AI Engine",
+      "chip": null,
+      "chipTone": "ai"
+     },
+     {
+      "dot": "#1877F2",
+      "pulse": false,
+      "text": "Revenue Assurance report generated",
+      "chip": "85–95%",
+      "chipTone": "ai"
+     },
+     {
+      "dot": "#1877F2",
+      "pulse": false,
+      "text": "Agency staff human review",
+      "chip": null,
+      "chipTone": "ai"
+     },
+     {
+      "dot": "#15803D",
+      "pulse": false,
+      "text": "Final validated report submitted",
+      "chip": "98%+",
+      "chipTone": "final"
+     }
+    ],
+    "labels": [
+     "Benefits",
+     "Revenue model"
+    ],
+    "benefits": [
+     "Faster documentation review",
+     "Significant productivity gains",
+     "Reduced manual effort",
+     "Better compliance posture",
+     "Faster claim turnaround",
+     "Lower operational costs"
+    ],
+    "tags": [
+     "Recurring SaaS subscription",
+     "Per-user / per-report",
+     "High-margin recurring"
+    ]
+   },
+   {
+    "tone": "green",
+    "icon": "<svg class=\"icon-no-fill\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#15803D\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\" style=\"fill:none!important\"><path d=\"M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2\" style=\"fill:none!important\"/><circle cx=\"9\" cy=\"7\" r=\"4\" style=\"fill:none!important\"/><path d=\"M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75\" style=\"fill:none!important\"/></svg>",
+    "badge": "Model 2 — Managed Services",
+    "title": "AI Managed Services",
+    "description": "Your coding and QA specialists handle the human review layer on behalf of the agency. Agencies simply upload documentation — you deliver a fully validated report back at 98–99% accuracy.",
+    "flowLabel": "Workflow",
+    "flow": [
+     {
+      "dot": "#94A3B8",
+      "pulse": false,
+      "text": "Agency uploads clinical documentation",
+      "chip": null,
+      "chipTone": "ai"
+     },
+     {
+      "dot": "#1877F2",
+      "pulse": true,
+      "text": "Murphi.ai AI Engine",
+      "chip": null,
+      "chipTone": "ai"
+     },
+     {
+      "dot": "#1877F2",
+      "pulse": false,
+      "text": "Initial AI report generated",
+      "chip": "85–95%",
+      "chipTone": "ai"
+     },
+     {
+      "dot": "#1877F2",
+      "pulse": false,
+      "text": "Your coding & QA team reviews",
+      "chip": null,
+      "chipTone": "ai"
+     },
+     {
+      "dot": "#15803D",
+      "pulse": false,
+      "text": "Validated report delivered to agency",
+      "chip": "98–99%",
+      "chipTone": "final"
+     }
+    ],
+    "labels": [
+     "Benefits",
+     "Revenue model"
+    ],
+    "benefits": [
+     "Premium managed service offering",
+     "Higher revenue per report",
+     "AI-assisted workforce efficiency",
+     "Faster turnaround for agencies",
+     "Higher accuracy at delivery",
+     "Easily scalable operations"
+    ],
+    "tags": [
+     "Per-report managed service fee",
+     "Premium pricing",
+     "Higher gross margins"
+    ]
+   }
+  ]
+ },
+ "how": {
+  "tag": "Getting Started",
+  "title": "How white-labeling works",
+  "sub": "From partner agreement to revenue-generating platform — four simple steps.",
+  "steps": [
+   {
+    "num": "1",
+    "title": "Partner Agreement",
+    "body": "Sign the Murphi.ai white-label licensing agreement. Your brand, your platform."
+   },
+   {
+    "num": "2",
+    "title": "Brand Configuration",
+    "body": "We configure the platform under your brand name, logo, and color scheme."
+   },
+   {
+    "num": "3",
+    "title": "Choose Your Model",
+    "body": "Deploy SaaS-direct to agencies, or launch a managed services offering — or both."
+   },
+   {
+    "num": "4",
+    "title": "Generate Revenue",
+    "body": "Onboard agencies, deliver AI-powered reports, and build recurring revenue streams."
+   }
+  ]
+ },
+ "compare": {
+  "tag": "Side-by-Side",
+  "title": "Compare the two models",
+  "sub": "Both run on the same platform. The difference is who performs the final review.",
+  "headers": [
+   {
+    "label": "Feature",
+    "tone": null
+   },
+   {
+    "label": "Productivity Model",
+    "tone": "blue"
+   },
+   {
+    "label": "Managed Services Model",
+    "tone": "green"
+   }
+  ],
+  "rows": [
+   [
+    {
+     "text": "Who performs final review",
+     "feature": true,
+     "pill": null
+    },
+    {
+     "text": "Agency staff",
+     "feature": false,
+     "pill": "blue"
+    },
+    {
+     "text": "Your coding & QA team",
+     "feature": false,
+     "pill": "green"
+    }
+   ],
+   [
+    {
+     "text": "AI accuracy at generation",
+     "feature": true,
+     "pill": null
+    },
+    {
+     "text": "85–95%",
+     "feature": false,
+     "pill": null
+    },
+    {
+     "text": "85–95%",
+     "feature": false,
+     "pill": null
+    }
+   ],
+   [
+    {
+     "text": "Final delivered accuracy",
+     "feature": true,
+     "pill": null
+    },
+    {
+     "text": "98%+",
+     "feature": false,
+     "pill": null
+    },
+    {
+     "text": "98–99%",
+     "feature": false,
+     "pill": null
+    }
+   ],
+   [
+    {
+     "text": "Agency effort required",
+     "feature": true,
+     "pill": null
+    },
+    {
+     "text": "Medium (internal review)",
+     "feature": false,
+     "pill": null
+    },
+    {
+     "text": "Minimal (upload only)",
+     "feature": false,
+     "pill": null
+    }
+   ],
+   [
+    {
+     "text": "Your revenue opportunity",
+     "feature": true,
+     "pill": null
+    },
+    {
+     "text": "SaaS subscription fees",
+     "feature": false,
+     "pill": null
+    },
+    {
+     "text": "Premium per-report managed fees",
+     "feature": false,
+     "pill": null
+    }
+   ],
+   [
+    {
+     "text": "Margin profile",
+     "feature": true,
+     "pill": null
+    },
+    {
+     "text": "High, recurring",
+     "feature": false,
+     "pill": null
+    },
+    {
+     "text": "Higher, per-engagement",
+     "feature": false,
+     "pill": null
+    }
+   ],
+   [
+    {
+     "text": "Best for",
+     "feature": true,
+     "pill": null
+    },
+    {
+     "text": "Agencies with internal coding/QA staff",
+     "feature": false,
+     "pill": null
+    },
+    {
+     "text": "Agencies wanting full outsourcing",
+     "feature": false,
+     "pill": null
+    }
+   ],
+   [
+    {
+     "text": "Upsell path",
+     "feature": true,
+     "pill": null
+    },
+    {
+     "text": "→ Transition to Managed Services",
+     "feature": false,
+     "pill": null
+    },
+    {
+     "text": "→ Expand volume, add modules",
+     "feature": false,
+     "pill": null
+    }
+   ]
+  ]
+ },
+ "callout": {
+  "heading": "One platform. Two revenue streams.",
+  "sub": "With a white-labeled Murphi.ai platform, you can offer both deployment models simultaneously. Many agencies begin with the Productivity Enhancement model and migrate to Managed Services as volumes increase or staffing becomes constrained.",
+  "bullets": [
+   "No conflict between models — they serve different agency personas",
+   "Same platform, same white-label brand, flexible deployment",
+   "Built-in upsell path from SaaS to managed services",
+   "Position as an AI-powered Revenue Assurance partner, not a billing vendor",
+   "Home Health, Hospice, and Post-Acute care supported",
+   "HIPAA-compliant, SOC 2 certified infrastructure"
+  ],
+  "tags": [
+   "Home Health",
+   "Hospice",
+   "Post-Acute Care",
+   "HIPAA Compliant",
+   "SOC 2 Certified"
+  ],
+  "buttons": [
+   {
+    "variant": "primary",
+    "label": "Request Demo",
+    "href": "/contact-us/"
+   },
+   {
+    "variant": "outline",
+    "label": "Learn More →",
+    "href": "/white-labeling/"
+   }
+  ]
+ }
+}

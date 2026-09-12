@@ -53,6 +53,10 @@
   gap: 6px;
 }
 
+.site-chrome .hl-nav-download {
+  margin-inline-end: 16px;
+}
+
 .site-chrome .hl-nav-link:hover,
 .site-chrome .hl-nav-download:hover {
   color: #007eff;

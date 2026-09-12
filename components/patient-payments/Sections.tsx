@@ -39,12 +39,12 @@ export function EhrIntegration({
           </span>
         </div>
 
-        <div className="px-5 py-5 max-600:px-4">
-          <SystemNode label="EHR" />
-          <Run />
-          <MurphiNode stages={pipeline} />
-          <Run label={returnStep} />
-          <SystemNode label="EHR" returned />
+        <div className="px-4 py-4 max-600:px-3.5">
+          <SystemNode label="EHR" muted />
+          <Run tight />
+          <MurphiNode stages={pipeline} compact />
+          <Run label={returnStep} tight />
+          <SystemNode label="EHR" returned muted />
         </div>
       </div>
     </EhrSplit>

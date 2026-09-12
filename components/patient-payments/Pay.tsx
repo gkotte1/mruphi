@@ -269,16 +269,41 @@ export function Pips({ total, done }: { total: number; done: number }) {
   );
 }
 
-/** One end of the round trip - the customer's own system, on #007EFF. */
+/** One end of the round trip - the customer's own system. */
 export function SystemNode({
   label,
   returned,
   compact,
+  muted,
 }: {
   label: string;
   returned?: boolean;
   compact?: boolean;
+  /** Light-grey compact card. Used by EHR Integration only. */
+  muted?: boolean;
 }) {
+  if (muted) {
+    return (
+      <div className="mx-auto flex w-full max-w-[240px] items-center justify-center gap-2 rounded-[8px] border border-[#E3E3E3] bg-[#F5F5F5] px-3 py-2">
+        <span className="flex size-6 shrink-0 items-center justify-center rounded-[6px] border border-[#E3E3E3] bg-white text-[#007EFF]">
+          <Icon name="server" width={12} height={12} />
+        </span>
+        <span className="text-[13px] font-bold leading-none tracking-[-0.015em] text-ink">
+          {label}
+        </span>
+        {returned ? (
+          <Tick className="size-3 shrink-0 text-[#007EFF]" />
+        ) : (
+          <span
+            className="size-1.5 rounded-full bg-[#007EFF]"
+            style={{ animation: "mp-blink 2s ease-in-out infinite" }}
+            aria-hidden
+          />
+        )}
+      </div>
+    );
+  }
+
   return (
     <div
       className={cn(
@@ -320,11 +345,29 @@ export function SystemNode({
 }
 
 /** Murphi's own surface, with whatever stages it is running. */
-export function MurphiNode({ stages }: { stages: string[] }) {
+export function MurphiNode({
+  stages,
+  compact,
+}: {
+  stages: string[];
+  compact?: boolean;
+}) {
   return (
-    <div className="mx-auto w-full max-w-[300px] rounded-[8px] border border-[#E3E3E3] bg-white px-4 py-4 max-600:px-3.5">
-      <div className="flex items-center justify-center gap-2.5">
-        <span className="flex size-8 shrink-0 items-center justify-center rounded-[9px] border border-[#E3E3E3] bg-white p-1.5">
+    <div
+      className={cn(
+        "mx-auto w-full rounded-[8px] border border-[#E3E3E3]",
+        compact
+          ? "max-w-[240px] bg-[#F5F5F5] px-3 py-2.5"
+          : "max-w-[300px] bg-white px-4 py-4 max-600:px-3.5",
+      )}
+    >
+      <div className="flex items-center justify-center gap-2">
+        <span
+          className={cn(
+            "flex shrink-0 items-center justify-center rounded-[8px] border border-[#E3E3E3] bg-white",
+            compact ? "size-6 p-1" : "size-8 p-1.5 rounded-[9px]",
+          )}
+        >
           <Image
             src="/brand/app-icons/murphi-icon-192.png"
             alt="Murphi.ai"
@@ -338,9 +381,9 @@ export function MurphiNode({ stages }: { stages: string[] }) {
         </span>
       </div>
 
-      <ol className="mx-auto mt-4 grid w-fit gap-0">
+      <ol className={cn("mx-auto grid w-fit gap-0", compact ? "mt-2.5" : "mt-4")}>
         {stages.map((stage, i) => (
-          <li key={stage} className="flex items-stretch gap-3">
+          <li key={stage} className={cn("flex items-stretch", compact ? "gap-2" : "gap-3")}>
             <div className="relative flex w-[9px] shrink-0 justify-center" aria-hidden>
               <span className="relative z-10 mt-[7px] size-[7px] shrink-0 rounded-full border-2 border-[#007EFF] bg-white" />
               {i === stages.length - 1 ? null : (
@@ -351,8 +394,9 @@ export function MurphiNode({ stages }: { stages: string[] }) {
             <span
               className={cn(
                 MONO,
-                "min-w-0 truncate text-[12px] text-[#606060]",
-                i === stages.length - 1 ? "pb-0" : "pb-2.5",
+                "min-w-0 truncate text-[#606060]",
+                compact ? "text-[11px]" : "text-[12px]",
+                i === stages.length - 1 ? "pb-0" : compact ? "pb-1.5" : "pb-2.5",
               )}
             >
               {stage}

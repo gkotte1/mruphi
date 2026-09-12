@@ -124,6 +124,8 @@ const VALUES: { title: string; body: string; icon: IconName }[] = [
   },
 ];
 
+const MODULE_DESC = "text-[14.5px] leading-relaxed text-[#606060]";
+
 function SectionRule({
   id,
   children,
@@ -156,6 +158,7 @@ export default function AboutUsPage() {
           ledeAlign="left"
           ledeMax="none"
           paddingBottom={64}
+          ledeClassName={MODULE_DESC}
           lede="Murphi.ai is an advanced AI platform purpose-built for home health and hospice, helping agencies reduce documentation time, strengthen revenue integrity, improve compliance, engage patients, and accelerate patient payment collections through one connected platform. It supports clinicians, administrators, coders, billers, compliance and QAPI teams, RCM companies, accreditation organizations, and healthcare partners across the agency ecosystem. Murphi.ai also partners with home health and hospice EHR companies to embed AI directly into existing workflows through secure APIs, configurable integrations, and white-label deployment options. By working alongside existing systems, Murphi.ai helps agencies and EHR partners make everyday workflows faster, more accurate, secure, and easier to manage."
         />
 
@@ -180,7 +183,7 @@ export default function AboutUsPage() {
             </div>
 
             <div className="grid min-w-0 max-w-[70ch] gap-6">
-              <p className="ip-lead">
+              <p className={MODULE_DESC}>
                 Home health and hospice require specialized workflows across
                 OASIS, clinical documentation, coding, QAPI, compliance, revenue
                 assurance, patient communication, and EHR operations. Generic AI
@@ -190,7 +193,7 @@ export default function AboutUsPage() {
                 one connected platform.
               </p>
 
-              <p className="ip-lead">
+              <p className={MODULE_DESC}>
                 For agencies, Murphi.ai helps reduce charting time, close
                 documentation gaps, strengthen compliance, protect revenue,
                 improve collections, and prepare for audits and surveys. By
@@ -223,7 +226,7 @@ export default function AboutUsPage() {
                     {module.title}
                   </h3>
 
-                  <p className="mt-3.5 text-[14.5px] leading-relaxed text-[#606060]">
+                  <p className={`mt-3.5 ${MODULE_DESC}`}>
                     {module.body}
                   </p>
                 </li>

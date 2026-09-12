@@ -39,7 +39,7 @@ export default function ClientHub({
 }) {
   return (
     <div className="w-full">
-      <div className="grid grid-cols-[minmax(0,1fr)_auto_minmax(0,0.72fr)] items-center max-900:grid-cols-1 max-900:gap-0">
+      <div className="grid grid-cols-[minmax(0,1fr)_auto_minmax(min-content,1fr)] items-center max-900:grid-cols-1 max-900:gap-0">
         {/* ── The work coming in ── */}
         <div className="relative grid grid-cols-[minmax(0,1fr)_26px] gap-y-3 max-900:grid-cols-1">
           {clients.map((client, i) => (
@@ -108,7 +108,7 @@ export default function ClientHub({
         </div>
 
         {/* ── What comes back ── */}
-        <div className="relative grid grid-cols-[26px_minmax(0,1fr)] gap-y-3 max-900:grid-cols-1">
+        <div className="relative grid grid-cols-[26px_minmax(min-content,1fr)] gap-y-3 max-900:grid-cols-1">
           <span
             className={cn("absolute left-0 w-px bg-[#E3E3E3] max-900:hidden", BUS)}
             aria-hidden
@@ -137,11 +137,14 @@ export default function ClientHub({
                   />
                 </span>
                 <span
-                  className={cn(MONO, "min-w-0 flex-1 truncate text-[11px] font-semibold text-ink")}
+                  className={cn(
+                    MONO,
+                    "shrink-0 text-[11px] font-semibold leading-none whitespace-nowrap text-ink",
+                  )}
                 >
                   {output}
                 </span>
-                <Tick className="size-3 shrink-0 text-[#007EFF]" />
+                <Tick className="ml-0.5 size-3 shrink-0 text-[#007EFF]" />
               </div>
             </div>
           ))}
