@@ -67,7 +67,7 @@ export default function SecuritySection() {
                   alt={card.alt}
                   width={card.width}
                   height={card.height}
-                  className="h-[52px] w-auto"
+                  className="h-[52px] w-auto grayscale"
                 />
               </span>
 

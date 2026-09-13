@@ -92,7 +92,7 @@ export default function AiDrivenRcmPage() {
           current="AI-Driven RCM"
           eyebrow="AI-Driven RCM"
           badge="Launching Soon"
-          title="Meet the Problem Before the Payer Does."
+          title="Fix Clinical, Coding, OASIS, POC documentation before it is denied"
           storyTag="Ninety Days Later"
           story={
             'A denial letter arrives: "insufficient documentation." Ninety days too late to fix what actually happened - a coding step that never made it into the claim in the first place.'

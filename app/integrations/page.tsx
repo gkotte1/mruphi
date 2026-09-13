@@ -27,14 +27,8 @@ export default function IntegrationPage() {
         <PaymentIntegration />
         <SecuritySection />
         <FinalCta
-          heading={
-            <>
-              Experience AI Automation
-              <br />
-              at Scale
-            </>
-          }
-          body="Tell us your care setting and we'll show you exactly what Murphi.ai delivers for your organization - a live demo tailored to your workflows and your team."
+          heading="We integrate with your EHR seamlessly"
+          body="Murphi integrates with your EHR and AI enables Ambient AI for clinical documentation; Revenue Assurance, QAPI, Compliance, Patient Engagement, Patient Payments and RCM workflows."
         />
       </main>
       <Footer />

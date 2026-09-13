@@ -196,7 +196,13 @@ export default function EhrCompaniesPage() {
           current="Home Health & Hospice EHR Companies"
           parent={{ label: "Who We Serve", href: "/#serve" }}
           eyebrow="Who We Serve · EHR Companies"
-          title="Embed Healthcare AI Into Every Clinical Workflow."
+          title={
+            <>
+              Murphi helps you become
+              <br />
+              an AI-native platform.
+            </>
+          }
           lede="Murphi.ai enables Home Health, Hospice and Palliative Care platforms to introduce ambient documentation, intelligent assessments, clinical quality checks, and compliance workflows  - without building or maintaining the complete enterprise AI infrastructure internally."
           trust={[
             "Embedded & White-Labeled",
@@ -434,8 +440,8 @@ export default function EhrCompaniesPage() {
         </div>
 
         <FinalCta
-          heading="Experience AI Automation at Scale"
-          body="Tell us your care setting and we'll show you exactly what Murphi.ai delivers for your organization - a live demo tailored to your workflows and your team."
+          heading="Embed AI Features Into Clinical, Rev Assurance, QAPI and RCM workflows."
+          body="Add 30-40 AI features within 6 months, white label and offer to your customers"
         />
       </main>
 

@@ -107,7 +107,7 @@ export default function ReferralToNoaPage() {
           current="Referral → NOA"
           eyebrow="Referral → NOA"
           badge="Launching Soon"
-          title="Don't Let a Referral Wait for Monday."
+          title="AI automation of referrals for quick intake decisions"
           storyTag="Friday, 4:58 PM"
           story="A referral lands in the fax tray two minutes before the office closes. It sits there all weekend. By the time it's keyed in Monday morning, the patient has already waited three days for care that hasn't started."
           lede="Murphi classifies, checks and routes referrals the moment they arrive - from fax, email, portal, API or EHR - so the wait is measured in minutes, not a weekend."
@@ -204,7 +204,7 @@ export default function ReferralToNoaPage() {
         </div>
 
         <FinalCta
-          heading="Stop Losing Fridays to a Fax Tray."
+          heading="Summarized outs to increase your intakes with quick decisions"
           body="Referral → NOA is launching soon. Join the early access list to be first to see it on your intake process."
           primaryLabel="Join Early Access"
         />

@@ -101,9 +101,6 @@ export default function Navbar() {
               )
             }
           />
-          <Link href="/events/" className="hl-nav-link">
-            Events
-          </Link>
         </nav>
 
         <div className="hl-nav-actions">
@@ -155,14 +152,6 @@ export default function Navbar() {
             group={WHO_WE_SERVE}
             onNavigate={() => setMobileOpen(false)}
           />
-          <Link
-            href="/events/"
-            className="hl-nav-link"
-            onClick={() => setMobileOpen(false)}
-            style={{ display: "inline-flex", marginBottom: 22 }}
-          >
-            Events
-          </Link>
           <DownloadAppLink
             className="hl-nav-link"
             onClick={() => setMobileOpen(false)}

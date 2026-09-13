@@ -161,10 +161,38 @@ export function BeforeAfter({
   );
 }
 
-/* ── The Mechanics: a delivery log, with direction of travel ─── */
+/* ── The Mechanics: delivery log + live SMS thread ───────────── */
 
 /** Which way each step of the round trip moves. */
 const DIRECTIONS = ["out", "out", "in", "in", "kept"] as const;
+
+/** Sample thread shown beside the mechanics steps. */
+const MECHANICS_THREAD: {
+  from: "rn" | "patient";
+  text: string;
+  time: string;
+}[] = [
+  {
+    from: "rn",
+    text: "Hi Mary, how is your breathing today?",
+    time: "9:12 AM",
+  },
+  {
+    from: "patient",
+    text: "Better, but I get short of breath when walking.",
+    time: "9:14 AM",
+  },
+  {
+    from: "rn",
+    text: "Thanks for letting me know. Please rest and I'll follow up shortly.",
+    time: "9:15 AM",
+  },
+  {
+    from: "patient",
+    text: "Thank you.",
+    time: "9:16 AM",
+  },
+];
 
 export function MessageFlow({
   steps,
@@ -173,69 +201,172 @@ export function MessageFlow({
 }) {
   return (
     <Reveal>
-      <ol className="overflow-hidden rounded-[10px] border border-[#E3E3E3] bg-white shadow-[0_1px_2px_rgba(0,0,0,0.03),0_14px_30px_rgba(0,0,0,0.05)]">
-        {steps.map((step, i) => {
-          const direction = DIRECTIONS[i] ?? "out";
-          const last = i === steps.length - 1;
+      <div className="grid grid-cols-[minmax(0,0.58fr)_minmax(0,0.42fr)] items-center gap-10 max-900:grid-cols-1 max-900:gap-8">
+        {/* Left — existing 01–05 steps, ~55–60% width */}
+        <ol className="overflow-hidden rounded-[10px] border border-[#E3E3E3] bg-white shadow-[0_1px_2px_rgba(0,0,0,0.03),0_14px_30px_rgba(0,0,0,0.05)]">
+          {steps.map((step, i) => {
+            const direction = DIRECTIONS[i] ?? "out";
+            const last = i === steps.length - 1;
+
+            return (
+              <li
+                key={step.num}
+                className={cn(
+                  "grid grid-cols-[auto_1fr_auto] items-start gap-6 px-7 py-6 max-600:gap-4 max-600:px-5 max-600:py-5",
+                  last ? "" : "border-b border-[#E3E3E3]",
+                )}
+              >
+                <span className="relative flex w-9 shrink-0 justify-center self-stretch">
+                  <span className="relative z-10 flex size-9 shrink-0 items-center justify-center rounded-full bg-[#007EFF] text-[12px] font-bold text-white">
+                    {step.num}
+                  </span>
+                  {last ? null : (
+                    <span
+                      className="absolute top-9 -bottom-12 left-1/2 w-px -translate-x-1/2 bg-[#E3E3E3] max-600:-bottom-10"
+                      aria-hidden
+                    />
+                  )}
+                </span>
+
+                <span className="min-w-0">
+                  <span className="type-hl-card-title block text-ink">
+                    {step.title}
+                  </span>
+                  <span className="type-hl-card-body mt-1.5 block">
+                    {step.body}
+                  </span>
+                </span>
+
+                <span
+                  className={cn(
+                    "mt-1 flex size-7 shrink-0 items-center justify-center rounded-full border max-600:hidden",
+                    direction === "kept"
+                      ? "border-[#007EFF] bg-[#007EFF] text-white"
+                      : "border-[#E3E3E3] bg-[#F5F5F5] text-[#007EFF]",
+                  )}
+                  aria-hidden
+                >
+                  {direction === "kept" ? (
+                    <Tick className="size-3.5" />
+                  ) : (
+                    <Icon
+                      name="arrow"
+                      width={13}
+                      height={13}
+                      className={direction === "in" ? "rotate-180" : ""}
+                    />
+                  )}
+                </span>
+              </li>
+            );
+          })}
+        </ol>
+
+        {/* Right — SMS conversation, aligned to the middle of the steps */}
+        <MechanicsSmsThread />
+      </div>
+    </Reveal>
+  );
+}
+
+function MechanicsSmsThread() {
+  return (
+    <aside
+      aria-label="Sample SMS conversation"
+      className="overflow-hidden rounded-[10px] border border-[#E3E3E3] bg-white shadow-[0_1px_2px_rgba(0,0,0,0.03),0_14px_30px_rgba(0,0,0,0.05)] max-900:mx-auto max-900:w-full max-900:max-w-[420px]"
+    >
+      <div className="flex items-center justify-between gap-3 border-b border-[#E3E3E3] bg-[#F5F5F5] px-5 py-3">
+        <span
+          className={cn(
+            MONO,
+            "truncate text-[10.5px] font-semibold uppercase tracking-[0.06em] text-[#878787]",
+          )}
+        >
+          SMS · Mary
+        </span>
+        <span className="flex shrink-0 items-center gap-1.5" aria-hidden>
+          <span className="relative flex size-1.5">
+            <span
+              className="absolute inline-flex size-full rounded-full bg-[#007EFF]/60"
+              style={{ animation: "mp-glow 2.4s ease-in-out infinite" }}
+            />
+            <span className="relative inline-flex size-1.5 rounded-full bg-[#007EFF]" />
+          </span>
+          <span
+            className={cn(
+              MONO,
+              "text-[10px] font-semibold uppercase tracking-[0.06em] text-[#007EFF]",
+            )}
+          >
+            Secure
+          </span>
+        </span>
+      </div>
+
+      <div className="border-b border-[#E3E3E3] px-5 py-3.5">
+        <div className="flex items-center gap-2.5">
+          <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-[#007EFF] text-[12px] font-bold text-white">
+            M
+          </span>
+          <span className="min-w-0">
+            <span className="type-hl-inbox-title block truncate text-ink">
+              Mary
+            </span>
+            <span
+              className={cn(MONO, "block truncate text-[11px] text-[#878787]")}
+            >
+              Patient · SMS
+            </span>
+          </span>
+        </div>
+      </div>
+
+      <div className="flex flex-col gap-3.5 bg-white px-5 py-5">
+        {MECHANICS_THREAD.map((msg) => {
+          const fromRn = msg.from === "rn";
 
           return (
-            <li
-              key={step.num}
+            <div
+              key={`${msg.from}-${msg.time}-${msg.text.slice(0, 12)}`}
               className={cn(
-                "grid grid-cols-[auto_1fr_auto] items-start gap-6 px-7 py-6 max-600:gap-4 max-600:px-5 max-600:py-5",
-                last ? "" : "border-b border-[#E3E3E3]",
+                "flex max-w-[88%] flex-col gap-1",
+                fromRn ? "items-start self-start" : "items-end self-end",
               )}
             >
-              {/* The rail, with this step's number on it. */}
-              <span className="relative flex w-9 shrink-0 justify-center self-stretch">
-                <span className="relative z-10 flex size-9 shrink-0 items-center justify-center rounded-full bg-[#007EFF] text-[12px] font-bold text-white">
-                  {step.num}
-                </span>
-                {/* Runs through the row padding as well, so the rail is
-                    continuous from one step to the next. */}
-                {last ? null : (
-                  <span
-                    className="absolute top-9 -bottom-12 left-1/2 w-px -translate-x-1/2 bg-[#E3E3E3] max-600:-bottom-10"
-                    aria-hidden
-                  />
-                )}
-              </span>
-
-              <span className="min-w-0">
-                <span className="type-hl-card-title block text-ink">
-                  {step.title}
-                </span>
-                <span className="type-hl-card-body mt-1.5 block">
-                  {step.body}
-                </span>
-              </span>
-
-              {/* Which way it travelled - drawn, never spelled out. */}
               <span
                 className={cn(
-                  "mt-1 flex size-7 shrink-0 items-center justify-center rounded-full border max-600:hidden",
-                  direction === "kept"
-                    ? "border-[#007EFF] bg-[#007EFF] text-white"
-                    : "border-[#E3E3E3] bg-[#F5F5F5] text-[#007EFF]",
+                  MONO,
+                  "px-1 text-[10px] font-semibold uppercase tracking-[0.05em] text-[#878787]",
                 )}
-                aria-hidden
               >
-                {direction === "kept" ? (
-                  <Tick className="size-3.5" />
-                ) : (
-                  <Icon
-                    name="arrow"
-                    width={13}
-                    height={13}
-                    className={direction === "in" ? "rotate-180" : ""}
-                  />
-                )}
+                {fromRn ? "RN" : "Patient"} · {msg.time}
               </span>
-            </li>
+              <div
+                className={cn(
+                  "px-3.5 py-2.5 text-[13.5px] leading-[1.45]",
+                  fromRn
+                    ? "rounded-[16px] rounded-bl-[4px] border border-[#E3E3E3] bg-[#F5F5F5] text-ink"
+                    : "rounded-[16px] rounded-br-[4px] bg-[#007EFF] text-[#F5F5F5]",
+                )}
+              >
+                {msg.text}
+              </div>
+            </div>
           );
         })}
-      </ol>
-    </Reveal>
+      </div>
+
+      <div className="border-t border-[#E3E3E3] bg-[#F5F5F5] px-5 py-2.5">
+        <span
+          className={cn(
+            MONO,
+            "text-[10.5px] font-semibold uppercase tracking-[0.05em] text-[#878787]",
+          )}
+        >
+          Delivered · Logged to history
+        </span>
+      </div>
+    </aside>
   );
 }
 

@@ -64,14 +64,8 @@ export default function BlogPage() {
         </section>
 
         <FinalCta
-          heading={
-            <>
-              Experience AI Automation
-              <br />
-              at Scale
-            </>
-          }
-          body="Tell us your care setting and we'll show you exactly what Murphi.ai delivers for your organization - a live demo tailored to your workflows and your team."
+          heading="The most trusted AI platform by agencies"
+          body="Murphi is the most advanced AI platform which agencies deploy and users adopt with ease."
         />
       </main>
 

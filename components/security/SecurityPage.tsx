@@ -252,7 +252,7 @@ function Pillars() {
                   alt=""
                   width={pillar.width}
                   height={pillar.height}
-                  className="h-[52px] w-auto"
+                  className="h-[52px] w-auto grayscale"
                 />
               </span>
 
