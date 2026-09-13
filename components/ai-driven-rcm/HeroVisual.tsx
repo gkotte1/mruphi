@@ -35,17 +35,17 @@ export default function ClaimReadiness({
   foot: [string, string];
 }) {
   return (
-    <div className="relative">
+    <div className="relative min-w-0 max-w-full">
       <Surface
         label={
           <>
             <Icon name="pulse" width={13} height={13} className="shrink-0 text-[#007EFF]" />
-            <span className="truncate">{title}</span>
+            <span className="min-w-0 break-words">{title}</span>
           </>
         }
         status={status}
         tone="brand"
-        className="relative z-20"
+        className="relative z-20 min-w-0 max-w-full"
       >
         {/* Where the claim has got to. */}
         <div className="rounded-[8px] border border-[#E3E3E3] bg-[#F5F5F5] px-4 py-4 max-600:px-3">
@@ -78,7 +78,7 @@ export default function ClaimReadiness({
           >
             <Tick className="size-2.5" />
           </span>
-          <span className={cn(MONO, "min-w-0 truncate text-[12px] font-semibold text-ink")}>
+          <span className={cn(MONO, "min-w-0 break-words text-[12px] font-semibold text-ink")}>
             {foot[0]}
           </span>
         </span>
@@ -95,7 +95,7 @@ export default function ClaimReadiness({
         <span
           className={cn(
             MONO,
-            "min-w-0 truncate text-[12px] font-semibold tracking-[0.02em] text-ink",
+            "min-w-0 break-words text-[12px] font-semibold tracking-[0.02em] text-ink",
           )}
         >
           {foot[1]}

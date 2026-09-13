@@ -103,12 +103,14 @@ export default function InnerHero({
 
             {storyTag && story ? (
               <div
+                className="ip-hero-story"
                 style={{
                   marginTop: 18,
                   background: "#F5F5F5",
                   border: "1px solid #E3E3E3",
                   borderRadius: 8,
                   padding: "20px 24px",
+                  minWidth: 0,
                 }}
               >
                 <span
@@ -126,7 +128,7 @@ export default function InnerHero({
                   {storyTag}
                 </span>
                 <p
-                  className="ip-serif"
+                  className="ip-serif ip-hero-story-body"
                   style={{
                     maxWidth: "62ch",
                     fontSize: 17,

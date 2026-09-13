@@ -68,11 +68,12 @@ export default function SurveyReadiness({
       label={
         <>
           <Icon name="sealcheck" width={13} height={13} className="shrink-0 text-[#007EFF]" />
-          <span className="truncate">{title}</span>
+          <span className="min-w-0 break-words">{title}</span>
         </>
       }
       status={status}
       context={context}
+      className="min-w-0 max-w-full"
       foot={<FootPair ready={foot[0]} gate={foot[1]} />}
     >
       {/* What came out of the record. */}

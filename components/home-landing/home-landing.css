@@ -140,8 +140,16 @@
   }
   .home-landing .module-row {
     grid-template-columns: 1fr !important;
+    gap: 40px !important;
+    min-width: 0;
   }
-  .home-landing .module-row > div:nth-child(2) {
+  /* Keep DOM order so Module 01 copy stays above its UI on mobile.
+     Visual-first rows (02/04) flip so copy still leads. */
+  .home-landing .module-row > * {
+    min-width: 0;
+    max-width: 100%;
+  }
+  .home-landing .module-row-flip > .hl-module-copy {
     order: -1;
   }
   .home-landing .faq-row {
@@ -153,6 +161,99 @@
   }
   .home-landing h1.hero-h1 {
     font-size: 38px !important;
+  }
+  .home-landing section#top {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+  .home-landing section#modules {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  /* Hero Accurate Charting — keep mic + note fully in viewport */
+  .home-landing .hl-hero-chart {
+    overflow: visible;
+  }
+  .home-landing .hl-hero-chart-stage {
+    aspect-ratio: auto !important;
+    flex-direction: column;
+    gap: 20px !important;
+    padding: 28px 20px 36px !important;
+    box-sizing: border-box;
+  }
+  .home-landing .hl-hero-chart-mic {
+    height: auto !important;
+    padding: 28px;
+  }
+  .home-landing .hl-hero-chart-arrow {
+    transform: rotate(90deg);
+  }
+  .home-landing .hl-hero-chart-note {
+    min-width: 0 !important;
+    width: 100%;
+    max-width: 320px;
+    box-sizing: border-box;
+  }
+
+  /* Module 01 visual — fit without clipping pulse rings / note */
+  .home-landing .hl-module-01-visual {
+    flex-wrap: wrap;
+    gap: 16px !important;
+    padding: 28px 18px !important;
+  }
+  .home-landing .hl-module-01-mic {
+    padding: 22px;
+  }
+  .home-landing .hl-module-01-note {
+    min-width: 0 !important;
+    flex: 1 1 160px;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Module 02 Step 1 → Step 2 — prevent horizontal clip */
+  .home-landing .hl-module-02-visual {
+    padding: 28px 16px !important;
+    overflow: visible;
+  }
+  .home-landing .hl-module-02-flow {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+  }
+  .home-landing .hl-module-02-arrow {
+    padding: 0 8px !important;
+  }
+  .home-landing .hl-module-02-step {
+    width: auto !important;
+    flex: 1 1 148px;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+  .home-landing .hl-module-copy {
+    overflow-wrap: anywhere;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-landing .hl-module-02-flow {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .home-landing .hl-module-02-arrow {
+    justify-content: center;
+    padding: 4px 0 !important;
+  }
+  .home-landing .hl-module-02-arrow span {
+    display: inline-block;
+    transform: rotate(90deg);
+  }
+  .home-landing .hl-module-02-step {
+    flex: 1 1 auto;
+    width: 100% !important;
   }
 }
 

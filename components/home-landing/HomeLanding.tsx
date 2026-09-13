@@ -280,7 +280,7 @@ function Hero() {
       </div>
 
       <div
-        className="rise3"
+        className="rise3 hl-hero-chart"
         style={{
           borderRadius: 8,
           overflow: "hidden",
@@ -302,6 +302,7 @@ function Hero() {
           Accurate Charting. Simplified.
         </p>
         <div
+          className="hl-hero-chart-stage"
           style={{
             aspectRatio: "16 / 7.6",
             width: "100%",
@@ -313,6 +314,7 @@ function Hero() {
           }}
         >
           <div
+            className="hl-hero-chart-mic"
             style={{
               display: "flex",
               flexDirection: "column",
@@ -323,8 +325,11 @@ function Hero() {
           >
             <PulseMic size={56} icon={30} />
           </div>
-          <div style={{ fontSize: 22, color: "#B2B2B2" }}>→</div>
+          <div className="hl-hero-chart-arrow" style={{ fontSize: 22, color: "#B2B2B2" }}>
+            →
+          </div>
           <div
+            className="hl-hero-chart-note"
             style={{
               display: "flex",
               flexDirection: "column",
@@ -581,7 +586,7 @@ function ModuleCopy({
   bullets: string[];
 }) {
   return (
-    <div>
+    <div className="hl-module-copy" style={{ minWidth: 0 }}>
       <span className="hl-mono" style={{ fontSize: 12.5, color: "#878787" }}>
         {kicker}
       </span>
@@ -597,6 +602,7 @@ function ModuleCopy({
           color: "#606060",
           lineHeight: 1.65,
           marginBottom: 20,
+          overflowWrap: "break-word",
         }}
       >
         {body}
@@ -665,6 +671,7 @@ function Modules() {
           ]}
         />
         <div
+          className="hl-module-visual hl-module-01-visual"
           style={{
             ...CARD,
             padding: "34px 24px",
@@ -675,6 +682,7 @@ function Modules() {
           }}
         >
           <div
+            className="hl-module-01-mic"
             style={{
               display: "flex",
               flexDirection: "column",
@@ -684,8 +692,11 @@ function Modules() {
           >
             <PulseMic size={48} icon={26} />
           </div>
-          <span style={{ fontSize: 18, color: "#B2B2B2" }}>→</span>
+          <span className="hl-module-01-arrow" style={{ fontSize: 18, color: "#B2B2B2" }}>
+            →
+          </span>
           <div
+            className="hl-module-01-note"
             style={{
               display: "flex",
               flexDirection: "column",
@@ -710,7 +721,7 @@ function Modules() {
       </div>
 
       <div
-        className="module-row"
+        className="module-row module-row-flip"
         style={{
           display: "grid",
           gridTemplateColumns: "1fr 1fr",
@@ -719,8 +730,9 @@ function Modules() {
           marginBottom: 96,
         }}
       >
-        <div style={{ ...CARD, padding: "40px 30px" }}>
+        <div className="hl-module-visual hl-module-02-visual" style={{ ...CARD, padding: "40px 30px" }}>
           <div
+            className="hl-module-02-flow"
             style={{
               display: "flex",
               alignItems: "stretch",
@@ -729,6 +741,7 @@ function Modules() {
             }}
           >
             <div
+              className="hl-module-02-step"
               style={{
                 border: "1px solid #EFEFEF",
                 borderRadius: 8,
@@ -762,11 +775,13 @@ function Modules() {
               </p>
             </div>
             <div
+              className="hl-module-02-arrow"
               style={{ display: "flex", alignItems: "center", padding: "0 16px" }}
             >
               <span style={{ fontSize: 20, color: "#B2B2B2" }}>→</span>
             </div>
             <div
+              className="hl-module-02-step"
               style={{
                 border: "1px solid #007EFF",
                 borderRadius: 8,
@@ -857,7 +872,7 @@ function Modules() {
       </div>
 
       <div
-        className="module-row"
+        className="module-row module-row-flip"
         style={{
           display: "grid",
           gridTemplateColumns: "1fr 1fr",

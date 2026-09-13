@@ -112,6 +112,16 @@
   gap: 56px;
 }
 
+.ip-page .ip-hero-grid > * {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.ip-page .ip-hero-story-body {
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
 .ip-page .ip-h2 {
   font-weight: 500;
   font-size: 42px;
@@ -247,6 +257,10 @@
 }
 
 @media (max-width: 860px) {
+  .ip-page .ip-wrap {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
   .ip-page .ip-h1 {
     font-size: 38px;
   }
@@ -270,6 +284,19 @@
   }
   .ip-page .ip-stats {
     grid-template-columns: 1fr 1fr !important;
+  }
+  .ip-page .ip-hero-story {
+    padding: 16px 16px !important;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+  }
+  .ip-page .ip-hero-story-body {
+    max-width: 100% !important;
+  }
+  /* Keep hero product UIs inside the mobile viewport */
+  .ip-page .ip-hero-grid .overflow-hidden {
+    max-width: 100%;
   }
 }
 

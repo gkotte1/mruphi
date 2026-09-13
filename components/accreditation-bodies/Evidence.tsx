@@ -40,11 +40,11 @@ export function Panel({
         className,
       )}
     >
-      <div className="flex items-center justify-between gap-3 border-b border-[#E3E3E3] bg-[#F5F5F5] px-5 py-3 max-720:px-4">
+      <div className="flex flex-wrap items-center justify-between gap-3 border-b border-[#E3E3E3] bg-[#F5F5F5] px-5 py-3 max-720:px-4">
         <span
           className={cn(
             MONO,
-            "flex min-w-0 items-center gap-2 truncate text-[10.5px] font-semibold uppercase tracking-[0.06em] text-[#878787]",
+            "flex min-w-0 items-center gap-2 text-[10.5px] font-semibold uppercase tracking-[0.06em] text-[#878787] max-600:whitespace-normal",
           )}
         >
           {label}
@@ -54,7 +54,7 @@ export function Panel({
           <span
             className={cn(
               MONO,
-              "flex shrink-0 items-center gap-1.5 rounded-full border border-[#E3E3E3] bg-[#F5F5F5] px-2.5 py-1 text-[10.5px] font-semibold uppercase tracking-[0.04em] text-[#007EFF]",
+              "flex max-w-full shrink items-center gap-1.5 rounded-full border border-[#E3E3E3] bg-[#F5F5F5] px-2.5 py-1 text-[10.5px] font-semibold uppercase tracking-[0.04em] text-[#007EFF] max-600:whitespace-normal",
             )}
           >
             <span
@@ -68,14 +68,19 @@ export function Panel({
       </div>
 
       {context ? (
-        <div className="flex items-center gap-2.5 border-b border-[#E3E3E3] bg-[#F5F5F5] px-5 py-2.5 max-720:px-4">
+        <div className="flex items-start gap-2.5 border-b border-[#E3E3E3] bg-[#F5F5F5] px-5 py-2.5 max-720:px-4">
           <span
-            className="flex size-5 shrink-0 items-center justify-center rounded-[6px] border border-[#E3E3E3] bg-white text-[#007EFF]"
+            className="mt-0.5 flex size-5 shrink-0 items-center justify-center rounded-[6px] border border-[#E3E3E3] bg-white text-[#007EFF]"
             aria-hidden
           >
             <Icon name="server" width={10} height={10} />
           </span>
-          <span className={cn(MONO, "min-w-0 truncate text-[11px] text-[#878787]")}>
+          <span
+            className={cn(
+              MONO,
+              "min-w-0 break-words text-[11px] leading-[1.45] text-[#878787]",
+            )}
+          >
             {context}
           </span>
         </div>
@@ -231,14 +236,14 @@ export function RequirementRow({
 
   return (
     <li
-      className="grid grid-cols-[auto_1fr_auto] items-center gap-3.5 border-b border-[#E3E3E3] py-3 last:border-b-0 max-600:gap-2.5"
+      className="grid grid-cols-[auto_1fr_auto] items-center gap-3.5 border-b border-[#E3E3E3] py-3 last:border-b-0 max-600:grid-cols-[1fr_auto] max-600:gap-x-2.5 max-600:gap-y-2"
       style={{ animation: `mp-fade-up .45s ease backwards ${0.16 + index * 0.09}s` }}
     >
       {/* The requirement is the anchor, so it leads the row. */}
       <span
         className={cn(
           MONO,
-          "flex shrink-0 items-center rounded-[7px] border px-2 py-1 text-[10.5px] font-semibold tracking-[0.02em]",
+          "flex shrink-0 items-center rounded-[7px] border px-2 py-1 text-[10.5px] font-semibold tracking-[0.02em] max-600:col-span-2",
           gap
             ? "border-[#007EFF]/25 bg-[#F5F5F5] text-[#007EFF]"
             : "border-[#E3E3E3] bg-[#F5F5F5] text-[#007EFF]",
@@ -247,7 +252,9 @@ export function RequirementRow({
         {requirement}
       </span>
 
-      <span className="type-hl-inbox-title min-w-0 text-ink">{title}</span>
+      <span className="type-hl-inbox-title min-w-0 break-words text-ink">
+        {title}
+      </span>
 
       <span
         className={cn(

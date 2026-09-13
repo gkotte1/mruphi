@@ -45,14 +45,14 @@ export function Surface({
     >
       <div
         className={cn(
-          "flex items-center justify-between gap-3 px-5 py-3 max-720:px-4",
+          "flex flex-wrap items-center justify-between gap-3 px-5 py-3 max-720:px-4",
           onBrand ? "border-b border-[#E3E3E3] bg-[#F5F5F5]" : "border-b border-[#E3E3E3] bg-[#F5F5F5]",
         )}
       >
         <span
           className={cn(
             MONO,
-            "flex min-w-0 items-center gap-2 truncate text-[10.5px] font-semibold uppercase tracking-[0.06em]",
+            "flex min-w-0 items-center gap-2 text-[10.5px] font-semibold uppercase tracking-[0.06em] max-600:whitespace-normal",
             onBrand ? "text-[#878787]" : "text-[#878787]",
           )}
         >
@@ -63,7 +63,7 @@ export function Surface({
           <span
             className={cn(
               MONO,
-              "flex shrink-0 items-center gap-1.5 rounded-full px-2.5 py-1 text-[10.5px] font-semibold tracking-[0.04em] uppercase",
+              "flex max-w-full shrink items-center gap-1.5 rounded-full px-2.5 py-1 text-[10.5px] font-semibold tracking-[0.04em] uppercase max-600:whitespace-normal",
               onBrand
                 ? "border border-[#E3E3E3] bg-[#F5F5F5] text-[#007EFF]"
                 : "border border-[#E3E3E3] bg-[#F5F5F5] text-[#007EFF]",
@@ -219,7 +219,9 @@ export function TrackRail({
     <ol
       className={cn(
         "flex items-start",
-        compact ? "" : "max-1080:flex-col max-1080:items-stretch",
+        compact
+          ? "max-600:flex-col max-600:items-stretch"
+          : "max-1080:flex-col max-1080:items-stretch",
       )}
     >
       {nodes.map((node, i) => {
@@ -232,7 +234,7 @@ export function TrackRail({
                 className={cn(
                   "mt-[13px] h-0.5 w-6 shrink-0 rounded-full transition-colors duration-[520ms] ease-out",
                   compact
-                    ? "flex-1"
+                    ? "flex-1 max-600:mt-0 max-600:ml-[13px] max-600:h-6 max-600:w-0.5 max-600:flex-none"
                     : "max-1080:mt-0 max-1080:ml-[13px] max-1080:h-6 max-1080:w-0.5",
                   reached ? "bg-[#007EFF]" : "bg-[#E3E3E3]",
                 )}
@@ -243,7 +245,9 @@ export function TrackRail({
             <div
               className={cn(
                 "flex min-w-0 flex-1 flex-col items-center gap-2 text-center",
-                compact ? "" : "max-1080:flex-none max-1080:flex-row max-1080:gap-4 max-1080:text-left",
+                compact
+                  ? "max-600:flex-none max-600:flex-row max-600:gap-4 max-600:text-left"
+                  : "max-1080:flex-none max-1080:flex-row max-1080:gap-4 max-1080:text-left",
               )}
             >
               <StageDot state={node.state} />
