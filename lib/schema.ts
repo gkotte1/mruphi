@@ -1,5 +1,6 @@
 import { ANNOUNCEMENTS, type Article } from "@/lib/announcements";
 import { type BlogPost } from "@/lib/blog";
+import { type EventItem, eventHref } from "@/lib/events";
 import { FAQS, type FaqItem } from "@/lib/faqs";
 import { SITE_URL, SITE_ROUTES, absoluteUrl } from "@/lib/site";
 
@@ -169,6 +170,47 @@ export function breadcrumbSchema(path: string, name: string) {
       },
       { "@type": "ListItem", position: 2, name, item: absoluteUrl(path) },
     ],
+  };
+}
+
+/** Event JSON-LD for one event detail page. */
+export function eventPageSchema(event: EventItem) {
+  const path = eventHref(event);
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    "@id": `${absoluteUrl(path)}#event`,
+    name: event.title,
+    description: event.excerpt,
+    startDate: event.datetime,
+    endDate: event.endDatetime,
+    eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+    eventStatus: "https://schema.org/EventScheduled",
+    url: absoluteUrl(path),
+    sameAs: event.website,
+    image: absoluteUrl(event.image),
+    location: {
+      "@type": "Place",
+      name: event.venue,
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: event.address,
+        addressLocality: "Washington",
+        addressRegion: "DC",
+        addressCountry: "US",
+      },
+    },
+    organizer: {
+      "@type": "Organization",
+      name: event.organizer,
+    },
+    contributor: {
+      "@type": "Organization",
+      "@id": ORG_ID,
+      name: "Murphi.ai",
+    },
+    isPartOf: { "@id": SITE_ID },
   };
 }
 

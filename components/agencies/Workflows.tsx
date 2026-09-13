@@ -50,7 +50,7 @@ export function Surface({
         <span
           className={cn(
             MONO,
-            "min-w-0 truncate text-[11px] uppercase tracking-[0.06em] text-[#878787]",
+            "min-w-0 truncate text-[10.5px] font-semibold uppercase tracking-[0.06em] text-[#878787]",
           )}
         >
           {label}
@@ -85,9 +85,7 @@ export function LayerBand({ label }: { label: string }) {
       <span className="flex size-8 shrink-0 items-center justify-center rounded-[9px] border border-[#E3E3E3] bg-white p-1.5">
         <LogoMark size={18} />
       </span>
-      <span className="text-[14px] font-bold leading-none tracking-[-0.015em] text-ink">
-        {label}
-      </span>
+      <span className="type-hl-inbox-title text-ink">{label}</span>
     </div>
   );
 }
@@ -175,7 +173,7 @@ export function ModuleTile({
 
       <span
         className={cn(
-          "text-[12.5px] leading-[1.3] font-bold tracking-[-0.01em] transition-colors duration-[420ms] ease-out",
+          "type-hl-inbox-title transition-colors duration-[420ms] ease-out",
           soon ? "text-[#606060]" : "text-ink",
         )}
       >

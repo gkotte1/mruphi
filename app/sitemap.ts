@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { ANNOUNCEMENTS, announcementHref } from "@/lib/announcements";
 import { POSTS, blogHref } from "@/lib/blog";
+import { EVENTS, eventHref } from "@/lib/events";
 import { SITE_ROUTES, absoluteUrl } from "@/lib/site";
 
 /**
@@ -41,5 +42,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  return [...pages, ...articles, ...posts];
+  const events = EVENTS.map((event) => ({
+    url: absoluteUrl(eventHref(event)),
+    lastModified: event.datetime,
+    changeFrequency: "monthly" as const,
+    priority: 0.6,
+  }));
+
+  return [...pages, ...articles, ...posts, ...events];
 }

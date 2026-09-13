@@ -44,7 +44,7 @@ export function DeviceStack({
               {app.initials}
             </div>
             <div className="min-w-0">
-              <div className="text-[13.5px] font-bold text-ink">
+              <div className="type-hl-inbox-title text-ink">
                 {app.name}
               </div>
               <div className="text-[11.5px] text-ink-muted">{app.sub}</div>
@@ -187,7 +187,7 @@ export function TransformStrip({
   );
 }
 
-/* ── Lede paragraph ─────────────────────────────────────── */
+/* ── Lede paragraph — Home type-hl-lead ─────────────────── */
 
 export function Lede({
   children,
@@ -197,12 +197,7 @@ export function Lede({
   className?: string;
 }) {
   return (
-    <p
-      className={cn(
-        "max-w-[68ch] text-[18px] leading-[1.6] text-grey-500",
-        className,
-      )}
-    >
+    <p className={cn("type-hl-lead max-w-[68ch]", className)}>
       {children}
     </p>
   );
@@ -351,7 +346,7 @@ export function HeroModulesCard({
   return (
     <div className="rounded-panel border border-grey-mid bg-white p-7 shadow-[0_24px_56px_rgba(15,29,84,.09)]">
       <div
-        className={cn(MONO, "mb-5 text-[11px] uppercase tracking-[0.06em] text-ink-muted")}
+        className={cn(MONO, "mb-5 text-[10.5px] uppercase tracking-[0.06em] text-ink-muted")}
       >
         {label}
       </div>

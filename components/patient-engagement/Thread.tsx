@@ -44,15 +44,15 @@ export function Surface({
         className={cn(
           "flex items-center justify-between gap-3 px-5 py-3 max-720:px-4",
           tone === "brand"
-            ? "bg-[#007EFF]"
+            ? "border-b border-[#E3E3E3] bg-[#F5F5F5]"
             : "border-b border-[#E3E3E3] bg-[#F5F5F5]",
         )}
       >
         <span
           className={cn(
             MONO,
-            "truncate text-[11px] uppercase tracking-[0.06em]",
-            tone === "brand" ? "text-white/90" : "text-[#878787]",
+            "truncate text-[10.5px] font-semibold uppercase tracking-[0.06em]",
+            tone === "brand" ? "text-[#878787]" : "text-[#878787]",
           )}
         >
           {label}
@@ -64,14 +64,14 @@ export function Surface({
               <span
                 className={cn(
                   "absolute inline-flex size-full rounded-full",
-                  tone === "brand" ? "bg-white/60" : "bg-[#007EFF]/60",
+                  tone === "brand" ? "bg-[#007EFF]/60" : "bg-[#007EFF]/60",
                 )}
                 style={{ animation: "mp-glow 2.4s ease-in-out infinite" }}
               />
               <span
                 className={cn(
                   "relative inline-flex size-1.5 rounded-full",
-                  tone === "brand" ? "bg-white" : "bg-[#007EFF]",
+                  tone === "brand" ? "bg-[#007EFF]" : "bg-[#007EFF]",
                 )}
               />
             </span>
@@ -79,7 +79,7 @@ export function Surface({
             <span
               className={cn(
                 "size-1.5 rounded-full",
-                tone === "brand" ? "bg-white/50" : "bg-[#E3E3E3]",
+                tone === "brand" ? "bg-[#E3E3E3]" : "bg-[#E3E3E3]",
               )}
             />
           )}
@@ -110,7 +110,7 @@ export function Bubble({
       className={cn(
         "max-w-[86%] px-[13px] py-2.5 text-[12.5px] leading-[1.45]",
         side === "out"
-          ? "ml-auto rounded-[16px] rounded-br-[4px] bg-[#007EFF] text-white"
+          ? "ml-auto rounded-[16px] rounded-br-[4px] border border-[#E3E3E3] bg-[#F5F5F5] text-ink"
           : "rounded-[16px] rounded-bl-[4px] border border-[#E3E3E3] bg-[#F5F5F5] text-ink",
       )}
     >
@@ -135,7 +135,7 @@ export function Correspondent({
         {initials}
       </span>
       <span className="min-w-0">
-        <span className="block truncate text-[13.5px] font-bold text-ink">
+        <span className="type-hl-inbox-title block truncate text-ink">
           {name}
         </span>
         <span className={cn(MONO, "block truncate text-[11px] text-[#878787]")}>
@@ -212,10 +212,10 @@ export function PhoneFrame({
   label: string;
   children: ReactNode;
 }) {
-  /* Bezel stays brand blue; a thin border keeps the phone readable without
-     overpowering the card above it. Width matches the staff Surface above. */
+  /* Bezel uses Home gray so the phone reads as a device without a blue frame.
+     Width matches the staff Surface above. */
   return (
-    <div className="w-full rounded-[34px] border-2 border-[#007EFF] bg-[#007EFF] p-0 shadow-[0_1px_2px_rgba(0,0,0,0.03),0_14px_30px_rgba(0,0,0,0.05)]">
+    <div className="w-full rounded-[34px] border-2 border-[#E3E3E3] bg-[#F5F5F5] p-0 shadow-[0_1px_2px_rgba(0,0,0,0.03),0_14px_30px_rgba(0,0,0,0.05)]">
       <div className="overflow-hidden rounded-[32px] bg-white">
         <div className="flex justify-center pt-2.5" aria-hidden>
           <span className="h-1 w-14 rounded-full bg-[#E3E3E3]" />
@@ -224,7 +224,7 @@ export function PhoneFrame({
         <div
           className={cn(
             MONO,
-            "mt-2.5 border-b border-[#E3E3E3] px-4 py-2.5 text-center text-[11px] uppercase tracking-[0.06em] text-[#878787]",
+            "mt-2.5 border-b border-[#E3E3E3] px-4 py-2.5 text-center text-[10.5px] font-semibold uppercase tracking-[0.06em] text-[#878787]",
           )}
         >
           {label}

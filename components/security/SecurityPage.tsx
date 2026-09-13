@@ -210,7 +210,7 @@ function Hero() {
               height={badge.height}
               className="h-6 w-auto"
             />
-            <span className="text-[12.5px] font-bold tracking-[-0.01em] text-[#606060]">
+            <span className="type-hl-inbox-title text-[#606060]">
               {badge.label}
             </span>
           </li>
@@ -220,7 +220,7 @@ function Hero() {
           <span className="flex size-6 items-center justify-center rounded-full border border-[#E3E3E3] bg-[#F5F5F5] text-[#007EFF]">
             <Icon name="doc" width={12} height={12} />
           </span>
-          <span className="text-[12.5px] font-bold tracking-[-0.01em] text-[#606060]">
+          <span className="type-hl-inbox-title text-[#606060]">
             BAA Available
           </span>
         </li>
@@ -256,10 +256,10 @@ function Pillars() {
                 />
               </span>
 
-              <h3 className="mt-6 text-[16px] font-bold leading-snug tracking-[-0.02em] text-ink">
+              <h3 className="type-hl-card-title mt-6 text-ink">
                 {pillar.title}
               </h3>
-              <p className="mt-3.5 text-[13.5px] leading-relaxed text-[#606060]">
+              <p className="type-hl-card-body mt-3.5">
                 {pillar.body}
               </p>
             </li>
@@ -293,10 +293,10 @@ function ZeroTrust() {
               <span className="ip-serif text-[26px] font-medium leading-none tracking-[-0.04em] text-[#007EFF]/35">
                 {step.index}
               </span>
-              <h3 className="mt-4 text-[16px] font-bold leading-snug tracking-[-0.02em] text-ink">
+              <h3 className="type-hl-card-title mt-4 text-ink">
                 {step.title}
               </h3>
-              <p className="mt-3.5 text-[13.5px] leading-relaxed text-[#606060]">
+              <p className="type-hl-card-body mt-3.5">
                 {step.body}
               </p>
             </li>
@@ -360,10 +360,10 @@ function CardBand({
                   </span>
                 </span>
 
-                <h3 className="text-[16px] font-bold leading-snug tracking-[-0.02em] text-ink">
+                <h3 className="type-hl-card-title text-ink">
                   {card.title}
                 </h3>
-                <p className="text-[13.5px] leading-relaxed text-[#606060] max-900:col-start-2">
+                <p className="type-hl-card-body max-900:col-start-2">
                   {card.body}
                 </p>
               </li>
@@ -387,10 +387,10 @@ function CardBand({
                   </span>
                 </span>
 
-                <h3 className="mt-5 text-[16px] font-bold leading-snug tracking-[-0.02em] text-ink">
+                <h3 className="type-hl-card-title mt-5 text-ink">
                   {card.title}
                 </h3>
-                <p className="mt-3.5 text-[13.5px] leading-relaxed text-[#606060]">
+                <p className="type-hl-card-body mt-3.5">
                   {card.body}
                 </p>
               </li>
@@ -452,10 +452,10 @@ function Controls() {
               </span>
 
               <div className="min-w-0">
-                <h3 className="text-[16px] font-bold leading-snug tracking-[-0.02em] text-ink">
+                <h3 className="type-hl-card-title text-ink">
                   {control.title}
                 </h3>
-                <p className="mt-2.5 text-[13.5px] leading-relaxed text-[#606060]">
+                <p className="type-hl-card-body mt-2.5">
                   {control.body}
                 </p>
               </div>
@@ -491,10 +491,10 @@ function ResponsibleAi() {
                 <Icon name={item.icon} width={18} height={18} />
               </span>
 
-              <h3 className="text-[16px] font-bold leading-snug tracking-[-0.02em] text-ink">
+              <h3 className="type-hl-card-title text-ink">
                 {item.title}
               </h3>
-              <p className="text-[13.5px] leading-relaxed text-[#606060] max-900:col-start-2">
+              <p className="type-hl-card-body max-900:col-start-2">
                 {item.body}
               </p>
             </li>

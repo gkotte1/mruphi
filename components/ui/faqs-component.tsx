@@ -15,14 +15,14 @@ export default function FAQs({ items }: { items: readonly FaqItem[] }) {
     <div className="grid gap-8 md:grid-cols-5 md:gap-12">
       <div className="md:col-span-2">
         <Eyebrow>FAQs</Eyebrow>
-        <h2 className="type-h2 text-ink">
+        <h2 className="type-hl-section-title text-ink">
           Frequently Asked <span className="text-brand">Questions</span>
         </h2>
-        <p className="mt-4 max-w-[36ch] text-[17px] leading-[1.6] text-grey-500">
+        <p className="type-hl-lead mt-4 max-w-[36ch]">
           Quick answers about the platform, how it connects to your EHR, and
           how to get started.
         </p>
-        <p className="mt-6 hidden text-[15px] text-grey-500 md:block">
+        <p className="type-hl-card-body mt-6 hidden md:block">
           Can&apos;t find what you&apos;re looking for?{" "}
           <Link
             href="/contact-us/"
@@ -42,11 +42,11 @@ export default function FAQs({ items }: { items: readonly FaqItem[] }) {
         >
           {items.map((item, index) => (
             <AccordionItem key={item.q} value={`item-${index + 1}`}>
-              <AccordionTrigger className="cursor-pointer text-[15.5px] font-semibold text-ink hover:no-underline">
+              <AccordionTrigger className="type-hl-card-title cursor-pointer text-ink hover:no-underline">
                 {item.q}
               </AccordionTrigger>
               <AccordionContent>
-                <p className="text-[14.5px] leading-[1.65] text-grey-500">
+                <p className="type-hl-card-body">
                   {item.a}
                 </p>
               </AccordionContent>
@@ -55,7 +55,7 @@ export default function FAQs({ items }: { items: readonly FaqItem[] }) {
         </Accordion>
       </div>
 
-      <p className="text-[15px] text-grey-500 md:hidden">
+      <p className="type-hl-card-body md:hidden">
         Can&apos;t find what you&apos;re looking for?{" "}
         <Link
           href="/contact-us/"

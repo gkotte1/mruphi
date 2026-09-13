@@ -77,14 +77,14 @@ export default function ChartReviewStack({
         className="overflow-hidden rounded-[8px] border border-[#E3E3E3] bg-white shadow-[0_1px_2px_rgba(0,0,0,0.03),0_14px_30px_rgba(0,0,0,0.05)]"
         style={card(STAGE.review)}
       >
-        <div className="flex flex-wrap items-center justify-between gap-x-3 gap-y-2 bg-[#007EFF] px-5 py-2.5 max-720:px-4">
+        <div className="flex flex-wrap items-center justify-between gap-x-3 gap-y-2 border-b border-[#E3E3E3] bg-[#F5F5F5] px-5 py-2.5 max-720:px-4">
           <span
             className={cn(
               MONO,
-              "flex min-w-0 items-center gap-2 ra-mono text-[11px] uppercase tracking-[0.06em] text-[#F5F5F5]",
+              "flex min-w-0 items-center gap-2 ra-mono text-[10.5px] font-semibold uppercase tracking-[0.06em] text-[#878787]",
             )}
           >
-            <Icon name="scan" width={13} height={13} className="shrink-0" />
+            <Icon name="scan" width={13} height={13} className="shrink-0 text-[#007EFF]" />
             {/* Truncated where it fits on one line, wrapped where it does not,
                 so the label is never cut off on a narrow screen. */}
             <span className="truncate max-600:overflow-visible max-600:text-clip max-600:whitespace-normal">
@@ -95,10 +95,10 @@ export default function ChartReviewStack({
           <span
             className={cn(
               MONO,
-              "flex shrink-0 items-center gap-1.5 rounded-full bg-white/15 px-2.5 py-1 ra-mono text-[10.5px] font-semibold uppercase tracking-[0.04em] text-white",
+              "flex shrink-0 items-center gap-1.5 rounded-full border border-[#E3E3E3] bg-[#F5F5F5] px-2.5 py-1 ra-mono text-[10.5px] font-semibold uppercase tracking-[0.04em] text-[#007EFF]",
             )}
           >
-            <span className="size-1.5 rounded-full bg-white" aria-hidden />
+            <span className="size-1.5 rounded-full bg-[#007EFF]" aria-hidden />
             {status}
           </span>
         </div>
@@ -280,9 +280,7 @@ function FindingRow({
       </span>
 
       <span className="min-w-0 flex-1">
-        <span className="block text-[13px] leading-[1.4] font-semibold text-ink">
-          {title}
-        </span>
+        <span className="type-hl-inbox-title block text-ink">{title}</span>
         <span className={cn(MONO, "ra-mono mt-0.5 block text-[11px] text-[#878787]")}>
           {meta}
         </span>

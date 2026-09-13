@@ -65,11 +65,11 @@ export default function OurTeam() {
                 />
               </span>
 
-              <p className="mt-7 text-[18px] font-bold leading-none tracking-[-0.02em] text-ink">
+              <p className="type-hl-card-title mt-7 text-ink">
                 {member.name}
               </p>
 
-              <p className="mt-3 text-[13.5px] font-semibold leading-snug tracking-[-0.01em] text-[#007EFF]">
+              <p className="type-hl-inbox-title mt-3 text-[#007EFF]">
                 {member.role}
               </p>
 

@@ -30,11 +30,11 @@ export function Environment({
 }) {
   return (
     <div className="overflow-hidden rounded-[10px] border border-[#E3E3E3] bg-white shadow-[0_1px_2px_rgba(0,0,0,0.03),0_14px_30px_rgba(0,0,0,0.05)]">
-      <div className="flex items-center justify-between gap-3 bg-[#007EFF] px-5 py-3 max-720:px-4">
+      <div className="flex items-center justify-between gap-3 border-b border-[#E3E3E3] bg-[#F5F5F5] px-5 py-3 max-720:px-4">
         <span
           className={cn(
             MONO,
-            "flex min-w-0 items-center gap-2 truncate text-[11px] uppercase tracking-[0.06em] text-white/90",
+            "flex min-w-0 items-center gap-2 truncate text-[10.5px] font-semibold uppercase tracking-[0.06em] text-[#878787]",
           )}
         >
           {label}
@@ -44,11 +44,11 @@ export function Environment({
           <span
             className={cn(
               MONO,
-              "flex shrink-0 items-center gap-1.5 rounded-full bg-white/15 px-2.5 py-1 text-[10.5px] font-semibold uppercase tracking-[0.04em] text-white",
+              "flex shrink-0 items-center gap-1.5 rounded-full border border-[#E3E3E3] bg-[#F5F5F5] px-2.5 py-1 text-[10.5px] font-semibold uppercase tracking-[0.04em] text-[#007EFF]",
             )}
           >
             <span
-              className="size-1.5 rounded-full bg-white"
+              className="size-1.5 rounded-full bg-[#007EFF]"
               style={{ animation: "mp-blink 1.6s ease-in-out infinite" }}
               aria-hidden
             />
@@ -132,7 +132,7 @@ export function InsetLayer({
       <div
         className={cn(
           MONO,
-          "mb-3.5 text-center text-[11px] uppercase tracking-[0.05em] text-[#878787]",
+          "mb-3.5 text-center text-[10.5px] font-semibold uppercase tracking-[0.06em] text-[#878787]",
         )}
       >
         {label}

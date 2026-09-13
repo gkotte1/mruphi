@@ -36,7 +36,7 @@ export function AutomatedPanel({
               "flex items-center justify-between gap-3 border-b border-[#E3E3E3] bg-[#F5F5F5] px-6 py-3 max-600:px-5",
             )}
           >
-            <span className="text-[11px] uppercase tracking-[0.06em] text-[#878787]">
+            <span className="text-[10.5px] uppercase tracking-[0.06em] text-[#878787]">
               {`${items.length} automated`}
             </span>
             <span className="relative flex size-1.5 shrink-0" aria-hidden>
@@ -65,7 +65,7 @@ export function AutomatedPanel({
                 >
                   <Tick className="size-3.5" />
                 </span>
-                <span className="min-w-0 text-[14px] font-semibold tracking-[-0.01em] text-ink">
+                <span className="type-hl-card-title min-w-0 text-ink">
                   {item}
                 </span>
               </li>

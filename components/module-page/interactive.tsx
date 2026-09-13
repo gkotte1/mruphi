@@ -121,7 +121,7 @@ export function Accordion({
             className="flex w-full items-center justify-between gap-4 px-[22px] py-[18px] text-left"
           >
             <span>
-              <span className="block text-[15px] font-bold text-ink">
+              <span className="type-hl-card-title block text-ink">
                 {item.title}
               </span>
               {item.sub ? (
@@ -211,10 +211,10 @@ export function CardSelect({
                 />
               </svg>
             </span>
-            <span className="mb-1.5 block text-[15px] font-bold text-ink">
+            <span className="type-hl-card-title mb-1.5 block text-ink">
               {card.title}
             </span>
-            <span className="block text-[13px] leading-[1.5] text-grey-500">
+            <span className="type-hl-card-body block">
               {card.body}
             </span>
           </button>

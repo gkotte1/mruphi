@@ -336,7 +336,7 @@ const IMAGES: Record<string, { src: string; alt: string }> = {
     alt: "How an AI scribe for home health captures a visit and drafts OASIS, HOPE and discipline notes for clinician review",
   },
   "what-is-pdgm-home-health-reimbursement-2026": {
-    src: "/blog/pdgm-home-health-featured-image-v2.svg",
+    src: "/blog/pdgm-home-health-featured-image.png",
     alt: "How a home health chart moves from the EHR through coding, OASIS and PDGM review to findings a reviewer resolves before write-back",
   },
   "home-health-text-reminders": {

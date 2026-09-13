@@ -115,7 +115,7 @@ function Body() {
                   <span className="text-[22px] leading-none" aria-hidden>
                     {office.flag}
                   </span>
-                  <p className="text-[15.5px] font-bold tracking-[-0.02em] text-ink">
+                  <p className="type-hl-card-title text-ink">
                     {office.place}
                   </p>
                 </div>
@@ -124,7 +124,7 @@ function Body() {
                   {office.label}
                 </p>
 
-                <address className="mt-2.5 not-italic text-[13.5px] leading-relaxed text-[#606060]">
+                <address className="type-hl-card-body mt-2.5 not-italic">
                   {office.lines.map((line) => (
                     <span key={line} className="block">
                       {line}
@@ -148,7 +148,7 @@ function Body() {
           <h2 className="ip-serif text-[22px] font-medium tracking-[-0.02em] text-ink">
             Send Us a Message
           </h2>
-          <p className="mt-4 max-w-[560px] text-[14.5px] leading-relaxed text-[#606060]">
+          <p className="type-hl-lead mt-4 max-w-[560px]">
             Fill out the form below and an AI architecture specialist will review
             your request and get back to you within 24 hours.
           </p>
@@ -194,10 +194,10 @@ function ContactForm() {
         <span className="flex size-10 items-center justify-center rounded-full bg-[#007EFF] text-white">
           <Icon name="check" width={18} height={18} />
         </span>
-        <p className="mt-5 text-[17px] font-bold tracking-[-0.02em] text-ink">
+        <p className="type-hl-card-title mt-5 text-ink">
           Thank you for your message!
         </p>
-        <p className="mt-3 text-[14px] leading-relaxed text-[#606060]">
+        <p className="type-hl-card-body mt-3">
           {"We've received your request and will respond to you shortly  - "}{" "}
           usually within 24 hours.
         </p>
@@ -227,7 +227,7 @@ function ContactForm() {
           >
             <label
               htmlFor={field.name}
-              className="block text-[12.5px] font-bold tracking-[-0.01em] text-ink"
+              className="type-hl-inbox-title block text-ink"
             >
               {field.label}
             </label>

@@ -46,7 +46,7 @@ export default function Included({
                   className={cn(
                     "flex w-full items-center gap-3 rounded-[8px] border px-4 py-3.5 text-left transition-all duration-[420ms] ease-out motion-reduce:transition-none",
                     isActive
-                      ? "border-[#007EFF] bg-[#007EFF] "
+                      ? "border-[#007EFF] bg-[#F5F5F5] "
                       : "border-[#E3E3E3] bg-white hover:border-[#007EFF]",
                   )}
                 >
@@ -54,7 +54,7 @@ export default function Included({
                     className={cn(
                       "flex size-6 shrink-0 items-center justify-center rounded-[7px] border transition-colors duration-[420ms] ease-out",
                       isActive
-                        ? "border-white/30 bg-white/15 text-white"
+                        ? "border-[#E3E3E3] bg-white text-[#007EFF]"
                         : "border-[#E3E3E3] bg-[#F5F5F5] text-[#007EFF]",
                     )}
                     aria-hidden
@@ -62,12 +62,7 @@ export default function Included({
                     <Tick className="size-3" />
                   </span>
 
-                  <span
-                    className={cn(
-                      "min-w-0 text-[13.5px] font-semibold tracking-[-0.01em] transition-colors duration-[420ms] ease-out",
-                      isActive ? "text-white" : "text-ink",
-                    )}
-                  >
+                  <span className="type-hl-card-title min-w-0 text-ink transition-colors duration-[420ms] ease-out">
                     {item}
                   </span>
                 </button>

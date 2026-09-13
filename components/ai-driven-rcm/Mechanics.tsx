@@ -277,7 +277,7 @@ function Rail({
 
                 <span
                   className={cn(
-                    "mt-3 block min-w-0 text-[12px] leading-[1.3] font-bold tracking-[-0.01em] transition-colors duration-[520ms] ease-out",
+                    "type-hl-card-title mt-3 block min-w-0 transition-colors duration-[520ms] ease-out",
                     isActive ? "text-ink" : passed ? "text-[#878787]" : "text-[#606060]",
                   )}
                 >

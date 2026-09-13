@@ -68,10 +68,10 @@ export default function EhrCapability() {
                 </span>
 
                 <div className="min-w-0">
-                  <h3 className="text-[16px] font-bold leading-snug tracking-[-0.02em] text-ink">
+                  <h3 className="type-hl-card-title text-ink">
                     {category.title}
                   </h3>
-                  <p className="mt-2 text-[13.5px] font-medium leading-relaxed text-[#606060]">
+                  <p className="type-hl-card-body mt-2">
                     {category.description}
                   </p>
                 </div>
@@ -85,7 +85,7 @@ export default function EhrCapability() {
                     <li
                       key={system}
                       className={cn(
-                        "flex items-center justify-center rounded-[8px] px-3 py-3 text-center text-[13px] font-bold leading-snug tracking-[-0.012em] transition-colors duration-200",
+                        "type-hl-inbox-title flex items-center justify-center rounded-[8px] px-3 py-3 text-center transition-colors duration-200",
                         open
                           ? "border border-dashed border-[#007EFF] bg-[#F5F5F5] text-[#007EFF]"
                           : "border border-[#E3E3E3] bg-[#F5F5F5] text-ink hover:border-[#007EFF]",

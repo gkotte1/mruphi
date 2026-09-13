@@ -135,11 +135,11 @@ function Platforms() {
                   />
                 </span>
 
-                <h3 className="mt-6 text-[16px] font-bold leading-snug tracking-[-0.02em] text-ink">
+                <h3 className="type-hl-card-title mt-6 text-ink">
                   {platform.title}
                 </h3>
 
-                <p className="mt-3.5 text-[13.5px] leading-relaxed text-[#606060]">
+                <p className="type-hl-card-body mt-3.5">
                   {platform.body}
                 </p>
 
@@ -181,10 +181,10 @@ function Modules() {
               </span>
 
               <span className="min-w-0">
-                <h3 className="text-[16px] font-bold leading-snug tracking-[-0.02em] text-ink">
+                <h3 className="type-hl-card-title text-ink">
                   {module.title}
                 </h3>
-                <p className="mt-2.5 text-[13.5px] leading-relaxed text-[#606060]">
+                <p className="type-hl-card-body mt-2.5">
                   {module.body}
                 </p>
               </span>

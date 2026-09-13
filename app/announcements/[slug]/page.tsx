@@ -6,6 +6,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ArticleBody from "@/components/announcements/ArticleBody";
 import { Icon } from "@/components/icons";
+import { InnerPage } from "@/components/inner-page/Shell";
 import {
   ANNOUNCEMENTS,
   announcementHref,
@@ -72,25 +73,17 @@ export default async function AnnouncementArticle({ params }: Props) {
   const body = readArticleBody(slug);
 
   return (
-    <>
+    <InnerPage>
       <JsonLd data={articleSchema(article)} />
 
       <Navbar />
 
       <main>
-        <article className="relative isolate overflow-hidden">
-          <div
-            className="pointer-events-none absolute inset-0 -z-10"
-            style={{
-              background: "#EAF4FF",
-            }}
-            aria-hidden
-          />
-
+        <article className="bg-white">
           <div className="mx-auto w-full max-w-[860px] px-10 py-16 max-1200:px-8 max-600:px-4 max-600:py-12">
             <Link
               href="/announcements/"
-              className="group inline-flex items-center gap-2 text-[13px] font-bold text-grey-dk/70 transition-colors duration-200 hover:text-brand-dark"
+              className="group inline-flex items-center gap-2 text-[13px] font-bold text-[#606060] transition-colors duration-200 hover:text-[#007EFF]"
             >
               <Icon
                 name="arrow"
@@ -105,25 +98,25 @@ export default async function AnnouncementArticle({ params }: Props) {
               <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
                 <Link
                   href={article.categoryHref}
-                  className="rounded-full border border-brand-border/70 bg-brand-tint px-3 py-[6px] text-[10px] font-bold uppercase leading-none tracking-[0.08em] text-brand-dark transition-colors duration-200 hover:border-brand-border hover:text-brand-deep"
+                  className="ip-mono rounded-full border border-[#E3E3E3] bg-[#F5F5F5] px-2.5 py-[5px] text-[10px] leading-none font-bold tracking-[0.07em] text-[#007EFF] uppercase transition-colors duration-200 hover:border-[#007EFF]"
                 >
                   {article.category}
                 </Link>
 
                 <time
                   dateTime={article.published}
-                  className="text-[13px] font-semibold text-grey-dk/60"
+                  className="text-[12px] font-semibold text-[#878787]"
                 >
                   {article.listingDate}
                 </time>
               </div>
 
-              <h1 className="mt-6 type-h2 text-ink">
+              <h1 className="type-hl-display mt-6 text-ink max-1024:text-[32px] max-600:text-[28px]">
                 {article.title}
               </h1>
             </div>
 
-            <div className="relative mt-10 aspect-[16/9] overflow-hidden rounded-panel border border-grey-mid bg-grey-bg max-600:mt-8 max-600:rounded-tile">
+            <div className="relative mt-10 aspect-[16/9] overflow-hidden rounded-[10px] border border-[#E3E3E3] bg-[#F5F5F5] max-600:mt-8">
               <Image
                 src={article.image}
                 alt={article.alt}
@@ -136,22 +129,18 @@ export default async function AnnouncementArticle({ params }: Props) {
 
             <ArticleBody blocks={body} links={article.links} />
 
-            {/* One control, and nothing about the announcement it leads to. */}
             {next ? (
               <nav
                 aria-label="More announcements"
-                className="mt-16 flex justify-center border-t border-grey-mid pt-10 max-600:mt-12"
+                className="mt-16 flex justify-center border-t border-[#E3E3E3] pt-10 max-600:mt-12"
               >
-                <Link
-                  href={announcementHref(next)}
-                  className="group btn-secondary max-600:w-full max-600:justify-center"
-                >
+                <Link href={announcementHref(next)} className="ip-btn-ghost group">
                   Next Announcement
                   <Icon
                     name="arrow"
                     width={16}
                     height={16}
-                    className="transition-transform duration-200 group-hover:translate-x-[3px]"
+                    className="ml-2 transition-transform duration-200 group-hover:translate-x-[3px]"
                   />
                 </Link>
               </nav>
@@ -161,6 +150,6 @@ export default async function AnnouncementArticle({ params }: Props) {
       </main>
 
       <Footer />
-    </>
+    </InnerPage>
   );
 }

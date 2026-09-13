@@ -11,6 +11,11 @@ const nextConfig: NextConfig = {
          already pointing there working rather than serving a 404. */
       { source: "/integration", destination: "/integrations/", permanent: true },
       { source: "/ambient-ai", destination: "/ambient-ai-dictation/", permanent: true },
+      {
+        source: "/2026-annual-meeting-expo",
+        destination: "/events/2026-annual-meeting-expo/",
+        permanent: true,
+      },
 
       /* The listing answers on /blogs/; the bare /blog/ points at it rather
          than 404ing, since each post still lives under /blog/<slug>/. */

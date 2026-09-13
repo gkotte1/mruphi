@@ -40,11 +40,11 @@ export function Panel({
         className,
       )}
     >
-      <div className="flex items-center justify-between gap-3 bg-[#007EFF] px-5 py-3 max-720:px-4">
+      <div className="flex items-center justify-between gap-3 border-b border-[#E3E3E3] bg-[#F5F5F5] px-5 py-3 max-720:px-4">
         <span
           className={cn(
             MONO,
-            "flex min-w-0 items-center gap-2 truncate text-[11px] uppercase tracking-[0.06em] text-white/90",
+            "flex min-w-0 items-center gap-2 truncate text-[10.5px] font-semibold uppercase tracking-[0.06em] text-[#878787]",
           )}
         >
           {label}
@@ -54,11 +54,11 @@ export function Panel({
           <span
             className={cn(
               MONO,
-              "flex shrink-0 items-center gap-1.5 rounded-full bg-white/15 px-2.5 py-1 text-[10.5px] font-semibold uppercase tracking-[0.04em] text-white",
+              "flex shrink-0 items-center gap-1.5 rounded-full border border-[#E3E3E3] bg-[#F5F5F5] px-2.5 py-1 text-[10.5px] font-semibold uppercase tracking-[0.04em] text-[#007EFF]",
             )}
           >
             <span
-              className="size-1.5 rounded-full bg-white"
+              className="size-1.5 rounded-full bg-[#007EFF]"
               style={{ animation: "mp-blink 1.6s ease-in-out infinite" }}
               aria-hidden
             />
@@ -133,7 +133,7 @@ export function EvidenceTile({
         </span>
 
         <span className="min-w-0 flex-1">
-          <span className="block truncate text-[11.5px] font-semibold leading-snug tracking-[-0.01em] text-ink">
+          <span className="type-hl-inbox-title block truncate text-ink">
             {doc.title}
           </span>
           <span className={cn(MONO, "mt-0.5 block truncate text-[9.5px] text-[#878787]")}>
@@ -247,9 +247,7 @@ export function RequirementRow({
         {requirement}
       </span>
 
-      <span className="min-w-0 text-[12.5px] leading-[1.4] font-semibold text-ink">
-        {title}
-      </span>
+      <span className="type-hl-inbox-title min-w-0 text-ink">{title}</span>
 
       <span
         className={cn(

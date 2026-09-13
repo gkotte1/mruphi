@@ -92,7 +92,7 @@ export default function IntakeFlow({
       <Surface
         label={
           <>
-            <Icon name="brain" width={13} height={13} className="shrink-0" />
+            <Icon name="brain" width={13} height={13} className="shrink-0 text-[#007EFF]" />
             <span className="truncate">{outTitle}</span>
           </>
         }

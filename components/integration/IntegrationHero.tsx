@@ -136,8 +136,8 @@ function FlowDiagram() {
             <p
               className={
                 node.core
-                  ? "min-w-0 flex-1 text-[15px] font-bold leading-snug tracking-[-0.02em] text-ink"
-                  : "min-w-0 flex-1 text-[13.5px] font-bold leading-snug tracking-[-0.015em] text-[#606060]"
+                  ? "type-hl-card-title min-w-0 flex-1 text-ink"
+                  : "type-hl-inbox-title min-w-0 flex-1 text-[#606060]"
               }
             >
               {node.label}

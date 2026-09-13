@@ -5,10 +5,10 @@ import { Icon } from "@/components/icons";
 import Reveal from "@/components/module-page/Reveal";
 import { Divide, Panel } from "@/components/ambient-ai-dictation/Surface";
 import {
-  CaptureWave,
   DocTiles,
   FieldRows,
 } from "@/components/ambient-ai-dictation/Capture";
+import { PulseMic } from "@/components/home-landing/marks";
 import { AaEyebrow, AaHead, AaWrap } from "@/components/ambient-ai-dictation/Shell";
 import { useAutoAdvance } from "@/lib/useAutoAdvance";
 import { cn } from "@/lib/cn";
@@ -59,7 +59,15 @@ const PHASES: Phase[] = [
     live: true,
     visual: (
       <>
-        <CaptureWave />
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <PulseMic size={56} icon={30} />
+        </div>
 
         <Divide label="Flagged in real time" />
 
@@ -247,11 +255,11 @@ export default function HowItWorks() {
                       : "pointer-events-none translate-y-1 opacity-0",
                   )}
                 >
-                  <h3 className="aa-serif" style={{ fontSize: 30, fontWeight: 500 }}>
+                  <h3 className="type-hl-section-title text-ink">
                     {phase.heading}
                   </h3>
 
-                  <p className="aa-body" style={{ marginTop: 16, maxWidth: "52ch" }}>
+                  <p className="type-hl-lead" style={{ marginTop: 16, maxWidth: "52ch" }}>
                     {phase.body}
                   </p>
                 </div>

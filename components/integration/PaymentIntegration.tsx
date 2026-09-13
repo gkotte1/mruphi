@@ -28,7 +28,7 @@ export default function PaymentIntegration() {
             Everyware Payment Gateway
           </h2>
 
-          <p className="mt-5 text-[16px] font-bold tracking-[-0.015em] text-[#007EFF]">
+          <p className="type-hl-card-title mt-5 text-[#007EFF]">
             Everyware - Integrated Payment Gateway
           </p>
 
@@ -73,8 +73,8 @@ export default function PaymentIntegration() {
                 <span
                   className={
                     step.core
-                      ? "truncate text-[12.5px] font-bold tracking-[-0.015em] text-ink"
-                      : "truncate text-[12.5px] font-bold tracking-[-0.015em] text-[#606060]"
+                      ? "type-hl-inbox-title truncate text-ink"
+                      : "type-hl-inbox-title truncate text-[#606060]"
                   }
                 >
                   {step.label}

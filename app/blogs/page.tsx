@@ -104,13 +104,13 @@ function Card({ post }: { post: BlogPost }) {
           {post.category}
         </p>
 
-        <h2 className="mt-3 text-[16px] leading-snug font-bold tracking-[-0.018em] text-ink">
+        <h2 className="type-hl-card-title mt-3 text-ink">
           <Link href={href} className="transition-colors duration-200 hover:text-[#007EFF]">
             {post.title}
           </Link>
         </h2>
 
-        <p className="mt-3 line-clamp-3 text-[13.5px] leading-relaxed text-[#606060]">
+        <p className="type-hl-card-body mt-3 line-clamp-3">
           {post.excerpt}
         </p>
 

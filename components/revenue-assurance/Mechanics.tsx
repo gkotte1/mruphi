@@ -47,7 +47,7 @@ function Row({ label, value }: { label: string; value: ReactNode }) {
       <span className={cn(MONO, "ra-mono shrink-0 text-[11px] text-[#878787]")}>
         {label}
       </span>
-      <span className="min-w-0 truncate text-right text-[12.5px] font-semibold text-ink">
+      <span className="type-hl-inbox-title min-w-0 truncate text-right text-ink">
         {value}
       </span>
     </div>
@@ -81,7 +81,7 @@ function CheckLine({ name, done = true }: { name: string; done?: boolean }) {
       >
         {done ? <Tick className="size-2.5" /> : <span className="size-1 rounded-full bg-current" />}
       </span>
-      <span className="min-w-0 text-[12.5px] font-semibold text-ink">{name}</span>
+      <span className="type-hl-inbox-title min-w-0 text-ink">{name}</span>
     </li>
   );
 }
@@ -109,9 +109,7 @@ function FindingLine({
         <Icon name={flag ? "shield" : "chartup"} width={10} height={10} />
       </span>
       <span className="min-w-0">
-        <span className="block text-[12.5px] leading-[1.35] font-semibold text-ink">
-          {title}
-        </span>
+        <span className="type-hl-inbox-title block text-ink">{title}</span>
         <span className={cn(MONO, "ra-mono mt-0.5 block text-[10.5px] text-[#878787]")}>
           {meta}
         </span>
@@ -218,7 +216,7 @@ const VIEWS: View[] = [
         <Row label="Finding" value="02" />
 
         <div className="mt-3 rounded-[8px] border border-[#E3E3E3] bg-[#F5F5F5] px-3.5 py-3">
-          <div className="text-[13px] leading-[1.35] font-semibold text-ink">
+          <div className="type-hl-inbox-title text-ink">
             Face-to-Face encounter date missing
           </div>
           <div className={cn(MONO, "ra-mono mt-0.5 text-[10.5px] text-[#878787]")}>
@@ -235,7 +233,7 @@ const VIEWS: View[] = [
           <Pips total={3} done={2} />
           {/* A state in the mock, not a control - nothing to operate here. */}
           <span
-            className="rounded-full bg-[#007EFF] px-3.5 py-1.5 text-[11.5px] font-semibold text-[#F5F5F5]"
+            className="rounded-full border border-[#E3E3E3] bg-[#F5F5F5] px-3.5 py-1.5 text-[11.5px] font-semibold text-ink"
             aria-hidden
           >
             Resolve Finding
@@ -260,7 +258,7 @@ const VIEWS: View[] = [
         </div>
 
         <div className="mt-4">
-          <SystemNode label="EHR" compact returned />
+          <SystemNode label="EHR" compact returned muted />
         </div>
       </>
     ),
@@ -369,13 +367,13 @@ export default function Mechanics({ steps }: { steps: Step[] }) {
                   >
                     <span
                       className={cn(
-                        "block ra-serif text-[16.5px] font-medium leading-snug transition-colors duration-[420ms] ease-out",
+                        "block type-hl-card-title transition-colors duration-[420ms] ease-out",
                         isActive ? "text-ink" : "text-[#606060]",
                       )}
                     >
                       {step.title}
                     </span>
-                    <span className="mt-1.5 block text-[13.5px] leading-[1.55] text-[#606060]">
+                    <span className="type-hl-card-body mt-1.5 block">
                       {step.body}
                     </span>
                   </span>

@@ -69,7 +69,7 @@ function StatusShift({ from, to }: { from: string; to: string }) {
       <span
         className={cn(
           MONO,
-          "rounded-full bg-[#007EFF] px-3 py-1.5 text-[11.5px] font-semibold text-white",
+          "rounded-full border border-[#E3E3E3] bg-[#F5F5F5] px-3 py-1.5 text-[11.5px] font-semibold text-ink",
         )}
       >
         {to}
@@ -88,7 +88,7 @@ function DoneLine({ name }: { name: string }) {
       >
         <Tick className="size-2.5" />
       </span>
-      <span className="min-w-0 text-[12.5px] font-semibold text-ink">{name}</span>
+      <span className="type-hl-inbox-title min-w-0 text-ink">{name}</span>
     </li>
   );
 }
@@ -101,7 +101,7 @@ const VIEWS: View[] = [
     status: "Outstanding",
     body: (
       <>
-        <SystemNode label="EHR" compact />
+        <SystemNode label="EHR" compact muted />
 
         <div className="mt-4">
           <Row label="Amount" value="$84.00" />
@@ -178,7 +178,7 @@ const VIEWS: View[] = [
         </div>
 
         <div className="mt-4">
-          <SystemNode label="EHR" compact returned />
+          <SystemNode label="EHR" compact returned muted />
         </div>
       </>
     ),
@@ -252,13 +252,13 @@ export default function Mechanics({ steps }: { steps: Step[] }) {
                   >
                     <span
                       className={cn(
-                        "block text-[16.5px] font-bold leading-snug tracking-[-0.015em] transition-colors duration-[420ms] ease-out",
+                        "block type-hl-card-title transition-colors duration-[420ms] ease-out",
                         isActive ? "text-ink" : "text-[#606060]",
                       )}
                     >
                       {step.title}
                     </span>
-                    <span className="mt-1.5 block text-[13.5px] leading-[1.55] text-[#606060]">
+                    <span className="type-hl-card-body mt-1.5 block">
                       {step.body}
                     </span>
                   </span>

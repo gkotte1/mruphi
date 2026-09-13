@@ -155,7 +155,7 @@ export default function PatientEngagementPage() {
           eyebrow="Patient Engagement"
           title="One Platform for Every Conversation."
           storyTag="Wednesday, 2:15 PM"
-          story="The front desk phone rings. It's Ana, calling to confirm her mother's PT visit - same as she did Monday, and Tuesday. Nobody wrote down that she already asked."
+          story="The front desk phone rings. It's Ana, calling to confirm her mother's PT visit - same as she did Monday, and again. Nobody wrote down that she already asked."
           lede="Staff message from a secure Murphi app. Patients and caregivers keep texting the way they already do - no download, no portal password. Every exchange, translated, logged and visible in one place."
           trust={["HIPAA Compliant", "SOC 2", "No App Required for Patients"]}
           visual={

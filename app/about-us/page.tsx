@@ -11,50 +11,43 @@ import { pageMetadata } from "@/lib/site";
 /**
  * /about-us/ - the company page.
  *
- * Hero, About, Why, Modules, Coming Soon, Differentiators, Values, then the
- * existing Our Team section. Every string below is the supplied copy,
- * verbatim.
+ * Hero, Why, Four Modules, Differentiators, Values, then Our Team.
+ * Module copy stays aligned with Home and the live module pages.
  */
 
 export const metadata: Metadata = pageMetadata("/about-us/", {
   title: "About Murphi.ai - Home Health & Hospice AI",
   description:
-    "Murphi.ai is an advanced AI platform purpose-built for home health and hospice - documentation, revenue integrity, compliance, patient engagement, and collections in one connected platform.",
+    "Murphi.ai is an AI platform for home health and hospice that reduces administrative work so clinicians and staff can spend more time on patient care.",
 });
 
-const MODULES: { title: string; body: string; icon: IconName }[] = [
+const MODULES: {
+  title: string;
+  body: string;
+  icon: IconName;
+  soon?: boolean;
+}[] = [
   {
-    title: "Ambient AI",
+    title: "Ambient AI & Dictation",
     icon: "mic",
-    body: "Transform clinician–patient conversations into structured, review-ready clinical documentation. Murphi.ai helps generate OASIS assessments, hospice documentation, skilled nursing and therapy notes, SOAP notes, visit summaries, and other required documentation—reducing after-hours charting and allowing clinicians to spend more time with patients.",
+    body: "Captures clinical conversations during the visit and drafts structured notes for review — so charting takes minutes, not hours after the visit.",
   },
   {
-    title: "Revenue Assurance, Compliance & QAPI",
-    icon: "sealcheck",
-    body: "Review documentation for coding accuracy, clinical consistency, completeness, regulatory compliance, and revenue opportunities. Murphi.ai helps agencies identify missing or conflicting information, reduce avoidable denials, improve documentation quality, support QAPI initiatives, and remain prepared for payer audits and accreditation surveys.",
-  },
-  {
-    title: "Patient Engagement",
-    icon: "community",
-    body: "Communicate securely with patients, families, caregivers, clinicians, and agency teams through HIPAA-compliant messaging, texting, faxing, electronic signatures, document sharing, and scanning. Murphi.ai brings essential communication workflows together, helping agencies improve responsiveness while reducing dependence on disconnected systems and unsecured communication channels.",
-  },
-  {
-    title: "Patient Payment Collections",
-    icon: "card",
-    body: "Identify patient-responsible balances and send secure payment links directly by text message. Patients can conveniently pay using supported digital payment methods, with funds deposited into the provider’s account. Murphi.ai also tracks payment activity and reconciles collections with the EHR, helping agencies accelerate cash flow, reduce outstanding balances, and simplify financial follow-up.",
-  },
-];
-
-const COMING_SOON: { title: string; body: string; icon: IconName }[] = [
-  {
-    title: "Referral to NOA",
+    title: "Referral → NOA",
     icon: "route",
-    body: "An AI-powered referral and intake workflow that receives or retrieves referral documents, identifies and classifies information, extracts patient data, checks completeness and eligibility, supports acceptance decisions, writes information into the EHR, schedules the Start of Care, and helps agencies move efficiently from referral to Notice of Admission.",
+    soon: true,
+    body: "Streamlines referral intake through classification, checks, and routing — helping agencies move from referral toward Notice of Admission with less manual work and fewer delays.",
   },
   {
-    title: "AI-Driven Revenue Cycle Management",
+    title: "AI-Driven RCM",
     icon: "exchange",
-    body: "An integrated RCM platform designed to automate and strengthen eligibility verification, prior authorization, coding, claim readiness, claims processing, denial management, appeals, payment posting, and reconciliation—helping agencies improve collections while reducing administrative effort.",
+    soon: true,
+    body: "Tracks claims across eligibility, authorization, documentation, and coding — surfacing issues early so teams can fix them before submission, not after a denial.",
+  },
+  {
+    title: "Patient Payments",
+    icon: "card",
+    body: "Sends secure payment links by text, collects balances digitally, and reconciles payments back to the EHR — reducing manual billing follow-up and mailed statements.",
   },
 ];
 
@@ -124,8 +117,6 @@ const VALUES: { title: string; body: string; icon: IconName }[] = [
   },
 ];
 
-const MODULE_DESC = "text-[14.5px] leading-relaxed text-[#606060]";
-
 function SectionRule({
   id,
   children,
@@ -157,8 +148,8 @@ export default function AboutUsPage() {
           align="center"
           ledeAlign="left"
           ledeMax="none"
+          ledeClassName="type-hl-card-body"
           paddingBottom={64}
-          ledeClassName={MODULE_DESC}
           lede="Murphi.ai is an advanced AI platform purpose-built for home health and hospice, helping agencies reduce documentation time, strengthen revenue integrity, improve compliance, engage patients, and accelerate patient payment collections through one connected platform. It supports clinicians, administrators, coders, billers, compliance and QAPI teams, RCM companies, accreditation organizations, and healthcare partners across the agency ecosystem. Murphi.ai also partners with home health and hospice EHR companies to embed AI directly into existing workflows through secure APIs, configurable integrations, and white-label deployment options. By working alongside existing systems, Murphi.ai helps agencies and EHR partners make everyday workflows faster, more accurate, secure, and easier to manage."
         />
 
@@ -183,7 +174,7 @@ export default function AboutUsPage() {
             </div>
 
             <div className="grid min-w-0 max-w-[70ch] gap-6">
-              <p className={MODULE_DESC}>
+              <p className="type-hl-card-body">
                 Home health and hospice require specialized workflows across
                 OASIS, clinical documentation, coding, QAPI, compliance, revenue
                 assurance, patient communication, and EHR operations. Generic AI
@@ -193,7 +184,7 @@ export default function AboutUsPage() {
                 one connected platform.
               </p>
 
-              <p className={MODULE_DESC}>
+              <p className="type-hl-card-body">
                 For agencies, Murphi.ai helps reduce charting time, close
                 documentation gaps, strengthen compliance, protect revenue,
                 improve collections, and prepare for audits and surveys. By
@@ -218,53 +209,23 @@ export default function AboutUsPage() {
                   key={module.title}
                   className="flex flex-col px-8 py-9 max-600:px-6 max-600:py-8"
                 >
-                  <span className="flex size-11 items-center justify-center rounded-[8px] border border-[#E3E3E3] bg-[#F5F5F5] text-[#007EFF]">
-                    <Icon name={module.icon} width={20} height={20} />
+                  <span className="flex items-center justify-between gap-3">
+                    <span className="flex size-11 items-center justify-center rounded-[8px] border border-[#E3E3E3] bg-[#F5F5F5] text-[#007EFF]">
+                      <Icon name={module.icon} width={20} height={20} />
+                    </span>
+                    {module.soon ? (
+                      <span className="ip-mono rounded-full border border-[#E3E3E3] bg-[#F5F5F5] px-2.5 py-1 text-[10.5px] font-semibold tracking-[0.06em] uppercase text-[#878787]">
+                        Soon
+                      </span>
+                    ) : null}
                   </span>
 
-                  <h3 className="mt-6 text-[18px] font-bold leading-snug tracking-[-0.02em] text-ink">
+                  <h3 className="type-hl-card-title mt-6 text-ink">
                     {module.title}
                   </h3>
 
-                  <p className={`mt-3.5 ${MODULE_DESC}`}>
+                  <p className="type-hl-card-body mt-3.5">
                     {module.body}
-                  </p>
-                </li>
-              ))}
-            </ul>
-          </IpWrap>
-        </section>
-
-        <section aria-labelledby="soon-heading" className="ip-section ip-band">
-          <IpWrap>
-            <div className="flex flex-wrap items-end justify-between gap-4">
-              <SectionRule id="soon-heading">Coming Soon</SectionRule>
-              <span className="ip-mono rounded-full border border-[#E3E3E3] bg-white px-3 py-1 text-[10.5px] font-semibold tracking-[0.06em] uppercase text-[#878787]">
-                Launching soon
-              </span>
-            </div>
-
-            <ul className="ip-ruled mt-12 grid-cols-2 max-900:grid-cols-1 max-600:mt-9">
-              {COMING_SOON.map((item) => (
-                <li
-                  key={item.title}
-                  className="flex flex-col px-8 py-9 max-600:px-6 max-600:py-8"
-                >
-                  <span className="flex items-center justify-between gap-3">
-                    <span className="flex size-11 items-center justify-center rounded-[8px] border border-dashed border-[#B2B2B2] bg-white text-[#878787]">
-                      <Icon name={item.icon} width={20} height={20} />
-                    </span>
-                    <span className="ip-mono rounded-full border border-[#E3E3E3] bg-[#F5F5F5] px-2.5 py-1 text-[10.5px] font-semibold tracking-[0.06em] uppercase text-[#878787]">
-                      Soon
-                    </span>
-                  </span>
-
-                  <h3 className="mt-6 text-[18px] font-bold leading-snug tracking-[-0.02em] text-ink">
-                    {item.title}
-                  </h3>
-
-                  <p className="mt-3.5 text-[14.5px] leading-relaxed text-[#606060]">
-                    {item.body}
                   </p>
                 </li>
               ))}
@@ -288,11 +249,11 @@ export default function AboutUsPage() {
                     <Icon name={item.icon} width={18} height={18} />
                   </span>
 
-                  <h3 className="mt-5 text-[15.5px] font-bold leading-snug tracking-[-0.015em] text-ink">
+                  <h3 className="type-hl-card-title mt-5 text-ink">
                     {item.title}
                   </h3>
 
-                  <p className="mt-2.5 text-[13.5px] leading-relaxed text-[#606060]">
+                  <p className="type-hl-card-body mt-2.5">
                     {item.body}
                   </p>
                 </li>
@@ -315,11 +276,11 @@ export default function AboutUsPage() {
                     <Icon name={value.icon} width={20} height={20} />
                   </span>
 
-                  <h3 className="mt-6 text-[18px] font-bold leading-none tracking-[-0.02em] text-ink">
+                  <h3 className="type-hl-card-title mt-6 text-ink">
                     {value.title}
                   </h3>
 
-                  <p className="mt-4 text-[14.5px] leading-relaxed text-[#606060]">
+                  <p className="type-hl-card-body mt-4">
                     {value.body}
                   </p>
                 </li>

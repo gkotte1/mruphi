@@ -45,7 +45,7 @@ export function Panel({
         <span
           className={cn(
             MONO,
-            "truncate aa-mono text-[11px] uppercase tracking-[0.06em] text-[#878787]",
+            "truncate aa-mono text-[10.5px] font-semibold uppercase tracking-[0.06em] text-[#878787]",
           )}
         >
           {label}

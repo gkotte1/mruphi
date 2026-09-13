@@ -94,10 +94,10 @@ export default function RevenueAssurance() {
             >
               {finding.tone === "flag" ? "Needs attention" : "Opportunity"}
             </span>
-            <h3 className="mt-4 text-[17px] font-bold tracking-[-0.02em] text-ink">
+            <h3 className="type-hl-card-title mt-4 text-ink">
               {finding.title}
             </h3>
-            <p className="mt-2 text-[13px] text-ink-muted">{finding.meta}</p>
+            <p className="type-hl-card-body mt-2">{finding.meta}</p>
           </article>
         ))}
       </div>

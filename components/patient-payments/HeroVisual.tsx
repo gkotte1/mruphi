@@ -36,7 +36,7 @@ export default function PaymentJourney() {
             Your balance is $84.00. Tap here to securely pay: murphi.pay/x82f
           </p>
 
-          <p className="w-fit max-w-[88%] self-end rounded-[14px] rounded-br-[4px] bg-[#007EFF] px-3.5 py-2 text-[12.5px] leading-[1.5] font-semibold text-white">
+          <p className="type-hl-inbox-title w-fit max-w-[88%] self-end rounded-[14px] rounded-br-[4px] border border-[#E3E3E3] bg-[#F5F5F5] px-3.5 py-2 text-ink">
             Paid
           </p>
         </div>
@@ -48,7 +48,7 @@ export default function PaymentJourney() {
         <span
           className={cn(
             MONO,
-            "text-[10.5px] tracking-[0.06em] text-[#878787] uppercase",
+            "text-[10.5px] font-semibold tracking-[0.06em] text-[#878787] uppercase",
           )}
         >
           Payment confirmed &rarr; ledger updated
@@ -69,7 +69,7 @@ export default function PaymentJourney() {
               </dt>
               <dd
                 className={cn(
-                  "min-w-0 truncate text-right text-[12.5px] font-semibold",
+                  "type-hl-inbox-title min-w-0 truncate text-right",
                   row.state ? "text-[#007EFF]" : "text-ink",
                 )}
               >
@@ -104,7 +104,7 @@ function Panel({
         <span
           className={cn(
             MONO,
-            "min-w-0 truncate text-[11px] font-semibold tracking-[0.06em] text-ink uppercase",
+            "min-w-0 truncate text-[10.5px] font-semibold tracking-[0.06em] text-ink uppercase",
           )}
         >
           {label}

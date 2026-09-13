@@ -71,11 +71,11 @@ export default function SecuritySection() {
                 />
               </span>
 
-              <h3 className="text-[16px] font-bold leading-snug tracking-[-0.02em] text-ink">
+              <h3 className="type-hl-card-title text-ink">
                 {card.title}
               </h3>
 
-              <p className="text-[13.5px] font-normal leading-relaxed text-[#606060] max-900:col-start-2">
+              <p className="type-hl-card-body max-900:col-start-2">
                 {card.body}
               </p>
             </li>

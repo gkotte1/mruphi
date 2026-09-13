@@ -41,10 +41,10 @@ export function Pillars({
               <Icon name={PILLAR_ICONS[pillar.title] ?? "layers"} width={17} height={17} />
             </span>
 
-            <h4 className="text-[15.5px] font-bold leading-snug tracking-[-0.015em] text-ink">
+            <h4 className="type-hl-card-title text-ink">
               {pillar.title}
             </h4>
-            <p className="mt-2 text-[13px] leading-[1.6] text-[#606060]">
+            <p className="type-hl-card-body mt-2">
               {pillar.body}
             </p>
           </div>
@@ -97,7 +97,7 @@ export function Roadmap({
               </span>
 
               <span className="min-w-0">
-                <span className="block text-[16px] font-bold leading-snug tracking-[-0.015em] text-ink">
+                <span className="type-hl-card-title block text-ink">
                   {phase.title}
                 </span>
 
@@ -110,7 +110,7 @@ export function Roadmap({
                 </span>
               </span>
 
-              <span className="min-w-0 text-[14px] leading-[1.65] text-[#606060] max-900:col-start-2">
+              <span className="type-hl-card-body min-w-0 max-900:col-start-2">
                 {phase.body}
               </span>
             </li>
@@ -144,10 +144,10 @@ export function SecuritySpecs({
             </span>
 
             <span className="min-w-0">
-              <span className="block text-[14.5px] font-bold leading-snug tracking-[-0.012em] text-ink">
+              <span className="type-hl-card-title block text-ink">
                 {item.title}
               </span>
-              <span className="mt-1.5 block text-[13px] leading-[1.6] text-[#606060]">
+              <span className="type-hl-card-body mt-1.5 block">
                 {item.body}
               </span>
             </span>
@@ -181,7 +181,7 @@ export function FeatureTiles({
           >
             <Tick className="size-2.5" />
           </span>
-          <span className="text-[13.5px] font-semibold tracking-[-0.01em] text-ink">
+          <span className="type-hl-inbox-title text-ink">
             {feature}
           </span>
         </span>

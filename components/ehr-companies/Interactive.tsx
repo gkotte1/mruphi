@@ -130,7 +130,7 @@ export function LayerStack({
                 </span>
 
                 <span className="min-w-0">
-                  <span className="block text-[16.5px] font-bold leading-snug tracking-[-0.015em] text-ink">
+                  <span className="type-hl-card-title block text-ink">
                     {layer.title}
                   </span>
                   <span
@@ -221,10 +221,10 @@ export function IntegrationOptions({
                   <span className={MONO}>{selected ? "●" : "○"}</span>
                 </span>
 
-                <span className="block text-[16px] font-bold leading-snug tracking-[-0.015em] text-ink">
+                <span className="type-hl-card-title block text-ink">
                   {option.title}
                 </span>
-                <span className="mt-2 block text-[13.5px] leading-[1.6] text-[#606060]">
+                <span className="type-hl-card-body mt-2 block">
                   {option.body}
                 </span>
 

@@ -129,7 +129,7 @@ export default function FaqExplorer({
               >
                 <span
                   className={cn(
-                    "min-w-0 text-[13.5px] leading-snug font-semibold tracking-[-0.01em] transition-colors duration-200 max-900:whitespace-nowrap",
+                    "type-hl-inbox-title min-w-0 transition-colors duration-200 max-900:whitespace-nowrap",
                     on ? "text-[#007EFF]" : "text-[#606060]",
                   )}
                 >
@@ -163,7 +163,7 @@ export default function FaqExplorer({
             <div className="flex items-baseline justify-between gap-6 border-b border-[#1A1A1A] pb-4">
               <h2
                 id={`${section.id}-heading`}
-                className="ip-serif min-w-0 text-[22px] leading-snug font-medium tracking-[-0.02em] text-ink max-600:text-[19px]"
+                className="type-hl-section-title min-w-0 text-ink max-600:text-[22px]"
               >
                 {section.label}
               </h2>
@@ -216,7 +216,7 @@ function Row({
       >
         <span
           className={cn(
-            "min-w-0 text-[15px] leading-[1.5] font-semibold tracking-[-0.012em] transition-colors duration-200",
+            "type-hl-card-title min-w-0 transition-colors duration-200",
             open ? "text-[#007EFF]" : "text-ink group-hover:text-[#007EFF]",
           )}
         >
@@ -231,7 +231,7 @@ function Row({
         className="overflow-hidden transition-[max-height] duration-[280ms] ease-[ease] motion-reduce:transition-none"
         style={{ maxHeight: open ? 420 : 0 }}
       >
-        <p className="max-w-[68ch] pr-10 pb-6 text-[14px] leading-[1.7] text-[#606060] max-600:pr-0 max-600:pb-5">
+        <p className="type-hl-lead max-w-[68ch] pr-10 pb-6 max-600:pr-0 max-600:pb-5">
           {answer}
         </p>
       </div>

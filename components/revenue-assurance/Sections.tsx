@@ -280,8 +280,8 @@ function TrackCell({
 
       <span
         className={cn(
-          "relative z-[2] min-w-0 text-[14px] leading-[1.55]",
-          after ? "text-ink" : "text-[#606060]",
+          "relative z-[2] min-w-0 type-hl-card-body",
+          after ? "!text-ink" : null,
         )}
       >
         {step}
@@ -401,13 +401,10 @@ export function Outcomes({
               >
                 <OutcomeIcon icon={outcome.icon} />
               </div>
-              <div
-                className="ra-serif"
-                style={{ marginBottom: 8, fontSize: 16, fontWeight: 500 }}
-              >
+              <div className="type-hl-card-title mb-2 text-ink">
                 {outcome.title}
               </div>
-              <div style={{ fontSize: 14, lineHeight: 1.5, color: "#606060" }}>
+              <div className="type-hl-card-body">
                 {outcome.sub}
               </div>
             </div>
@@ -472,7 +469,7 @@ export function EhrIntegration({
                     "ra-mono flex items-center justify-between gap-3 border-b border-[#E3E3E3] px-5 py-3 max-600:px-4",
                   )}
                 >
-                  <span className="min-w-0 truncate text-[11px] font-semibold uppercase tracking-[0.06em] text-ink">
+                  <span className="min-w-0 truncate text-[10.5px] font-semibold uppercase tracking-[0.06em] text-ink">
                     Your EHR ⇄ Murphi AI ⇄ Your EHR
                   </span>
                   <span className="relative flex size-1.5 shrink-0" aria-hidden>

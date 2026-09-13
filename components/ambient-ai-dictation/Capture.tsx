@@ -195,7 +195,7 @@ export function DocTiles({
             <Icon name="doc" width={12} height={12} />
           </span>
 
-          <span className="min-w-0 flex-1 truncate text-[11.5px] font-bold leading-none text-ink">
+          <span className="type-hl-inbox-title min-w-0 flex-1 truncate text-ink">
             {item}
           </span>
 

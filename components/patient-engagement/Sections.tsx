@@ -58,10 +58,10 @@ export function InsideLedger({
             </span>
 
             <div className="min-w-0">
-              <h4 className="text-[15.5px] font-bold leading-snug tracking-[-0.012em] text-ink">
+              <h4 className="type-hl-card-title text-ink">
                 {item.title}
               </h4>
-              <p className="mt-1.5 text-[13px] leading-[1.55] text-[#606060]">
+              <p className="type-hl-card-body mt-1.5">
                 {item.body}
               </p>
             </div>
@@ -132,7 +132,7 @@ export function BeforeAfter({
             <div
               className={cn(
                 MONO,
-                "text-[11px] uppercase tracking-[0.06em] text-[#878787]",
+                "text-[10.5px] uppercase tracking-[0.06em] text-[#878787]",
               )}
             >
               {row.label}
@@ -150,7 +150,7 @@ export function BeforeAfter({
                 <Icon name="arrow" width={14} height={14} />
               </span>
 
-              <span className="text-[15px] font-bold leading-[1.35] tracking-[-0.012em] text-ink">
+              <span className="type-hl-card-title text-ink">
                 {row.to}
               </span>
             </div>
@@ -202,10 +202,10 @@ export function MessageFlow({
               </span>
 
               <span className="min-w-0">
-                <span className="block text-[15.5px] font-bold leading-snug tracking-[-0.012em] text-ink">
+                <span className="type-hl-card-title block text-ink">
                   {step.title}
                 </span>
-                <span className="mt-1.5 block text-[13px] leading-[1.55] text-[#606060]">
+                <span className="type-hl-card-body mt-1.5 block">
                   {step.body}
                 </span>
               </span>
@@ -269,7 +269,7 @@ function IntegrationPanel() {
           "flex items-center justify-between gap-3 border-b border-[#E3E3E3] px-5 py-3 max-600:px-4",
         )}
       >
-        <span className="min-w-0 truncate text-[11px] font-semibold uppercase tracking-[0.06em] text-ink">
+        <span className="min-w-0 truncate text-[10.5px] font-semibold uppercase tracking-[0.06em] text-ink">
           Your EHR ⇄ Murphi AI ⇄ Your EHR
         </span>
         <span className="relative flex size-1.5 shrink-0" aria-hidden>
@@ -297,9 +297,7 @@ function IntegrationPanel() {
                 className="size-full object-contain"
               />
             </span>
-            <span className="text-[13px] font-bold leading-none tracking-[-0.015em] text-ink">
-              Murphi AI
-            </span>
+            <span className="type-hl-inbox-title text-ink">Murphi AI</span>
           </div>
 
           <ol className="mx-auto mt-2.5 grid w-fit gap-0">
@@ -342,9 +340,7 @@ function SystemNode({ label, returned }: { label: string; returned?: boolean }) 
         <Icon name="server" width={12} height={12} />
       </span>
 
-      <span className="text-[13px] font-bold leading-none tracking-[-0.015em] text-ink">
-        {label}
-      </span>
+      <span className="type-hl-inbox-title text-ink">{label}</span>
 
       {returned ? (
         <Tick className="size-3 shrink-0 text-[#007EFF]" />

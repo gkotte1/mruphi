@@ -39,11 +39,11 @@ export function ModelSplit({
             <div className="flex-1 px-8 pt-8 pb-7 max-600:px-6 max-600:pt-6">
               <p className="ip-eyebrow">{model.eyebrow}</p>
 
-              <h4 className="mt-4 text-[19px] font-bold leading-snug tracking-[-0.015em] text-ink">
+              <h4 className="type-hl-card-title mt-4 text-ink">
                 {model.title}
               </h4>
 
-              <p className="mt-3 text-[14.5px] leading-[1.65] text-[#606060]">
+              <p className="type-hl-card-body mt-3">
                 {model.body}
               </p>
             </div>
@@ -112,7 +112,7 @@ function Band({
 
         <h4
           className={cn(
-            "text-[17px] font-bold leading-none tracking-[-0.015em]",
+            "type-hl-card-title",
             after ? "text-ink" : "text-[#606060]",
           )}
         >
@@ -183,7 +183,7 @@ export function ReviewSurface({
         <span
           className={cn(
             MONO,
-            "flex min-w-0 items-center gap-2 truncate text-[11px] uppercase tracking-[0.06em] text-white/90",
+            "flex min-w-0 items-center gap-2 truncate text-[10.5px] font-semibold uppercase tracking-[0.06em] text-white/90",
           )}
         >
           <Tick className="size-3.5 shrink-0" />
@@ -228,7 +228,7 @@ export function ReviewSurface({
               </span>
 
               <span className="min-w-0">
-                <span className="block text-[13px] leading-[1.35] font-semibold text-ink">
+                <span className="type-hl-inbox-title block text-ink">
                   {finding.title}
                 </span>
                 <span className={cn(MONO, "mt-0.5 block text-[10.5px] text-[#878787]")}>

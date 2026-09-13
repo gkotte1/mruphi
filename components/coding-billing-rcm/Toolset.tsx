@@ -85,7 +85,7 @@ export default function Toolset({ tools }: { tools: Tool[] }) {
 
                   <span className="min-w-0 flex-1">
                     <StatusBadge tone={tool.badge.tone}>{tool.badge.text}</StatusBadge>
-                    <span className="mt-3 block max-w-[52ch] text-[15px] leading-[1.6] text-[#606060]">
+                    <span className="type-hl-lead mt-3 block max-w-[52ch]">
                       {tool.text}
                     </span>
                   </span>
@@ -108,7 +108,7 @@ export default function Toolset({ tools }: { tools: Tool[] }) {
                           {String(i + 1).padStart(2, "0")}
                         </span>
                         <Tick className="size-3.5 shrink-0 text-[#007EFF]" />
-                        <span className="min-w-0 text-[13.5px] font-semibold tracking-[-0.01em] text-ink">
+                        <span className="type-hl-card-title min-w-0 text-ink">
                           {report}
                         </span>
                       </li>

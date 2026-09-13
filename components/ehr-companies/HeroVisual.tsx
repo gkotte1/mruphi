@@ -40,7 +40,7 @@ export default function EmbeddedLayer({
     <Environment
       label={
         <>
-          <Tick className="size-4 shrink-0" />
+          <Tick className="size-4 shrink-0 text-[#007EFF]" />
           <span className="truncate">{title}</span>
         </>
       }

@@ -58,9 +58,10 @@ function ChipColumn({ title, chips }: { title: string; chips: string[] }) {
           display: "flex",
           alignItems: "center",
           gap: 8,
-          fontSize: 11,
+          fontSize: 10.5,
+          fontWeight: 600,
           textTransform: "uppercase",
-          letterSpacing: "0.07em",
+          letterSpacing: 0.6,
           color: "#878787",
         }}
       >
@@ -218,13 +219,10 @@ export function Outcomes() {
               >
                 <OutcomeIcon icon={outcome.icon} />
               </div>
-              <div
-                className="aa-serif"
-                style={{ marginBottom: 8, fontSize: 16, fontWeight: 500 }}
-              >
+              <div className="type-hl-card-title mb-2 text-ink">
                 {outcome.title}
               </div>
-              <div style={{ fontSize: 14, lineHeight: 1.5, color: "#606060" }}>
+              <div className="type-hl-card-body">
                 {outcome.sub}
               </div>
             </div>
@@ -256,7 +254,7 @@ export function EhrIntegration() {
                 Works with the EHR you already use.
               </h2>
 
-              <p className="aa-lead" style={{ maxWidth: "52ch", fontSize: 18 }}>
+              <p className="type-hl-lead" style={{ maxWidth: "52ch" }}>
                 Murphi fetches, structures and writes back - your team keeps
                 working inside the EHR they already know.
               </p>
@@ -300,7 +298,7 @@ function IntegrationPanel() {
             overflow: "hidden",
             textOverflow: "ellipsis",
             whiteSpace: "nowrap",
-            fontSize: 11,
+            fontSize: 10.5,
             fontWeight: 600,
             textTransform: "uppercase",
             letterSpacing: "0.06em",
@@ -361,7 +359,7 @@ function IntegrationPanel() {
                 className="size-full object-contain"
               />
             </span>
-            <span style={{ fontSize: 13, fontWeight: 700, lineHeight: 1, color: "#1A1A1A" }}>
+            <span className="type-hl-inbox-title text-ink">
               Murphi AI
             </span>
           </div>
@@ -389,7 +387,8 @@ function IntegrationPanel() {
                   style={{
                     minWidth: 0,
                     paddingBottom: i === PIPELINE.length - 1 ? 0 : 6,
-                    fontSize: 11,
+                    fontSize: 11.5,
+                    lineHeight: 1.3,
                     color: "#606060",
                   }}
                 >
@@ -439,7 +438,7 @@ function SystemNode({ label, returned }: { label: string; returned?: boolean }) 
       >
         <Icon name="server" width={12} height={12} />
       </span>
-      <span style={{ fontSize: 13, fontWeight: 700, lineHeight: 1, color: "#1A1A1A" }}>
+      <span className="type-hl-inbox-title text-ink">
         {label}
       </span>
       {returned ? (

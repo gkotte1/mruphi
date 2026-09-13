@@ -48,14 +48,14 @@ export function Surface({
       <div
         className={cn(
           "flex items-center justify-between gap-3 px-5 py-3 max-720:px-4",
-          onBrand ? "bg-[#007EFF]" : "border-b border-[#E3E3E3] bg-[#F5F5F5]",
+          onBrand ? "border-b border-[#E3E3E3] bg-[#F5F5F5]" : "border-b border-[#E3E3E3] bg-[#F5F5F5]",
         )}
       >
         <span
           className={cn(
             MONO,
-            "flex min-w-0 items-center gap-2 truncate text-[11px] uppercase tracking-[0.06em]",
-            onBrand ? "text-white/90" : "text-[#878787]",
+            "flex min-w-0 items-center gap-2 truncate text-[10.5px] font-semibold uppercase tracking-[0.06em]",
+            onBrand ? "text-[#878787]" : "text-[#878787]",
           )}
         >
           {label}
@@ -67,12 +67,12 @@ export function Surface({
               MONO,
               "flex shrink-0 items-center gap-1.5 rounded-full px-2.5 py-1 text-[10.5px] font-semibold tracking-[0.04em] uppercase",
               onBrand
-                ? "bg-white/15 text-white"
+                ? "border border-[#E3E3E3] bg-[#F5F5F5] text-[#007EFF]"
                 : "border border-[#E3E3E3] bg-[#F5F5F5] text-[#007EFF]",
             )}
           >
             <span
-              className={cn("size-1.5 rounded-full", onBrand ? "bg-white" : "bg-[#007EFF]")}
+              className={cn("size-1.5 rounded-full", onBrand ? "bg-[#007EFF]" : "bg-[#007EFF]")}
               style={{ animation: "mp-blink 1.6s ease-in-out infinite" }}
               aria-hidden
             />
@@ -85,14 +85,14 @@ export function Surface({
                 <span
                   className={cn(
                     "absolute inline-flex size-full rounded-full",
-                    onBrand ? "bg-white/60" : "bg-[#007EFF]/60",
+                    onBrand ? "bg-[#007EFF]/60" : "bg-[#007EFF]/60",
                   )}
                   style={{ animation: "mp-glow 2.4s ease-in-out infinite" }}
                 />
                 <span
                   className={cn(
                     "relative inline-flex size-1.5 rounded-full",
-                    onBrand ? "bg-white" : "bg-[#007EFF]",
+                    onBrand ? "bg-[#007EFF]" : "bg-[#007EFF]",
                   )}
                 />
               </span>
@@ -100,7 +100,7 @@ export function Surface({
               <span
                 className={cn(
                   "size-1.5 rounded-full",
-                  onBrand ? "bg-white/50" : "bg-[#E3E3E3]",
+                  onBrand ? "bg-[#E3E3E3]" : "bg-[#E3E3E3]",
                 )}
               />
             )}
@@ -124,7 +124,7 @@ export function Row({ label, value }: { label: string; value: ReactNode }) {
   return (
     <div className="flex items-baseline justify-between gap-4 border-b border-[#E3E3E3] py-2.5 last:border-b-0">
       <span className={cn(MONO, "shrink-0 text-[11px] text-[#878787]")}>{label}</span>
-      <span className="min-w-0 truncate text-right text-[12.5px] font-semibold text-ink">
+      <span className="type-hl-inbox-title min-w-0 truncate text-right text-ink">
         {value}
       </span>
     </div>
@@ -222,7 +222,7 @@ export function MurphiNode({ status }: { status?: string }) {
         <LogoMark size={30} />
       </span>
 
-      <span className="relative text-[15px] font-bold leading-none tracking-[-0.015em] text-ink">
+      <span className="relative type-hl-inbox-title text-ink">
         Murphi AI
       </span>
 
@@ -273,7 +273,7 @@ export function CheckRow({
       </span>
       <span
         className={cn(
-          "min-w-0 text-[12.5px] font-semibold transition-colors duration-[420ms] ease-out",
+          "type-hl-inbox-title min-w-0 transition-colors duration-[420ms] ease-out",
           done ? "text-ink" : "text-[#606060]",
         )}
       >
@@ -316,11 +316,34 @@ export function SystemNode({
   label,
   returned,
   compact,
+  muted,
 }: {
   label: string;
   returned?: boolean;
   compact?: boolean;
+  /** Light-grey compact card. Used by Mechanics write-back. */
+  muted?: boolean;
 }) {
+  if (muted) {
+    return (
+      <div className="mx-auto flex w-full max-w-[240px] items-center justify-center gap-2 rounded-[8px] border border-[#E3E3E3] bg-[#F5F5F5] px-3 py-2">
+        <span className="flex size-6 shrink-0 items-center justify-center rounded-[6px] border border-[#E3E3E3] bg-white text-[#007EFF]">
+          <Icon name="server" width={12} height={12} />
+        </span>
+        <span className="type-hl-inbox-title text-ink">{label}</span>
+        {returned ? (
+          <Tick className="size-3 shrink-0 text-[#007EFF]" />
+        ) : (
+          <span
+            className="size-1.5 rounded-full bg-[#007EFF]"
+            style={{ animation: "mp-blink 2s ease-in-out infinite" }}
+            aria-hidden
+          />
+        )}
+      </div>
+    );
+  }
+
   return (
     <div
       className={cn(
@@ -333,17 +356,7 @@ export function SystemNode({
           <Icon name="server" width={14} height={14} />
         </span>
 
-        {/* Size first: tailwind-merge reads an arbitrary text-[..] as a
-            font-size, which would drop a later leading-* from the string. */}
-        <span
-          className={
-            compact
-              ? "text-[13px] font-bold leading-none tracking-[-0.015em] text-white"
-              : "text-[15px] font-bold leading-none tracking-[-0.015em] text-white"
-          }
-        >
-          {label}
-        </span>
+        <span className="type-hl-inbox-title text-white">{label}</span>
       </span>
 
       <span className={cn(MONO, "flex items-center gap-1.5")}>

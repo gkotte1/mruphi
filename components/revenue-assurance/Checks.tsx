@@ -98,7 +98,7 @@ export default function Checks({ checks }: { checks: Check[] }) {
               >
                 <span
                   className={cn(
-                    "block ra-serif text-[16.5px] font-medium leading-snug tracking-normal transition-colors duration-[420ms] ease-out",
+                    "type-hl-card-title block transition-colors duration-[420ms] ease-out",
                     isActive ? "text-ink" : "text-[#606060]",
                   )}
                 >
@@ -150,7 +150,7 @@ export default function Checks({ checks }: { checks: Check[] }) {
                 {check.chips ? <CheckTiles chips={check.chips} /> : null}
 
                 {check.note ? (
-                  <p className="mt-5 max-w-[62ch] text-[15px] leading-[1.6] text-[#606060]">
+                  <p className="type-hl-card-body mt-5 max-w-[62ch]">
                     {check.note}
                   </p>
                 ) : null}
@@ -194,7 +194,7 @@ function CheckTiles({ chips, alt }: { chips: string[]; alt?: boolean }) {
           >
             <Tick className="size-3" />
           </span>
-          <span className="min-w-0 text-[13.5px] font-semibold tracking-[-0.01em] text-ink">
+          <span className="type-hl-inbox-title min-w-0 text-ink">
             {chip}
           </span>
         </li>

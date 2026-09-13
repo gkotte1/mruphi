@@ -114,13 +114,10 @@ export function Outcomes({
               >
                 <OutcomeIcon icon={outcome.icon} />
               </div>
-              <div
-                className="ip-serif"
-                style={{ marginBottom: 8, fontSize: 16, fontWeight: 500 }}
-              >
+              <div className="type-hl-card-title mb-2 text-ink">
                 {outcome.title}
               </div>
-              <div style={{ fontSize: 14, lineHeight: 1.5, color: "#606060" }}>
+              <div className="type-hl-card-body">
                 {outcome.sub}
               </div>
             </div>

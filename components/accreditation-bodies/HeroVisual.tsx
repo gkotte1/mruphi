@@ -67,7 +67,7 @@ export default function SurveyReadiness({
     <Panel
       label={
         <>
-          <Icon name="sealcheck" width={13} height={13} className="shrink-0" />
+          <Icon name="sealcheck" width={13} height={13} className="shrink-0 text-[#007EFF]" />
           <span className="truncate">{title}</span>
         </>
       }

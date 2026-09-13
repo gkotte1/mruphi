@@ -176,6 +176,7 @@ function MockCard() {
           background: "#ffffff",
           padding: "6px 16px",
           fontSize: 10.5,
+          fontWeight: 600,
           textTransform: "uppercase",
           letterSpacing: "0.06em",
           color: "#606060",
@@ -193,19 +194,21 @@ function MockCard() {
             alignItems: "center",
             justifyContent: "space-between",
             gap: 12,
-            background: "#007EFF",
+            background: "#F5F5F5",
+            borderBottom: "1px solid #E3E3E3",
             padding: "10px 20px",
-            fontSize: 11,
+            fontSize: 10.5,
+            fontWeight: 600,
             textTransform: "uppercase",
-            letterSpacing: "0.03em",
-            color: "#F5F5F5",
+            letterSpacing: 0.6,
+            color: "#878787",
           }}
         >
           <span className="flex min-w-0 items-center gap-2">
-            <Icon name="mic" width={15} height={15} className="shrink-0" />
+            <Icon name="mic" width={15} height={15} className="shrink-0" style={{ color: "#007EFF" }} />
             <span className="truncate">Ambient AI + Voice Dictation</span>
           </span>
-          <span className="flex shrink-0 items-center gap-2" style={{ color: "#FFFFFF" }}>
+          <span className="flex shrink-0 items-center gap-2" style={{ color: "#007EFF" }}>
             <span
               className="size-1.5 rounded-full bg-current"
               style={{ animation: "mp-blink 2.4s ease-in-out infinite" }}
@@ -240,6 +243,7 @@ function MockCard() {
             borderBottom: "1px solid #E3E3E3",
             padding: "10px 20px",
             fontSize: 10.5,
+            fontWeight: 600,
             textTransform: "uppercase",
             letterSpacing: "0.06em",
             color: "#878787",
@@ -292,12 +296,13 @@ function MockCard() {
           justifyContent: "center",
           gap: 8,
           borderRadius: 20,
-          background: "#007EFF",
+          border: "1px solid #E3E3E3",
+          background: "#F5F5F5",
           padding: "8px 16px",
           fontSize: 10.5,
           textTransform: "uppercase",
           letterSpacing: "0.06em",
-          color: "#F5F5F5",
+          color: "#878787",
           ...{
             animation: `mp-scribe-seal ${CYCLE} ease-in-out ${PHASE.sync}s infinite`,
           },
@@ -309,6 +314,7 @@ function MockCard() {
           height={12}
           className="shrink-0"
           style={{
+            color: "#007EFF",
             animation: `mp-scribe-mark ${CYCLE} ease-in-out ${PHASE.sync}s infinite`,
           }}
         />

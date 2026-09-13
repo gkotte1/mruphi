@@ -1,5 +1,6 @@
 import { ANNOUNCEMENTS, announcementHref } from "@/lib/announcements";
 import { POSTS, blogHref } from "@/lib/blog";
+import { EVENTS, eventHref } from "@/lib/events";
 import { SITE_URL, absoluteUrl, routesIn, type SiteRoute } from "@/lib/site";
 
 /**
@@ -76,6 +77,14 @@ function build() {
       ANNOUNCEMENTS.map(
         (item) =>
           `- [${item.title}](${absoluteUrl(announcementHref(item))}): ${item.date} · ${item.category}`,
+      ),
+    ),
+    "",
+    section(
+      "Events",
+      EVENTS.map(
+        (item) =>
+          `- [${item.title}](${absoluteUrl(eventHref(item))}): ${item.date} · ${item.location}`,
       ),
     ),
     "",

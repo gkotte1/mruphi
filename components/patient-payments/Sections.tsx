@@ -27,7 +27,7 @@ export function EhrIntegration({
             "ip-mono flex items-center justify-between gap-3 border-b border-[#E3E3E3] px-5 py-3 max-600:px-4",
           )}
         >
-          <span className="min-w-0 truncate text-[11px] font-semibold uppercase tracking-[0.06em] text-ink">
+          <span className="min-w-0 truncate text-[10.5px] font-semibold uppercase tracking-[0.06em] text-ink">
             Your EHR ⇄ Murphi AI ⇄ Your EHR
           </span>
           <span className="relative flex size-1.5 shrink-0" aria-hidden>

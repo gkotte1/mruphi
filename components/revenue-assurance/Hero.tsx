@@ -54,7 +54,7 @@ export default function Hero() {
             </p>
 
             <h1 className="ra-h1 ra-serif" style={{ marginTop: 16 }}>
-              Catch It on Day One, Not on Appeal.
+              Batch Coding, OASIS & POC errors before they become denials and appeals.
             </h1>
 
             <div

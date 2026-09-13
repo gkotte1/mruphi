@@ -381,10 +381,10 @@ export function StepFlow({ steps }: { steps: Step[] }) {
               <div className="mb-3.5 flex size-14 items-center justify-center rounded-full bg-brand shadow-[0_8px_20px_rgba(0,126,255,.25)]">
                 <Tick className="size-6 text-white" />
               </div>
-              <h4 className="mb-1.5 text-[14px] font-bold leading-[1.3] text-ink">
+              <h4 className="type-hl-card-title mb-1.5 text-ink">
                 {step.title}
               </h4>
-              <p className="text-[12.5px] leading-[1.45] text-grey-500">
+              <p className="type-hl-card-body">
                 {step.body}
               </p>
             </div>
@@ -486,10 +486,10 @@ export function RelatedGrid({
                   <Tick className="size-[18px]" />
                 )}
               </div>
-              <h4 className="mb-1.5 text-[15px] font-bold text-ink">
+              <h4 className="type-hl-card-title mb-1.5 text-ink">
                 {card.title}
               </h4>
-              <p className="text-[13px] leading-[1.5] text-grey-500">{card.body}</p>
+              <p className="type-hl-card-body">{card.body}</p>
             </>
           );
 
@@ -602,7 +602,7 @@ export function OutcomesStrip({
               <div className="mx-auto mb-3 flex size-7 items-center justify-center">
                 <OutcomeIcon icon={outcome.icon} />
               </div>
-              <div className="mb-1.5 text-[15px] font-bold text-grey-bg">
+              <div className="type-hl-card-title mb-1.5 text-grey-bg">
                 {outcome.title}
               </div>
               <div className="text-[12.5px] leading-[1.4] text-white/[0.62]">
@@ -668,7 +668,7 @@ export function EhrSection({
               <div
                 className={cn(
                   MONO,
-                  "mb-5 text-[11px] font-semibold uppercase tracking-[0.06em] text-ink",
+                  "mb-5 text-[10.5px] font-semibold uppercase tracking-[0.06em] text-ink",
                 )}
               >
                 Your EHR ⇄ Murphi AI ⇄ Your EHR

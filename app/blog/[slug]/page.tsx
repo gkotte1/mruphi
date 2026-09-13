@@ -7,20 +7,14 @@ import Footer from "@/components/Footer";
 import GetStartedCta from "@/components/GetStartedCta";
 import BlogBody from "@/components/blog/BlogBody";
 import { Icon } from "@/components/icons";
+import { InnerPage } from "@/components/inner-page/Shell";
 import { JsonLd } from "@/components/JsonLd";
 import { POSTS, findPost, postFaqs, readPostBody } from "@/lib/blog";
 import { blogArticleSchema, blogFaqSchema, breadcrumbSchema } from "@/lib/schema";
 import { absoluteUrl } from "@/lib/site";
 
 /**
- * One blog post.
- *
- * Category, title, byline and date open the page; the featured image sits
- * directly beneath them, before the article. The body is the Markdown file,
- * rendered - headings, paragraphs, lists, the comparison table, the FAQ and
- * the closing CTA, in the order the author wrote them.
- *
- * `dynamicParams = false` keeps anything that is not a real post a 404.
+ * One blog post — Home typography + white page ground.
  */
 
 export const dynamicParams = false;
@@ -39,7 +33,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const path = `/blog/${slug}/`;
 
   return {
-    /* The author's own SEO title and meta description, from the front matter. */
     title: post.seo.seoTitle,
     description: post.seo.metaDescription,
     keywords: [post.seo.primaryKeyword, ...post.seo.supportingKeywords],
@@ -72,7 +65,7 @@ export default async function BlogArticle({ params }: Props) {
   const faqs = postFaqs(body);
 
   return (
-    <>
+    <InnerPage>
       <JsonLd data={blogArticleSchema(post)} />
       <JsonLd data={blogFaqSchema(faqs, `/blog/${slug}/`)} />
       <JsonLd data={breadcrumbSchema(`/blog/${slug}/`, post.title)} />
@@ -82,21 +75,21 @@ export default async function BlogArticle({ params }: Props) {
       <main>
         <article className="bg-white">
           <div className="mx-auto w-full max-w-[860px] px-10 py-16 max-1200:px-8 max-600:px-4 max-600:py-12">
-            {/* ── Category, title, byline ── */}
-            <p className="type-micro text-brand-dark">{post.category}</p>
+            <p className="ip-mono text-[10.5px] font-semibold uppercase tracking-[0.06em] text-[#007EFF]">
+              {post.category}
+            </p>
 
-            <h1 className="mt-5 text-[38px] leading-[1.18] font-extrabold tracking-[-0.03em] text-ink max-1024:text-[32px] max-600:text-[27px]">
+            <h1 className="type-hl-display mt-5 text-ink max-1024:text-[32px] max-600:text-[28px]">
               {post.title}
             </h1>
 
-            <div className="mt-6 flex flex-wrap items-center gap-x-2.5 gap-y-1 text-[13px] font-semibold text-grey-dk/60">
+            <div className="mt-6 flex flex-wrap items-center gap-x-2.5 gap-y-1 text-[12px] font-semibold text-[#878787]">
               <span>By {post.author}</span>
               <span aria-hidden>·</span>
               <time dateTime={post.datetime}>{post.date}</time>
             </div>
 
-            {/* ── Featured image ── */}
-            <figure className="mt-9 overflow-hidden rounded-panel border border-grey-mid bg-grey-bg max-600:mt-7">
+            <figure className="mt-9 overflow-hidden rounded-[10px] border border-[#E3E3E3] bg-[#F5F5F5] max-600:mt-7">
               <Image
                 src={post.image}
                 alt={post.imageAlt}
@@ -109,23 +102,22 @@ export default async function BlogArticle({ params }: Props) {
               />
             </figure>
 
-            {/* ── The article ── */}
             <BlogBody blocks={body} />
 
             <nav
               aria-label="More from the blog"
-              className="mt-16 flex justify-center border-t border-grey-mid pt-10 max-600:mt-12"
+              className="mt-16 flex justify-center border-t border-[#E3E3E3] pt-10 max-600:mt-12"
             >
               <Link
                 href="/blogs/"
-                className="group btn-secondary max-600:w-full max-600:justify-center"
+                className="ip-btn-ghost group"
               >
                 All Articles
                 <Icon
                   name="arrow"
                   width={16}
                   height={16}
-                  className="transition-transform duration-200 group-hover:translate-x-[3px]"
+                  className="ml-2 transition-transform duration-200 group-hover:translate-x-[3px]"
                 />
               </Link>
             </nav>
@@ -136,6 +128,6 @@ export default async function BlogArticle({ params }: Props) {
       </main>
 
       <Footer />
-    </>
+    </InnerPage>
   );
 }

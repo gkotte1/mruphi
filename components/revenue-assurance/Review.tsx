@@ -54,14 +54,14 @@ export function Surface({
         className={cn(
           "flex items-center justify-between gap-3 px-5 max-720:px-4",
           quiet ? "py-2.5" : "py-3",
-          onBrand ? "bg-[#007EFF]" : "border-b border-[#E3E3E3] bg-[#F5F5F5]",
+          onBrand ? "border-b border-[#E3E3E3] bg-[#F5F5F5]" : "border-b border-[#E3E3E3] bg-[#F5F5F5]",
         )}
       >
         <span
           className={cn(
             MONO,
-            "flex min-w-0 items-center gap-2 truncate ra-mono text-[11px] uppercase tracking-[0.06em]",
-            onBrand ? "text-[#F5F5F5]" : "text-[#878787]",
+            "flex min-w-0 items-center gap-2 truncate ra-mono text-[10.5px] font-semibold uppercase tracking-[0.06em]",
+            onBrand ? "text-[#878787]" : "text-[#878787]",
           )}
         >
           {label}
@@ -73,14 +73,14 @@ export function Surface({
               MONO,
               "flex shrink-0 items-center gap-1.5 rounded-full px-2.5 py-1 ra-mono text-[10.5px] font-semibold tracking-[0.04em] uppercase",
               onBrand
-                ? "bg-white/15 text-white"
+                ? "border border-[#E3E3E3] bg-[#F5F5F5] text-[#007EFF]"
                 : "border border-[#E3E3E3] bg-[#F5F5F5] text-[#007EFF]",
             )}
           >
             <span
               className={cn(
                 "size-1.5 rounded-full",
-                onBrand ? "bg-white" : "bg-[#007EFF]",
+                onBrand ? "bg-[#007EFF]" : "bg-[#007EFF]",
               )}
               style={quiet ? undefined : { animation: "mp-blink 1.6s ease-in-out infinite" }}
               aria-hidden
@@ -94,14 +94,14 @@ export function Surface({
                 <span
                   className={cn(
                     "absolute inline-flex size-full rounded-full",
-                    onBrand ? "bg-white/60" : "bg-[#007EFF]/60",
+                    onBrand ? "bg-[#007EFF]/60" : "bg-[#007EFF]/60",
                   )}
                   style={quiet ? undefined : { animation: "mp-glow 2.4s ease-in-out infinite" }}
                 />
                 <span
                   className={cn(
                     "relative inline-flex size-1.5 rounded-full",
-                    onBrand ? "bg-white" : "bg-[#007EFF]",
+                    onBrand ? "bg-[#007EFF]" : "bg-[#007EFF]",
                   )}
                 />
               </span>
@@ -109,7 +109,7 @@ export function Surface({
               <span
                 className={cn(
                   "size-1.5 rounded-full",
-                  onBrand ? "bg-white/50" : "bg-[#E3E3E3]",
+                  onBrand ? "bg-[#E3E3E3]" : "bg-[#E3E3E3]",
                 )}
               />
             )}
@@ -158,9 +158,7 @@ export function Finding({
       </span>
 
       <span className="min-w-0 flex-1">
-        <span className="block text-[13px] leading-[1.4] font-semibold text-ink">
-          {title}
-        </span>
+        <span className="type-hl-inbox-title block text-ink">{title}</span>
         <span className={cn(MONO, "ra-mono mt-0.5 block text-[11px] text-[#878787]")}>
           {meta}
         </span>
@@ -249,9 +247,7 @@ export function SystemNode({
         <span className="flex size-6 shrink-0 items-center justify-center rounded-[6px] border border-[#E3E3E3] bg-white text-[#007EFF]">
           <Icon name="server" width={12} height={12} />
         </span>
-        <span className="text-[13px] font-bold leading-none tracking-[-0.015em] text-ink">
-          {label}
-        </span>
+        <span className="type-hl-inbox-title text-ink">{label}</span>
         {returned ? (
           <Tick className="size-3 shrink-0 text-[#007EFF]" />
         ) : (
@@ -279,15 +275,7 @@ export function SystemNode({
 
         {/* Size first: tailwind-merge treats an arbitrary text-[..] as a
             font-size, which drops a later leading-* from the same string. */}
-        <span
-          className={cn(
-            compact
-              ? "text-[13px] font-bold leading-none tracking-[-0.015em] text-[#F5F5F5]"
-              : "text-[15px] font-bold leading-none tracking-[-0.015em] text-[#F5F5F5]",
-          )}
-        >
-          {label}
-        </span>
+        <span className="type-hl-inbox-title text-[#F5F5F5]">{label}</span>
       </span>
 
       <span className={cn(MONO, "flex items-center gap-1.5")}>
@@ -337,9 +325,7 @@ export function MurphiNode({
             className="size-full object-contain"
           />
         </span>
-        <span className="text-[13px] font-bold leading-none tracking-[-0.015em] text-ink">
-          Murphi AI
-        </span>
+        <span className="type-hl-inbox-title text-ink">Murphi AI</span>
       </div>
 
       <ol className={cn("mx-auto grid w-fit gap-0", compact ? "mt-2.5" : "mt-4")}>

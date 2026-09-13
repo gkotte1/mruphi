@@ -45,14 +45,14 @@ const MODELS = [
   {
     eyebrow: "Managed Services",
     title: "You Run Reports for Your Clients",
-    body: "Priya logs into Murphi, pulls up each client's data, runs the AI compliance and coding reports, and delivers the results herself. She stays in control of the workflow and the relationship.",
+    body: "Allen logs into Murphi, pulls up each client's data, runs the AI compliance and coding reports, and delivers the results himself. He stays in control of the workflow and the relationship.",
     bestFor:
       "consultants who want hands-on control over deliverables and client communication.",
   },
   {
     eyebrow: "Self-Service Agency",
     title: "Your Clients Work in Their Own Workspace",
-    body: "Each of the forty clients gets its own workspace and runs its own reports. Priya provides oversight, training and guidance - and scales her practice without scaling her hours.",
+    body: "Each of the forty clients gets its own workspace and runs its own reports. Allen provides oversight, training and guidance - and scales his practice without scaling his hours.",
     bestFor:
       "consultants who want to serve more clients without proportionally increasing their time.",
   },
@@ -151,10 +151,10 @@ export default function CodingBillingRcmPage() {
           current="Coding, Billing, RCM & Consulting Companies"
           parent={{ label: "Who We Serve", href: "/#serve" }}
           eyebrow="Who We Serve · Consultants"
-          title="One Tuesday. Forty Clients."
-          storyTag="Tuesday, 8:00 AM"
-          story="Priya has forty agency clients on her roster and one Tuesday to get through OASIS review for all of them. Every client has its own EHR, its own quirks, its own deadline."
-          lede="Murphi gives coding and billing consultants AI-powered compliance and revenue tools that work the same way across every client - so Priya's Tuesday scales without adding a person to do it."
+          title="One Monday. Forty Clients."
+          storyTag="Monday, 8:00 AM"
+          story="Allen has forty agency clients on his roster and one Monday to get through OASIS review for all of them. Every client has its own EHR, its own quirks, its own deadline."
+          lede="Murphi gives coding and billing consultants AI-powered compliance and revenue tools that work the same way across every client - so Allen's Monday scales without adding a person to do it."
           trust={["HIPAA", "SOC 2", "Client-level data separation"]}
           visual={
             <ClientHub
@@ -170,7 +170,7 @@ export default function CodingBillingRcmPage() {
             <IpHead>
               <IpEyebrow>Work the Way You Want</IpEyebrow>
               <h2 className="ip-h2 ip-serif" style={{ marginTop: 16, marginBottom: 18 }}>
-                Two ways to run Priya{"'"}s Tuesday.
+                Two ways to run Allen{"'"}s Monday.
               </h2>
             </IpHead>
             <ModelSplit models={MODELS} />
@@ -190,7 +190,7 @@ export default function CodingBillingRcmPage() {
               <Note>
                 <strong className="text-ink">AI accuracy.</strong> 90–95% AI
                 accuracy on all reports, with a structured human review workflow so
-                Priya keeps quality control before anything reaches a client.
+                Allen keeps quality control before anything reaches a client.
               </Note>
             </Reveal>
           </IpWrap>
@@ -230,7 +230,7 @@ export default function CodingBillingRcmPage() {
               <BrandSwitch
                 kicker="Your Name on the Door"
                 heading="White-label where it fits your business."
-                lede={"Toggle to see the same review presented under Murphi's brand - or under Priya's."}
+                lede={"Toggle to see the same review presented under Murphi's brand - or under Allen's."}
                 options={[
                   { id: "murphi", label: "Murphi Brand" },
                   { id: "yours", label: "Your Brand" },
@@ -271,7 +271,7 @@ export default function CodingBillingRcmPage() {
         </div>
 
         <FinalCta
-          heading="Make Every Tuesday Feel Like Client One."
+          heading="Make Every Monday feel like a Friday."
           body="A live demo showing how Murphi.ai scales across multiple Home Health and Hospice clients."
         />
       </main>

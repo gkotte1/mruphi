@@ -40,7 +40,7 @@ export default function BrandSwitch({
 
       <h2 className="ip-h2 ip-serif max-w-[640px]">{heading}</h2>
 
-      <p className="mt-5 max-w-[58ch] text-[18px] leading-[1.6] text-[#606060]">
+      <p className="type-hl-lead mt-5 max-w-[58ch]">
         {lede}
       </p>
 

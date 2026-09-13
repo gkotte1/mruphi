@@ -39,7 +39,7 @@ export default function ClaimReadiness({
       <Surface
         label={
           <>
-            <Icon name="pulse" width={13} height={13} className="shrink-0" />
+            <Icon name="pulse" width={13} height={13} className="shrink-0 text-[#007EFF]" />
             <span className="truncate">{title}</span>
           </>
         }
@@ -88,14 +88,14 @@ export default function ClaimReadiness({
 
       {/* Who clears it. */}
       <div
-        className="mx-auto flex w-[80%] items-center justify-center gap-2 rounded-full bg-[#007EFF] px-4 py-2.5 max-600:w-full"
+        className="mx-auto flex w-[80%] items-center justify-center gap-2 rounded-full border border-[#E3E3E3] bg-[#F5F5F5] px-4 py-2.5 max-600:w-full"
         style={{ animation: "mp-fade-up .5s ease backwards .42s" }}
       >
-        <Icon name="community" width={14} height={14} className="shrink-0 text-white" />
+        <Icon name="community" width={14} height={14} className="shrink-0 text-[#007EFF]" />
         <span
           className={cn(
             MONO,
-            "min-w-0 truncate text-[12px] font-semibold tracking-[0.02em] text-white",
+            "min-w-0 truncate text-[12px] font-semibold tracking-[0.02em] text-ink",
           )}
         >
           {foot[1]}

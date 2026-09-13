@@ -9,11 +9,8 @@ import { cn } from "@/lib/cn";
  *   surfaces #F5F5F5 / #EFEFEF · blue #007EFF · header bars #006AD6
  *   container 1220px · radii 8/14/20
  *
- * Eyebrows, kickers and chips used to be set in IBM Plex Mono, carried over
- * from the old site. The brand book names Plus Jakarta Sans as the primary
- * typeface (page 12) and lists no second family, so LABEL now applies the
- * site's label treatment in Plus Jakarta Sans instead: same size, tracking and
- * uppercase, one family.
+ * Eyebrows and kickers use LABEL (Manrope). In-box UI labels use MONO
+ * (JetBrains Mono), matching the homepage `hl-mono` treatment.
  */
 
 export const CONTAINER =
@@ -22,10 +19,10 @@ export const CONTAINER =
 /** var(--space-section) - clamp(64px, 9vw, 128px), 56px under 720. */
 export const SECTION = "py-[clamp(64px,9vw,128px)] max-720:py-14";
 
-/** The label treatment: the site typeface at label weight.
- *  Exported as MONO as well so the pages that import it keep working. */
+/** Manrope at medium weight — section eyebrows, not in-box UI. */
 export const LABEL = "font-medium";
-export const MONO = LABEL;
+/** Homepage in-box labels: JetBrains Mono at the Home label weight. */
+export const MONO = "type-hl-mono font-semibold";
 
 export function Eyebrow({ children }: { children: ReactNode }) {
   return (

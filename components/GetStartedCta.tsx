@@ -21,13 +21,13 @@ export default function GetStartedCta() {
         >
 
           <div className="relative mx-auto max-w-[680px]">
-            <h2 className="type-display text-grey-bg">
+            <h2 className="type-hl-display text-grey-bg max-600:text-[32px]">
               Experience AI Automation
               <br />
               at Scale
             </h2>
 
-            <p className="mx-auto mt-6 max-w-[560px] text-[16.5px] font-medium leading-relaxed text-white/80 max-600:text-[15.5px]">
+            <p className="mx-auto mt-6 max-w-[560px] text-[17px] font-normal leading-[1.6] text-white/80">
               {"Tell us your care setting and we'll show you exactly what"}{" "}
               Murphi.ai delivers for your organization - a live demo tailored to
               your workflows and your team.

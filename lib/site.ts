@@ -228,6 +228,15 @@ export const SITE_ROUTES: readonly SiteRoute[] = [
     changeFrequency: "weekly",
   },
   {
+    path: "/events/",
+    title: "Events",
+    description:
+      "Upcoming conferences and industry events where you can meet Murphi.ai.",
+    group: "company",
+    priority: 0.7,
+    changeFrequency: "monthly",
+  },
+  {
     path: "/blogs/",
     title: "Blog - Home Health & Hospice AI",
     description:

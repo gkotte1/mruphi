@@ -221,8 +221,8 @@ function TrackCell({
 
       <span
         className={cn(
-          "relative z-[2] min-w-0 text-[14px] leading-[1.55]",
-          after ? "text-ink" : "text-[#606060]",
+          "relative z-[2] min-w-0 type-hl-card-body",
+          after ? "!text-ink" : null,
         )}
       >
         {step}

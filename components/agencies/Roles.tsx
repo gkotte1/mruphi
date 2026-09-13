@@ -79,7 +79,7 @@ export default function Roles({ roles }: { roles: Role[] }) {
               <div className="grid grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] overflow-hidden rounded-[10px] border border-[#E3E3E3] bg-white shadow-[0_1px_2px_rgba(0,0,0,0.03),0_14px_30px_rgba(0,0,0,0.05)] max-900:grid-cols-1">
                 <div className="border-r border-[#E3E3E3] px-8 py-7 max-900:border-r-0 max-900:border-b max-600:px-6">
                   <ColumnLabel>What Changes</ColumnLabel>
-                  <p className="mt-3.5 max-w-[46ch] border-l-[3px] border-[#007EFF] pl-5 text-[16.5px] leading-[1.6] text-ink max-600:pl-4">
+                  <p className="type-hl-lead mt-3.5 max-w-[46ch] border-l-[3px] border-[#007EFF] pl-5 text-ink max-600:pl-4">
                     {role.what}
                   </p>
                 </div>
@@ -110,7 +110,7 @@ function ColumnLabel({ children }: { children: string }) {
     <span
       className={cn(
         MONO,
-        "block text-[13px] font-semibold uppercase tracking-[0.05em] text-[#878787]",
+        "block text-[10.5px] font-semibold uppercase tracking-[0.06em] text-[#878787]",
       )}
     >
       {children}
@@ -140,7 +140,7 @@ function ModuleRow({ name, soon }: { name: string; soon?: boolean }) {
 
       <span
         className={cn(
-          "min-w-0 flex-1 text-[13.5px] font-semibold tracking-[-0.01em]",
+          "type-hl-inbox-title min-w-0 flex-1",
           soon ? "text-[#606060]" : "text-ink",
         )}
       >

@@ -53,26 +53,26 @@ function DocRow({
 }) {
   return (
     <div
-      className="flex items-center gap-3 border-b border-white/15 py-2.5 last:border-b-0"
+      className="flex items-center gap-3 border-b border-[#E3E3E3] py-2.5 last:border-b-0"
       style={{ animation: `mp-fade-up .45s ease backwards ${0.08 + index * 0.07}s` }}
     >
       <span
-        className="flex size-6 shrink-0 items-center justify-center rounded-[7px] bg-white/15 text-white"
+        className="flex size-6 shrink-0 items-center justify-center rounded-[7px] border border-[#E3E3E3] bg-white text-[#007EFF]"
         aria-hidden
       >
         <Icon name="doc" width={12} height={12} />
       </span>
       <span className="min-w-0 flex-1">
-        <span className="block truncate text-[12.5px] font-semibold text-white">
+        <span className="type-hl-inbox-title block truncate text-ink">
           {name}
         </span>
         {detail ? (
-          <span className={cn(MONO, "mt-0.5 block text-[10px] text-white/70")}>
+          <span className={cn(MONO, "mt-0.5 block text-[10px] text-[#878787]")}>
             {detail}
           </span>
         ) : null}
       </span>
-      <Tick className="ml-auto size-3.5 shrink-0 text-white" />
+      <Tick className="ml-auto size-3.5 shrink-0 text-[#007EFF]" />
     </div>
   );
 }
@@ -116,7 +116,7 @@ const INTAKE_VIEWS: View[] = [
         <GroupLabel>Documents</GroupLabel>
         {/* Brand highlight so the classified packet reads as a real log, not
             empty bars - same width as the Surface body above it. */}
-        <div className="rounded-[8px] bg-[#007EFF] px-3.5 py-1 ">
+        <div className="rounded-[8px] border border-[#E3E3E3] bg-[#F5F5F5] px-3.5 py-1 ">
           <DocRow name="Referral Order.pdf" detail="Physician order" index={0} />
           <DocRow name="Clinical Notes.pdf" detail="Hospital discharge" index={1} />
           <DocRow
@@ -190,7 +190,7 @@ const DECISION_VIEWS: View[] = [
     status: "Created",
     body: (
       <>
-        <SystemNode label="EHR" compact returned />
+        <SystemNode label="EHR" compact returned muted />
 
         <ul className="mt-4">
           <CheckRow name="Patient" index={0} />
@@ -276,7 +276,7 @@ export default function Mechanics({
               >
                 {/* The workflow's own heading and progress. */}
                 <div className="flex flex-wrap items-center justify-between gap-4 border-b border-[#E3E3E3] px-7 py-4 max-600:px-5">
-                  <h3 className="text-[16px] font-bold tracking-[-0.015em] text-ink">
+                  <h3 className="type-hl-card-title text-ink">
                     {group.lede}
                   </h3>
 
@@ -355,13 +355,13 @@ export default function Mechanics({
                               <span className="mt-3 block min-w-0 max-900:mt-0">
                                 <span
                                   className={cn(
-                                    "block text-[14.5px] font-bold leading-snug tracking-[-0.012em] transition-colors duration-[420ms] ease-out",
+                                    "type-hl-card-title block transition-colors duration-[420ms] ease-out",
                                     isActive ? "text-ink" : "text-[#606060]",
                                   )}
                                 >
                                   {step.title}
                                 </span>
-                                <span className="mt-1 block text-[12.5px] leading-[1.45] text-[#606060]">
+                                <span className="type-hl-card-body mt-1 block">
                                   {step.body}
                                 </span>
                               </span>

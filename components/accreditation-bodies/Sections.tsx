@@ -47,7 +47,7 @@ export function BothSides({
                 )}
               >
                 <p className="ip-eyebrow">{side.eyebrow}</p>
-                <h3 className="mt-3 text-[21px] font-bold leading-[1.3] tracking-[-0.015em] text-ink">
+                <h3 className="type-hl-section-title mt-3 text-ink max-600:text-[24px]">
                   {side.heading}
                 </h3>
               </div>
@@ -67,7 +67,7 @@ export function BothSides({
                     >
                       {String(i + 1).padStart(2, "0")}
                     </span>
-                    <span className="min-w-0 text-[13.5px] leading-[1.55] text-[#606060]">
+                    <span className="type-hl-card-body min-w-0">
                       {point}
                     </span>
                   </li>
@@ -106,11 +106,11 @@ export function WaysList({
               {String(i + 1).padStart(2, "0")}
             </span>
 
-            <h4 className="text-[19px] font-bold leading-snug tracking-[-0.015em] text-ink">
+            <h4 className="type-hl-card-title text-ink">
               {way.title}
             </h4>
 
-            <p className="max-w-[62ch] text-[14.5px] leading-[1.65] text-[#606060] max-900:col-start-2">
+            <p className="type-hl-card-body max-w-[62ch] max-900:col-start-2">
               {way.body}
             </p>
           </li>
@@ -142,12 +142,12 @@ export function ToolSpecs({
               <div className="mb-3">
                 <StatusBadge tone={tool.badge.tone}>{tool.badge.text}</StatusBadge>
               </div>
-              <h4 className="text-[17px] font-bold leading-snug tracking-[-0.015em] text-ink">
+              <h4 className="type-hl-card-title text-ink">
                 {tool.title}
               </h4>
             </div>
 
-            <p className="max-w-[64ch] text-[14px] leading-[1.65] text-[#606060]">
+            <p className="type-hl-card-body max-w-[64ch]">
               {tool.body}
             </p>
           </div>
@@ -176,7 +176,7 @@ export function DualWorkflow({
             )}
           >
             <div className="border-b border-[#E3E3E3] bg-[#F5F5F5] px-7 py-5 max-600:px-5">
-              <p className="text-[15px] font-semibold leading-snug text-ink">
+              <p className="type-hl-card-title text-ink">
                 {flow.lede}
               </p>
             </div>
@@ -209,10 +209,10 @@ export function DualWorkflow({
                     </span>
 
                     <span className="min-w-0">
-                      <span className="block text-[14.5px] font-bold leading-snug tracking-[-0.012em] text-ink">
+                      <span className="type-hl-card-title block text-ink">
                         {step.title}
                       </span>
-                      <span className="mt-1 block text-[13px] leading-[1.5] text-[#606060]">
+                      <span className="type-hl-card-body mt-1 block">
                         {step.body}
                       </span>
                     </span>
@@ -239,7 +239,7 @@ export function OversightNote({ children }: { children: ReactNode }) {
         >
           <Icon name="community" width={15} height={15} />
         </span>
-        <p className="max-w-[76ch] text-[14px] leading-[1.65] text-ink">{children}</p>
+        <p className="type-hl-card-body max-w-[76ch] text-ink">{children}</p>
       </div>
     </Reveal>
   );

@@ -46,14 +46,14 @@ export function Surface({
       <div
         className={cn(
           "flex items-center justify-between gap-3 px-5 py-3 max-720:px-4",
-          onBrand ? "bg-[#007EFF]" : "border-b border-[#E3E3E3] bg-[#F5F5F5]",
+          onBrand ? "border-b border-[#E3E3E3] bg-[#F5F5F5]" : "border-b border-[#E3E3E3] bg-[#F5F5F5]",
         )}
       >
         <span
           className={cn(
             MONO,
-            "flex min-w-0 items-center gap-2 truncate text-[11px] uppercase tracking-[0.06em]",
-            onBrand ? "text-white/90" : "text-[#878787]",
+            "flex min-w-0 items-center gap-2 truncate text-[10.5px] font-semibold uppercase tracking-[0.06em]",
+            onBrand ? "text-[#878787]" : "text-[#878787]",
           )}
         >
           {label}
@@ -65,12 +65,12 @@ export function Surface({
               MONO,
               "flex shrink-0 items-center gap-1.5 rounded-full px-2.5 py-1 text-[10.5px] font-semibold tracking-[0.04em] uppercase",
               onBrand
-                ? "bg-white/15 text-white"
+                ? "border border-[#E3E3E3] bg-[#F5F5F5] text-[#007EFF]"
                 : "border border-[#E3E3E3] bg-[#F5F5F5] text-[#007EFF]",
             )}
           >
             <span
-              className={cn("size-1.5 rounded-full", onBrand ? "bg-white" : "bg-[#007EFF]")}
+              className={cn("size-1.5 rounded-full", onBrand ? "bg-[#007EFF]" : "bg-[#007EFF]")}
               style={{ animation: "mp-blink 1.6s ease-in-out infinite" }}
               aria-hidden
             />
@@ -83,14 +83,14 @@ export function Surface({
                 <span
                   className={cn(
                     "absolute inline-flex size-full rounded-full",
-                    onBrand ? "bg-white/60" : "bg-[#007EFF]/60",
+                    onBrand ? "bg-[#007EFF]/60" : "bg-[#007EFF]/60",
                   )}
                   style={{ animation: "mp-glow 2.4s ease-in-out infinite" }}
                 />
                 <span
                   className={cn(
                     "relative inline-flex size-1.5 rounded-full",
-                    onBrand ? "bg-white" : "bg-[#007EFF]",
+                    onBrand ? "bg-[#007EFF]" : "bg-[#007EFF]",
                   )}
                 />
               </span>
@@ -98,7 +98,7 @@ export function Surface({
               <span
                 className={cn(
                   "size-1.5 rounded-full",
-                  onBrand ? "bg-white/50" : "bg-[#E3E3E3]",
+                  onBrand ? "bg-[#E3E3E3]" : "bg-[#E3E3E3]",
                 )}
               />
             )}
@@ -122,7 +122,7 @@ export function Row({ label, value }: { label: string; value: ReactNode }) {
   return (
     <div className="flex items-baseline justify-between gap-4 border-b border-[#E3E3E3] py-2.5 last:border-b-0">
       <span className={cn(MONO, "shrink-0 text-[11px] text-[#878787]")}>{label}</span>
-      <span className="min-w-0 truncate text-right text-[12.5px] font-semibold text-ink">
+      <span className="type-hl-inbox-title min-w-0 truncate text-right text-ink">
         {value}
       </span>
     </div>
@@ -166,7 +166,7 @@ export function CheckRow({
       </span>
       <span
         className={cn(
-          "min-w-0 text-[12.5px] font-semibold transition-colors duration-[520ms] ease-out",
+          "type-hl-inbox-title min-w-0 transition-colors duration-[520ms] ease-out",
           done ? "text-ink" : "text-[#606060]",
         )}
       >
@@ -191,9 +191,7 @@ export function FindingCard({ title, meta }: { title: string; meta: string }) {
       </span>
 
       <span className="min-w-0">
-        <span className="block text-[13px] leading-[1.35] font-semibold text-ink">
-          {title}
-        </span>
+        <span className="type-hl-inbox-title block text-ink">{title}</span>
         <span className={cn(MONO, "mt-0.5 block text-[10.5px] text-[#878787]")}>
           {meta}
         </span>
@@ -251,7 +249,7 @@ export function TrackRail({
               <StageDot state={node.state} />
               <span
                 className={cn(
-                  "text-[11.5px] leading-[1.3] font-semibold transition-colors duration-[520ms] ease-out",
+                  "type-hl-inbox-title transition-colors duration-[520ms] ease-out",
                   node.state === "pending" ? "text-[#606060]" : "text-ink",
                 )}
               >

@@ -63,7 +63,7 @@ export function StartSmall({
 
                   {group.soon ? (
                     <span className="flex items-center gap-2.5 rounded-[8px] border border-dashed border-[#E3E3E3] bg-[#F5F5F5] px-3.5 py-2.5">
-                      <span className="text-[13.5px] font-semibold tracking-[-0.01em] text-[#606060]">
+                      <span className="type-hl-inbox-title text-[#606060]">
                         {group.soon}
                       </span>
                       <span
@@ -95,7 +95,7 @@ function SettingChip({ item }: { item: string }) {
       >
         <Tick className="size-2.5" />
       </span>
-      <span className="min-w-0 text-[13.5px] font-semibold leading-snug tracking-[-0.01em] text-ink">
+      <span className="type-hl-inbox-title min-w-0 text-ink">
         {item}
       </span>
     </span>
@@ -145,10 +145,10 @@ export function ModuleLinks({
               />
             </span>
 
-            <span className="mt-5 block text-[16px] font-bold leading-snug tracking-[-0.015em] text-ink">
+            <span className="type-hl-card-title mt-5 block text-ink">
               {card.title}
             </span>
-            <span className="mt-2 block text-[13px] leading-[1.6] text-[#606060]">
+            <span className="type-hl-card-body mt-2 block">
               {card.body}
             </span>
           </Link>
@@ -183,7 +183,7 @@ export function EhrLayer({
             "flex items-center justify-between gap-3 border-b border-[#E3E3E3] bg-[#F5F5F5] px-5 py-3 max-600:px-4",
           )}
         >
-          <span className="min-w-0 truncate text-[11px] font-semibold uppercase tracking-[0.06em] text-ink">
+          <span className="min-w-0 truncate text-[10.5px] font-semibold uppercase tracking-[0.06em] text-ink">
             {panelLabel}
           </span>
           <span className="relative flex size-1.5 shrink-0" aria-hidden>
@@ -218,7 +218,7 @@ export function EhrLayer({
                   className={cn(
                     "flex items-center gap-2 rounded-[8px] border px-3 py-2.5",
                     returns
-                      ? "border-[#007EFF] bg-[#007EFF] text-white"
+                      ? "border-[#007EFF] bg-[#F5F5F5]"
                       : "border-[#E3E3E3] bg-white",
                   )}
                 >
@@ -226,7 +226,7 @@ export function EhrLayer({
                     className={cn(
                       "flex size-5 shrink-0 items-center justify-center rounded-[6px]",
                       returns
-                        ? "bg-white/20 text-white"
+                        ? "bg-white/20 text-[#007EFF]"
                         : "border border-[#E3E3E3] bg-[#F5F5F5] text-[#007EFF]",
                     )}
                     aria-hidden
@@ -237,7 +237,7 @@ export function EhrLayer({
                     className={cn(
                       MONO,
                       "min-w-0 truncate text-[11.5px] font-semibold",
-                      returns ? "text-white" : "text-ink",
+                      returns ? "text-ink" : "text-ink",
                     )}
                   >
                     {step}

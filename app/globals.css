@@ -96,8 +96,7 @@
   --shadow-panel: 0 36px 80px -44px rgba(0, 86, 173, 0.55);
   --shadow-float: 0 18px 44px -26px rgba(0, 86, 173, 0.42);
 
-  --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, -apple-system,
-    "Segoe UI", sans-serif;
+  --font-sans: var(--font-hl-sans), "Manrope", ui-sans-serif, system-ui, sans-serif;
 
   --default-font-family: var(--font-sans);
 
@@ -132,7 +131,7 @@
     background: #ffffff;
     color: var(--color-grey-dk);
     font-size: 15px;
-    line-height: 1.75;
+    line-height: 1.5;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
@@ -234,6 +233,67 @@
   font-size: 13.5px;
   font-weight: 400;
   line-height: 1.65;
+}
+
+/* Homepage in-box labels: JetBrains Mono via --font-hl-mono. */
+@utility type-hl-mono {
+  font-family: var(--font-hl-mono), "JetBrains Mono", monospace;
+}
+
+/* Homepage Who We Serve card titles: Spectral via --font-hl-serif. */
+@utility type-hl-serif {
+  font-family: var(--font-hl-serif), "Spectral", serif;
+}
+
+/* Who We Serve card title — “For Healthcare Platforms” (16 / 500). */
+@utility type-hl-card-title {
+  font-family: var(--font-hl-serif), "Spectral", serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.35;
+  letter-spacing: normal;
+}
+
+/* Who We Serve card body under the title (15 / 400 / 1.65). */
+@utility type-hl-card-body {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.65;
+  color: #606060;
+}
+
+/* Homepage section lead under H2 (17 / 400 / 1.6). */
+@utility type-hl-lead {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #606060;
+}
+
+/* Homepage module / mid-section titles (Spectral 30 / 500). */
+@utility type-hl-section-title {
+  font-family: var(--font-hl-serif), "Spectral", serif;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: normal;
+}
+
+/* Homepage H2 display (Spectral 42 / 500 / 1.15). */
+@utility type-hl-display {
+  font-family: var(--font-hl-serif), "Spectral", serif;
+  font-size: 42px;
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: -0.5px;
+}
+
+/* Homepage in-box step/title text (13.5 / 600 / 1.4). */
+@utility type-hl-inbox-title {
+  font-size: 13.5px;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: normal;
 }
 
 /* Eyebrows and chips. */

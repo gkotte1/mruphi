@@ -157,7 +157,7 @@ function Card({ item }: { item: Announcement }) {
           </time>
         </div>
 
-        <h2 className="mt-4 text-[15.5px] leading-snug font-bold tracking-[-0.018em] text-ink">
+        <h2 className="type-hl-card-title mt-4 text-ink">
           <Link
             href={href}
             className="transition-colors duration-200 hover:text-[#007EFF]"

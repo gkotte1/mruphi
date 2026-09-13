@@ -226,7 +226,7 @@ export function ModuleHeading({
   );
 }
 
-/** p.lede - 18px/1.6, 52ch measure, 26px below inside a module. */
+/** p.lede — Home type-hl-lead (17 / 400 / 1.6). */
 export function Lede({
   children,
   className,
@@ -235,12 +235,7 @@ export function Lede({
   className?: string;
 }) {
   return (
-    <p
-      className={cn(
-        "mb-[26px] max-w-[52ch] text-[18px] leading-[1.6] text-grey-500",
-        className,
-      )}
-    >
+    <p className={cn("type-hl-lead mb-[26px] max-w-[52ch]", className)}>
       {children}
     </p>
   );

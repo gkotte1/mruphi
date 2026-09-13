@@ -109,23 +109,10 @@ export function Capabilities() {
                 </span>
 
                 <div style={{ minWidth: 0 }}>
-                  <h4
-                    className="aa-serif"
-                    style={{ fontSize: 16, fontWeight: 500, lineHeight: 1.3 }}
-                  >
+                  <h4 className="type-hl-card-title text-ink">
                     {item.title}
                   </h4>
-                  <p
-                    style={{
-                      marginTop: 6,
-                      fontFamily: 'var(--font-hl-sans), "Manrope", sans-serif',
-                      fontSize: 15,
-                      fontWeight: 400,
-                      lineHeight: 1.65,
-                      letterSpacing: "normal",
-                      color: "#606060",
-                    }}
-                  >
+                  <p className="type-hl-card-body mt-1.5">
                     {item.body}
                   </p>
                 </div>
@@ -170,26 +157,14 @@ export function BuiltFor() {
                 </span>
 
                 <h4
-                  className="aa-serif"
+                  className="type-hl-card-title text-ink"
                   style={{
                     margin: "16px 0 12px",
-                    fontSize: 16,
-                    fontWeight: 500,
-                    lineHeight: 1.3,
                   }}
                 >
                   {item.title}
                 </h4>
-                <p
-                  style={{
-                    fontFamily: 'var(--font-hl-sans), "Manrope", sans-serif',
-                    fontSize: 15,
-                    fontWeight: 400,
-                    lineHeight: 1.65,
-                    letterSpacing: "normal",
-                    color: "#606060",
-                  }}
-                >
+                <p className="type-hl-card-body">
                   {item.body}
                 </p>
               </div>

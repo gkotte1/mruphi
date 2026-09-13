@@ -281,7 +281,7 @@ export default function EhrCompaniesPage() {
                       features={["OASIS", "SN / PT / OT / ST", "PDGM"]}
                       extra={
                         <span className="flex items-center gap-2.5 rounded-[8px] border border-[#E3E3E3] bg-white px-3.5 py-2.5">
-                          <span className="text-[13.5px] font-semibold tracking-[-0.01em] text-ink">
+                          <span className="type-hl-inbox-title text-ink">
                             Referral → NOA
                           </span>
                           <StatusBadge tone="soon">Soon</StatusBadge>

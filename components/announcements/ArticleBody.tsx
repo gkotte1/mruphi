@@ -5,14 +5,8 @@ import { cn } from "@/lib/cn";
 export type ArticleLink = { text: string; href: string };
 
 /**
- * The article body, at editorial scale - headings, paragraphs and lists in
- * source order.
- *
- * The detail-page research records the body as plain prose and the in-body
- * links separately, as an ordered table of link text → destination. So the
- * links are restored here by walking the prose once and anchoring each recorded
- * link on its next occurrence, consuming the list in order. Wording is never
- * altered; a link whose text cannot be found further down is simply skipped.
+ * The article body — Home typography hierarchy (Spectral headings, Manrope
+ * lead body). Wording is never altered.
  */
 export default function ArticleBody({
   blocks,
@@ -56,7 +50,7 @@ function withLinks(text: string, queue: ArticleLink[]) {
       <Link
         key={i}
         href={part.href}
-        className="font-semibold text-brand-dark underline decoration-brand-border underline-offset-[3px] transition-colors duration-200 hover:text-brand-deep hover:decoration-brand"
+        className="font-semibold text-[#007EFF] underline decoration-[#CCE5FF] underline-offset-[3px] transition-colors duration-200 hover:text-[#006AD6]"
       >
         {part.text}
       </Link>
@@ -66,22 +60,20 @@ function withLinks(text: string, queue: ArticleLink[]) {
 
 function ArticleBlock({ block, queue }: { block: Block; queue: ArticleLink[] }) {
   if (block.kind === "rule") {
-    return <hr className="my-10 border-0 border-t border-grey-mid" />;
+    return <hr className="my-10 border-0 border-t border-[#E3E3E3]" />;
   }
 
   if (block.kind === "heading") {
-    /* The source uses ### for sections and #### for their sub-sections; the
-       page's own h1 is the article title, so those become h2 and h3. */
     const Tag = block.level <= 3 ? "h2" : ("h3" as const);
 
     return (
       <Tag
         id={block.id}
         className={cn(
-          "scroll-mt-[96px] font-bold tracking-[-0.02em] text-ink",
+          "scroll-mt-[96px] text-ink first:mt-0",
           Tag === "h2"
-            ? "mt-12 text-[23px] leading-snug first:mt-0 max-600:text-[20px]"
-            : "mt-10 text-[18.5px] leading-snug first:mt-0 max-600:text-[17px]",
+            ? "type-hl-section-title mt-12 max-600:text-[24px]"
+            : "type-hl-card-title mt-10",
         )}
       >
         {block.text}
@@ -96,12 +88,12 @@ function ArticleBlock({ block, queue }: { block: Block; queue: ArticleLink[] }) 
       <Tag
         start={block.ordered ? block.start : undefined}
         className={cn(
-          "mt-6 grid gap-3 pl-6 text-[16.5px] leading-[1.75] text-grey-dk max-600:text-[15.5px]",
+          "type-hl-lead mt-6 grid gap-3 pl-6",
           block.ordered ? "list-decimal" : "list-disc",
         )}
       >
         {block.items.map((item, i) => (
-          <li key={i} className="pl-1 marker:text-brand/70">
+          <li key={i} className="pl-1 marker:text-[#007EFF]">
             {withLinks(item, queue)}
           </li>
         ))}
@@ -110,7 +102,7 @@ function ArticleBlock({ block, queue }: { block: Block; queue: ArticleLink[] }) 
   }
 
   return (
-    <p className="mt-6 text-[16.5px] leading-[1.75] text-grey-dk first:mt-0 max-600:text-[15.5px]">
+    <p className="type-hl-lead mt-6 first:mt-0">
       {block.lines.map((line, i) => (
         <span key={i}>
           {i > 0 && !block.lines[i - 1].br ? " " : null}
