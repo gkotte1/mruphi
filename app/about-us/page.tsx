@@ -6,6 +6,8 @@ import { Icon, type IconName } from "@/components/icons";
 import { SimpleHero } from "@/components/inner-page/Hero";
 import { FinalCta } from "@/components/inner-page/kit";
 import { InnerPage, IpWrap } from "@/components/inner-page/Shell";
+import { JsonLd } from "@/components/JsonLd";
+import { breadcrumbSchema, webPageSchema } from "@/lib/schema";
 import { pageMetadata } from "@/lib/site";
 
 /**
@@ -137,6 +139,8 @@ function SectionRule({
 export default function AboutUsPage() {
   return (
     <InnerPage>
+      <JsonLd data={webPageSchema("/about-us/")} />
+      <JsonLd data={breadcrumbSchema("/about-us/", "About Us")} />
       <Navbar />
 
       <main>

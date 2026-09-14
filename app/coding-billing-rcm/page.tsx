@@ -7,6 +7,7 @@ import { JsonLd } from "@/components/JsonLd";
 import {
   breadcrumbSchema,
   faqSchema,
+  webPageSchema,
 } from "@/lib/schema";
 import { pageMetadata } from "@/lib/site";
 import Reveal from "@/components/module-page/Reveal";
@@ -63,7 +64,7 @@ const TOOLS: Tool[] = [
     id: "hh",
     label: "Revenue Assurance - Home Health",
     badge: { tone: "live", text: "Live" },
-    count: "15",
+    count: "20",
     text: "AI compliance reports for Home Health clients.",
     reports: [
       "Face-to-Face Documentation",
@@ -78,7 +79,7 @@ const TOOLS: Tool[] = [
     id: "hospice",
     label: "Revenue Assurance - Hospice",
     badge: { tone: "live", text: "Live" },
-    count: "13",
+    count: "15",
     text: "AI compliance reports for Hospice clients.",
     reports: [
       "CTI Validator",
@@ -141,6 +142,7 @@ const OUTCOMES = [
 export default function CodingBillingRcmPage() {
   return (
     <InnerPage>
+      <JsonLd data={webPageSchema("/coding-billing-rcm/")} />
       <JsonLd data={faqSchema(FAQS.codingBillingRcm, "/coding-billing-rcm/")} />
       <JsonLd data={breadcrumbSchema("/coding-billing-rcm/", "Coding, Billing, RCM & Consulting Companies")} />
 

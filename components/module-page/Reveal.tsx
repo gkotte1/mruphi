@@ -3,7 +3,7 @@
 import { useEffect, useRef, type ReactNode } from "react";
 import { cn } from "@/lib/cn";
 
-const HIDDEN = ["opacity-0", "translate-y-[18px]"];
+const HIDDEN = ["translate-y-[18px]"];
 
 /**
  * The source page's `.reveal` behaviour: elements start 18px low and
@@ -57,8 +57,8 @@ export default function Reveal({
     <div
       ref={ref}
       className={cn(
-        "transition-[opacity,transform] duration-[600ms] ease-out",
-        "motion-reduce:translate-y-0 motion-reduce:opacity-100",
+        "transition-transform duration-[600ms] ease-out",
+        "motion-reduce:translate-y-0",
         ...HIDDEN,
         className,
       )}

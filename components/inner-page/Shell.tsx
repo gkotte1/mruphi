@@ -1,43 +1,13 @@
-import { JetBrains_Mono, Manrope, Spectral } from "next/font/google";
 import type { CSSProperties, ReactNode } from "react";
 import { cn } from "@/lib/cn";
 import "./inner-page.css";
 
-const manrope = Manrope({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
-  variable: "--font-hl-sans",
-  display: "swap",
-});
-
-const spectral = Spectral({
-  subsets: ["latin"],
-  weight: ["400", "500"],
-  style: ["normal", "italic"],
-  variable: "--font-hl-serif",
-  display: "swap",
-});
-
-const jetbrains = JetBrains_Mono({
-  subsets: ["latin"],
-  weight: ["400", "500", "600"],
-  variable: "--font-hl-mono",
-  display: "swap",
-});
-
+/**
+ * Inner-page shell. Font faces are loaded once in the root layout
+ * (lib/fonts.ts) via --font-hl-* CSS variables.
+ */
 export function InnerPage({ children }: { children: ReactNode }) {
-  return (
-    <div
-      className={cn(
-        manrope.variable,
-        spectral.variable,
-        jetbrains.variable,
-        "ip-page",
-      )}
-    >
-      {children}
-    </div>
-  );
+  return <div className="ip-page">{children}</div>;
 }
 
 export function IpWrap({

@@ -204,7 +204,7 @@ export default function ReferralToNoaPage() {
         </div>
 
         <FinalCta
-          heading="Summarized outs to increase your intakes with quick decisions"
+          heading="Summarized outputs to increase your intakes with quick decisions"
           body="Referral → NOA is launching soon. Join the early access list to be first to see it on your intake process."
           primaryLabel="Join Early Access"
         />

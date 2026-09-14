@@ -1,27 +1,11 @@
 import type { Metadata, Viewport } from "next";
-import { Manrope, Plus_Jakarta_Sans } from "next/font/google";
 import Script from "next/script";
 import CookieConsent from "@/components/CookieConsent";
 import { JsonLd } from "@/components/JsonLd";
+import { fontVariables } from "@/lib/fonts";
 import { organizationSchema } from "@/lib/schema";
 import { SITE_URL, absoluteUrl } from "@/lib/site";
 import "./globals.css";
-
-/* Plus Jakarta Sans carries every heading, label and body string on the site. */
-const jakarta = Plus_Jakarta_Sans({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700", "800"],
-  variable: "--font-jakarta",
-  display: "swap",
-});
-
-/* Manrope is the shared Navbar and Footer face, matching the homepage chrome. */
-const manrope = Manrope({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
-  variable: "--font-hl-sans",
-  display: "swap",
-});
 
 /**
  * Canonical URLs, and where relative Open Graph and Twitter image paths resolve.
@@ -42,9 +26,15 @@ export const metadata: Metadata = {
   description:
     "Home health and hospice AI software that connects to the EHR you already use - ambient AI documentation, revenue assurance, patient engagement and patient payments.",
   alternates: { canonical: "/" },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true },
+  },
   openGraph: {
     type: "website",
     siteName: "Murphi.ai",
+    locale: "en_US",
     url: absoluteUrl("/"),
     title: "Murphi.ai - AI for Every Home Health & Hospice Workflow",
     description:
@@ -54,7 +44,7 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Murphi.ai - AI-powered workforce intelligence",
+        alt: "Murphi.ai - AI for Home Health and Hospice",
       },
     ],
   },
@@ -85,7 +75,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${jakarta.variable} ${manrope.variable}`}>
+    <html lang="en" className={fontVariables}>
       <body className="font-sans antialiased">
         {/* Organization and WebSite, once for the whole site. Renders no
             markup a reader can see. */}
@@ -96,12 +86,12 @@ export default function RootLayout({
             never blocks the page. */}
         <CookieConsent />
 
-        {/* BotWyse chat widget. Loaded once from the root layout so every
-            route shares the same agent, including after client navigations. */}
+        {/* BotWyse chat — deferred until the browser is idle so it does not
+            compete with LCP / first paint. */}
         <Script
           src="https://chat.postwyse.com/botwyse-widget.js"
           data-agent-key="pb_344454aa55d69bcbff0f866c2720810aca132ece55c6151c"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
       </body>
     </html>

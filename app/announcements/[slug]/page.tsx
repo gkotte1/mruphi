@@ -15,7 +15,7 @@ import {
   readArticleBody,
 } from "@/lib/announcements";
 import { JsonLd } from "@/components/JsonLd";
-import { articleSchema } from "@/lib/schema";
+import { articleSchema, breadcrumbSchema } from "@/lib/schema";
 import { absoluteUrl } from "@/lib/site";
 
 /**
@@ -58,6 +58,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       publishedTime: article.published,
       images: [article.image],
     },
+    twitter: {
+      card: "summary_large_image",
+      title: article.pageTitle,
+      description: article.description,
+      images: [article.image],
+    },
   };
 }
 
@@ -75,6 +81,9 @@ export default async function AnnouncementArticle({ params }: Props) {
   return (
     <InnerPage>
       <JsonLd data={articleSchema(article)} />
+      <JsonLd
+        data={breadcrumbSchema(`/announcements/${article.slug}/`, article.pageTitle)}
+      />
 
       <Navbar />
 

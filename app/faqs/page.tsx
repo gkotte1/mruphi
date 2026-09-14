@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import FaqExplorer from "@/components/faqs/FaqExplorer";
 import { FAQ_CATEGORIES } from "@/lib/faqs";
 import { JsonLd } from "@/components/JsonLd";
-import { allFaqsSchema } from "@/lib/schema";
+import { allFaqsSchema, breadcrumbSchema, webPageSchema } from "@/lib/schema";
 import { pageMetadata } from "@/lib/site";
 import { SimpleHero } from "@/components/inner-page/Hero";
 import { FinalCta } from "@/components/inner-page/kit";
@@ -31,6 +31,8 @@ export const metadata: Metadata = pageMetadata("/faqs/", {
 export default function FaqsPage() {
   return (
     <InnerPage>
+      <JsonLd data={webPageSchema("/faqs/")} />
+      <JsonLd data={breadcrumbSchema("/faqs/", "FAQs")} />
       <JsonLd data={allFaqsSchema("/faqs/")} />
 
       <Navbar />

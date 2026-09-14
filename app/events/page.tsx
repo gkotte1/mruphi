@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 import EventsPage from "@/components/events/EventsPage";
 import { InnerPage } from "@/components/inner-page/Shell";
 import { JsonLd } from "@/components/JsonLd";
-import { breadcrumbSchema } from "@/lib/schema";
+import { breadcrumbSchema, webPageSchema } from "@/lib/schema";
 
 export const metadata: Metadata = pageMetadata("/events/", {
   title: "Events",
@@ -16,6 +16,7 @@ export const metadata: Metadata = pageMetadata("/events/", {
 export default function Page() {
   return (
     <InnerPage>
+      <JsonLd data={webPageSchema("/events/")} />
       <JsonLd data={breadcrumbSchema("/events/", "Events")} />
       <Navbar />
       <EventsPage />

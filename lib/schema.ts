@@ -41,11 +41,28 @@ export function organizationSchema() {
         name: "Murphi.ai",
         legalName: "Deskfactors Inc.",
         url: `${SITE_URL}/`,
-        logo: absoluteUrl("/brand/app-icons/murphi-icon-192.png"),
+        logo: {
+          "@type": "ImageObject",
+          "@id": `${SITE_URL}/#logo`,
+          url: absoluteUrl("/brand/app-icons/murphi-icon-192.png"),
+          contentUrl: absoluteUrl("/brand/app-icons/murphi-icon-192.png"),
+          width: 192,
+          height: 192,
+          caption: "Murphi.ai",
+        },
         image: absoluteUrl("/og-image.png"),
         description:
           "Murphi.ai is an AI platform for Home Health and Hospice agencies, covering ambient documentation, revenue assurance, patient engagement and patient payments, connected to the EHR an agency already uses.",
         email: "info@murphi.ai",
+        foundingLocation: {
+          "@type": "Place",
+          address: {
+            "@type": "PostalAddress",
+            addressLocality: "Durham",
+            addressRegion: "NC",
+            addressCountry: "US",
+          },
+        },
         address: {
           "@type": "PostalAddress",
           streetAddress: "4804 Page Creek Lane",
@@ -54,23 +71,142 @@ export function organizationSchema() {
           postalCode: "27703",
           addressCountry: "US",
         },
-        sameAs: PROFILES,
-        contactPoint: {
-          "@type": "ContactPoint",
-          contactType: "sales",
-          email: "info@murphi.ai",
-          url: absoluteUrl("/contact-us/"),
-          areaServed: "US",
-          availableLanguage: "English",
+        areaServed: {
+          "@type": "Country",
+          name: "United States",
         },
+        knowsAbout: [
+          "Home Health",
+          "Hospice",
+          "Ambient AI clinical documentation",
+          "OASIS and PDGM review",
+          "Patient engagement SMS",
+          "Patient payments",
+          "EHR integration",
+        ],
+        brand: {
+          "@type": "Brand",
+          name: "Murphi.ai",
+        },
+        sameAs: PROFILES,
+        contactPoint: [
+          {
+            "@type": "ContactPoint",
+            contactType: "sales",
+            email: "info@murphi.ai",
+            url: absoluteUrl("/contact-us/"),
+            areaServed: "US",
+            availableLanguage: "English",
+          },
+          {
+            "@type": "ContactPoint",
+            contactType: "customer support",
+            email: "info@murphi.ai",
+            url: absoluteUrl("/contact-us/"),
+            areaServed: "US",
+            availableLanguage: "English",
+          },
+        ],
       },
       {
         "@type": "WebSite",
         "@id": SITE_ID,
         url: `${SITE_URL}/`,
         name: "Murphi.ai",
+        description:
+          "AI-native platform for Home Health and Hospice: ambient documentation, revenue assurance, patient engagement, and patient payments — integrated with the EHR you already use.",
         publisher: { "@id": ORG_ID },
         inLanguage: "en-US",
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": `${SITE_URL}/#platform`,
+        name: "Murphi.ai",
+        url: `${SITE_URL}/`,
+        applicationCategory: "HealthApplication",
+        applicationSubCategory: "Home Health and Hospice software",
+        operatingSystem: "Web-based, iOS, Android",
+        description:
+          "AI platform for Home Health and Hospice agencies covering ambient AI documentation, revenue assurance, patient engagement and patient payments, connected to the EHR an agency already uses.",
+        publisher: { "@id": ORG_ID },
+        provider: { "@id": ORG_ID },
+        audience: {
+          "@type": "BusinessAudience",
+          audienceType: "Home Health and Hospice agencies",
+        },
+      },
+    ],
+  };
+}
+
+/**
+ * WebPage node for a route in SITE_ROUTES.
+ * Links the page to the site and organization without inventing claims.
+ */
+export function webPageSchema(path: string, name?: string) {
+  const route = SITE_ROUTES.find((entry) => entry.path === path);
+  if (!route && !name) return null;
+
+  const url = absoluteUrl(path);
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${url}#webpage`,
+    url,
+    name: name ?? route!.title,
+    description: route?.description,
+    isPartOf: { "@id": SITE_ID },
+    about: { "@id": ORG_ID },
+    publisher: { "@id": ORG_ID },
+    inLanguage: "en-US",
+    isAccessibleForFree: true,
+  };
+}
+
+/**
+ * Home page graph: WebPage + FAQPage + module ItemList.
+ * FAQ copy is the same list rendered in the homepage accordion.
+ */
+export function homePageSchema() {
+  const home = SITE_ROUTES.find((entry) => entry.path === "/");
+  const modules = SITE_ROUTES.filter((entry) => entry.group === "modules");
+
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": `${SITE_URL}/#webpage`,
+        url: `${SITE_URL}/`,
+        name: home?.title,
+        description: home?.description,
+        isPartOf: { "@id": SITE_ID },
+        about: { "@id": ORG_ID },
+        publisher: { "@id": ORG_ID },
+        inLanguage: "en-US",
+        isAccessibleForFree: true,
+        mainEntity: { "@id": `${SITE_URL}/#platform` },
+      },
+      {
+        "@type": "FAQPage",
+        "@id": `${SITE_URL}/#faq`,
+        mainEntity: FAQS.home.map((item) => ({
+          "@type": "Question",
+          name: item.q,
+          acceptedAnswer: { "@type": "Answer", text: item.a },
+        })),
+      },
+      {
+        "@type": "ItemList",
+        "@id": `${SITE_URL}/#modules`,
+        name: "Murphi.ai AI Modules",
+        itemListElement: modules.map((mod, i) => ({
+          "@type": "ListItem",
+          position: i + 1,
+          name: mod.title.split(" - ")[0],
+          url: absoluteUrl(mod.path),
+          description: mod.description,
+        })),
       },
     ],
   };
@@ -86,22 +222,40 @@ export function moduleSchema(path: string) {
   const route = SITE_ROUTES.find((entry) => entry.path === path);
   if (!route) return null;
 
+  const url = absoluteUrl(path);
   return {
     "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "@id": `${absoluteUrl(path)}#software`,
-    name: `Murphi.ai - ${route.title.split(" - ")[0]}`,
-    url: absoluteUrl(path),
-    description: route.description,
-    applicationCategory: "HealthApplication",
-    applicationSubCategory: "Home Health and Hospice software",
-    operatingSystem: "Web-based, iOS, Android",
-    publisher: { "@id": ORG_ID },
-    provider: { "@id": ORG_ID },
-    audience: {
-      "@type": "BusinessAudience",
-      name: "Home Health and Hospice agencies",
-    },
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": `${url}#webpage`,
+        url,
+        name: route.title,
+        description: route.description,
+        isPartOf: { "@id": SITE_ID },
+        about: { "@id": `${url}#software` },
+        publisher: { "@id": ORG_ID },
+        inLanguage: "en-US",
+        isAccessibleForFree: true,
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": `${url}#software`,
+        name: `Murphi.ai - ${route.title.split(" - ")[0]}`,
+        url,
+        description: route.description,
+        applicationCategory: "HealthApplication",
+        applicationSubCategory: "Home Health and Hospice software",
+        operatingSystem: "Web-based, iOS, Android",
+        publisher: { "@id": ORG_ID },
+        provider: { "@id": ORG_ID },
+        isPartOf: { "@id": `${SITE_URL}/#platform` },
+        audience: {
+          "@type": "BusinessAudience",
+          name: "Home Health and Hospice agencies",
+        },
+      },
+    ],
   };
 }
 
@@ -222,7 +376,7 @@ export function blogArticleSchema(post: BlogPost) {
 
   return {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": "BlogPosting",
     "@id": `${absoluteUrl(path)}#article`,
     headline: post.seo.seoTitle || post.title,
     alternativeHeadline: post.title,
@@ -235,9 +389,17 @@ export function blogArticleSchema(post: BlogPost) {
     keywords: [post.seo.primaryKeyword, ...post.seo.supportingKeywords].join(", "),
     inLanguage: "en-US",
     author: { "@id": ORG_ID },
-    publisher: { "@id": ORG_ID },
+    publisher: {
+      "@id": ORG_ID,
+      "@type": "Organization",
+      name: "Murphi.ai",
+      logo: { "@id": `${SITE_URL}/#logo` },
+    },
     isPartOf: { "@id": SITE_ID },
-    mainEntityOfPage: { "@type": "WebPage", "@id": absoluteUrl(path) },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `${absoluteUrl(path)}#webpage`,
+    },
   };
 }
 

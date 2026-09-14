@@ -305,3 +305,18 @@
     grid-template-columns: 1fr !important;
   }
 }
+
+/*
+ * BothSides lane headings: stay on one line when the column is wide enough.
+ * Below ~1280px viewport the two-column lane is too narrow for the longer title.
+ */
+.ip-page .acc-both-sides-heading {
+  white-space: normal;
+  overflow-wrap: break-word;
+}
+
+@media (min-width: 1280px) {
+  .ip-page .acc-both-sides-heading {
+    white-space: nowrap;
+  }
+}

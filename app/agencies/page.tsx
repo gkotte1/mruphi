@@ -7,6 +7,7 @@ import { JsonLd } from "@/components/JsonLd";
 import {
   breadcrumbSchema,
   faqSchema,
+  webPageSchema,
 } from "@/lib/schema";
 import { pageMetadata } from "@/lib/site";
 import InnerHero from "@/components/inner-page/Hero";
@@ -111,6 +112,7 @@ const RELATED = [
 export default function AgenciesPage() {
   return (
     <InnerPage>
+      <JsonLd data={webPageSchema("/agencies/")} />
       <JsonLd data={faqSchema(FAQS.agencies, "/agencies/")} />
       <JsonLd data={breadcrumbSchema("/agencies/", "Home Health & Hospice Agencies")} />
 

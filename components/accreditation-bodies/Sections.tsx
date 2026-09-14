@@ -28,7 +28,7 @@ export function BothSides({
 }) {
   return (
     <Reveal>
-      <div className="grid grid-cols-2 overflow-hidden rounded-[10px] border border-[#E3E3E3] bg-white shadow-[0_1px_2px_rgba(0,0,0,0.03),0_14px_30px_rgba(0,0,0,0.05)] max-720:grid-cols-1">
+      <div className="grid grid-cols-[minmax(0,1fr)_minmax(0,1fr)] overflow-hidden rounded-[10px] border border-[#E3E3E3] bg-white shadow-[0_1px_2px_rgba(0,0,0,0.03),0_14px_30px_rgba(0,0,0,0.05)] max-720:grid-cols-1">
         {sides.map((side, s) => {
           const second = s === 1;
 
@@ -36,18 +36,22 @@ export function BothSides({
             <div
               key={side.eyebrow}
               className={cn(
-                "flex flex-col",
+                "flex min-w-0 flex-col",
                 second ? "" : "border-r border-[#E3E3E3] max-720:border-r-0 max-720:border-b",
               )}
             >
               <div
                 className={cn(
-                  "border-b border-[#E3E3E3] px-7 pt-7 pb-6 max-600:px-5",
-                  second ? "bg-[#F5F5F5]" : "bg-[#F5F5F5]",
+                  "flex min-h-[148px] flex-col justify-end border-b border-[#E3E3E3] px-7 pt-7 pb-6 max-900:min-h-[168px] max-720:min-h-0 max-600:px-5",
+                  "bg-[#F5F5F5]",
                 )}
               >
                 <p className="ip-eyebrow">{side.eyebrow}</p>
-                <h3 className="type-hl-section-title mt-3 text-ink max-600:text-[24px]">
+                <h3
+                  className={cn(
+                    "acc-both-sides-heading type-hl-section-title mt-3 min-w-0 break-words text-ink max-600:text-[24px]",
+                  )}
+                >
                   {side.heading}
                 </h3>
               </div>
@@ -56,7 +60,7 @@ export function BothSides({
                 {side.points.map((point, i) => (
                   <li
                     key={point}
-                    className="grid grid-cols-[auto_1fr] items-start gap-4 border-b border-[#E3E3E3] px-7 py-[18px] last:border-b-0 max-600:gap-3.5 max-600:px-5"
+                    className="grid grid-cols-[auto_minmax(0,1fr)] items-start gap-4 border-b border-[#E3E3E3] px-7 py-[18px] last:border-b-0 max-600:gap-3.5 max-600:px-5"
                   >
                     <span
                       className={cn(
@@ -67,7 +71,7 @@ export function BothSides({
                     >
                       {String(i + 1).padStart(2, "0")}
                     </span>
-                    <span className="type-hl-card-body min-w-0">
+                    <span className="type-hl-card-body min-w-0 break-words">
                       {point}
                     </span>
                   </li>

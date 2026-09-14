@@ -295,7 +295,7 @@ const OG_IMAGE = {
   url: "/og-image.png",
   width: 1200,
   height: 630,
-  alt: "Murphi.ai - AI-powered workforce intelligence",
+  alt: "Murphi.ai - AI for Home Health and Hospice",
 };
 
 /**
@@ -326,11 +326,19 @@ export function pageMetadata(
     openGraph: {
       type: "website",
       siteName: "Murphi.ai",
+      locale: "en_US",
       url: absoluteUrl(path),
       title: meta.title,
       description: meta.description,
       images: [OG_IMAGE],
       ...meta.openGraph,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: meta.title,
+      description: meta.description,
+      images: [OG_IMAGE.url],
+      ...meta.twitter,
     },
   };
 }

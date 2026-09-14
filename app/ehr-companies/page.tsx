@@ -7,6 +7,7 @@ import { JsonLd } from "@/components/JsonLd";
 import {
   breadcrumbSchema,
   faqSchema,
+  webPageSchema,
 } from "@/lib/schema";
 import { pageMetadata } from "@/lib/site";
 import Reveal from "@/components/module-page/Reveal";
@@ -186,6 +187,7 @@ const INTEGRATIONS = [
 export default function EhrCompaniesPage() {
   return (
     <InnerPage>
+      <JsonLd data={webPageSchema("/ehr-companies/")} />
       <JsonLd data={faqSchema(FAQS.ehrCompanies, "/ehr-companies/")} />
       <JsonLd data={breadcrumbSchema("/ehr-companies/", "Home Health & Hospice EHR Companies")} />
 

@@ -9,6 +9,8 @@ import PaymentIntegration from "@/components/integration/PaymentIntegration";
 import SecuritySection from "@/components/integration/SecuritySection";
 import { FinalCta } from "@/components/inner-page/kit";
 import { InnerPage } from "@/components/inner-page/Shell";
+import { JsonLd } from "@/components/JsonLd";
+import { breadcrumbSchema, webPageSchema } from "@/lib/schema";
 
 export const metadata: Metadata = pageMetadata("/integrations/", {
   title: "EHR Integrations - FHIR, HL7, API & Agentic AI",
@@ -19,6 +21,8 @@ export const metadata: Metadata = pageMetadata("/integrations/", {
 export default function IntegrationPage() {
   return (
     <InnerPage>
+      <JsonLd data={webPageSchema("/integrations/")} />
+      <JsonLd data={breadcrumbSchema("/integrations/", "Integrations")} />
       <Navbar />
       <main>
         <IntegrationHero />

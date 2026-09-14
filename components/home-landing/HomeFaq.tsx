@@ -65,6 +65,8 @@ export default function HomeFaq() {
         <div style={{ minWidth: 0 }}>
           {ITEMS.map((item, i) => {
             const isOpen = open === i;
+            const panelId = `home-faq-panel-${i}`;
+            const buttonId = `home-faq-button-${i}`;
             return (
               <div
                 key={item.q}
@@ -73,42 +75,50 @@ export default function HomeFaq() {
                   borderBottom: "1px solid #E3E3E3",
                 }}
               >
-                <button
-                  type="button"
-                  aria-expanded={isOpen}
-                  onClick={() => setOpen(isOpen ? null : i)}
-                  style={{
-                    display: "flex",
-                    width: "100%",
-                    alignItems: "center",
-                    justifyContent: "space-between",
-                    gap: 16,
-                    padding: "18px 0",
-                    background: "none",
-                    border: "none",
-                    cursor: "pointer",
-                    textAlign: "left",
-                    fontFamily: "inherit",
-                    fontSize: 16,
-                    fontWeight: 700,
-                    lineHeight: 1.4,
-                    color: "#1A1A1A",
-                  }}
-                >
-                  <span style={{ minWidth: 0, overflowWrap: "anywhere" }}>{item.q}</span>
-                  <Icon
-                    name="chevron"
-                    width={13}
-                    height={13}
+                <h3 style={{ margin: 0, fontSize: "inherit", fontWeight: "inherit" }}>
+                  <button
+                    type="button"
+                    id={buttonId}
+                    aria-expanded={isOpen}
+                    aria-controls={panelId}
+                    onClick={() => setOpen(isOpen ? null : i)}
                     style={{
-                      flexShrink: 0,
-                      color: "#878787",
-                      transform: isOpen ? "rotate(180deg)" : "none",
-                      transition: "transform 0.2s",
+                      display: "flex",
+                      width: "100%",
+                      alignItems: "center",
+                      justifyContent: "space-between",
+                      gap: 16,
+                      padding: "18px 0",
+                      background: "none",
+                      border: "none",
+                      cursor: "pointer",
+                      textAlign: "left",
+                      fontFamily: "inherit",
+                      fontSize: 16,
+                      fontWeight: 700,
+                      lineHeight: 1.4,
+                      color: "#1A1A1A",
                     }}
-                  />
-                </button>
+                  >
+                    <span style={{ minWidth: 0, overflowWrap: "anywhere" }}>{item.q}</span>
+                    <Icon
+                      name="chevron"
+                      width={13}
+                      height={13}
+                      style={{
+                        flexShrink: 0,
+                        color: "#878787",
+                        transform: isOpen ? "rotate(180deg)" : "none",
+                        transition: "transform 0.2s",
+                      }}
+                    />
+                  </button>
+                </h3>
                 <div
+                  id={panelId}
+                  role="region"
+                  aria-labelledby={buttonId}
+                  hidden={!isOpen}
                   style={{
                     display: isOpen ? "block" : "none",
                     padding: "0 0 18px",

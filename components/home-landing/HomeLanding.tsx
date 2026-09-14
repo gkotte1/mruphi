@@ -1,4 +1,3 @@
-import { JetBrains_Mono, Manrope, Spectral } from "next/font/google";
 import Link from "next/link";
 import type { CSSProperties, ReactNode } from "react";
 import Navbar from "@/components/Navbar";
@@ -7,28 +6,6 @@ import { LogoMark } from "@/components/Logo";
 import { CheckIcon, PulseMic } from "@/components/home-landing/marks";
 import HomeFaq from "@/components/home-landing/HomeFaq";
 import "./home-landing.css";
-
-const manrope = Manrope({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
-  variable: "--font-hl-sans",
-  display: "swap",
-});
-
-const spectral = Spectral({
-  subsets: ["latin"],
-  weight: ["400", "500"],
-  style: ["normal", "italic"],
-  variable: "--font-hl-serif",
-  display: "swap",
-});
-
-const jetbrains = JetBrains_Mono({
-  subsets: ["latin"],
-  weight: ["400", "500", "600"],
-  variable: "--font-hl-mono",
-  display: "swap",
-});
 
 const DEMO = "/contact-us/";
 
@@ -137,7 +114,7 @@ const EYE: CSSProperties = {
 export default function HomeLanding() {
   return (
     <div
-      className={`${manrope.variable} ${spectral.variable} ${jetbrains.variable} home-landing`}
+      className="home-landing"
     >
       <UtilityBar />
       <Navbar />

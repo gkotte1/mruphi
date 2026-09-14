@@ -7,6 +7,7 @@ import { JsonLd } from "@/components/JsonLd";
 import {
   breadcrumbSchema,
   faqSchema,
+  webPageSchema,
 } from "@/lib/schema";
 import { pageMetadata } from "@/lib/site";
 import InnerHero from "@/components/inner-page/Hero";
@@ -43,7 +44,7 @@ const SIDES = [
   },
   {
     eyebrow: "For the Accreditation Body",
-    heading: "Turn the Stack of Paper Into a Report by Monday.",
+    heading: "Turn the Stack of Paper Into a Report",
     points: [
       "Retrieve submitted evidence, policies and clinical charts into one reviewer workspace",
       "Evidence is mapped against your accreditation requirements automatically",
@@ -146,6 +147,7 @@ const OUTCOMES = [
 export default function AccreditationBodiesPage() {
   return (
     <InnerPage>
+      <JsonLd data={webPageSchema("/accreditation-bodies/")} />
       <JsonLd data={faqSchema(FAQS.accreditationBodies, "/accreditation-bodies/")} />
       <JsonLd data={breadcrumbSchema("/accreditation-bodies/", "Accreditation Bodies")} />
 

@@ -2,7 +2,7 @@
 
 AI Related Terms & Conditions
 
-###### Murphi.ai - Owned and Operated by Deskfactors Inc. - A Delaware C Corporation
+###### Murphi.ai - Owned and Operated by Deskfactors Inc.
 
 Version 2.0  
 Effective Date: April 17, 2026  

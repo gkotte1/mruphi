@@ -5,7 +5,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Icon } from "@/components/icons";
 import { JsonLd } from "@/components/JsonLd";
-import { breadcrumbSchema } from "@/lib/schema";
+import { breadcrumbSchema, webPageSchema } from "@/lib/schema";
 import { POSTS, blogHref, type BlogPost } from "@/lib/blog";
 import { pageMetadata } from "@/lib/site";
 import { SimpleHero } from "@/components/inner-page/Hero";
@@ -34,6 +34,7 @@ export const metadata: Metadata = pageMetadata("/blogs/", {
 export default function BlogPage() {
   return (
     <InnerPage>
+      <JsonLd data={webPageSchema("/blogs/")} />
       <JsonLd data={breadcrumbSchema("/blogs/", "Blog")} />
 
       <Navbar />
