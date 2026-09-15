@@ -44,7 +44,7 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Murphi.ai - AI for Home Health and Hospice",
+        alt: "Murphi.ai - AI for Every Home Health & Hospice Workflow",
       },
     ],
   },

@@ -35,8 +35,15 @@ const ROLE_MODULE_ICONS: Record<string, IconName> = {
   "AI-Driven RCM": "exchange",
 };
 
-export default function Roles({ roles }: { roles: Role[] }) {
-  const [active, setActive] = useState(roles[0]?.id);
+export default function Roles({
+  roles,
+  defaultId,
+}: {
+  roles: Role[];
+  /** Role id to show first (reference defaults to Clinician). */
+  defaultId?: string;
+}) {
+  const [active, setActive] = useState(defaultId ?? roles[0]?.id);
 
   return (
     <Reveal>
