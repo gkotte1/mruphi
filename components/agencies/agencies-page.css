@@ -1,0 +1,50 @@
+/* Scoped to /agencies/ only - exact reference role-tab + responsive grids */
+
+.agencies-page {
+  background: #ffffff;
+  font-family: var(--font-hl-sans), "Manrope", sans-serif;
+  color: #1a1a1a;
+  line-height: 1.5;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.agencies-page a:hover {
+  text-decoration: underline;
+  color: #007eff;
+}
+
+.agencies-page .role-tab {
+  border: 1px solid #e3e3e3;
+  background: #ffffff;
+  color: #1a1a1a;
+}
+
+.agencies-page .role-tab.active {
+  background: #1a1a1a;
+  color: #ffffff;
+  border-color: #1a1a1a;
+}
+
+@media (max-width: 900px) {
+  .agencies-page .hh-hero-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .agencies-page .hh-modgrid {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  .agencies-page .hh-startgrid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .agencies-page .hh-cards4 {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  .agencies-page .hh-ehrgrid {
+    grid-template-columns: 1fr !important;
+  }
+}
