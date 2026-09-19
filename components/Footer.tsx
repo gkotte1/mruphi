@@ -2,7 +2,10 @@ import Link from "next/link";
 import { Logo } from "@/components/Logo";
 import { AI_MODULES } from "@/lib/nav-data";
 import { Icon, type IconName } from "@/components/icons";
+import { CookiePreferencesLink } from "@/components/CookiePreferencesLink";
 import "./site-chrome.css";
+
+const COOKIE_PREFERENCES_HREF = "#cookie-preferences";
 
 type FooterLink = { label: string; href: string; soon?: boolean };
 
@@ -40,6 +43,7 @@ const COLUMNS: { heading: string; links: FooterLink[] }[] = [
       { label: "Privacy Policy", href: "/privacy-policy/" },
       { label: "Terms of Service", href: "/terms-of-service/" },
       { label: "AI Terms of Use", href: "/ai-terms/" },
+      { label: "Cookie Preferences", href: COOKIE_PREFERENCES_HREF },
     ],
   },
 ];
@@ -114,18 +118,16 @@ export default function Footer() {
                   fontSize: 14.5,
                 }}
               >
-                {column.links.map((link) => (
-                  <Link
-                    key={link.label}
-                    href={link.href}
-                    style={{ color: "#464646" }}
-                  >
-                    {link.label}
-                    {link.soon ? (
-                      <span className="hl-nav-soon"> Soon</span>
-                    ) : null}
-                  </Link>
-                ))}
+                {column.links.map((link) =>
+                  link.href === COOKIE_PREFERENCES_HREF ? (
+                    <CookiePreferencesLink key={link.label} />
+                  ) : (
+                    <Link key={link.label} href={link.href} style={{ color: "#464646" }}>
+                      {link.label}
+                      {link.soon ? <span className="hl-nav-soon"> Soon</span> : null}
+                    </Link>
+                  ),
+                )}
               </div>
             </nav>
           ))}
