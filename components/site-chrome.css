@@ -17,6 +17,11 @@
   color: #007eff;
 }
 
+.site-chrome .murphi-cookie-footer-link:hover {
+  text-decoration: underline;
+  color: #007eff;
+}
+
 .site-chrome .hl-nav-links {
   display: flex;
   align-items: center;
